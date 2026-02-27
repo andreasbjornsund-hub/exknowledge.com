@@ -34,6 +34,9 @@
 <nav class="nav">
   <div class="container">
     <a href="/" class="nav-logo">⚡ Ex<span>Knowledge</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="/" class="active">Home</a></li>
       <li><a href="pages/fundamentals.html">Fundamentals</a></li>
@@ -160,7 +163,7 @@
     <p style="color:var(--text-muted);font-size:16px;margin-bottom:32px">
       People who work with Ex equipment — designing it, installing it, inspecting it, buying it, or trying to figure out what certificate they actually need. Not a textbook. A reference you can use on Monday morning.
     </p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left;max-width:500px;margin:0 auto">
+    <div class="audience-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left;max-width:500px;margin:0 auto">
       <div style="padding:12px;border-radius:8px;background:var(--bg-card);border:1px solid var(--border)">
         <strong style="color:var(--text-bright)">⚙️ Design Engineers</strong><br>
         <span style="font-size:13px;color:var(--text-muted)">Picking protection methods, planning certification</span>
@@ -188,5 +191,11 @@
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+  document.querySelector('.nav-toggle')?.classList.remove('open');
+  document.querySelector('.nav-links')?.classList.remove('open');
+}));
+</script>
 </body>
 </html>

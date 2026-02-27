@@ -48,6 +48,9 @@
 <nav class="nav">
   <div class="container">
     <a href="../" class="nav-logo">⚡ Ex<span>Knowledge</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="../">Home</a></li>
       <li><a href="fundamentals.html" class="">Fundamentals</a></li>
@@ -330,5 +333,11 @@ Ex db [ib Ga] IIC T4 Gb
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+  document.querySelector('.nav-toggle')?.classList.remove('open');
+  document.querySelector('.nav-links')?.classList.remove('open');
+}));
+</script>
 </body>
 </html>
