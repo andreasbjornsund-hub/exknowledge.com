@@ -134,6 +134,23 @@ a:hover { opacity: 0.85; }
 .stat-num { font-size: 28px; font-weight: 800; color: var(--accent); }
 .stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
 
+/* --- Image Strip --- */
+.image-strip {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  margin: 0 0 20px; border-radius: var(--radius); overflow: hidden;
+}
+.image-strip img {
+  width: 100%; height: 180px; object-fit: cover; border-radius: 8px;
+  filter: brightness(0.8); transition: filter 0.3s;
+}
+.image-strip img:hover { filter: brightness(1); }
+
+/* --- Content Hero Image --- */
+.content-hero {
+  width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius);
+  margin-bottom: 32px; filter: brightness(0.85);
+}
+
 /* --- Footer --- */
 .footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; }
 .footer p { font-size: 13px; color: var(--text-muted); }
