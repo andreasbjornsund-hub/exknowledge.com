@@ -95,42 +95,14 @@
         <p>A quick-reference guide for engineers, technical sales, and product managers working with explosion-protected equipment. For full details on any topic, follow the links to the detailed files.</p>
 <h2 id="quick-qualification-questions">Quick Qualification Questions</h2>
 <p>When evaluating whether equipment is suitable for a hazardous area, answer these six questions in order:</p>
-<div class="table-wrap"><table><thead><tr>
-<th>#</th>
-<th>Question</th>
-<th>Where to Look</th>
-</tr></thead><tbody>
-<tr>
-<td>1</td>
-<td>What zone is the area? (0, 1, 2 / 20, 21, 22)</td>
-<td><a href="zone-classification.html">Zone Classification</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>Gas or dust? (or both?)</td>
-<td>Site hazard assessment</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Required gas/dust group? (IIA/IIB/IIC or IIIA/IIIB/IIIC)</td>
-<td><a href="gas-groups.html">Gas Groups</a></td>
-</tr>
-<tr>
-<td>4</td>
-<td>Required temperature class? (T1–T6 or specific °C for dust)</td>
-<td><a href="temperature-classes.html">Temperature Classes</a></td>
-</tr>
-<tr>
-<td>5</td>
-<td>Regional approval required? (ATEX / IECEx / NEC / other)</td>
-<td><a href="standards.html">Standards</a></td>
-</tr>
-<tr>
-<td>6</td>
-<td>Which protection method? (Ex d, Ex i, Ex e, Ex p, Ex n, etc.)</td>
-<td><a href="protection-methods.html">Protection Methods</a></td>
-</tr>
-</tbody></table>
+<ol class="qual-questions">
+<li><strong>What zone is the area?</strong> (0, 1, 2 / 20, 21, 22) → <a href="zone-classification.html">Zone Classification</a></li>
+<li><strong>Gas or dust?</strong> (or both?) → Site hazard assessment</li>
+<li><strong>Required gas/dust group?</strong> (IIA/IIB/IIC or IIIA/IIIB/IIIC) → <a href="gas-groups.html">Gas Groups</a></li>
+<li><strong>Required temperature class?</strong> (T1–T6 or specific °C for dust) → <a href="temperature-classes.html">Temperature Classes</a></li>
+<li><strong>Regional approval required?</strong> (ATEX / IECEx / NEC / other) → <a href="standards.html">Standards</a></li>
+<li><strong>Which protection method?</strong> (Ex d, Ex i, Ex e, Ex p, Ex n, etc.) → <a href="protection-methods.html">Protection Methods</a></li>
+</ol>
 <h2 id="high-level-mapping">High-Level Mapping</h2>
 <h3 id="zone--epl">Zone → EPL</h3>
 <div class="table-wrap"><table><thead><tr>
@@ -202,130 +174,6 @@
 </tr>
 </tbody></table>
 <p>See <a href="protection-methods.html">Protection Methods</a> for the complete matrix including dust zones.</p>
-<h2 id="strategic-considerations">Strategic Considerations</h2>
-<h3 id="certification-determines-your-addressable-market">Certification Determines Your Addressable Market</h3>
-<div class="table-wrap"><table><thead><tr>
-<th>Certification</th>
-<th>Market Access</th>
-</tr></thead><tbody>
-<tr>
-<td>ATEX only</td>
-<td>EU/EEA + countries accepting ATEX</td>
-</tr>
-<tr>
-<td>IECEx only</td>
-<td>~35 countries worldwide (Australia, Singapore, Brazil, etc.)</td>
-</tr>
-<tr>
-<td>ATEX + IECEx</td>
-<td>Most of the world except USA/Canada</td>
-</tr>
-<tr>
-<td>ATEX + IECEx + UL/FM</td>
-<td>Global coverage</td>
-</tr>
-</tbody></table>
-<h3 id="design-impact-of-protection-choice">Design Impact of Protection Choice</h3>
-<div class="table-wrap"><table><thead><tr>
-<th>Protection</th>
-<th>Design Complexity</th>
-<th>Cost</th>
-<th>Weight</th>
-<th>Maintenance</th>
-</tr></thead><tbody>
-<tr>
-<td>Ex ia</td>
-<td>High (circuit-level limits)</td>
-<td>Medium</td>
-<td>Low</td>
-<td>Low</td>
-</tr>
-<tr>
-<td>Ex d</td>
-<td>High (precision machining)</td>
-<td>High</td>
-<td>High</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Ex e</td>
-<td>Medium (enhanced margins)</td>
-<td>Medium</td>
-<td>Medium</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>Ex n</td>
-<td>Low (Zone 2 only)</td>
-<td>Low</td>
-<td>Low</td>
-<td>Low</td>
-</tr>
-<tr>
-<td>Ex p</td>
-<td>Medium (pressure system)</td>
-<td>Medium-High</td>
-<td>Medium</td>
-<td>High (monitoring)</td>
-</tr>
-</tbody></table>
-<h3 id="certification-cost-and-timeline">Certification Cost and Timeline</h3>
-<p>Typical ranges (vary significantly by product complexity and certification body):</p>
-<div class="table-wrap"><table><thead><tr>
-<th>Factor</th>
-<th>Range</th>
-</tr></thead><tbody>
-<tr>
-<td>Testing + certification fees</td>
-<td>€15,000 – €80,000+</td>
-</tr>
-<tr>
-<td>Timeline (first certification)</td>
-<td>6 – 18 months</td>
-</tr>
-<tr>
-<td>Annual surveillance</td>
-<td>€3,000 – €10,000</td>
-</tr>
-<tr>
-<td>Recertification (standard update)</td>
-<td>€5,000 – €30,000</td>
-</tr>
-<tr>
-<td>Multi-scheme (ATEX + IECEx + UL)</td>
-<td>1.5× – 2.5× single scheme</td>
-</tr>
-</tbody></table>
-<h3 id="product-strategy-decision-tree">Product Strategy Decision Tree</h3>
-<pre><code>
-Start
-  ├── Zone 0 required?
-  │     ├── YES → Ex ia or Ex ma (only options)
-  │     └── NO ↓
-  ├── Zone 1 required?
-  │     ├── YES → Choose: Ex d (robust), Ex e (simpler), Ex ib, Ex p
-  │     └── NO ↓
-  ├── Zone 2 only?
-  │     └── YES → Ex n (cheapest), Ex ec, Ex ic
-  │
-  ├── High power / switching?
-  │     └── YES → Ex d (flameproof) or Ex p (pressurized)
-  │
-  ├── Low power / sensing?
-  │     └── YES → Ex i (intrinsic safety)
-  │
-  └── Need to minimize weight/size?
-        └── YES → Ex i or Ex m (encapsulation)
-</code></pre>
-<h3 id="common-certification-mistakes">Common Certification Mistakes</h3>
-<ol>
-<li><strong>Starting certification too late</strong> — engage the Notified Body/ExCB early in design, not after prototyping</li>
-<li><strong>Targeting too narrow</strong> — IIC T6 costs similar to IIA T1 but covers everything</li>
-<li><strong>Ignoring regional requirements</strong> — ATEX doesn't cover Australia, IECEx doesn't cover USA</li>
-<li><strong>No quality system</strong> — EN 13980 / ISO 80079-34 compliance needed before production</li>
-<li><strong>Modifying after certification</strong> — any change to the certified design requires reassessment</li>
-<li><strong>Underestimating documentation</strong> — technical files, test reports, instructions take months</li>
-</ol>
 <h2 id="onboarding-reference">Onboarding Reference</h2>
 <p>For someone new to explosion protection, read in this order:</p>
 <ol>
@@ -381,5 +229,6 @@ document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click
   document.querySelector('.nav-links')?.classList.remove('open');
 }));
 </script>
+<script src="../js/search.js"></script>
 </body>
 </html>
