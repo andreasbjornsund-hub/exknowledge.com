@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://exknowledge.com/</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://exknowledge.com/blog/</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://exknowledge.com/pages/fundamentals.html</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://exknowledge.com/pages/zone-classification.html</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://exknowledge.com/pages/gas-groups.html</loc><changefreq>monthly</changefreq></url>
@@ -12,4 +13,8 @@
   <url><loc>https://exknowledge.com/pages/certification.html</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://exknowledge.com/pages/installation-inspection.html</loc><changefreq>monthly</changefreq></url>
   <url><loc>https://exknowledge.com/pages/cheat-sheet.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://exknowledge.com/blog/2025-11.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://exknowledge.com/blog/2025-12.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://exknowledge.com/blog/2026-01.html</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://exknowledge.com/blog/2026-02.html</loc><changefreq>monthly</changefreq></url>
 </urlset>
