@@ -1,17 +1,17 @@
 /* ExKnowledge.com — Light theme, Flowcase-inspired */
 :root {
-  --bg: #f8f7f4;
+  --bg: #f5f0e8;
   --bg-card: #ffffff;
-  --bg-card-hover: #faf9f7;
+  --bg-card-hover: #faf8f4;
   --bg-nav: #ffffff;
-  --border: #e8e5e0;
-  --border-light: #f0ede8;
-  --text: #3d3d3d;
-  --text-muted: #7a7670;
-  --text-bright: #1a1a1a;
-  --accent: #6c5ce7;
-  --accent-light: #a29bfe;
-  --accent-bg: #f0eefa;
+  --border: #d9d5cd;
+  --border-light: #e8e4dc;
+  --text: #3d3d5c;
+  --text-muted: #6b6b84;
+  --text-bright: #1a1a2e;
+  --accent: #4a3aff;
+  --accent-light: #7b6fff;
+  --accent-bg: #eeeaff;
   --accent-green: #00b894;
   --accent-orange: #e17055;
   --accent-red: #d63031;
@@ -84,8 +84,8 @@ a:hover { color: #5a4bd6; }
   display: inline-block; padding: 14px 32px; border-radius: 10px;
   font-size: 15px; font-weight: 600; cursor: pointer; border: none; transition: all 0.2s;
 }
-.btn-primary { background: var(--accent); color: #fff; box-shadow: 0 2px 8px rgba(108,92,231,0.3); }
-.btn-primary:hover { background: #5a4bd6; color: #fff; box-shadow: 0 4px 16px rgba(108,92,231,0.4); transform: translateY(-1px); }
+.btn-primary { background: var(--accent); color: #fff; box-shadow: 0 2px 8px rgba(74,58,255,0.3); }
+.btn-primary:hover { background: #3a2ee8; color: #fff; box-shadow: 0 4px 16px rgba(74,58,255,0.4); transform: translateY(-1px); }
 .btn-secondary { background: var(--bg-card); color: var(--text-bright); border: 1.5px solid var(--border); }
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
@@ -180,7 +180,7 @@ a:hover { color: #5a4bd6; }
 }
 
 /* --- Footer --- */
-.footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; background: #fff; }
+.footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; background: #faf8f4; }
 .footer p { font-size: 13px; color: var(--text-muted); }
 
 /* ========================= */
