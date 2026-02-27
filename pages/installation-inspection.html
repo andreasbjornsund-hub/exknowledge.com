@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installation & Inspection — ExKnowledge</title>
+  <meta name="description" content="Installation & Inspection - Practical explosion protection knowledge for engineers.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="../" class="nav-logo">⚡ Ex<span>Knowledge</span></a>
+    <ul class="nav-links">
+      <li><a href="../">Home</a></li>
+      <li><a href="fundamentals.html" class="">Fundamentals</a></li>
+      <li><a href="zone-classification.html" class="">Zones</a></li>
+      <li><a href="gas-groups.html" class="">Gas Groups</a></li>
+      <li><a href="temperature-classes.html" class="">Temp Classes</a></li>
+      <li><a href="protection-methods.html" class="">Protection</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="content-page">
+  <div class="container">
+    <div class="breadcrumb"><a href="../">Home</a> / Installation & Inspection</div>
+    <div class="content-layout">
+      <div class="content-body">
+        <h1>Installation, Inspection, and Maintenance</h1>
+<p>Correct installation and ongoing inspection are as important as the equipment certification itself. A perfectly certified Ex d enclosure becomes dangerous if a cable gland is installed incorrectly. This file covers IEC 60079-14 (installation) and IEC 60079-17 (inspection/maintenance).</p>
+<h2 id="installation-iec-60079-14">Installation (IEC 60079-14)</h2>
+<h3>General Principles</h3>
+<ol>
+<li><strong>Only certified equipment may be installed in hazardous areas</strong> — verify the certificate, <a href="EPL.html">EPL</a>, <a href="gas-groups.html">gas group</a>, and <a href="temperature-classes.html">temperature class</a> match the <a href="zone-classification.html">zone classification</a></li>
+</ul>
+<ol>
+<li><strong>Follow the manufacturer's installation instructions</strong> — always available with certified equipment</li>
+</ul>
+<ol>
+<li><strong>Check for special conditions ("X")</strong> — documented in the certificate</li>
+</ul>
+<ol>
+<li><strong>Use certified accessories</strong> — cable glands, junction boxes, conduit fittings must also be Ex certified for the appropriate method</li>
+</ul>
+<ol>
+<li><strong>Competent personnel only</strong> — installers should hold appropriate qualifications (CompEx, IECEx CoPC, or equivalent)</li>
+</ul>
+<h3>Cable Gland Selection</h3>
+<p>Cable glands are the most common point of failure in Ex installations.</p>
+<p><strong>For Ex d enclosures:</strong></p>
+<ul>
+<li>Cable glands must be Ex d certified</li>
+<li>Never use Ex e cable glands on Ex d enclosures (they cannot withstand explosion pressure)</li>
+<li>Minimum 5 threads or 8mm screw-in depth for parallel threads</li>
+<li>Conical threads (NPT) must be seated completely</li>
+<li>Gland must match cable type (armoured/unarmoured) and diameter range</li>
+</ul>
+<p><strong>For Ex e enclosures:</strong></p>
+<ul>
+<li>Cable glands must be Ex e certified (or Ex d, which exceeds Ex e requirements)</li>
+<li>Must maintain IP54 minimum</li>
+<li>Cable diameter must fall within the gland's certified range</li>
+</ul>
+<p><strong>For Ex i circuits:</strong></p>
+<ul>
+<li>Cable glands do not need Ex certification (the circuit is inherently safe)</li>
+<li>However, glands must maintain the enclosure IP rating</li>
+<li>IS cables must be segregated from other cables</li>
+</ul>
+<h3>Earthing and Bonding</h3>
+<ul>
+<li>All metallic parts must be bonded to the equipotential bonding system</li>
+<li>Earth continuity must be maintained through the entire installation</li>
+<li>Earth resistance for IS zener barriers: <1 Ω</li>
+<li>Cable armour must be earthed at both ends (or as specified)</li>
+<li>Internal earth connections in Ex d enclosures must be secure and accessible for inspection</li>
+</ul>
+<h3>Cable Routing</h3>
+<ul>
+<li>Intrinsically safe cables: identified by blue colour, routed separately from non-IS circuits</li>
+<li>Minimum separation between IS and non-IS cables per installation standard</li>
+<li>Cables entering hazardous areas must be suitable for the environment (temperature, chemical resistance, UV)</li>
+<li>Unused cable entries must be sealed with certified blanking elements (not standard plugs)</li>
+</ul>
+<h3>Clearance Distances</h3>
+<p><strong>Around Ex d enclosures (with flat flame paths):</strong></p>
+<table><thead><tr>
+<th>Gas Group</th>
+<th>Minimum Clearance (mm)</th>
+</tr></thead><tbody>
+<tr>
+<td>IIA</td>
+<td>10</td>
+</tr>
+<tr>
+<td>IIB</td>
+<td>30</td>
+</tr>
+<tr>
+<td>IIC</td>
+<td>40</td>
+</tr>
+</tbody></table>
+<p>These clearances prevent accumulation of hot gases escaping from flame paths during an internal explosion.</p>
+<h2 id="inspection-iec-60079-17">Inspection (IEC 60079-17)</h2>
+<h3>Three Grades of Inspection</h3>
+<table><thead><tr>
+<th>Grade</th>
+<th>Scope</th>
+<th>Typical Timing</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Visual</strong></td>
+<td>Check without tools or equipment opening; identify obvious defects</td>
+<td>During routine operations</td>
+</tr>
+<tr>
+<td><strong>Close</strong></td>
+<td>Check with tools (if needed) but without opening enclosures; covers visual + additional checks</td>
+<td>Typically annually</td>
+</tr>
+<tr>
+<td><strong>Detailed</strong></td>
+<td>Opening enclosures, taking measurements, checking flame paths, testing earthing</td>
+<td>Typically every 3 years or after incidents</td>
+</tr>
+</tbody></table>
+<h3>Visual Inspection Checklist</h3>
+<ul>
+<li>☐ Equipment is appropriate for the zone (check <a href="ex-markings.html">marking</a>)</li>
+<li>☐ No visible damage to enclosures</li>
+<li>☐ All bolts/fasteners present and tight</li>
+<li>☐ Cable glands correctly installed and sealed</li>
+<li>☐ No unauthorized modifications</li>
+<li>☐ Unused entries properly sealed</li>
+<li>☐ No corrosion compromising integrity</li>
+<li>☐ Labels and markings legible</li>
+<li>☐ Equipment clean (dust accumulation within limits)</li>
+<li>☐ No temporary/non-certified repairs</li>
+</ul>
+<h3>Close Inspection Checklist</h3>
+<p>Everything in visual inspection, plus:</p>
+<ul>
+<li>☐ Enclosure bolts/fixings all present and correct type</li>
+<li>☐ Cable glands appropriate for cable type and correctly tightened</li>
+<li>☐ No evidence of water ingress</li>
+<li>☐ Earth connections secure</li>
+<li>☐ Conduit/trunking integrity maintained</li>
+<li>☐ Sealing compound intact where applicable</li>
+<li>☐ Temperature class appropriate for actual conditions</li>
+<li>☐ Cable condition acceptable (no damage, correct sheath)</li>
+<li>☐ IS circuit separation maintained</li>
+</ul>
+<h3>Detailed Inspection Checklist</h3>
+<p>Everything in close inspection, plus:</p>
+<ul>
+<li>☐ Flame path dimensions within tolerance (Ex d)</li>
+<li>☐ Flame path surfaces clean, not corroded or painted</li>
+<li>☐ Internal components match certificate</li>
+<li>☐ Terminal connections tight (torque check)</li>
+<li>☐ Insulation resistance acceptable</li>
+<li>☐ Earth resistance measured and within limits</li>
+<li>☐ Enclosure seal/gasket condition</li>
+<li>☐ Cable gland sealing effective</li>
+<li>☐ IR window integrity (if fitted)</li>
+<li>☐ Thermographic survey (for electrical connections)</li>
+</ul>
+<h2 id="maintenance">Maintenance</h2>
+<h3>Permitted Activities</h3>
+<ul>
+<li><strong>Like-for-like replacement</strong> — replacing components with identical certified items</li>
+<li><strong>Re-gasketing</strong> — using manufacturer-specified gaskets/seals</li>
+<li><strong>Re-greasing flame paths</strong> — non-hardening silicone grease (not on gas detectors)</li>
+<li><strong>Tightening connections</strong> — to manufacturer's specified torque</li>
+<li><strong>Cleaning</strong> — removal of dust, dirt, corrosion</li>
+</ul>
+<h3>Activities Requiring Special Attention</h3>
+<ul>
+<li><strong>Component replacement with alternative</strong> — must verify the alternative is covered by the certificate or obtain an amendment</li>
+<li><strong>Painting</strong> — never paint flame path surfaces; enclosure body painting is acceptable</li>
+<li><strong>Cable gland replacement</strong> — new gland must be compatible with the enclosure and cable</li>
+<li><strong>Repair of Ex d enclosures</strong> — may require recertification per IEC 60079-19</li>
+</ul>
+<h3>Prohibited Activities</h3>
+<ul>
+<li><strong>Modifying certified equipment</strong> without recertification</li>
+<li><strong>Welding on Ex d enclosures</strong> — changes material properties and dimensions</li>
+<li><strong>Using non-certified spare parts</strong> — voids the certification</li>
+<li><strong>Hot work in hazardous areas</strong> without a valid hot work permit and gas-free certificate</li>
+<li><strong>Energized work</strong> in Zone 0/20 or Zone 1/21 without a formal risk assessment and authorization</li>
+</ul>
+<h2 id="common-installation-errors">Common Installation Errors</h2>
+<p>Based on industry inspection data, the most frequent non-conformances are:</p>
+<ol>
+<li><strong>Wrong cable gland type</strong> — Ex e gland on Ex d enclosure, or wrong cable diameter range</li>
+</ul>
+<ol>
+<li><strong>Missing blanking plugs</strong> — open cable entries destroy IP and flame path integrity</li>
+</ul>
+<ol>
+<li><strong>Loose terminal connections</strong> — causes heating and potential sparking</li>
+</ul>
+<ol>
+<li><strong>Damaged cables</strong> — mechanical damage to cable sheath in hazardous area</li>
+</ul>
+<ol>
+<li><strong>Unauthorized modifications</strong> — additional holes drilled, non-certified components fitted</li>
+</ul>
+<ol>
+<li><strong>Inadequate earthing</strong> — missing or corroded earth connections</li>
+</ul>
+<ol>
+<li><strong>Dust accumulation</strong> — layer insulates enclosure surface, raising temperature</li>
+</ul>
+<ol>
+<li><strong>Wrong equipment for zone</strong> — Gc equipment installed in Zone 1</li>
+</ul>
+<ol>
+<li><strong>Missing documentation</strong> — no zone classification drawings, no explosion protection document</li>
+</ul>
+<ol>
+<li><strong>Painted flame paths</strong> — paint fills the precisely machined gap, preventing proper flame cooling</li>
+</ul>
+<h2 id="explosion-protection-document-epd">Explosion Protection Document (EPD)</h2>
+<p>ATEX 1999/92/EC requires employers to produce and maintain an Explosion Protection Document covering:</p>
+<ol>
+<li>Identification of explosion risks and hazards</li>
+</ul>
+<ol>
+<li>Measures taken to achieve explosion protection</li>
+</ul>
+<ol>
+<li>Zone classification with drawings</li>
+</ul>
+<ol>
+<li>Equipment selection criteria</li>
+</ul>
+<ol>
+<li>Safe working procedures</li>
+</ul>
+<ol>
+<li>Training and competence requirements</li>
+</ul>
+<ol>
+<li>Maintenance and inspection schedules</li>
+</ul>
+<ol>
+<li>Management of change procedures</li>
+</ul>
+<p>The EPD must be reviewed when processes, equipment, or operating procedures change.</p>
+<h2 id="competence-requirements">Competence Requirements</h2>
+<table><thead><tr>
+<th>Activity</th>
+<th>Recommended Qualification</th>
+</tr></thead><tbody>
+<tr>
+<td>Zone classification</td>
+<td>IECEx CoPC Unit Ex 001, Ex 005</td>
+</tr>
+<tr>
+<td>Equipment selection</td>
+<td>IECEx CoPC Unit Ex 005</td>
+</tr>
+<tr>
+<td>Installation</td>
+<td>CompEx 01-04 (gas), 05-06 (dust); IECEx CoPC Unit Ex 002</td>
+</tr>
+<tr>
+<td>Visual inspection</td>
+<td>CompEx or IECEx CoPC Unit Ex 006</td>
+</tr>
+<tr>
+<td>Close inspection</td>
+<td>CompEx or IECEx CoPC Unit Ex 007</td>
+</tr>
+<tr>
+<td>Detailed inspection</td>
+<td>CompEx or IECEx CoPC Unit Ex 008</td>
+</tr>
+<tr>
+<td>Repair/overhaul</td>
+<td>CompEx or IECEx CoPC Unit Ex 004</td>
+</tr>
+<tr>
+<td>Responsible person</td>
+<td>IECEx CoPC Unit Ex 009</td>
+</tr>
+</tbody></table>
+<h2 id="related-files">Related Files</h2>
+<ul>
+<li><a href="protection-methods.html">Protection Methods</a> — understand what you're installing</li>
+<li><a href="ex-markings.html">Ex Markings</a> — verify equipment suitability</li>
+<li><a href="standards.html">Standards</a> — IEC 60079-14 and 60079-17 in detail</li>
+<li><a href="certification.html">Certification</a> — certificate verification and special conditions</li>
+<li><a href="EPL.html">EPL</a> — matching equipment to zones</li>
+</ul>
+      </div>
+      <div class="content-sidebar">
+        
+<div class="sidebar-card">
+  <h4>Topics</h4>
+    <a href="fundamentals.html" class="">Fundamentals</a>
+  <a href="zone-classification.html" class="">Zones</a>
+  <a href="gas-groups.html" class="">Gas Groups</a>
+  <a href="temperature-classes.html" class="">Temp Classes</a>
+  <a href="protection-methods.html" class="">Protection</a>
+  <a href="epl.html" class="">EPL</a>
+  <a href="ex-markings.html" class="">Markings</a>
+  <a href="standards.html" class="">Standards</a>
+  <a href="certification.html" class="">Certification</a>
+  <a href="installation-inspection.html" class="current">Installation</a>
+  <a href="cheat-sheet.html" class="">Cheat Sheet</a>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>⚡ ExKnowledge — Built from 20 years of field experience.</p>
+    <p style="margin-top:8px">© 2026 ExKnowledge.com</p>
+  </div>
+</footer>
+
+</body>
+</html>
