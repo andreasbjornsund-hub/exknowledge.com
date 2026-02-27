@@ -38,7 +38,7 @@ BLOG_TEMPLATE = """<!DOCTYPE html>
 
 <nav class="nav">
   <div class="container">
-    <a href="../" class="nav-logo">⚡ Ex<span>Knowledge</span></a>
+    <a href="../" class="nav-logo">Ex<span>Knowledge</span></a>
     <button class="nav-toggle" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
@@ -75,7 +75,7 @@ BLOG_TEMPLATE = """<!DOCTYPE html>
 
 <footer class="footer">
   <div class="container">
-    <p>⚡ ExKnowledge — Built from field experience.</p>
+    <p>ExKnowledge — Built from field experience.</p>
     <p style="margin-top:8px">© 2026 ExKnowledge.com</p>
   </div>
 </footer>

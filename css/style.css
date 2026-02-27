@@ -40,14 +40,15 @@ a:hover { color: #5a4bd6; }
 
 /* --- Navigation --- */
 .nav {
-  position: sticky; top: 0; z-index: 1000;
-  background: rgba(26,37,53,0.95);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9000;
+  background: rgba(26,37,53,0.97);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   padding: 16px 0;
 }
+body { padding-top: 62px; }
 .nav .container { display: flex; align-items: center; justify-content: space-between; }
-.nav-logo { font-size: 20px; font-weight: 800; color: var(--text-bright); z-index: 1010; letter-spacing: -0.3px; }
+.nav-logo { font-size: 20px; font-weight: 800; color: var(--text-bright); z-index: 9010; letter-spacing: -0.3px; }
 .nav-logo span { color: var(--accent); }
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a { color: var(--text-muted); font-size: 15px; font-weight: 500; }
@@ -58,7 +59,7 @@ a:hover { color: #5a4bd6; }
 .nav-toggle {
   display: none;
   background: none; border: none; cursor: pointer;
-  width: 32px; height: 32px; position: relative; z-index: 1010;
+  width: 32px; height: 32px; position: relative; z-index: 9010;
 }
 .nav-toggle span {
   display: block; width: 22px; height: 2px; background: var(--text-bright);
@@ -147,7 +148,7 @@ a:hover { color: #5a4bd6; }
 /* Sidebar */
 .content-layout { display: flex; gap: 40px; }
 .content-sidebar { width: 260px; flex-shrink: 0; }
-.sidebar-card { background: var(--bg-card); border: 1.5px solid var(--border-light); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; position: sticky; top: 80px; box-shadow: var(--shadow-sm); }
+.sidebar-card { background: var(--bg-card); border: 1.5px solid var(--border-light); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; position: sticky; top: 78px; box-shadow: var(--shadow-sm); }
 .sidebar-card h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 12px; font-weight: 700; }
 .sidebar-card a { display: block; padding: 6px 0; font-size: 13px; color: var(--text-muted); font-weight: 500; }
 .sidebar-card a:hover { color: var(--accent); }
@@ -200,7 +201,7 @@ a:hover { color: #5a4bd6; }
     position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     background: #1a2535;
     padding: 80px 32px 32px;
-    z-index: 1005;
+    z-index: 9005;
     overflow-y: auto;
   }
   .nav-links.open { display: flex; }
