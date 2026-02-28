@@ -86,9 +86,11 @@
 <nav class="nav">
   <div class="container">
     <a href="/de/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
-    <button class="nav-toggle" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="burger" aria-label="Menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
     <ul class="nav-links">
       <li><a href="/de/">Startseite</a></li>
       <li><a href="/de/pages/fundamentals.html">Grundlagen</a></li>
@@ -333,7 +335,45 @@
     <p>Kein Ersatz für offizielle Normendokumente oder professionelle Ingenieurberatung.</p>
   </div>
 </footer>
-<script>document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();b.parentElement.classList.toggle('open')}));document.addEventListener('click',()=>document.querySelectorAll('.lang-dropdown.open').forEach(d=>d.classList.remove('open')));</script>
+<script>
+(function(){
+  // Mobile burger menu
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  if(burger){
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+      document.body.classList.toggle('menu-open');
+    });
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        document.body.classList.remove('menu-open');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if(!burger.contains(e.target) && !nav.contains(e.target)){
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        document.body.classList.remove('menu-open');
+      }
+    });
+  }
+  // Language dropdown
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.addEventListener('click', e => {
+      e.stopPropagation();
+      b.parentElement.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.lang-dropdown.open').forEach(d => d.classList.remove('open'));
+  });
+})();
+</script>
 
 </body>
 </html>
