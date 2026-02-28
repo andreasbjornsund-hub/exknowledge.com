@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATEX Zone Classification: Zone 0, 1, 2 (Gas) and Zone 20, 21, 22 (Dust)</title>
+  <meta name="description" content="How hazardous areas are classified into Zones 0, 1, 2 for gas and 20, 21, 22 for dust. Methodology, IEC 60079-10, examples, and common mistakes.">
+  <link rel="canonical" href="https://exknowledge.com/de/pages/zone-classification.html">
+  <meta property="og:title" content="ATEX Zone Classification: Zone 0, 1, 2 (Gas) and Zone 20, 21, 22 (Dust)">
+  <meta property="og:description" content="How hazardous areas are classified into Zones 0, 1, 2 for gas and 20, 21, 22 for dust. Methodology, IEC 60079-10, examples, and common mistakes.">
+  <meta property="og:url" content="https://exknowledge.com/de/pages/zone-classification.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=1000&q=80">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ATEX Zone Classification: Zone 0, 1, 2 (Gas) and Zone 20, 21, 22 (Dust)">
+  <meta name="twitter:description" content="How hazardous areas are classified into Zones 0, 1, 2 for gas and 20, 21, 22 for dust. Methodology, IEC 60079-10, examples, and common mistakes.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Zone Classification for Hazardous Areas",
+    "description": "How hazardous areas are classified into Zones 0, 1, 2 for gas and 20, 21, 22 for dust. Methodology, IEC 60079-10, examples, and common mistakes.",
+    "url": "https://exknowledge.com/pages/zone-classification.html",
+    "image": "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=1000&q=80",
+    "author": {
+      "@type": "Organization",
+      "name": "ExKnowledge",
+      "url": "https://exknowledge.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExKnowledge",
+      "url": "https://exknowledge.com"
+    },
+    "inLanguage": "de",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "ExKnowledge",
+      "url": "https://exknowledge.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://exknowledge.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Zone Classification for Hazardous Areas",
+        "item": "https://exknowledge.com/pages/zone-classification.html"
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav">
+  <div class="container">
+    <a href="/de/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/de/">Startseite</a></li>
+      <li><a href="fundamentals.html">Grundlagen</a></li>
+      <li><a href="zone-classification.html" class="active">Zonen</a></li>
+      <li><a href="protection-methods.html">Schutzarten</a></li>
+      <li><a href="standards.html">Normen</a></li>
+      <li><a href="cheat-sheet.html">Kurzübersicht</a></li>
+      <li><a href="/de/blog/">Blog</a></li>
+    <li class="lang-dropdown">
+        <button class="lang-btn" aria-label="Language">🌐 DE ▾</button>
+        <ul class="lang-menu">
+          <li><a href="/de/" data-lang="de">🇬🇧 English</a></li>
+          <li><a href="../de/" data-lang="de">🇩🇪 Deutsch</a></li>
+          <li><a href="../no/" data-lang="no">🇳🇴 Norsk</a></li>
+          <li><a href="../da/" data-lang="da">🇩🇰 Dansk</a></li>
+          <li><a href="../sv/" data-lang="sv">🇸🇪 Svenska</a></li>
+          <li><a href="../fi/" data-lang="fi">🇫🇮 Suomi</a></li>
+          <li><a href="../es/" data-lang="es">🇪🇸 Español</a></li>
+          <li><a href="../nl/" data-lang="nl">🇳🇱 Nederlands</a></li>
+          <li><a href="../pt/" data-lang="pt">🇵🇹 Português</a></li>
+          <li><a href="../it/" data-lang="it">🇮🇹 Italiano</a></li>
+          <li><a href="../ar/" data-lang="ar">🇸🇦 العربية</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<section class="content-page">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/de/">Startseite</a> <span aria-hidden="true">/</span> <span>Zone Classification for Hazardous Areas</span>
+    </nav>
+    <div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=1000&q=80" alt="Zone Classification for Hazardous Areas" loading="lazy" width="820" height="240">
+        <h1>Zone Classification for Hazardous Areas</h1>
+        <p>Zone classification is the process of dividing a facility into areas based on the probability and duration of an explosive atmosphere being present. It determines what type of <a href="protection-methods.html">Ex-protected equipment</a> is required in each location.</p>
+<h2 id="gas-and-vapour-zones-iec-60079-10-1">Gas and Vapour Zones (IEC 60079-10-1)</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Zone</th>
+<th>Definition</th>
+<th>Typical Duration</th>
+<th>Required <a href="EPL.html">EPL</a></th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Zone 0</strong></td>
+<td>Explosive atmosphere present <strong>continuously</strong> or for long periods</td>
+<td>>1,000 hours/year</td>
+<td>Ga</td>
+</tr>
+<tr>
+<td><strong>Zone 1</strong></td>
+<td>Explosive atmosphere <strong>likely</strong> during normal operation</td>
+<td>10–1,000 hours/year</td>
+<td>Gb (or Ga)</td>
+</tr>
+<tr>
+<td><strong>Zone 2</strong></td>
+<td>Explosive atmosphere <strong>not likely</strong> during normal operation; if it occurs, only briefly</td>
+<td><10 hours/year</td>
+<td>Gc (or Gb/Ga)</td>
+</tr>
+</tbody></table>
+<h3 id="zone-0-examples">Zone 0 Examples</h3>
+<ul>
+<li>Inside storage tanks containing flammable liquids above their flash point</li>
+<li>Inside process vessels during normal production</li>
+<li>Inside pipelines carrying flammable gases</li>
+</ul>
+<h3 id="zone-1-examples">Zone 1 Examples</h3>
+<ul>
+<li>Area surrounding Zone 0 (e.g., around tank vents)</li>
+<li>Areas near equipment that frequently releases flammable substances</li>
+<li>Pump and compressor seal areas</li>
+<li>Sample points and drainage systems</li>
+<li>Loading/unloading areas for flammable liquids</li>
+</ul>
+<h3 id="zone-2-examples">Zone 2 Examples</h3>
+<ul>
+<li>Areas surrounding Zone 1</li>
+<li>Areas where release only occurs during maintenance, breakdown, or abnormal conditions</li>
+<li>Flange connections in good condition</li>
+<li>Valve stems under normal conditions</li>
+<li>Areas near Zone 1 with adequate ventilation</li>
+</ul>
+<h2 id="dust-zones-iec-60079-10-2">Dust Zones (IEC 60079-10-2)</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Zone</th>
+<th>Definition</th>
+<th>Required <a href="EPL.html">EPL</a></th>
+</tr></thead><tbody>
+<tr>
+<td><strong>Zone 20</strong></td>
+<td>Explosive dust cloud present <strong>continuously</strong> or frequently</td>
+<td>Da</td>
+</tr>
+<tr>
+<td><strong>Zone 21</strong></td>
+<td>Explosive dust cloud <strong>likely</strong> during normal operation</td>
+<td>Db (or Da)</td>
+</tr>
+<tr>
+<td><strong>Zone 22</strong></td>
+<td>Explosive dust cloud <strong>not likely</strong>; only briefly if it occurs</td>
+<td>Dc (or Db/Da)</td>
+</tr>
+</tbody></table>
+<h3 id="zone-20-examples">Zone 20 Examples</h3>
+<ul>
+<li>Inside silos, hoppers, and cyclone filters</li>
+<li>Inside pneumatic conveying lines</li>
+<li>Inside mixers and blenders processing combustible dusts</li>
+</ul>
+<h3 id="zone-21-examples">Zone 21 Examples</h3>
+<ul>
+<li>Areas around dust filling/emptying points</li>
+<li>Near conveyor transfer points with frequent spillage</li>
+<li>Bag filter rooms during normal operation</li>
+</ul>
+<h3 id="zone-22-examples">Zone 22 Examples</h3>
+<ul>
+<li>Areas surrounding Zone 21 with adequate housekeeping</li>
+<li>Near equipment that rarely releases dust</li>
+<li>Warehouse areas storing bags of combustible powder</li>
+</ul>
+<p><strong>Important:</strong> Dust layers on surfaces can form Zone 22 (or higher) even without airborne dust. A layer of 5mm of combustible dust, if disturbed, can create an explosive cloud.</p>
+<h2 id="north-american-classification-nec-cec">North American Classification (NEC/CEC)</h2>
+<p>The US (NEC Article 500/505) and Canada (CEC Section 18) use a parallel system:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Zone System</th>
+<th>NEC/CEC Equivalent</th>
+<th>Hazard Level</th>
+</tr></thead><tbody>
+<tr>
+<td>Zone 0</td>
+<td>Class I, Division 1</td>
+<td>Continuous/frequent</td>
+</tr>
+<tr>
+<td>Zone 1</td>
+<td>Class I, Division 1</td>
+<td>Normal operation</td>
+</tr>
+<tr>
+<td>Zone 2</td>
+<td>Class I, Division 2</td>
+<td>Abnormal only</td>
+</tr>
+<tr>
+<td>Zone 20</td>
+<td>Class II, Division 1</td>
+<td>Continuous/frequent dust</td>
+</tr>
+<tr>
+<td>Zone 21</td>
+<td>Class II, Division 1</td>
+<td>Normal operation dust</td>
+</tr>
+<tr>
+<td>Zone 22</td>
+<td>Class II, Division 2</td>
+<td>Abnormal only dust</td>
+</tr>
+</tbody></table>
+<p>NEC Article 505 also recognizes the Zone system directly. The Division system is less granular — Division 1 covers both Zone 0 and Zone 1.</p>
+<p><strong>Class III</strong> covers fibers and flyings (textile mills, woodworking) — no direct Zone equivalent.</p>
+<h2 id="zone-classification-methodology">Zone Classification Methodology</h2>
+<p>Classification is typically performed by a team including:</p>
+<ul>
+<li>Process engineers (source and release characterization)</li>
+<li>Safety/HSE engineers</li>
+<li>Electrical engineers</li>
+<li>Operations personnel</li>
+</ul>
+<h3 id="key-factors">Key Factors</h3>
+<ol>
+<li><strong>Source of release</strong> — where flammable material can escape (flanges, valves, seals, vents)</li>
+<li><strong>Grade of release</strong></li>
+<li><strong>Continuous</strong> → forms Zone 0/20</li>
+<li><strong>Primary</strong> (expected during normal operation) → forms Zone 1/21</li>
+<li><strong>Secondary</strong> (not expected during normal operation) → forms Zone 2/22</li>
+<li><strong>Ventilation</strong> — affects zone extent and possibly zone type</li>
+<li><strong>Good ventilation</strong> reduces zone size and may downgrade zone type</li>
+<li><strong>Poor ventilation</strong> extends zone size and may upgrade zone type</li>
+<li><strong>Negligible ventilation</strong> (enclosed spaces) — zone extends to fill the entire space</li>
+<li><strong>Relative density of gas</strong> — lighter gases (hydrogen) rise; heavier gases (propane) pool at ground level</li>
+</ol>
+<h3 id="zone-extent">Zone Extent</h3>
+<p>The physical size of a zone depends on:</p>
+<ul>
+<li>Release rate and velocity</li>
+<li>Ventilation rate and effectiveness</li>
+<li>Relative density of the flammable substance</li>
+<li>Flash point and vapour pressure</li>
+<li>LEL of the substance</li>
+</ul>
+<p>Standards provide calculation methods: IEC 60079-10-1 Annex B (gases), IEC 60079-10-2 Annex B (dusts).</p>
+<h2 id="zone-documentation">Zone Documentation</h2>
+<p>The output of a zone classification study is:</p>
+<ol>
+<li><strong>Hazardous Area Classification drawings</strong> — plans and sections showing zone boundaries</li>
+<li><strong>Schedule of release sources</strong> — tabulated list of all potential sources</li>
+<li><strong>Data sheets</strong> — substance properties, release characteristics</li>
+<li><strong>Zone classification report</strong> — methodology, assumptions, results</li>
+</ol>
+<p>These documents form the basis for selecting equipment with the correct <a href="EPL.html">EPL</a> and <a href="protection-methods.html">protection method</a>.</p>
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+<ul>
+<li>Forgetting that lighter-than-air gases (hydrogen, methane) accumulate at ceiling level</li>
+<li>Ignoring dust layers — a 5mm layer disturbed becomes a dust cloud</li>
+<li>Not reassessing when processes change</li>
+<li>Confusing "Zone 2" with "non-hazardous" — it still requires Ex equipment</li>
+<li>Under-estimating ventilation failures (what happens when the fan stops?)</li>
+</ul>
+<h2 id="related-files">Related Files</h2>
+<ul>
+<li><a href="fundamentals.html">Grundlagen</a> — explosion triangle, basic concepts</li>
+<li><a href="gas-groups.html">Gas Groups</a> — how different fuels are classified</li>
+<li><a href="EPL.html">EPL</a> — equipment protection levels required per zone</li>
+<li><a href="protection-methods.html">Protection Methods</a> — types of protection suitable per zone</li>
+<li><a href="standards.html">Normen</a> — IEC 60079-10-1 and 60079-10-2</li>
+</ul>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4>All Topics</h4>
+            <a href="fundamentals.html" class="">Grundlagen</a>
+  <a href="zone-classification.html" class="current">Zonen</a>
+  <a href="gas-groups.html" class="">Gas Groups</a>
+  <a href="temperature-classes.html" class="">Temp Classes</a>
+  <a href="protection-methods.html" class="">Schutzarten</a>
+  <a href="epl.html" class="">EPL</a>
+  <a href="ex-markings.html" class="">Markings</a>
+  <a href="standards.html" class="">Normen</a>
+  <a href="certification.html" class="">Certification</a>
+  <a href="installation-inspection.html" class="">Installation</a>
+  <a href="cheat-sheet.html" class="">Kurzübersicht</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>ExKnowledge — Built from field experience.</p>
+    <p style="margin-top:8px;opacity:0.5">© 2026 ExKnowledge.com</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+  document.querySelector('.nav-toggle')?.classList.remove('open');
+  document.querySelector('.nav-links')?.classList.remove('open');
+}));
+</script>
+<script src="../js/search.js"></script>
+</body>
+</html>
