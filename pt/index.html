@@ -123,6 +123,10 @@
     <p class="subtitle">
       Essential concepts from IEC 60079, ATEX, and IECEx — condensed from standards documents into a practical engineering reference.
     </p>
+    <div class="hero-search">
+      <input type="text" class="hero-search-input" placeholder="Pesquisar temas… ex. classificação de zonas, Ex d, classe de temperatura" autocomplete="off" id="heroSearch">
+      <button class="hero-search-btn" aria-label="Search">🔍</button>
+    </div>
     <div class="hero-cta">
       <a href="pages/fundamentals.html" class="btn btn-primary">Start with the Basics</a>
       <a href="pages/cheat-sheet.html" class="btn btn-secondary">Quick Reference →</a>
@@ -335,6 +339,41 @@
   });
 })();
 </script>
-
+<script>
+(function(){
+  const pages = [
+    {title:'Fundamentals',desc:'Fire triangle, explosive atmospheres, LEL/UEL, ignition sources',url:'pages/fundamentals.html',kw:'fire triangle explosive atmosphere lel uel ignition fuel oxygen'},
+    {title:'Zone Classification',desc:'Zones 0, 1, 2 for gas. Zones 20, 21, 22 for dust',url:'pages/zone-classification.html',kw:'zone 0 1 2 20 21 22 gas dust classification hazardous area'},
+    {title:'Gas Groups',desc:'IIA, IIB, IIC, MESG, MIC, hierarchy rule',url:'pages/gas-groups.html',kw:'gas group iia iib iic mesg mic hydrogen propane ethylene dust iiia iiib iiic'},
+    {title:'Temperature Classes',desc:'T1-T6, auto-ignition temperature, surface temperature',url:'pages/temperature-classes.html',kw:'temperature class t1 t2 t3 t4 t5 t6 auto-ignition surface'},
+    {title:'Protection Methods',desc:'Ex d, Ex e, Ex i, Ex p, Ex m, Ex n, Ex t, Ex o, Ex q',url:'pages/protection-methods.html',kw:'protection method flameproof intrinsic safety increased pressurization encapsulation ex d e i p m n t o q'},
+    {title:'Equipment Protection Levels',desc:'Ga, Gb, Gc, Da, Db, Dc, EPL zone mapping',url:'pages/epl.html',kw:'epl equipment protection level ga gb gc da db dc zone mapping'},
+    {title:'Reading Ex Markings',desc:'Decode equipment nameplates, five real examples',url:'pages/ex-markings.html',kw:'ex marking nameplate label decode read atex iecex'},
+    {title:'Standards',desc:'IEC 60079, ATEX 2014/34/EU, NEC 500/505',url:'pages/standards.html',kw:'standard iec 60079 atex directive nec 500 505 regulation'},
+    {title:'Certification',desc:'Notified Bodies, IECEx certificates, ExTR, quality audits',url:'pages/certification.html',kw:'certification notified body iecex extr test report quality audit certificate'},
+    {title:'Installation & Inspection',desc:'Cable glands, clearances, inspection grades',url:'pages/installation-inspection.html',kw:'installation inspection cable gland clearance grade maintenance'},
+    {title:'Cheat Sheet',desc:'Six questions, decision tree, cost/timeline',url:'pages/cheat-sheet.html',kw:'cheat sheet quick reference decision tree cost timeline'},
+    {title:'FAQ',desc:'Frequently asked questions about ATEX, IECEx, zones, markings',url:'pages/faq.html',kw:'faq question answer atex iecex zone marking certification'},
+    {title:'Ex Certificate Scanner',desc:'Upload ATEX/IECEx certificate PDFs, extract data',url:'exscanner/',kw:'scanner certificate pdf upload extract parse'},
+    {title:'Blog',desc:'Monthly industry roundups, incidents, news',url:'blog/',kw:'blog news roundup incident hydrogen'},
+  ];
+  const input=document.getElementById('heroSearch');
+  if(!input)return;
+  const wrap=input.parentElement;
+  const results=document.createElement('div');
+  results.className='hero-search-results';
+  wrap.appendChild(results);
+  input.addEventListener('input',function(){
+    const q=this.value.toLowerCase().trim();
+    if(q.length<2){results.classList.remove('open');return;}
+    const matches=pages.filter(p=>(p.title+' '+p.desc+' '+p.kw).toLowerCase().includes(q));
+    if(!matches.length){results.innerHTML='<div class="hero-search-result"><span>No results found</span></div>';results.classList.add('open');return;}
+    results.innerHTML=matches.map(p=>'<a class="hero-search-result" href="'+p.url+'"><strong>'+p.title+'</strong><span>'+p.desc+'</span></a>').join('');
+    results.classList.add('open');
+  });
+  document.addEventListener('click',function(e){if(!wrap.contains(e.target))results.classList.remove('open');});
+  input.addEventListener('keydown',function(e){if(e.key==='Enter'){const first=results.querySelector('a');if(first)window.location=first.href;}});
+})();
+</script>
 </body>
 </html>
