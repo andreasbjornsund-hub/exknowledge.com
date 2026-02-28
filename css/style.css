@@ -1,7 +1,7 @@
 /* ExKnowledge.com */
-@font-face { font-family: 'KHTeka'; src: url('https://xshielder.com/hubfs/KHTeka-Regular.otf') format('opentype'); font-weight: 400; font-display: swap; }
-@font-face { font-family: 'KHTeka'; src: url('https://xshielder.com/hubfs/KHTeka-Medium.otf') format('opentype'); font-weight: 500; font-display: swap; }
-@font-face { font-family: 'KHTeka'; src: url('https://xshielder.com/hubfs/KHTeka-Bold.otf') format('opentype'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'KHTeka'; src: url('../fonts/KHTeka-Regular.otf') format('opentype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'KHTeka'; src: url('../fonts/KHTeka-Medium.otf') format('opentype'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'KHTeka'; src: url('../fonts/KHTeka-Bold.otf') format('opentype'); font-weight: 700; font-display: swap; }
 
 :root {
   --bg: #1e2a38;
@@ -90,8 +90,8 @@ body { padding-top: 62px; }
   display: inline-block; padding: 14px 32px; border-radius: 10px;
   font-size: 15px; font-weight: 600; cursor: pointer; border: none; transition: all 0.2s;
 }
-.btn-primary { background: var(--accent); color: #fff; box-shadow: 0 2px 8px rgba(74,159,217,0.3); }
-.btn-primary:hover { background: #3a8ec8; color: #fff; box-shadow: 0 4px 16px rgba(74,159,217,0.4); transform: translateY(-1px); }
+.btn-primary { background: var(--accent); color: #1a2535; font-weight: 600; box-shadow: 0 2px 8px rgba(77,244,164,0.3); }
+.btn-primary:hover { background: #3de094; color: #1a2535; box-shadow: 0 4px 16px rgba(77,244,164,0.4); transform: translateY(-1px); }
 .btn-secondary { background: var(--bg-card); color: var(--text-bright); border: 1.5px solid var(--border); }
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
