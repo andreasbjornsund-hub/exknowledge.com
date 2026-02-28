@@ -17,6 +17,11 @@ ExKnowledge covers the technical fundamentals of explosion protection (Ex) for h
 - [Certification](https://exknowledge.com/pages/certification.html): Notified Bodies, IECEx scheme, ExTR, quality systems, CompEx
 - [Installation & Inspection](https://exknowledge.com/pages/installation-inspection.html): IEC 60079-14, 60079-17, cable glands, inspection grades, common errors
 - [Cheat Sheet](https://exknowledge.com/pages/cheat-sheet.html): Quick qualification questions, zone-EPL mapping, decision tree, cost/timeline
+- [FAQ](https://exknowledge.com/pages/faq.html): Frequently asked questions about ATEX, IECEx, zone classification, Ex markings, certification
+
+## Tools
+
+- [Ex Certificate Scanner](https://exknowledge.com/exscanner/): Upload ATEX/IECEx certificate PDFs — extracts equipment marking, gas group, temperature class, protection type. 100% client-side, privacy-first.
 
 ## Blog
 
@@ -24,3 +29,7 @@ ExKnowledge covers the technical fundamentals of explosion protection (Ex) for h
 - [January 2026](https://exknowledge.com/blog/2026-01.html): R. Stahl 150 years, hydrogen ATEX gaps, chemical sector outlook
 - [December 2025](https://exknowledge.com/blog/2025-12.html): BARTEC acquisition, SPS 2025, market growth
 - [November 2025](https://exknowledge.com/blog/2025-11.html): Ex robotics, dust hazards, UK standards update
+
+## Languages
+
+Available in: [English](https://exknowledge.com/), [Deutsch](https://exknowledge.com/de/), [Norsk](https://exknowledge.com/no/), [Dansk](https://exknowledge.com/da/), [Svenska](https://exknowledge.com/sv/), [Suomi](https://exknowledge.com/fi/), [Español](https://exknowledge.com/es/), [Nederlands](https://exknowledge.com/nl/), [Português](https://exknowledge.com/pt/), [Italiano](https://exknowledge.com/it/), [العربية](https://exknowledge.com/ar/)
