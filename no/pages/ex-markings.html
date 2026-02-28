@@ -516,41 +516,10 @@ Class I, Zone 1, AEx db IIC T4 Gb
 </footer>
 <script>
 (function(){
-  // Mobile burger menu
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  if(burger){
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('nav-active');
-      burger.classList.toggle('toggle');
-      document.body.classList.toggle('menu-open');
-    });
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('nav-active');
-        burger.classList.remove('toggle');
-        document.body.classList.remove('menu-open');
-      });
-    });
-    document.addEventListener('click', (e) => {
-      if(!burger.contains(e.target) && !nav.contains(e.target)){
-        nav.classList.remove('nav-active');
-        burger.classList.remove('toggle');
-        document.body.classList.remove('menu-open');
-      }
-    });
-  }
-  // Language dropdown
-  document.querySelectorAll('.lang-btn').forEach(b => {
-    b.addEventListener('click', e => {
-      e.stopPropagation();
-      b.parentElement.classList.toggle('open');
-    });
-  });
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.lang-dropdown.open').forEach(d => d.classList.remove('open'));
-  });
+  var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
+  if(b)b.onclick=function(){b.classList.toggle('open');n.classList.toggle('open')};
+  document.querySelectorAll('.lang-btn').forEach(function(x){x.onclick=function(e){e.stopPropagation();x.parentElement.classList.toggle('open')}});
+  document.addEventListener('click',function(e){if(b&&!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('open');n.classList.remove('open')}document.querySelectorAll('.lang-dropdown.open').forEach(function(d){if(!d.contains(e.target))d.classList.remove('open')})});
 })();
 </script>
 
