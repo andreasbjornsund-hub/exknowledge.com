@@ -97,17 +97,17 @@
     <div class="lang-dropdown">
       <button class="lang-btn" aria-label="Language">🌐 SV ▾</button>
       <ul class="lang-menu">
-          <li><a href="/" data-lang="en">🇬🇧 English</a></li>
-          <li><a href="/de/" data-lang="de">🇩🇪 Deutsch</a></li>
-          <li><a href="/no/" data-lang="no">🇳🇴 Norsk</a></li>
-          <li><a href="/da/" data-lang="da">🇩🇰 Dansk</a></li>
-          <li><a href="/sv/" data-lang="sv">🇸🇪 Svenska</a></li>
-          <li><a href="/fi/" data-lang="fi">🇫🇮 Suomi</a></li>
-          <li><a href="/es/" data-lang="es">🇪🇸 Español</a></li>
-          <li><a href="/nl/" data-lang="nl">🇳🇱 Nederlands</a></li>
-          <li><a href="/pt/" data-lang="pt">🇵🇹 Português</a></li>
-          <li><a href="/it/" data-lang="it">🇮🇹 Italiano</a></li>
-          <li><a href="/ar/" data-lang="ar">🇸🇦 العربية</a></li>
+          <li><a href="/pages/gas-groups.html" data-lang="en">🇬🇧 English</a></li>
+          <li><a href="/de/pages/gas-groups.html" data-lang="de">🇩🇪 Deutsch</a></li>
+          <li><a href="/no/pages/gas-groups.html" data-lang="no">🇳🇴 Norsk</a></li>
+          <li><a href="/da/pages/gas-groups.html" data-lang="da">🇩🇰 Dansk</a></li>
+          <li><a href="/sv/pages/gas-groups.html" data-lang="sv">🇸🇪 Svenska</a></li>
+          <li><a href="/fi/pages/gas-groups.html" data-lang="fi">🇫🇮 Suomi</a></li>
+          <li><a href="/es/pages/gas-groups.html" data-lang="es">🇪🇸 Español</a></li>
+          <li><a href="/nl/pages/gas-groups.html" data-lang="nl">🇳🇱 Nederlands</a></li>
+          <li><a href="/pt/pages/gas-groups.html" data-lang="pt">🇵🇹 Português</a></li>
+          <li><a href="/it/pages/gas-groups.html" data-lang="it">🇮🇹 Italiano</a></li>
+          <li><a href="/ar/pages/gas-groups.html" data-lang="ar">🇸🇦 العربية</a></li>
       </ul>
     </div>
     <div class="burger" aria-label="Menu">
@@ -336,9 +336,13 @@
 <script>
 (function(){
   var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
-  if(b)b.onclick=function(){b.classList.toggle('open');n.classList.toggle('open')};
-  document.querySelectorAll('.lang-btn').forEach(function(x){x.onclick=function(e){e.stopPropagation();x.parentElement.classList.toggle('open')}});
-  document.addEventListener('click',function(e){if(b&&!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('open');n.classList.remove('open')}document.querySelectorAll('.lang-dropdown.open').forEach(function(d){if(!d.contains(e.target))d.classList.remove('open')})});
+  if(b)b.addEventListener('click',function(e){e.stopPropagation();b.classList.toggle('open');n.classList.toggle('open')});
+  var lb=document.querySelector('.lang-btn');
+  if(lb)lb.addEventListener('click',function(e){e.stopPropagation();lb.parentElement.classList.toggle('open')});
+  document.addEventListener('click',function(){
+    if(b){b.classList.remove('open');n.classList.remove('open')}
+    document.querySelectorAll('.lang-dropdown.open').forEach(function(d){d.classList.remove('open')});
+  });
 })();
 </script>
 
