@@ -48,8 +48,9 @@ a:hover { color: #5a4bd6; }
 }
 body { padding-top: 62px; }
 .nav .container { display: flex; align-items: center; justify-content: space-between; }
-.nav-logo { font-size: 20px; font-weight: 800; color: var(--text-bright); z-index: 9010; letter-spacing: -0.3px; }
+.nav-logo { font-size: 20px; font-weight: 800; color: var(--text-bright); z-index: 9010; letter-spacing: -0.3px; display: flex; align-items: center; gap: 8px; }
 .nav-logo span { color: var(--accent); }
+.nav-logo .ex-hex { color: var(--accent); flex-shrink: 0; }
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a { color: var(--text-muted); font-size: 15px; font-weight: 500; }
 .nav-links a:hover { color: var(--text-bright); }
