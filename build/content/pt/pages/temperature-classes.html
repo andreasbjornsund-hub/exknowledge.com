@@ -1,0 +1,233 @@
+<div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1000&q=80" alt="Temperature Classes T1 to T6" loading="lazy" width="820" height="240">
+        <h1>Temperature Classes T1 to T6</h1>
+        <p>The temperature class of Ex equipment defines the <strong>maximum surface temperature</strong> the equipment can reach during operation. This temperature must always remain below the auto-ignition temperature (AIT) of the gases or dusts present in the <a href="zone-classification.html">hazardous area</a>.</p>
+<h2 id="temperature-classes-for-gases-iec-60079-0">Temperature Classes for Gases (IEC 60079-0)</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Class</th>
+<th>Max Surface Temp (°C)</th>
+<th>Suitable for gases with AIT above</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>T1</strong></td>
+<td>450</td>
+<td>450°C</td>
+</tr>
+<tr>
+<td><strong>T2</strong></td>
+<td>300</td>
+<td>300°C</td>
+</tr>
+<tr>
+<td><strong>T3</strong></td>
+<td>200</td>
+<td>200°C</td>
+</tr>
+<tr>
+<td><strong>T4</strong></td>
+<td>135</td>
+<td>135°C</td>
+</tr>
+<tr>
+<td><strong>T5</strong></td>
+<td>100</td>
+<td>100°C</td>
+</tr>
+<tr>
+<td><strong>T6</strong></td>
+<td>85</td>
+<td>85°C</td>
+</tr>
+</tbody></table>
+<h3 id="key-principle">Key Principle</h3>
+<ul>
+<li>Higher T-number = lower maximum surface temperature = safer for more gases</li>
+<li><strong>T6 equipment can be used in any temperature class environment</strong> (T1 through T6)</li>
+<li>T1 equipment can only be used where the AIT exceeds 450°C</li>
+<li>The hierarchy is: <strong>T6 > T5 > T4 > T3 > T2 > T1</strong> (T6 covers all)</li>
+</ul>
+<h3 id="common-gases-and-their-temperature-classes">Common Gases and Their Temperature Classes</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Gas</th>
+<th>AIT (°C)</th>
+<th>Required T-Class</th>
+</tr></thead><tbody>
+<tr>
+<td>Hydrogen</td>
+<td>560</td>
+<td>T1</td>
+</tr>
+<tr>
+<td>Methane</td>
+<td>537</td>
+<td>T1</td>
+</tr>
+<tr>
+<td>Carbon monoxide</td>
+<td>605</td>
+<td>T1</td>
+</tr>
+<tr>
+<td>Propane</td>
+<td>470</td>
+<td>T1</td>
+</tr>
+<tr>
+<td>Ethanol</td>
+<td>365</td>
+<td>T2</td>
+</tr>
+<tr>
+<td>Ethylene</td>
+<td>425</td>
+<td>T2</td>
+</tr>
+<tr>
+<td>Acetone</td>
+<td>535</td>
+<td>T1</td>
+</tr>
+<tr>
+<td>Hydrogen sulphide</td>
+<td>270</td>
+<td>T3</td>
+</tr>
+<tr>
+<td>n-Hexane</td>
+<td>233</td>
+<td>T3</td>
+</tr>
+<tr>
+<td>Diethyl ether</td>
+<td>175</td>
+<td>T4</td>
+</tr>
+<tr>
+<td>Acetaldehyde</td>
+<td>140</td>
+<td>T4</td>
+</tr>
+<tr>
+<td>Carbon disulphide</td>
+<td>95</td>
+<td>T5</td>
+</tr>
+<tr>
+<td>Ethyl nitrite</td>
+<td>90</td>
+<td>T6</td>
+</tr>
+</tbody></table>
+<h3 id="the-hydrogen-paradox">The Hydrogen Paradox</h3>
+<p>Hydrogen has a very high AIT (560°C) — only T1 required — but it is in the most dangerous <a href="gas-groups.html">gas group</a> (IIC). This is counterintuitive: hydrogen is extremely easy to ignite by a spark (0.017 mJ), but hard to ignite by a hot surface.</p>
+<p>Conversely, carbon disulphide (CS₂) requires T5 class (max 100°C surface) but is also IIC. Equipment for CS₂ must handle both the stringent gas group AND low temperature class.</p>
+<h2 id="temperature-considerations-for-dust">Temperature Considerations for Dust</h2>
+<p>Dust equipment does not use the T1–T6 classification. Instead, the maximum surface temperature is determined by two dust-specific properties:</p>
+<h3 id="1-dust-cloud-ignition-temperature-tcl">1. Dust Cloud Ignition Temperature (T_CL)</h3>
+<p>The minimum temperature of a hot surface that will ignite a dust cloud.</p>
+<p><strong>Rule:</strong> Equipment max surface temp ≤ <strong>⅔ × T_CL</strong> (in Kelvin, then convert back to °C)</p>
+<p>Example: If T_CL = 450°C (723 K), max surface = ⅔ × 723 = 482 K = <strong>209°C</strong></p>
+<h3 id="2-dust-layer-ignition-temperature-t5mm">2. Dust Layer Ignition Temperature (T_5mm)</h3>
+<p>The minimum temperature of a hot surface that will ignite a 5mm layer of settled dust.</p>
+<p><strong>Rule:</strong> Equipment max surface temp ≤ <strong>T_5mm − 75°C</strong></p>
+<p>Example: If T_5mm = 300°C, max surface = 300 − 75 = <strong>225°C</strong></p>
+<h3 id="combined-rule">Combined Rule</h3>
+<p>The maximum allowed surface temperature for dust equipment is the <strong>lower</strong> of:</p>
+<ul>
+<li>⅔ × T_CL (Kelvin) converted to °C</li>
+<li>T_5mm − 75°C</li>
+</ul>
+<p>For thicker dust layers (>5mm), additional derating applies — every 5mm of additional dust reduces the allowable surface temperature further. This is why housekeeping in dusty environments is critical.</p>
+<h3 id="dust-temperature-examples">Dust Temperature Examples</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Dust</th>
+<th>T_CL (°C)</th>
+<th>T_5mm (°C)</th>
+<th>Max Surface (°C)</th>
+</tr></thead><tbody>
+<tr>
+<td>Wheat flour</td>
+<td>380</td>
+<td>340</td>
+<td>162 (by T_CL rule)</td>
+</tr>
+<tr>
+<td>Sugar</td>
+<td>350</td>
+<td>370</td>
+<td>142 (by T_CL rule)</td>
+</tr>
+<tr>
+<td>Aluminium</td>
+<td>550</td>
+<td>320</td>
+<td>245 (by T_5mm rule)</td>
+</tr>
+<tr>
+<td>Coal</td>
+<td>610</td>
+<td>225</td>
+<td>150 (by T_5mm rule)</td>
+</tr>
+<tr>
+<td>Wood dust</td>
+<td>420</td>
+<td>260</td>
+<td>185 (by T_5mm rule)</td>
+</tr>
+</tbody></table>
+<h2 id="temperature-class-in-equipment-marking">Temperature Class in Equipment Marking</h2>
+<p>For gas equipment, the temperature class appears in the <a href="ex-markings.html">Ex marking</a>:</p>
+<pre><code>
+Ex db IIC T4 Gb
+              ^^
+              Temperature class T4 (max 135°C)
+</code></pre>
+<p>For dust equipment, the actual maximum surface temperature is marked in °C:</p>
+<pre><code>
+Ex tb IIIC T125°C Db
+                ^^^^
+                Max surface temperature 125°C
+</code></pre>
+<h2 id="ambient-temperature-range">Ambient Temperature Range</h2>
+<p>Standard Ex certification assumes an ambient temperature range of <strong>−20°C to +40°C</strong>. If equipment operates outside this range, it needs special certification marked with a "Ta" or "Tamb" range:</p>
+<pre><code>
+Ta = −40°C to +60°C
+</code></pre>
+<p>At higher ambient temperatures, the maximum surface temperature may be reached at lower power levels. At lower ambient temperatures, materials may become brittle or seals may fail.</p>
+<h2 id="practical-considerations">Practical Considerations</h2>
+<ul>
+<li><strong>Self-heating:</strong> Equipment in an enclosed space may reach higher surface temperatures than in open air. Ventilation around Ex equipment must be maintained.</li>
+<li><strong>Process temperature:</strong> If the equipment contacts a hot process (e.g., a temperature sensor in a 250°C pipe), the process temperature itself contributes to the surface temperature.</li>
+<li><strong>Solar radiation:</strong> Outdoor equipment in direct sunlight can experience additional heating. Dark-coloured enclosures in tropical climates may need derating.</li>
+<li><strong>Dust insulation effect:</strong> Dust layers act as thermal insulation, causing underlying surfaces to run hotter. Regular cleaning is essential.</li>
+</ul>
+<h2 id="related-files">Related Files</h2>
+<ul>
+<li><a href="gas-groups.html">Gas Groups</a> — gas group and temperature class are independent parameters</li>
+<li><a href="ex-markings.html">Ex Markings</a> — how temperature class appears on equipment labels</li>
+<li><a href="protection-methods.html">Protection Methods</a> — some protection methods have stricter temperature limits</li>
+<li><a href="zone-classification.html">Zone Classification</a> — zone determines EPL, T-class determines max surface temp</li>
+<li><a href="installation-inspection.html">Installation & Inspection</a> — maintaining temperature integrity</li>
+</ul>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4>All Topics</h4>
+            <a href="fundamentals.html" class="">Fundamentos</a>
+  <a href="zone-classification.html" class="">Zonas</a>
+  <a href="gas-groups.html" class="">Gas Groups</a>
+  <a href="temperature-classes.html" class="current">Temp Classes</a>
+  <a href="protection-methods.html" class="">Proteção</a>
+  <a href="epl.html" class="">EPL</a>
+  <a href="ex-markings.html" class="">Markings</a>
+  <a href="standards.html" class="">Normas</a>
+  <a href="certification.html" class="">Certification</a>
+  <a href="installation-inspection.html" class="">Installation</a>
+  <a href="cheat-sheet.html" class="">Guia rápido</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
