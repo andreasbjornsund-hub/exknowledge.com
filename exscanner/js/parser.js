@@ -9,11 +9,12 @@ const ExParser = (() => {
     const CERT_BODIES = [
         'BASEEFA', 'SIRA', 'DEKRA', 'PTB', 'INERIS', 'CESI', 'LCIE',
         'UL', 'FM', 'CSA', 'TÜV', 'TUV', 'SGS', 'ZELM', 'FTZU',
-        'NEMKO', 'DEMKO', 'KEMA', 'BVS', 'IBExU', 'EXAM', 'CERCHAR',
+        'NEMKO', 'DEMKO', 'KEMA', 'BVS', 'IBExU', 'CERCHAR',
         'SIMTARS', 'MSHA', 'ITS', 'Intertek', 'Bureau Veritas',
-        'DNV', 'CML', 'Eurofins', 'Presafe', 'Notified Body',
+        'CML', 'Eurofins', 'Presafe', 'Fiditas', 'FIDITAS',
         'ExVeritas', 'SGS-CSTC', 'CQM', 'PCEC', 'NEPSI', 'TIIS',
-        'KOSHA', 'KTL', 'PESO', 'CCOE', 'ATEX Notified Body'
+        'KOSHA', 'KTL', 'PESO', 'CCOE', 'DNV GL', 'DNV',
+        'EXAM', 'ATEX Notified Body'
     ];
 
     // Protection types and their descriptions
@@ -89,9 +90,9 @@ const ExParser = (() => {
             result.certType = 'IECEx';
         }
 
-        // ATEX: XXXX 15ATEX0123 X or II 2 G [XXXX 15ATEX0123 X]
+        // ATEX: XXXX 15ATEX0123 X or FIDI 24 ATEX 0075X/1
         if (!result.certNumber) {
-            const atex = t.match(/([A-Z]{2,10}\s*)?\d{2}ATEX\d{3,5}\s*[XU]?/i);
+            const atex = t.match(/([A-Z]{2,10}\s+)?\d{2}\s*ATEX\s*\d{3,5}\s*[XU]?(?:\/\d+)?/i);
             if (atex) {
                 result.certNumber = atex[0].trim();
                 result.certType = 'ATEX';

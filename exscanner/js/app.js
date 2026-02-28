@@ -74,6 +74,7 @@
             const arrayBuffer = await file.arrayBuffer();
             const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
 
+            // Step 1: Try text extraction with pdf.js
             let fullText = '';
             for (let i = 1; i <= pdf.numPages; i++) {
                 const page = await pdf.getPage(i);
@@ -82,10 +83,26 @@
                 fullText += pageText + '\n\n';
             }
 
+            // Step 2: If text is too short, it's likely a scanned/image PDF → use OCR
+            const strippedText = fullText.replace(/\s+/g, '').trim();
+            let usedOcr = false;
+
+            if (strippedText.length < 50) {
+                processing.querySelector('p').textContent = 'Scanned PDF detected — running OCR (this may take 30-60 seconds)...';
+                fullText = await ocrPdf(pdf);
+                usedOcr = true;
+            }
+
             // Parse
             const parsed = ExParser.parse(fullText);
             const conf = ExParser.confidence(parsed);
-            currentResult = { ...parsed, fileName: file.name, scannedAt: new Date().toISOString(), confidence: conf };
+            currentResult = {
+                ...parsed,
+                fileName: file.name,
+                scannedAt: new Date().toISOString(),
+                confidence: conf,
+                usedOcr: usedOcr
+            };
 
             // Save to history
             saveToHistory(currentResult);
@@ -106,6 +123,31 @@
         }
     }
 
+    // === OCR for scanned PDFs ===
+    async function ocrPdf(pdf) {
+        let fullText = '';
+        const worker = await Tesseract.createWorker('eng');
+
+        for (let i = 1; i <= pdf.numPages; i++) {
+            processing.querySelector('p').textContent = `Running OCR — page ${i} of ${pdf.numPages}...`;
+
+            const page = await pdf.getPage(i);
+            const viewport = page.getViewport({ scale: 2.0 }); // Higher scale = better OCR
+            const canvas = document.createElement('canvas');
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            const ctx = canvas.getContext('2d');
+
+            await page.render({ canvasContext: ctx, viewport: viewport }).promise;
+
+            const { data } = await worker.recognize(canvas);
+            fullText += data.text + '\n\n';
+        }
+
+        await worker.terminate();
+        return fullText;
+    }
+
     // === Render Results ===
     function renderResults(data, conf) {
         processing.style.display = 'none';
@@ -116,6 +158,10 @@
         confidenceFill.className = 'confidence-fill' + (conf >= 60 ? '' : conf >= 30 ? ' medium' : ' low');
         confidencePct.textContent = conf + '%';
         confidencePct.style.color = conf >= 60 ? '#4df4a4' : conf >= 30 ? '#d29922' : '#f85149';
+
+        // OCR badge
+        const ocrNote = data.usedOcr ? ' <span style="background:#d29922;color:#1a2535;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:600;margin-left:8px;">OCR</span>' : '';
+        document.querySelector('.confidence-label').innerHTML = 'Extraction confidence:' + ocrNote;
 
         // Certificate card
         const typeBadge = data.certType ? `<span class="cert-type-badge">${esc(data.certType)}</span>` : '';
