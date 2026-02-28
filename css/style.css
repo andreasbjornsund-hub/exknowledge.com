@@ -349,6 +349,9 @@ body { padding-top: 62px; }
 .lang-menu a { display: block; padding: 6px 16px; color: #c9d1d9; text-decoration: none; font-size: 0.85rem; white-space: nowrap; }
 .lang-menu a:hover { background: rgba(77,244,164,0.1); color: #4df4a4; }
 @media (max-width: 768px) {
-  .lang-menu { position: static; background: transparent; border: none; box-shadow: none; padding: 0 0 0 16px; }
-  .lang-dropdown:hover .lang-menu { display: block; }
+  .lang-dropdown { border-bottom: 1px solid var(--border-light, #30363d); }
+  .lang-btn { width: 100%; text-align: left; padding: 18px 0; font-size: 18px; border: none; border-radius: 0; }
+  .lang-menu { position: static; background: transparent; border: none; box-shadow: none; padding: 0 0 8px 16px; display: none; }
+  .lang-dropdown.open .lang-menu { display: block; }
+  .lang-menu a { padding: 10px 0; font-size: 16px; }
 }

@@ -250,5 +250,6 @@ document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click
 }));
 </script>
 <script src="../js/search.js"></script>
+<script>document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();b.parentElement.classList.toggle('open')}));document.addEventListener('click',()=>document.querySelectorAll('.lang-dropdown.open').forEach(d=>d.classList.remove('open')));</script>
 </body>
 </html>
