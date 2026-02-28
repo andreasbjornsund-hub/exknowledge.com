@@ -117,386 +117,230 @@
 
 <div class="content-layout">
       <div class="content-body">
-        <img class="content-hero" src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=1000&q=80" alt="How to Read Ex Markings on Equipment" loading="lazy" width="820" height="240">
-        <h1>How to Read Ex Markings on Equipment</h1>
-        <p>Every certified Ex device carries a marking that encodes its protection type, gas/dust group, temperature class, and equipment protection level. Understanding these markings is essential for selecting, installing, and inspecting equipment.</p>
-<h2 id="atex-marking-structure">ATEX Marking Structure</h2>
-<p>ATEX equipment carries a structured marking per Directive 2014/34/EU:</p>
+        <img class="content-hero" src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=1000&q=80" alt="Ex-Kennzeichnungen auf Betriebsmitteln lesen" loading="lazy" width="820" height="240">
+        <h1>Ex-Kennzeichnungen auf Betriebsmitteln lesen</h1>
+        <p>Jedes zertifizierte Ex-Gerät trägt eine Kennzeichnung, die Schutzart, Gas-/Staubgruppe, Temperaturklasse und Geräteschutzniveau codiert. Das Verständnis dieser Kennzeichnungen ist entscheidend für die Auswahl, Installation und Inspektion von Betriebsmitteln.</p>
+<h2 id="atex-marking-structure">ATEX-Kennzeichnungsstruktur</h2>
+<p>ATEX-Betriebsmittel tragen eine strukturierte Kennzeichnung gemäß Richtlinie 2014/34/EU:</p>
 <pre><code>
 CE 0539  ⟨Ex⟩  II 2G  Ex db IIC T4 Gb
 │   │     │     │  │    │  │  │   │  │
-│   │     │     │  │    │  │  │   │  └─ EPL (Gb = High, Zone 1)
-│   │     │     │  │    │  │  │   └──── Temperature class (T4 = max 135°C)
-│   │     │     │  │    │  │  └──────── Gas group (IIC = hydrogen/acetylene)
-│   │     │     │  │    │  └─────────── Protection type (db = flameproof, EPL b)
-│   │     │     │  │    └────────────── Ex symbol (explosion protected)
-│   │     │     │  └─────────────────── Category (2G = Category 2, Gas)
-│   │     │     └────────────────────── Equipment Group (II = surface industries)
-│   │     └──────────────────────────── ATEX hexagonal "Ex" symbol
-│   └────────────────────────────────── Notified Body number
-└────────────────────────────────────── CE mark
+│   │     │     │  │    │  │  │   │  └─ EPL (Gb = Hoch, Zone 1)
+│   │     │     │  │    │  │  │   └──── Temperaturklasse (T4 = max. 135 °C)
+│   │     │     │  │    │  │  └──────── Gasgruppe (IIC = Wasserstoff/Acetylen)
+│   │     │     │  │    │  └─────────── Schutzart (db = druckfest, EPL b)
+│   │     │     │  │    └────────────── Ex-Symbol (explosionsgeschützt)
+│   │     │     │  └─────────────────── Kategorie (2G = Kategorie 2, Gas)
+│   │     │     └────────────────────── Gerätegruppe (II = übertägige Industrie)
+│   │     └──────────────────────────── ATEX-sechseckiges „Ex"-Symbol
+│   └────────────────────────────────── Nummer der Benannten Stelle
+└────────────────────────────────────── CE-Kennzeichnung
 </code></pre>
-<h3 id="atex-equipment-groups">ATEX Equipment Groups</h3>
+<h3 id="atex-equipment-groups">ATEX-Gerätegruppen</h3>
 <div class="table-wrap"><table><thead><tr>
-<th>Group</th>
-<th>Application</th>
+<th>Gruppe</th>
+<th>Anwendung</th>
 </tr></thead><tbody>
 <tr>
 <td><strong>I</strong></td>
-<td>Mining (firedamp)</td>
+<td>Bergbau (Grubengas)</td>
 </tr>
 <tr>
 <td><strong>II</strong></td>
-<td>Surface industries — gas/vapour</td>
+<td>Übertägige Industrie — Gas/Dampf</td>
 </tr>
 <tr>
 <td><strong>III</strong></td>
-<td>Surface industries — dust</td>
+<td>Übertägige Industrie — Staub</td>
 </tr>
 </tbody></table>
-<h3 id="atex-categories">ATEX Categories</h3>
+<h3 id="atex-categories">ATEX-Kategorien</h3>
 <div class="table-wrap"><table><thead><tr>
-<th>Marking</th>
-<th>Category</th>
+<th>Kennzeichnung</th>
+<th>Kategorie</th>
 <th>EPL</th>
 <th>Zonen</th>
 </tr></thead><tbody>
-<tr>
-<td>1G</td>
-<td>Cat 1 Gas</td>
-<td>Ga</td>
-<td>0, 1, 2</td>
-</tr>
-<tr>
-<td>2G</td>
-<td>Cat 2 Gas</td>
-<td>Gb</td>
-<td>1, 2</td>
-</tr>
-<tr>
-<td>3G</td>
-<td>Cat 3 Gas</td>
-<td>Gc</td>
-<td>2</td>
-</tr>
-<tr>
-<td>1D</td>
-<td>Cat 1 Dust</td>
-<td>Da</td>
-<td>20, 21, 22</td>
-</tr>
-<tr>
-<td>2D</td>
-<td>Cat 2 Dust</td>
-<td>Db</td>
-<td>21, 22</td>
-</tr>
-<tr>
-<td>3D</td>
-<td>Cat 3 Dust</td>
-<td>Dc</td>
-<td>22</td>
-</tr>
+<tr><td>1G</td><td>Kat. 1 Gas</td><td>Ga</td><td>0, 1, 2</td></tr>
+<tr><td>2G</td><td>Kat. 2 Gas</td><td>Gb</td><td>1, 2</td></tr>
+<tr><td>3G</td><td>Kat. 3 Gas</td><td>Gc</td><td>2</td></tr>
+<tr><td>1D</td><td>Kat. 1 Staub</td><td>Da</td><td>20, 21, 22</td></tr>
+<tr><td>2D</td><td>Kat. 2 Staub</td><td>Db</td><td>21, 22</td></tr>
+<tr><td>3D</td><td>Kat. 3 Staub</td><td>Dc</td><td>22</td></tr>
 </tbody></table>
-<h2 id="iecex-marking-structure">IECEx Marking Structure</h2>
-<p>IECEx markings follow IEC 60079-0:</p>
+<h2 id="iecex-marking-structure">IECEx-Kennzeichnungsstruktur</h2>
+<p>IECEx-Kennzeichnungen folgen IEC 60079-0:</p>
 <pre><code>
 Ex db IIC T4 Gb
 │  │  │   │  │
 │  │  │   │  └─ EPL
-│  │  │   └──── Temperature class
-│  │  └──────── Gas group
-│  └─────────── Protection type with level suffix
-└────────────── Ex symbol
+│  │  │   └──── Temperaturklasse
+│  │  └──────── Gasgruppe
+│  └─────────── Schutzart mit Niveausuffix
+└────────────── Ex-Symbol
 </code></pre>
-<p>IECEx markings do not include the CE mark, group number, or category. Instead, the IECEx certificate number provides traceability:</p>
+<p>IECEx-Kennzeichnungen enthalten keine CE-Kennzeichnung, Gruppennummer oder Kategorie. Stattdessen bietet die IECEx-Zertifikatnummer die Rückverfolgbarkeit:</p>
 <pre><code>
 IECEx BAS 12.0034X
 │     │   │
-│     │   └─ Certificate number + revision (X = specific conditions)
-│     └───── ExCB code (BAS = Baseefa, UK)
-└─────────── IECEx scheme identifier
+│     │   └─ Zertifikatnummer + Revision (X = besondere Bedingungen)
+│     └───── ExCB-Code (BAS = Baseefa, UK)
+└─────────── IECEx-Systemkennung
 </code></pre>
-<h2 id="reading-the-protection-type">Reading the Protection Type</h2>
-<p>The protection type uses the two-letter "Ex" prefix followed by the method letter and level suffix:</p>
+<h2 id="reading-the-protection-type">Schutzart ablesen</h2>
+<p>Die Schutzart verwendet das zweistellige „Ex"-Präfix, gefolgt vom Methodenbuchstaben und Niveausuffix:</p>
 <div class="table-wrap"><table><thead><tr>
-<th>Marking</th>
-<th>Method</th>
-<th>Level</th>
-<th>Meaning</th>
+<th>Kennzeichnung</th>
+<th>Methode</th>
+<th>Niveau</th>
+<th>Bedeutung</th>
 </tr></thead><tbody>
-<tr>
-<td>Ex ia</td>
-<td>Intrinsic safety</td>
-<td>a</td>
-<td>Zone 0 capable</td>
-</tr>
-<tr>
-<td>Ex ib</td>
-<td>Intrinsic safety</td>
-<td>b</td>
-<td>Zone 1 capable</td>
-</tr>
-<tr>
-<td>Ex ic</td>
-<td>Intrinsic safety</td>
-<td>c</td>
-<td>Zone 2 only</td>
-</tr>
-<tr>
-<td>Ex db</td>
-<td>Flameproof</td>
-<td>b</td>
-<td>Zone 1 capable</td>
-</tr>
-<tr>
-<td>Ex dc</td>
-<td>Flameproof</td>
-<td>c</td>
-<td>Zone 2 only</td>
-</tr>
-<tr>
-<td>Ex eb</td>
-<td>Increased safety</td>
-<td>b</td>
-<td>Zone 1 capable</td>
-</tr>
-<tr>
-<td>Ex ec</td>
-<td>Increased safety</td>
-<td>c</td>
-<td>Zone 2 only</td>
-</tr>
-<tr>
-<td>Ex ma</td>
-<td>Encapsulation</td>
-<td>a</td>
-<td>Zone 0 capable</td>
-</tr>
-<tr>
-<td>Ex mb</td>
-<td>Encapsulation</td>
-<td>b</td>
-<td>Zone 1 capable</td>
-</tr>
-<tr>
-<td>Ex mc</td>
-<td>Encapsulation</td>
-<td>c</td>
-<td>Zone 2 only</td>
-</tr>
-<tr>
-<td>Ex px</td>
-<td>Pressurized</td>
-<td>x</td>
-<td>Zone 1 → non-haz</td>
-</tr>
-<tr>
-<td>Ex py</td>
-<td>Pressurized</td>
-<td>y</td>
-<td>Zone 1 → Zone 2</td>
-</tr>
-<tr>
-<td>Ex pz</td>
-<td>Pressurized</td>
-<td>z</td>
-<td>Zone 2 → non-haz</td>
-</tr>
-<tr>
-<td>Ex nA</td>
-<td>Non-sparking</td>
-<td>—</td>
-<td>Zone 2 only</td>
-</tr>
-<tr>
-<td>Ex nC</td>
-<td>Closed/sealed contacts</td>
-<td>—</td>
-<td>Zone 2 only</td>
-</tr>
-<tr>
-<td>Ex nR</td>
-<td>Restricted breathing</td>
-<td>—</td>
-<td>Zone 2 only</td>
-</tr>
-<tr>
-<td>Ex ta</td>
-<td>Dust enclosure</td>
-<td>a</td>
-<td>Zone 20 capable</td>
-</tr>
-<tr>
-<td>Ex tb</td>
-<td>Dust enclosure</td>
-<td>b</td>
-<td>Zone 21 capable</td>
-</tr>
-<tr>
-<td>Ex tc</td>
-<td>Dust enclosure</td>
-<td>c</td>
-<td>Zone 22 only</td>
-</tr>
-<tr>
-<td>Ex o</td>
-<td>Oil immersion</td>
-<td>—</td>
-<td>Zone 1 capable</td>
-</tr>
-<tr>
-<td>Ex q</td>
-<td>Powder filling</td>
-<td>—</td>
-<td>Zone 1 capable</td>
-</tr>
+<tr><td>Ex ia</td><td>Eigensicherheit</td><td>a</td><td>Zone 0 geeignet</td></tr>
+<tr><td>Ex ib</td><td>Eigensicherheit</td><td>b</td><td>Zone 1 geeignet</td></tr>
+<tr><td>Ex ic</td><td>Eigensicherheit</td><td>c</td><td>Nur Zone 2</td></tr>
+<tr><td>Ex db</td><td>Druckfeste Kapselung</td><td>b</td><td>Zone 1 geeignet</td></tr>
+<tr><td>Ex dc</td><td>Druckfeste Kapselung</td><td>c</td><td>Nur Zone 2</td></tr>
+<tr><td>Ex eb</td><td>Erhöhte Sicherheit</td><td>b</td><td>Zone 1 geeignet</td></tr>
+<tr><td>Ex ec</td><td>Erhöhte Sicherheit</td><td>c</td><td>Nur Zone 2</td></tr>
+<tr><td>Ex ma</td><td>Vergusskapselung</td><td>a</td><td>Zone 0 geeignet</td></tr>
+<tr><td>Ex mb</td><td>Vergusskapselung</td><td>b</td><td>Zone 1 geeignet</td></tr>
+<tr><td>Ex mc</td><td>Vergusskapselung</td><td>c</td><td>Nur Zone 2</td></tr>
+<tr><td>Ex px</td><td>Überdruckkapselung</td><td>x</td><td>Zone 1 → nicht-Ex</td></tr>
+<tr><td>Ex py</td><td>Überdruckkapselung</td><td>y</td><td>Zone 1 → Zone 2</td></tr>
+<tr><td>Ex pz</td><td>Überdruckkapselung</td><td>z</td><td>Zone 2 → nicht-Ex</td></tr>
+<tr><td>Ex nA</td><td>Nicht funkend</td><td>—</td><td>Nur Zone 2</td></tr>
+<tr><td>Ex nC</td><td>Geschlossene/vergossene Kontakte</td><td>—</td><td>Nur Zone 2</td></tr>
+<tr><td>Ex nR</td><td>Schwadensichere Gehäuse</td><td>—</td><td>Nur Zone 2</td></tr>
+<tr><td>Ex ta</td><td>Staubgeschütztes Gehäuse</td><td>a</td><td>Zone 20 geeignet</td></tr>
+<tr><td>Ex tb</td><td>Staubgeschütztes Gehäuse</td><td>b</td><td>Zone 21 geeignet</td></tr>
+<tr><td>Ex tc</td><td>Staubgeschütztes Gehäuse</td><td>c</td><td>Nur Zone 22</td></tr>
+<tr><td>Ex o</td><td>Ölkapselung</td><td>—</td><td>Zone 1 geeignet</td></tr>
+<tr><td>Ex q</td><td>Sandkapselung</td><td>—</td><td>Zone 1 geeignet</td></tr>
 </tbody></table>
-<h2 id="combined-markings">Combined Markings</h2>
-<p>Equipment with multiple protection methods:</p>
+<h2 id="combined-markings">Kombinierte Kennzeichnungen</h2>
+<p>Betriebsmittel mit mehreren Schutzarten:</p>
 <pre><code>
 Ex db eb IIC T4 Gb
 </code></pre>
-<p>Main body: flameproof (db). Terminal compartment: increased safety (eb).</p>
+<p>Hauptkörper: druckfeste Kapselung (db). Klemmenfach: Erhöhte Sicherheit (eb).</p>
 <pre><code>
 Ex db [ib Ga] IIC T4 Gb
 </code></pre>
-<p>Flameproof enclosure (Gb) containing intrinsically safe circuits (Ga). The brackets indicate the IS circuits inside.</p>
+<p>Druckfestes Gehäuse (Gb) mit eigensicheren Stromkreisen (Ga). Die Klammern kennzeichnen die IS-Stromkreise im Inneren.</p>
 <pre><code>
 Ex db IIC T6...T4 Gb
 </code></pre>
-<p>Temperature class varies with ambient temperature. T6 at standard ambient, T4 at elevated ambient.</p>
-<h2 id="dual-gas-and-dust-marking">Dual Gas and Dust Marking</h2>
-<p>Equipment certified for both gas and dust:</p>
+<p>Temperaturklasse variiert mit der Umgebungstemperatur. T6 bei Standard-Umgebungstemperatur, T4 bei erhöhter Umgebungstemperatur.</p>
+<h2 id="dual-gas-and-dust-marking">Duale Gas- und Staubkennzeichnung</h2>
+<p>Betriebsmittel, die sowohl für Gas als auch für Staub zertifiziert sind:</p>
 <pre><code>
 II 2G  Ex db IIC T4 Gb
 II 2D  Ex tb IIIC T125°C Db
 </code></pre>
-<p>Both lines appear on the nameplate. The equipment can be used in gas Zone 1 or dust Zone 21.</p>
-<h2 id="reading-real-world-examples">Reading Real-World Examples</h2>
-<h3 id="example-1-junction-box">Example 1: Junction Box</h3>
+<p>Beide Zeilen erscheinen auf dem Typenschild. Das Betriebsmittel kann in Gas-Zone 1 oder Staub-Zone 21 eingesetzt werden.</p>
+<h2 id="reading-real-world-examples">Praxisbeispiele</h2>
+<h3 id="example-1-junction-box">Beispiel 1: Anschlusskasten</h3>
 <pre><code>
 CE 0539 ⟨Ex⟩ II 2G Ex eb IIC T5 Gb
 </code></pre>
 <ul>
-<li>ATEX Group II, Category 2G (Zone 1 gas)</li>
-<li>Increased safety (Ex eb)</li>
-<li>All gas groups (IIC)</li>
-<li>T5 (max 100°C surface)</li>
+<li>ATEX Gruppe II, Kategorie 2G (Zone 1 Gas)</li>
+<li>Erhöhte Sicherheit (Ex eb)</li>
+<li>Alle Gasgruppen (IIC)</li>
+<li>T5 (max. 100 °C Oberfläche)</li>
 <li>EPL Gb</li>
 </ul>
-<h3 id="example-2-led-floodlight">Example 2: LED Floodlight</h3>
+<h3 id="example-2-led-floodlight">Beispiel 2: LED-Scheinwerfer</h3>
 <pre><code>
 CE 0539 ⟨Ex⟩ II 2G Ex db eb IIC T4 Gb
                     II 2D Ex tb IIIC T135°C Db
 </code></pre>
 <ul>
-<li>Dual rated: gas (Zone 1) and dust (Zone 21)</li>
-<li>Flameproof body with increased safety terminal box</li>
-<li>All gas groups (IIC), all dust groups (IIIC)</li>
-<li>Gas: T4 (135°C max), Dust: 135°C max</li>
+<li>Doppelzertifizierung: Gas (Zone 1) und Staub (Zone 21)</li>
+<li>Druckfester Körper mit Erhöhte-Sicherheit-Klemmkasten</li>
+<li>Alle Gasgruppen (IIC), alle Staubgruppen (IIIC)</li>
+<li>Gas: T4 (max. 135 °C), Staub: max. 135 °C</li>
 </ul>
-<h3 id="example-3-atex-certified-iphone-case-xshielder">Example 3: ATEX Certified iPhone Case (Xshielder)</h3>
+<h3 id="example-3-atex-certified-iphone-case-xshielder">Beispiel 3: ATEX-zertifizierte iPhone-Hülle (Xshielder)</h3>
 <pre><code>
 ⟨Ex⟩ II 2G Ex db IIC T4 Gb
      II 2D Ex tb IIIC T135°C Db
 </code></pre>
 <ul>
-<li>Zone 1 gas + Zone 21 dust</li>
-<li>Flameproof + dust-protected enclosure</li>
-<li>Covers all gas groups and dust groups</li>
-<li>IP65 rated, wireless charging compatible</li>
+<li>Zone 1 Gas + Zone 21 Staub</li>
+<li>Druckfest + staubgeschütztes Gehäuse</li>
+<li>Deckt alle Gas- und Staubgruppen ab</li>
+<li>IP65-geprüft, kompatibel mit kabellosem Laden</li>
 </ul>
-<h3 id="example-4-intrinsically-safe-transmitter">Example 4: Intrinsically Safe Transmitter</h3>
+<h3 id="example-4-intrinsically-safe-transmitter">Beispiel 4: Eigensicherer Messumformer</h3>
 <pre><code>
 CE 0539 ⟨Ex⟩ II 1G Ex ia IIC T4 Ga
 </code></pre>
 <ul>
-<li>Category 1G — suitable for Zone 0</li>
-<li>Intrinsically safe (highest level, Ex ia)</li>
-<li>All gas groups (IIC)</li>
-<li>T4 (135°C max)</li>
-<li>EPL Ga (very high protection)</li>
+<li>Kategorie 1G — geeignet für Zone 0</li>
+<li>Eigensicher (höchstes Niveau, Ex ia)</li>
+<li>Alle Gasgruppen (IIC)</li>
+<li>T4 (max. 135 °C)</li>
+<li>EPL Ga (sehr hohes Schutzniveau)</li>
 </ul>
-<h3 id="example-5-zone-2-motor">Example 5: Zone 2 Motor</h3>
+<h3 id="example-5-zone-2-motor">Beispiel 5: Zone-2-Motor</h3>
 <pre><code>
 CE 0539 ⟨Ex⟩ II 3G Ex nA IIB T3 Gc
 </code></pre>
 <ul>
-<li>Category 3G — Zone 2 only</li>
-<li>Non-sparking (Ex nA)</li>
-<li>Gas groups IIA and IIB only (not IIC)</li>
-<li>T3 (200°C max)</li>
+<li>Kategorie 3G — nur Zone 2</li>
+<li>Nicht funkend (Ex nA)</li>
+<li>Nur Gasgruppen IIA und IIB (nicht IIC)</li>
+<li>T3 (max. 200 °C)</li>
 <li>EPL Gc</li>
 </ul>
-<h2 id="additional-markings-on-the-nameplate">Additional Markings on the Nameplate</h2>
-<p>Beyond the Ex marking, equipment labels include:</p>
+<h2 id="additional-markings-on-the-nameplate">Zusätzliche Angaben auf dem Typenschild</h2>
+<p>Neben der Ex-Kennzeichnung enthalten Geräteetiketten:</p>
 <div class="table-wrap"><table><thead><tr>
-<th>Marking</th>
-<th>Meaning</th>
+<th>Kennzeichnung</th>
+<th>Bedeutung</th>
 </tr></thead><tbody>
-<tr>
-<td><strong>Ta</strong> or <strong>Tamb</strong></td>
-<td>Ambient temperature range (e.g., −40°C to +60°C)</td>
-</tr>
-<tr>
-<td><strong>IP66</strong> / <strong>IP68</strong></td>
-<td>Ingress protection rating</td>
-</tr>
-<tr>
-<td><strong>X</strong></td>
-<td>Special conditions of use (see certificate)</td>
-</tr>
-<tr>
-<td><strong>U</strong></td>
-<td>Component certificate (not stand-alone)</td>
-</tr>
-<tr>
-<td><strong>Certificate no.</strong></td>
-<td>Reference to the full test certificate</td>
-</tr>
-<tr>
-<td><strong>Serial number</strong></td>
-<td>Unique device identifier for traceability</td>
-</tr>
-<tr>
-<td><strong>Year of manufacture</strong></td>
-<td>Required for audit trail</td>
-</tr>
+<tr><td><strong>Ta</strong> oder <strong>Tamb</strong></td><td>Umgebungstemperaturbereich (z. B. −40 °C bis +60 °C)</td></tr>
+<tr><td><strong>IP66</strong> / <strong>IP68</strong></td><td>Schutzart gegen Eindringen</td></tr>
+<tr><td><strong>X</strong></td><td>Besondere Bedingungen (siehe Zertifikat)</td></tr>
+<tr><td><strong>U</strong></td><td>Komponentenzertifikat (nicht eigenständig)</td></tr>
+<tr><td><strong>Zertifikatnr.</strong></td><td>Verweis auf das vollständige Prüfzertifikat</td></tr>
+<tr><td><strong>Seriennummer</strong></td><td>Eindeutige Gerätekennung für die Rückverfolgbarkeit</td></tr>
+<tr><td><strong>Herstellungsjahr</strong></td><td>Erforderlich für den Prüfnachweis</td></tr>
 </tbody></table>
-<p>The <strong>"X"</strong> suffix is important — it means there are special conditions documented in the certificate that must be observed during installation and use. Always retrieve and read the certificate when you see "X".</p>
-<h2 id="nec-cec-markings-north-america">NEC/CEC Markings (North America)</h2>
-<p>North American marking follows a different format:</p>
+<p>Das <strong>„X"-Suffix</strong> ist wichtig — es bedeutet, dass im Zertifikat besondere Bedingungen dokumentiert sind, die bei der Installation und Verwendung beachtet werden müssen. Rufen Sie immer das Zertifikat ab, wenn Sie ein „X" sehen.</p>
+<h2 id="nec-cec-markings-north-america">NEC/CEC-Kennzeichnungen (Nordamerika)</h2>
+<p>Nordamerikanische Kennzeichnungen folgen einem anderen Format:</p>
 <pre><code>
 Class I, Division 1, Groups B, C, D, T4
 </code></pre>
-<p>Or in the Zone system:</p>
+<p>Oder im Zonensystem:</p>
 <pre><code>
 Class I, Zone 1, AEx db IIC T4 Gb
 </code></pre>
-<p>The "A" prefix before "Ex" indicates the equipment is certified to North American standards (NEC/CEC) using the Zone system.</p>
-<h2 id="related-files">Related Files</h2>
+<p>Das „A"-Präfix vor „Ex" zeigt an, dass das Betriebsmittel nach nordamerikanischen Normen (NEC/CEC) im Zonensystem zertifiziert ist.</p>
+<h2 id="related-files">Verwandte Themen</h2>
 <ul>
-<li><a href="protection-methods.html">Protection Methods</a> — detailed explanation of each method</li>
-<li><a href="gas-groups.html">Gas Groups</a> — what IIA/IIB/IIC means</li>
-<li><a href="temperature-classes.html">Temperature Classes</a> — what T1–T6 means</li>
-<li><a href="EPL.html">EPL</a> — what Ga/Gb/Gc means</li>
-<li><a href="standards.html">Normen</a> — which standard governs each marking element</li>
-<li><a href="certification.html">Certification</a> — how certificates and markings are issued</li>
+<li><a href="protection-methods.html">Schutzarten</a> — detaillierte Erklärung jeder Methode</li>
+<li><a href="gas-groups.html">Gasgruppen</a> — was IIA/IIB/IIC bedeutet</li>
+<li><a href="temperature-classes.html">Temperaturklassen</a> — was T1–T6 bedeutet</li>
+<li><a href="epl.html">EPL</a> — was Ga/Gb/Gc bedeutet</li>
+<li><a href="standards.html">Normen</a> — welche Norm jedes Kennzeichnungselement regelt</li>
+<li><a href="certification.html">Zertifizierung</a> — wie Zertifikate und Kennzeichnungen ausgestellt werden</li>
 </ul>
       </div>
       <aside class="content-sidebar" aria-label="Navigation">
         <div class="sidebar-card">
-          <h4>All Topics</h4>
+          <h4>Alle Themen</h4>
             <a href="fundamentals.html" class="">Grundlagen</a>
   <a href="zone-classification.html" class="">Zonen</a>
-  <a href="gas-groups.html" class="">Gas Groups</a>
-  <a href="temperature-classes.html" class="">Temp Classes</a>
+  <a href="gas-groups.html" class="">Gasgruppen</a>
+  <a href="temperature-classes.html" class="">Temperaturklassen</a>
   <a href="protection-methods.html" class="">Schutzarten</a>
   <a href="epl.html" class="">EPL</a>
-  <a href="ex-markings.html" class="current">Markings</a>
+  <a href="ex-markings.html" class="current">Kennzeichnungen</a>
   <a href="standards.html" class="">Normen</a>
-  <a href="certification.html" class="">Certification</a>
+  <a href="certification.html" class="">Zertifizierung</a>
   <a href="installation-inspection.html" class="">Installation</a>
   <a href="cheat-sheet.html" class="">Kurzübersicht</a>
         </div>
@@ -504,6 +348,7 @@ Class I, Zone 1, AEx db IIC T4 Gb
     </div>
   </div>
 </section>
+
 
 <footer class="footer">
   <div class="container">
