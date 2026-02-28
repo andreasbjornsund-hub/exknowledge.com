@@ -48,22 +48,19 @@
       <li><a href="/nl/pages/cheat-sheet.html">Snelgids</a></li>
       <li><a href="/nl/blog/" class="active">Blog</a></li>
     </ul>
-    <div class="lang-dropdown">
-      <button class="lang-btn" aria-label="Language">🌐 NL ▾</button>
-      <ul class="lang-menu">
-          <li><a href="/blog/" data-lang="en">🇬🇧 English</a></li>
-          <li><a href="/de/blog/" data-lang="de">🇩🇪 Deutsch</a></li>
-          <li><a href="/no/blog/" data-lang="no">🇳🇴 Norsk</a></li>
-          <li><a href="/da/blog/" data-lang="da">🇩🇰 Dansk</a></li>
-          <li><a href="/sv/blog/" data-lang="sv">🇸🇪 Svenska</a></li>
-          <li><a href="/fi/blog/" data-lang="fi">🇫🇮 Suomi</a></li>
-          <li><a href="/es/blog/" data-lang="es">🇪🇸 Español</a></li>
-          <li><a href="/nl/blog/" data-lang="nl">🇳🇱 Nederlands</a></li>
-          <li><a href="/pt/blog/" data-lang="pt">🇵🇹 Português</a></li>
-          <li><a href="/it/blog/" data-lang="it">🇮🇹 Italiano</a></li>
-          <li><a href="/ar/blog/" data-lang="ar">🇸🇦 العربية</a></li>
-      </ul>
-    </div>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/blog/">🇬🇧 English</option>
+      <option value="/de/blog/">🇩🇪 Deutsch</option>
+      <option value="/no/blog/">🇳🇴 Norsk</option>
+      <option value="/da/blog/">🇩🇰 Dansk</option>
+      <option value="/sv/blog/">🇸🇪 Svenska</option>
+      <option value="/fi/blog/">🇫🇮 Suomi</option>
+      <option value="/es/blog/">🇪🇸 Español</option>
+      <option value="/nl/blog/" selected>🇳🇱 Nederlands</option>
+      <option value="/pt/blog/">🇵🇹 Português</option>
+      <option value="/it/blog/">🇮🇹 Italiano</option>
+      <option value="/ar/blog/">🇸🇦 العربية</option>
+    </select>
     <div class="burger" aria-label="Menu">
       <div class="line1"></div>
       <div class="line2"></div>
@@ -133,11 +130,8 @@
 (function(){
   var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
   if(b)b.addEventListener('click',function(e){e.stopPropagation();b.classList.toggle('open');n.classList.toggle('open')});
-  var lb=document.querySelector('.lang-btn');
-  if(lb)lb.addEventListener('click',function(e){e.stopPropagation();lb.parentElement.classList.toggle('open')});
-  document.addEventListener('click',function(){
-    if(b){b.classList.remove('open');n.classList.remove('open')}
-    document.querySelectorAll('.lang-dropdown.open').forEach(function(d){d.classList.remove('open')});
+  document.addEventListener('click',function(e){
+    if(b&&!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('open');n.classList.remove('open')}
   });
 })();
 </script>

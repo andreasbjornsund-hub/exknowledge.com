@@ -94,22 +94,19 @@
       <li><a href="/fi/pages/cheat-sheet.html">Pikaohje</a></li>
       <li><a href="/fi/blog/">Blog</a></li>
     </ul>
-    <div class="lang-dropdown">
-      <button class="lang-btn" aria-label="Language">🌐 FI ▾</button>
-      <ul class="lang-menu">
-          <li><a href="/pages/temperature-classes.html" data-lang="en">🇬🇧 English</a></li>
-          <li><a href="/de/pages/temperature-classes.html" data-lang="de">🇩🇪 Deutsch</a></li>
-          <li><a href="/no/pages/temperature-classes.html" data-lang="no">🇳🇴 Norsk</a></li>
-          <li><a href="/da/pages/temperature-classes.html" data-lang="da">🇩🇰 Dansk</a></li>
-          <li><a href="/sv/pages/temperature-classes.html" data-lang="sv">🇸🇪 Svenska</a></li>
-          <li><a href="/fi/pages/temperature-classes.html" data-lang="fi">🇫🇮 Suomi</a></li>
-          <li><a href="/es/pages/temperature-classes.html" data-lang="es">🇪🇸 Español</a></li>
-          <li><a href="/nl/pages/temperature-classes.html" data-lang="nl">🇳🇱 Nederlands</a></li>
-          <li><a href="/pt/pages/temperature-classes.html" data-lang="pt">🇵🇹 Português</a></li>
-          <li><a href="/it/pages/temperature-classes.html" data-lang="it">🇮🇹 Italiano</a></li>
-          <li><a href="/ar/pages/temperature-classes.html" data-lang="ar">🇸🇦 العربية</a></li>
-      </ul>
-    </div>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/temperature-classes.html">🇬🇧 English</option>
+      <option value="/de/pages/temperature-classes.html">🇩🇪 Deutsch</option>
+      <option value="/no/pages/temperature-classes.html">🇳🇴 Norsk</option>
+      <option value="/da/pages/temperature-classes.html">🇩🇰 Dansk</option>
+      <option value="/sv/pages/temperature-classes.html">🇸🇪 Svenska</option>
+      <option value="/fi/pages/temperature-classes.html" selected>🇫🇮 Suomi</option>
+      <option value="/es/pages/temperature-classes.html">🇪🇸 Español</option>
+      <option value="/nl/pages/temperature-classes.html">🇳🇱 Nederlands</option>
+      <option value="/pt/pages/temperature-classes.html">🇵🇹 Português</option>
+      <option value="/it/pages/temperature-classes.html">🇮🇹 Italiano</option>
+      <option value="/ar/pages/temperature-classes.html">🇸🇦 العربية</option>
+    </select>
     <div class="burger" aria-label="Menu">
       <div class="line1"></div>
       <div class="line2"></div>
@@ -362,11 +359,8 @@ Ta = −40°C to +60°C
 (function(){
   var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
   if(b)b.addEventListener('click',function(e){e.stopPropagation();b.classList.toggle('open');n.classList.toggle('open')});
-  var lb=document.querySelector('.lang-btn');
-  if(lb)lb.addEventListener('click',function(e){e.stopPropagation();lb.parentElement.classList.toggle('open')});
-  document.addEventListener('click',function(){
-    if(b){b.classList.remove('open');n.classList.remove('open')}
-    document.querySelectorAll('.lang-dropdown.open').forEach(function(d){d.classList.remove('open')});
+  document.addEventListener('click',function(e){
+    if(b&&!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('open');n.classList.remove('open')}
   });
 })();
 </script>

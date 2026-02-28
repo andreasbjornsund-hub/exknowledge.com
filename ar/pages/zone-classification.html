@@ -94,22 +94,19 @@
       <li><a href="/ar/pages/cheat-sheet.html">مرجع سريع</a></li>
       <li><a href="/ar/blog/">Blog</a></li>
     </ul>
-    <div class="lang-dropdown">
-      <button class="lang-btn" aria-label="Language">🌐 AR ▾</button>
-      <ul class="lang-menu">
-          <li><a href="/pages/zone-classification.html" data-lang="en">🇬🇧 English</a></li>
-          <li><a href="/de/pages/zone-classification.html" data-lang="de">🇩🇪 Deutsch</a></li>
-          <li><a href="/no/pages/zone-classification.html" data-lang="no">🇳🇴 Norsk</a></li>
-          <li><a href="/da/pages/zone-classification.html" data-lang="da">🇩🇰 Dansk</a></li>
-          <li><a href="/sv/pages/zone-classification.html" data-lang="sv">🇸🇪 Svenska</a></li>
-          <li><a href="/fi/pages/zone-classification.html" data-lang="fi">🇫🇮 Suomi</a></li>
-          <li><a href="/es/pages/zone-classification.html" data-lang="es">🇪🇸 Español</a></li>
-          <li><a href="/nl/pages/zone-classification.html" data-lang="nl">🇳🇱 Nederlands</a></li>
-          <li><a href="/pt/pages/zone-classification.html" data-lang="pt">🇵🇹 Português</a></li>
-          <li><a href="/it/pages/zone-classification.html" data-lang="it">🇮🇹 Italiano</a></li>
-          <li><a href="/ar/pages/zone-classification.html" data-lang="ar">🇸🇦 العربية</a></li>
-      </ul>
-    </div>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/zone-classification.html">🇬🇧 English</option>
+      <option value="/de/pages/zone-classification.html">🇩🇪 Deutsch</option>
+      <option value="/no/pages/zone-classification.html">🇳🇴 Norsk</option>
+      <option value="/da/pages/zone-classification.html">🇩🇰 Dansk</option>
+      <option value="/sv/pages/zone-classification.html">🇸🇪 Svenska</option>
+      <option value="/fi/pages/zone-classification.html">🇫🇮 Suomi</option>
+      <option value="/es/pages/zone-classification.html">🇪🇸 Español</option>
+      <option value="/nl/pages/zone-classification.html">🇳🇱 Nederlands</option>
+      <option value="/pt/pages/zone-classification.html">🇵🇹 Português</option>
+      <option value="/it/pages/zone-classification.html">🇮🇹 Italiano</option>
+      <option value="/ar/pages/zone-classification.html" selected>🇸🇦 العربية</option>
+    </select>
     <div class="burger" aria-label="Menu">
       <div class="line1"></div>
       <div class="line2"></div>
@@ -339,11 +336,8 @@
 (function(){
   var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
   if(b)b.addEventListener('click',function(e){e.stopPropagation();b.classList.toggle('open');n.classList.toggle('open')});
-  var lb=document.querySelector('.lang-btn');
-  if(lb)lb.addEventListener('click',function(e){e.stopPropagation();lb.parentElement.classList.toggle('open')});
-  document.addEventListener('click',function(){
-    if(b){b.classList.remove('open');n.classList.remove('open')}
-    document.querySelectorAll('.lang-dropdown.open').forEach(function(d){d.classList.remove('open')});
+  document.addEventListener('click',function(e){
+    if(b&&!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('open');n.classList.remove('open')}
   });
 })();
 </script>
