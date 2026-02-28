@@ -1,6 +1,6 @@
 {
   "certification": {
-    "title": "ATEX and IECEx Certification: Notified Bodies, Test Reports, Quality Systems",
+    "title": "Ex Equipment Certification Process \u2014 ExKnowledge",
     "description": "How explosion-protected equipment gets certified. Notified Bodies, IECEx scheme, ExTR test reports, quality audits, and CompEx competence.",
     "image": "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=1000&q=80"
   },
@@ -10,12 +10,12 @@
     "image": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=1000&q=80"
   },
   "epl": {
-    "title": "Equipment Protection Levels: Ga, Gb, Gc, Da, Db, Dc Explained",
+    "title": "Equipment Protection Levels (EPL) \u2014 ExKnowledge",
     "description": "Equipment Protection Levels Ga, Gb, Gc for gas and Da, Db, Dc for dust. How EPL connects zone classification to protection method selection.",
     "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1000&q=80"
   },
   "ex-markings": {
-    "title": "ATEX and IECEx Marking Guide: How to Read Ex Equipment Labels",
+    "title": "Reading Ex Markings \u2014 ExKnowledge",
     "description": "Decode ATEX and IECEx markings step by step. Five real-world examples walked through piece by piece. Group, zone, temperature class, EPL.",
     "image": "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=1000&q=80"
   },
@@ -25,38 +25,42 @@
     "image": ""
   },
   "fundamentals": {
-    "title": "Explosion Protection Fundamentals: Fire Triangle, LEL/UEL, Ignition Sources",
+    "title": "Explosion Protection Fundamentals \u2014 ExKnowledge",
     "description": "The fire triangle, explosive atmospheres, LEL and UEL limits, 13 ignition sources, and the three protection principles. A practical guide for engineers.",
     "image": "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=1000&q=80"
   },
   "gas-groups": {
-    "title": "Gas Groups IIA, IIB, IIC and Dust Groups IIIA, IIIB, IIIC Explained",
+    "title": "Gas Groups IIA, IIB, IIC \u2014 ExKnowledge",
     "description": "Gas groups IIA, IIB, IIC explained with MESG and MIC ratio. Dust groups IIIA, IIIB, IIIC. Hierarchy rules and NEC equivalents.",
     "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1000&q=80"
   },
   "installation-inspection": {
-    "title": "Ex Equipment Installation and Inspection: IEC 60079-14 and 60079-17 Guide",
+    "title": "Ex Installation & Inspection Guide \u2014 ExKnowledge",
     "description": "Cable glands, clearance distances, three inspection grades, ten common mistakes, per IEC 60079-14 and 60079-17 requirements.",
     "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1000&q=80"
   },
   "protection-methods": {
-    "title": "Ex Protection Methods: Ex d, Ex e, Ex i, Ex p, Ex n, Ex m and More",
+    "title": "Ex Protection Methods (d, e, i, p) \u2014 ExKnowledge",
     "description": "All explosion protection methods in one place. Flameproof (Ex d), intrinsic safety (Ex i), increased safety (Ex e), pressurization (Ex p), and more.",
     "image": "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1000&q=80"
   },
   "standards": {
-    "title": "Explosion Protection Standards: IEC 60079, ATEX Directives, NEC 500/505",
+    "title": "ATEX & IECEx Standards Overview \u2014 ExKnowledge",
     "description": "The full IEC 60079 series, ATEX 2014/34/EU and 1999/92/EC, NEC 500/505, CEC, and regional standards from Brazil to Australia.",
     "image": "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1000&q=80"
   },
   "temperature-classes": {
-    "title": "Temperature Classes T1-T6: Auto-Ignition Temperatures for Ex Equipment",
+    "title": "Temperature Classes T1\u2013T6 \u2014 ExKnowledge",
     "description": "Temperature classes T1 through T6, auto-ignition temperatures, dust layer ignition, and how to select the right T-class for your equipment.",
     "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1000&q=80"
   },
   "zone-classification": {
-    "title": "ATEX Zone Classification: Zone 0, 1, 2 (Gas) and Zone 20, 21, 22 (Dust)",
+    "title": "Zone Classification (0, 1, 2, 20, 21, 22) \u2014 ExKnowledge",
     "description": "How hazardous areas are classified into Zones 0, 1, 2 for gas and 20, 21, 22 for dust. Methodology, IEC 60079-10, examples, and common mistakes.",
     "image": "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=1000&q=80"
+  },
+  "index": {
+    "description": "Free reference for ATEX, IECEx, and explosion protection. Zones, protection methods, gas groups, temperature classes, and Ex markings for engineers.",
+    "title": "ExKnowledge \u2014 ATEX & IECEx Reference Guide"
   }
 }
