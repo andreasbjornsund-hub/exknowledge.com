@@ -2,78 +2,83 @@
       <div class="content-body">
         <img class="content-hero" src="https://images.unsplash.com/photo-1574169208507-84376144848b?w=1000&q=80" alt="Guía rápida de protección contra explosiones" loading="lazy" width="820" height="240">
         <h1>Guía rápida de protección contra explosiones</h1>
-        <p>Una referencia rápida para ingenieros, ventas técnicas y responsables de producto que trabajan con equipos protegidos contra explosiones. Para más detalles sobre cualquier tema, siga los enlaces a los archivos detallados.</p>
-<h2 id="quick-qualification-questions">Preguntas rápidas de cualificación</h2>
+        <p>Una guía de referencia rápida para ingenieros, ventas técnicas y responsables de producto que trabajan con equipos protegidos contra explosiones. Para todos los detalles sobre cualquier tema, siga los enlaces a las secciones detalladas.</p>
+<h2 id="quick-qualification-questions">Preguntas rápidas de calificación</h2>
 <p>Al evaluar si un equipo es adecuado para un área peligrosa, responda estas seis preguntas en orden:</p>
 <ol class="qual-questions">
 <li><strong>¿Qué zona es el área?</strong> (0, 1, 2 / 20, 21, 22) → <a href="zone-classification.html">Clasificación de zonas</a></li>
-<li><strong>¿Gas o polvo?</strong> (¿o ambos?) → Evaluación de peligros del emplazamiento</li>
+<li><strong>¿Gas o polvo?</strong> (¿o ambos?) → Evaluación de riesgos del lugar</li>
 <li><strong>¿Grupo de gas/polvo requerido?</strong> (IIA/IIB/IIC o IIIA/IIIB/IIIC) → <a href="gas-groups.html">Grupos de gas</a></li>
 <li><strong>¿Clase de temperatura requerida?</strong> (T1–T6 o °C específicos para polvo) → <a href="temperature-classes.html">Clases de temperatura</a></li>
 <li><strong>¿Aprobación regional requerida?</strong> (ATEX / IECEx / NEC / otra) → <a href="standards.html">Normas</a></li>
 <li><strong>¿Qué método de protección?</strong> (Ex d, Ex i, Ex e, Ex p, Ex n, etc.) → <a href="protection-methods.html">Métodos de protección</a></li>
 </ol>
-<h2 id="high-level-mapping">Correspondencia general</h2>
+<h2 id="high-level-mapping">Mapa de alto nivel</h2>
 <h3 id="zone--epl">Zona → EPL</h3>
 <div class="table-wrap"><table><thead><tr>
-<th>Zona</th><th>EPL requerido</th><th>Nivel de protección</th>
+<th>Zona</th>
+<th>EPL requerido</th>
+<th>Nivel de protección</th>
 </tr></thead><tbody>
 <tr><td>Zona 0 / 20</td><td>Ga / Da</td><td>Muy alto (seguro con 2 fallos)</td></tr>
 <tr><td>Zona 1 / 21</td><td>Gb / Db</td><td>Alto (seguro con 1 fallo)</td></tr>
-<tr><td>Zona 2 / 22</td><td>Gc / Dc</td><td>Mejorado (seguro en funcionamiento normal)</td></tr>
-</tbody></table>
-<p>Véase <a href="EPL.html">EPL</a> para más detalles.</p>
+<tr><td>Zona 2 / 22</td><td>Gc / Dc</td><td>Mejorado (seguro en operación normal)</td></tr>
+</tbody></table></div>
+<p>Consulte <a href="EPL.html">EPL</a> para todos los detalles.</p>
 <h3 id="hierarchy-rules">Reglas de jerarquía</h3>
-<p>Estas reglas de «cobertura» simplifican la selección de equipos:</p>
+<p>Estas reglas de "cobertura" simplifican la selección de equipos:</p>
 <ul>
-<li><strong>Grupos de gas:</strong> IIC cubre IIB e IIA — un solo dispositivo IIC funciona en todas partes</li>
+<li><strong>Grupos de gas:</strong> IIC cubre IIB e IIA — un dispositivo clasificado IIC funciona en cualquier lugar</li>
 <li><strong>Grupos de polvo:</strong> IIIC cubre IIIB e IIIA</li>
 <li><strong>Temperatura:</strong> T6 es la más restrictiva y cubre de T5 a T1</li>
-<li><strong>EPL:</strong> Los equipos Ga pueden usarse en Zonas 0, 1 y 2</li>
+<li><strong>EPL:</strong> Un equipo Ga puede usarse en Zonas 0, 1 y 2</li>
 </ul>
-<h3 id="protection-method--zone-suitability-quick-reference">Método de protección → Idoneidad por zona (Referencia rápida)</h3>
+<h3 id="protection-method--zone-suitability-quick-reference">Método de protección → Idoneidad por zona (referencia rápida)</h3>
 <div class="table-wrap"><table><thead><tr>
-<th>Método</th><th>Zona 0</th><th>Zona 1</th><th>Zona 2</th>
+<th>Método</th>
+<th>Zona 0</th>
+<th>Zona 1</th>
+<th>Zona 2</th>
 </tr></thead><tbody>
 <tr><td>Ex ia</td><td>✅</td><td>✅</td><td>✅</td></tr>
 <tr><td>Ex d</td><td></td><td>✅</td><td>✅</td></tr>
 <tr><td>Ex e</td><td></td><td>✅</td><td>✅</td></tr>
 <tr><td>Ex p</td><td></td><td>✅</td><td>✅</td></tr>
 <tr><td>Ex n</td><td></td><td></td><td>✅</td></tr>
-</tbody></table>
-<p>Véase <a href="protection-methods.html">Métodos de protección</a> para la matriz completa incluyendo zonas de polvo.</p>
-<h2 id="onboarding-reference">Referencia de iniciación</h2>
-<p>Para alguien nuevo en protección contra explosiones, leer en este orden:</p>
+</tbody></table></div>
+<p>Consulte <a href="protection-methods.html">Métodos de protección</a> para la matriz completa incluyendo zonas de polvo.</p>
+<h2 id="onboarding-reference">Referencia de introducción</h2>
+<p>Para alguien nuevo en la protección contra explosiones, lea en este orden:</p>
 <ol>
 <li><a href="fundamentals.html">Fundamentos</a> — qué hace peligrosa un área</li>
 <li><a href="zone-classification.html">Clasificación de zonas</a> — cómo se categorizan las áreas</li>
 <li><a href="gas-groups.html">Grupos de gas</a> y <a href="temperature-classes.html">Clases de temperatura</a> — propiedades de los combustibles</li>
-<li><a href="protection-methods.html">Métodos de protección</a> — cómo se hacen seguros los equipos</li>
-<li><a href="EPL.html">EPL</a> — conexión entre zonas y requisitos de equipos</li>
-<li><a href="ex-markings.html">Marcas Ex</a> — lectura de etiquetas de equipos</li>
+<li><a href="protection-methods.html">Métodos de protección</a> — cómo se hace seguro el equipo</li>
+<li><a href="EPL.html">EPL</a> — conexión entre zonas y requisitos del equipo</li>
+<li><a href="ex-markings.html">Marcado Ex</a> — lectura de etiquetas del equipo</li>
 <li><a href="standards.html">Normas</a> — el panorama regulatorio</li>
-<li><a href="certification.html">Certificación</a> — cómo se aprueban los equipos</li>
+<li><a href="certification.html">Certificación</a> — cómo se aprueba el equipo</li>
 <li><a href="installation-inspection.html">Instalación e inspección</a> — mantener la seguridad en campo</li>
 </ol>
-<h2 id="related-files">Temas relacionados</h2>
+<h2 id="related-files">Secciones relacionadas</h2>
 <ul>
 <li><a href="fundamentals.html">Fundamentos</a> — empiece aquí si es nuevo</li>
 <li><a href="protection-methods.html">Métodos de protección</a> — comparación detallada de todos los métodos</li>
-<li><a href="standards.html">Normas</a> — requisitos de certificación regional</li>
+<li><a href="standards.html">Normas</a> — requisitos regionales de certificación</li>
 <li><a href="certification.html">Certificación</a> — el proceso de certificación en profundidad</li>
-<li><a href="ex-markings.html">Marcas Ex</a> — decodificación de etiquetas de equipos</li>
+<li><a href="ex-markings.html">Marcado Ex</a> — decodificación de etiquetas del equipo</li>
 </ul>
       </div>
-      <aside class="content-sidebar" aria-label="Navigation">
+      <aside class="content-sidebar" aria-label="Navegación">
         <div class="sidebar-card">
           <h4>Todos los temas</h4>
             <a href="fundamentals.html" class="">Fundamentos</a>
   <a href="zone-classification.html" class="">Zonas</a>
   <a href="gas-groups.html" class="">Grupos de gas</a>
-  <a href="temperature-classes.html" class="">Clases de temperatura</a>
-  <a href="protection-methods.html" class="">Métodos de protección</a>
+  <a href="temperature-classes.html" class="">Clases de temp.</a>
+  <a href="protection-methods.html" class="">Protección</a>
   <a href="epl.html" class="">EPL</a>
-  <a href="ex-markings.html" class="">Marcas Ex</a>
+  <a href="ex-markings.html" class="">Marcado</a>
   <a href="standards.html" class="">Normas</a>
   <a href="certification.html" class="">Certificación</a>
   <a href="installation-inspection.html" class="">Instalación</a>

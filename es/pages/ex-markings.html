@@ -1,227 +1,117 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Lectura de marcas Ex — ExKnowledge</title>
-  <meta name="description" content="Decode ATEX and IECEx markings step by step. Five real-world examples walked through piece by piece. Group, zone, temperature class, EPL.">
-  <link rel="canonical" href="https://exknowledge.com/es/pages/ex-markings.html">
-  <meta property="og:title" content="Lectura de marcas Ex — ExKnowledge">
-  <meta property="og:description" content="Decode ATEX and IECEx markings step by step. Five real-world examples walked through piece by piece. Group, zone, temperature class, EPL.">
-  <meta property="og:url" content="https://exknowledge.com/es/pages/ex-markings.html">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="ExKnowledge">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lectura de marcas Ex — ExKnowledge">
-  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
-  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-  <!-- hreflang -->
-  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/ex-markings.html">
-  <link rel="alternate" hreflang="de" href="https://exknowledge.com/de/pages/ex-markings.html">
-  <link rel="alternate" hreflang="no" href="https://exknowledge.com/no/pages/ex-markings.html">
-  <link rel="alternate" hreflang="da" href="https://exknowledge.com/da/pages/ex-markings.html">
-  <link rel="alternate" hreflang="sv" href="https://exknowledge.com/sv/pages/ex-markings.html">
-  <link rel="alternate" hreflang="fi" href="https://exknowledge.com/fi/pages/ex-markings.html">
-  <link rel="alternate" hreflang="es" href="https://exknowledge.com/es/pages/ex-markings.html">
-  <link rel="alternate" hreflang="nl" href="https://exknowledge.com/nl/pages/ex-markings.html">
-  <link rel="alternate" hreflang="pt" href="https://exknowledge.com/pt/pages/ex-markings.html">
-  <link rel="alternate" hreflang="it" href="https://exknowledge.com/it/pages/ex-markings.html">
-  <link rel="alternate" hreflang="ar" href="https://exknowledge.com/ar/pages/ex-markings.html">
-  <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/ex-markings.html">
-  <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Lectura de marcas Ex — ExKnowledge",
-    "description": "Decode ATEX and IECEx markings step by step. Five real-world examples walked through piece by piece. Group, zone, temperature class, EPL.",
-    "url": "https://exknowledge.com/pages/ex-markings.html",
-    "image": "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=1000&q=80",
-    "author": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "inLanguage": "es",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://exknowledge.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "How to Read Ex Markings on Equipment",
-        "item": "https://exknowledge.com/pages/ex-markings.html"
-      }
-    ]
-  }
-]
-  </script>
-</head>
-<body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-<nav class="nav">
-  <div class="container">
-    <a href="/es/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
-    <ul class="nav-links">
-      <li><a href="/es/">Inicio</a></li>
-      <li><a href="/es/pages/fundamentals.html">Fundamentos</a></li>
-      <li><a href="/es/pages/zone-classification.html">Zonas</a></li>
-      <li><a href="/es/pages/protection-methods.html">Protección</a></li>
-      <li><a href="/es/pages/standards.html">Normas</a></li>
-      <li><a href="/es/pages/cheat-sheet.html">Guía rápida</a></li>
-      <li><a href="/es/blog/">Blog</a></li>
-    </ul>
-    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
-      <option value="/pages/ex-markings.html">🇬🇧 English</option>
-      <option value="/de/pages/ex-markings.html">🇩🇪 Deutsch</option>
-      <option value="/no/pages/ex-markings.html">🇳🇴 Norsk</option>
-      <option value="/da/pages/ex-markings.html">🇩🇰 Dansk</option>
-      <option value="/sv/pages/ex-markings.html">🇸🇪 Svenska</option>
-      <option value="/fi/pages/ex-markings.html">🇫🇮 Suomi</option>
-      <option value="/es/pages/ex-markings.html" selected>🇪🇸 Español</option>
-      <option value="/nl/pages/ex-markings.html">🇳🇱 Nederlands</option>
-      <option value="/pt/pages/ex-markings.html">🇵🇹 Português</option>
-      <option value="/it/pages/ex-markings.html">🇮🇹 Italiano</option>
-      <option value="/ar/pages/ex-markings.html">🇸🇦 العربية</option>
-    </select>
-    <div class="burger" aria-label="Menu">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
-  </div>
-</nav>
-
 <div class="content-layout">
       <div class="content-body">
-        <img class="content-hero" src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=1000&q=80" alt="Cómo leer las marcas Ex en los equipos" loading="lazy" width="820" height="240">
-        <h1>Cómo leer las marcas Ex en los equipos</h1>
-        <p>Cada dispositivo Ex certificado lleva un marcado que codifica su tipo de protección, grupo de gas/polvo, clase de temperatura y nivel de protección del equipo. Comprender estas marcas es esencial para seleccionar, instalar e inspeccionar los equipos.</p>
+        <img class="content-hero" src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=1000&q=80" alt="Cómo leer el marcado Ex en equipos" loading="lazy" width="820" height="240">
+        <h1>Cómo leer el marcado Ex en equipos</h1>
+        <p>Cada equipo Ex certificado tiene un marcado que codifica el modo de protección, grupo de gas/polvo, clase de temperatura y nivel de protección del equipo. Comprender estas marcas es esencial para seleccionar, instalar e inspeccionar equipos.</p>
 <h2 id="atex-marking-structure">Estructura del marcado ATEX</h2>
-<p>Los equipos ATEX llevan un marcado estructurado según la Directiva 2014/34/EU:</p>
+<p>Los equipos ATEX tienen un marcado estructurado según la Directiva 2014/34/UE:</p>
 <pre><code>
 CE 0539  ⟨Ex⟩  II 2G  Ex db IIC T4 Gb
 │   │     │     │  │    │  │  │   │  │
 │   │     │     │  │    │  │  │   │  └─ EPL (Gb = Alto, Zona 1)
 │   │     │     │  │    │  │  │   └──── Clase de temperatura (T4 = máx. 135 °C)
 │   │     │     │  │    │  │  └──────── Grupo de gas (IIC = hidrógeno/acetileno)
-│   │     │     │  │    │  └─────────── Tipo de protección (db = antideflagrante, EPL b)
-│   │     │     │  │    └────────────── Símbolo Ex (protegido contra explosiones)
+│   │     │     │  │    │  └─────────── Modo de protección (db = antideflagrante, EPL b)
+│   │     │     │  │    └────────────── Símbolo Ex (protección contra explosiones)
 │   │     │     │  └─────────────────── Categoría (2G = Categoría 2, Gas)
-│   │     │     └────────────────────── Grupo de equipo (II = industrias de superficie)
+│   │     │     └────────────────────── Grupo de equipo (II = industria de superficie)
 │   │     └──────────────────────────── Símbolo ATEX hexagonal «Ex»
 │   └────────────────────────────────── Número del Organismo Notificado
-└────────────────────────────────────── Marca CE
+└────────────────────────────────────── Marcado CE
 </code></pre>
 <h3 id="atex-equipment-groups">Grupos de equipos ATEX</h3>
 <div class="table-wrap"><table><thead><tr>
-<th>Grupo</th><th>Aplicación</th>
+<th>Grupo</th>
+<th>Aplicación</th>
 </tr></thead><tbody>
 <tr><td><strong>I</strong></td><td>Minería (grisú)</td></tr>
-<tr><td><strong>II</strong></td><td>Industrias de superficie — gas/vapor</td></tr>
-<tr><td><strong>III</strong></td><td>Industrias de superficie — polvo</td></tr>
-</tbody></table>
+<tr><td><strong>II</strong></td><td>Industria de superficie — gas/vapor</td></tr>
+<tr><td><strong>III</strong></td><td>Industria de superficie — polvo</td></tr>
+</tbody></table></div>
 <h3 id="atex-categories">Categorías ATEX</h3>
 <div class="table-wrap"><table><thead><tr>
-<th>Marcado</th><th>Categoría</th><th>EPL</th><th>Zonas</th>
+<th>Marcado</th>
+<th>Categoría</th>
+<th>EPL</th>
+<th>Zonas</th>
 </tr></thead><tbody>
-<tr><td>1G</td><td>Cat 1 Gas</td><td>Ga</td><td>0, 1, 2</td></tr>
-<tr><td>2G</td><td>Cat 2 Gas</td><td>Gb</td><td>1, 2</td></tr>
-<tr><td>3G</td><td>Cat 3 Gas</td><td>Gc</td><td>2</td></tr>
-<tr><td>1D</td><td>Cat 1 Polvo</td><td>Da</td><td>20, 21, 22</td></tr>
-<tr><td>2D</td><td>Cat 2 Polvo</td><td>Db</td><td>21, 22</td></tr>
-<tr><td>3D</td><td>Cat 3 Polvo</td><td>Dc</td><td>22</td></tr>
-</tbody></table>
+<tr><td>1G</td><td>Cat. 1 Gas</td><td>Ga</td><td>0, 1, 2</td></tr>
+<tr><td>2G</td><td>Cat. 2 Gas</td><td>Gb</td><td>1, 2</td></tr>
+<tr><td>3G</td><td>Cat. 3 Gas</td><td>Gc</td><td>2</td></tr>
+<tr><td>1D</td><td>Cat. 1 Polvo</td><td>Da</td><td>20, 21, 22</td></tr>
+<tr><td>2D</td><td>Cat. 2 Polvo</td><td>Db</td><td>21, 22</td></tr>
+<tr><td>3D</td><td>Cat. 3 Polvo</td><td>Dc</td><td>22</td></tr>
+</tbody></table></div>
 <h2 id="iecex-marking-structure">Estructura del marcado IECEx</h2>
-<p>Los marcados IECEx siguen la norma IEC 60079-0:</p>
+<p>Los marcados IECEx siguen IEC 60079-0:</p>
 <pre><code>
 Ex db IIC T4 Gb
 │  │  │   │  │
 │  │  │   │  └─ EPL
 │  │  │   └──── Clase de temperatura
 │  │  └──────── Grupo de gas
-│  └─────────── Tipo de protección con sufijo de nivel
+│  └─────────── Modo de protección con sufijo de nivel
 └────────────── Símbolo Ex
 </code></pre>
-<p>Los marcados IECEx no incluyen la marca CE, el número de grupo ni la categoría. En su lugar, el número de certificado IECEx proporciona trazabilidad:</p>
+<p>Los marcados IECEx no incluyen el marcado CE, número de grupo ni categoría. En su lugar, el número de certificado IECEx proporciona la trazabilidad:</p>
 <pre><code>
 IECEx BAS 12.0034X
 │     │   │
 │     │   └─ Número de certificado + revisión (X = condiciones especiales)
-│     └───── Código ExCB (BAS = Baseefa, Reino Unido)
+│     └───── Código ExCB (BAS = Baseefa, RU)
 └─────────── Identificador del esquema IECEx
 </code></pre>
-<h2 id="reading-the-protection-type">Lectura del tipo de protección</h2>
-<p>El tipo de protección usa el prefijo de dos letras «Ex» seguido de la letra del método y el sufijo de nivel:</p>
+<h2 id="reading-the-protection-type">Leer el modo de protección</h2>
+<p>El modo de protección utiliza el prefijo de dos letras "Ex" seguido de la letra del método y el sufijo de nivel:</p>
 <div class="table-wrap"><table><thead><tr>
-<th>Marcado</th><th>Método</th><th>Nivel</th><th>Significado</th>
+<th>Marcado</th>
+<th>Método</th>
+<th>Nivel</th>
+<th>Significado</th>
 </tr></thead><tbody>
-<tr><td>Ex ia</td><td>Seguridad intrínseca</td><td>a</td><td>Apto para Zona 0</td></tr>
-<tr><td>Ex ib</td><td>Seguridad intrínseca</td><td>b</td><td>Apto para Zona 1</td></tr>
+<tr><td>Ex ia</td><td>Seguridad intrínseca</td><td>a</td><td>Apto Zona 0</td></tr>
+<tr><td>Ex ib</td><td>Seguridad intrínseca</td><td>b</td><td>Apto Zona 1</td></tr>
 <tr><td>Ex ic</td><td>Seguridad intrínseca</td><td>c</td><td>Solo Zona 2</td></tr>
-<tr><td>Ex db</td><td>Antideflagrante</td><td>b</td><td>Apto para Zona 1</td></tr>
+<tr><td>Ex db</td><td>Antideflagrante</td><td>b</td><td>Apto Zona 1</td></tr>
 <tr><td>Ex dc</td><td>Antideflagrante</td><td>c</td><td>Solo Zona 2</td></tr>
-<tr><td>Ex eb</td><td>Seguridad aumentada</td><td>b</td><td>Apto para Zona 1</td></tr>
+<tr><td>Ex eb</td><td>Seguridad aumentada</td><td>b</td><td>Apto Zona 1</td></tr>
 <tr><td>Ex ec</td><td>Seguridad aumentada</td><td>c</td><td>Solo Zona 2</td></tr>
-<tr><td>Ex ma</td><td>Encapsulado</td><td>a</td><td>Apto para Zona 0</td></tr>
-<tr><td>Ex mb</td><td>Encapsulado</td><td>b</td><td>Apto para Zona 1</td></tr>
+<tr><td>Ex ma</td><td>Encapsulado</td><td>a</td><td>Apto Zona 0</td></tr>
+<tr><td>Ex mb</td><td>Encapsulado</td><td>b</td><td>Apto Zona 1</td></tr>
 <tr><td>Ex mc</td><td>Encapsulado</td><td>c</td><td>Solo Zona 2</td></tr>
 <tr><td>Ex px</td><td>Presurización</td><td>x</td><td>Zona 1 → no peligrosa</td></tr>
 <tr><td>Ex py</td><td>Presurización</td><td>y</td><td>Zona 1 → Zona 2</td></tr>
 <tr><td>Ex pz</td><td>Presurización</td><td>z</td><td>Zona 2 → no peligrosa</td></tr>
-<tr><td>Ex nA</td><td>Sin chispas</td><td>—</td><td>Solo Zona 2</td></tr>
+<tr><td>Ex nA</td><td>No generador de chispas</td><td>—</td><td>Solo Zona 2</td></tr>
 <tr><td>Ex nC</td><td>Contactos cerrados/sellados</td><td>—</td><td>Solo Zona 2</td></tr>
 <tr><td>Ex nR</td><td>Respiración restringida</td><td>—</td><td>Solo Zona 2</td></tr>
-<tr><td>Ex ta</td><td>Envolvente para polvo</td><td>a</td><td>Apto para Zona 20</td></tr>
-<tr><td>Ex tb</td><td>Envolvente para polvo</td><td>b</td><td>Apto para Zona 21</td></tr>
-<tr><td>Ex tc</td><td>Envolvente para polvo</td><td>c</td><td>Solo Zona 22</td></tr>
-<tr><td>Ex o</td><td>Inmersión en aceite</td><td>—</td><td>Apto para Zona 1</td></tr>
-<tr><td>Ex q</td><td>Relleno de polvo</td><td>—</td><td>Apto para Zona 1</td></tr>
-</tbody></table>
+<tr><td>Ex ta</td><td>Envolvente antipolvo</td><td>a</td><td>Apto Zona 20</td></tr>
+<tr><td>Ex tb</td><td>Envolvente antipolvo</td><td>b</td><td>Apto Zona 21</td></tr>
+<tr><td>Ex tc</td><td>Envolvente antipolvo</td><td>c</td><td>Solo Zona 22</td></tr>
+<tr><td>Ex o</td><td>Inmersión en aceite</td><td>—</td><td>Apto Zona 1</td></tr>
+<tr><td>Ex q</td><td>Relleno de polvo</td><td>—</td><td>Apto Zona 1</td></tr>
+</tbody></table></div>
 <h2 id="combined-markings">Marcados combinados</h2>
 <p>Equipos con múltiples métodos de protección:</p>
 <pre><code>
 Ex db eb IIC T4 Gb
 </code></pre>
-<p>Cuerpo principal: antideflagrante (db). Compartimento de bornes: seguridad aumentada (eb).</p>
+<p>Parte principal: antideflagrante (db). Compartimento de terminales: seguridad aumentada (eb).</p>
 <pre><code>
 Ex db [ib Ga] IIC T4 Gb
 </code></pre>
-<p>Envolvente antideflagrante (Gb) que contiene circuitos intrínsecamente seguros (Ga). Los corchetes indican los circuitos IS en su interior.</p>
+<p>Envolvente antideflagrante (Gb) que contiene circuitos intrínsecamente seguros (Ga). Los corchetes indican los circuitos IS en el interior.</p>
 <pre><code>
 Ex db IIC T6...T4 Gb
 </code></pre>
 <p>La clase de temperatura varía con la temperatura ambiente. T6 a temperatura ambiente estándar, T4 a temperatura ambiente elevada.</p>
-<h2 id="dual-gas-and-dust-marking">Marcado dual gas y polvo</h2>
+<h2 id="dual-gas-and-dust-marking">Marcado doble de gas y polvo</h2>
 <p>Equipos certificados tanto para gas como para polvo:</p>
 <pre><code>
 II 2G  Ex db IIC T4 Gb
 II 2D  Ex tb IIIC T125°C Db
 </code></pre>
-<p>Ambas líneas aparecen en la placa de características. El equipo puede usarse en Zona 1 de gas o Zona 21 de polvo.</p>
+<p>Ambas líneas aparecen en la placa de características. El equipo puede usarse en zona de gas 1 o zona de polvo 21.</p>
 <h2 id="reading-real-world-examples">Lectura de ejemplos reales</h2>
 <h3 id="example-1-junction-box">Ejemplo 1: Caja de conexiones</h3>
 <pre><code>
@@ -231,7 +121,7 @@ CE 0539 ⟨Ex⟩ II 2G Ex eb IIC T5 Gb
 <li>ATEX Grupo II, Categoría 2G (Zona 1 gas)</li>
 <li>Seguridad aumentada (Ex eb)</li>
 <li>Todos los grupos de gas (IIC)</li>
-<li>T5 (superficie máx. 100 °C)</li>
+<li>T5 (máx. 100 °C de superficie)</li>
 <li>EPL Gb</li>
 </ul>
 <h3 id="example-2-led-floodlight">Ejemplo 2: Proyector LED</h3>
@@ -240,10 +130,10 @@ CE 0539 ⟨Ex⟩ II 2G Ex db eb IIC T4 Gb
                     II 2D Ex tb IIIC T135°C Db
 </code></pre>
 <ul>
-<li>Doble clasificación: gas (Zona 1) y polvo (Zona 21)</li>
-<li>Cuerpo antideflagrante con caja de bornes de seguridad aumentada</li>
+<li>Doble aprobación: gas (Zona 1) y polvo (Zona 21)</li>
+<li>Cuerpo antideflagrante con caja de terminales de seguridad aumentada</li>
 <li>Todos los grupos de gas (IIC), todos los grupos de polvo (IIIC)</li>
-<li>Gas: T4 (máx. 135 °C), Polvo: máx. 135 °C</li>
+<li>Gas: T4 (135 °C máx.), Polvo: 135 °C máx.</li>
 </ul>
 <h3 id="example-3-atex-certified-iphone-case-xshielder">Ejemplo 3: Funda de iPhone certificada ATEX (Xshielder)</h3>
 <pre><code>
@@ -252,8 +142,8 @@ CE 0539 ⟨Ex⟩ II 2G Ex db eb IIC T4 Gb
 </code></pre>
 <ul>
 <li>Zona 1 gas + Zona 21 polvo</li>
-<li>Envolvente antideflagrante + protegida contra polvo</li>
-<li>Cubre todos los grupos de gas y de polvo</li>
+<li>Envolvente antideflagrante + protección antipolvo</li>
+<li>Cubre todos los grupos de gas y polvo</li>
 <li>Clasificación IP65, compatible con carga inalámbrica</li>
 </ul>
 <h3 id="example-4-intrinsically-safe-transmitter">Ejemplo 4: Transmisor intrínsecamente seguro</h3>
@@ -262,9 +152,9 @@ CE 0539 ⟨Ex⟩ II 1G Ex ia IIC T4 Ga
 </code></pre>
 <ul>
 <li>Categoría 1G — apto para Zona 0</li>
-<li>Intrínsecamente seguro (nivel máximo, Ex ia)</li>
+<li>Intrínsecamente seguro (nivel más alto, Ex ia)</li>
 <li>Todos los grupos de gas (IIC)</li>
-<li>T4 (máx. 135 °C)</li>
+<li>T4 (135 °C máx.)</li>
 <li>EPL Ga (protección muy alta)</li>
 </ul>
 <h3 id="example-5-zone-2-motor">Ejemplo 5: Motor de Zona 2</h3>
@@ -273,25 +163,26 @@ CE 0539 ⟨Ex⟩ II 3G Ex nA IIB T3 Gc
 </code></pre>
 <ul>
 <li>Categoría 3G — solo Zona 2</li>
-<li>Sin chispas (Ex nA)</li>
-<li>Solo grupos de gas IIA e IIB (no IIC)</li>
-<li>T3 (máx. 200 °C)</li>
+<li>No generador de chispas (Ex nA)</li>
+<li>Grupos de gas IIA e IIB solamente (no IIC)</li>
+<li>T3 (200 °C máx.)</li>
 <li>EPL Gc</li>
 </ul>
 <h2 id="additional-markings-on-the-nameplate">Marcados adicionales en la placa de características</h2>
-<p>Además del marcado Ex, las etiquetas de los equipos incluyen:</p>
+<p>Además del marcado Ex, las etiquetas del equipo incluyen:</p>
 <div class="table-wrap"><table><thead><tr>
-<th>Marcado</th><th>Significado</th>
+<th>Marcado</th>
+<th>Significado</th>
 </tr></thead><tbody>
-<tr><td><strong>Ta</strong> o <strong>Tamb</strong></td><td>Rango de temperatura ambiente (p. ej., −40 °C a +60 °C)</td></tr>
-<tr><td><strong>IP66</strong> / <strong>IP68</strong></td><td>Grado de protección de ingreso</td></tr>
+<tr><td><strong>Ta</strong> o <strong>Tamb</strong></td><td>Rango de temperatura ambiente (ej. −40 °C a +60 °C)</td></tr>
+<tr><td><strong>IP66</strong> / <strong>IP68</strong></td><td>Grado de protección del envolvente</td></tr>
 <tr><td><strong>X</strong></td><td>Condiciones especiales de uso (ver certificado)</td></tr>
-<tr><td><strong>U</strong></td><td>Certificado de componente (no autónomo)</td></tr>
+<tr><td><strong>U</strong></td><td>Certificado de componente (no es independiente)</td></tr>
 <tr><td><strong>N.º certificado</strong></td><td>Referencia al certificado de ensayo completo</td></tr>
-<tr><td><strong>Número de serie</strong></td><td>Identificador único del dispositivo para trazabilidad</td></tr>
-<tr><td><strong>Año de fabricación</strong></td><td>Requerido para el seguimiento de auditoría</td></tr>
-</tbody></table>
-<p>El sufijo <strong>«X»</strong> es importante: significa que existen condiciones especiales documentadas en el certificado que deben observarse durante la instalación y el uso. Siempre obtener y leer el certificado cuando se vea «X».</p>
+<tr><td><strong>N.º de serie</strong></td><td>Identificador único de unidad para trazabilidad</td></tr>
+<tr><td><strong>Año de fabricación</strong></td><td>Requerido para trazabilidad de revisiones</td></tr>
+</tbody></table></div>
+<p>El sufijo <strong>"X"</strong> es importante — significa que existen condiciones especiales documentadas en el certificado que deben cumplirse durante la instalación y el uso. Siempre obtenga y lea el certificado cuando vea "X".</p>
 <h2 id="nec-cec-markings-north-america">Marcados NEC/CEC (Norteamérica)</h2>
 <p>El marcado norteamericano sigue un formato diferente:</p>
 <pre><code>
@@ -301,8 +192,8 @@ Class I, Division 1, Groups B, C, D, T4
 <pre><code>
 Class I, Zone 1, AEx db IIC T4 Gb
 </code></pre>
-<p>El prefijo «A» antes de «Ex» indica que el equipo está certificado según normas norteamericanas (NEC/CEC) usando el sistema de zonas.</p>
-<h2 id="related-files">Temas relacionados</h2>
+<p>El prefijo "A" antes de "Ex" indica que el equipo está certificado según normas norteamericanas (NEC/CEC) con el sistema de zonas.</p>
+<h2 id="related-files">Secciones relacionadas</h2>
 <ul>
 <li><a href="protection-methods.html">Métodos de protección</a> — explicación detallada de cada método</li>
 <li><a href="gas-groups.html">Grupos de gas</a> — qué significan IIA/IIB/IIC</li>
@@ -312,16 +203,16 @@ Class I, Zone 1, AEx db IIC T4 Gb
 <li><a href="certification.html">Certificación</a> — cómo se emiten los certificados y marcados</li>
 </ul>
       </div>
-      <aside class="content-sidebar" aria-label="Navigation">
+      <aside class="content-sidebar" aria-label="Navegación">
         <div class="sidebar-card">
           <h4>Todos los temas</h4>
             <a href="fundamentals.html" class="">Fundamentos</a>
   <a href="zone-classification.html" class="">Zonas</a>
   <a href="gas-groups.html" class="">Grupos de gas</a>
-  <a href="temperature-classes.html" class="">Clases de temperatura</a>
-  <a href="protection-methods.html" class="">Métodos de protección</a>
+  <a href="temperature-classes.html" class="">Clases de temp.</a>
+  <a href="protection-methods.html" class="">Protección</a>
   <a href="epl.html" class="">EPL</a>
-  <a href="ex-markings.html" class="current">Marcas Ex</a>
+  <a href="ex-markings.html" class="current">Marcado</a>
   <a href="standards.html" class="">Normas</a>
   <a href="certification.html" class="">Certificación</a>
   <a href="installation-inspection.html" class="">Instalación</a>
@@ -331,23 +222,3 @@ Class I, Zone 1, AEx db IIC T4 Gb
     </div>
   </div>
 </section>
-
-
-<footer class="footer">
-  <div class="container">
-    <p>Creado para ingenieros que trabajan en áreas peligrosas. Contenido basado en IEC 60079, ATEX 2014/34/EU y normas IECEx.</p>
-    <p>No sustituye documentos oficiales de normas ni asesoramiento profesional de ingeniería.</p>
-  </div>
-</footer>
-<script>
-(function(){
-  var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
-  if(b)b.addEventListener('click',function(e){e.stopPropagation();b.classList.toggle('open');n.classList.toggle('open')});
-  document.addEventListener('click',function(e){
-    if(b&&!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('open');n.classList.remove('open')}
-  });
-})();
-</script>
-
-</body>
-</html>
