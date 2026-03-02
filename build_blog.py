@@ -137,7 +137,7 @@ POSTS = [
         "h1": "BARTEC Acquired by One Equity Partners, SPS 2025, and Market Growth",
         "date_label": "December 2025",
         "iso_date": "2025-12-28",
-        "hero_img": "https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=1000&q=80",
+        "hero_img": "https://images.unsplash.com/photo-1690508313456-bf8c851e8319?w=1000&q=80",
         "content": """
 <h2 id="bartec">One Equity Partners Acquires BARTEC</h2>
 <p>The biggest company news this quarter: One Equity Partners (OEP) completed its acquisition of BARTEC from Bridgepoint Credit and Alcentra. BARTEC, based in Bad Mergentheim, Germany, is one of the world's leading manufacturers of Ex equipment — from intrinsically safe smartphones and tablets to complete automation solutions for hazardous areas.</p>
@@ -174,7 +174,7 @@ POSTS = [
         "h1": "R. Stahl Turns 150, Hydrogen ATEX Gaps, and the Chemical Sector Outlook",
         "date_label": "January 2026",
         "iso_date": "2026-01-28",
-        "hero_img": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1000&q=80",
+        "hero_img": "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=1000&q=80",
         "content": """
 <h2 id="rstahl-150">R. Stahl Celebrates 150 Years</h2>
 <p>2026 marks 150 years for R. Stahl, making it one of the oldest companies in the explosion protection industry. Founded in 1876 in Künzelsau, Germany, the company has been through the entire arc of the industry — from early mining lamp safety to today's Ethernet-APL field switches and <a href="../pages/protection-methods.html#ex-i--intrinsic-safety-iec-60079-11">intrinsically safe</a> remote I/O systems.</p>
@@ -217,7 +217,7 @@ POSTS = [
         "h1": "Hydrogen Incidents, US Regulatory Rollback, and R. Stahl's Restructuring",
         "date_label": "February 2026",
         "iso_date": "2026-02-27",
-        "hero_img": "https://images.unsplash.com/photo-1611348586804-61bf6c080437?w=1000&q=80",
+        "hero_img": "https://images.unsplash.com/photo-1566221857770-508d35ee6220?w=1000&q=80",
         "content": """
 <h2 id="hydrogen-explosion">Fatal Hydrogen Truck Explosion in California</h2>
 <p>On February 24, a hydrogen transport truck exploded in Colton, San Bernardino County, killing one person and injuring another. The Colton Fire Department responded to the blast, which sent debris across a wide area and triggered a large hazmat response.</p>
