@@ -19,7 +19,6 @@
   <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-  <!-- hreflang -->
   <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/standards.html">
   <link rel="alternate" hreflang="de" href="https://exknowledge.com/de/pages/standards.html">
   <link rel="alternate" hreflang="no" href="https://exknowledge.com/no/pages/standards.html">
@@ -32,67 +31,20 @@
   <link rel="alternate" hreflang="it" href="https://exknowledge.com/it/pages/standards.html">
   <link rel="alternate" hreflang="ar" href="https://exknowledge.com/ar/pages/standards.html">
   <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/standards.html">
-  <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "ATEX- och IECEx-standarder — ExKnowledge",
-    "description": "The full IEC 60079 series, ATEX 2014/34/EU and 1999/92/EC, NEC 500/505, CEC, and regional standards from Brazil to Australia.",
-    "url": "https://exknowledge.com/pages/standards.html",
-    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80",
-    "author": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "inLanguage": "sv",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://exknowledge.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Explosion Protection Standards",
-        "item": "https://exknowledge.com/pages/standards.html"
-      }
-    ]
-  }
-]
-  </script>
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav class="nav">
   <div class="container">
     <a href="/sv/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
     <ul class="nav-links">
       <li><a href="/sv/">Hem</a></li>
-      <li><a href="/sv/pages/fundamentals.html">Grunder</a></li>
+      <li><a href="/sv/pages/fundamentals.html">Grunderna</a></li>
       <li><a href="/sv/pages/zone-classification.html">Zoner</a></li>
       <li><a href="/sv/pages/protection-methods.html">Skydd</a></li>
-      <li><a href="/sv/pages/standards.html" class="active">Standarder</a></li>
-      <li><a href="/sv/pages/cheat-sheet.html">Snabböversikt</a></li>
-      <li><a href="/sv/blog/">Blog</a></li>
+      <li><a href="/sv/pages/standards.html">Standarder</a></li>
+      <li><a href="/sv/pages/cheat-sheet.html">Fuskblad</a></li>
+      <li><a href="/sv/blog/">Blogg</a></li>
     </ul>
     <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
       <option value="/pages/standards.html">🇬🇧 English</option>
@@ -107,219 +59,442 @@
       <option value="/it/pages/standards.html">🇮🇹 Italiano</option>
       <option value="/ar/pages/standards.html">🇸🇦 العربية</option>
     </select>
-    <div class="burger" aria-label="Menu">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
+    <div class="burger">
+      <div class="line1"></div><div class="line2"></div><div class="line3"></div>
     </div>
   </div>
 </nav>
 
-<div class="content-layout">
+<div class="container content-page">
+  <div class="content-layout">
       <div class="content-body">
-        <img class="content-hero" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80" alt="Standarder för explosionsskydd" loading="lazy" width="820" height="240">
-        <h1>Standarder för explosionsskydd</h1>
-        <p>Explosionsskydd regleras av ett skiktat system av internationella standarder, regionala direktiv och nationella föreskrifter. Denna sida kartlägger hela standardlandskapet.</p>
+        <img class="content-hero" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80" alt="Explosion Protection Standards" loading="lazy" width="820" height="240">
+        <h1>Explosionsskyddsstandarder</h1>
+        <p>Explosionsskydd styrs av ett skiktat system av internationella standarder, regionala direktiv och nationella bestämmelser. Den här filen kartlägger hela standardlandskapet.</p>
 <h2 id="the-iec-60079-series-international">IEC 60079-serien (internationell)</h2>
-<p>IEC 60079-serien utgör ryggraden i globala standarder för explosionsskydd. Alla stora regionala standarder (EN, AS/NZS, GB) baseras på eller är harmoniserade med dessa.</p>
+<p>IEC 60079-serien är ryggraden i globala explosionsskyddsstandarder. Alla större regionala standarder (EN, AS/NZS, GB) är baserade på eller harmoniserade med dessa.</p>
 <h3 id="general">Allmänt</h3>
-<div class="table-wrap"><table><thead><tr><th>Standard</th><th>Titel</th><th>Omfattning</th></tr></thead><tbody>
-<tr><td>IEC 60079-0</td><td>Allmänna krav</td><td>Gemensamma krav för all Ex-utrustning: konstruktion, provning, märkning, dokumentation</td></tr>
-<tr><td>IEC 60079-10-1</td><td>Klassificering av områden — gas</td><td>Metodik för zonklassificering (gas/ånga)</td></tr>
-<tr><td>IEC 60079-10-2</td><td>Klassificering av områden — damm</td><td>Metodik för zonklassificering (damm)</td></tr>
-<tr><td>IEC 60079-14</td><td>Elektrisk installation — konstruktion, val, uppförande</td><td>Hur Ex-utrustning installeras korrekt</td></tr>
-<tr><td>IEC 60079-17</td><td>Elektrisk installation — inspektion och underhåll</td><td>Hur Ex-installationer inspekteras och underhålls</td></tr>
-<tr><td>IEC 60079-19</td><td>Reparation, överhalning, återtillverkning av utrustning</td><td>Hur Ex-utrustning repareras utan att certifieringen äventyras</td></tr>
-<tr><td>IEC 60079-25</td><td>Egensäkra elektriska system</td><td>Systemnivåkrav för ES-kretsar</td></tr>
+<div class="table-wrap"><table><thead><tr>
+<th>Standard</th>
+<th>Titel</th>
+<th>Omfattning</th>
+</tr></thead><tbody>
+<tr>
+<td>IEC 60079-0</td>
+<td>Allmänna krav</td>
+<td>Gemensamma krav för all Ex-utrustning: konstruktion, testning, märkning, dokumentation</td>
+</tr>
+<tr>
+<td>IEC 60079-10-1</td>
+<td>Klassificering av områden – Gas</td>
+<td>Metod för zonklassificering (gas/ånga)</td>
+</tr>
+<tr>
+<td>IEC 60079-10-2</td>
+<td>Klassificering av områden — Damm</td>
+<td>Metod för zonklassificering (damm)</td>
+</tr>
+<tr>
+<td>IEC 60079-14</td>
+<td>Elinstallationsdesign, val, montering</td>
+<td>Hur man installerar Ex-utrustning korrekt</td>
+</tr>
+<tr>
+<td>IEC 60079-17</td>
+<td>Inspektion och underhåll av elektriska installationer</td>
+<td>Hur man inspekterar och underhåller Ex-installationer</td>
+</tr>
+<tr>
+<td>IEC 60079-19</td>
+<td>Reparation, översyn, återvinning av utrustning</td>
+<td>Hur man reparerar Ex-utrustning utan att kompromissa med certifieringen</td>
+</tr>
+<tr>
+<td>IEC 60079-25</td>
+<td>Egensäkra elektriska system</td>
+<td>Systemnivåkrav för IS-kretsar</td>
+</tr>
 </tbody></table>
 <h3 id="protection-methods">Skyddsmetoder</h3>
-<div class="table-wrap"><table><thead><tr><th>Standard</th><th>Skyddsmetod</th><th>Symbol</th></tr></thead><tbody>
-<tr><td>IEC 60079-1</td><td>Flamskyddade höljen</td><td>Ex d</td></tr>
-<tr><td>IEC 60079-2</td><td>Trycksatta höljen</td><td>Ex p</td></tr>
-<tr><td>IEC 60079-5</td><td>Pulverfyllning</td><td>Ex q</td></tr>
-<tr><td>IEC 60079-6</td><td>Oljedoppning</td><td>Ex o</td></tr>
-<tr><td>IEC 60079-7</td><td>Ökad säkerhet</td><td>Ex e</td></tr>
-<tr><td>IEC 60079-11</td><td>Egensäkerhet</td><td>Ex i</td></tr>
-<tr><td>IEC 60079-15</td><td>Skyddstyp "n"</td><td>Ex n</td></tr>
-<tr><td>IEC 60079-18</td><td>Inkapsling</td><td>Ex m</td></tr>
-<tr><td>IEC 60079-28</td><td>Optisk strålning</td><td>Ex Op</td></tr>
-<tr><td>IEC 60079-31</td><td>Dammtändskydd genom hölje</td><td>Ex t</td></tr>
+<div class="table-wrap"><table><thead><tr>
+<th>Standard</th>
+<th>Skyddsmetod</th>
+<th>Symbol</th>
+</tr></thead><tbody>
+<tr>
+<td>IEC 60079-1</td>
+<td>Flamsäkra kapslingar</td>
+<td>Ex d</td>
+</tr>
+<tr>
+<td>IEC 60079-2</td>
+<td>Tryckkapslingar</td>
+<td>Ex p</td>
+</tr>
+<tr>
+<td>IEC 60079-5</td>
+<td>Pulverfyllning</td>
+<td>Ex q</td>
+</tr>
+<tr>
+<td>IEC 60079-6</td>
+<td>Oljenedsänkning</td>
+<td>Ex o</td>
+</tr>
+<tr>
+<td>IEC 60079-7</td>
+<td>Ökad säkerhet</td>
+<td>Ex e</td>
+</tr>
+<tr>
+<td>IEC 60079-11</td>
+<td>Egen säkerhet</td>
+<td>Ex i</td>
+</tr>
+<tr>
+<td>IEC 60079-15</td>
+<td>Typ av skydd "n"</td>
+<td>Ex n</td>
+</tr>
+<tr>
+<td>IEC 60079-18</td>
+<td>Inkapsling</td>
+<td>Ex m</td>
+</tr>
+<tr>
+<td>IEC 60079-28</td>
+<td>Optisk strålning</td>
+<td>Ex Op</td>
+</tr>
+<tr>
+<td>IEC 60079-31</td>
+<td>Dammtändningsskydd genom kapsling</td>
+<td>Ex t</td>
+</tr>
 </tbody></table>
 <h3 id="specialized">Specialiserade</h3>
-<div class="table-wrap"><table><thead><tr><th>Standard</th><th>Titel</th></tr></thead><tbody>
-<tr><td>IEC 60079-13</td><td>Utrustningsskydd genom trycksatta rum</td></tr>
-<tr><td>IEC 60079-26</td><td>Utrustning med EPL Ga</td></tr>
-<tr><td>IEC 60079-29-1</td><td>Gasdetektorer — prestandakrav</td></tr>
-<tr><td>IEC 60079-29-4</td><td>Gasdetektorer — öppen väg</td></tr>
-<tr><td>IEC 60079-30-1</td><td>Elektrisk motståndsvärmekabel — allmänt</td></tr>
-<tr><td>IEC 60079-30-2</td><td>Elektrisk motståndsvärmekabel — tillämpningsdesign</td></tr>
-<tr><td>IEC 60079-33</td><td>Utrustningsskydd genom specialskydd "s"</td></tr>
-<tr><td>IEC 60079-35-1</td><td>Hjälmlampor för gruvor — allmänt</td></tr>
+<div class="table-wrap"><table><thead><tr>
+<th>Standard</th>
+<th>Titel</th>
+</tr></thead><tbody>
+<tr>
+<td>IEC 60079-13</td>
+<td>Utrustningsskydd genom trycksatta rum</td>
+</tr>
+<tr>
+<td>IEC 60079-26</td>
+<td>Utrustning med EPL Ga</td>
+</tr>
+<tr>
+<td>IEC 60079-29-1</td>
+<td>Gasdetektorer – prestandakrav</td>
+</tr>
+<tr>
+<td>IEC 60079-29-4</td>
+<td>Gasdetektorer — öppen väg</td>
+</tr>
+<tr>
+<td>IEC 60079-30-1</td>
+<td>Elektriskt motstånd spåruppvärmning — allmänt</td>
+</tr>
+<tr>
+<td>IEC 60079-30-2</td>
+<td>Elektrisk motståndsuppvärmning — applikationsdesign</td>
+</tr>
+<tr>
+<td>IEC 60079-33</td>
+<td>Utrustningsskydd med specialskydd "s"</td>
+</tr>
+<tr>
+<td>IEC 60079-35-1</td>
+<td>Caplights för gruvor – allmänt</td>
+</tr>
 </tbody></table>
 <h2 id="atex-directives-european-union">ATEX-direktiv (Europeiska unionen)</h2>
 <p>Två EU-direktiv utgör ATEX-ramverket:</p>
 <h3 id="atex-2014-34-eu-equipment-directive">ATEX 2014/34/EU (utrustningsdirektivet)</h3>
 <ul>
-<li>Tidigare känt som ATEX 95 eller ATEX 114</li>
-<li>Täcker utrustning och skyddssystem avsedda för användning i explosiva atmosfärer</li>
-<li>Gäller tillverkare och importörer som placerar produkter på EU-marknaden</li>
-<li>Kräver överensstämmelsebedömning, CE-märkning och försäkran om överensstämmelse</li>
+<li>Tidigare känd som ATEX 95 eller ATEX 114</li>
+<li>Omfattar utrustning och skyddssystem avsedda för användning i explosiv atmosfär</li>
+<li>Gäller tillverkare och importörer som släpper ut produkter på EU-marknaden</li>
+<li>Kräver bedömning av överensstämmelse, CE-märkning och försäkran om överensstämmelse</li>
 <li>Definierar utrustningsgrupper (I, II, III) och kategorier (1, 2, 3)</li>
 </ul>
 <h3 id="atex-1999-92-ec-workplace-directive">ATEX 1999/92/EG (arbetsplatsdirektivet)</h3>
 <ul>
-<li>Tidigare känt som ATEX 137</li>
-<li>Täcker säkerhet och hälsa för arbetstagare som utsätts för risk från explosiva atmosfärer</li>
-<li>Gäller arbetsgivare/operatörer (inte tillverkare)</li>
+<li>Tidigare känd som ATEX 137</li>
+<li>Täcker säkerhet och hälsa för arbetare som utsätts för explosiv atmosfär</li>
+<li>Gäller arbetsgivare/operatörer (ej tillverkare)</li>
 <li>Kräver klassificering av riskområden, explosionsskyddsdokument (EPD) och användning av lämplig utrustning</li>
-<li>Kräver riskbedömning och riskreducerande åtgärder</li>
+<li>Mandat riskbedömning och begränsningsåtgärder</li>
 </ul>
 <h3 id="en-standards-harmonized-with-iec">EN-standarder (harmoniserade med IEC)</h3>
 <p>Europeiska normer (EN) är de harmoniserade versionerna av IEC-standarder:</p>
-<div class="table-wrap"><table><thead><tr><th>IEC-standard</th><th>EN-standard</th></tr></thead><tbody>
-<tr><td>IEC 60079-0</td><td>EN IEC 60079-0</td></tr>
-<tr><td>IEC 60079-1</td><td>EN IEC 60079-1</td></tr>
-<tr><td>IEC 60079-7</td><td>EN IEC 60079-7</td></tr>
-<tr><td>IEC 60079-11</td><td>EN IEC 60079-11</td></tr>
-<tr><td>IEC 60079-14</td><td>EN IEC 60079-14</td></tr>
-<tr><td>etc.</td><td>etc.</td></tr>
+<div class="table-wrap"><table><thead><tr>
+<th>IEC-standard</th>
+<th>EN standard</th>
+</tr></thead><tbody>
+<tr>
+<td>IEC 60079-0</td>
+<td>EN IEC 60079-0</td>
+</tr>
+<tr>
+<td>IEC 60079-1</td>
+<td>EN IEC 60079-1</td>
+</tr>
+<tr>
+<td>IEC 60079-7</td>
+<td>EN IEC 60079-7</td>
+</tr>
+<tr>
+<td>IEC 60079-11</td>
+<td>EN IEC 60079-11</td>
+</tr>
+<tr>
+<td>IEC 60079-14</td>
+<td>EN IEC 60079-14</td>
+</tr>
+<tr>
+<td>etc.</td>
+<td>etc.</td>
+</tr>
 </tbody></table>
 <p>Överensstämmelse med harmoniserade EN-standarder ger en "presumtion om överensstämmelse" med ATEX-direktivet.</p>
-<h2 id="iecex-system-international">IECEx-systemet (internationellt)</h2>
-<p>IECEx-systemet är inte ett direktiv eller en förordning utan ett <strong>frivilligt internationellt certifieringssystem</strong> som förvaltas av IEC.</p>
-<h3 id="three-iecex-schemes">Tre IECEx-system</h3>
+<h2 id="iecex-system-international">IECEx-system (internationellt)</h2>
+<p>IECEx-systemet är inte ett direktiv eller en förordning utan en <strong>frivilligt internationellt certifieringssystem</strong> förvaltas av IEC.</p>
+<h3 id="three-iecex-schemes">Tre IECEx-scheman</h3>
 <ol>
-<li><strong>IECEx Certified Equipment Scheme</strong> — certifierar att utrustning uppfyller IEC 60079-standarder</li>
-<li><strong>IECEx Certified Service Facilities Scheme</strong> — certifierar reparations- och överhalningsverkstäder</li>
-<li><strong>IECEx Certificate of Personnel Competence (CoPC)</strong> — certifierar individuell kompetens</li>
+<li><strong>IECEx Certified Equipment Scheme</strong> — intygar att utrustningen uppfyller IEC 60079-standarderna</li>
+<li><strong>IECEx Certified Service Facilities Scheme</strong> — certifierar reparations- och översynsverkstäder</li>
+<li><strong>IECEx Certificate of Personal Competence (CoPC)</strong> — intygar individuell kompetens</li>
 </ol>
-<h3 id="iecex-acceptance">IECEx-acceptans</h3>
-<p>IECEx-certifikat accepteras (i varierande grad) i:</p>
+<h3 id="iecex-acceptance">IECEx-godkännande</h3>
+<p>IECEx-certifikat accepteras (med olika grader) i:</p>
 <ul>
-<li>Australien/Nya Zeeland (fullt accepterade)</li>
+<li>Australien/Nya Zeeland (fullt accepterat)</li>
 <li>Singapore, Malaysia, Sydkorea, UAE, Qatar, Brasilien, Sydafrika</li>
-<li>EU-medlemsstater (accepterade vid sidan av ATEX som tekniskt underlag)</li>
-<li>INTE direkt accepterade i USA eller Kanada (kräver separat UL/CSA-certifiering)</li>
+<li>EU:s medlemsländer (accepterade tillsammans med ATEX för tekniska bevis)</li>
+<li>EJ direkt accepterad i USA eller Kanada (kräver separat UL/CSA-certifiering)</li>
 </ul>
 <h2 id="north-american-standards">Nordamerikanska standarder</h2>
 <h3 id="united-states-nec">USA (NEC)</h3>
-<div class="table-wrap"><table><thead><tr><th>Standard</th><th>Omfattning</th></tr></thead><tbody>
-<tr><td>NFPA 70 (NEC) Article 500</td><td>Class/Division-system</td></tr>
-<tr><td>NFPA 70 (NEC) Article 505</td><td>Zonsystem (harmoniserat med IEC)</td></tr>
-<tr><td>NFPA 70 (NEC) Article 506</td><td>Zonsystem för damm</td></tr>
-<tr><td>UL 60079-serien</td><td>UL:s anpassningar av IEC 60079 (med amerikanska avvikelser)</td></tr>
-<tr><td>FM 3600/3610/3615</td><td>Factory Mutual-standarder för riskklassificerade platser</td></tr>
-<tr><td>ISA/ANSI 60079-serien</td><td>ISA:s anpassningar av IEC 60079</td></tr>
+<div class="table-wrap"><table><thead><tr>
+<th>Standard</th>
+<th>Omfattning</th>
+</tr></thead><tbody>
+<tr>
+<td>NFPA 70 (NEC) Artikel 500</td>
+<td>Klass/Divisionssystem</td>
+</tr>
+<tr>
+<td>NFPA 70 (NEC) Artikel 505</td>
+<td>Zonsystem (harmoniserat med IEC)</td>
+</tr>
+<tr>
+<td>NFPA 70 (NEC) Artikel 506</td>
+<td>Zonsystem för damm</td>
+</tr>
+<tr>
+<td>UL 60079-serien</td>
+<td>UL-antaganden av IEC 60079 (med USA-avvikelser)</td>
+</tr>
+<tr>
+<td>FM 3600/3610/3615</td>
+<td>Factory Mutual standarder för farliga platser</td>
+</tr>
+<tr>
+<td>ISA/ANSI 60079-serien</td>
+<td>ISA antaganden av IEC 60079</td>
+</tr>
 </tbody></table>
-<p>Amerikansk certifiering utförs av nationellt erkända provningslaboratorier (NRTLs): UL, FM, CSA, Intertek (ETL), TÜV.</p>
+<p>Certifiering i USA utförs av Nationally Recognized Testing Laboratories (NRTLs): UL, FM, CSA, Intertek (ETL), TÜV.</p>
 <h3 id="canada-cec">Kanada (CEC)</h3>
-<div class="table-wrap"><table><thead><tr><th>Standard</th><th>Omfattning</th></tr></thead><tbody>
-<tr><td>CEC Section 18</td><td>Riskklassificerade platser (Division-system)</td></tr>
-<tr><td>CEC Appendix J</td><td>Zonsystem</td></tr>
-<tr><td>CSA C22.2 No. 60079-serien</td><td>Kanadensiska anpassningar av IEC 60079</td></tr>
+<div class="table-wrap"><table><thead><tr>
+<th>Standard</th>
+<th>Omfattning</th>
+</tr></thead><tbody>
+<tr>
+<td>CEC avsnitt 18</td>
+<td>Farliga platser (Divisionssystem)</td>
+</tr>
+<tr>
+<td>CEC Bilaga J</td>
+<td>Zonsystem</td>
+</tr>
+<tr>
+<td>CSA C22.2 nr 60079-serien</td>
+<td>Kanadensiska antaganden av IEC 60079</td>
+</tr>
 </tbody></table>
-<h2 id="other-regional-standards">Övriga regionala standarder</h2>
+<h2 id="other-regional-standards">Andra regionala standarder</h2>
 <h3 id="brazil">Brasilien</h3>
 <ul>
-<li><strong>INMETRO</strong>-certifiering krävs</li>
+<li><strong>INMETRO</strong> certifiering krävs</li>
 <li>Baserat på IEC 60079-serien (ABNT NBR IEC 60079)</li>
 <li>Accepterar IECEx-certifikat som grund</li>
 </ul>
 <h3 id="russia---eurasian-customs-union">Ryssland / Eurasiska tullunionen</h3>
 <ul>
-<li><strong>TR CU 012/2011</strong> — Teknisk föreskrift för utrustning i explosiva atmosfärer</li>
-<li><strong>EAC-märkning</strong> krävs (Eurasisk överensstämmelse)</li>
+<li><strong>TR CU 012/2011</strong> — Teknisk föreskrift om utrustning för explosiv atmosfär</li>
+<li><strong>EAC-märkning</strong> krävs (eurasisk överensstämmelse)</li>
 <li>GOST R IEC 60079-serien</li>
 <li>Separat certifiering av ackrediterade organ (t.ex. NANIO, CCVE)</li>
 </ul>
 <h3 id="china">Kina</h3>
 <ul>
-<li><strong>GB 3836-serien</strong> — baserad på IEC 60079 men med nationella avvikelser</li>
-<li><strong>NEPSI</strong>- eller <strong>PCEC</strong>-certifiering krävs</li>
+<li><strong>GB 3836-serien</strong> — baserat på IEC 60079 men med nationella avvikelser</li>
+<li><strong>NEPSI</strong> eller <strong>PCEC</strong> certifiering krävs</li>
 <li>CCC (China Compulsory Certification) för vissa kategorier</li>
 <li>Accepterar INTE IECEx direkt</li>
 </ul>
 <h3 id="india">Indien</h3>
 <ul>
-<li><strong>IS/IEC 60079-serien</strong> — Bureau of Indian Standards anpassningar</li>
+<li><strong>IS/IEC 60079-serien</strong> — Antaganden av Bureau of Indian Standards</li>
 <li><strong>PESO</strong> (Petroleum and Explosives Safety Organisation) godkännande krävs</li>
 <li><strong>BIS-certifiering</strong> för vissa utrustningskategorier</li>
 </ul>
 <h3 id="japan">Japan</h3>
 <ul>
 <li><strong>TIIS</strong> (Technology Institution of Industrial Safety) certifiering</li>
-<li>Baserad på IEC 60079 men med vissa lokala avvikelser</li>
+<li>Baserat på IEC 60079 men med vissa lokala avvikelser</li>
 <li>Krävs för utrustning som används i japanska anläggningar</li>
 </ul>
 <h3 id="middle-east">Mellanöstern</h3>
 <ul>
 <li><strong>UAE/Qatar:</strong> ATEX eller IECEx accepteras (QCD, ESMA)</li>
-<li><strong>Saudiarabien:</strong> SASO-standarder, IECEx alltmer accepterat</li>
-<li><strong>Bahrain, Kuwait, Oman:</strong> Följer i allmänhet IECEx eller ATEX</li>
+<li><strong>Saudiarabien:</strong> SASO-standarder, IECEx accepteras alltmer</li>
+<li><strong>Bahrain, Kuwait, Oman:</strong> Följ i allmänhet IECEx eller ATEX</li>
 </ul>
 <h3 id="australia-new-zealand">Australien/Nya Zeeland</h3>
 <ul>
 <li><strong>AS/NZS 60079-serien</strong> — direkt antagande av IEC 60079</li>
 <li>IECEx-certifikat accepteras direkt</li>
-<li>Administreras av tillsynsmyndigheter i varje delstat/territorium</li>
+<li>Administreras av tillsynsmyndigheter i varje stat/territorium</li>
 </ul>
 <h2 id="non-electrical-equipment">Icke-elektrisk utrustning</h2>
-<p>Explosionsskydd täcker även icke-elektrisk utrustning (mekanisk, pneumatisk, hydraulisk):</p>
-<div class="table-wrap"><table><thead><tr><th>Standard</th><th>Omfattning</th></tr></thead><tbody>
-<tr><td>EN 13463-1</td><td>Icke-elektrisk utrustning — grundmetodik</td></tr>
-<tr><td>EN 13463-2</td><td>Skydd genom flödesbegränsande hölje "fr"</td></tr>
-<tr><td>EN 13463-3</td><td>Skydd genom flamskyddat hölje "d"</td></tr>
-<tr><td>EN 13463-5</td><td>Skydd genom konstruktionssäkerhet "c"</td></tr>
-<tr><td>EN 13463-6</td><td>Skydd genom kontroll av antändningskällor "b"</td></tr>
-<tr><td>EN 13463-8</td><td>Skydd genom vätskedoppning "k"</td></tr>
-<tr><td>ISO 80079-36</td><td>Icke-elektrisk utrustning — grundmetoder och krav</td></tr>
-<tr><td>ISO 80079-37</td><td>Icke-elektrisk utrustning — konstruktionssäkerhet, kontroll av antändningskällor, vätskedoppning</td></tr>
+<p>Explosionsskydd omfattar även icke-elektrisk utrustning (mekanisk, pneumatisk, hydraulisk):</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Standard</th>
+<th>Omfattning</th>
+</tr></thead><tbody>
+<tr>
+<td>EN 13463-1</td>
+<td>Icke-elektrisk utrustning – grundläggande metodik</td>
+</tr>
+<tr>
+<td>EN 13463-2</td>
+<td>Skydd genom flödesbegränsande hölje "fr"</td>
+</tr>
+<tr>
+<td>EN 13463-3</td>
+<td>Skydd genom flamsäker kapsling "d"</td>
+</tr>
+<tr>
+<td>EN 13463-5</td>
+<td>Skydd genom konstruktionssäkerhet "c"</td>
+</tr>
+<tr>
+<td>EN 13463-6</td>
+<td>Skydd genom kontroll av tändkällan "b"</td>
+</tr>
+<tr>
+<td>EN 13463-8</td>
+<td>Skydd genom nedsänkning i vätska "k"</td>
+</tr>
+<tr>
+<td>ISO 80079-36</td>
+<td>Icke-elektrisk utrustning — grundläggande metoder och krav</td>
+</tr>
+<tr>
+<td>ISO 80079-37</td>
+<td>Icke-elektrisk utrustning — skydd genom konstruktionssäkerhet, kontroll av antändningskällor, vätskenedsänkning</td>
+</tr>
 </tbody></table>
-<h2 id="key-industry-standards-adjacent">Viktiga angränsande industristandarder</h2>
-<div class="table-wrap"><table><thead><tr><th>Standard</th><th>Omfattning</th></tr></thead><tbody>
-<tr><td>EN 1127-1</td><td>Explosionsförebyggande och -skydd — grundbegrepp och metodik</td></tr>
-<tr><td>EN 14986</td><td>Fläktar för explosiva atmosfärer</td></tr>
-<tr><td>EN 13980</td><td>Kvalitetssystem för tillverkning av Ex-utrustning</td></tr>
-<tr><td>IEC 61241-14</td><td>Val och installation av elektrisk utrustning i dammatmosfärer</td></tr>
-<tr><td>IEC 61511</td><td>Säkerhetsinstrumenterade system (SIS) för processäkerhet</td></tr>
-<tr><td>EN 60529</td><td>IP-klassning (kapslingsskydd) — avgörande för Ex t</td></tr>
+<h2 id="key-industry-standards-adjacent">Viktiga industristandarder (intilliggande)</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Standard</th>
+<th>Omfattning</th>
+</tr></thead><tbody>
+<tr>
+<td>EN 1127-1</td>
+<td>Explosionsförebyggande och skydd – grundläggande begrepp och metodik</td>
+</tr>
+<tr>
+<td>EN 14986</td>
+<td>Fläktar för explosiv atmosfär</td>
+</tr>
+<tr>
+<td>EN 13980</td>
+<td>Kvalitetssystem för Ex utrustningstillverkning</td>
+</tr>
+<tr>
+<td>IEC 61241-14</td>
+<td>Val och installation av elektrisk utrustning i dammatmosfärer</td>
+</tr>
+<tr>
+<td>IEC 61511</td>
+<td>Säkerhetsinstrumenterade system (SIS) för processsäkerhet</td>
+</tr>
+<tr>
+<td>EN 60529</td>
+<td>IP-klassificering (intrångsskydd) – kritisk för Ex t</td>
+</tr>
 </tbody></table>
-<h2 id="related-files">Relaterade ämnen</h2>
+<h2 id="related-files">Relaterade filer</h2>
 <ul>
-<li><a href="fundamentals.html">Grunder</a> — principerna som dessa standarder skyddar</li>
+<li><a href="fundamentals.html">Grundläggande</a> — de principer som dessa standarder skyddar</li>
 <li><a href="protection-methods.html">Skyddsmetoder</a> — varje metod har sin egen IEC-standard</li>
-<li><a href="ex-markings.html">Ex-märkningar</a> — hur standarder syns i utrustningens märkning</li>
+<li><a href="ex-markings.html">Ex-märkningar</a> — hur standarder visas i utrustningsmärkningar</li>
 <li><a href="certification.html">Certifiering</a> — vem tillämpar dessa standarder</li>
-<li><a href="installation-inspection.html">Installation & inspektion</a> — IEC 60079-14 och 60079-17 i detalj</li>
+<li><a href="installation-inspection.html">Installation & inspektion</a> — IEC 60079-14 och 60079-17</li>
 </ul>
       </div>
       <aside class="content-sidebar" aria-label="Navigation">
         <div class="sidebar-card">
           <h4>Alla ämnen</h4>
-            <a href="fundamentals.html" class="">Grunder</a>
+            <a href="fundamentals.html" class="">Grunderna</a>
   <a href="zone-classification.html" class="">Zoner</a>
   <a href="gas-groups.html" class="">Gasgrupper</a>
-  <a href="temperature-classes.html" class="">Temperaturklasser</a>
-  <a href="protection-methods.html" class="">Skyddsmetoder</a>
+  <a href="temperature-classes.html" class="">Temp Klasser</a>
+  <a href="protection-methods.html" class="">Skydd</a>
   <a href="epl.html" class="">EPL</a>
-  <a href="ex-markings.html" class="">Märkningar</a>
+  <a href="ex-markings.html" class="">Markeringar</a>
   <a href="standards.html" class="current">Standarder</a>
   <a href="certification.html" class="">Certifiering</a>
   <a href="installation-inspection.html" class="">Installation</a>
-  <a href="cheat-sheet.html" class="">Snabböversikt</a>
+  <a href="cheat-sheet.html" class="">Fuskblad</a>
         </div>
       </aside>
     </div>
   </div>
 </section>
-
+  
+  <div class="content-sidebar">
+    <div class="sidebar-card">
+      <h4>Topics</h4>
+        <a href="/sv/pages/fundamentals.html">Grundläggande</a>
+        <a href="/sv/pages/zone-classification.html">Zonklassificering</a>
+        <a href="/sv/pages/gas-groups.html">Gasgrupper</a>
+        <a href="/sv/pages/temperature-classes.html">Temperaturklasser</a>
+        <a href="/sv/pages/protection-methods.html">Skyddsmetoder</a>
+        <a href="/sv/pages/epl.html">EPL</a>
+        <a href="/sv/pages/ex-markings.html">Ex-märkningar</a>
+        <a href="/sv/pages/standards.html" class="current">Standarder</a>
+        <a href="/sv/pages/certification.html">Certifiering</a>
+        <a href="/sv/pages/installation-inspection.html">Installation och inspektion</a>
+        <a href="/sv/pages/cheat-sheet.html">Fuskblad</a>
+        <a href="/sv/pages/faq.html">FAQ</a>
+    </div>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="container">
-    <p>Skapad för ingenjörer som arbetar i explosionsfarliga områden. Innehåll baserat på IEC 60079, ATEX 2014/34/EU och IECEx-standarder.</p>
-    <p>Inte en ersättning för officiella standarddokument eller professionell ingenjörsrådgivning.</p>
+    <p>Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+    <p>Not a substitute for official standards documents or professional engineering advice.</p>
   </div>
 </footer>
+
 <script>
 (function(){
   var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
@@ -329,6 +504,5 @@
   });
 })();
 </script>
-
 </body>
 </html>
