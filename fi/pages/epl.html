@@ -19,7 +19,6 @@
   <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-  <!-- hreflang -->
   <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/epl.html">
   <link rel="alternate" hreflang="de" href="https://exknowledge.com/de/pages/epl.html">
   <link rel="alternate" hreflang="no" href="https://exknowledge.com/no/pages/epl.html">
@@ -32,67 +31,20 @@
   <link rel="alternate" hreflang="it" href="https://exknowledge.com/it/pages/epl.html">
   <link rel="alternate" hreflang="ar" href="https://exknowledge.com/ar/pages/epl.html">
   <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/epl.html">
-  <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Laitesuojaustaso (EPL) — ExKnowledge",
-    "description": "Equipment Protection Levels Ga, Gb, Gc for gas and Da, Db, Dc for dust. How EPL connects zone classification to protection method selection.",
-    "url": "https://exknowledge.com/pages/epl.html",
-    "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1000&q=80",
-    "author": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "inLanguage": "fi",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://exknowledge.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Equipment Protection Levels (EPL)",
-        "item": "https://exknowledge.com/pages/epl.html"
-      }
-    ]
-  }
-]
-  </script>
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav class="nav">
   <div class="container">
     <a href="/fi/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
     <ul class="nav-links">
-      <li><a href="/fi/">Etusivu</a></li>
+      <li><a href="/fi/">Kotiin</a></li>
       <li><a href="/fi/pages/fundamentals.html">Perusteet</a></li>
-      <li><a href="/fi/pages/zone-classification.html">Vyöhykkeet</a></li>
+      <li><a href="/fi/pages/zone-classification.html">Alueet</a></li>
       <li><a href="/fi/pages/protection-methods.html">Suojaus</a></li>
       <li><a href="/fi/pages/standards.html">Standardit</a></li>
-      <li><a href="/fi/pages/cheat-sheet.html">Pikaohje</a></li>
-      <li><a href="/fi/blog/">Blog</a></li>
+      <li><a href="/fi/pages/cheat-sheet.html">Huijauslehti</a></li>
+      <li><a href="/fi/blog/">Blogi</a></li>
     </ul>
     <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
       <option value="/pages/epl.html">🇬🇧 English</option>
@@ -107,161 +59,298 @@
       <option value="/it/pages/epl.html">🇮🇹 Italiano</option>
       <option value="/ar/pages/epl.html">🇸🇦 العربية</option>
     </select>
-    <div class="burger" aria-label="Menu">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
+    <div class="burger">
+      <div class="line1"></div><div class="line2"></div><div class="line3"></div>
     </div>
   </div>
 </nav>
 
-<div class="content-layout">
+<div class="container content-page">
+  <div class="content-layout">
       <div class="content-body">
-        <img class="content-hero" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1000&q=80" alt="Laitesuojaustasot (EPL)" loading="lazy" width="820" height="240">
-        <h1>Laitesuojaustasot (EPL)</h1>
-        <p>Laitesuojaustaso (EPL) kertoo, kuinka todennäköisesti laite voi muodostua syttymislähteeksi. EPL on määritelty standardissa IEC/EN 60079-0 ja toimii siltana <a href="zone-classification.html">vyöhykeluokituksen</a> (vaara) ja <a href="protection-methods.html">suojausmenetelmien</a> (ratkaisu) välillä.</p>
+        <img class="content-hero" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1000&q=80" alt="Equipment Protection Levels (EPL)" loading="lazy" width="820" height="240">
+        <h1>Laitteiston suojaustasot (EPL)</h1>
+        <p>EPL (Equipment Protection Level) -taso ilmaisee todennäköisyyden, että laitteistosta tulee syttymislähde. Standardissa IEC/EN 60079-0 määritelty EPL tarjoaa sillan <a href="zone-classification.html">vyöhykeluokitus</a> (vaara) ja <a href="protection-methods.html">suojausmenetelmät</a> (ratkaisu).</p>
 <h2 id="epl-definitions">EPL-määritelmät</h2>
-<h3 id="gas-atmospheres">Kaasuatmosfäärit</h3>
+<h3 id="gas-atmospheres">Kaasuilmakehät</h3>
 <div class="table-wrap"><table><thead><tr>
-<th>EPL</th><th>Suojaustaso</th><th>Määritelmä</th><th>Soveltuu</th>
+<th>EPL</th>
+<th>Suojaustaso</th>
+<th>Määritelmä</th>
+<th>Sopii</th>
 </tr></thead><tbody>
-<tr><td><strong>Ga</strong></td><td>Erittäin korkea</td><td>Laite pysyy turvallisena kahdella itsenäisellä vialla</td><td>Vyöhyke 0, 1, 2</td></tr>
-<tr><td><strong>Gb</strong></td><td>Korkea</td><td>Laite pysyy turvallisena yhdellä vialla</td><td>Vyöhyke 1, 2</td></tr>
-<tr><td><strong>Gc</strong></td><td>Korotettu</td><td>Laite pysyy turvallisena normaalitoiminnassa; voi sisältää lisätoimenpiteitä vikatilanteisiin</td><td>Vyöhyke 2</td></tr>
+<tr>
+<td><strong>Ga</strong></td>
+<td>Erittäin korkea</td>
+<td>Laitteet pysyvät turvallisina jopa kahdella erillisellä vialla</td>
+<td>Vyöhyke 0, 1, 2</td>
+</tr>
+<tr>
+<td><strong>Gb</strong></td>
+<td>Korkea</td>
+<td>Laite pysyy turvassa yhdelläkin vialla</td>
+<td>Alue 1, 2</td>
+</tr>
+<tr>
+<td><strong>Gc</strong></td>
+<td>Parannettu</td>
+<td>Laitteet pysyvät turvassa normaalissa käytössä; voi olla lisätoimenpiteitä vikatilanteiden varalta</td>
+<td>Alue 2</td>
+</tr>
 </tbody></table>
-<h3 id="dust-atmospheres">Pölyatmosfäärit</h3>
+<h3 id="dust-atmospheres">Pölyilmapiirit</h3>
 <div class="table-wrap"><table><thead><tr>
-<th>EPL</th><th>Suojaustaso</th><th>Määritelmä</th><th>Soveltuu</th>
+<th>EPL</th>
+<th>Suojaustaso</th>
+<th>Määritelmä</th>
+<th>Sopii</th>
 </tr></thead><tbody>
-<tr><td><strong>Da</strong></td><td>Erittäin korkea</td><td>Laite pysyy turvallisena kahdella itsenäisellä vialla</td><td>Vyöhyke 20, 21, 22</td></tr>
-<tr><td><strong>Db</strong></td><td>Korkea</td><td>Laite pysyy turvallisena yhdellä vialla</td><td>Vyöhyke 21, 22</td></tr>
-<tr><td><strong>Dc</strong></td><td>Korotettu</td><td>Laite pysyy turvallisena normaalitoiminnassa</td><td>Vyöhyke 22</td></tr>
+<tr>
+<td><strong>Da</strong></td>
+<td>Erittäin korkea</td>
+<td>Laitteet pysyvät turvallisina jopa kahdella erillisellä vialla</td>
+<td>Alue 20, 21, 22</td>
+</tr>
+<tr>
+<td><strong>Db</strong></td>
+<td>Korkea</td>
+<td>Laite pysyy turvassa yhdelläkin vialla</td>
+<td>Alue 21, 22</td>
+</tr>
+<tr>
+<td><strong>Dc</strong></td>
+<td>Parannettu</td>
+<td>Laite pysyy turvassa normaalikäytössä</td>
+<td>Alue 22</td>
+</tr>
 </tbody></table>
-<h3 id="mining">Kaivokset</h3>
+<h3 id="mining">Kaivostoiminta</h3>
 <div class="table-wrap"><table><thead><tr>
-<th>EPL</th><th>Suojaustaso</th><th>Määritelmä</th>
+<th>EPL</th>
+<th>Suojaustaso</th>
+<th>Määritelmä</th>
 </tr></thead><tbody>
-<tr><td><strong>Ma</strong></td><td>Erittäin korkea</td><td>Laite voi jäädä jännitteiseksi räjähdyskelpoisessa ilmaseoksessa; turvallinen kahdella vialla</td></tr>
-<tr><td><strong>Mb</strong></td><td>Korkea</td><td>Laite on tehtävä jännitteettömäksi räjähdyskelpoisen ilmaseoksen havaitsemisen yhteydessä; turvallinen yhdellä vialla</td></tr>
+<tr>
+<td><strong>Ma</strong></td>
+<td>Erittäin korkea</td>
+<td>Laitteet voidaan jättää jännitteettömäksi räjähdysvaaralliseen ympäristöön; turvallinen kahdella vialla</td>
+</tr>
+<tr>
+<td><strong>Mt</strong></td>
+<td>Korkea</td>
+<td>Laitteet on kytkettävä jännitteettömiksi, kun räjähdysvaarallinen ilmaseos havaitaan; turvallinen yhdellä vialla</td>
+</tr>
 </tbody></table>
-<h2 id="epl-to-zone-mapping">EPL–vyöhyke-vastaavuus</h2>
-<p>Perussääntö: asennetun laitteen EPL:n on vastattava vyöhykevaatimusta tai ylitettävä se.</p>
+<h2 id="epl-to-zone-mapping">EPL vyöhykekartoitus</h2>
+<p>Perussääntö: asennettujen laitteiden EPL:n on vastattava tai ylitettävä vyöhykevaatimus.</p>
 <div class="table-wrap"><table><thead><tr>
-<th>Vyöhyke</th><th>Vähimmäis-EPL</th>
+<th>Alue</th>
+<th>EPL vaadittu vähimmäismäärä</th>
 </tr></thead><tbody>
-<tr><td>Vyöhyke 0</td><td>Ga</td></tr>
-<tr><td>Vyöhyke 1</td><td>Gb (tai Ga)</td></tr>
-<tr><td>Vyöhyke 2</td><td>Gc (tai Gb tai Ga)</td></tr>
-<tr><td>Vyöhyke 20</td><td>Da</td></tr>
-<tr><td>Vyöhyke 21</td><td>Db (tai Da)</td></tr>
-<tr><td>Vyöhyke 22</td><td>Dc (tai Db tai Da)</td></tr>
+<tr>
+<td>Alue 0</td>
+<td>Ga</td>
+</tr>
+<tr>
+<td>Alue 1</td>
+<td>Gb (tai Ga)</td>
+</tr>
+<tr>
+<td>Alue 2</td>
+<td>Gc (tai Gb tai Ga)</td>
+</tr>
+<tr>
+<td>Alue 20</td>
+<td>Da</td>
+</tr>
+<tr>
+<td>Alue 21</td>
+<td>Db (tai Da)</td>
+</tr>
+<tr>
+<td>Alue 22</td>
+<td>Dc (tai Db tai Da)</td>
+</tr>
 </tbody></table>
-<p>Korkeamman EPL:n omaavia laitteita voidaan aina käyttää vähemmän vaarallisessa vyöhykkeessä (Ga-laite vyöhykkeessä 2 on hyväksyttävää, joskin usein tarpeettoman kallista).</p>
-<h2 id="epl-to-protection-method-mapping">EPL–suojausmenetelmä-vastaavuus</h2>
+<p>Korkeamman EPL-arvon omaavia laitteita voidaan aina käyttää vähemmän vaarallisilla vyöhykkeillä (vyöhykkeen 2 Ga-laitteet ovat hyväksyttäviä, vaikkakin usein tarpeettoman kalliita).</p>
+<h2 id="epl-to-protection-method-mapping">EPL suojausmenetelmän kartoitukseen</h2>
 <div class="table-wrap"><table><thead><tr>
-<th>EPL</th><th>Käytettävissä olevat suojausmenetelmät</th>
+<th>EPL</th>
+<th>Käytettävissä olevat suojausmenetelmät</th>
 </tr></thead><tbody>
-<tr><td><strong>Ga</strong></td><td>Ex ia, Ex ma</td></tr>
-<tr><td><strong>Gb</strong></td><td>Ex db, Ex eb, Ex ib, Ex mb, Ex px, Ex py, Ex o, Ex q, [Ex Op pr, Ex Op sh]</td></tr>
-<tr><td><strong>Gc</strong></td><td>Ex dc, Ex ec, Ex ic, Ex mc, Ex pz, Ex nA, Ex nC, Ex nR, Ex nL</td></tr>
-<tr><td><strong>Da</strong></td><td>Ex ia, Ex ma, Ex ta</td></tr>
-<tr><td><strong>Db</strong></td><td>Ex ib, Ex mb, Ex tb, Ex pd</td></tr>
-<tr><td><strong>Dc</strong></td><td>Ex ic, Ex mc, Ex tc</td></tr>
+<tr>
+<td><strong>Ga</strong></td>
+<td>Ex ia, Ex ma</td>
+</tr>
+<tr>
+<td><strong>Gb</strong></td>
+<td>Ex db, Ex eb, Ex ib, Ex mb, Ex px, Ex py, Ex o, Ex q, [Ex Op pr, Ex Op sh]</td>
+</tr>
+<tr>
+<td><strong>Gc</strong></td>
+<td>Ex dc, Ex ec, Ex ic, Ex mc, Ex pz, Ex nA, Ex nC, Ex nR, Ex nL</td>
+</tr>
+<tr>
+<td><strong>Da</strong></td>
+<td>Ex ia, Ex ma, Ex ta</td>
+</tr>
+<tr>
+<td><strong>Db</strong></td>
+<td>Ex ib, Ex mb, Ex tb, Ex pd</td>
+</tr>
+<tr>
+<td><strong>Dc</strong></td>
+<td>Ex ic, Ex mc, Ex tc</td>
+</tr>
 </tbody></table>
-<h2 id="epl-vs-atex-categories">EPL vs. ATEX-kategoriat</h2>
-<p>ATEX-direktiivi 2014/34/EU käyttää <strong>kategorioita</strong> EPL:n sijaan. Vastaavuus:</p>
+<h2 id="epl-vs-atex-categories">EPL vs ATEX -luokat</h2>
+<p>ATEX-direktiivin 2014/34/EU käyttötarkoitukset <strong>luokat</strong> EPL:n sijaan. Kartta on:</p>
 <div class="table-wrap"><table><thead><tr>
-<th>ATEX-kategoria</th><th>EPL-vastaavuus</th><th>Vyöhykkeet</th>
+<th>ATEX-luokka</th>
+<th>EPL-vastaava</th>
+<th>Alueet</th>
 </tr></thead><tbody>
-<tr><td><strong>1G</strong></td><td>Ga</td><td>Vyöhyke 0, 1, 2</td></tr>
-<tr><td><strong>2G</strong></td><td>Gb</td><td>Vyöhyke 1, 2</td></tr>
-<tr><td><strong>3G</strong></td><td>Gc</td><td>Vyöhyke 2</td></tr>
-<tr><td><strong>1D</strong></td><td>Da</td><td>Vyöhyke 20, 21, 22</td></tr>
-<tr><td><strong>2D</strong></td><td>Db</td><td>Vyöhyke 21, 22</td></tr>
-<tr><td><strong>3D</strong></td><td>Dc</td><td>Vyöhyke 22</td></tr>
-<tr><td><strong>M1</strong></td><td>Ma</td><td>Kaivokset (jännitteinen Ex-tilassa)</td></tr>
-<tr><td><strong>M2</strong></td><td>Mb</td><td>Kaivokset (jännitteetön Ex-tilassa)</td></tr>
+<tr>
+<td><strong>1G</strong></td>
+<td>Ga</td>
+<td>Vyöhyke 0, 1, 2</td>
+</tr>
+<tr>
+<td><strong>2G</strong></td>
+<td>Gb</td>
+<td>Alue 1, 2</td>
+</tr>
+<tr>
+<td><strong>3G</strong></td>
+<td>Gc</td>
+<td>Alue 2</td>
+</tr>
+<tr>
+<td><strong>1D</strong></td>
+<td>Da</td>
+<td>Alue 20, 21, 22</td>
+</tr>
+<tr>
+<td><strong>2D</strong></td>
+<td>Db</td>
+<td>Alue 21, 22</td>
+</tr>
+<tr>
+<td><strong>3D</strong></td>
+<td>Dc</td>
+<td>Alue 22</td>
+</tr>
+<tr>
+<td><strong>M1</strong></td>
+<td>Ma</td>
+<td>Kaivokset (jännitettä Ex atm)</td>
+</tr>
+<tr>
+<td><strong>M2</strong></td>
+<td>Mt</td>
+<td>Kaivokset (sähköttömät Ex atm)</td>
+</tr>
 </tbody></table>
-<p>ATEX-merkinnässä kategoria näkyy muodossa numero+kirjain: <code>II 2G</code> tarkoittaa Ryhmä II, Kategoria 2G (= EPL Gb).</p>
-<h2 id="fault-tolerance">Viansietokyky</h2>
-<h3 id="epl-a-very-high--ga-da-ma">EPL "a" (Erittäin korkea — Ga/Da/Ma)</h3>
+<p>ATEX-merkinnässä luokka näkyy numerona+kirjaimena: <code>II 2G</code> tarkoittaa ryhmää II, kategoriaa 2G (= EPL Gb).</p>
+<h2 id="fault-tolerance">Vikasietokyky</h2>
+<p>EPL-kirjaimen jälkiliite (a, b, c) liittyy suoraan vikasietoisuuteen:</p>
+<h3 id="epl-a-very-high--ga-da-ma">EPL "a" (erittäin korkea – Ga/Da/Ma)</h3>
 <ul>
-<li>Laitteen on pysyttävä turvallisena <strong>normaalitoiminnassa</strong> JA <strong>kahdella itsenäisellä vialla</strong></li>
-<li>Turvamarginaali <strong>1,5×</strong> kaikkiin suojausparametreihin</li>
+<li>Laitteiden on oltava turvassa <strong>normaali toiminta</strong> JA kanssa <strong>kaksi itsenäistä vikaa</strong></li>
+<li>On käytettävä turvakerrointa <strong>1.5×</strong> kaikkiin suojausparametreihin</li>
 <li>Vain Ex ia ja Ex ma täyttävät tämän vaatimuksen</li>
-<li>Vaativin testaus ja dokumentaatio</li>
+<li>Kaikkein tiukimmat testaukset ja dokumentaatio</li>
 </ul>
-<h3 id="epl-b-high--gb-db-mb">EPL "b" (Korkea — Gb/Db/Mb)</h3>
+<h3 id="epl-b-high--gb-db-mb">EPL "b" (korkea – Gb/Db/Mb)</h3>
 <ul>
-<li>Laitteen on pysyttävä turvallisena <strong>normaalitoiminnassa</strong> JA <strong>yhdellä vialla</strong></li>
-<li>Turvamarginaali <strong>1,5×</strong></li>
-<li>Kattaa yleisimmät teollisuuden suojausmenetelmät (Ex d, Ex e, Ex ib, Ex p jne.)</li>
-<li>Suurin osa maailmanlaajuisesti asennetuista Ex-laitteista on EPL Gb/Db</li>
+<li>Laitteiden on oltava turvassa <strong>normaali toiminta</strong> JA kanssa <strong>yksi vika</strong></li>
+<li>Varmuuskerroin <strong>1.5×</strong></li>
+<li>Kattaa yleisimmät teollisuuden suojamenetelmät (Ex d, Ex e, Ex ib, Ex p jne.)</li>
+<li>Suurin osa asennetuista Ex-laitteista maailmanlaajuisesti on EPL Gb/Db</li>
 </ul>
-<h3 id="epl-c-enhanced--gc-dc">EPL "c" (Korotettu — Gc/Dc)</h3>
+<h3 id="epl-c-enhanced--gc-dc">EPL "c" (parannettu – Gc/Dc)</h3>
 <ul>
-<li>Laitteen on pysyttävä turvallisena <strong>normaalitoiminnassa</strong></li>
-<li>Voi sisältää toimenpiteitä syttymistodennäköisyyden pienentämiseksi vikatilanteissa</li>
-<li>Laite voi yksinkertaisesti sammua tai hälyttää vian havaitessaan</li>
-<li>Alhaisempi kustannus, sopii vyöhykkeisiin 2/22, joissa räjähdyskelpoinen ilmaseos on epätodennäköinen</li>
+<li>Laitteiden tulee pysyä turvassa koko ajan <strong>normaali toiminta</strong></li>
+<li>Saattaa sisältää toimenpiteitä syttymisen todennäköisyyden vähentämiseksi vikatilanteissa</li>
+<li>Laitteet voivat yksinkertaisesti sammua tai hälyttää vian havaitsemisesta</li>
+<li>Edullisempi, sopii vyöhykkeelle 2/22, jossa räjähdysvaara on epätodennäköinen</li>
 </ul>
 <h2 id="practical-considerations">Käytännön huomioita</h2>
-<h3 id="over-specifying-epl">EPL:n ylimitoitus</h3>
-<p>Ga/Da-laitteiden asentaminen vyöhykkeeseen 2/22 on teknisesti hyväksyttävää, mutta:</p>
+<h3 id="over-specifying-epl">Ylimäärittely EPL</h3>
+<p>Ga/Da-laitteiden asentaminen vyöhykkeelle 2/22 on teknisesti hyväksyttävää, mutta:</p>
 <ul>
-<li>Huomattavasti kalliimpaa</li>
-<li>Voi olla vaikeampi huoltaa (Ex ia:n rajoitukset muutoksiin)</li>
-<li>Vyöhykeluokitus tulisi tarkistaa ensin — alue voi olla vyöhyke 1</li>
+<li>Huomattavasti kalliimpi</li>
+<li>Voi olla vaikeampi ylläpitää (ex ia rajoituksia muunnoksille)</li>
+<li>Ensin tulee tarkistaa vyöhykeluokitus – alue voi olla vyöhyke 1</li>
 </ul>
-<h3 id="under-specifying-epl">EPL:n alimitoitus</h3>
-<p>Gc-laitteen asentaminen vyöhykkeeseen 1 on <strong>määräysten vastaista</strong>. Tämä on yleinen vaatimustenmukaisuusvirhe, joka havaitaan tarkastuksissa. Varmista aina:</p>
+<h3 id="under-specifying-epl">EPL:n alimäärittely</h3>
+<p>Gc-laitteiden asentaminen vyöhykkeelle 1 on <strong>rikkominen</strong>. Tämä on yleinen tarkastusten aikana havaittu vaatimustenmukaisuusvirhe. Tarkista aina:</p>
 <ol>
-<li>Vyöhykeluokituspiirustus on ajan tasalla</li>
-<li>Laitteen EPL vastaa vyöhykettä tai ylittää sen</li>
+<li>Vyöhykeluokituspiirros on voimassa</li>
+<li>Varusteen EPL vastaa tai ylittää alueen</li>
 <li><a href="gas-groups.html">Kaasuryhmä</a> ja <a href="temperature-classes.html">lämpötilaluokka</a> ovat myös oikein</li>
 </ol>
-<h3 id="mixed-installations">Sekarakenteiset asennukset</h3>
-<p>Yhdessä laitteessa voi olla useita EPL-tasoja eri osille:</p>
+<h3 id="mixed-installations">Sekaasennukset</h3>
+<p>Yhdellä laitteistolla voi olla useita EPL:itä eri osille:</p>
 <pre><code>
 Ex db [ib Ga] IIC T4 Gb
 </code></pre>
-<p>Tämä tarkoittaa, että pääkotelo on EPL Gb (räjähdyspaineen kestävä), mutta se sisältää luontaisesti turvallisia piirejä, joiden luokitus on EPL Ga.</p>
-<h2 id="related-files">Aiheeseen liittyvät sivut</h2>
+<p>Tämä tarkoittaa, että pääkotelo on EPL Gb (tulenkestävä), mutta se sisältää luonnostaan ​​vaarattomia piirejä, joiden luokitus on EPL Ga.</p>
+<h2 id="related-files">Aiheeseen liittyvät tiedostot</h2>
 <ul>
-<li><a href="zone-classification.html">Vyöhykeluokitus</a> — miten vyöhykkeet määräävät vaaditun EPL:n</li>
-<li><a href="protection-methods.html">Suojausmenetelmät</a> — käytettävissä olevat menetelmät EPL-tasoittain</li>
-<li><a href="ex-markings.html">Merkinnät</a> — miten EPL näkyy laitemerkinnässä</li>
+<li><a href="zone-classification.html">Alueluokitus</a> — kuinka vyöhykkeet määrittävät vaaditun EPL:n</li>
+<li><a href="protection-methods.html">Suojausmenetelmät</a> — käytettävissä olevat menetelmät EPL-kohtaisesti</li>
+<li><a href="ex-markings.html">Ex-merkinnät</a> — kuinka EPL esiintyy laitemerkinnöissä</li>
 <li><a href="standards.html">Standardit</a> — IEC 60079-0 määrittelee EPL-kehyksen</li>
-<li><a href="certification.html">Sertifiointi</a> — miten EPL varmennetaan ja sertifioidaan</li>
+<li><a href="certification.html">Sertifiointi</a> — miten EPL varmistetaan ja sertifioidaan</li>
 </ul>
       </div>
       <aside class="content-sidebar" aria-label="Navigation">
         <div class="sidebar-card">
           <h4>Kaikki aiheet</h4>
             <a href="fundamentals.html" class="">Perusteet</a>
-  <a href="zone-classification.html" class="">Vyöhykkeet</a>
+  <a href="zone-classification.html" class="">Alueet</a>
   <a href="gas-groups.html" class="">Kaasuryhmät</a>
-  <a href="temperature-classes.html" class="">Lämpötilaluokat</a>
-  <a href="protection-methods.html" class="">Suojausmenetelmät</a>
+  <a href="temperature-classes.html" class="">Temp-luokat</a>
+  <a href="protection-methods.html" class="">Suojaus</a>
   <a href="epl.html" class="current">EPL</a>
   <a href="ex-markings.html" class="">Merkinnät</a>
   <a href="standards.html" class="">Standardit</a>
   <a href="certification.html" class="">Sertifiointi</a>
   <a href="installation-inspection.html" class="">Asennus</a>
-  <a href="cheat-sheet.html" class="">Pikaohje</a>
+  <a href="cheat-sheet.html" class="">Huijauslehti</a>
         </div>
       </aside>
     </div>
   </div>
 </section>
-
+  
+  <div class="content-sidebar">
+    <div class="sidebar-card">
+      <h4>Topics</h4>
+        <a href="/fi/pages/fundamentals.html">Perusteet</a>
+        <a href="/fi/pages/zone-classification.html">Alueluokitus</a>
+        <a href="/fi/pages/gas-groups.html">Kaasuryhmät</a>
+        <a href="/fi/pages/temperature-classes.html">Lämpötilaluokat</a>
+        <a href="/fi/pages/protection-methods.html">Suojausmenetelmät</a>
+        <a href="/fi/pages/epl.html" class="current">EPL</a>
+        <a href="/fi/pages/ex-markings.html">Ex-merkinnät</a>
+        <a href="/fi/pages/standards.html">Standardit</a>
+        <a href="/fi/pages/certification.html">Sertifiointi</a>
+        <a href="/fi/pages/installation-inspection.html">Asennus ja tarkastus</a>
+        <a href="/fi/pages/cheat-sheet.html">Huijauslehti</a>
+        <a href="/fi/pages/faq.html">FAQ</a>
+    </div>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="container">
-    <p>Tehty insinööreille, jotka työskentelevät räjähdysvaarallisilla alueilla. Sisältö perustuu IEC 60079-, ATEX 2014/34/EU- ja IECEx-standardeihin.</p>
-    <p>Ei korvaa virallisia standardidokumentteja tai ammattimaista insinöörineuvontaa.</p>
+    <p>Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+    <p>Not a substitute for official standards documents or professional engineering advice.</p>
   </div>
 </footer>
+
 <script>
 (function(){
   var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
@@ -271,6 +360,5 @@ Ex db [ib Ga] IIC T4 Gb
   });
 })();
 </script>
-
 </body>
 </html>
