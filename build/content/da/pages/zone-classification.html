@@ -1,134 +1,109 @@
 <div class="content-layout">
       <div class="content-body">
-        <img class="content-hero" src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=1000&q=80" alt="Zoneklassificering af eksplosionsfarlige områder" loading="lazy" width="820" height="240">
-        <h1>Zoneklassificering af eksplosionsfarlige områder</h1>
-        <p>Zoneklassificering er processen med at opdele et anlæg i områder baseret på sandsynligheden og varigheden af en eksplosiv atmosfære. Det bestemmer, hvilken type <a href="protection-methods.html">Ex-beskyttet udstyr</a> der kræves på hvert sted.</p>
-<h2 id="gas-and-vapour-zones-iec-60079-10-1">Gas- og dampzoner (IEC 60079-10-1)</h2>
+        <img class="content-hero" src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=1000&q=80" alt="Zoneklassifikation" loading="lazy" width="820" height="240">
+        <h1>Zoneklassifikation</h1>
+        <p>Zoneklassifikation er processen med at vurdere, hvor eksplosive atmosfærer kan forekomme, og hvor ofte. Resultatet bestemmer, hvilket udstyr der kan installeres på hver placering.</p>
+<h2 id="gas-zones-iec-60079-10-1">Gaszoner (IEC 60079-10-1)</h2>
 <div class="table-wrap"><table><thead><tr>
-<th>Zone</th><th>Definition</th><th>Typisk varighed</th><th>Krævet <a href="EPL.html">EPL</a></th>
+<th>Zone</th>
+<th>Definition</th>
+<th>Typisk hyppighed</th>
+<th>Krævet EPL</th>
 </tr></thead><tbody>
-<tr><td><strong>Zone 0</strong></td><td>Eksplosiv atmosfære til stede <strong>vedvarende</strong> eller i lange perioder</td><td>>1.000 timer/år</td><td>Ga</td></tr>
-<tr><td><strong>Zone 1</strong></td><td>Eksplosiv atmosfære <strong>sandsynlig</strong> under normal drift</td><td>10–1.000 timer/år</td><td>Gb (eller Ga)</td></tr>
-<tr><td><strong>Zone 2</strong></td><td>Eksplosiv atmosfære <strong>ikke sandsynlig</strong> under normal drift; kun kortvarigt hvis den opstår</td><td><10 timer/år</td><td>Gc (eller Gb/Ga)</td></tr>
-</tbody></table>
-<h3 id="zone-0-examples">Zone 0 eksempler</h3>
-<ul>
-<li>Inde i lagertanke med brændbare væsker over deres flammepunkt</li>
-<li>Inde i procesbeholdere under normal produktion</li>
-<li>Inde i rørledninger, der fører brændbare gasser</li>
-</ul>
-<h3 id="zone-1-examples">Zone 1 eksempler</h3>
-<ul>
-<li>Område omkring Zone 0 (f.eks. omkring tankventiler)</li>
-<li>Områder nær udstyr, der hyppigt frigiver brændbare stoffer</li>
-<li>Pumpe- og kompressortætningsområder</li>
-<li>Prøvetagningspunkter og dræningssystemer</li>
-<li>Laste-/losseområder for brændbare væsker</li>
-</ul>
-<h3 id="zone-2-examples">Zone 2 eksempler</h3>
-<ul>
-<li>Områder omkring Zone 1</li>
-<li>Områder, hvor udslip kun sker under vedligeholdelse, nedbrud eller unormale forhold</li>
-<li>Flangeforbindelser i god stand</li>
-<li>Ventilspindler under normale forhold</li>
-<li>Områder nær Zone 1 med tilstrækkelig ventilation</li>
-</ul>
+<tr><td><strong>Zone 0</strong></td><td>Eksplosiv atmosfære til stede <strong>kontinuerligt eller i længere perioder</strong></td><td>>1.000 t/år</td><td>Ga</td></tr>
+<tr><td><strong>Zone 1</strong></td><td>Eksplosiv atmosfære sandsynlig under <strong>normal drift</strong></td><td>10–1.000 t/år</td><td>Gb</td></tr>
+<tr><td><strong>Zone 2</strong></td><td>Eksplosiv atmosfære <strong>usandsynlig</strong> og af <strong>kort varighed</strong></td><td><10 t/år</td><td>Gc</td></tr>
+</tbody></table></div>
 <h2 id="dust-zones-iec-60079-10-2">Støvzoner (IEC 60079-10-2)</h2>
 <div class="table-wrap"><table><thead><tr>
-<th>Zone</th><th>Definition</th><th>Krævet <a href="EPL.html">EPL</a></th>
+<th>Zone</th>
+<th>Definition</th>
+<th>Krævet EPL</th>
 </tr></thead><tbody>
-<tr><td><strong>Zone 20</strong></td><td>Eksplosiv støvsky til stede <strong>vedvarende</strong> eller hyppigt</td><td>Da</td></tr>
-<tr><td><strong>Zone 21</strong></td><td>Eksplosiv støvsky <strong>sandsynlig</strong> under normal drift</td><td>Db (eller Da)</td></tr>
-<tr><td><strong>Zone 22</strong></td><td>Eksplosiv støvsky <strong>ikke sandsynlig</strong>; kun kortvarigt hvis den forekommer</td><td>Dc (eller Db/Da)</td></tr>
-</tbody></table>
-<h3 id="zone-20-examples">Zone 20 eksempler</h3>
+<tr><td><strong>Zone 20</strong></td><td>Brændbar støvsky til stede <strong>kontinuerligt eller hyppigt</strong></td><td>Da</td></tr>
+<tr><td><strong>Zone 21</strong></td><td>Brændbar støvsky sandsynlig under <strong>normal drift</strong></td><td>Db</td></tr>
+<tr><td><strong>Zone 22</strong></td><td>Brændbar støvsky <strong>usandsynlig</strong>; kun kortvarigt hvis det sker</td><td>Dc</td></tr>
+</tbody></table></div>
+<h2 id="zone-determination-methodology">Metodik for zonebestemmelse</h2>
+<p>Zoneklassifikation udføres efter IEC 60079-10-1 (gas) eller IEC 60079-10-2 (støv). Processen kræver:</p>
+<ol>
+<li><strong>Identificer udslipskilder</strong> — hvor kan brandbart stof frigives?</li>
+<li><strong>Klassificer udslipsgraden</strong>:
 <ul>
-<li>Inde i siloer, beholdere og cyklonfiltre</li>
-<li>Inde i pneumatiske transportledninger</li>
-<li>Inde i blandere, der behandler brændbart støv</li>
-</ul>
-<h3 id="zone-21-examples">Zone 21 eksempler</h3>
-<ul>
-<li>Områder omkring støvpåfyldnings-/tømningspunkter</li>
-<li>Nær transportbånds overføringspunkter med hyppigt spild</li>
-<li>Posefilterrum under normal drift</li>
-</ul>
-<h3 id="zone-22-examples">Zone 22 eksempler</h3>
-<ul>
-<li>Områder omkring Zone 21 med tilstrækkelig rengøring</li>
-<li>Nær udstyr, der sjældent frigiver støv</li>
-<li>Lagerområder med sække af brændbart pulver</li>
-</ul>
-<p><strong>Vigtigt:</strong> Støvlag på overflader kan danne Zone 22 (eller højere) selv uden luftbårent støv. Et lag på 5 mm brændbart støv kan, hvis det forstyrres, skabe en eksplosiv sky.</p>
-<h2 id="north-american-classification-nec-cec">Nordamerikansk klassificering (NEC/CEC)</h2>
-<p>USA (NEC Artikel 500/505) og Canada (CEC Sektion 18) bruger et parallelt system:</p>
+<li><strong>Kontinuerlig</strong> — permanent udslip eller i længere perioder → Zone 0/20</li>
+<li><strong>Primær grad</strong> — periodisk eller lejlighedsvis udslip under normal drift → Zone 1/21</li>
+<li><strong>Sekundær grad</strong> — udslip forventes ikke under normal drift; kun kortvarigt → Zone 2/22</li>
+</ul></li>
+<li><strong>Vurder ventilationen</strong> — påvirker både zonetype og -udstrækning</li>
+<li><strong>Bestem zoneudstrækningen</strong> — afstand fra udslipskilden</li>
+</ol>
+<h3 id="ventilation-effects">Ventilationseffekter</h3>
+<p>Ventilation kan reducere zonetypen eller dens udstrækning:</p>
 <div class="table-wrap"><table><thead><tr>
-<th>Zonesystem</th><th>NEC/CEC-ækvivalent</th><th>Fareniveau</th>
+<th>Ventilation</th>
+<th>Tilgængelighed</th>
+<th>Effekt</th>
 </tr></thead><tbody>
-<tr><td>Zone 0</td><td>Class I, Division 1</td><td>Vedvarende/hyppig</td></tr>
-<tr><td>Zone 1</td><td>Class I, Division 1</td><td>Normal drift</td></tr>
-<tr><td>Zone 2</td><td>Class I, Division 2</td><td>Kun unormalt</td></tr>
-<tr><td>Zone 20</td><td>Class II, Division 1</td><td>Vedvarende/hyppigt støv</td></tr>
-<tr><td>Zone 21</td><td>Class II, Division 1</td><td>Normal drift støv</td></tr>
-<tr><td>Zone 22</td><td>Class II, Division 2</td><td>Kun unormalt støv</td></tr>
-</tbody></table>
-<p>NEC Artikel 505 anerkender også zonesystemet direkte. Division-systemet er mindre detaljeret — Division 1 dækker både Zone 0 og Zone 1.</p>
-<p><strong>Class III</strong> dækker fibre og fnug (tekstilfabrikker, træbearbejdning) — ingen direkte Zone-ækvivalent.</p>
-<h2 id="zone-classification-methodology">Metode for zoneklassificering</h2>
-<p>Klassificering udføres typisk af et team bestående af:</p>
+<tr><td>Høj</td><td>God</td><td>Kan reducere zonetype (f.eks. Zone 1 → Zone 2)</td></tr>
+<tr><td>Medium</td><td>God</td><td>Normal zonestørrelse</td></tr>
+<tr><td>Lav</td><td>Dårlig</td><td>Kan øge zonetype eller udstrækning</td></tr>
+</tbody></table></div>
+<p>Udendørs områder har generelt bedre ventilation end lukkede rum, men ikke altid. Gruber, fordybninger og områder under jordniveau kan opsamle gasser, der er tungere end luft, selv udendørs.</p>
+<h2 id="north-american-comparison">Nordamerikansk sammenligning</h2>
+<p>Nordamerika bruger både divisionssystemet og zonesystemet:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>NEC Division</th>
+<th>Tilsvarende IEC-zone</th>
+<th>Beskrivelse</th>
+</tr></thead><tbody>
+<tr><td>Division 1</td><td>Zone 0 + Zone 1</td><td>Farlige forhold under normal drift</td></tr>
+<tr><td>Division 2</td><td>Zone 2</td><td>Kun under unormale forhold</td></tr>
+</tbody></table></div>
+<p>Divisionssystemet er mere konservativt — det skelner ikke mellem Zone 0 og Zone 1, så Division 1-udstyr skal opfylde de strengeste krav.</p>
+<h2 id="zone-classification-examples">Eksempler på zoneklassifikation</h2>
+<h3 id="oil--gas-platform">Olie- og gasplatform</h3>
 <ul>
-<li>Procesingeniører (kilde- og udslipskarakterisering)</li>
-<li>Sikkerheds-/HMS-ingeniører</li>
-<li>Elingeniører</li>
-<li>Driftspersonale</li>
+<li><strong>Zone 0:</strong> Indre af olie/gas-separatorer, procestanke med væskeoverflade</li>
+<li><strong>Zone 1:</strong> Områder omkring brøndhoveder, processystemer, slangetilslutningsområder</li>
+<li><strong>Zone 2:</strong> Åbne dæk tilstødende Zone 1-udstyr, ventilerede ventilrum</li>
 </ul>
-<h3 id="key-factors">Nøglefaktorer</h3>
-<ol>
-<li><strong>Udslipskilde</strong> — hvor brændbart materiale kan undslippe (flanger, ventiler, pakdåser, ventilationsåbninger)</li>
-<li><strong>Udslipsgrad</strong></li>
-<li><strong>Vedvarende</strong> → danner Zone 0/20</li>
-<li><strong>Primær</strong> (forventet under normal drift) → danner Zone 1/21</li>
-<li><strong>Sekundær</strong> (ikke forventet under normal drift) → danner Zone 2/22</li>
-<li><strong>Ventilation</strong> — påvirker zoneudbredelse og muligvis zonetype</li>
-<li><strong>God ventilation</strong> reducerer zonestørrelse og kan nedgradere zonetype</li>
-<li><strong>Dårlig ventilation</strong> udvider zonestørrelse og kan opgradere zonetype</li>
-<li><strong>Ubetydelig ventilation</strong> (lukkede rum) — zonen udvides til at fylde hele rummet</li>
-<li><strong>Relativ densitet af gassen</strong> — lettere gasser (brint) stiger; tungere gasser (propan) samler sig ved gulvniveau</li>
-</ol>
-<h3 id="zone-extent">Zoneudbredelse</h3>
-<p>Den fysiske størrelse af en zone afhænger af:</p>
+<h3 id="fuel-filling-station">Tankstation</h3>
 <ul>
-<li>Udslipshastighed og -hastighed</li>
-<li>Ventilationsrate og -effektivitet</li>
-<li>Relativ densitet af det brændbare stof</li>
-<li>Flammepunkt og damptryk</li>
-<li>NEG for stoffet</li>
+<li><strong>Zone 0:</strong> Indre af underjordiske lagertanke</li>
+<li><strong>Zone 1:</strong> 1,5 m radius omkring standerens påfyldningspunkter, tankdæksler under levering</li>
+<li><strong>Zone 2:</strong> 1,5–3 m radius fra standere (varierer med nationale regler), tankventilrum</li>
 </ul>
-<p>Standarder angiver beregningsmetoder: IEC 60079-10-1 Annex B (gasser), IEC 60079-10-2 Annex B (støv).</p>
+<h3 id="grain-silo">Kornsilo</h3>
+<ul>
+<li><strong>Zone 20:</strong> Indre af siloen under fyldning/tømning (kontinuerlig sky)</li>
+<li><strong>Zone 21:</strong> Områder omkring elevatortophoveder, overførselspunkter</li>
+<li><strong>Zone 22:</strong> Silobygning hvor støvlag kan forstyrres</li>
+</ul>
+<h3 id="pharmaceutical-plant">Farmaceutisk fabrik</h3>
+<ul>
+<li><strong>Zone 1:</strong> Omkring åbent procesudstyr der indeholder opløsningsmidler</li>
+<li><strong>Zone 2:</strong> Generelle produktionsområder hvor opløsningsmidler bruges i lukkede systemer</li>
+<li><strong>Zone 21:</strong> Støvhåndteringsområder (vejning, blanding, tabletkomprimering)</li>
+</ul>
 <h2 id="zone-documentation">Zonedokumentation</h2>
-<p>Resultatet af en zoneklassificeringsundersøgelse er:</p>
-<ol>
-<li><strong>Klassificeringstegninger af eksplosionsfarlige områder</strong> — planer og snit, der viser zonegrænser</li>
-<li><strong>Oversigt over udslipskilder</strong> — tabeloversigt over alle potentielle kilder</li>
-<li><strong>Datablad</strong> — stoffets egenskaber, udslipskarakteristik</li>
-<li><strong>Zoneklassificeringsrapport</strong> — metodik, forudsætninger, resultater</li>
-</ol>
-<p>Disse dokumenter danner grundlaget for at vælge udstyr med det korrekte <a href="EPL.html">EPL</a> og den rigtige <a href="protection-methods.html">beskyttelsesmetode</a>.</p>
-<h2 id="common-pitfalls">Almindelige faldgruber</h2>
+<p>Zoneklassifikationen skal dokumenteres i et <strong>eksplosionsbeskyttelsesdokument</strong> (EPD), som kræves af ATEX 1999/92/EF. Det skal indeholde:</p>
 <ul>
-<li>At glemme, at lettere-end-luft-gasser (brint, methan) samler sig ved loftsniveau</li>
-<li>At ignorere støvlag — et 5 mm lag, der forstyrres, bliver til en støvsky</li>
-<li>Ikke at revurdere, når processer ændres</li>
-<li>At forveksle "Zone 2" med "ikke-eksplosionsfarligt" — det kræver stadig Ex-udstyr</li>
-<li>At undervurdere ventilationssvigt (hvad sker der, når ventilatoren stopper?)</li>
+<li>Zoneklassifikationstegninger (plan og snit)</li>
+<li>Identificerede udslipskilder og deres grader</li>
+<li>Egenskaber for de brandbare stoffer, der bruges</li>
+<li>Vurdering af ventilation</li>
+<li>Udstrækning af hver zone (dimensioner)</li>
+<li>Liste over elektrisk og ikke-elektrisk udstyr i hver zone</li>
+<li>Foranstaltninger til antændelsesbeskyttelse</li>
 </ul>
-<h2 id="related-files">Relaterede emner</h2>
+<p>EPD'et skal revideres, når der foretages ændringer i processer, udstyr, stoffer eller ventilation.</p>
+<h2 id="related-files">Relaterede sektioner</h2>
 <ul>
-<li><a href="fundamentals.html">Grundlæggende</a> — eksplosionstrekant, grundlæggende begreber</li>
-<li><a href="gas-groups.html">Gasgrupper</a> — hvordan forskellige brændstoffer klassificeres</li>
-<li><a href="EPL.html">EPL</a> — udstyrets beskyttelsesniveau pr. zone</li>
-<li><a href="protection-methods.html">Beskyttelsesmetoder</a> — beskyttelsestyper egnet til hver zone</li>
-<li><a href="standards.html">Standarder</a> — IEC 60079-10-1 og 60079-10-2</li>
+<li><a href="fundamentals.html">Grundlæggende</a> — principper for eksplosionsbeskyttelse</li>
+<li><a href="gas-groups.html">Gasgrupper</a> — brændstofegenskaber pr. gruppe</li>
+<li><a href="epl.html">EPL</a> — udstyrets beskyttelsesniveauer pr. zone</li>
+<li><a href="protection-methods.html">Beskyttelsesmetoder</a> — hvilke metoder dækker hvilke zoner</li>
+<li><a href="installation-inspection.html">Installation og inspektion</a> — opretholdelse af zonesikkerhed</li>
 </ul>
       </div>
       <aside class="content-sidebar" aria-label="Navigation">
@@ -137,10 +112,10 @@
             <a href="fundamentals.html" class="">Grundlæggende</a>
   <a href="zone-classification.html" class="current">Zoner</a>
   <a href="gas-groups.html" class="">Gasgrupper</a>
-  <a href="temperature-classes.html" class="">Temperaturklasser</a>
-  <a href="protection-methods.html" class="">Beskyttelsesmetoder</a>
+  <a href="temperature-classes.html" class="">Temperaturkl.</a>
+  <a href="protection-methods.html" class="">Beskyttelse</a>
   <a href="epl.html" class="">EPL</a>
-  <a href="ex-markings.html" class="">Mærkninger</a>
+  <a href="ex-markings.html" class="">Mærkning</a>
   <a href="standards.html" class="">Standarder</a>
   <a href="certification.html" class="">Certificering</a>
   <a href="installation-inspection.html" class="">Installation</a>
