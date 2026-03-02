@@ -250,72 +250,80 @@
     <h2 class="section-title">Suositellut videot</h2>
     <p class="section-subtitle">Riippumatonta koulutussisältöä turvallisuusviranomaisilta, koulutuksen tarjoajilta ja insinöörikouluttajilta.</p>
 
-    <div class="bento-grid">
+    <div class="video-slider" id="videoSlider">
+      <button class="slider-btn slider-prev" onclick="slideVideos(-1)" aria-label="Previous">&#8249;</button>
+      <div class="slider-track" id="sliderTrack">
 
-      <!-- Row 1: wide video + standard -->
-      <div class="bento-item bento-wide">
-        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/jVM1ubYj73U" title="What is ATEX?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-        <div class="bento-label">
-          <span class="bento-tag">Perusteet</span>
-          <h3>What is ATEX?</h3>
-          <p>Yleiskatsaus ATEX-direktiiviin, vaarallisten alueiden luokitteluun ja Ex-merkintäjärjestelmään.</p>
+        <div class="slide" onclick="playVideo(this, 'jVM1ubYj73U')">
+          <div class="slide-thumb">
+            <img src="https://img.youtube.com/vi/jVM1ubYj73U/hqdefault.jpg" alt="What is ATEX?" loading="lazy">
+            <div class="play-icon">&#9654;</div>
+          </div>
+          <div class="slide-info">
+            <span class="slide-tag">Fundamentals</span>
+            <h3>What is ATEX?</h3>
+          </div>
         </div>
-      </div>
 
-      <div class="bento-item">
-        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/Jg7mLSG-Yws" title="Imperial Sugar Dust Explosion — CSB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-        <div class="bento-label">
-          <span class="bento-tag bento-tag-red">CSB Investigation</span>
-          <h3>Imperial Sugar Dust Explosion</h3>
+        <div class="slide" onclick="playVideo(this, 'Jg7mLSG-Yws')">
+          <div class="slide-thumb">
+            <img src="https://img.youtube.com/vi/Jg7mLSG-Yws/hqdefault.jpg" alt="Imperial Sugar Dust Explosion" loading="lazy">
+            <div class="play-icon">&#9654;</div>
+          </div>
+          <div class="slide-info">
+            <span class="slide-tag slide-tag-red">CSB Investigation</span>
+            <h3>Imperial Sugar Dust Explosion</h3>
+          </div>
         </div>
-      </div>
 
-      <!-- Row 2: small + Ex hexagon center + small -->
-      <div class="bento-item">
-        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/N8ifPpkAYic" title="How to Read ATEX/IECEx Markings" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-        <div class="bento-label">
-          <span class="bento-tag">Markings</span>
-          <h3>Reading ATEX/IECEx Markings</h3>
+        <div class="slide" onclick="playVideo(this, 'N8ifPpkAYic')">
+          <div class="slide-thumb">
+            <img src="https://img.youtube.com/vi/N8ifPpkAYic/hqdefault.jpg" alt="Reading ATEX/IECEx Markings" loading="lazy">
+            <div class="play-icon">&#9654;</div>
+          </div>
+          <div class="slide-info">
+            <span class="slide-tag">Markings</span>
+            <h3>Reading ATEX/IECEx Markings</h3>
+          </div>
         </div>
-      </div>
 
-      <div class="bento-item bento-logo">
-        <svg viewBox="0 0 120 132" class="bento-hex-logo">
-          <polygon points="60,2 116,32 116,100 60,130 4,100 4,32" fill="none" stroke="var(--accent)" stroke-width="3"/>
-          <polygon points="60,14 106,39 106,93 60,118 14,93 14,39" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.25"/>
-          <text x="60" y="82" text-anchor="middle" font-size="48" font-weight="700" fill="var(--accent)" font-family="'KHTeka', sans-serif">Ex</text>
-        </svg>
-        <span class="bento-logo-sub">Räjähdyssuojaus<br>Tietopankki</span>
-      </div>
-
-      <div class="bento-item">
-        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/u3M2WfyRws8" title="Hazardous Area Classification — Zone 0, 1, 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-        <div class="bento-label">
-          <span class="bento-tag">Vyöhykkeet</span>
-          <h3>Zone 0, 1, 2 Classification</h3>
+        <div class="slide" onclick="playVideo(this, 'u3M2WfyRws8')">
+          <div class="slide-thumb">
+            <img src="https://img.youtube.com/vi/u3M2WfyRws8/hqdefault.jpg" alt="Zone 0, 1, 2 Classification" loading="lazy">
+            <div class="play-icon">&#9654;</div>
+          </div>
+          <div class="slide-info">
+            <span class="slide-tag">Zones</span>
+            <h3>Zone 0, 1, 2 Classification</h3>
+          </div>
         </div>
-      </div>
 
-      <!-- Row 3: wide video + standard -->
-      <div class="bento-item bento-wide">
-        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/_kxWTKKyuJk" title="Ex d Flameproof vs Explosion Proof — Masterclass" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-        <div class="bento-label">
-          <span class="bento-tag">Suojausmenetelmät</span>
-          <h3>Ex d Flameproof vs Explosion Proof</h3>
-          <p>Liekkipolun suunnittelu, sertifiointivaatimukset ja milloin valita räjähdyspaineen kestävä kotelo.</p>
+        <div class="slide" onclick="playVideo(this, '_kxWTKKyuJk')">
+          <div class="slide-thumb">
+            <img src="https://img.youtube.com/vi/_kxWTKKyuJk/hqdefault.jpg" alt="Ex d Flameproof vs Explosion Proof" loading="lazy">
+            <div class="play-icon">&#9654;</div>
+          </div>
+          <div class="slide-info">
+            <span class="slide-tag">Protection</span>
+            <h3>Ex d Flameproof vs Explosion Proof</h3>
+          </div>
         </div>
-      </div>
 
-      <div class="bento-item">
-        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/9h3bar6eIss" title="Deadly Dust: Didion Milling — CSB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-        <div class="bento-label">
-          <span class="bento-tag bento-tag-red">CSB Investigation</span>
-          <h3>Deadly Dust: Didion Milling</h3>
-          <p>Maissipölyräjähdykset 2017. Viisi kuolonuhria.</p>
+        <div class="slide" onclick="playVideo(this, '9h3bar6eIss')">
+          <div class="slide-thumb">
+            <img src="https://img.youtube.com/vi/9h3bar6eIss/hqdefault.jpg" alt="Deadly Dust: Didion Milling" loading="lazy">
+            <div class="play-icon">&#9654;</div>
+          </div>
+          <div class="slide-info">
+            <span class="slide-tag slide-tag-red">CSB Investigation</span>
+            <h3>Deadly Dust: Didion Milling</h3>
+          </div>
         </div>
-      </div>
 
+      </div>
+      <button class="slider-btn slider-next" onclick="slideVideos(1)" aria-label="Next">&#8250;</button>
     </div>
+  </div>
   </div>
 </section>
 
