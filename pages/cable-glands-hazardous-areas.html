@@ -58,53 +58,43 @@
 </head>
 <body>
 
-<nav class="top-nav">
-  <div class="nav-inner">
-    <a href="/" class="site-logo">⚡ ExKnowledge</a>
-    <div class="nav-links">
-      <a href="/pages/fundamentals.html">Fundamentals</a>
-      <a href="/pages/standards.html">Standards</a>
-      <a href="/blog/">Blog</a>
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/pages/fundamentals.html">Fundamentals</a></li>
+      <li><a href="/pages/zone-classification.html">Zones</a></li>
+      <li><a href="/pages/protection-methods.html">Protection</a></li>
+      <li><a href="/pages/standards.html">Standards</a></li>
+      <li><a href="/pages/cheat-sheet.html">Cheat Sheet</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/cable-glands-hazardous-areas.html" selected>🇬🇧 English</option>
+      <option value="/de/pages/cable-glands-hazardous-areas.html">🇩🇪 Deutsch</option>
+      <option value="/no/pages/cable-glands-hazardous-areas.html">🇳🇴 Norsk</option>
+      <option value="/da/pages/cable-glands-hazardous-areas.html">🇩🇰 Dansk</option>
+      <option value="/sv/pages/cable-glands-hazardous-areas.html">🇸🇪 Svenska</option>
+      <option value="/fi/pages/cable-glands-hazardous-areas.html">🇫🇮 Suomi</option>
+      <option value="/es/pages/cable-glands-hazardous-areas.html">🇪🇸 Español</option>
+      <option value="/nl/pages/cable-glands-hazardous-areas.html">🇳🇱 Nederlands</option>
+      <option value="/pt/pages/cable-glands-hazardous-areas.html">🇵🇹 Português</option>
+      <option value="/it/pages/cable-glands-hazardous-areas.html">🇮🇹 Italiano</option>
+      <option value="/ar/pages/cable-glands-hazardous-areas.html">🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
     </div>
   </div>
 </nav>
 
-<div class="container">
-  <aside class="sidebar">
-    <h3>Topics</h3>
-    <ul>
-      <li><a href="/pages/fundamentals.html">Fundamentals</a></li>
-      <li><a href="/pages/zone-classification.html">Zone Classification</a></li>
-      <li><a href="/pages/gas-groups.html">Gas Groups</a></li>
-      <li><a href="/pages/temperature-classes.html">Temperature Classes</a></li>
-      <li><a href="/pages/protection-methods.html">Protection Methods</a></li>
-      <li><a href="/pages/epl.html">Equipment Protection Levels</a></li>
-      <li><a href="/pages/ex-markings.html">Reading Ex Markings</a></li>
-      <li><a href="/pages/standards.html">Standards</a></li>
-      <li><a href="/pages/certification.html">Certification</a></li>
-      <li><a href="/pages/installation-inspection.html">Installation & Inspection</a></li>
-      <li><a href="/pages/cheat-sheet.html">Cheat Sheet</a></li>
-      <li><a href="/pages/faq.html">FAQ</a></li>
-      <li><a href="/pages/atex-vs-iecex.html">ATEX vs IECEx</a></li>
-      <li><a href="/pages/explosion-proof-vs-intrinsically-safe.html">Explosion Proof vs IS</a></li>
-      <li><a href="/pages/how-to-read-atex-nameplate.html">How to Read ATEX Nameplate</a></li>
-      <li><a href="/pages/atex-directive.html">ATEX Directive</a></li>
-      <li><a href="/pages/hazardous-area-classification.html">Hazardous Area Classification</a></li>
-      <li><a href="/pages/dust-explosion-protection.html">Dust Explosion Protection</a></li>
-      <li><a href="/pages/atex-for-beginners.html">ATEX for Beginners</a></li>
-      <li><a href="/pages/compex-certification.html">CompEx Certification</a></li>
-      <li><a href="/pages/hydrogen-explosion-protection.html">Hydrogen Safety</a></li>
-      <li class="active"><a href="/pages/cable-glands-hazardous-areas.html">Cable Glands</a></li>
-    </ul>
-  </aside>
-
-  <main class="content">
-    <div class="content-hero" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=80') center/cover;">
-      <h1>Cable Glands for Hazardous Areas</h1>
-      <p class="subtitle">The wrong cable gland voids certification and creates an ignition risk. Here's how to select, install, and inspect Ex glands correctly.</p>
-    </div>
-
-    <article>
+<div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1000&q=80" alt="Cable Glands for Hazardous Areas" loading="lazy" width="820" height="240">
+        <h1>Cable Glands for Hazardous Areas</h1>
 
 <section>
 <h2>Why Cable Glands Matter</h2>
@@ -454,16 +444,51 @@
 </ul>
 </section>
 
-    </article>
-  </main>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4>All Topics</h4>
+  <a href="fundamentals.html">Fundamentals</a>
+  <a href="zone-classification.html">Zones</a>
+  <a href="gas-groups.html">Gas Groups</a>
+  <a href="temperature-classes.html">Temp Classes</a>
+  <a href="protection-methods.html">Protection</a>
+  <a href="epl.html">EPL</a>
+  <a href="ex-markings.html">Markings</a>
+  <a href="standards.html">Standards</a>
+  <a href="certification.html">Certification</a>
+  <a href="installation-inspection.html">Installation</a>
+  <a href="cheat-sheet.html">Cheat Sheet</a>
+  <a href="atex-vs-iecex.html">ATEX vs IECEx</a>
+  <a href="explosion-proof-vs-intrinsically-safe.html">Ex Proof vs IS</a>
+  <a href="how-to-read-atex-nameplate.html">ATEX Nameplate</a>
+  <a href="atex-directive.html">ATEX Directive</a>
+  <a href="hazardous-area-classification.html">Area Classification</a>
+  <a href="dust-explosion-protection.html">Dust Explosions</a>
+  <a href="atex-for-beginners.html">ATEX Beginners</a>
+  <a href="compex-certification.html">CompEx</a>
+  <a href="hydrogen-explosion-protection.html">Hydrogen Safety</a>
+  <a href="cable-glands-hazardous-areas.html" class="current">Cable Glands</a>
+  <a href="ex-equipment-selection-guide.html">Equipment Selection</a>
+        </div>
+      </aside>
 </div>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <p>ExKnowledge — Practical explosion protection reference for engineers</p>
-    <p>Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards</p>
+<footer class="footer">
+  <div class="container">
+    <p>Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+    <p>Not a substitute for official standards documents or professional engineering advice.</p>
   </div>
 </footer>
+<script>
+(function(){
+  var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
+  if(b)b.addEventListener('click',function(e){e.stopPropagation();b.classList.toggle('open');n.classList.toggle('open')});
+  document.addEventListener('click',function(e){
+    if(b&&!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('open');n.classList.remove('open')}
+  });
+})();
+</script>
 
 </body>
 </html>
