@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>ATEX for Beginners: A Plain-Language Introduction — ExKnowledge</title>
+  <meta name="description" content="New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.">
+  <link rel="canonical" href="https://exknowledge.com/pages/atex-for-beginners.html">
+  <meta property="og:title" content="ATEX for Beginners: A Plain-Language Introduction — ExKnowledge">
+  <meta property="og:description" content="New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.">
+  <meta property="og:url" content="https://exknowledge.com/pages/atex-for-beginners.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ATEX for Beginners: A Plain-Language Introduction — ExKnowledge">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/atex-for-beginners.html">
+  <link rel="alternate" hreflang="de" href="https://exknowledge.com/de/pages/atex-for-beginners.html">
+  <link rel="alternate" hreflang="no" href="https://exknowledge.com/no/pages/atex-for-beginners.html">
+  <link rel="alternate" hreflang="da" href="https://exknowledge.com/da/pages/atex-for-beginners.html">
+  <link rel="alternate" hreflang="sv" href="https://exknowledge.com/sv/pages/atex-for-beginners.html">
+  <link rel="alternate" hreflang="fi" href="https://exknowledge.com/fi/pages/atex-for-beginners.html">
+  <link rel="alternate" hreflang="es" href="https://exknowledge.com/es/pages/atex-for-beginners.html">
+  <link rel="alternate" hreflang="nl" href="https://exknowledge.com/nl/pages/atex-for-beginners.html">
+  <link rel="alternate" hreflang="pt" href="https://exknowledge.com/pt/pages/atex-for-beginners.html">
+  <link rel="alternate" hreflang="it" href="https://exknowledge.com/it/pages/atex-for-beginners.html">
+  <link rel="alternate" hreflang="ar" href="https://exknowledge.com/ar/pages/atex-for-beginners.html">
+  <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/atex-for-beginners.html">
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "ATEX for Beginners: A Plain-Language Introduction — ExKnowledge",
+    "description": "New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.",
+    "url": "https://exknowledge.com/pages/atex-for-beginners.html",
+    "image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1000&q=80",
+    "author": { "@type": "Organization", "name": "ExKnowledge", "url": "https://exknowledge.com" },
+    "publisher": { "@type": "Organization", "name": "ExKnowledge", "url": "https://exknowledge.com" },
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "ExKnowledge", "url": "https://exknowledge.com" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://exknowledge.com/" },
+      { "@type": "ListItem", "position": 2, "name": "ATEX for Beginners", "item": "https://exknowledge.com/pages/atex-for-beginners.html" }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-inner">
+    <a href="/" class="site-logo">⚡ ExKnowledge</a>
+    <div class="nav-links">
+      <a href="/pages/fundamentals.html">Fundamentals</a>
+      <a href="/pages/standards.html">Standards</a>
+      <a href="/blog/">Blog</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <aside class="sidebar">
+    <h3>Topics</h3>
+    <ul>
+      <li><a href="/pages/fundamentals.html">Fundamentals</a></li>
+      <li><a href="/pages/zone-classification.html">Zone Classification</a></li>
+      <li><a href="/pages/gas-groups.html">Gas Groups</a></li>
+      <li><a href="/pages/temperature-classes.html">Temperature Classes</a></li>
+      <li><a href="/pages/protection-methods.html">Protection Methods</a></li>
+      <li><a href="/pages/epl.html">Equipment Protection Levels</a></li>
+      <li><a href="/pages/ex-markings.html">Reading Ex Markings</a></li>
+      <li><a href="/pages/standards.html">Standards</a></li>
+      <li><a href="/pages/certification.html">Certification</a></li>
+      <li><a href="/pages/installation-inspection.html">Installation & Inspection</a></li>
+      <li><a href="/pages/cheat-sheet.html">Cheat Sheet</a></li>
+      <li><a href="/pages/faq.html">FAQ</a></li>
+      <li><a href="/pages/atex-vs-iecex.html">ATEX vs IECEx</a></li>
+      <li><a href="/pages/explosion-proof-vs-intrinsically-safe.html">Explosion Proof vs IS</a></li>
+      <li><a href="/pages/how-to-read-atex-nameplate.html">How to Read ATEX Nameplate</a></li>
+      <li><a href="/pages/atex-directive.html">ATEX Directive</a></li>
+      <li><a href="/pages/hazardous-area-classification.html">Hazardous Area Classification</a></li>
+      <li><a href="/pages/dust-explosion-protection.html">Dust Explosion Protection</a></li>
+      <li class="active"><a href="/pages/atex-for-beginners.html">ATEX for Beginners</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <div class="content-hero" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=80') center/cover;">
+      <h1>ATEX for Beginners</h1>
+      <p class="subtitle">A plain-language introduction to explosion protection. Start here if you're new to ATEX, hazardous areas, or Ex equipment.</p>
+    </div>
+
+    <article>
+
+<section>
+<h2>What is ATEX?</h2>
+<p>ATEX is a set of European Union rules that govern how workplaces and equipment handle the risk of explosions. The name comes from the French <em>"ATmosphères EXplosibles"</em> — explosive atmospheres.</p>
+<p>In practical terms, ATEX answers two questions:</p>
+<ol>
+  <li><strong>For employers:</strong> Where in your facility could an explosion happen, and what must you do about it?</li>
+  <li><strong>For equipment manufacturers:</strong> What standards must your product meet before it can be sold for use in those locations?</li>
+</ol>
+<p>If you work in oil & gas, chemical manufacturing, pharmaceuticals, food processing, mining, or any industry that handles flammable gases, vapors, or combustible dusts, ATEX applies to you.</p>
+</section>
+
+<section>
+<h2>Why Do We Need ATEX?</h2>
+<p>Three things are needed for an explosion:</p>
+<ol>
+  <li><strong>Fuel</strong> — A flammable gas, vapor, mist, or combustible dust</li>
+  <li><strong>Air</strong> — Oxygen (present everywhere)</li>
+  <li><strong>An ignition source</strong> — A spark, hot surface, flame, or even static electricity</li>
+</ol>
+<p>This is called the <strong>fire triangle</strong>. If all three come together at the same time and place, you get an explosion.</p>
+<p>Many industrial processes unavoidably create flammable atmospheres. A refinery processes hydrocarbons. A flour mill generates combustible dust. A paint shop uses volatile solvents. You can't eliminate the fuel, and you can't remove the air. So the focus is on controlling ignition sources and managing where flammable atmospheres can form.</p>
+<p>That's what ATEX does.</p>
+</section>
+
+<section>
+<h2>The Two ATEX Directives</h2>
+<p>There are actually two separate ATEX rules:</p>
+
+<h3>1. The Equipment Directive (2014/34/EU)</h3>
+<p>This tells <strong>manufacturers</strong> what equipment must do before it can be sold for use in explosive atmospheres. Equipment must be tested, certified, and marked with a CE label. This is what people usually mean when they say "ATEX certification."</p>
+
+<h3>2. The Workplace Directive (1999/92/EC)</h3>
+<p>This tells <strong>employers</strong> what they must do to protect workers. They must identify where explosive atmospheres can form, classify those areas into zones, select the right equipment for each zone, and document everything in an Explosion Protection Document.</p>
+
+<p>Both directives work together. The manufacturer makes safe equipment; the employer puts it in the right place.</p>
+<p><a href="/pages/atex-directive.html">→ Detailed guide to the ATEX Directive</a></p>
+</section>
+
+<section>
+<h2>Zones: Rating the Risk</h2>
+<p>Not every part of a facility is equally dangerous. Some areas always have flammable gases present; others only rarely. ATEX uses a <strong>zone system</strong> to rate each area by how often an explosive atmosphere exists:</p>
+
+<h3>For Gas, Vapor, or Mist</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zone</th>
+      <th>How Often?</th>
+      <th>Plain Language</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zone 0</strong></td>
+      <td>All the time or most of the time</td>
+      <td>Inside a fuel tank, inside a chemical reactor</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 1</strong></td>
+      <td>Sometimes, during normal operation</td>
+      <td>Near pump seals, near vents, around loading points</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 2</strong></td>
+      <td>Rarely, and only briefly</td>
+      <td>Near pipe flanges, around equipment that might leak if something breaks</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>For Combustible Dust</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zone</th>
+      <th>How Often?</th>
+      <th>Plain Language</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zone 20</strong></td>
+      <td>All the time or most of the time</td>
+      <td>Inside silos, inside milling equipment</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 21</strong></td>
+      <td>Sometimes, during normal operation</td>
+      <td>Around bag-filling stations, open conveyor transfers</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 22</strong></td>
+      <td>Rarely, and only briefly</td>
+      <td>Areas where dust layers could accumulate and be disturbed</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>The higher the zone number, the lower the risk.</strong> Zone 0 is the most dangerous; Zone 2 is the least. Areas outside all zones are called "safe areas" or "non-hazardous."</p>
+<p><a href="/pages/zone-classification.html">→ Full guide to zone classification</a></p>
+</section>
+
+<section>
+<h2>Equipment Categories: Matching Equipment to Zones</h2>
+<p>Each zone requires equipment built to a certain safety level. ATEX uses <strong>categories</strong> to rate equipment:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Equipment Category</th>
+      <th>Can Be Used In</th>
+      <th>Safety Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Category 1</strong></td>
+      <td>Zone 0, 1, or 2 (gas) / Zone 20, 21, or 22 (dust)</td>
+      <td>Very high — safe even if two things go wrong simultaneously</td>
+    </tr>
+    <tr>
+      <td><strong>Category 2</strong></td>
+      <td>Zone 1 or 2 (gas) / Zone 21 or 22 (dust)</td>
+      <td>High — safe even if one thing goes wrong</td>
+    </tr>
+    <tr>
+      <td><strong>Category 3</strong></td>
+      <td>Zone 2 only (gas) / Zone 22 only (dust)</td>
+      <td>Normal — safe under normal operation</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Simple rule:</strong> Higher-category equipment can always be used in lower-risk zones. Category 1 equipment works everywhere. Category 3 equipment only works in Zone 2 (the lowest-risk classified area).</p>
+<p><a href="/pages/epl.html">→ Equipment Protection Levels explained</a></p>
+</section>
+
+<section>
+<h2>Protection Methods: How Equipment is Made Safe</h2>
+<p>There are several different ways to make equipment safe for explosive atmospheres. Each method has a code letter:</p>
+
+<h3>The Most Common Methods</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>How It Works (Simply)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ex d</strong></td>
+      <td>Flameproof (explosion proof)</td>
+      <td>Heavy metal box that can survive an internal explosion and stop the flame from getting out</td>
+    </tr>
+    <tr>
+      <td><strong>Ex i</strong></td>
+      <td>Intrinsically safe</td>
+      <td>Limits electrical power so low that it can't create a spark strong enough to ignite anything</td>
+    </tr>
+    <tr>
+      <td><strong>Ex e</strong></td>
+      <td>Increased safety</td>
+      <td>Prevents sparks and arcs from occurring in the first place (no moving contacts, extra clearances)</td>
+    </tr>
+    <tr>
+      <td><strong>Ex p</strong></td>
+      <td>Pressurization</td>
+      <td>Keeps clean air pressure inside the enclosure so gas can't get in</td>
+    </tr>
+    <tr>
+      <td><strong>Ex m</strong></td>
+      <td>Encapsulation</td>
+      <td>Seals the dangerous parts in solid resin so nothing can escape</td>
+    </tr>
+    <tr>
+      <td><strong>Ex t</strong></td>
+      <td>Protection by enclosure (dust)</td>
+      <td>Dust-tight housing that keeps combustible dust out and limits surface temperature</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Different protection methods suit different applications. Heavy motors use Ex d. Sensitive instruments use Ex i. Terminal boxes use Ex e. Large control panels use Ex p.</p>
+<p><a href="/pages/protection-methods.html">→ All protection methods in detail</a></p>
+<p><a href="/pages/explosion-proof-vs-intrinsically-safe.html">→ Explosion proof vs intrinsically safe comparison</a></p>
+</section>
+
+<section>
+<h2>Reading the Label</h2>
+<p>ATEX equipment has a label (nameplate) with coded information. Here's what a typical one looks like:</p>
+<pre><code>CE 0344
+ ⚠  II 2 G Ex d IIC T4 Gb
+</code></pre>
+<p>Breaking it down:</p>
+<ul>
+  <li><strong>CE 0344</strong> — EU-approved, tested by certification body number 0344</li>
+  <li><strong>⚠</strong> — ATEX symbol (hexagon)</li>
+  <li><strong>II</strong> — Group II (surface industries, not mining)</li>
+  <li><strong>2</strong> — Category 2 (suitable for Zone 1)</li>
+  <li><strong>G</strong> — For gas atmospheres</li>
+  <li><strong>Ex d</strong> — Protection method: flameproof enclosure</li>
+  <li><strong>IIC</strong> — Suitable for all gas groups (including hydrogen)</li>
+  <li><strong>T4</strong> — Maximum surface temperature: 135°C</li>
+  <li><strong>Gb</strong> — Equipment Protection Level: Zone 1 rated</li>
+</ul>
+<p><a href="/pages/how-to-read-atex-nameplate.html">→ Complete nameplate reading guide with more examples</a></p>
+</section>
+
+<section>
+<h2>Gas Groups: Which Gases?</h2>
+<p>Different gases ignite at different energy levels. Equipment is rated for specific gas groups:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Group</th>
+      <th>Common Gases</th>
+      <th>Danger Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>IIA</strong></td>
+      <td>Propane, methane, butane, ammonia</td>
+      <td>Easiest to protect against</td>
+    </tr>
+    <tr>
+      <td><strong>IIB</strong></td>
+      <td>Ethylene, some solvents</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td><strong>IIC</strong></td>
+      <td>Hydrogen, acetylene</td>
+      <td>Most demanding (ignites most easily)</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Key rule:</strong> Equipment rated for IIC can be used with any gas. Equipment rated for IIA can only be used with IIA gases. Always match or exceed the gas group of your environment.</p>
+<p><a href="/pages/gas-groups.html">→ Gas groups explained in detail</a></p>
+</section>
+
+<section>
+<h2>Temperature Classes: How Hot Can It Get?</h2>
+<p>Every flammable gas has an <strong>auto-ignition temperature</strong> — the temperature at which it catches fire without a spark. Equipment must never get hotter than this.</p>
+<table>
+  <thead>
+    <tr>
+      <th>T-Class</th>
+      <th>Maximum Surface Temperature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>T1</td><td>450°C</td></tr>
+    <tr><td>T2</td><td>300°C</td></tr>
+    <tr><td>T3</td><td>200°C</td></tr>
+    <tr><td>T4</td><td>135°C</td></tr>
+    <tr><td>T5</td><td>100°C</td></tr>
+    <tr><td>T6</td><td>85°C</td></tr>
+  </tbody>
+</table>
+<p><strong>Higher T-number = lower temperature = safer for more gases.</strong> T6 equipment is the most restrictive (stays coolest) and works with almost all gases.</p>
+<p><a href="/pages/temperature-classes.html">→ Temperature classes explained</a></p>
+</section>
+
+<section>
+<h2>ATEX vs IECEx: What's the Difference?</h2>
+<p>Two certification systems exist:</p>
+<ul>
+  <li><strong>ATEX</strong> — EU law. Required to sell equipment in Europe. Shows a CE mark.</li>
+  <li><strong>IECEx</strong> — International standard. Voluntary. Accepted in 60+ countries outside the EU.</li>
+</ul>
+<p>Both certify to the same technical standards (IEC 60079 series). The difference is legal: ATEX is mandatory in Europe; IECEx is voluntary but widely recognized globally. Many products carry both certifications.</p>
+<p><a href="/pages/atex-vs-iecex.html">→ Full ATEX vs IECEx comparison</a></p>
+</section>
+
+<section>
+<h2>Who Needs to Know About ATEX?</h2>
+
+<h3>If You're an Employer or Site Manager</h3>
+<p>You must:</p>
+<ul>
+  <li>Identify hazardous areas and classify them into zones</li>
+  <li>Create an Explosion Protection Document (EPD)</li>
+  <li>Ensure only correctly-rated equipment is used in each zone</li>
+  <li>Train your workers</li>
+  <li>Maintain equipment and review classifications when things change</li>
+</ul>
+
+<h3>If You're an Engineer or Designer</h3>
+<p>You must:</p>
+<ul>
+  <li>Select equipment with the correct category, gas group, and temperature class for each zone</li>
+  <li>Design installations per IEC 60079-14 (installation standard)</li>
+  <li>Ensure proper earthing, cable gland selection, and circuit segregation</li>
+</ul>
+
+<h3>If You're a Manufacturer</h3>
+<p>You must:</p>
+<ul>
+  <li>Design equipment to meet the Essential Health and Safety Requirements of Directive 2014/34/EU</li>
+  <li>Have equipment tested and certified by a Notified Body (for Category 1 and most Category 2)</li>
+  <li>Affix CE marking and provide technical documentation</li>
+</ul>
+
+<h3>If You're an Electrician or Technician</h3>
+<p>You must:</p>
+<ul>
+  <li>Install Ex equipment correctly (torque specs, cable glands, circuit documentation)</li>
+  <li>Inspect Ex equipment per IEC 60079-17 (inspection standard)</li>
+  <li>Never modify Ex equipment without authorization</li>
+  <li>Understand the markings on the equipment you work with</li>
+</ul>
+</section>
+
+<section>
+<h2>Common Beginner Questions</h2>
+
+<h3>Is ATEX only for electrical equipment?</h3>
+<p>No. ATEX covers electrical and non-electrical equipment. Mechanical items like pumps, fans, conveyor systems, and hand tools can also generate ignition sources (friction, hot surfaces, mechanical sparks) and need ATEX certification if used in classified areas.</p>
+
+<h3>Does ATEX apply outside Europe?</h3>
+<p>The ATEX directives are EU law, so they apply directly in EU/EEA countries. Other countries have their own regulations (NEC in the US, AS/NZS in Australia, etc.), but many reference the same IEC 60079 standards. IECEx is the international equivalent.</p>
+
+<h3>What happens if I use the wrong equipment?</h3>
+<p>Using non-certified equipment in a classified area is a legal violation. More importantly, it creates a genuine explosion risk. Equipment not rated for the zone may have hot surfaces, sparking contacts, or insufficient enclosure integrity. In the event of an incident, liability falls on the employer and potentially the installer.</p>
+
+<h3>Can I modify ATEX equipment?</h3>
+<p>No. Any modification (drilling holes, adding cable entries, changing components, welding, painting flameproof joints) voids the certification. Modifications must go through the original manufacturer or a certified repair facility.</p>
+
+<h3>How do I get started with ATEX compliance?</h3>
+<ol>
+  <li>Identify all flammable substances in your facility</li>
+  <li>Determine where explosive atmospheres can form</li>
+  <li>Classify those areas into zones (consider hiring a specialist)</li>
+  <li>Check all existing equipment against zone requirements</li>
+  <li>Replace or upgrade non-compliant equipment</li>
+  <li>Create your Explosion Protection Document</li>
+  <li>Train your team</li>
+</ol>
+</section>
+
+<section>
+<h2>Glossary of Key Terms</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>ATEX</strong></td><td>ATmosphères EXplosibles — EU explosion protection framework</td></tr>
+    <tr><td><strong>IECEx</strong></td><td>International certification system for Ex equipment</td></tr>
+    <tr><td><strong>Ex</strong></td><td>Prefix for explosion-protected equipment</td></tr>
+    <tr><td><strong>Zone</strong></td><td>Classified area based on explosive atmosphere frequency</td></tr>
+    <tr><td><strong>Category</strong></td><td>Equipment safety rating (1 = highest, 3 = lowest)</td></tr>
+    <tr><td><strong>EPL</strong></td><td>Equipment Protection Level (Ga/Gb/Gc for gas, Da/Db/Dc for dust)</td></tr>
+    <tr><td><strong>Gas Group</strong></td><td>IIA/IIB/IIC — classifies gases by ignition sensitivity</td></tr>
+    <tr><td><strong>T-Class</strong></td><td>Temperature class (T1–T6) — maximum equipment surface temperature</td></tr>
+    <tr><td><strong>Notified Body</strong></td><td>Organization authorized to test and certify ATEX equipment</td></tr>
+    <tr><td><strong>CE Marking</strong></td><td>Mark indicating EU compliance (required for EU market)</td></tr>
+    <tr><td><strong>EPD</strong></td><td>Explosion Protection Document (workplace safety documentation)</td></tr>
+    <tr><td><strong>LEL</strong></td><td>Lower Explosive Limit — minimum gas concentration for explosion</td></tr>
+    <tr><td><strong>AIT</strong></td><td>Auto-Ignition Temperature — temperature at which gas self-ignites</td></tr>
+    <tr><td><strong>MESG</strong></td><td>Maximum Experimental Safe Gap — determines gas group classification</td></tr>
+    <tr><td><strong>IP Rating</strong></td><td>Ingress Protection — dust and water resistance of enclosures</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Where to Go Next</h2>
+<p>Now that you understand the basics, explore the topics that matter most to your role:</p>
+<ul>
+  <li><a href="/pages/fundamentals.html">Fundamentals</a> — Deeper dive into the fire triangle, explosive atmospheres, and ignition sources</li>
+  <li><a href="/pages/zone-classification.html">Zone Classification</a> — How zones are determined and what each means</li>
+  <li><a href="/pages/protection-methods.html">Protection Methods</a> — All Ex types explained in technical detail</li>
+  <li><a href="/pages/how-to-read-atex-nameplate.html">How to Read ATEX Nameplate</a> — Practical guide to decoding equipment labels</li>
+  <li><a href="/pages/atex-directive.html">ATEX Directive</a> — Full regulatory guide for manufacturers and compliance officers</li>
+  <li><a href="/pages/cheat-sheet.html">Cheat Sheet</a> — Quick reference for zones, categories, T-classes, and gas groups</li>
+</ul>
+</section>
+
+    </article>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>ExKnowledge — Practical explosion protection reference for engineers</p>
+    <p>Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards</p>
+  </div>
+</footer>
+
+</body>
+</html>
