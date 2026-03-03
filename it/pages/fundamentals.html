@@ -19,7 +19,6 @@
   <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-  <!-- hreflang -->
   <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/fundamentals.html">
   <link rel="alternate" hreflang="de" href="https://exknowledge.com/de/pages/fundamentals.html">
   <link rel="alternate" hreflang="no" href="https://exknowledge.com/no/pages/fundamentals.html">
@@ -32,66 +31,19 @@
   <link rel="alternate" hreflang="it" href="https://exknowledge.com/it/pages/fundamentals.html">
   <link rel="alternate" hreflang="ar" href="https://exknowledge.com/ar/pages/fundamentals.html">
   <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/fundamentals.html">
-  <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Fondamenti di protezione dalle esplosioni — ExKnowledge",
-    "description": "The fire triangle, explosive atmospheres, LEL and UEL limits, 13 ignition sources, and the three protection principles. A practical guide for engineers.",
-    "url": "https://exknowledge.com/pages/fundamentals.html",
-    "image": "https://images.unsplash.com/photo-1537053303914-caa41e31185a?w=1000&q=80",
-    "author": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "inLanguage": "it",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://exknowledge.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Fundamentals of Explosion Protection",
-        "item": "https://exknowledge.com/pages/fundamentals.html"
-      }
-    ]
-  }
-]
-  </script>
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav class="nav">
   <div class="container">
     <a href="/it/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
     <ul class="nav-links">
-      <li><a href="/it/">Home</a></li>
-      <li><a href="/it/pages/fundamentals.html" class="active">Fondamenti</a></li>
+      <li><a href="/it/">Casa</a></li>
+      <li><a href="/it/pages/fundamentals.html">Fondamenti</a></li>
       <li><a href="/it/pages/zone-classification.html">Zone</a></li>
       <li><a href="/it/pages/protection-methods.html">Protezione</a></li>
-      <li><a href="/it/pages/standards.html">Norme</a></li>
-      <li><a href="/it/pages/cheat-sheet.html">Guida rapida</a></li>
+      <li><a href="/it/pages/standards.html">Standard</a></li>
+      <li><a href="/it/pages/cheat-sheet.html">Foglio informativo</a></li>
       <li><a href="/it/blog/">Blog</a></li>
     </ul>
     <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
@@ -107,161 +59,246 @@
       <option value="/it/pages/fundamentals.html" selected>🇮🇹 Italiano</option>
       <option value="/ar/pages/fundamentals.html">🇸🇦 العربية</option>
     </select>
-    <div class="burger" aria-label="Menu">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
+    <div class="burger">
+      <div class="line1"></div><div class="line2"></div><div class="line3"></div>
     </div>
   </div>
 </nav>
 
-<div class="content-layout">
+<div class="container content-page">
+  <div class="content-layout">
       <div class="content-body">
-        <img class="content-hero" src="https://images.unsplash.com/photo-1537053303914-caa41e31185a?w=1000&q=80" alt="Fondamenti della protezione contro le esplosioni" loading="lazy" width="820" height="240">
-        <h1>Fondamenti della protezione contro le esplosioni</h1>
+        <img class="content-hero" src="https://images.unsplash.com/photo-1537053303914-caa41e31185a?w=1000&q=80" alt="Fundamentals of Explosion Protection" loading="lazy" width="820" height="240">
+        <h1>Fondamenti di protezione contro le esplosioni</h1>
         <h2 id="the-explosion-triangle">Il triangolo dell'esplosione</h2>
-<p>Tre elementi devono essere presenti contemporaneamente perché si verifichi un'esplosione:</p>
+<p>Perché si verifichi un'esplosione devono essere presenti contemporaneamente tre cose:</p>
 <ol>
-<li><strong>Combustibile</strong> — gas, vapore, nebbia infiammabile o polvere combustibile</li>
-<li><strong>Comburente</strong> — ossigeno nell'aria (≥21% O₂)</li>
-<li><strong>Sorgente di innesco</strong> — energia sufficiente per accendere la miscela</li>
+<li><strong>Carburante</strong> — gas, vapori, nebbie o polveri combustibili</li>
+<li><strong>Ossidante</strong> — ossigeno nell'aria (≥21% O₂)</li>
+<li><strong>Sorgente di accensione</strong> — energia sufficiente per accendere la miscela</li>
 </ol>
-<p>Eliminando anche solo uno dei tre elementi, non succede nulla. Ogni strategia di protezione funziona rimuovendo almeno uno di essi.</p>
+<p>Togli uno qualsiasi dei tre e non succede nulla. Ogni strategia di protezione funziona rimuovendone almeno uno.</p>
 <h2 id="what-is-an-explosive-atmosphere">Cos'è un'atmosfera esplosiva?</h2>
-<p>Una miscela di aria e materiale infiammabile (gas, vapore, nebbia o polvere) che può essere innescata. La concentrazione deve rientrare tra due limiti:</p>
+<p>Una miscela di aria e materiale infiammabile (gas, vapore, nebbia o polvere) che può accendersi. La concentrazione deve essere compresa tra due limiti:</p>
 <ul>
-<li><strong>LEL</strong> (Limite Inferiore di Esplosività) — concentrazione minima per l'innesco</li>
-<li><strong>UEL</strong> (Limite Superiore di Esplosività) — concentrazione massima (miscela troppo ricca per bruciare)</li>
+<li><strong>LEL</strong> (Limite inferiore di esplosività) — concentrazione minima per l'accensione</li>
+<li><strong>UEL</strong> (Limite esplosivo superiore) — concentrazione massima (troppo ricco per bruciare)</li>
 </ul>
-<p>Tra LEL e UEL, la miscela si trova nel suo <strong>campo di esplosività</strong>.</p>
+<p>Tra LEL e UEL la miscela è compresa tra <strong>portata esplosiva</strong>.</p>
 <h3 id="examples-of-lel-uel">Esempi di LEL/UEL</h3>
 <div class="table-wrap"><table><thead><tr>
 <th>Sostanza</th>
-<th>LEL (% vol)</th>
+<th>LIE (% vol)</th>
 <th>UEL (% vol)</th>
 </tr></thead><tbody>
-<tr><td>Metano</td><td>4,4</td><td>17,0</td></tr>
-<tr><td>Propano</td><td>1,7</td><td>10,9</td></tr>
-<tr><td>Idrogeno</td><td>4,0</td><td>77,0</td></tr>
-<tr><td>Acetilene</td><td>2,3</td><td>100,0</td></tr>
-<tr><td>Vapore di etanolo</td><td>3,1</td><td>27,7</td></tr>
+<tr>
+<td>Metano</td>
+<td>4.4</td>
+<td>17.0</td>
+</tr>
+<tr>
+<td>Propano</td>
+<td>1.7</td>
+<td>10.9</td>
+</tr>
+<tr>
+<td>Idrogeno</td>
+<td>4.0</td>
+<td>77.0</td>
+</tr>
+<tr>
+<td>Acetilene</td>
+<td>2.3</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>Vapore di etanolo</td>
+<td>3.1</td>
+<td>27.7</td>
+</tr>
 </tbody></table>
-<p>L'idrogeno spicca chiaramente. Il campo 4–77% è enorme rispetto a tutte le altre sostanze, il che spiega in parte perché ha un proprio gruppo gas (IIC).</p>
+<p>L'idrogeno spicca qui. L’intervallo compreso tra il 4 e il 77% è enorme rispetto a tutto il resto di questo elenco, il che è parte del motivo per cui ottiene il proprio gruppo di gas (IIC).</p>
 <h2 id="types-of-hazardous-substances">Tipi di sostanze pericolose</h2>
 <h3 id="gases-and-vapours">Gas e vapori</h3>
-<p>Gas infiammabili (metano, idrogeno, propano) e vapori di liquidi infiammabili (benzina, solventi, alcoli). Classificati in <a href="gas-groups.html">gruppi gas</a> (IIA, IIB, IIC) in base alle loro proprietà di innesco.</p>
+<p>Gas infiammabili (metano, idrogeno, propano) e vapori provenienti da liquidi infiammabili (benzina, solventi, alcoli). Classificato in <a href="gas-groups.html">gruppi di gas</a> (IIA, IIB, IIC) in base alle loro proprietà di accensione.</p>
 <h3 id="mists">Nebbie</h3>
-<p>Goccioline fini di liquidi infiammabili. L'aspetto insidioso: una nebbia può formare un'atmosfera esplosiva anche quando il liquido è al di sotto del suo punto di infiammabilità. Questo viene trascurato nelle valutazioni dei rischi più spesso di quanto dovrebbe.</p>
+<p>Gocce fini di liquidi infiammabili. La parte difficile: una nebbia può formare un'atmosfera esplosiva anche quando il liquido è al di sotto del punto di infiammabilità. Questo aspetto viene trascurato nelle valutazioni dei pericoli più di quanto dovrebbe.</p>
 <h3 id="dusts">Polveri</h3>
-<p>Polveri combustibili da materiali organici (cereali, zucchero, legno, carbone), metalli (alluminio, magnesio) e materiali sintetici (plastiche, prodotti farmaceutici). Classificate in <a href="gas-groups.html#dust-groups">gruppi polvere</a> (IIIA, IIIB, IIIC).</p>
-<p>Le particelle devono essere abbastanza fini da rimanere in sospensione nell'aria (sotto ~500 μm). Un aspetto spesso dimenticato: uno strato di polvere su una superficie calda può innescarsi a una temperatura inferiore rispetto alla stessa polvere in forma di nube.</p>
-<h2 id="ignition-sources">Sorgenti di innesco</h2>
-<p>IEC/EN 60079-0 ed EN 1127-1 identificano <strong>13 potenziali sorgenti di innesco</strong>:</p>
+<p>Polveri combustibili provenienti da materiali organici (grano, zucchero, legno, carbone), metalli (alluminio, magnesio) e materiali sintetici (plastica, prodotti farmaceutici). Classificato in <a href="gas-groups.html#dust-groups">gruppi di polveri</a> (IIIA, IIIB, IIIC).</p>
+<p>Le particelle devono essere sufficientemente fini da rimanere sospese nell'aria (sotto i 500 μm). Una cosa che la gente dimentica: uno strato di polvere su una superficie calda può accendersi a una temperatura inferiore rispetto alla stessa polvere di una nuvola.</p>
+<h2 id="ignition-sources">Fonti di accensione</h2>
+<p>IEC/EN 60079-0 e EN 1127-1 identificano <strong>13 potenziali fonti di accensione</strong>:</p>
 <ol>
 <li>Superfici calde</li>
 <li>Fiamme e gas caldi</li>
 <li>Scintille generate meccanicamente</li>
-<li>Apparecchiature elettriche (scintille, archi)</li>
-<li>Correnti elettriche vaganti, protezione catodica</li>
+<li>Materiale elettrico (scintille, archi elettrici)</li>
+<li>Correnti elettriche vaganti, protezione catodica dalla corrosione</li>
 <li>Elettricità statica</li>
-<li>Fulmini</li>
+<li>Fulmine</li>
 <li>Campi elettromagnetici (RF, 9 kHz – 300 GHz)</li>
-<li>Radiazioni elettromagnetiche (campo ottico, 300 GHz – 3×10⁶ GHz)</li>
+<li>Radiazione elettromagnetica (campo ottico, 300 GHz – 3×10⁶ GHz)</li>
 <li>Radiazioni ionizzanti</li>
 <li>Ultrasuoni</li>
 <li>Compressione adiabatica, onde d'urto</li>
-<li>Reazioni esotermiche (inclusa l'autoaccensione delle polveri)</li>
+<li>Reazioni esotermiche (compresa l'autoaccensione delle polveri)</li>
 </ol>
-<p>L'obiettivo è impedire che una qualsiasi di queste sorgenti diventi "efficace" — ovvero che possieda energia sufficiente per innescare la specifica miscela presente.</p>
-<h2 id="the-three-principles-of-protection">I tre principi della protezione</h2>
+<p>L'obiettivo è impedire che qualcuno di questi diventi "efficace", ovvero abbia energia sufficiente per accendere la specifica miscela presente.</p>
+<h2 id="the-three-principles-of-protection">I tre principi di protezione</h2>
 <p>La gerarchia è importante:</p>
-<h3 id="1-primary-protection--prevent-formation">1. Protezione primaria — Prevenire la formazione</h3>
-<p>Impedire che l'atmosfera esplosiva si formi:</p>
+<h3 id="1-primary-protection--prevent-formation">1. Protezione primaria – Prevenire la formazione</h3>
+<p>Evitare innanzitutto la formazione di un'atmosfera esplosiva:</p>
 <ul>
 <li>Sostituzione (utilizzare materiali non infiammabili)</li>
-<li>Ventilazione (diluire al di sotto del LEL)</li>
-<li>Inertizzazione (sostituire l'ossigeno con azoto o CO₂)</li>
-<li>Monitoraggio della concentrazione con arresto automatico</li>
+<li>Ventilazione (diluire sotto il LEL)</li>
+<li>Inertizzazione (sostituzione dell'ossigeno con azoto o CO₂)</li>
+<li>Monitoraggio della concentrazione con spegnimento automatico</li>
 </ul>
-<h3 id="2-secondary-protection--prevent-ignition">2. Protezione secondaria — Prevenire l'innesco</h3>
-<p>Supporre che l'atmosfera esplosiva si formerà; prevenire le sorgenti di innesco:</p>
+<h3 id="2-secondary-protection--prevent-ignition">2. Protezione secondaria: prevenzione dell'accensione</h3>
+<p>Supponiamo che si formi l'atmosfera esplosiva; prevenire fonti di ignizione:</p>
 <ul>
 <li>Utilizzare apparecchiature Ex certificate (vedi <a href="protection-methods.html">metodi di protezione</a>)</li>
-<li>Corretta <a href="zone-classification.html">classificazione delle zone</a> per adeguare le apparecchiature al rischio</li>
-<li>Messa a terra e collegamento equipotenziale per prevenire scariche statiche</li>
+<li>Corretto <a href="zone-classification.html">classificazione delle zone</a> abbinare l'attrezzatura al rischio</li>
+<li>Messa a terra e collegamento per evitare scariche statiche</li>
 <li>Permessi e procedure per lavori a caldo</li>
 </ul>
-<h3 id="3-tertiary-protection--limit-effects">3. Protezione terziaria — Limitare gli effetti</h3>
-<p>Supporre che l'innesco avvenga; contenere e mitigare l'esplosione:</p>
+<h3 id="3-tertiary-protection--limit-effects">3. Protezione terziaria: effetti limite</h3>
+<p>Supponiamo che avvenga l'accensione; contenere e mitigare l'esplosione:</p>
 <ul>
 <li>Costruzione resistente alle esplosioni</li>
-<li>Sfogo della pressione di esplosione</li>
-<li>Sistemi di soppressione dell'esplosione</li>
-<li>Isolamento dell'esplosione (arrestafiamma, valvole ad azione rapida)</li>
+<li>Sfiato antiesplosione</li>
+<li>Sistemi di soppressione delle esplosioni</li>
+<li>Isolamento contro le esplosioni (rompifiamma, valvole ad azione rapida)</li>
 </ul>
-<h2 id="key-terminology">Terminologia fondamentale</h2>
+<h2 id="key-terminology">Terminologia chiave</h2>
 <div class="table-wrap"><table><thead><tr>
-<th>Termine</th><th>Definizione</th>
+<th>Termine</th>
+<th>Definizione</th>
 </tr></thead><tbody>
-<tr><td><strong>Ex</strong></td><td>Abbreviazione di protezione contro le esplosioni (dal tedesco "Explosionsschutz")</td></tr>
-<tr><td><strong>ATEX</strong></td><td>Dal francese "ATmosphères EXplosibles" — quadro normativo UE</td></tr>
-<tr><td><strong>IECEx</strong></td><td>Sistema della Commissione Elettrotecnica Internazionale per la certificazione Ex</td></tr>
-<tr><td><strong>Area pericolosa</strong></td><td>Luogo in cui può verificarsi un'atmosfera esplosiva</td></tr>
-<tr><td><strong>Zona</strong></td><td>Classificazione dell'area pericolosa in base alla probabilità di atmosfera esplosiva</td></tr>
-<tr><td><strong>EPL</strong></td><td><a href="EPL.html">Livello di protezione dell'apparecchiatura</a> — Ga, Gb, Gc, Da, Db, Dc</td></tr>
-<tr><td><strong>Tipo di protezione</strong></td><td>Metodo tecnico utilizzato per prevenire l'innesco (Ex d, Ex e, Ex i, ecc.)</td></tr>
-<tr><td><strong>Gruppo gas</strong></td><td>Classificazione dei gas in base alle proprietà di innesco (IIA, IIB, IIC)</td></tr>
-<tr><td><strong>Classe di temperatura</strong></td><td>Temperatura massima superficiale dell'apparecchiatura (T1–T6)</td></tr>
-<tr><td><strong>Organismo notificato</strong></td><td>Organizzazione designata dall'UE autorizzata a certificare apparecchiature ATEX</td></tr>
-<tr><td><strong>ExCB</strong></td><td>Organismo di certificazione IECEx</td></tr>
-<tr><td><strong>ExTL</strong></td><td>Laboratorio di prova IECEx</td></tr>
+<tr>
+<td><strong>Es</strong></td>
+<td>Abbreviazione di protezione contro le esplosioni (da "Explosionsschutz")</td>
+</tr>
+<tr>
+<td><strong>ATEX</strong></td>
+<td>Dal francese "ATmosphères EXplosibles" - quadro normativo dell'UE</td>
+</tr>
+<tr>
+<td><strong>IECEx</strong></td>
+<td>Sistema della Commissione Elettrotecnica Internazionale per la certificazione Ex</td>
+</tr>
+<tr>
+<td><strong>Zona pericolosa</strong></td>
+<td>Luogo in cui può formarsi un'atmosfera esplosiva</td>
+</tr>
+<tr>
+<td><strong>Zona</strong></td>
+<td>Classificazione dell'area pericolosa in base alla probabilità di atmosfera esplosiva</td>
+</tr>
+<tr>
+<td><strong>EPL</strong></td>
+<td><a href="EPL.html">Livello di protezione dell'apparecchiatura</a> — Ga, Gb, Gc, Da, Db, Dc</td>
+</tr>
+<tr>
+<td><strong>Tipo di protezione</strong></td>
+<td>Metodo tecnico utilizzato per prevenire l'accensione (Ex d, Ex e, Ex i, ecc.)</td>
+</tr>
+<tr>
+<td><strong>Gruppo di gas</strong></td>
+<td>Classificazione dei gas in base alle proprietà di accensione (IIA, IIB, IIC)</td>
+</tr>
+<tr>
+<td><strong>Classe di temperatura</strong></td>
+<td>Temperatura superficiale massima dell'apparecchiatura (T1–T6)</td>
+</tr>
+<tr>
+<td><strong>Organismo notificato</strong></td>
+<td>Organizzazione designata dall'UE autorizzata a certificare apparecchiature ATEX</td>
+</tr>
+<tr>
+<td><strong>ExCB</strong></td>
+<td>Organismo di certificazione IECEx</td>
+</tr>
+<tr>
+<td><strong>ExTL</strong></td>
+<td>Laboratorio di prove IECEx</td>
+</tr>
 </tbody></table>
-<h2 id="dust-zone-classification-iec-60079-10-2">Classificazione delle zone per polveri (IEC 60079-10-2)</h2>
+<h2 id="dust-zone-classification-iec-60079-10-2">Classificazione delle zone polverose (IEC 60079-10-2)</h2>
 <div class="table-wrap"><table><thead><tr>
-<th>Zona</th><th>Definizione</th>
+<th>Zona</th>
+<th>Definizione</th>
 </tr></thead><tbody>
-<tr><td>Zona 20</td><td>Nube di polvere esplosiva presente continuamente o frequentemente</td></tr>
-<tr><td>Zona 21</td><td>Nube di polvere esplosiva probabile durante il funzionamento normale</td></tr>
-<tr><td>Zona 22</td><td>Nube di polvere esplosiva improbabile; solo brevemente se si verifica</td></tr>
+<tr>
+<td>Zona 20</td>
+<td>Nube di polvere esplosiva presente continuamente o frequentemente</td>
+</tr>
+<tr>
+<td>Zona 21</td>
+<td>Probabile nube di polvere esplosiva durante il normale funzionamento</td>
+</tr>
+<tr>
+<td>Zona 22</td>
+<td>Nube di polvere esplosiva improbabile; solo brevemente se si verifica</td>
+</tr>
 </tbody></table>
-<p>Per tutti i dettagli sulle zone, inclusa la metodologia e gli esempi, vedi <a href="zone-classification.html">Classificazione delle zone</a>.</p>
-<h2 id="related-files">Argomenti correlati</h2>
+<p>Per i dettagli completi sulla zona, inclusa la metodologia e gli esempi, vedere <a href="zone-classification.html">Classificazione delle zone</a>.</p>
+<h2 id="related-files">File correlati</h2>
 <ul>
-<li><a href="zone-classification.html">Classificazione delle zone</a> — come vengono classificate le aree</li>
-<li><a href="gas-groups.html">Gruppi gas</a> — come vengono categorizzati i combustibili</li>
-<li><a href="temperature-classes.html">Classi di temperatura</a> — temperature massime superficiali</li>
-<li><a href="protection-methods.html">Metodi di protezione</a> — come le apparecchiature vengono rese sicure</li>
+<li><a href="zone-classification.html">Classificazione delle zone</a> — come vengono classificate le zone</li>
+<li><a href="gas-groups.html">Gruppi di gas</a> — come vengono classificati i combustibili</li>
+<li><a href="temperature-classes.html">Classi di temperatura</a> — temperature superficiali massime</li>
+<li><a href="protection-methods.html">Metodi di protezione</a> — come vengono rese sicure le apparecchiature</li>
 <li><a href="standards.html">Norme</a> — il quadro normativo</li>
-<li><a href="cheat-sheet.html">Guida rapida</a> — riferimento rapido</li>
+<li><a href="cheat-sheet.html">Foglio informativo</a> — guida di consultazione rapida</li>
 </ul>
       </div>
-      <aside class="content-sidebar" aria-label="Navigazione">
+      <aside class="content-sidebar" aria-label="Navigation">
         <div class="sidebar-card">
           <h4>Tutti gli argomenti</h4>
             <a href="fundamentals.html" class="current">Fondamenti</a>
   <a href="zone-classification.html" class="">Zone</a>
-  <a href="gas-groups.html" class="">Gruppi gas</a>
-  <a href="temperature-classes.html" class="">Classi di temperatura</a>
-  <a href="protection-methods.html" class="">Metodi di protezione</a>
+  <a href="gas-groups.html" class="">Gruppi di gas</a>
+  <a href="temperature-classes.html" class="">Lezioni temporanee</a>
+  <a href="protection-methods.html" class="">Protezione</a>
   <a href="epl.html" class="">EPL</a>
-  <a href="ex-markings.html" class="">Marcature Ex</a>
+  <a href="ex-markings.html" class="">Marcature</a>
   <a href="standards.html" class="">Norme</a>
   <a href="certification.html" class="">Certificazione</a>
   <a href="installation-inspection.html" class="">Installazione</a>
-  <a href="cheat-sheet.html" class="">Guida rapida</a>
+  <a href="cheat-sheet.html" class="">Foglio informativo</a>
         </div>
       </aside>
     </div>
   </div>
 </section>
-
+  
+  <div class="content-sidebar">
+    <div class="sidebar-card">
+      <h4>Topics</h4>
+        <a href="/it/pages/fundamentals.html" class="current">Fondamenti</a>
+        <a href="/it/pages/zone-classification.html">Classificazione delle zone</a>
+        <a href="/it/pages/gas-groups.html">Gruppi di gas</a>
+        <a href="/it/pages/temperature-classes.html">Classi di temperatura</a>
+        <a href="/it/pages/protection-methods.html">Metodi di protezione</a>
+        <a href="/it/pages/epl.html">EPL</a>
+        <a href="/it/pages/ex-markings.html">Contrassegni Ex</a>
+        <a href="/it/pages/standards.html">Norme</a>
+        <a href="/it/pages/certification.html">Certificazione</a>
+        <a href="/it/pages/installation-inspection.html">Installazione e ispezione</a>
+        <a href="/it/pages/cheat-sheet.html">Foglio informativo</a>
+        <a href="/it/pages/faq.html">Domande frequenti</a>
+    </div>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="container">
-    <p>Creato per ingegneri che lavorano in aree pericolose. Contenuto basato su IEC 60079, ATEX 2014/34/EU e norme IECEx.</p>
-    <p>Non sostituisce documenti normativi ufficiali o consulenza ingegneristica professionale.</p>
+    <p>Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+    <p>Not a substitute for official standards documents or professional engineering advice.</p>
   </div>
 </footer>
+
 <script>
 (function(){
   var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
@@ -271,6 +308,5 @@
   });
 })();
 </script>
-
 </body>
 </html>
