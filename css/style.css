@@ -230,12 +230,13 @@ body { padding-top: 60px; }
 .content-page { padding: 48px 0 80px; }
 
 .content-layout {
-  display: flex; gap: 48px;
+  display: flex; gap: 32px;
   max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+  align-items: flex-start;
 }
 
 .content-body {
-  max-width: 780px; flex: 1; min-width: 0;
+  flex: 1; min-width: 0;
   background: white;
   border: 1px solid var(--border-surface);
   padding: 48px 56px;
