@@ -777,3 +777,69 @@ body { padding-top: 60px; }
   .bento-grid { grid-template-columns: 1fr; }
   .bento-item.bento-wide { grid-column: span 1; }
 }
+
+/* ── Scroll Reveal Animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children inside grids */
+.topic-grid .topic-card,
+.blog-grid .blog-card,
+.bento-grid .bento-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.topic-grid .topic-card.visible,
+.blog-grid .blog-card.visible,
+.bento-grid .bento-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero entrance */
+.hero h1,
+.hero .subtitle,
+.hero .hero-search,
+.hero .hero-cta {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero h1          { animation-delay: 0.1s; }
+.hero .subtitle   { animation-delay: 0.25s; }
+.hero .hero-search{ animation-delay: 0.4s; }
+.hero .hero-cta   { animation-delay: 0.55s; }
+
+@keyframes heroFadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .topic-grid .topic-card,
+  .blog-grid .blog-card,
+  .bento-grid .bento-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero h1,
+  .hero .subtitle,
+  .hero .hero-search,
+  .hero .hero-cta {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}

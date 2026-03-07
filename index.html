@@ -414,5 +414,41 @@ function playVideo(el, id) {
   input.addEventListener('keydown',function(e){if(e.key==='Enter'){const first=results.querySelector('a');if(first)window.location=first.href;}});
 })();
 </script>
+<script>
+(function(){
+  // Sections fade in
+  document.querySelectorAll('.section, .section-title, .section-subtitle').forEach(
+    el => el.classList.add('reveal')
+  );
+
+  // Intersection Observer for sections
+  const sectionObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        sectionObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => sectionObs.observe(el));
+
+  // Staggered card reveal
+  const cardObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        // Stagger based on position in parent
+        const siblings = [...e.target.parentElement.children];
+        const idx = siblings.indexOf(e.target);
+        e.target.style.transitionDelay = (idx * 0.08) + 's';
+        e.target.classList.add('visible');
+        cardObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.topic-card, .blog-card, .bento-item').forEach(
+    el => cardObs.observe(el)
+  );
+})();
+</script>
 </body>
 </html>
