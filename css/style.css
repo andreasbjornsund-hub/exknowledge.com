@@ -719,7 +719,7 @@ body { padding-top: 60px; }
 /* ======================== */
 @media (max-width: 900px) {
   .content-layout { flex-direction: column; gap: 24px; }
-  .content-sidebar { width: 100%; order: -1; }
+  .content-sidebar { width: 100%; order: 1; }
   .sidebar-card { position: static; }
   .bento-grid { grid-template-columns: repeat(2, 1fr); }
   .bento-item.bento-logo { order: 10; grid-column: span 2; padding: 24px; }
