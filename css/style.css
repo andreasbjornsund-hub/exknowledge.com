@@ -824,6 +824,35 @@ body { padding-top: 60px; }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Content page elements */
+.content-body > h2.reveal,
+.content-body > h3.reveal,
+.content-body > table.reveal,
+.content-body > .info-box.reveal,
+.content-body > .warning-box.reveal,
+.content-body > .tip-box.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.content-body > h2.reveal.visible,
+.content-body > h3.reveal.visible,
+.content-body > table.reveal.visible,
+.content-body > .info-box.reveal.visible,
+.content-body > .warning-box.reveal.visible,
+.content-body > .tip-box.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Content hero fade */
+.content-hero h1 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .reveal,
