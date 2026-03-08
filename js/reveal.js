@@ -11,8 +11,18 @@
         sectionObs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.05 });
   document.querySelectorAll('.reveal').forEach(function(el){ sectionObs.observe(el); });
+
+  // Reveal all sections after short delay to prevent search-hiding bug
+  setTimeout(function(){
+    document.querySelectorAll('.reveal').forEach(function(el){
+      el.classList.add('visible');
+    });
+    document.querySelectorAll('.topic-card, .blog-card, .bento-item').forEach(function(el){
+      el.classList.add('visible');
+    });
+  }, 1500);
 
   // Staggered card reveal
   var cardObs = new IntersectionObserver(function(entries){
