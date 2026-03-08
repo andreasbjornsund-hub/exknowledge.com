@@ -882,3 +882,24 @@ body { padding-top: 60px; }
 .burger .ph-bold { font-size: 22px; color: var(--text-bright); }
 .nav-toggle .ph-bold { font-size: 22px; color: var(--text-bright); }
 .hero-search-btn .ph { font-size: 18px; vertical-align: -2px; }
+
+/* ======================== */
+/* Form Confirmation Toast  */
+/* ======================== */
+.form-toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(100px);
+  background: var(--accent); color: var(--bg); padding: 16px 32px;
+  font-family: var(--font-display); font-size: 14px; font-weight: 600;
+  z-index: 9999; box-shadow: var(--shadow-lg);
+  opacity: 0; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.02em;
+}
+.form-toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+.form-toast .ph { margin-right: 8px; font-size: 16px; vertical-align: -2px; }
+
+.cta-form.submitted input[type="email"] {
+  border-color: var(--accent-green); color: var(--accent-green);
+}
+.cta-form.submitted button {
+  background: var(--accent-green); pointer-events: none;
+}
