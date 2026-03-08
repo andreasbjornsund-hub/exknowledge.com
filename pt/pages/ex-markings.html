@@ -220,23 +220,21 @@ CE 0539 ⟨Ex⟩ II 2G Ex db IIC T4 Gb
 </tbody></table></div>
 <h2 id="iecex-marking-structure">Estrutura de Marcação IECEx</h2>
 <p>As marcações IECEx seguem IEC 60079-0:</p>
-<pre><code>
-Ex db IIC T4 Gb
-│ │ │ │ │
-│ │ │ │ └─ EPL
-│ │ │ └──── Classe de temperatura
-│ │ └──────── Grupo de gás
-│ └─────────── Tipo de proteção com sufixo de nível
-└────────────── Ex símbolo
-</code></pre>
+<div class="marking-breakdown" style="font-family:var(--font-mono);font-size:14px;background:var(--bg);border:1px solid var(--border);padding:24px 28px;margin:16px 0 24px;color:var(--text);line-height:2.2;overflow-x:auto;">
+<table style="border-collapse:collapse;border:none;background:transparent;">
+<tr style="border:none;"><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">Ex</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">db</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">IIC</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">T4</td><td style="border:none;padding:0;color:var(--accent);font-weight:700;">Gb</td></tr>
+<tr style="border:none;"><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 0;color:var(--text-muted);font-size:11px;">↓</td></tr>
+<tr style="border:none;"><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Ex symbol</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Protection type</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Gas group</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Temp class</td><td style="border:none;padding:0;color:var(--text);font-size:12px;">EPL</td></tr>
+</table>
+</div>
 <p>As marcações IECEx não incluem a marca CE, número de grupo ou categoria. Em vez disso, o número do certificado IECEx fornece rastreabilidade:</p>
-<pre><code>
-IECEx BAS 12.0034X
-│ │ │
-│ │ └─ Número do certificado + revisão (X = condições específicas)
-│ └───── Código ExCB (BAS = Baseefa, Reino Unido)
-└─────────── Identificador do esquema IECEx
-</code></pre>
+<div class="marking-breakdown" style="font-family:var(--font-mono);font-size:14px;background:var(--bg);border:1px solid var(--border);padding:24px 28px;margin:16px 0 24px;color:var(--text);line-height:2.2;overflow-x:auto;">
+<table style="border-collapse:collapse;border:none;background:transparent;">
+<tr style="border:none;"><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">IECEx</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">BAS</td><td style="border:none;padding:0;color:var(--accent);font-weight:700;">12.0034X</td></tr>
+<tr style="border:none;"><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 0;color:var(--text-muted);font-size:11px;">↓</td></tr>
+<tr style="border:none;"><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">IECEx scheme</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">ExCB code<br><span style="font-size:10px;color:var(--text-muted);">(Baseefa, UK)</span></td><td style="border:none;padding:0;color:var(--text);font-size:12px;">Certificate + revision<br><span style="font-size:10px;color:var(--text-muted);">(X = specific conditions)</span></td></tr>
+</table>
+</div>
 <h2 id="reading-the-protection-type">Lendo o tipo de proteção</h2>
 <p>O tipo de proteção usa o prefixo "Ex" de duas letras seguido pela letra do método e pelo sufixo de nível:</p>
 <div class="table-wrap"><table><thead><tr>
