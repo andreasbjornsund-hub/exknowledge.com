@@ -121,6 +121,8 @@ body { padding-top: 60px; }
   background: var(--bg);
   color: var(--text);
   border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 200;
 }
 .hero .container { max-width: 800px; }
 .hero h1 {
@@ -564,8 +566,9 @@ body { padding-top: 60px; }
 .hero-search-results {
   position: absolute; top: 100%; left: 0; right: 0; margin-top: 4px;
   background: var(--bg-card); border: 1px solid var(--border);
-  max-height: 400px; overflow-y: auto; z-index: 100; display: none;
-  box-shadow: var(--shadow-lg);
+  max-height: 400px; overflow-y: auto; z-index: 500; display: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
 }
 .hero-search-results.open { display: block; }
 .hero-search-result {
