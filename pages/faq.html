@@ -48,7 +48,7 @@
       {"@type": "Question", "name": "What gas groups exist and what do they mean?", "acceptedAnswer": {"@type": "Answer", "text": "Group I is for mining (methane). Group II is for surface industries: IIA (propane — least stringent), IIB (ethylene), IIC (hydrogen/acetylene — most stringent). Group III is for dust: IIIA (flyings), IIIB (non-conductive dust), IIIC (conductive dust — most stringent). Equipment certified for a higher group (e.g., IIC) can be used in lower groups (IIA, IIB)."}},
       {"@type": "Question", "name": "What are temperature classes T1 through T6?", "acceptedAnswer": {"@type": "Answer", "text": "Temperature classes define the maximum surface temperature of equipment: T1 (450°C), T2 (300°C), T3 (200°C), T4 (135°C), T5 (100°C), T6 (85°C). The equipment surface temperature must stay below the auto-ignition temperature of the gas present. T6 is the most restrictive. Most industrial gases are covered by T3 or T4."}},
       {"@type": "Question", "name": "How long does ATEX certification take?", "acceptedAnswer": {"@type": "Answer", "text": "Typical timelines: 3-6 months for straightforward products with established protection methods. 6-12 months for complex products or novel designs. 12-18+ months if design modifications are needed after testing. The process includes: application, design review, prototype testing, test report (ExTR), quality system audit, and certificate issuance."}},
-      {"@type": "Question", "name": "What is an EPL (Equipment Protection Level)?", "acceptedAnswer": {"@type": "Answer", "text": "EPL defines the reliability of protection. For gas: Ga (very high, Zone 0), Gb (high, Zone 1), Gc (enhanced, Zone 2). For dust: Da (Zone 20), Db (Zone 21), Dc (Zone 22). For mining: Ma (remains energized), Mb (de-energized in emergency). EPL bridges zone classification and equipment selection — it tells you which zones the equipment can be installed in."}},
+      {"@type": "Question", "name": "What is an EPL (Equipment Protection Level)?", "acceptedAnswer": {"@type": "Answer", "text": "EPL defines the reliability of protection. For gas: Ga (very high, Zone 0), Gb (high, Zone 1), Gc (enhanced, Zone 2). For dust: Da (Zone 20), Db (Zone 21), Dc (Zone 22). For mining: Ma (remains energized), Mb (de-energized in emergency). EPL bridges zone classification and <a href="/pages/ex-equipment-selection-guide.html">equipment selection</a> — it tells you which zones the equipment can be installed in."}},
       {"@type": "Question", "name": "Can I use Zone 1 equipment in Zone 2?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Equipment certified for a more hazardous zone can always be used in a less hazardous zone. Zone 0 equipment works in Zones 0, 1, and 2. Zone 1 equipment works in Zones 1 and 2. This applies equally to dust zones (20, 21, 22). The reverse is never allowed — Zone 2 equipment cannot be installed in Zone 1."}},
       {"@type": "Question", "name": "What is a Notified Body?", "acceptedAnswer": {"@type": "Answer", "text": "A Notified Body is an organization designated by an EU member state to assess products against ATEX directive requirements. They perform EU Type Examination (Module B), issue certificates, and audit manufacturer quality systems. Examples include DEKRA, PTB, BASEEFA, INERIS, and LCIE. For IECEx, the equivalent is an Examination Body (ExCB)."}}
     ]
@@ -118,14 +118,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="faq-item">
       <h2 id="what-is-atex">What is ATEX?</h2>
-      <p>ATEX refers to two European directives for controlling explosive atmospheres: <strong>Directive 2014/34/EU</strong> covers equipment and protective systems intended for use in explosive atmospheres, while <strong>Directive 1999/92/EC</strong> covers workplace safety requirements. The name derives from the French <em>Atmosphères Explosibles</em>.</p>
+      <p>ATEX refers to two European directives for controlling explosive atmospheres: <strong><a href="/pages/atex-directive.html">Directive 2014/34/EU</a></strong> covers equipment and protective systems intended for use in explosive atmospheres, while <strong>Directive 1999/92/EC</strong> covers workplace safety requirements. The name derives from the French <em>Atmosphères Explosibles</em>.</p>
       <p>Any electrical or mechanical equipment used in classified hazardous areas within the EU must be ATEX certified by a Notified Body. The directive defines Essential Health and Safety Requirements (EHSRs) that products must meet.</p>
       <p><a href="standards.html"><i class="ph ph-book-open"></i> → More about ATEX directives</a></p>
     </div>
 
     <div class="faq-item">
       <h2 id="atex-vs-iecex">What is the difference between ATEX and IECEx?</h2>
-      <p><strong>ATEX</strong> is a European Union regulatory requirement — mandatory for products sold in the EU. <strong>IECEx</strong> is an international voluntary certification scheme managed by the International Electrotechnical Commission (IEC), accepted in over 35 countries.</p>
+      <p><strong>ATEX</strong> is a European Union regulatory requirement — mandatory for products sold in the EU. <strong><a href="/pages/atex-vs-iecex.html">IECEx</a></strong> is an international voluntary certification scheme managed by the International Electrotechnical Commission (IEC), accepted in over 35 countries.</p>
       <p>IECEx certificates can speed up national approvals in participating countries, but they <strong>do not replace ATEX</strong> within the EU. Many manufacturers obtain both. The technical standards (IEC 60079 series) are largely the same for both schemes.</p>
       <p><a href="certification.html"><i class="ph ph-certificate"></i> → More about certification</a></p>
     </div>
@@ -144,7 +144,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="faq-item">
       <h2 id="ex-markings">What do the letters in Ex markings mean?</h2>
-      <p>An Ex marking like <code>Ex db IIC T6 Gb</code> breaks down as:</p>
+      <p>An <a href="/pages/how-to-read-atex-nameplate.html">Ex marking</a> like <code>Ex db IIC T6 Gb</code> breaks down as:</p>
       <ul>
         <li><strong>Ex</strong> — Explosion protected</li>
         <li><strong>db</strong> — Flameproof enclosure, protection level "b"</li>
@@ -157,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="faq-item">
       <h2 id="ex-d-vs-ex-e">What is the difference between Ex d and Ex e?</h2>
-      <p><strong>Ex d (flameproof)</strong> contains an internal explosion inside a robust enclosure. The precision-machined gap (flamepath) cools escaping gases below ignition temperature. Used for switchgear, motors, and lighting in Zone 1.</p>
+      <p><strong><a href="/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (flameproof)</a></strong> contains an internal explosion inside a robust enclosure. The precision-machined gap (flamepath) cools escaping gases below ignition temperature. Used for switchgear, motors, and lighting in Zone 1.</p>
       <p><strong>Ex e (increased safety)</strong> prevents ignition from occurring by eliminating sparks, hot surfaces, and arcs through enhanced design margins on clearances, creepage, and temperature rise. Used for junction boxes, terminals, and luminaires.</p>
       <p><a href="protection-methods.html"><i class="ph ph-shield-check"></i> → All protection methods compared</a></p>
     </div>
