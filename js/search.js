@@ -1,6 +1,7 @@
-/* ExKnowledge site search — builds index from page list, searches in-browser */
+/* ExKnowledge site search — builds index from all pages, searches in-browser */
 (function() {
   const PAGES = [
+    // Core knowledge base
     { url: 'pages/fundamentals.html', title: 'Fundamentals of Explosion Protection' },
     { url: 'pages/zone-classification.html', title: 'Zone Classification' },
     { url: 'pages/gas-groups.html', title: 'Gas Groups & Dust Groups' },
@@ -12,22 +13,61 @@
     { url: 'pages/certification.html', title: 'Certification Process' },
     { url: 'pages/installation-inspection.html', title: 'Installation & Inspection' },
     { url: 'pages/cheat-sheet.html', title: 'Cheat Sheet' },
+    { url: 'pages/faq.html', title: 'FAQ' },
+    // In-depth guides
+    { url: 'pages/atex-vs-iecex.html', title: 'ATEX vs IECEx' },
+    { url: 'pages/explosion-proof-vs-intrinsically-safe.html', title: 'Explosion Proof vs Intrinsically Safe' },
+    { url: 'pages/how-to-read-atex-nameplate.html', title: 'How to Read an ATEX Nameplate' },
+    { url: 'pages/atex-directive.html', title: 'ATEX Directive 2014/34/EU' },
+    { url: 'pages/hazardous-area-classification.html', title: 'Hazardous Area Classification' },
+    { url: 'pages/dust-explosion-protection.html', title: 'Dust Explosion Protection' },
+    { url: 'pages/atex-for-beginners.html', title: 'ATEX for Beginners' },
+    { url: 'pages/compex-certification.html', title: 'CompEx Certification Guide' },
+    { url: 'pages/hydrogen-explosion-protection.html', title: 'Hydrogen Explosion Protection' },
+    { url: 'pages/cable-glands-hazardous-areas.html', title: 'Cable Glands for Hazardous Areas' },
+    { url: 'pages/ex-equipment-selection-guide.html', title: 'Ex Equipment Selection Guide' },
+    // Blog posts
+    { url: 'blog/2026-03.html', title: 'Blog: March 2026' },
+    { url: 'blog/2026-02.html', title: 'Blog: February 2026' },
+    { url: 'blog/2026-01.html', title: 'Blog: January 2026' },
+    { url: 'blog/2025-12.html', title: 'Blog: December 2025' },
+    { url: 'blog/2025-11.html', title: 'Blog: November 2025' },
   ];
 
-  // Resolve base URL (works from / or /pages/)
-  const base = location.pathname.includes('/pages/') ? '../' : '';
+  // Detect language prefix and resolve base URL
+  const pathParts = location.pathname.split('/').filter(Boolean);
+  const langCodes = ['ar','da','de','es','fi','it','nl','no','pt','sv'];
+  let langPrefix = '';
+  let base = '/';
+  if (pathParts.length > 0 && langCodes.includes(pathParts[0])) {
+    langPrefix = pathParts[0] + '/';
+    base = '/' + langPrefix;
+  }
+
   let index = null;
 
   async function buildIndex() {
     if (index) return index;
     index = [];
-    const fetches = PAGES.map(async (p) => {
+
+    // Build list of URLs to index: try language version first, fall back to English
+    const urlsToFetch = PAGES.map(p => {
+      if (langPrefix) {
+        return { ...p, url: langPrefix + p.url, fallbackUrl: p.url };
+      }
+      return { ...p, fallbackUrl: null };
+    });
+
+    const fetches = urlsToFetch.map(async (p) => {
       try {
-        const res = await fetch(base + p.url);
+        let res = await fetch('/' + p.url);
+        if (!res.ok && p.fallbackUrl) {
+          res = await fetch('/' + p.fallbackUrl);
+        }
         if (!res.ok) return;
         const html = await res.text();
         const doc = new DOMParser().parseFromString(html, 'text/html');
-        const body = doc.querySelector('.content-body');
+        const body = doc.querySelector('.content-body') || doc.querySelector('article');
         if (!body) return;
         // Extract sections by h2/h3
         const sections = [];
@@ -45,7 +85,7 @@
         for (const s of sections) {
           index.push({
             page: p.title,
-            url: base + p.url + (s.anchor ? '#' + s.anchor : ''),
+            url: '/' + p.url + (s.anchor ? '#' + s.anchor : ''),
             heading: s.heading,
             text: s.text.replace(/\s+/g, ' ').trim().toLowerCase(),
             display: s.text.replace(/\s+/g, ' ').trim()
@@ -69,9 +109,7 @@
       for (const t of terms) {
         if (haystack.includes(t)) {
           matched++;
-          // Heading match worth more
           if (entry.heading.toLowerCase().includes(t)) score += 10;
-          // Count occurrences in text
           let idx = -1;
           while ((idx = haystack.indexOf(t, idx + 1)) !== -1) score++;
         }
@@ -96,28 +134,24 @@
     let start = Math.max(0, bestPos - 40);
     let snippet = (start > 0 ? '…' : '') + text.slice(start, start + maxLen);
     if (start + maxLen < text.length) snippet += '…';
-    // Bold matching terms
     for (const t of terms) {
       snippet = snippet.replace(new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'), '<mark>$1</mark>');
     }
     return snippet;
   }
 
-  // Inject search UI
   function init() {
-    // Add search toggle to nav
     const navLinks = document.querySelector('.nav-links');
     if (!navLinks) return;
     const li = document.createElement('li');
-    li.innerHTML = '<a href="#" class="search-toggle" aria-label="Search">🔍</a>';
+    li.innerHTML = '<a href="#" class="search-toggle" aria-label="Search"><i class="ph ph-magnifying-glass"></i></a>';
     navLinks.appendChild(li);
 
-    // Search overlay
     const overlay = document.createElement('div');
     overlay.className = 'search-overlay';
     overlay.innerHTML = `
       <div class="search-box">
-        <input type="text" class="search-input" placeholder="Search all topics…" autocomplete="off" autofocus>
+        <input type="text" class="search-input" placeholder="Search all topics and guides…" autocomplete="off" autofocus>
         <button class="search-close" aria-label="Close">✕</button>
         <div class="search-results"></div>
       </div>
@@ -132,13 +166,11 @@
     function open() {
       overlay.classList.add('open');
       input.value = '';
-      resultsDiv.innerHTML = '<p class="search-hint">Start typing to search across all topics…</p>';
+      resultsDiv.innerHTML = '<p class="search-hint">Search across 23 pages and 5 blog posts…</p>';
       setTimeout(() => input.focus(), 100);
       buildIndex();
     }
-    function close() {
-      overlay.classList.remove('open');
-    }
+    function close() { overlay.classList.remove('open'); }
 
     toggle.addEventListener('click', (e) => { e.preventDefault(); open(); });
     closeBtn.addEventListener('click', close);
@@ -155,7 +187,7 @@
         await buildIndex();
         const q = input.value.trim();
         if (q.length < 2) {
-          resultsDiv.innerHTML = '<p class="search-hint">Start typing to search across all topics…</p>';
+          resultsDiv.innerHTML = '<p class="search-hint">Search across 23 pages and 5 blog posts…</p>';
           return;
         }
         const results = search(q);
