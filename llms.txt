@@ -19,12 +19,27 @@ ExKnowledge covers the technical fundamentals of explosion protection (Ex) for h
 - [Cheat Sheet](https://exknowledge.com/pages/cheat-sheet.html): Quick qualification questions, zone-EPL mapping, decision tree, cost/timeline
 - [FAQ](https://exknowledge.com/pages/faq.html): Frequently asked questions about ATEX, IECEx, zone classification, Ex markings, certification
 
+## In-Depth Guides
+
+- [ATEX vs IECEx](https://exknowledge.com/pages/atex-vs-iecex.html): Geographic scope, legal basis, marking differences, mutual recognition
+- [Explosion Proof vs Intrinsically Safe](https://exknowledge.com/pages/explosion-proof-vs-intrinsically-safe.html): Ex d vs Ex i comparison — cost, size, maintenance, zone suitability
+- [How to Read an ATEX Nameplate](https://exknowledge.com/pages/how-to-read-atex-nameplate.html): 6 annotated real-world examples, complete decoding methodology
+- [ATEX Directive 2014/34/EU](https://exknowledge.com/pages/atex-directive.html): Regulatory guide, conformity assessment modules, manufacturer obligations
+- [Hazardous Area Classification](https://exknowledge.com/pages/hazardous-area-classification.html): IEC 60079-10 methodology, source of release, ventilation assessment
+- [Dust Explosion Protection](https://exknowledge.com/pages/dust-explosion-protection.html): Zone 20/21/22, dust characteristics, Kst values, case studies
+- [ATEX for Beginners](https://exknowledge.com/pages/atex-for-beginners.html): Plain-language introduction to explosion protection concepts
+- [CompEx Certification Guide](https://exknowledge.com/pages/compex-certification.html): Training units, exam structure, career benefits, renewal
+- [Hydrogen Explosion Protection](https://exknowledge.com/pages/hydrogen-explosion-protection.html): IIC challenges, TPRD venting, electrolysis facilities, infrastructure scaling
+- [Cable Glands for Hazardous Areas](https://exknowledge.com/pages/cable-glands-hazardous-areas.html): Barrier vs non-barrier, flameproof, selection criteria, installation
+- [Ex Equipment Selection Guide](https://exknowledge.com/pages/ex-equipment-selection-guide.html): Step-by-step methodology from zone classification to procurement
+
 ## Tools
 
 - [Ex Certificate Scanner](https://exknowledge.com/exscanner/): Upload ATEX/IECEx certificate PDFs — extracts equipment marking, gas group, temperature class, protection type. 100% client-side, privacy-first.
 
 ## Blog
 
+- [March 2026](https://exknowledge.com/blog/2026-03.html): Iran conflict oil price impact, IECEx updates, Zone 2 device trends
 - [February 2026](https://exknowledge.com/blog/2026-02.html): Hydrogen incidents, US regulatory rollback, R. Stahl restructuring
 - [January 2026](https://exknowledge.com/blog/2026-01.html): R. Stahl 150 years, hydrogen ATEX gaps, chemical sector outlook
 - [December 2025](https://exknowledge.com/blog/2025-12.html): BARTEC acquisition, SPS 2025, market growth
