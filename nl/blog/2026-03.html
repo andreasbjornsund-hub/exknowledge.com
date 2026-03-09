@@ -66,32 +66,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav class="nav">
   <div class="container">
-    <a href="../" class="nav-logo">Ex<span>Kennis</span></a>
-    <button class="nav-toggle" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
-      <i class="ph-bold ph-list"></i>
-    </button>
+    <a href="/nl/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
     <ul class="nav-links">
-      <li><a href="../"><i class="ph ph-house"></i> Home</a></li>
-      <li><a href="../pages/fundamentals.html"><i class="ph ph-fire"></i> Basisprincipes</a></li>
-      <li><a href="../pages/protection-methods.html"><i class="ph ph-shield-check"></i> Bescherming</a></li>
-      <li><a href="index.html" class="active"><i class="ph ph-newspaper"></i> Blog</a></li>
-    <li class="lang-dropdown">
-        <button class="lang-btn" aria-label="Language">🌐 NL ▾</button>
-        <ul class="lang-menu">
-          <li><a href="/" data-lang="en">🇬🇧 English</a></li>
-          <li><a href="/de/" data-lang="de">🇩🇪 Deutsch</a></li>
-          <li><a href="/no/" data-lang="no">🇳🇴 Norsk</a></li>
-          <li><a href="/da/" data-lang="da">🇩🇰 Dansk</a></li>
-          <li><a href="/sv/" data-lang="sv">🇸🇪 Svenska</a></li>
-          <li><a href="/fi/" data-lang="fi">🇫🇮 Suomi</a></li>
-          <li><a href="/es/" data-lang="es">🇪🇸 Español</a></li>
-          <li><a href="/nl/" data-lang="nl">🇳🇱 Nederlands</a></li>
-          <li><a href="/pt/" data-lang="pt">🇵🇹 Português</a></li>
-          <li><a href="/it/" data-lang="it">🇮🇹 Italiano</a></li>
-          <li><a href="/ar/" data-lang="ar">🇸🇦 العربية</a></li>
-        </ul>
-      </li>
+      <li><a href="/nl/">Thuis</a></li>
+      <li><a href="/nl/pages/fundamentals.html"><i class="ph ph-fire"></i> Grondbeginselen</a></li>
+      <li><a href="/nl/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zones</a></li>
+      <li><a href="/nl/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Bescherming</a></li>
+      <li><a href="/nl/pages/standards.html"><i class="ph ph-book-open"></i> Normen</a></li>
+      <li><a href="/nl/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Spiekbriefje</a></li>
+      <li><a href="/nl/blog/">Bloggen</a></li>
     </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/fundamentals.html">🇬🇧 English</option>
+      <option value="/de/pages/fundamentals.html">🇩🇪 Deutsch</option>
+      <option value="/no/pages/fundamentals.html">🇳🇴 Norsk</option>
+      <option value="/da/pages/fundamentals.html">🇩🇰 Dansk</option>
+      <option value="/sv/pages/fundamentals.html">🇸🇪 Svenska</option>
+      <option value="/fi/pages/fundamentals.html">🇫🇮 Suomi</option>
+      <option value="/es/pages/fundamentals.html">🇪🇸 Español</option>
+      <option value="/nl/pages/fundamentals.html" selected>🇳🇱 Nederlands</option>
+      <option value="/pt/pages/fundamentals.html">🇵🇹 Português</option>
+      <option value="/it/pages/fundamentals.html">🇮🇹 Italiano</option>
+      <option value="/ar/pages/fundamentals.html">🇸🇦 العربية</option>
+    </select>
+    <div class="burger">
+      <div class="line1"></div><div class="line2"></div><div class="line3"></div>
+    </div>
   </div>
 </nav>
 
