@@ -134,20 +134,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Jokaisessa sertifioidussa Ex-laitteessa on merkintä, joka koodaa sen suojaustyypin, kaasu-/pölyryhmän, lämpötilaluokan ja laitteiden suojaustason. Näiden merkintöjen ymmärtäminen on välttämätöntä laitteiden valinnassa, asennuksessa ja tarkastamisessa.</p>
 <h2 id="atex-marking-structure">ATEX-merkintärakenne</h2>
 <p>ATEX-laitteissa on direktiivin 2014/34/EU mukainen strukturoitu merkintä:</p>
-<pre><code>
-CE 0539 ⟨Ex⟩ II 2G Ex db IIC T4 Gb
-│ │ │ │ │ │ │ │ │ │
-│ │ │ │ │ │ │ │ │ └─ EPL (Gb = korkea, vyöhyke 1)
-│ │ │ │ │ │ │ │ └──── Lämpötilaluokka (T4 = max 135°C)
-│ │ │ │ │ │ │ └──────── Kaasuryhmä (IIC = vety/asetyleeni)
-│ │ │ │ │ │ └─────────── Suojaustyyppi (db = tulenkestävä, EPL b)
-│ │ │ │ │ └────────────── Ex-symboli (räjähdyssuojattu)
-│ │ │ │ └─────────────────── Luokka (2G = luokka 2, kaasu)
-│ │ │ └───────────────────── Laiteryhmä (II = pintateollisuus)
-│ │ └───────────────────────────────────
-│ └───────────────────────────────────
-└───────────────────────────────── CE-merkki
-</code></pre>
+<div class="marking-breakdown" style="font-family:var(--font-mono);font-size:14px;background:var(--bg);border:1px solid var(--border);padding:24px 28px;margin:16px 0 24px;color:var(--text);line-height:2.2;overflow-x:auto;">
+<table style="border-collapse:collapse;border:none;background:transparent;">
+<tr style="border:none;"><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">CE</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">0539</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">⟨Ex⟩</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">II</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">2G</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">Ex</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">db</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">IIC</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">T4</td><td style="border:none;padding:0;color:var(--accent);font-weight:700;">Gb</td></tr>
+<tr style="border:none;"><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 0;color:var(--text-muted);font-size:11px;">↓</td></tr>
+<tr style="border:none;vertical-align:top;"><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">CE mark</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Notified Body</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">ATEX hex symbol</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Group II<br><span style="font-size:10px;color:var(--text-muted);">(surface)</span></td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Cat 2, Gas</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Ex symbol</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;"><a href="/pages/explosion-proof-vs-intrinsically-safe.html">Flameproof</a><br><span style="font-size:10px;color:var(--text-muted);">EPL b</span></td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Gas group<br><span style="font-size:10px;color:var(--text-muted);">H₂/C₂H₂</span></td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Temp class<br><span style="font-size:10px;color:var(--text-muted);">max 135°C</span></td><td style="border:none;padding:0;color:var(--text);font-size:12px;">EPL<br><span style="font-size:10px;color:var(--text-muted);">High, Zone 1</span></td></tr>
+</table>
+</div>
 <h3 id="atex-equipment-groups">ATEX-laiteryhmät</h3>
 <div class="table-wrap"><table><thead><tr>
 <th>Ryhmä</th>
