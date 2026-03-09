@@ -259,15 +259,7 @@ Compiled from IEC 60079 series, ATEX 2014/34/EU, and IECEx operational documents
     <p>Not a substitute for official standards documents or professional engineering advice.</p>
   </div>
 </footer>
-<script>
-(function(){
-  var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
-  if(b)b.addEventListener('click',function(e){e.stopPropagation();b.classList.toggle('open');n.classList.toggle('open')});
-  document.addEventListener('click',function(e){
-    if(b&&!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('open');n.classList.remove('open')}
-  });
-})();
-</script>
+<script src="/js/nav.js"></script>
 
 <script src="/js/reveal.js"></script>
 <script src="/js/search.js"></script>

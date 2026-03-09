@@ -462,33 +462,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Não substitui documentos de padrões oficiais ou aconselhamento profissional de engenharia.</p>
   </div>
 </footer>
-<script>
-(function(){
-  var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
-  if(b)b.addEventListener('click',function(e){e.stopPropagation();b.classList.toggle('open');n.classList.toggle('open')});
-  document.addEventListener('click',function(e){
-    if(b&&!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('open');n.classList.remove('open')}
-  });
-})();
-</script>
+<script src="/js/nav.js"></script>
 
 <script src="/js/reveal.js"></script>
-<script>
-(function(){
-  var p=new URLSearchParams(window.location.search);
-  var msg=null;
-  if(p.get("subscribed")==="1") msg="Thanks for subscribing! We’ll keep you updated.";
-  if(p.get("thanks")==="1") msg="Thanks for reaching out! We’ll get back to you soon.";
-  if(msg){
-    var t=document.createElement("div");t.className="form-toast";
-    t.innerHTML="<i class=\"ph ph-check-circle\"></i> "+msg;
-    document.body.appendChild(t);
-    setTimeout(function(){t.classList.add("visible")},100);
-    setTimeout(function(){t.classList.remove("visible");setTimeout(function(){t.remove()},500)},5000);
-    history.replaceState(null,"",window.location.pathname);
-  }
-})();
-</script>
+<script src="/js/toast.js"></script>
 <script src="/js/search.js"></script>
 </body>
 </html>
