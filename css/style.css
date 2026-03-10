@@ -978,3 +978,30 @@ body { padding-top: 60px; }
   .guides-grid { grid-template-columns: 1fr; gap: 8px; }
   .guide-card { padding: 12px 14px; }
 }
+
+/* Sources & References */
+.references {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border, #e2e8f0);
+}
+.references h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted, #64748b);
+}
+.references ol {
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+.references ol li {
+  color: var(--text-muted, #64748b);
+}
+.references ol li a {
+  color: var(--accent, #3b82f6);
+  text-decoration: none;
+}
+.references ol li a:hover {
+  text-decoration: underline;
+}
