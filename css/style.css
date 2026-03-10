@@ -980,8 +980,14 @@ body { padding-top: 60px; }
 }
 
 /* Sources & References */
+.references-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
 .references {
-  margin-top: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border, #e2e8f0);
 }
