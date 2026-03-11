@@ -127,8 +127,11 @@ def fix_translated_page(html, lang, page_name, is_index=False):
             html,
         )
 
-    # Keep technical terms in English (ATEX, IECEx, Zone 1, etc. should survive DeepL mostly)
-    
+    # Fix internal links: /pages/ → /LANG/pages/, /blog/ → /LANG/blog/, "/" → /LANG/
+    html = re.sub(r'href="/pages/', f'href="/{lang}/pages/', html)
+    html = re.sub(r'href="/blog/', f'href="/{lang}/blog/', html)
+    html = re.sub(r'href="/"', f'href="/{lang}/"', html)
+
     return html
 
 
