@@ -9,8 +9,8 @@ import time
 import urllib.request
 import urllib.parse
 
-API_KEY = "7e1c1cd6-8779-4b3e-9813-a2e482e7e5f1:fx"
-API_URL = "https://api-free.deepl.com/v2/translate"
+API_KEY = "61f41621-eeab-40c9-bd52-63574b94309b"
+API_URL = "https://api.deepl.com/v2/translate"
 SITE_DIR = "/tmp/exknowledge"
 
 # Language code mapping (our dirs → DeepL target codes)
@@ -58,7 +58,7 @@ REF_HEADINGS = {
 
 def check_usage():
     req = urllib.request.Request(
-        "https://api-free.deepl.com/v2/usage",
+        "https://api.deepl.com/v2/usage",
         headers={"Authorization": f"DeepL-Auth-Key {API_KEY}"},
     )
     resp = urllib.request.urlopen(req)
