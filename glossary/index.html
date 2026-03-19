@@ -229,12 +229,13 @@
 }
 
 @media (max-width: 768px) {
+  .glossary-controls { position: static; }
   .controls-row { flex-direction: column; align-items: stretch; }
   .search-wrap input { width: 100%; }
   .dl-btn { margin-left: 0; }
   .gtable thead th, .gtable tbody td { padding: 7px 8px; font-size: 12px; }
   .gtable tbody td:first-child { min-width: 130px; }
-  .gtable thead th { top: 105px; }
+  .gtable thead th { position: static; }
 }
 
 @media print {
