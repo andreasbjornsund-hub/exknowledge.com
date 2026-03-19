@@ -514,6 +514,52 @@ if (location.search.includes("downloaded=1")) {
 
 populateSelects();
 render();
+
+// Detect referrer language and update nav links + lang selector
+(function() {
+  const defined = ['ar','da','de','es','fi','it','nl','no','pt','sv'];
+  let lang = '';
+  // Check referrer
+  try {
+    const ref = document.referrer;
+    if (ref) {
+      const path = new URL(ref).pathname;
+      const m = path.match(/^\/(ar|da|de|es|fi|it|nl|no|pt|sv)\//);
+      if (m) lang = m[1];
+    }
+  } catch(e) {}
+  // Also check URL param ?lang=xx
+  const p = new URLSearchParams(location.search).get('lang');
+  if (p && defined.includes(p)) lang = p;
+  // Store in sessionStorage so navigation within glossary remembers
+  if (lang) sessionStorage.setItem('exk_lang', lang);
+  else lang = sessionStorage.getItem('exk_lang') || '';
+
+  if (!lang) return;
+
+  const prefix = '/' + lang;
+  // Update nav links
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === '/glossary/' || href.startsWith('/glossary')) return; // keep glossary as-is
+    if (href && href.startsWith('/') && !href.startsWith(prefix)) {
+      a.setAttribute('href', prefix + href);
+    }
+  });
+  // Update logo link
+  const logo = document.querySelector('.nav-logo');
+  if (logo) logo.setAttribute('href', prefix + '/');
+  // Update lang selector
+  const sel = document.querySelector('.lang-select');
+  if (sel) {
+    for (const opt of sel.options) {
+      if (opt.value === '/' + lang + '/' || opt.value === prefix + '/') {
+        sel.value = opt.value;
+        break;
+      }
+    }
+  }
+})();
 </script>
 </body>
 </html>
