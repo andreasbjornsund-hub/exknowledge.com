@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Ex Terminology Glossary — 77 ATEX & IEC 60079 Terms in 19 Languages | ExKnowledge</title>
+<meta name="description" content="The only comprehensive multilingual ATEX and IEC 60079 glossary online. 77 explosion protection terms translated into 19 languages including German, French, Spanish, Japanese, Chinese, Arabic. Free interactive reference for engineers, translators, and certification bodies.">
+<link rel="canonical" href="https://exknowledge.com/glossary/">
+<meta property="og:title" content="Ex Terminology Glossary — 77 Terms in 19 Languages">
+<meta property="og:description" content="Comprehensive multilingual glossary of ATEX & IEC 60079 explosion protection terminology. Free interactive reference.">
+<meta property="og:url" content="https://exknowledge.com/glossary/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ExKnowledge">
+<meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ex Terminology Glossary — 77 Terms in 19 Languages">
+<meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DefinedTermSet", "name": "Multilingual Ex Terminology Glossary", "description": "77 explosion protection terms from IEC 60079, ATEX, and IECEx standards translated into 19 languages.", "url": "https://exknowledge.com/glossary/", "inLanguage": ["en", "no", "de", "fr", "es", "it", "pt", "nl", "da", "fi", "sv", "pl", "cs", "ru", "ja", "zh", "ko", "tr", "ar"]}</script>
+<style>
+/* Glossary-specific styles — extends site theme */
+.glossary-hero {
+  padding: 80px 0 48px;
+  text-align: left;
+}
+.glossary-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+.glossary-hero .intro {
+  font-size: clamp(15px, 1.5vw, 17px);
+  color: var(--text-dark-muted);
+  max-width: 680px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.badge-row {
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 12px;
+  background: var(--accent-bg);
+  border: 1px solid rgba(212,168,67,0.25);
+  font-family: var(--font-display);
+  font-size: 13px; font-weight: 500;
+  color: var(--accent);
+}
+
+/* Controls bar */
+.glossary-controls {
+  position: sticky; top: 60px; z-index: 100;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-surface);
+  padding: 16px 0;
+}
+.controls-row {
+  display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end;
+}
+.ctrl-group {
+  display: flex; flex-direction: column; gap: 4px;
+}
+.ctrl-group label {
+  font-family: var(--font-display);
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1.2px;
+  color: var(--text-dark-muted);
+}
+.ctrl-group input,
+.ctrl-group select {
+  font-family: var(--font-display);
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-surface);
+  background: #fff;
+  color: var(--text-dark);
+  transition: border-color 0.2s;
+}
+.ctrl-group input:focus,
+.ctrl-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.search-wrap {
+  position: relative;
+}
+.search-wrap input {
+  width: 260px; padding-left: 36px;
+}
+.search-wrap .search-icon {
+  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+  color: var(--text-dark-muted); font-size: 16px; pointer-events: none;
+}
+.search-wrap .kbd {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  font-family: var(--font-mono); font-size: 10px;
+  background: var(--bg-surface-alt); padding: 2px 6px;
+  color: var(--text-dark-muted); pointer-events: none;
+}
+.dl-btn {
+  font-family: var(--font-display);
+  font-size: 13px; font-weight: 600;
+  padding: 8px 20px;
+  background: var(--accent);
+  color: var(--bg);
+  border: none; cursor: pointer;
+  margin-left: auto; white-space: nowrap;
+  transition: background 0.2s;
+}
+.dl-btn:hover { background: var(--accent-light); }
+
+/* Table */
+.glossary-body { padding: 24px 0 80px; }
+.term-count {
+  font-family: var(--font-display);
+  font-size: 13px; color: var(--text-dark-muted);
+  margin-bottom: 12px;
+}
+.gtable {
+  width: 100%; border-collapse: collapse;
+  background: #fff;
+}
+.gtable thead th {
+  font-family: var(--font-display);
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--text-dark-muted);
+  padding: 10px 14px;
+  text-align: left;
+  background: var(--bg-surface-alt);
+  border-bottom: 2px solid var(--border-surface);
+  position: sticky; top: 112px; z-index: 50;
+}
+.gtable tbody td {
+  font-size: 14px; padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top; cursor: pointer;
+  transition: background 0.15s;
+}
+.gtable tbody tr:hover td { background: var(--accent-bg); }
+.gtable tbody td:first-child {
+  font-family: var(--font-display);
+  font-weight: 600; color: var(--text-dark);
+  min-width: 200px;
+}
+.gtable .flag { font-size: 12px; margin-right: 4px; }
+.no-results {
+  padding: 48px 14px; text-align: center;
+  color: var(--text-dark-muted); font-size: 15px;
+}
+
+/* Toast */
+.toast {
+  position: fixed; bottom: 24px; left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--bg-card); color: var(--text-bright);
+  font-family: var(--font-display); font-size: 13px;
+  padding: 8px 20px;
+  opacity: 0; transition: all 0.3s; pointer-events: none; z-index: 1000;
+}
+.toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+/* Gate modal */
+.gate-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(18,17,16,0.7); z-index: 9500;
+  justify-content: center; align-items: center; padding: 16px;
+}
+.gate-overlay.active { display: flex; }
+.gate-modal {
+  background: #fff; max-width: 420px; width: 100%;
+  padding: clamp(24px, 4vw, 36px); position: relative;
+}
+.gate-modal h2 {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 700; color: var(--text-dark);
+  margin-bottom: 6px;
+}
+.gate-modal .subtitle {
+  font-size: 14px; color: var(--text-dark-muted);
+  line-height: 1.6; margin-bottom: 24px;
+}
+.gate-modal .fg {
+  margin-bottom: 14px;
+}
+.gate-modal .fg label {
+  display: block; font-family: var(--font-display);
+  font-size: 12px; font-weight: 500;
+  color: var(--text-dark-muted); margin-bottom: 4px;
+}
+.gate-modal .fg .req { color: var(--accent); }
+.gate-modal input {
+  font-family: var(--font-display);
+  width: 100%; padding: 9px 12px;
+  border: 1px solid var(--border-surface);
+  font-size: 14px; color: var(--text-dark);
+  background: var(--bg-surface);
+}
+.gate-modal input:focus {
+  outline: none; border-color: var(--accent); background: #fff;
+}
+.gate-modal .submit {
+  font-family: var(--font-display);
+  width: 100%; padding: 10px;
+  background: var(--accent); color: var(--bg);
+  border: none; font-size: 15px; font-weight: 600;
+  cursor: pointer; margin-top: 8px;
+  transition: background 0.2s;
+}
+.gate-modal .submit:hover { background: var(--accent-light); }
+.gate-modal .close {
+  position: absolute; top: 12px; right: 14px;
+  background: none; border: none; font-size: 20px;
+  cursor: pointer; color: var(--text-dark-muted);
+}
+.gate-modal .privacy {
+  font-size: 11px; color: var(--text-dark-muted);
+  text-align: center; margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+  .controls-row { flex-direction: column; align-items: stretch; }
+  .search-wrap input { width: 100%; }
+  .dl-btn { margin-left: 0; }
+  .gtable thead th, .gtable tbody td { padding: 7px 8px; font-size: 12px; }
+  .gtable tbody td:first-child { min-width: 130px; }
+  .gtable thead th { top: 105px; }
+}
+
+@media print {
+  .nav, .glossary-controls, .dl-btn, .footer, .kbd { display: none !important; }
+  .glossary-hero { padding: 20px 0; }
+  .gtable thead th { position: static; }
+  .gtable tbody td { font-size: 11px; padding: 4px 6px; }
+  body { padding-top: 0; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <ul class="nav-links">
+      <li><a href="/"><i class="ph ph-house"></i> Home</a></li>
+      <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
+      <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zones</a></li>
+      <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection</a></li>
+      <li><a href="/pages/standards.html"><i class="ph ph-book-open"></i> Standards</a></li>
+      <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Cheat Sheet</a></li>
+      <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/" selected>🇬🇧 English</option>
+      <option value="/de/">🇩🇪 Deutsch</option>
+      <option value="/no/">🇳🇴 Norsk</option>
+      <option value="/da/">🇩🇰 Dansk</option>
+      <option value="/sv/">🇸🇪 Svenska</option>
+      <option value="/fi/">🇫🇮 Suomi</option>
+      <option value="/es/">🇪🇸 Español</option>
+      <option value="/nl/">🇳🇱 Nederlands</option>
+      <option value="/pt/">🇵🇹 Português</option>
+      <option value="/it/">🇮🇹 Italiano</option>
+      <option value="/ar/">🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu"><i class="ph-bold ph-list"></i></div>
+  </div>
+</nav>
+
+<section class="glossary-hero">
+  <div class="container">
+    <h1>Multilingual Ex Terminology Glossary</h1>
+    <p class="intro">
+      The definitive reference for explosion protection terminology across 19 languages.
+      Built from IEC 60079 standards, national standards body publications, and ATEX directive translations
+      — for engineers writing multilingual documentation, translators working on Ex certificates,
+      and certification bodies reviewing international submissions.
+    </p>
+    <div class="badge-row">
+      <span class="badge"><i class="ph ph-list-checks"></i> 77 terms</span>
+      <span class="badge"><i class="ph ph-globe"></i> 19 languages</span>
+      <span class="badge"><i class="ph ph-certificate"></i> IEC 60079 sourced</span>
+    </div>
+  </div>
+</section>
+
+<section class="glossary-controls">
+  <div class="container">
+    <div class="controls-row">
+      <div class="ctrl-group">
+        <label for="search">Search</label>
+        <div class="search-wrap">
+          <i class="ph ph-magnifying-glass search-icon"></i>
+          <input type="text" id="search" placeholder="Filter terms…" autocomplete="off">
+          <span class="kbd">/</span>
+        </div>
+      </div>
+      <div class="ctrl-group">
+        <label for="lang1">Language 1</label>
+        <select id="lang1"></select>
+      </div>
+      <div class="ctrl-group">
+        <label for="lang2">Language 2</label>
+        <select id="lang2"></select>
+      </div>
+      <div class="ctrl-group">
+        <label for="lang3">Language 3</label>
+        <select id="lang3"></select>
+      </div>
+      <button class="dl-btn" id="downloadBtn"><i class="ph ph-download-simple"></i> Download CSV</button>
+    </div>
+  </div>
+</section>
+
+<section class="glossary-body">
+  <div class="container">
+    <p class="term-count" id="termCount"></p>
+    <table class="gtable">
+      <thead><tr id="tHead"></tr></thead>
+      <tbody id="tBody"></tbody>
+    </table>
+    <div class="no-results" id="noResults" style="display:none">No terms match your search.</div>
+  </div>
+</section>
+
+<div class="gate-overlay" id="gateOverlay">
+  <div class="gate-modal">
+    <button class="close" onclick="closeGate()">&times;</button>
+    <h2>Download the full glossary</h2>
+    <p class="subtitle">77 Ex terms across 19 languages as a ready-to-use CSV file.</p>
+    <form id="gateForm" action="https://formsubmit.co/apbopenclaw@gmail.com" method="POST" onsubmit="return handleGate(event)">
+      <input type="hidden" name="_subject" value="ExKnowledge Glossary Download">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://exknowledge.com/glossary/?downloaded=1">
+      <div class="fg">
+        <label>Name <span class="req">*</span></label>
+        <input type="text" name="name" id="gateName" required>
+      </div>
+      <div class="fg">
+        <label>Email <span class="req">*</span></label>
+        <input type="email" name="email" id="gateEmail" required>
+      </div>
+      <div class="fg">
+        <label>Company</label>
+        <input type="text" name="company" id="gateCompany">
+      </div>
+      <div class="fg">
+        <label>Role</label>
+        <input type="text" name="role" id="gateRole" placeholder="e.g. Engineer, Translator, Certification">
+      </div>
+      <button type="submit" class="submit">Download CSV</button>
+    </form>
+    <p class="privacy">No spam, ever. Your data stays private.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast">Copied to clipboard</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+    <p>Not a substitute for official standards documents or professional engineering advice.</p>
+  </div>
+</footer>
+
+<script src="/js/nav.js"></script>
+<script>
+const TERMS = {"ambient temperature": {"en": "Ambient temperature", "no": "Omgivelsestemperatur", "de": "Umgebungstemperatur", "fr": "température ambiante", "es": "temperatura ambiente", "it": "temperatura ambiente", "pt": "temperatura ambiente", "nl": "omgevingstemperatuur", "da": "omgivelsestemperatur", "fi": "ympäristön lämpötila", "sv": "omgivningstemperatur", "pl": "temperatura otoczenia", "cs": "teplota okolí", "ru": "температура окружающей среды", "ja": "周囲温度", "zh": "环境温度", "ko": "주위온도", "tr": "ortam sıcaklığı", "ar": "درجة الحرارة المحيطة"}, "area classification": {"en": "area classification", "ar": "تصنيف المناطق", "cs": "klasifikace nebezpečných prostorů", "da": "zoneklassifikation", "de": "Zoneneinteilung", "es": "clasificación de emplazamientos", "fi": "tilaluokitus", "fr": "classement de zone / zonage ATEX", "it": "classificazione dei luoghi", "ja": "危険区域分類", "ko": "폭발위험장소 구분", "nl": "zone-indeling", "pl": "klasyfikacja stref zagrożenia wybuchem", "pt": "classificação de áreas", "ru": "классификация взрывоопасных зон", "sv": "zonklassificering", "tr": "bölge sınıflandırması", "zh": "场所分类", "no": "områdeklassifisering / soneklassifisering"}, "atex certification": {"en": "ATEX certification", "ar": "شهادة ATEX", "cs": "ATEX certifikace", "da": "ATEX-certificering", "de": "ATEX-Zertifizierung", "es": "certificación ATEX", "fi": "ATEX-sertifiointi", "fr": "certification ATEX", "it": "certificazione ATEX", "ja": "ATEX認証", "ko": "ATEX 인증", "nl": "ATEX-certificering", "pl": "certyfikacja ATEX", "pt": "certificação ATEX", "ru": "сертификация по ТР ТС 012/2011", "sv": "ATEX-certifiering", "tr": "ATEX sertifikası", "zh": "防爆认证", "no": "ATEX-sertifisering"}, "atex directive": {"en": "ATEX directive", "ar": "توجيهات ATEX", "cs": "směrnice ATEX", "da": "ATEX-direktivet", "de": "ATEX-Richtlinie", "es": "directiva ATEX", "fi": "ATEX-direktiivi", "fr": "directive ATEX", "it": "direttiva ATEX", "ja": "ATEX指令", "ko": "ATEX 지침", "nl": "ATEX-richtlijn", "pl": "dyrektywa ATEX", "pt": "Diretiva ATEX", "ru": "директива ATEX / ТР ТС 012/2011", "sv": "ATEX-direktivet", "tr": "ATEX yönetmeliği", "zh": "ATEX防爆指令", "no": "ATEX-direktivet"}, "auto-ignition temperature": {"en": "auto-ignition temperature", "de": "Zündtemperatur", "fr": "température d'auto-inflammation", "nl": "zelfontbrandingstemperatuur", "es": "temperatura de autoignición", "it": "temperatura di autoaccensione", "pt": "temperatura de autoignição", "no": "selvantennelsestemperatur", "fi": "itsesyttymislämpötila", "sv": "självantändningstemperatur", "ja": "発火温度", "zh": "自燃温度", "ko": "자연발화온도", "tr": "kendiliğinden tutuşma sıcaklığı", "ar": "درجة حرارة الاشتعال الذاتي", "pl": "temperatura samozapłonu", "cs": "teplota samovznícení", "ru": "температура самовоспламенения", "da": "selvantændelsestemperatur"}, "cable glands": {"en": "cable glands", "ar": "نقاط توصيل الكابل", "cs": "kabelové vývodky", "da": "kabelforskruninger", "de": "Kabelverschraubungen", "es": "prensaestopas", "fi": "kaapeliläpiviennit", "fr": "presse-étoupes", "it": "pressacavi", "ja": "ケーブルグランド", "ko": "케이블글랜드", "nl": "kabelwartels", "pl": "dławiki kablowe / dławnice kablowe", "pt": "prensa-cabos", "ru": "кабельные вводы", "sv": "kabelgenomföringar", "tr": "kablo rakorları", "zh": "电缆引入装置", "no": "Kabelgjennomføringer"}, "category 1 (atex)": {"en": "category 1 (ATEX)", "de": "Kategorie 1", "fr": "catégorie 1", "nl": "categorie 1", "es": "categoría 1", "it": "categoria 1", "pt": "categoria 1", "no": "kategori 1", "fi": "laiteluokka 1", "sv": "utrustningskategori 1", "ja": "カテゴリー1", "zh": "1类（ATEX）", "ko": "카테고리 1", "tr": "Kategori 1", "ar": "الفئة 1", "pl": "kategoria 1", "cs": "kategorie 1", "ru": "категория 1", "da": "kategori 1"}, "category 2 (atex)": {"en": "category 2 (ATEX)", "de": "Kategorie 2", "fr": "catégorie 2", "nl": "categorie 2", "es": "categoría 2", "it": "categoria 2", "pt": "categoria 2", "no": "kategori 2", "fi": "laiteluokka 2", "sv": "utrustningskategori 2", "ja": "カテゴリー2", "zh": "2类（ATEX）", "ko": "카테고리 2", "tr": "Kategori 2", "ar": "الفئة 2", "pl": "kategoria 2", "cs": "kategorie 2", "ru": "категория 2", "da": "kategori 2"}, "category 3 (atex)": {"en": "category 3 (ATEX)", "de": "Kategorie 3", "fr": "catégorie 3", "nl": "categorie 3", "es": "categoría 3", "it": "categoria 3", "pt": "categoria 3", "no": "kategori 3", "fi": "laiteluokka 3", "sv": "utrustningskategori 3", "ja": "カテゴリー3", "zh": "3类（ATEX）", "ko": "카테고리 3", "tr": "Kategori 3", "ar": "الفئة 3", "pl": "kategoria 3", "cs": "kategorie 3", "ru": "категория 3", "da": "kategori 3"}, "certificate of conformity": {"en": "certificate of conformity", "de": "Konformitätsbescheinigung", "fr": "certificat de conformité", "nl": "certificaat van overeenstemming", "es": "certificado de conformidad", "it": "certificato di conformità", "pt": "certificado de conformidade", "no": "samsvarssertifikat", "fi": "vaatimustenmukaisuustodistus", "sv": "intyg om överensstämmelse", "ja": "適合証明書", "zh": "防爆合格证", "ko": "적합 인증서", "tr": "uygunluk belgesi", "ar": "شهادة المطابقة", "pl": "certyfikat zgodności", "cs": "certifikát shody", "ru": "сертификат соответствия", "da": "overensstemmelseserklæring"}, "clearances and creepage distances": {"en": "clearances and creepage distances", "ar": "مسافات العزل ومسارات الزحف", "cs": "vzdušné vzdálenosti a povrchové cesty", "da": "luft- og krybeafstande", "de": "Luft- und Kriechstrecken", "es": "distancias de aislamiento y líneas de fuga", "fi": "ilma- ja ryömintävälit", "fr": "distances d'isolement et lignes de fuite", "it": "distanze in aria e superficiali", "ja": "空間距離と沿面距離", "ko": "공간거리 및 연면거리", "nl": "luchtafstanden en kruipafstanden", "pl": "odstępy izolacyjne i drogi upływu", "pt": "distância de isolação e distância de escoamento", "ru": "воздушные зазоры и расстояния утечки", "sv": "luft- och krypavstånd", "tr": "hava aralıkları ve yüzey kaçak yolu mesafeleri", "zh": "电气间隙和爬电距离", "no": "Luftklaringer og \"Creepage distances\""}, "close inspection": {"en": "Close inspection", "no": "Nærkontroll", "de": "Nahinspektion", "fr": "inspection de près", "es": "inspección minuciosa", "it": "ispezione ravvicinata", "pt": "inspeção detida", "nl": "nauwkeurige inspectie", "da": "nær kontrol", "fi": "lähitarkastus", "sv": "närkontroll", "pl": "kontrola z bliska", "cs": "kontrola zblízka", "ru": "осмотр с близкого расстояния", "ja": "近接検査", "zh": "近距离检查", "ko": "근접검사", "tr": "yakın muayene", "ar": "الفحص القريب"}, "competent person": {"en": "competent person", "de": "befähigte Person", "fr": "personne compétente", "nl": "deskundig persoon", "es": "persona competente", "it": "persona competente", "pt": "pessoa competente", "no": "sakkyndig person", "fi": "pätevä henkilö", "sv": "sakkunnig person", "ja": "有資格者", "zh": "有能力的人员", "ko": "유자격자", "tr": "yetkin kişi", "ar": "الشخص المؤهل", "pl": "osoba kompetentna", "cs": "odborně způsobilá osoba", "ru": "компетентное лицо", "da": "sagkyndig person"}, "conformity assessment": {"en": "conformity assessment", "de": "Konformitätsbewertung", "fr": "évaluation de la conformité", "nl": "conformiteitsbeoordeling", "es": "evaluación de la conformidad", "it": "valutazione della conformità", "pt": "avaliação da conformidade", "no": "samsvarsvurdering", "fi": "vaatimustenmukaisuuden arviointi", "sv": "bedömning av överensstämmelse", "ja": "適合性評価", "zh": "合格评定", "ko": "적합성 평가", "tr": "uygunluk değerlendirmesi", "ar": "تقييم المطابقة", "pl": "ocena zgodności", "cs": "posouzení shody", "ru": "оценка соответствия", "da": "overensstemmelsesvurdering"}, "detailed inspection": {"en": "Detailed inspection", "no": "Detaljkontroll", "de": "Detailinspektion", "fr": "inspection détaillée", "es": "inspección detallada", "it": "ispezione dettagliata", "pt": "inspeção detalhada", "nl": "gedetailleerde inspectie", "da": "detaljeret kontrol", "fi": "yksityiskohtainen tarkastus", "sv": "detaljkontroll", "pl": "kontrola szczegółowa", "cs": "podrobná kontrola", "ru": "детальная инспекция", "ja": "詳細検査", "zh": "详细检查", "ko": "정밀검사", "tr": "ayrıntılı muayene", "ar": "الفحص التفصيلي"}, "dust group": {"en": "dust group", "ar": "مجموعة الغبار", "cs": "skupina prachů", "da": "støvgruppe", "de": "Staubgruppe", "es": "grupo de polvo", "fi": "pölyryhmä", "fr": "groupe de poussières", "it": "gruppo di polveri", "ja": "粉じんグループ", "ko": "분진 그룹", "nl": "stofgroep", "pl": "grupa pyłów", "pt": "grupo de poeira", "ru": "группа пыли", "sv": "dammgrupp", "tr": "toz grubu", "zh": "粉尘组别", "no": "støvgruppe"}, "dust ignition protection by enclosure (ex t)": {"en": "dust ignition protection by enclosure (Ex t)", "de": "Schutz durch Gehäuse", "fr": "protection contre l'inflammation des poussières par enveloppe", "nl": "bescherming door behuizing", "es": "protección contra la ignición de polvo por envolvente (Ex t)", "it": "protezione contro l'accensione delle polveri per custodia (Ex t)", "pt": "proteção contra ignição de poeira por invólucro (Ex t)", "no": "støvantennelsesbeskyttelse ved kapsling (Ex t)", "fi": "pölyn syttymiseltä suojaus kotelolla", "sv": "skydd mot dammantändning genom hölje", "ja": "容器による粉じん点火防止", "zh": "防粉尘点燃外壳", "ko": "분진방폭구조", "tr": "mahfaza ile toz tutuşmasına karşı koruma", "ar": "الحماية من اشتعال الغبار بواسطة الحاوية", "pl": "zabezpieczenie przed zapłonem pyłu za pomocą obudowy", "cs": "ochrana závěrem proti vznícení prachu", "ru": "защита от воспламенения пыли оболочкой", "da": "beskyttelse af udstyr mod støveksplosion med kapsling"}, "earthing / grounding": {"en": "earthing / grounding", "de": "Erdung", "fr": "mise à la terre", "nl": "aarding", "es": "puesta a tierra", "it": "messa a terra", "pt": "aterramento", "no": "jording", "fi": "maadoitus", "sv": "jordning", "ja": "接地", "zh": "接地", "ko": "접지", "tr": "topraklama", "ar": "التأريض", "pl": "uziemienie", "cs": "uzemnění", "ru": "заземление", "da": "jording"}, "encapsulation": {"en": "encapsulation", "ar": "مُغلّفة", "cs": "zalití zalévací hmotou / hermetizovaný závěr", "da": "indkapsling", "de": "Vergusskapselung", "es": "encapsulado", "fi": "massavalurakenne", "fr": "encapsulage", "it": "incapsulamento", "ja": "樹脂充塡防爆構造", "ko": "몰드 방폭구조", "nl": "inkapseling", "pl": "hermetyzacja", "pt": "encapsulamento", "ru": "герметизация компаундом", "sv": "fyllningskapsling", "tr": "kapsülleme", "zh": "浇封型", "no": "Innkapsling"}, "enclosure": {"en": "Enclosure", "no": "Kapsling", "de": "Gehäuse", "fr": "enveloppe", "es": "envolvente", "it": "custodia", "pt": "invólucro", "nl": "omhulsel", "da": "kapsling", "fi": "kotelo", "sv": "hölje", "pl": "obudowa", "cs": "kryt", "ru": "оболочка", "ja": "容器", "zh": "外壳", "ko": "용기", "tr": "muhafaza", "ar": "الحاوية"}, "equipment protection level": {"en": "equipment protection level", "ar": "مستوى حماية المعدات (EPL)", "cs": "úroveň ochrany zařízení (EPL)", "da": "udstyrets beskyttelsesniveau (EPL)", "de": "Geräteschutzniveau (EPL)", "es": "nivel de protección del equipo (EPL)", "fi": "räjähdyssuojaustaso (EPL)", "fr": "Niveau de Protection de l'Équipement (EPL)", "it": "livello di protezione delle apparecchiature (EPL)", "ja": "機器保護レベル (EPL)", "ko": "기기보호등급 (EPL)", "nl": "apparaatbeschermingsniveau (EPL)", "pl": "poziom zabezpieczenia urządzenia (EPL)", "pt": "nível de proteção de equipamento (EPL)", "ru": "уровень взрывозащиты оборудования (EPL)", "sv": "utrustningsskyddsnivå (EPL)", "tr": "ekipman koruma seviyesi (EKS/EPL)", "zh": "设备保护级别 (EPL)", "no": "EPL"}, "equipotential bonding": {"en": "equipotential bonding", "de": "Potentialausgleich", "fr": "liaison équipotentielle", "nl": "potentiaalvereffening", "es": "conexión equipotencial", "it": "collegamento equipotenziale", "pt": "equipotencialização", "no": "potensialutjevning", "fi": "potentiaalintasaus", "sv": "potentialutjämning", "ja": "等電位ボンディング", "zh": "等电位联结", "ko": "등전위 본딩", "tr": "eşpotansiyel bağlama", "ar": "الربط متساوي الجهد", "pl": "połączenie wyrównawcze", "cs": "ekvipotenciální pospojování", "ru": "уравнивание потенциалов", "da": "potentialudligning"}, "ex equipment": {"en": "Ex equipment", "ar": "معدات مقاومة للانفجار", "cs": "nevýbušné zařízení / zařízení do výbušného prostředí", "da": "Ex-udstyr", "de": "Ex-Gerät / Ex-Betriebsmittel", "es": "equipo ATEX / equipo Ex", "fi": "Ex-laite", "fr": "matériel ATEX / équipement Ex", "it": "apparecchiature Ex / costruzioni elettriche Ex", "ja": "防爆機器 / 防爆電気機器", "ko": "방폭기기", "nl": "explosieveilig materieel", "pl": "urządzenia w wykonaniu przeciwwybuchowym", "pt": "equipamento Ex", "ru": "взрывозащищённое оборудование", "sv": "EX-utrustning", "tr": "exproof teçhizat", "zh": "防爆电气设备", "no": "Ex-utstyr"}, "ex marking": {"en": "Ex marking", "de": "Ex-Kennzeichnung", "fr": "marquage Ex", "nl": "Ex-markering", "es": "marcado Ex", "it": "marcatura Ex", "pt": "marcação Ex", "no": "Ex-merking", "fi": "Ex-merkintä", "sv": "Ex-märkning", "ja": "防爆表示", "zh": "防爆标志", "ko": "Ex 마킹 / 방폭 마킹", "tr": "Ex işaretleme", "ar": "علامة Ex", "pl": "oznakowanie Ex", "cs": "označení Ex", "ru": "маркировка Ex", "da": "Ex-mærkning"}, "explosion protected equipment": {"en": "Explosion protected equipment", "no": "Ex-utstyr", "de": "explosionsgeschütztes Betriebsmittel", "fr": "matériel protégé contre les explosions", "es": "equipo protegido contra explosiones", "it": "apparecchiatura protetta contro le esplosioni", "pt": "equipamento com proteção contra explosão", "nl": "explosieveilig materieel", "da": "eksplosionsbeskyttet udstyr", "fi": "räjähdyssuojattu laite", "sv": "explosionsskyddad utrustning", "pl": "urządzenie w wykonaniu przeciwwybuchowym", "cs": "zařízení chráněné proti výbuchu", "ru": "взрывозащищённое оборудование", "ja": "防爆機器", "zh": "防爆设备", "ko": "방폭기기", "tr": "patlamadan korumalı ekipman", "ar": "معدات مقاومة للانفجار"}, "explosion-proof": {"en": "explosion-proof", "de": "explosionsgeschützt", "fr": "antidéflagrant", "nl": "explosieveilig", "es": "antideflagrante / a prueba de explosiones", "it": "antideflagrante / a prova di esplosione", "pt": "à prova de explosão", "no": "eksplosjonssikker", "fi": "räjähdyssuojattu", "sv": "explosionsskyddad", "ja": "防爆", "zh": "防爆", "ko": "방폭", "tr": "patlamaya karşı korumalı / exproof", "ar": "مقاوم للانفجار", "pl": "budowa przeciwwybuchowa", "cs": "nevýbušné provedení", "ru": "взрывозащищённый", "da": "eksplosionssikker"}, "explosive atmosphere": {"en": "explosive atmosphere", "ar": "الأجواء المتفجرة / الأجواء القابلة للانفجار", "cs": "výbušná atmosféra", "da": "eksplosiv atmosfære", "de": "explosionsfähige Atmosphäre", "es": "atmósfera explosiva", "fi": "räjähdyskelpoinen ilmaseos", "fr": "atmosphère explosive / atmosphère explosible", "it": "atmosfera esplosiva", "ja": "爆発性雰囲気", "ko": "폭발성 분위기", "nl": "explosieve atmosfeer", "pl": "atmosfera wybuchowa", "pt": "atmosfera explosiva", "ru": "взрывоопасная среда", "sv": "explosiv atmosfär", "tr": "patlayıcı ortam", "zh": "爆炸性环境", "no": "eksplosiv atmosfære"}, "flameproof enclosure": {"en": "flameproof enclosure", "ar": "مقاومة اللهب", "cs": "pevný závěr", "da": "tryksikker kapsling", "de": "druckfeste Kapselung", "es": "envolvente antideflagrante", "fi": "räjähdyspaineen kestävä rakenne", "fr": "enveloppe antidéflagrante", "it": "custodia a prova di esplosione / custodia antideflagrante", "ja": "耐圧防爆構造", "ko": "내압 방폭구조", "nl": "drukvast omhulsel", "pl": "osłona ognioszczelna", "pt": "invólucro à prova de explosão", "ru": "взрывонепроницаемая оболочка", "sv": "trycksäker kapsling", "tr": "alev sızdırmaz muhafaza", "zh": "隔爆外壳 / 隔爆型", "no": "Flammesikker kapsling"}, "flammable limits": {"en": "flammable limits", "ar": "حدود الانفجار", "cs": "meze výbušnosti", "da": "eksplosionsgrænser", "de": "Explosionsgrenzen", "es": "límites de explosividad", "fi": "räjähdysrajat", "fr": "limites d'explosivité", "it": "limiti di esplosività", "ja": "爆発限界", "ko": "폭발한계", "nl": "explosiegrenzen", "pl": "granice wybuchowości", "pt": "limites de explosividade", "ru": "концентрационные пределы воспламенения", "sv": "brännbarhetsgränser", "tr": "patlama sınırları", "zh": "爆炸极限", "no": "Eksplosjonsgrenser"}, "flash point": {"en": "flash point", "de": "Flammpunkt", "fr": "point d'éclair", "nl": "vlampunt", "es": "punto de inflamación", "it": "punto di infiammabilità", "pt": "ponto de fulgor", "no": "flammepunkt", "fi": "leimahduspiste", "sv": "flampunkt", "ja": "引火点", "zh": "闪点", "ko": "인화점", "tr": "parlama noktası", "ar": "نقطة الوميض", "pl": "temperatura zapłonu", "cs": "bod vzplanutí", "ru": "температура вспышки", "da": "flammepunkt"}, "galvanic isolator": {"en": "galvanic isolator", "de": "galvanischer Trenner", "fr": "isolateur galvanique", "nl": "galvanische scheider", "es": "aislador galvánico", "it": "isolatore galvanico", "pt": "isolador galvânico", "no": "galvanisk skiller", "fi": "galvaaninen erotin", "sv": "galvanisk isolator", "ja": "ガルバニックアイソレータ", "zh": "隔离式安全栅", "ko": "갈바닉 아이솔레이터", "tr": "galvanik izolatör", "ar": "عازل جلفاني", "pl": "separator galwaniczny", "cs": "galvanický oddělovač", "ru": "гальванический разделитель", "da": "galvanisk adskiller"}, "gas group": {"en": "gas group", "ar": "مجموعة الغاز", "cs": "skupina výbušnosti / skupina plynů", "da": "gasgruppe", "de": "Explosionsgruppe", "es": "grupo de gas", "fi": "kaasuryhmä", "fr": "groupe de gaz", "it": "gruppo di gas", "ja": "ガスグループ / 爆発等級", "ko": "가스 그룹", "nl": "gasgroep / explosiegroep", "pl": "grupa wybuchowości", "pt": "grupo de gás", "ru": "подгруппа газа", "sv": "gasgrupp / explosionsgrupp", "tr": "gaz grubu", "zh": "气体组别", "no": "gassgruppe"}, "grade of release": {"en": "Grade of release", "no": "Utslippsgrad", "de": "Freisetzungsgrad", "fr": "degré de dégagement", "es": "grado de escape", "it": "grado di emissione", "pt": "grau de liberação", "nl": "mate van afgifte", "da": "udslipsgrad", "fi": "päästöaste", "sv": "utsläppsgrad", "pl": "stopień emisji", "cs": "stupeň úniku", "ru": "степень утечки", "ja": "放出等級", "zh": "释放等级", "ko": "누출등급", "tr": "boşalma derecesi", "ar": "درجة التسريب"}, "group i (mining)": {"en": "Group I (mining)", "de": "Gruppe I (Bergbau)", "fr": "Groupe I (mines)", "nl": "Groep I (mijnbouw)", "es": "Grupo I (minas)", "it": "Gruppo I (miniere)", "pt": "Grupo I (minas)", "no": "Gruppe I (gruver)", "fi": "ryhmä I (kaivokset)", "sv": "grupp I (gruvor)", "ja": "グループI（鉱山）", "zh": "I类（矿用）", "ko": "그룹 I (광산용)", "tr": "Grup I (maden)", "ar": "المجموعة الأولى (تعدين)", "pl": "Grupa I (górnictwo)", "cs": "Skupina I (důlní průmysl)", "ru": "Группа I (рудничное оборудование)", "da": "Gruppe I (minedrift)"}, "group ii (surface gas)": {"en": "Group II (surface gas)", "de": "Gruppe II (Übertage / Gas)", "fr": "Groupe II (surface / gaz)", "nl": "Groep II (bovengronds / gas)", "es": "Grupo II (gas en superficie)", "it": "Gruppo II (gas in superficie)", "pt": "Grupo II (gás em superfície)", "no": "Gruppe II (gass i overflateområder)", "fi": "ryhmä II", "sv": "grupp II", "ja": "グループII", "zh": "II类（工厂用气体）", "ko": "그룹 II (폭발성 가스)", "tr": "Grup II (yüzey gazı)", "ar": "المجموعة الثانية (غاز)", "pl": "Grupa II (gazy powierzchniowe)", "cs": "Skupina II (povrchový průmysl – plyny)", "ru": "Группа II (газ)", "da": "Gruppe II (gas)"}, "group iii (surface dust)": {"en": "Group III (surface dust)", "de": "Gruppe III (Übertage / Staub)", "fr": "Groupe III (surface / poussières)", "nl": "Groep III (bovengronds / stof)", "es": "Grupo III (polvo en superficie)", "it": "Gruppo III (polveri in superficie)", "pt": "Grupo III (poeira em superfície)", "no": "Gruppe III (støv i overflateområder)", "fi": "ryhmä III", "sv": "grupp III", "ja": "グループIII", "zh": "III类（工厂用粉尘）", "ko": "그룹 III (폭발성 분진)", "tr": "Grup III (yüzey tozu)", "ar": "المجموعة الثالثة (غبار)", "pl": "Grupa III (pyły powierzchniowe)", "cs": "Skupina III (povrchový průmysl – prachy)", "ru": "Группа III (пыль)", "da": "Gruppe III (støv)"}, "hazardous area": {"en": "hazardous area", "ar": "المنطقة الخطرة", "cs": "nebezpečný prostor", "da": "eksplosionsfarligt område", "de": "explosionsgefährdeter Bereich", "es": "emplazamiento peligroso / área de riesgo", "fi": "räjähdysvaarallinen tila (Ex-tila)", "fr": "emplacement dangereux / zone dangereuse", "it": "area pericolosa / luogo con pericolo di esplosione", "ja": "危険区域 / 危険場所", "ko": "폭발위험장소", "nl": "explosiegevaarlijk gebied", "pl": "strefa zagrożenia wybuchem", "pt": "área classificada", "ru": "взрывоопасная зона", "sv": "explosionsfarligt område", "tr": "tehlikeli bölge", "zh": "危险场所", "no": "Eksplosjonsfarlig område"}, "iecex certification": {"en": "IECEx certification", "de": "IECEx-Zertifizierung", "fr": "certification IECEx", "nl": "IECEx-certificering", "es": "certificación IECEx", "it": "certificazione IECEx", "pt": "certificação IECEx", "no": "IECEx-sertifisering", "fi": "IECEx-sertifiointi", "sv": "IECEx-certifiering", "ja": "IECEx認証", "zh": "IECEx认证", "ko": "IECEx 인증", "tr": "IECEx belgelendirme", "ar": "شهادة IECEx", "pl": "certyfikacja IECEx", "cs": "certifikace IECEx", "ru": "сертификация IECEx", "da": "IECEx-certificering"}, "ignition probability": {"en": "Ignition probability", "no": "Tennfare", "de": "Zündwahrscheinlichkeit", "fr": "probabilité d'inflammation", "es": "probabilidad de ignición", "it": "probabilità di innesco", "pt": "probabilidade de ignição", "nl": "ontstekingswaarschijnlijkheid", "da": "tændrisiko", "fi": "syttymistodennäköisyys", "sv": "antändningssannolikhet", "pl": "prawdopodobieństwo zapłonu", "cs": "pravděpodobnost vznícení", "ru": "вероятность воспламенения", "ja": "着火確率", "zh": "点燃概率", "ko": "점화확률", "tr": "tutuşma olasılığı", "ar": "احتمال الاشتعال"}, "ignition source": {"en": "Ignition source", "no": "Tennkilde", "de": "Zündquelle", "fr": "source d'inflammation", "es": "fuente de ignición", "it": "sorgente di innesco", "pt": "fonte de ignição", "nl": "ontstekingsbron", "da": "tændkilde", "fi": "syttymislähde", "sv": "tändkälla", "pl": "źródło zapłonu", "cs": "zdroj vznícení", "ru": "источник воспламенения", "ja": "着火源", "zh": "点燃源", "ko": "점화원", "tr": "tutuşma kaynağı", "ar": "مصدر الاشتعال"}, "ignition temperature": {"en": "ignition temperature", "ar": "درجة حرارة الاشتعال الذاتي", "cs": "teplota vznícení", "da": "tændtemperatur", "de": "Zündtemperatur", "es": "temperatura de ignición / temperatura de autoinflamación", "fi": "syttymislämpötila", "fr": "température d'auto-inflammation (TAI)", "it": "temperatura di accensione", "ja": "着火温度 / 発火温度", "ko": "발화온도", "nl": "ontstekingstemperatuur", "pl": "temperatura zapłonu / temperatura samozapłonu", "pt": "temperatura de ignição / temperatura de autoignição", "ru": "температура самовоспламенения", "sv": "tändtemperatur", "tr": "tutuşma sıcaklığı", "zh": "引燃温度", "no": "Selvantennelsestemperatur"}, "increased safety": {"en": "increased safety", "ar": "أمان مرتفع", "cs": "zajištěné provedení", "da": "forhøjet sikkerhed", "de": "erhöhte Sicherheit", "es": "seguridad aumentada", "fi": "varmennettu rakenne", "fr": "sécurité augmentée", "it": "sicurezza aumentata", "ja": "安全増防爆構造", "ko": "안전증 방폭구조", "nl": "verhoogde veiligheid", "pl": "budowa wzmocniona", "pt": "segurança aumentada", "ru": "повышенная защита вида «e»", "sv": "ökad säkerhet / höjd säkerhet", "tr": "arttırılmış güvenlik", "zh": "增安型", "no": "Forhøyet sikkerhet"}, "ingress protection (ip rating)": {"en": "ingress protection (IP rating)", "de": "Schutzart (IP-Schutzart)", "fr": "degré de protection (indice IP)", "nl": "beschermingsgraad (IP-code)", "es": "grado de protección IP", "it": "grado di protezione IP", "pt": "grau de proteção IP", "no": "kapslingsgrad (IP)", "fi": "kotelointiluokka (IP)", "sv": "kapslingsklass (IP)", "ja": "外郭による保護等級（IPコード）", "zh": "外壳防护等级（IP等级）", "ko": "IP 등급 / 용기의 보호등급", "tr": "IP koruma derecesi", "ar": "درجة حماية الدخول (IP)", "pl": "stopień ochrony IP", "cs": "stupeň krytí IP", "ru": "степень защиты (IP)", "da": "kapslingsklasse (IP)"}, "intrinsic safety": {"en": "intrinsic safety", "ar": "السلامة الجوهرية", "cs": "jiskrová bezpečnost", "da": "egensikkerhed", "de": "Eigensicherheit", "es": "seguridad intrínseca", "fi": "luonnostaan vaaraton rakenne", "fr": "sécurité intrinsèque", "it": "sicurezza intrinseca", "ja": "本質安全防爆構造", "ko": "본질안전 방폭구조", "nl": "intrinsieke veiligheid", "pl": "iskrobezpieczeństwo", "pt": "segurança intrínseca", "ru": "искробезопасная электрическая цепь", "sv": "egensäkerhet", "tr": "kendinden emniyetlilik", "zh": "本质安全型", "no": "Egensikkerhet"}, "intrinsically safe": {"en": "intrinsically safe", "ar": "آمنة جوهرياً", "cs": "jiskrově bezpečný", "da": "egensikker", "de": "eigensicher", "es": "intrínsecamente seguro", "fi": "luonnostaan vaaraton", "fr": "à sécurité intrinsèque", "it": "a sicurezza intrinseca", "ja": "本質安全", "ko": "본질안전", "nl": "intrinsiek veilig", "pl": "iskrobezpieczny", "pt": "intrinsecamente seguro", "ru": "искробезопасный", "sv": "egensäker", "tr": "kendinden emniyetli", "zh": "本质安全", "no": "Egensikker"}, "lower explosive limit": {"en": "lower explosive limit", "ar": "الحد الأدنى للانفجار", "cs": "dolní mez výbušnosti", "da": "nedre eksplosionsgrænse (NEG)", "de": "untere Explosionsgrenze (UEG)", "es": "Límite Inferior de Explosividad (LIE)", "fi": "alempi räjähdysraja (LEL)", "fr": "Limite Inférieure d'Explosivité (LIE)", "it": "Limite Inferiore di Esplosività (L.I.E.)", "ja": "爆発下限界 (LEL)", "ko": "폭발하한계 (LEL)", "nl": "onderste explosiegrens (LEL)", "pl": "dolna granica wybuchowości (DGW)", "pt": "limite inferior de explosividade (LIE)", "ru": "нижний концентрационный предел воспламенения (НКПВ)", "sv": "undre brännbarhetsgränsen (LEL)", "tr": "alt patlama sınırı (APS)", "zh": "爆炸下限", "no": "Nedre eksplosjonsgrense"}, "maximum experimental safe gap": {"en": "Maximum Experimental Safe Gap", "no": "Største eksperimentelle sikkerhetsspalte", "de": "maximale experimentelle Sicherheitsspaltweite (MESG)", "fr": "interstice expérimental maximal de sécurité (IEMS)", "es": "intersticio experimental máximo de seguridad (IEMS)", "it": "gioco sperimentale massimo di sicurezza (MESG)", "pt": "interstício experimental máximo de segurança (MESG)", "nl": "maximale experimentele veilige spleet (MESG)", "da": "maksimal eksperimentel sikkerhedsspalte (MESG)", "fi": "suurin kokeellinen turvaväli (MESG)", "sv": "största experimentella säkerhetsspalt (MESG)", "pl": "maksymalny doświadczalny bezpieczny prześwit (MESG)", "cs": "maximální experimentální bezpečná spára (MESG)", "ru": "максимальный экспериментальный безопасный зазор (МЭБЗ)", "ja": "最大安全すきま (MESG)", "zh": "最大试验安全间隙 (MESG)", "ko": "최대실험안전틈새 (MESG)", "tr": "azami deneysel güvenli aralık (MESG)", "ar": "أقصى فجوة تجريبية آمنة (MESG)"}, "maximum surface temperature": {"en": "maximum surface temperature", "de": "maximale Oberflächentemperatur", "fr": "température maximale de surface", "nl": "maximale oppervlaktetemperatuur", "es": "temperatura superficial máxima", "it": "temperatura massima superficiale", "pt": "temperatura máxima de superfície", "no": "maksimal overflatetemperatur", "fi": "suurin pintalämpötila", "sv": "högsta yttemperatur", "ja": "最高表面温度", "zh": "最高表面温度", "ko": "최고표면온도", "tr": "azami yüzey sıcaklığı", "ar": "أقصى درجة حرارة سطحية", "pl": "maksymalna temperatura powierzchni", "cs": "maximální povrchová teplota", "ru": "максимальная температура поверхности", "da": "maksimal overfladetemperatur"}, "minimum igniting current": {"en": "Minimum Igniting Current", "no": "Minste tennstrøm", "de": "Mindestzündstrom (MIC)", "fr": "courant minimal d'inflammation (CMI)", "es": "corriente mínima de ignición (CMI)", "it": "corrente minima di innesco (MIC)", "pt": "corrente mínima de ignição (CMI)", "nl": "minimale ontstekingsstroom (MIC)", "da": "mindste tændstrøm (MIC)", "fi": "pienin sytytysvirta (MIC)", "sv": "minsta tändström (MIC)", "pl": "minimalny prąd zapłonowy (MIC)", "cs": "minimální zápalný proud (MIC)", "ru": "минимальный воспламеняющий ток (МВТ)", "ja": "最小点火電流 (MIC)", "zh": "最小点燃电流 (MIC)", "ko": "최소점화전류 (MIC)", "tr": "asgari ateşleme akımı (MIC)", "ar": "أقل تيار إشعال (MIC)"}, "minimum ignition energy": {"en": "minimum ignition energy", "ar": "الحد الأدنى من طاقة الاشتعال", "cs": "minimální iniciační energie", "da": "mindste tændenergi", "de": "Mindestzündenergie", "es": "energía mínima de ignición", "fi": "pienin syttymisenergia", "fr": "énergie minimale d'inflammation (EMI)", "it": "energia minima di accensione (M.I.E.)", "ja": "最小着火エネルギー", "ko": "최소점화에너지", "nl": "minimale ontstekingsenergie", "pl": "minimalna energia zapłonu", "pt": "energia mínima de ignição (EMI)", "ru": "минимальная энергия зажигания", "sv": "minsta tändenergi", "tr": "minimum tutuşma enerjisi", "zh": "最小点燃能量", "no": "minste tennenergi"}, "nameplate / rating plate": {"en": "nameplate / rating plate", "no": "Skilt", "de": "Typenschild", "fr": "plaque signalétique", "es": "placa de características", "it": "targa", "pt": "placa de identificação", "nl": "typeplaatje", "da": "typeskilt", "fi": "arvokilpi", "sv": "märkskylt", "pl": "tabliczka znamionowa", "cs": "výrobní štítek", "ru": "заводская табличка", "ja": "銘板", "zh": "铭牌", "ko": "명판", "tr": "etiket plakası", "ar": "لوحة البيانات"}, "non-hazardous area": {"en": "non-hazardous area", "ar": "المنطقة غير الخطرة", "cs": "prostor bez nebezpečí výbuchu", "da": "uklassificeret område", "de": "nicht explosionsgefährdeter Bereich", "es": "emplazamiento no peligroso / área no clasificada", "fi": "turvallinen tila / luokittelematon tila", "fr": "emplacement non dangereux", "it": "area sicura / zona sicura", "ja": "非危険区域 / 非危険場所", "ko": "비폭발위험장소", "nl": "niet-geclassificeerd gebied", "pl": "strefa niezagrożona wybuchem", "pt": "área não classificada", "ru": "невзрывоопасная зона", "sv": "oklassificerat område", "tr": "tehlikesiz bölge", "zh": "非危险场所", "no": "Uklassifisert område"}, "non-sparking": {"en": "non-sparking", "ar": "غير صادرة للشرر", "cs": "ochrana typu n", "da": "gnistfri / beskyttelsesart n", "de": "Zündschutzart n", "es": "modo de protección \"n\"", "fi": "suojausrakenne n", "fr": "non étincelant", "it": "protezione non incendiva", "ja": "非点火防爆構造", "ko": "비점화 방폭구조", "nl": "niet-vonkend materieel", "pl": "budowa typu n", "pt": "não centelhante", "ru": "неискрящее оборудование", "sv": "gnistfri / skyddstyp n", "tr": "ark çıkarmaz", "zh": "无火花型 / n型", "no": "Gnistfri"}, "notified body": {"en": "Notified Body", "no": "Teknisk kontrollorgan", "de": "benannte Stelle", "fr": "organisme notifié", "es": "organismo notificado", "it": "organismo notificato", "pt": "organismo notificado", "nl": "aangemelde instantie", "da": "bemyndiget organ", "fi": "ilmoitettu laitos", "sv": "anmält organ", "pl": "jednostka notyfikowana", "cs": "oznámený subjekt", "ru": "уполномоченный орган", "ja": "通知機関", "zh": "公告机构", "ko": "인증기관", "tr": "onaylanmış kuruluş", "ar": "الهيئة المبلغة"}, "oil immersion": {"en": "oil immersion", "ar": "مغمورة بالزيت", "cs": "olejový závěr", "da": "oliefyldning", "de": "Ölkapselung / Flüssigkeitskapselung", "es": "inmersión en aceite", "fi": "öljytäytteinen rakenne", "fr": "immersion dans l'huile", "it": "immersione in olio", "ja": "油入防爆構造", "ko": "유입 방폭구조", "nl": "olievulling", "pl": "osłona olejowa", "pt": "imersão em líquido / imersão em óleo", "ru": "заполнение оболочки жидкостью", "sv": "oljekapsling", "tr": "yağa daldırma", "zh": "液浸型", "no": "oljefylt kapsling"}, "optical radiation (ex op)": {"en": "optical radiation (Ex op)", "de": "optische Strahlung", "fr": "rayonnement optique", "nl": "optische straling", "es": "radiación óptica (Ex op)", "it": "radiazione ottica (Ex op)", "pt": "radiação óptica (Ex op)", "no": "optisk stråling (Ex op)", "fi": "optinen säteily", "sv": "optisk strålning", "ja": "光放射", "zh": "光辐射", "ko": "광학 방사 / 광학복사", "tr": "optik ışıma", "ar": "الإشعاع البصري", "pl": "promieniowanie optyczne", "cs": "optické záření", "ru": "оптическое излучение", "da": "optisk stråling"}, "powder filling": {"en": "powder filling", "ar": "مملوءة بالرمل", "cs": "pískový závěr", "da": "sandpåfyldning", "de": "Sandkapselung", "es": "relleno pulverulento", "fi": "hiekkatäytteinen rakenne", "fr": "remplissage pulvérulent", "it": "riempimento di sabbia", "ja": "充てん防爆構造", "ko": "충전 방폭구조", "nl": "zandvulling", "pl": "osłona piaskowa", "pt": "imersão em areia", "ru": "кварцевое заполнение оболочки", "sv": "sandkapsling", "tr": "toz doldurma / kum doldurma", "zh": "充砂型", "no": "Sandfylt kapsling"}, "pressurized enclosure": {"en": "pressurized enclosure", "ar": "مضغوطة", "cs": "ochrana vnitřním přetlakem / závěr s vnitřním přetlakem", "da": "overtryksventileret kapsling", "de": "Überdruckkapselung", "es": "envolvente presurizada / sobrepresión interna", "fi": "paineistettu rakenne", "fr": "surpression / enveloppe à surpression interne", "it": "sovrapressione interna / custodia pressurizzata", "ja": "内圧防爆構造", "ko": "압력 방폭구조", "nl": "inwendige overdruk", "pl": "osłona gazowa z nadciśnieniem", "pt": "invólucro pressurizado", "ru": "заполнение или продувка оболочки под избыточным давлением", "sv": "övertryckskapsling", "tr": "basınçlandırma", "zh": "正压外壳型", "no": "Trykkapsling"}, "protection parameters": {"en": "Protection parameters", "no": "Ex-parametere", "de": "Schutzparameter", "fr": "paramètres de protection", "es": "parámetros de protección", "it": "parametri di protezione", "pt": "parâmetros de proteção", "nl": "beschermingsparameters", "da": "beskyttelsesparametre", "fi": "suojausparametrit", "sv": "skyddsparametrar", "pl": "parametry ochrony", "cs": "ochranné parametry", "ru": "параметры защиты", "ja": "保護パラメータ", "zh": "保护参数", "ko": "보호 매개변수", "tr": "koruma parametreleri", "ar": "معلمات الحماية"}, "restricted breathing": {"en": "Restricted breathing", "no": "Begrenset gassgjennomtrengning", "de": "begrenzte Atmung", "fr": "respiration limitée", "es": "respiración restringida", "it": "respirazione limitata", "pt": "respiração restrita", "nl": "beperkte ademhaling", "da": "begrænset åndbarhed", "fi": "rajoitettu hengitys", "sv": "begränsad andning", "pl": "ograniczone oddychanie", "cs": "omezené dýchání", "ru": "ограниченное дыхание", "ja": "制限呼吸", "zh": "限制呼吸", "ko": "제한호흡", "tr": "kısıtlı soluma", "ar": "التنفس المقيد"}, "simple apparatus": {"en": "simple apparatus", "de": "einfaches Betriebsmittel", "fr": "appareil simple", "nl": "eenvoudig toestel", "es": "equipo simple / aparato simple", "it": "apparecchiatura semplice", "pt": "aparelho simples", "no": "enkelt apparat", "fi": "yksinkertainen laite", "sv": "enkel apparat", "ja": "単純な機器", "zh": "简单设备", "ko": "단순 기기", "tr": "basit cihaz", "ar": "جهاز بسيط", "pl": "urządzenie proste", "cs": "jednoduché zařízení", "ru": "простое устройство", "da": "simpelt apparat"}, "source of release": {"en": "source of release", "ar": "مصدر الانبعاث", "cs": "zdroj úniku", "da": "udslipskilde", "de": "Freisetzungsquelle", "es": "fuente de escape", "fi": "päästölähde", "fr": "source de dégagement", "it": "sorgente di emissione", "ja": "放出源", "ko": "누출원", "nl": "afgiftebron", "pl": "źródło emisji", "pt": "fonte de liberação", "ru": "источник утечки", "sv": "utsläppskälla", "tr": "boşalma kaynağı", "zh": "释放源", "no": "Utslippskilde"}, "special protection (ex s)": {"en": "special protection (Ex s)", "de": "Sonderschutz", "fr": "protection spéciale", "nl": "speciale bescherming", "es": "protección especial (Ex s)", "it": "protezione speciale (Ex s)", "pt": "proteção especial (Ex s)", "no": "spesialutførelse (Ex s)", "fi": "erityissuojaus", "sv": "särskilt skydd", "ja": "特別防爆構造", "zh": "特殊型", "ko": "특수 방폭구조", "tr": "özel koruma", "ar": "الحماية الخاصة", "pl": "zabezpieczenie specjalne", "cs": "speciální závěr", "ru": "специальный вид взрывозащиты", "da": "særlig beskyttelse"}, "temperature class": {"en": "temperature class", "ar": "فئة درجة الحرارة", "cs": "teplotní třída", "da": "temperaturklasse", "de": "Temperaturklasse", "es": "clase de temperatura", "fi": "lämpötilaluokka", "fr": "classe de température", "it": "classe di temperatura", "ja": "温度等級", "ko": "온도등급", "nl": "temperatuurklasse", "pl": "klasa temperaturowa", "pt": "classe de temperatura", "ru": "температурный класс", "sv": "temperaturklass", "tr": "sıcaklık sınıfı", "zh": "温度组别", "no": "temperaturklasse"}, "threads": {"en": "Threads", "no": "Gjenger", "de": "Gewinde", "fr": "filetage", "es": "roscas", "it": "filettature", "pt": "roscas", "nl": "schroefdraad", "da": "gevind", "fi": "kierteet", "sv": "gängor", "pl": "gwinty", "cs": "závity", "ru": "резьба", "ja": "ねじ", "zh": "螺纹", "ko": "나사", "tr": "diş", "ar": "لولب"}, "type examination certificate": {"en": "type examination certificate", "de": "EU-Baumusterprüfbescheinigung", "fr": "certificat d'examen UE de type", "nl": "EU-typeonderzoekscertificaat", "es": "certificado de examen UE de tipo", "it": "certificato di esame UE del tipo", "pt": "certificado de exame de tipo", "no": "typeprøvingssertifikat", "fi": "EU-tyyppitarkastustodistus", "sv": "EU-typkontrollintyg", "ja": "型式検定合格証", "zh": "型式检验证书", "ko": "형식시험 인증서", "tr": "tip inceleme belgesi", "ar": "شهادة فحص النوع", "pl": "certyfikat badania typu UE", "cs": "certifikát EU přezkoušení typu", "ru": "сертификат типового испытания", "da": "EU-typeafprøvningsattest"}, "type of protection": {"en": "type of protection", "ar": "نوع الحماية", "cs": "typ ochrany / druh ochrany", "da": "beskyttelsesart", "de": "Zündschutzart", "es": "modo de protección", "fi": "räjähdyssuojausrakenne", "fr": "mode de protection", "it": "modo di protezione", "ja": "防爆構造の種類", "ko": "방폭구조", "nl": "beschermingswijze", "pl": "rodzaj zabezpieczenia przeciwwybuchowego", "pt": "tipo de proteção", "ru": "вид взрывозащиты", "sv": "skyddstyp", "tr": "koruma tipi", "zh": "防爆型式", "no": "beskyttelsestype / tennbeskyttelsesmåte"}, "upper explosive limit": {"en": "upper explosive limit", "ar": "الحد الأعلى للانفجار", "cs": "horní mez výbušnosti", "da": "øvre eksplosionsgrænse (ØEG)", "de": "obere Explosionsgrenze (OEG)", "es": "Límite Superior de Explosividad (LSE)", "fi": "ylempi räjähdysraja (UEL)", "fr": "Limite Supérieure d'Explosivité (LSE)", "it": "Limite Superiore di Esplosività (L.S.E.)", "ja": "爆発上限界 (UEL)", "ko": "폭발상한계 (UEL)", "nl": "bovenste explosiegrens (UEL)", "pl": "górna granica wybuchowości (GGW)", "pt": "limite superior de explosividade (LSE)", "ru": "верхний концентрационный предел воспламенения (ВКПВ)", "sv": "övre brännbarhetsgränsen (UEL)", "tr": "üst patlama sınırı (ÜPS)", "zh": "爆炸上限", "no": "Øvre eksplosjonsgrense"}, "visual inspection": {"en": "Visual inspection", "no": "Visuell kontroll", "de": "Sichtprüfung", "fr": "inspection visuelle", "es": "inspección visual", "it": "ispezione visiva", "pt": "inspeção visual", "nl": "visuele inspectie", "da": "visuel kontrol", "fi": "silmämääräinen tarkastus", "sv": "visuell kontroll", "pl": "kontrola wizualna", "cs": "vizuální kontrola", "ru": "визуальный осмотр", "ja": "目視検査", "zh": "外观检查", "ko": "육안검사", "tr": "görsel muayene", "ar": "الفحص البصري"}, "zener barrier": {"en": "zener barrier", "de": "Zenerbarriere", "fr": "barrière Zener", "nl": "zenerbarriëre", "es": "barrera Zener", "it": "barriera Zener", "pt": "barreira Zener", "no": "zenerbarriere", "fi": "zener-barriääri", "sv": "zenerbarriär", "ja": "ツェナーバリア", "zh": "齐纳式安全栅", "ko": "제너 배리어", "tr": "zener bariyer", "ar": "حاجز زينر", "pl": "bariera Zenera", "cs": "Zenerova bariéra", "ru": "барьер Зенера / барьер искрозащиты", "da": "Zener-barriere"}, "zone 0": {"en": "zone 0", "ar": "المنطقة 0", "cs": "zóna 0", "da": "zone 0", "de": "Zone 0", "es": "Zona 0", "fi": "vyöhyke 0", "fr": "Zone 0", "it": "Zona 0", "ja": "ゾーン0 / 特別危険箇所 / 0種場所", "ko": "0종 장소", "nl": "zone 0", "pl": "strefa 0", "pt": "Zona 0", "ru": "зона класса 0", "sv": "zon 0", "tr": "bölge 0", "zh": "0区", "no": "sone 0"}, "zone 1": {"en": "zone 1", "ar": "المنطقة 1", "cs": "zóna 1", "da": "zone 1", "de": "Zone 1", "es": "Zona 1", "fi": "vyöhyke 1", "fr": "Zone 1", "it": "Zona 1", "ja": "ゾーン1 / 第一類危険箇所 / 1種場所", "ko": "1종 장소", "nl": "zone 1", "pl": "strefa 1", "pt": "Zona 1", "ru": "зона класса 1", "sv": "zon 1", "tr": "bölge 1", "zh": "1区", "no": "sone 1"}, "zone 2": {"en": "zone 2", "ar": "المنطقة 2", "cs": "zóna 2", "da": "zone 2", "de": "Zone 2", "es": "Zona 2", "fi": "vyöhyke 2", "fr": "Zone 2", "it": "Zona 2", "ja": "ゾーン2 / 第二類危険箇所 / 2種場所", "ko": "2종 장소", "nl": "zone 2", "pl": "strefa 2", "pt": "Zona 2", "ru": "зона класса 2", "sv": "zon 2", "tr": "bölge 2", "zh": "2区", "no": "sone 2"}, "zone 20": {"en": "zone 20", "ar": "المنطقة 20", "cs": "zóna 20", "da": "zone 20", "de": "Zone 20", "es": "Zona 20", "fi": "vyöhyke 20", "fr": "Zone 20", "it": "Zona 20", "ja": "ゾーン20", "ko": "20종 장소", "nl": "zone 20", "pl": "strefa 20", "pt": "Zona 20", "ru": "зона класса 20", "sv": "zon 20", "tr": "bölge 20", "zh": "20区", "no": "sone 20"}, "zone 21": {"en": "zone 21", "ar": "المنطقة 21", "cs": "zóna 21", "da": "zone 21", "de": "Zone 21", "es": "Zona 21", "fi": "vyöhyke 21", "fr": "Zone 21", "it": "Zona 21", "ja": "ゾーン21", "ko": "21종 장소", "nl": "zone 21", "pl": "strefa 21", "pt": "Zona 21", "ru": "зона класса 21", "sv": "zon 21", "tr": "bölge 21", "zh": "21区", "no": "sone 21"}, "zone 22": {"en": "zone 22", "ar": "المنطقة 22", "cs": "zóna 22", "da": "zone 22", "de": "Zone 22", "es": "Zona 22", "fi": "vyöhyke 22", "fr": "Zone 22", "it": "Zona 22", "ja": "ゾーン22", "ko": "22종 장소", "nl": "zone 22", "pl": "strefa 22", "pt": "Zona 22", "ru": "зона класса 22", "sv": "zon 22", "tr": "bölge 22", "zh": "22区", "no": "sone 22"}, "zone classification drawing": {"en": "Zone classification drawing", "no": "Sonekart", "de": "Zonenplan", "fr": "plan de zonage", "es": "plano de clasificación de zonas", "it": "disegno di classificazione delle zone", "pt": "desenho de classificação de áreas", "nl": "zoneclassificatietekening", "da": "zoneklassifikationstegning", "fi": "tilaluokituspiirustus", "sv": "zonklassificeringsritning", "pl": "rysunek klasyfikacji stref", "cs": "výkres klasifikace zón", "ru": "чертёж классификации зон", "ja": "危険区域分類図", "zh": "区域分类图", "ko": "위험장소 구분도", "tr": "bölge sınıflandırma çizimi", "ar": "رسم تصنيف المناطق"}};
+
+const LANGS = {
+  en: { name: "English", flag: "🇬🇧" },
+  no: { name: "Norwegian", flag: "🇳🇴" },
+  de: { name: "German", flag: "🇩🇪" },
+  fr: { name: "French", flag: "🇫🇷" },
+  es: { name: "Spanish", flag: "🇪🇸" },
+  it: { name: "Italian", flag: "🇮🇹" },
+  pt: { name: "Portuguese", flag: "🇧🇷" },
+  nl: { name: "Dutch", flag: "🇳🇱" },
+  da: { name: "Danish", flag: "🇩🇰" },
+  fi: { name: "Finnish", flag: "🇫🇮" },
+  sv: { name: "Swedish", flag: "🇸🇪" },
+  pl: { name: "Polish", flag: "🇵🇱" },
+  cs: { name: "Czech", flag: "🇨🇿" },
+  ru: { name: "Russian", flag: "🇷🇺" },
+  ja: { name: "Japanese", flag: "🇯🇵" },
+  zh: { name: "Chinese", flag: "🇨🇳" },
+  ko: { name: "Korean", flag: "🇰🇷" },
+  tr: { name: "Turkish", flag: "🇹🇷" },
+  ar: { name: "Arabic", flag: "🇸🇦" }
+};
+
+const sortedKeys = Object.keys(TERMS).sort();
+let activeLangs = ["en", "de", "fr"];
+
+function populateSelects() {
+  ["lang1","lang2","lang3"].forEach((id, i) => {
+    const sel = document.getElementById(id);
+    sel.innerHTML = '<option value="">— None —</option>';
+    Object.entries(LANGS).forEach(([code, info]) => {
+      const opt = document.createElement("option");
+      opt.value = code;
+      opt.textContent = info.flag + " " + info.name;
+      sel.appendChild(opt);
+    });
+    sel.value = activeLangs[i] || "";
+    sel.addEventListener("change", () => {
+      activeLangs[i] = sel.value;
+      render();
+    });
+  });
+}
+
+function render() {
+  const q = document.getElementById("search").value.toLowerCase();
+  const cols = activeLangs.filter(Boolean);
+  const head = document.getElementById("tHead");
+  head.innerHTML = "<th>English</th>" + cols.map(c =>
+    `<th>${LANGS[c]?.flag||""} ${LANGS[c]?.name||c}</th>`
+  ).join("");
+
+  const body = document.getElementById("tBody");
+  let html = "", count = 0;
+  sortedKeys.forEach(key => {
+    const e = TERMS[key];
+    const en = e.en || key;
+    const texts = [en, ...cols.map(c => e[c]||"")];
+    if (q && !texts.some(t => t.toLowerCase().includes(q))) return;
+    count++;
+    html += "<tr>";
+    html += `<td onclick="copy('${esc(en)}')">${en}</td>`;
+    cols.forEach(c => {
+      const t = e[c] || "—";
+      html += `<td onclick="copy('${esc(t)}')"><span class="flag">${LANGS[c]?.flag||""}</span>${t}</td>`;
+    });
+    html += "</tr>";
+  });
+  body.innerHTML = html;
+  document.getElementById("termCount").textContent = `Showing ${count} of ${sortedKeys.length} terms`;
+  document.getElementById("noResults").style.display = count === 0 ? "block" : "none";
+}
+
+function esc(s) { return s.replace(/'/g, "\\'").replace(/"/g, "&quot;"); }
+
+function copy(text) {
+  if (text === "—") return;
+  navigator.clipboard.writeText(text).then(() => {
+    const t = document.getElementById("toast");
+    t.textContent = 'Copied "' + text + '"';
+    t.classList.add("show");
+    setTimeout(() => t.classList.remove("show"), 1500);
+  });
+}
+
+document.getElementById("search").addEventListener("input", render);
+document.addEventListener("keydown", e => {
+  if (e.key === "/" && document.activeElement.tagName !== "INPUT") {
+    e.preventDefault();
+    document.getElementById("search").focus();
+  }
+});
+
+// Gate
+function gated() { return localStorage.getItem("exk_glossary_gate") === "done"; }
+function closeGate() { document.getElementById("gateOverlay").classList.remove("active"); }
+
+document.getElementById("downloadBtn").addEventListener("click", () => {
+  if (gated()) { triggerCSV(); } else { document.getElementById("gateOverlay").classList.add("active"); }
+});
+
+function handleGate(ev) {
+  ev.preventDefault();
+  // Submit to formsubmit.co via fetch (so we stay on page)
+  const form = ev.target;
+  const fd = new FormData(form);
+  fetch(form.action, { method: "POST", body: fd, headers: { "Accept": "application/json" } }).catch(() => {});
+  localStorage.setItem("exk_glossary_gate", "done");
+  closeGate();
+  triggerCSV();
+  return false;
+}
+
+function triggerCSV() {
+  const codes = Object.keys(LANGS);
+  const names = codes.map(c => LANGS[c].name);
+  let csv = "\uFEFF" + names.join(",") + "\n";
+  sortedKeys.forEach(key => {
+    const e = TERMS[key];
+    csv += codes.map(c => '"' + (e[c]||"").replace(/"/g,'""') + '"').join(",") + "\n";
+  });
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "ex-terminology-glossary-77terms-19langs.csv";
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// Auto-download if returning from formsubmit redirect
+if (location.search.includes("downloaded=1")) {
+  localStorage.setItem("exk_glossary_gate", "done");
+  triggerCSV();
+}
+
+populateSelects();
+render();
+</script>
+</body>
+</html>
