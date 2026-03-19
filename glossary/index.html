@@ -440,7 +440,7 @@ function render() {
     html += `<td onclick="copy('${esc(en)}')">${en}</td>`;
     cols.forEach(c => {
       const t = e[c] || "—";
-      html += `<td onclick="copy('${esc(t)}')"><span class="flag">${LANGS[c]?.flag||""}</span>${t}</td>`;
+      html += `<td onclick="copy('${esc(t)}')">${t}</td>`;
     });
     html += "</tr>";
   });
