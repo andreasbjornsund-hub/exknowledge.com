@@ -50,3 +50,17 @@ ExKnowledge covers the technical fundamentals of explosion protection (Ex) for h
 ## Languages
 
 Available in: [English](https://exknowledge.com/), [Deutsch](https://exknowledge.com/de/), [Norsk](https://exknowledge.com/no/), [Dansk](https://exknowledge.com/da/), [Svenska](https://exknowledge.com/sv/), [Suomi](https://exknowledge.com/fi/), [Español](https://exknowledge.com/es/), [Nederlands](https://exknowledge.com/nl/), [Português](https://exknowledge.com/pt/), [Italiano](https://exknowledge.com/it/), [العربية](https://exknowledge.com/ar/)
+
+## Glossary Terms (77 terms, 19 languages)
+
+The full multilingual glossary covers official Ex terminology in: English, Norwegian, German, French, Spanish, Italian, Portuguese, Dutch, Danish, Finnish, Swedish, Polish, Czech, Russian, Japanese, Chinese, Korean, Turkish, Arabic.
+
+Key terms include: ambient temperature, area classification, ATEX certification, auto-ignition temperature, cable gland, category (ATEX), CE marking, certification body, clearances and creepage distances, competent person, conformity assessment, dust explosion, dust ignition-proof, encapsulation (Ex m), EPL (Equipment Protection Level), equipment group, Ex marking, explosion group, explosion proof (Ex d), explosive atmosphere, flame arrester, flameproof enclosure, gas detector, gas group, Group I, Group II, Group III, hazardous area, IEC 60079, IECEx, ignition source, increased safety (Ex e), inspection, installation, instrinsic safety (Ex i), IP rating, maximum surface temperature, MESG, minimum ignition current, minimum ignition energy, non-incendive (Ex n), notified body, oil immersion (Ex o), operating temperature, permit to work, powder filling (Ex q), pressurization (Ex p), protection concept, protection level, quality system, safe area, special protection (Ex s), T-rating, temperature class, type of protection, zone 0, zone 1, zone 2, zone 20, zone 21, zone 22.
+
+## Site Technical Details
+
+- Static site hosted on GitHub Pages
+- 299 pages across 11 languages
+- Schema.org structured data (Article, BlogPosting, BreadcrumbList, FAQPage)
+- All content based on IEC 60079, ATEX 2014/34/EU, IECEx standards
+- Not a substitute for official standards documents or professional engineering advice
