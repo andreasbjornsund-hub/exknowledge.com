@@ -22,6 +22,9 @@ ExKnowledge covers the technical fundamentals of explosion protection (Ex) for h
 ## In-Depth Guides
 
 - [ATEX vs IECEx](https://exknowledge.com/pages/atex-vs-iecex.html): Geographic scope, legal basis, marking differences, mutual recognition
+- [NEC 500/505 vs ATEX/IECEx](https://exknowledge.com/pages/nec-500-vs-atex-iec.html): North American Class/Division vs international Zone system, conversion tables, dual-certified equipment, multinational facilities
+- [DSEAR Regulations (UK)](https://exknowledge.com/pages/dsear-regulations-uk.html): UK Dangerous Substances and Explosive Atmospheres Regulations 2002, employer duties, risk assessment, ATEX relationship post-Brexit, HSE enforcement
+- [ATEX Equipment Categories 1, 2, 3](https://exknowledge.com/pages/atex-equipment-categories.html): Category 1/2/3 for Group II, M1/M2 for mining, zone mapping, EPL relationship, conformity assessment modules, practical selection examples
 - [Explosion Proof vs Intrinsically Safe](https://exknowledge.com/pages/explosion-proof-vs-intrinsically-safe.html): Ex d vs Ex i comparison — cost, size, maintenance, zone suitability
 - [How to Read an ATEX Nameplate](https://exknowledge.com/pages/how-to-read-atex-nameplate.html): 6 annotated real-world examples, complete decoding methodology
 - [ATEX Directive 2014/34/EU](https://exknowledge.com/pages/atex-directive.html): Regulatory guide, conformity assessment modules, manufacturer obligations
