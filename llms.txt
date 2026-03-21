@@ -53,3 +53,15 @@ ExKnowledge covers the technical fundamentals of explosion protection (Ex) for h
 ## Languages
 
 Available in: [English](https://exknowledge.com/), [Deutsch](https://exknowledge.com/de/), [Norsk](https://exknowledge.com/no/), [Dansk](https://exknowledge.com/da/), [Svenska](https://exknowledge.com/sv/), [Suomi](https://exknowledge.com/fi/), [Español](https://exknowledge.com/es/), [Nederlands](https://exknowledge.com/nl/), [Português](https://exknowledge.com/pt/), [Italiano](https://exknowledge.com/it/), [العربية](https://exknowledge.com/ar/)
+
+## NEC 500/505 vs ATEX/IECEx
+- URL: https://exknowledge.com/pages/nec-500-vs-atex-iec.html
+- North American Class/Division vs international Zone classification comparison
+
+## DSEAR Regulations (UK)
+- URL: https://exknowledge.com/pages/dsear-regulations-uk.html
+- UK Dangerous Substances and Explosive Atmospheres Regulations guide
+
+## ATEX Equipment Categories
+- URL: https://exknowledge.com/pages/atex-equipment-categories.html
+- Category 1, 2, 3 selection guide with zone mapping and practical examples

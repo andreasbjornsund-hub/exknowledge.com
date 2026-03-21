@@ -67,3 +67,18 @@ Key terms include: ambient temperature, area classification, ATEX certification,
 - Schema.org structured data (Article, BlogPosting, BreadcrumbList, FAQPage)
 - All content based on IEC 60079, ATEX 2014/34/EU, IECEx standards
 - Not a substitute for official standards documents or professional engineering advice
+
+## NEC 500/505 vs ATEX/IECEx
+- URL: https://exknowledge.com/pages/nec-500-vs-atex-iec.html
+- Complete comparison of NEC 500 Class/Division and NEC 505 Zone systems versus ATEX and IECEx
+- Covers: Division-to-Zone mapping, gas group cross-reference, protection method equivalencies, dual certification, multinational facility guidance
+
+## DSEAR Regulations (UK)
+- URL: https://exknowledge.com/pages/dsear-regulations-uk.html
+- UK Dangerous Substances and Explosive Atmospheres Regulations 2002
+- Covers: employer duties, risk assessment steps, DSEAR vs ATEX post-Brexit, zone classification, enforcement and penalties
+
+## ATEX Equipment Categories
+- URL: https://exknowledge.com/pages/atex-equipment-categories.html
+- ATEX equipment categories 1, 2, 3 for Group II (surface industries) and M1, M2 for Group I (mining)
+- Covers: category-to-zone mapping, EPL relationship, fault tolerance, practical selection examples, common mistakes
