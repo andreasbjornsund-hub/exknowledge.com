@@ -4,6 +4,8 @@
 
 ExKnowledge covers the technical fundamentals of explosion protection (Ex) for hazardous areas. Written for engineers, technical sales, and anyone working with certified equipment in explosive atmospheres.
 
+- [Podcast](https://exknowledge.com/podcast/): Short audio episodes covering ATEX, IECEx, zone classification, protection methods, gas groups, and certification. Based on IEC 60079 standards
+
 ## Topics
 
 - [Fundamentals](https://exknowledge.com/pages/fundamentals.html): Fire triangle, explosive atmospheres, LEL/UEL, 13 ignition sources, three protection principles

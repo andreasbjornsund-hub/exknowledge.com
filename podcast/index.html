@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Podcast: Explosion Protection for Engineers. ExKnowledge</title>
+  <meta name="description" content="Listen to short, practical episodes on ATEX, IECEx, zone classification, protection methods, gas groups, and certification. Based on IEC 60079 standards.">
+  <link rel="canonical" href="https://exknowledge.com/podcast/">
+  <meta property="og:title" content="ExKnowledge Podcast: Explosion Protection for Engineers">
+  <meta property="og:description" content="Listen to short, practical episodes on ATEX, IECEx, zone classification, protection methods, gas groups, and certification. Based on IEC 60079 standards.">
+  <meta property="og:url" content="https://exknowledge.com/podcast/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ExKnowledge Podcast: Explosion Protection for Engineers">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastSeries",
+    "name": "ExKnowledge: Explosion Protection Podcast",
+    "description": "Practical explosion protection for engineers. ATEX, IECEx, zone classification, protection methods, gas groups, temperature classes, Ex markings, and certification. Based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.",
+    "url": "https://exknowledge.com/podcast/",
+    "webFeed": "https://media.rss.com/exknowledge/feed.xml",
+    "author": {
+      "@type": "Organization",
+      "name": "ExKnowledge",
+      "url": "https://exknowledge.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExKnowledge",
+      "url": "https://exknowledge.com"
+    },
+    "inLanguage": "en",
+    "genre": ["Education", "Technology"],
+    "about": {
+      "@type": "Thing",
+      "name": "Explosion Protection"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://exknowledge.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Podcast",
+        "item": "https://exknowledge.com/podcast/"
+      }
+    ]
+  }
+]
+  </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5VSBXBSL');</script>
+<!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
+  <style>
+    .podcast-header {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+    .podcast-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 42px);
+      color: var(--text-dark);
+      margin: 0 0 12px;
+    }
+    .podcast-header .subtitle {
+      font-size: 16px;
+      color: var(--text-dark-muted);
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .podcast-platforms {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .podcast-platforms a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border: 1px solid #ddd8d0;
+      background: var(--bg-surface);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .podcast-platforms a:hover {
+      border-color: var(--accent);
+      background: var(--bg-surface-alt);
+    }
+    .podcast-platforms a .ph {
+      font-size: 18px;
+      color: var(--accent);
+    }
+    .podcast-rss-link {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .podcast-rss-link a {
+      color: var(--accent);
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .podcast-rss-link a:hover {
+      text-decoration: underline;
+    }
+    .podcast-about {
+      max-width: 700px;
+      margin: 0 auto 48px;
+    }
+    .podcast-about h2 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--text-dark);
+      margin: 0 0 16px;
+    }
+    .podcast-about p {
+      font-size: 15px;
+      color: var(--text-dark-muted);
+      line-height: 1.7;
+      margin: 0 0 16px;
+    }
+    .episode-list {
+      max-width: 700px;
+      margin: 0 auto 48px;
+    }
+    .episode-list h2 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--text-dark);
+      margin: 0 0 24px;
+    }
+    .episode-card {
+      display: block;
+      padding: 20px 24px;
+      border: 1px solid #ddd8d0;
+      background: var(--bg-surface);
+      margin-bottom: 12px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .episode-card:hover {
+      border-color: var(--accent);
+      background: var(--bg-surface-alt);
+    }
+    .episode-card .ep-number {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .episode-card .ep-title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .episode-card .ep-desc {
+      font-size: 13px;
+      color: var(--text-dark-muted);
+      line-height: 1.5;
+    }
+    .episode-card .ep-meta {
+      font-size: 12px;
+      color: var(--text-dark-muted);
+      margin-top: 8px;
+    }
+    .topics-preview {
+      max-width: 700px;
+      margin: 0 auto 48px;
+    }
+    .topics-preview h2 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--text-dark);
+      margin: 0 0 16px;
+    }
+    .topics-preview ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .topics-preview li {
+      font-size: 14px;
+      color: var(--text-dark-muted);
+      padding: 8px 12px;
+      background: var(--bg-surface);
+      border: 1px solid #ddd8d0;
+    }
+    .topics-preview li .ph {
+      color: var(--accent);
+      margin-right: 6px;
+    }
+    @media (max-width: 600px) {
+      .topics-preview ul { grid-template-columns: 1fr; }
+      .podcast-platforms { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <ul class="nav-links">
+      <li><a href="/"><i class="ph ph-house"></i> Home</a></li>
+      <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
+      <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zones</a></li>
+      <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection</a></li>
+      <li><a href="/pages/standards.html"><i class="ph ph-book-open"></i> Standards</a></li>
+      <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Cheat Sheet</a></li>
+      <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+      <li><a href="/podcast/" class="active"><i class="ph ph-microphone"></i> Podcast</a></li>
+    </ul>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="podcast-header">
+    <h1><i class="ph ph-microphone" style="color:var(--accent)"></i> ExKnowledge Podcast</h1>
+    <p class="subtitle">Short, practical episodes on explosion protection. One topic per episode. Based on IEC 60079, ATEX 2014/34/EU, and IECEx standards. For engineers, not beginners.</p>
+
+    <div class="podcast-platforms">
+      <a href="https://rss.com/podcasts/exknowledge" target="_blank" rel="noopener"><i class="ph ph-play-circle"></i> Listen on RSS.com</a>
+      <a href="#" id="spotify-link" style="opacity:0.5;pointer-events:none"><i class="ph ph-spotify-logo"></i> Spotify (coming soon)</a>
+      <a href="#" id="apple-link" style="opacity:0.5;pointer-events:none"><i class="ph ph-apple-podcasts-logo"></i> Apple Podcasts (coming soon)</a>
+    </div>
+    <div class="podcast-rss-link">
+      <a href="https://media.rss.com/exknowledge/feed.xml" target="_blank" rel="noopener"><i class="ph ph-rss"></i> RSS Feed</a>
+    </div>
+  </div>
+
+  <div class="episode-list">
+    <h2>Episodes</h2>
+
+    <div class="episode-card">
+      <div class="ep-number">Trailer</div>
+      <div class="ep-title">Introduction: What is ExKnowledge?</div>
+      <div class="ep-desc">What ExKnowledge is, why it exists, and what the podcast covers. Sources, format, target audience, and a preview of upcoming topics.</div>
+      <div class="ep-meta">2 min 42 sec</div>
+    </div>
+
+    <!-- Future episodes will be added here -->
+
+  </div>
+
+  <div class="podcast-about">
+    <h2>About the podcast</h2>
+    <p>ExKnowledge started as a free online reference covering 23 explosion protection topics in 11 languages. The podcast takes that same material and puts it in audio form. Each episode covers one topic in enough depth to be useful without reading the standard word by word.</p>
+    <p>All content is based on the IEC 60079 standard series, ATEX Directive 2014/34/EU, and IECEx operational documents. Episodes are 10 to 15 minutes each. No guests, no banter, just the technical content explained clearly.</p>
+    <p>For engineers working in oil and gas, chemicals, pharmaceuticals, mining, and food processing. Also for technical sales, HSE professionals, and anyone preparing for CompEx certification.</p>
+  </div>
+
+  <div class="topics-preview">
+    <h2>Upcoming topics</h2>
+    <ul>
+      <li><i class="ph ph-map-trifold"></i> Zone classification</li>
+      <li><i class="ph ph-shield-check"></i> Protection methods</li>
+      <li><i class="ph ph-flask"></i> Gas groups</li>
+      <li><i class="ph ph-thermometer-hot"></i> Temperature classes</li>
+      <li><i class="ph ph-arrows-left-right"></i> ATEX vs IECEx</li>
+      <li><i class="ph ph-tag"></i> Reading Ex markings</li>
+      <li><i class="ph ph-certificate"></i> Certification process</li>
+      <li><i class="ph ph-gauge"></i> Equipment protection levels</li>
+      <li><i class="ph ph-wind"></i> Dust explosion protection</li>
+      <li><i class="ph ph-plug"></i> Cable glands</li>
+    </ul>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="/glossary/" style="color:var(--accent)"><i class="ph ph-translate" style="color:var(--accent)"></i> Multilingual Ex Glossary</a>. 77 terms in 19 languages &nbsp;|&nbsp; <a href="/podcast/" style="color:var(--accent)"><i class="ph ph-microphone" style="color:var(--accent)"></i> Podcast</a></p>
+    <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+    <p>Not a substitute for official standards documents or professional engineering advice.</p>
+  </div>
+</footer>
+<script src="/js/nav.js"></script>
+</body>
+</html>
