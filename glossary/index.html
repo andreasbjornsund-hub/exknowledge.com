@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Ex Terminology Glossary — 77 ATEX & IEC 60079 Terms in 19 Languages | ExKnowledge</title>
+<title>Ex Terminology Glossary. 77 ATEX & IEC 60079 Terms in 19 Languages | ExKnowledge</title>
 <meta name="description" content="The only comprehensive multilingual ATEX and IEC 60079 glossary online. 77 explosion protection terms translated into 19 languages including German, French, Spanish, Japanese, Chinese, Arabic. Free interactive reference for engineers, translators, and certification bodies.">
 <link rel="canonical" href="https://exknowledge.com/glossary/">
-<meta property="og:title" content="Ex Terminology Glossary — 77 Terms in 19 Languages">
+<meta property="og:title" content="Ex Terminology Glossary. 77 Terms in 19 Languages">
 <meta property="og:description" content="Comprehensive multilingual glossary of ATEX & IEC 60079 explosion protection terminology. Free interactive reference.">
 <meta property="og:url" content="https://exknowledge.com/glossary/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="ExKnowledge">
 <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ex Terminology Glossary — 77 Terms in 19 Languages">
+<meta name="twitter:title" content="Ex Terminology Glossary. 77 Terms in 19 Languages">
 <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
@@ -23,7 +23,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "DefinedTermSet", "name": "Multilingual Ex Terminology Glossary", "description": "77 explosion protection terms from IEC 60079, ATEX, and IECEx standards translated into 19 languages.", "url": "https://exknowledge.com/glossary/", "inLanguage": ["en", "no", "de", "fr", "es", "it", "pt", "nl", "da", "fi", "sv", "pl", "cs", "ru", "ja", "zh", "ko", "tr", "ar"]}</script>
 <style>
-/* Glossary-specific styles — extends site theme */
+/* Glossary-specific styles. extends site theme */
 .glossary-hero {
   padding: 80px 0 48px;
   text-align: left;
@@ -283,8 +283,7 @@
     <h1>Multilingual Ex Terminology Glossary</h1>
     <p class="intro">
       The definitive reference for explosion protection terminology across 19 languages.
-      Built from IEC 60079 standards, national standards body publications, and ATEX directive translations
-      — for engineers writing multilingual documentation, translators working on Ex certificates,
+      Built from IEC 60079 standards, national standards body publications, and ATEX directive translations. for engineers writing multilingual documentation, translators working on Ex certificates,
       and certification bodies reviewing international submissions.
     </p>
     <div class="badge-row">
@@ -406,7 +405,7 @@ let activeLangs = ["en", "de", "fr"];
 function populateSelects() {
   ["lang1","lang2","lang3"].forEach((id, i) => {
     const sel = document.getElementById(id);
-    sel.innerHTML = '<option value="">— None —</option>';
+    sel.innerHTML = '<option value="">. None. </option>';
     Object.entries(LANGS).forEach(([code, info]) => {
       const opt = document.createElement("option");
       opt.value = code;
@@ -440,7 +439,7 @@ function render() {
     html += "<tr>";
     html += `<td onclick="copy('${esc(en)}')">${en}</td>`;
     cols.forEach(c => {
-      const t = e[c] || "—";
+      const t = e[c] || ". ";
       html += `<td onclick="copy('${esc(t)}')">${t}</td>`;
     });
     html += "</tr>";
@@ -453,7 +452,7 @@ function render() {
 function esc(s) { return s.replace(/'/g, "\\'").replace(/"/g, "&quot;"); }
 
 function copy(text) {
-  if (text === "—") return;
+  if (text === ". ") return;
   navigator.clipboard.writeText(text).then(() => {
     const t = document.getElementById("toast");
     t.textContent = 'Copied "' + text + '"';
