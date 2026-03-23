@@ -87,7 +87,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
       <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
     </ul>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option selected>🇬🇧 English</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
   </div>
 </nav>
 
