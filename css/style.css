@@ -83,7 +83,7 @@ body { padding-top: 60px; }
 
 .nav-links {
   display: flex; gap: 0; list-style: none; align-items: center;
-  flex-shrink: 1; min-width: 0; overflow: hidden;
+  flex-shrink: 1; min-width: 0; overflow: visible;
 }
 .nav-links a {
   font-family: var(--font-display);
