@@ -6,6 +6,18 @@
   });
 })();
 
+// Mobile dropdown toggles
+document.querySelectorAll('.has-dropdown > a').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      var li = a.parentElement;
+      document.querySelectorAll('.has-dropdown.open').forEach(function(el) { if (el !== li) el.classList.remove('open'); });
+      li.classList.toggle('open');
+    }
+  });
+});
+
 function slideVideos(dir) {
   var track = document.getElementById('sliderTrack');
   var slide = track.querySelector('.slide');
