@@ -3,7 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ex Knowledge Quiz — ATEX &amp; IECEx Explosion Protection</title>
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Ex Knowledge Quiz — Test Your ATEX &amp; IECEx Knowledge | ExKnowledge</title>
+<meta name="description" content="Test your explosion protection knowledge with 30 questions across 3 difficulty levels. Covers ATEX, IECEx, zone classification, protection methods, gas groups, and more.">
+<link rel="canonical" href="https://exknowledge.com/quiz.html">
+<meta property="og:title" content="Ex Knowledge Quiz — Test Your ATEX & IECEx Knowledge">
+<meta property="og:description" content="30 questions across 3 difficulty levels covering ATEX & IECEx explosion protection fundamentals.">
+<meta property="og:url" content="https://exknowledge.com/quiz.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ExKnowledge">
+<meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ex Knowledge Quiz — Test Your ATEX & IECEx Knowledge">
+<meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5VSBXBSL');</script>
+<!-- End Google Tag Manager -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -607,6 +632,28 @@ body{
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <ul class="nav-links">
+      <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
+      <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zones</a></li>
+      <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection</a></li>
+      <li><a href="/pages/standards.html"><i class="ph ph-book-open"></i> Standards</a></li>
+      <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Ref</a></li>
+      <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+      <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+    </ul>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
 
 <div class="app">
 <div class="hazard-stripe"></div>
@@ -643,7 +690,7 @@ body{
 
   <button class="btn-start" id="btnStart" disabled onclick="startQuiz()">Begin Quiz →</button>
 
-  <p class="start-footer">An educational resource by <a href="https://exknowledge.com" target="_blank" rel="noopener">exknowledge.com</a> · powered by <a href="https://xshielder.com" target="_blank" rel="noopener">Xshielder</a></p>
+  <p class="start-footer">An educational resource by <a href="https://exknowledge.com">exknowledge.com</a></p>
 
 </div>
 </div>
@@ -663,6 +710,38 @@ body{
     <div class="feedback" id="feedback"></div>
     <button class="btn-next" id="btnNext" onclick="nextQuestion()">Next Question →</button>
   </div>
+</div>
+
+<!-- ═══ EMAIL CAPTURE ═══ -->
+<div class="screen" id="screen-email">
+<div class="results-card" style="text-align:center;">
+  <div style="font-size:3rem;margin-bottom:16px;">📊</div>
+  <h2 style="font-family:var(--font-display);font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:12px;color:var(--c-black);">Your Results Are Ready</h2>
+  <p style="color:var(--c-slate);margin-bottom:28px;line-height:1.6;">Enter your email to receive your detailed results and get notified about new Ex Knowledge content.</p>
+  <form id="emailForm" action="https://formsubmit.co/andreas@xshielder.com" method="POST" target="_blank" onsubmit="handleEmailSubmit(event)">
+    <input type="hidden" name="_subject" value="Ex Quiz - New Lead">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="quiz_score" id="hiddenScore" value="">
+    <input type="hidden" name="quiz_percentage" id="hiddenPct" value="">
+    <input type="hidden" name="quiz_breakdown" id="hiddenBreakdown" value="">
+    <input type="email" name="email" required placeholder="your@email.com" style="
+      display:block;width:100%;max-width:360px;margin:0 auto 14px;padding:14px 18px;
+      font-family:var(--font-body);font-size:1rem;border:2px solid var(--c-sand);
+      border-radius:10px;background:var(--c-white);color:var(--c-black);
+      outline:none;transition:border-color 0.2s;
+    " onfocus="this.style.borderColor='var(--c-yellow)'" onblur="this.style.borderColor='var(--c-sand)'">
+    <button type="submit" style="
+      display:block;width:100%;max-width:360px;margin:0 auto 16px;padding:14px 24px;
+      font-family:var(--font-display);font-size:1rem;font-weight:600;
+      background:var(--c-yellow);color:var(--c-black);border:none;border-radius:10px;
+      cursor:pointer;transition:background 0.2s;
+    " onmouseover="this.style.background='var(--c-yellow-dim)'" onmouseout="this.style.background='var(--c-yellow)'">Show My Results →</button>
+  </form>
+  <a href="#" onclick="skipEmail();return false;" style="
+    color:var(--c-mid);font-size:0.85rem;text-decoration:none;
+  ">Skip, just show results</a>
+</div>
 </div>
 
 <!-- ═══ RESULTS ═══ -->
@@ -693,6 +772,15 @@ body{
 
 <div class="hazard-stripe"></div>
 </div><!-- .app -->
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="/glossary/" style="color:var(--accent)"><i class="ph ph-translate" style="color:var(--accent)"></i> Multilingual Ex Glossary</a>. 77 terms in 19 languages &nbsp;|&nbsp; <a href="/podcast/" style="color:var(--accent)"><i class="ph ph-microphone" style="color:var(--accent)"></i> Podcast</a></p>
+    <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+    <p>Not a substitute for official standards documents or professional engineering advice.</p>
+  </div>
+</footer>
+<script src="/js/nav.js"></script>
 
 <script>
 /* ═══════════════════════════════
@@ -1195,7 +1283,7 @@ function handleAnswer(chosen){
 function nextQuestion(){
   currentIdx++;
   if(currentIdx >= allQ.length){
-    showResults();
+    showEmailCapture();
   } else {
     renderQuestion();
   }
@@ -1204,6 +1292,27 @@ function nextQuestion(){
 /* ═══════════════════════════════
    RESULTS
    ═══════════════════════════════ */
+function showEmailCapture(){
+  // Pre-fill hidden fields with score data
+  const total = allQ.length;
+  const pct = Math.round((score / total) * 100);
+  document.getElementById('hiddenScore').value = score + '/' + total;
+  document.getElementById('hiddenPct').value = pct + '%';
+  let bd = '';
+  levelOrder.forEach(lvl => { bd += lvl + ': ' + scores[lvl] + '/' + questions[lvl].length + '  '; });
+  document.getElementById('hiddenBreakdown').value = bd.trim();
+  showScreen('screen-email');
+}
+
+function handleEmailSubmit(e){
+  // Let the form submit to formsubmit.co in a new tab, then show results
+  setTimeout(() => { showResults(); }, 500);
+}
+
+function skipEmail(){
+  showResults();
+}
+
 function showResults(){
   showScreen('screen-results');
 
