@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ex Knowledge Quiz — ATEX &amp; IECEx Explosion Protection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --c-black: #1a1a18;
+  --c-charcoal: #2d2d2a;
+  --c-slate: #4a4a45;
+  --c-mid: #7a7a72;
+  --c-warm-gray: #b8b5ad;
+  --c-sand: #e8e4db;
+  --c-cream: #f5f3ee;
+  --c-white: #fafaf7;
+
+  --c-yellow: #f0c808;
+  --c-yellow-dim: #d4b107;
+  --c-yellow-glow: #fde74c;
+  --c-amber: #e8a500;
+  --c-orange: #e06c00;
+  --c-red: #c0392b;
+  --c-green: #27ae60;
+  --c-green-soft: #2ecc71;
+  --c-blue: #2c6fbb;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html{
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  font-family: var(--font-body);
+  background: var(--c-cream);
+  color: var(--c-charcoal);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ─── Hazard stripe decoration ─── */
+.hazard-stripe{
+  height: 6px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--c-yellow) 0 10px,
+    var(--c-black) 10px 20px
+  );
+  width: 100%;
+}
+
+/* ─── Shell ─── */
+.app{
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* ─── Screen containers ─── */
+.screen{
+  display: none;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.screen.active{
+  display: block;
+  animation: screenIn 0.5s var(--ease-out-expo) both;
+}
+@keyframes screenIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ═══════════════════════════════
+   START SCREEN
+   ═══════════════════════════════ */
+.start-card{
+  background: var(--c-white);
+  border: 1px solid var(--c-sand);
+  padding: 3rem 2rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.start-card::before{
+  content: '';
+  position: absolute;
+  top: 0;left: 0;right: 0;
+  height: 4px;
+  background: var(--c-yellow);
+}
+
+.start-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--c-black);
+  color: var(--c-yellow);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.start-badge svg{
+  width: 14px;
+  height: 14px;
+  fill: var(--c-yellow);
+}
+
+.start-title{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.15;
+  color: var(--c-black);
+  margin-bottom: 0.75rem;
+}
+
+.start-subtitle{
+  font-size: 1rem;
+  color: var(--c-slate);
+  margin-bottom: 2rem;
+  max-width: 48ch;
+  line-height: 1.55;
+}
+
+.difficulty-label{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-mid);
+  margin-bottom: 0.75rem;
+}
+
+.difficulty-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.diff-btn{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.75rem 0.5rem;
+  border: 2px solid var(--c-sand);
+  background: var(--c-white);
+  color: var(--c-slate);
+  cursor: pointer;
+  transition: all 0.2s var(--ease-out-quart);
+  text-align: center;
+  position: relative;
+}
+
+.diff-btn:hover{
+  border-color: var(--c-yellow);
+  color: var(--c-black);
+}
+
+.diff-btn.selected{
+  border-color: var(--c-yellow);
+  background: var(--c-yellow);
+  color: var(--c-black);
+}
+
+.diff-btn .diff-desc{
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: var(--c-mid);
+  margin-top: 0.25rem;
+}
+
+.diff-btn.selected .diff-desc{
+  color: var(--c-charcoal);
+}
+
+.btn-start{
+  width: 100%;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem;
+  background: var(--c-black);
+  color: var(--c-yellow);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-out-quart);
+  letter-spacing: 0.03em;
+}
+
+.btn-start:hover{
+  background: var(--c-charcoal);
+}
+
+.btn-start:disabled{
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.start-footer{
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--c-mid);
+}
+
+.start-footer a{
+  color: var(--c-blue);
+  text-decoration: none;
+}
+
+/* ═══════════════════════════════
+   QUIZ SCREEN
+   ═══════════════════════════════ */
+.quiz-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-level-tag{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+}
+
+.quiz-level-tag.easy{background: #d5f5e3;color: #1a7a42}
+.quiz-level-tag.medium{background: #fef3cd;color: #8a6d00}
+.quiz-level-tag.hard{background: #fadbd8;color: #922b21}
+
+.quiz-score{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--c-slate);
+}
+.quiz-score span{color: var(--c-green)}
+
+/* Progress */
+.progress-bar{
+  height: 3px;
+  background: var(--c-sand);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+.progress-fill{
+  height: 100%;
+  background: var(--c-yellow);
+  transition: width 0.5s var(--ease-out-expo);
+}
+
+/* Question card */
+.q-card{
+  background: var(--c-white);
+  border: 1px solid var(--c-sand);
+  padding: 2rem 1.5rem;
+  animation: qIn 0.4s var(--ease-out-expo) both;
+}
+@keyframes qIn{
+  from{opacity:0;transform:translateX(30px)}
+  to{opacity:1;transform:translateX(0)}
+}
+
+.q-number{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-mid);
+  margin-bottom: 0.75rem;
+}
+
+.q-text{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
+  line-height: 1.45;
+  color: var(--c-black);
+  margin-bottom: 1.75rem;
+}
+
+/* Options */
+.options{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.opt-btn{
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding: 0.85rem 1rem;
+  border: 2px solid var(--c-sand);
+  background: var(--c-white);
+  color: var(--c-charcoal);
+  cursor: pointer;
+  transition: all 0.2s var(--ease-out-quart);
+}
+
+.opt-btn:hover:not(:disabled){
+  border-color: var(--c-yellow);
+  background: #fffef5;
+}
+
+.opt-btn .opt-letter{
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  border: 2px solid var(--c-sand);
+  color: var(--c-slate);
+  transition: all 0.2s;
+}
+
+.opt-btn:hover:not(:disabled) .opt-letter{
+  border-color: var(--c-yellow);
+  color: var(--c-black);
+}
+
+/* States */
+.opt-btn.correct{
+  border-color: var(--c-green);
+  background: #eafaf1;
+}
+.opt-btn.correct .opt-letter{
+  border-color: var(--c-green);
+  background: var(--c-green);
+  color: #fff;
+}
+.opt-btn.wrong{
+  border-color: var(--c-red);
+  background: #fdedec;
+}
+.opt-btn.wrong .opt-letter{
+  border-color: var(--c-red);
+  background: var(--c-red);
+  color: #fff;
+}
+.opt-btn.reveal-correct{
+  border-color: var(--c-green);
+  background: #eafaf1;
+}
+.opt-btn.reveal-correct .opt-letter{
+  border-color: var(--c-green);
+  color: var(--c-green);
+}
+
+.opt-btn:disabled{cursor: default}
+
+/* Feedback */
+.feedback{
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  display: none;
+  animation: feedIn 0.3s var(--ease-out-expo) both;
+}
+@keyframes feedIn{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.feedback.show{display: block}
+.feedback.correct-fb{
+  background: #eafaf1;
+  border-left: 3px solid var(--c-green);
+  color: #1a5c35;
+}
+.feedback.wrong-fb{
+  background: #fdedec;
+  border-left: 3px solid var(--c-red);
+  color: #7b241c;
+}
+.feedback strong{font-weight: 600}
+
+/* Next button */
+.btn-next{
+  margin-top: 1.25rem;
+  width: 100%;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.85rem;
+  background: var(--c-black);
+  color: var(--c-yellow);
+  border: none;
+  cursor: pointer;
+  display: none;
+  transition: background 0.2s;
+}
+.btn-next:hover{background: var(--c-charcoal)}
+.btn-next.show{display: block;animation: feedIn 0.3s var(--ease-out-expo) both}
+
+/* ═══════════════════════════════
+   RESULTS SCREEN
+   ═══════════════════════════════ */
+.results-card{
+  background: var(--c-white);
+  border: 1px solid var(--c-sand);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.results-card::before{
+  content: '';
+  position: absolute;
+  top: 0;left: 0;right: 0;
+  height: 4px;
+  background: var(--c-yellow);
+}
+
+.results-icon{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.results-title{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--c-black);
+  margin-bottom: 0.5rem;
+}
+
+.results-msg{
+  font-size: 1rem;
+  color: var(--c-slate);
+  margin-bottom: 2rem;
+  max-width: 42ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.55;
+}
+
+/* Score ring */
+.score-ring-wrap{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.score-ring{
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+.score-ring svg{
+  transform: rotate(-90deg);
+  width: 140px;
+  height: 140px;
+}
+.score-ring .bg{
+  fill: none;
+  stroke: var(--c-sand);
+  stroke-width: 8;
+}
+.score-ring .fg{
+  fill: none;
+  stroke: var(--c-yellow);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 408;
+  stroke-dashoffset: 408;
+  transition: stroke-dashoffset 1.2s var(--ease-out-expo) 0.3s;
+}
+.score-ring .pct{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--c-black);
+  line-height: 1;
+}
+.score-ring .pct small{
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--c-mid);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+/* Breakdown */
+.breakdown{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.breakdown-item{
+  padding: 1rem 0.5rem;
+  background: var(--c-cream);
+}
+.breakdown-label{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-mid);
+  margin-bottom: 0.35rem;
+}
+.breakdown-val{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--c-black);
+}
+.breakdown-val small{
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--c-mid);
+}
+
+.btn-retry{
+  width: 100%;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem;
+  background: var(--c-black);
+  color: var(--c-yellow);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 0.03em;
+}
+.btn-retry:hover{background: var(--c-charcoal)}
+
+.results-footer{
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--c-mid);
+}
+.results-footer a{
+  color: var(--c-blue);
+  text-decoration: none;
+}
+
+/* ─── Responsive ─── */
+@media(max-width:480px){
+  .start-card,.q-card,.results-card{padding: 1.5rem 1.25rem}
+  .difficulty-grid{grid-template-columns: 1fr;gap: 0.4rem}
+  .breakdown{grid-template-columns: 1fr;gap: 0.35rem}
+  .breakdown-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+  }
+  .breakdown-label{margin-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+<div class="hazard-stripe"></div>
+
+<div class="main">
+
+<!-- ═══ START ═══ -->
+<div class="screen active" id="screen-start">
+<div class="start-card">
+
+  <div class="start-badge">
+    <svg viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 4l7.53 13H4.47L12 6zm-1 5v4h2v-4h-2zm0 6v2h2v-2h-2z"/></svg>
+    Ex Knowledge Quiz
+  </div>
+
+  <h1 class="start-title">Test Your Explosion<br>Protection Knowledge</h1>
+  <p class="start-subtitle">30 questions across three difficulty levels covering ATEX &amp; IECEx fundamentals, zone classification, protection methods, gas groups, temperature classes, and more.</p>
+
+  <p class="difficulty-label">Select starting difficulty</p>
+  <div class="difficulty-grid">
+    <button class="diff-btn" data-level="easy" onclick="selectDifficulty('easy')">
+      Easy
+      <span class="diff-desc">Definitions &amp; concepts</span>
+    </button>
+    <button class="diff-btn" data-level="medium" onclick="selectDifficulty('medium')">
+      Medium
+      <span class="diff-desc">Application &amp; comparison</span>
+    </button>
+    <button class="diff-btn" data-level="hard" onclick="selectDifficulty('hard')">
+      Hard
+      <span class="diff-desc">Scenarios &amp; edge cases</span>
+    </button>
+  </div>
+
+  <button class="btn-start" id="btnStart" disabled onclick="startQuiz()">Begin Quiz →</button>
+
+  <p class="start-footer">An educational resource by <a href="https://exknowledge.com" target="_blank" rel="noopener">exknowledge.com</a> · powered by <a href="https://xshielder.com" target="_blank" rel="noopener">Xshielder</a></p>
+
+</div>
+</div>
+
+<!-- ═══ QUIZ ═══ -->
+<div class="screen" id="screen-quiz">
+  <div class="quiz-header">
+    <span class="quiz-level-tag" id="levelTag"></span>
+    <span class="quiz-score">Score: <span id="scoreDisplay">0</span>/30</span>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+  <div class="q-card" id="qCard">
+    <div class="q-number" id="qNumber"></div>
+    <div class="q-text" id="qText"></div>
+    <div class="options" id="optionsWrap"></div>
+    <div class="feedback" id="feedback"></div>
+    <button class="btn-next" id="btnNext" onclick="nextQuestion()">Next Question →</button>
+  </div>
+</div>
+
+<!-- ═══ RESULTS ═══ -->
+<div class="screen" id="screen-results">
+<div class="results-card">
+  <div class="results-icon" id="resultsIcon"></div>
+  <h2 class="results-title" id="resultsTitle"></h2>
+  <p class="results-msg" id="resultsMsg"></p>
+
+  <div class="score-ring-wrap">
+    <div class="score-ring">
+      <svg viewBox="0 0 140 140">
+        <circle class="bg" cx="70" cy="70" r="65"/>
+        <circle class="fg" id="ringFg" cx="70" cy="70" r="65"/>
+      </svg>
+      <div class="pct"><span id="pctVal">0</span>%<small>Overall</small></div>
+    </div>
+  </div>
+
+  <div class="breakdown" id="breakdown"></div>
+
+  <button class="btn-retry" onclick="resetQuiz()">Try Again ↻</button>
+  <p class="results-footer">Learn more at <a href="https://exknowledge.com" target="_blank" rel="noopener">exknowledge.com</a></p>
+</div>
+</div>
+
+</div><!-- .main -->
+
+<div class="hazard-stripe"></div>
+</div><!-- .app -->
+
+<script>
+/* ═══════════════════════════════
+   QUESTION BANK
+   ═══════════════════════════════ */
+const questions = {
+
+easy: [
+  {
+    q: "What three elements make up the 'Explosion Triangle'?",
+    opts: [
+      "Fuel, oxidizer, ignition source",
+      "Heat, pressure, confinement",
+      "Gas, dust, mist",
+      "Oxygen, nitrogen, hydrogen"
+    ],
+    ans: 0,
+    exp: "An explosion requires all three simultaneously: a fuel (gas, vapour, mist, or dust), an oxidizer (oxygen in air), and an ignition source with sufficient energy."
+  },
+  {
+    q: "What does the abbreviation 'ATEX' stand for?",
+    opts: [
+      "Advanced Technical Explosion Standard",
+      "ATmosphères EXplosibles",
+      "Anti-Thermal EXplosion",
+      "Automatic Testing for EXplosives"
+    ],
+    ans: 1,
+    exp: "ATEX comes from the French 'ATmosphères EXplosibles' and refers to the EU directive framework for equipment used in explosive atmospheres."
+  },
+  {
+    q: "What does 'LEL' stand for in explosion protection?",
+    opts: [
+      "Low Energy Limit",
+      "Lowest Explosive Level",
+      "Lower Explosive Limit",
+      "Limited Explosion Likelihood"
+    ],
+    ans: 2,
+    exp: "LEL (Lower Explosive Limit) is the minimum concentration of a flammable substance in air that can be ignited. Below the LEL, the mixture is too lean to burn."
+  },
+  {
+    q: "Which zone classification indicates an explosive gas atmosphere is present continuously or for long periods?",
+    opts: [
+      "Zone 2",
+      "Zone 1",
+      "Zone 22",
+      "Zone 0"
+    ],
+    ans: 3,
+    exp: "Zone 0 is where an explosive gas/vapour atmosphere is present continuously, for long periods, or frequently — typically >1,000 hours per year."
+  },
+  {
+    q: "What does the 'Ex' abbreviation in 'Ex equipment' stand for?",
+    opts: [
+      "External",
+      "Explosionsschutz (explosion protection)",
+      "Extra safety",
+      "Extreme environment"
+    ],
+    ans: 1,
+    exp: "Ex is short for 'Explosionsschutz,' the German word for explosion protection. It's used universally to denote equipment certified for use in explosive atmospheres."
+  },
+  {
+    q: "How many potential ignition sources are identified in IEC/EN 60079-0 and EN 1127-1?",
+    opts: [
+      "7",
+      "10",
+      "13",
+      "15"
+    ],
+    ans: 2,
+    exp: "The standards identify 13 potential ignition sources, including hot surfaces, flames, mechanical sparks, electrical sparks, static electricity, lightning, and several types of radiation."
+  },
+  {
+    q: "In the temperature class system (T1–T6), which class allows the LOWEST maximum surface temperature?",
+    opts: [
+      "T1 (450°C)",
+      "T3 (200°C)",
+      "T4 (135°C)",
+      "T6 (85°C)"
+    ],
+    ans: 3,
+    exp: "T6 is the most restrictive class, limiting equipment surface temperature to just 85°C. Higher T-numbers mean lower allowed temperatures: T6 > T5 > T4 > T3 > T2 > T1."
+  },
+  {
+    q: "Which gas group represents the MOST hazardous gases?",
+    opts: [
+      "IIA",
+      "IIB",
+      "IIC",
+      "Group I"
+    ],
+    ans: 2,
+    exp: "Gas group IIC (hydrogen, acetylene, carbon disulphide) is the most hazardous, with the smallest MESG and lowest minimum ignition energy. IIC-rated equipment can be used in IIA and IIB atmospheres."
+  },
+  {
+    q: "What does EPL stand for?",
+    opts: [
+      "Explosion Prevention Level",
+      "Equipment Protection Level",
+      "Electrical Performance Limit",
+      "Environmental Protection Label"
+    ],
+    ans: 1,
+    exp: "EPL (Equipment Protection Level) indicates how likely equipment is to become an ignition source. Levels range from 'a' (very high protection) to 'c' (enhanced protection)."
+  },
+  {
+    q: "A facility stores bags of combustible powder in a warehouse. What dust zone is most likely applicable to this storage area?",
+    opts: [
+      "Zone 20",
+      "Zone 21",
+      "Zone 22",
+      "Non-hazardous"
+    ],
+    ans: 2,
+    exp: "Zone 22 applies where an explosive dust cloud is not likely during normal operation, and if it occurs, persists only briefly. A warehouse storing bagged combustible powder with adequate housekeeping is a typical Zone 22 example."
+  }
+],
+
+medium: [
+  {
+    q: "Equipment certified for gas group IIB can be safely used in which of the following atmospheres?",
+    opts: [
+      "Hydrogen (IIC) atmospheres only",
+      "Ethylene (IIB) and methane (IIA) atmospheres",
+      "All gas group atmospheres (IIA, IIB, IIC)",
+      "Methane (IIA) atmospheres only"
+    ],
+    ans: 1,
+    exp: "IIB equipment covers IIB and IIA gases. The hierarchy is IIC > IIB > IIA — equipment rated for a higher group covers all lower groups, but not higher ones. IIB does NOT cover IIC (hydrogen/acetylene)."
+  },
+  {
+    q: "What is the fundamental difference between 'Ex d' and 'Ex e' protection methods?",
+    opts: [
+      "Ex d limits electrical energy; Ex e excludes the atmosphere",
+      "Ex d contains an internal explosion; Ex e prevents ignition sources from developing",
+      "Ex d uses encapsulation; Ex e uses pressurization",
+      "Ex d is for dust only; Ex e is for gas only"
+    ],
+    ans: 1,
+    exp: "Ex d (flameproof) contains an explosion inside a robust enclosure and cools escaping gases via flame paths. Ex e (increased safety) ensures no sparks, arcs, or hot surfaces can develop through enhanced design margins."
+  },
+  {
+    q: "An Ex ia intrinsically safe circuit is safe under which conditions?",
+    opts: [
+      "Normal operation only",
+      "Normal operation plus one fault",
+      "Normal operation plus two simultaneous faults, with a 1.5× safety factor",
+      "Any number of faults without limit"
+    ],
+    ans: 2,
+    exp: "Ex ia provides the highest level of intrinsic safety — it remains safe during normal operation AND with two independent simultaneous faults, applying a 1.5× safety factor. This is why Ex ia is the only IS level suitable for Zone 0."
+  },
+  {
+    q: "Why is hydrogen classified in gas group IIC despite having a high auto-ignition temperature (560°C, T1)?",
+    opts: [
+      "Because it is extremely flammable in any concentration",
+      "Because it has an extremely small MESG and very low minimum ignition energy (spark-sensitive)",
+      "Because it is lighter than air",
+      "Because its explosive range is narrow"
+    ],
+    ans: 1,
+    exp: "Gas groups are based on MESG and MIC ratio — not auto-ignition temperature. Hydrogen has an MESG of just 0.29 mm and MIE of 0.017 mJ, making it extremely easy to ignite by sparks despite being relatively hard to ignite by hot surfaces."
+  },
+  {
+    q: "What is the minimum IP rating required for an Ex tb dust enclosure (Zone 21)?",
+    opts: [
+      "IP5X",
+      "IP54",
+      "IP6X",
+      "IP68"
+    ],
+    ans: 2,
+    exp: "Both Ex ta (Zone 20) and Ex tb (Zone 21) require IP6X — complete dust-tightness. Only Ex tc (Zone 22) allows a lower rating of IP5X minimum."
+  },
+  {
+    q: "In ATEX marking 'II 2G', what does the '2G' signify?",
+    opts: [
+      "Group II, Generation 2",
+      "Category 2, Gas — suitable for Zone 1 and Zone 2",
+      "Two gas groups covered",
+      "Secondary gas protection level"
+    ],
+    ans: 1,
+    exp: "In ATEX markings, the number is the category (1, 2, or 3) and the letter indicates Gas (G) or Dust (D). Category 2G corresponds to EPL Gb and covers Zone 1 and Zone 2."
+  },
+  {
+    q: "Which protection method works by pressurizing an enclosure with clean air or inert gas to keep explosive atmospheres out?",
+    opts: [
+      "Ex e — Increased safety",
+      "Ex m — Encapsulation",
+      "Ex p — Pressurization",
+      "Ex q — Powder filling"
+    ],
+    ans: 2,
+    exp: "Ex p (pressurization) maintains positive pressure inside the enclosure, preventing explosive gas from entering. It requires a pre-purge of typically 5× the enclosure volume and continuous pressure monitoring."
+  },
+  {
+    q: "What color must be used for intrinsically safe (IS) circuit cables to enable identification?",
+    opts: [
+      "Red",
+      "Green",
+      "Blue",
+      "Yellow"
+    ],
+    ans: 2,
+    exp: "Intrinsically safe circuit cables must be blue for identification purposes. IS cables must also be routed separately from non-IS (power) cables to maintain circuit segregation."
+  },
+  {
+    q: "A chemical plant processes both ethylene (IIB) and hydrogen (IIC). What gas group rating must equipment in this area have?",
+    opts: [
+      "IIA — it's the safest choice",
+      "IIB — to match the ethylene",
+      "IIC — to cover the most hazardous gas present",
+      "IIB + H₂ — the special combined rating"
+    ],
+    ans: 2,
+    exp: "When multiple gases are present, equipment must be rated for the most hazardous group. Since hydrogen is IIC, all equipment must be IIC rated. IIB+H₂ would also work technically, but full IIC is the standard choice when IIC gases are present."
+  },
+  {
+    q: "You are inspecting a junction box and notice one cable entry has no blanking plug — just an open hole. What is the primary concern?",
+    opts: [
+      "It allows moisture to enter, causing corrosion only",
+      "It compromises both the IP rating and the flame path integrity of the enclosure",
+      "It creates an electrical short circuit risk",
+      "It only matters aesthetically during inspections"
+    ],
+    ans: 1,
+    exp: "Missing blanking plugs are one of the most common non-conformances found during inspections. An open cable entry destroys the enclosure's ingress protection (IP rating) and, for Ex d enclosures, compromises the flame path integrity that prevents explosion propagation."
+  }
+],
+
+hard: [
+  {
+    q: "Equipment is marked: 'Ex db [ib Ga] IIC T4 Gb'. What does the bracket notation '[ib Ga]' indicate?",
+    opts: [
+      "The equipment was previously certified as Ex ib but upgraded to Ex db",
+      "The flameproof enclosure contains intrinsically safe circuits rated for EPL Ga",
+      "The ib circuit is optional and can be removed",
+      "The equipment alternates between db and ib protection depending on the zone"
+    ],
+    ans: 1,
+    exp: "Bracket notation indicates a protection method used for circuits or components inside the main enclosure. Here, the main body is flameproof (db, EPL Gb), but it contains associated apparatus with intrinsically safe circuits rated at the higher EPL Ga level."
+  },
+  {
+    q: "A dust has a cloud ignition temperature (T_CL) of 400°C and a 5mm layer ignition temperature (T_5mm) of 280°C. What is the maximum allowable equipment surface temperature?",
+    opts: [
+      "175°C (from the T_CL rule: ⅔ × 673K = 449K = 175°C)",
+      "205°C (from the T_5mm rule: 280 − 75 = 205°C)",
+      "267°C (from T_CL: 400 × ⅔ = 267°C — directly in °C)",
+      "325°C (from T_5mm: 400 − 75 = 325°C)"
+    ],
+    ans: 1,
+    exp: "Apply both rules: T_CL rule: ⅔ × (400+273)K = ⅔ × 673 = 448.7K = 175.7°C. T_5mm rule: 280 − 75 = 205°C. The maximum surface temperature is the LOWER of the two: 175°C. Note the T_CL rule uses Kelvin for the calculation."
+  },
+  {
+    q: "An IECEx certificate number reads 'IECEx BAS 12.0034X'. What does the 'X' suffix mean?",
+    opts: [
+      "The certificate has expired and needs renewal",
+      "The equipment is a component (not a standalone product)",
+      "There are special conditions of use documented in the certificate",
+      "It's an experimental/prototype certification"
+    ],
+    ans: 2,
+    exp: "The 'X' suffix indicates special conditions of use that are documented in the certificate. These might include restricted ambient temperature, required mounting orientation, specific cable types, etc. You must always retrieve and read the full certificate when 'X' is present."
+  },
+  {
+    q: "Why can't you use an Ex e cable gland on an Ex d flameproof enclosure?",
+    opts: [
+      "Because Ex e glands are too large for Ex d enclosure threads",
+      "Because Ex e glands cannot withstand the internal explosion pressure that Ex d enclosures are designed to contain",
+      "Because the gas groups are incompatible between the two methods",
+      "Because Ex e and Ex d use different IP ratings"
+    ],
+    ans: 1,
+    exp: "Ex d enclosures are designed to contain an internal explosion (up to 10 bar). Cable glands on Ex d enclosures must also be Ex d certified to withstand this pressure. Ex e glands are designed only to prevent sparking, not to contain explosions."
+  },
+  {
+    q: "For an Ex d flameproof enclosure certified for gas group IIC, what is the minimum clearance distance that must be maintained around the enclosure?",
+    opts: [
+      "10 mm",
+      "25 mm",
+      "30 mm",
+      "40 mm"
+    ],
+    ans: 3,
+    exp: "Clearance distances around Ex d enclosures depend on gas group: IIA = 10 mm, IIB = 30 mm, IIC = 40 mm. These prevent accumulation of hot gases escaping from flame paths during an internal explosion."
+  },
+  {
+    q: "A refinery is installing equipment in an area where propane (IIA, AIT 470°C) and hydrogen sulphide (IIB, AIT 270°C) may both be present. What minimum gas group and temperature class must the equipment carry?",
+    opts: [
+      "IIA T1 — propane dictates both parameters",
+      "IIB T3 — hydrogen sulphide is more hazardous on both counts",
+      "IIC T3 — always select the highest possible ratings",
+      "IIB T1 — IIB covers the gas group, T1 covers all temperatures"
+    ],
+    ans: 1,
+    exp: "Equipment must match the most hazardous gas on EACH parameter independently. For gas group: H₂S is IIB (more hazardous than propane's IIA), so IIB is required. For temperature class: H₂S has AIT 270°C requiring T3 (max 200°C). So the answer is IIB T3."
+  },
+  {
+    q: "What is the key difference between ATEX Category 3G certification and Category 2G in terms of conformity assessment?",
+    opts: [
+      "Category 3G requires only internal production control plus technical documentation; Category 2G requires EC Type Examination by a Notified Body",
+      "Category 3G allows self-certification; Category 2G requires ISO 9001 only",
+      "There is no difference — both go through identical procedures",
+      "Category 3G doesn't need any documentation; Category 2G needs a full QMS audit"
+    ],
+    ans: 0,
+    exp: "Category 3G (EPL Gc) uses Module A — internal production control with technical documentation sent to a Notified Body. Category 2G (EPL Gb) requires Module B — EC Type Examination, plus either Module C1, D, or E for production conformity. This reflects the higher risk of Zone 1."
+  },
+  {
+    q: "An inspector finds that the flame paths on an Ex d junction box have been painted during routine maintenance. Why is this a critical finding?",
+    opts: [
+      "Paint changes the colour coding required by EN 60079-14",
+      "Paint acts as an insulator, increasing the risk of static discharge",
+      "Paint fills the precisely machined gap, preventing proper flame cooling and potentially allowing explosion propagation",
+      "Paint voids the IP rating of the enclosure"
+    ],
+    ans: 2,
+    exp: "Flame paths on Ex d enclosures have precisely machined gaps (0.1–0.5 mm). Paint fills these gaps, preventing them from cooling escaping hot gases below the ignition temperature. This defeats the entire containment principle and could allow an internal explosion to propagate externally."
+  },
+  {
+    q: "A 'U' suffix on a certification number (e.g., Baseefa12ATEX0345U) means the certified item is what?",
+    opts: [
+      "An upgrade from a previous certification version",
+      "Underwriters Laboratories approved",
+      "A component certificate — the item cannot be installed directly and must be part of a fully certified assembly",
+      "Unconditionally approved for all zones"
+    ],
+    ans: 2,
+    exp: "A 'U' suffix indicates a component certificate. This certifies a building block (empty enclosure, terminal block, cable gland) that is not a complete product. It must be incorporated into a fully certified assembly with its own complete certificate."
+  },
+  {
+    q: "You are responsible for a control room in a Zone 2 area. The room uses Ex pz pressurization. What happens to the zone classification inside the room when pressurization is active?",
+    opts: [
+      "It remains Zone 2 — pressurization only provides additional protection",
+      "It becomes Zone 1 — one step improvement",
+      "It becomes non-hazardous — Ex pz reduces Zone 2 to non-hazardous",
+      "It becomes Zone 0 — the pressure creates a higher risk inside"
+    ],
+    ans: 2,
+    exp: "Ex pz (pressurization, level z) specifically reduces Zone 2 inside the enclosure to non-hazardous. This allows standard (non-Ex) equipment to be used inside. Ex px reduces Zone 1 to non-hazardous, and Ex py reduces Zone 1 to Zone 2."
+  }
+]
+
+};
+
+/* Fix Q6 hard — the correct answer is actually B (IIB T3) */
+questions.hard[5].ans = 1;
+
+/* ═══════════════════════════════
+   STATE
+   ═══════════════════════════════ */
+let selectedLevel = null;
+const levelOrder = ['easy','medium','hard'];
+let allQ = [];
+let currentIdx = 0;
+let score = 0;
+let scores = {easy:0, medium:0, hard:0};
+let answered = false;
+
+/* ═══════════════════════════════
+   DIFFICULTY SELECTION
+   ═══════════════════════════════ */
+function selectDifficulty(level){
+  selectedLevel = level;
+  document.querySelectorAll('.diff-btn').forEach(b => b.classList.toggle('selected', b.dataset.level === level));
+  document.getElementById('btnStart').disabled = false;
+}
+
+/* ═══════════════════════════════
+   START
+   ═══════════════════════════════ */
+function startQuiz(){
+  if(!selectedLevel) return;
+
+  // Build question sequence starting from selected level
+  const startIdx = levelOrder.indexOf(selectedLevel);
+  allQ = [];
+  for(let i = startIdx; i < 3; i++){
+    const lvl = levelOrder[i];
+    questions[lvl].forEach(q => allQ.push({...q, level: lvl}));
+  }
+  for(let i = 0; i < startIdx; i++){
+    const lvl = levelOrder[i];
+    questions[lvl].forEach(q => allQ.push({...q, level: lvl}));
+  }
+
+  currentIdx = 0;
+  score = 0;
+  scores = {easy:0, medium:0, hard:0};
+
+  showScreen('screen-quiz');
+  renderQuestion();
+}
+
+/* ═══════════════════════════════
+   SCREENS
+   ═══════════════════════════════ */
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const el = document.getElementById(id);
+  el.classList.add('active');
+  // re-trigger animation
+  el.style.animation = 'none';
+  el.offsetHeight;
+  el.style.animation = '';
+}
+
+/* ═══════════════════════════════
+   RENDER QUESTION
+   ═══════════════════════════════ */
+function renderQuestion(){
+  answered = false;
+  const q = allQ[currentIdx];
+  const total = allQ.length;
+
+  // Level tag
+  const tag = document.getElementById('levelTag');
+  tag.textContent = q.level.charAt(0).toUpperCase() + q.level.slice(1);
+  tag.className = 'quiz-level-tag ' + q.level;
+
+  // Score
+  document.getElementById('scoreDisplay').textContent = score;
+
+  // Progress
+  document.getElementById('progressFill').style.width = ((currentIdx / total) * 100) + '%';
+
+  // Question
+  document.getElementById('qNumber').textContent = `Question ${currentIdx + 1} of ${total}`;
+  document.getElementById('qText').textContent = q.q;
+
+  // Options
+  const wrap = document.getElementById('optionsWrap');
+  wrap.innerHTML = '';
+  const letters = ['A','B','C','D'];
+  q.opts.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.innerHTML = `<span class="opt-letter">${letters[i]}</span><span>${opt}</span>`;
+    btn.addEventListener('click', () => handleAnswer(i));
+    wrap.appendChild(btn);
+  });
+
+  // Hide feedback & next
+  const fb = document.getElementById('feedback');
+  fb.className = 'feedback';
+  fb.textContent = '';
+  document.getElementById('btnNext').className = 'btn-next';
+
+  // Re-trigger card animation
+  const card = document.getElementById('qCard');
+  card.style.animation = 'none';
+  card.offsetHeight;
+  card.style.animation = '';
+}
+
+/* ═══════════════════════════════
+   HANDLE ANSWER
+   ═══════════════════════════════ */
+function handleAnswer(chosen){
+  if(answered) return;
+  answered = true;
+
+  const q = allQ[currentIdx];
+  const correct = chosen === q.ans;
+  const btns = document.querySelectorAll('.opt-btn');
+
+  // Disable all
+  btns.forEach(b => b.disabled = true);
+
+  // Mark chosen
+  if(correct){
+    btns[chosen].classList.add('correct');
+    score++;
+    scores[q.level]++;
+  } else {
+    btns[chosen].classList.add('wrong');
+    btns[q.ans].classList.add('reveal-correct');
+  }
+
+  // Update score display
+  document.getElementById('scoreDisplay').textContent = score;
+
+  // Feedback
+  const fb = document.getElementById('feedback');
+  fb.className = 'feedback show ' + (correct ? 'correct-fb' : 'wrong-fb');
+  fb.innerHTML = `<strong>${correct ? '✓ Correct!' : '✗ Incorrect.'}</strong> ${q.exp}`;
+
+  // Show next button
+  const nextBtn = document.getElementById('btnNext');
+  nextBtn.className = 'btn-next show';
+  nextBtn.textContent = currentIdx < allQ.length - 1 ? 'Next Question →' : 'See Results →';
+}
+
+/* ═══════════════════════════════
+   NEXT
+   ═══════════════════════════════ */
+function nextQuestion(){
+  currentIdx++;
+  if(currentIdx >= allQ.length){
+    showResults();
+  } else {
+    renderQuestion();
+  }
+}
+
+/* ═══════════════════════════════
+   RESULTS
+   ═══════════════════════════════ */
+function showResults(){
+  showScreen('screen-results');
+
+  const total = allQ.length;
+  const pct = Math.round((score / total) * 100);
+
+  // Icon, title, message
+  let icon, title, msg;
+  if(pct >= 90){
+    icon = '🏆'; title = 'Outstanding!';
+    msg = "You clearly know your explosion protection inside and out. Zone 0 certified knowledge.";
+  } else if(pct >= 70){
+    icon = '⚡'; title = 'Well Done!';
+    msg = "Solid understanding across most topics. A few areas to brush up on, but strong overall.";
+  } else if(pct >= 50){
+    icon = '🔧'; title = 'Getting There';
+    msg = "You've got the basics down, but there's room to deepen your knowledge. Review the areas you missed.";
+  } else if(pct >= 30){
+    icon = '📖'; title = 'Keep Studying';
+    msg = "The foundations are forming. Spend some time with the Ex Knowledge articles and come back stronger.";
+  } else {
+    icon = '🔬'; title = 'Time to Learn';
+    msg = "Explosion protection is complex — everyone starts somewhere. Head to exknowledge.com and start from the fundamentals.";
+  }
+
+  document.getElementById('resultsIcon').textContent = icon;
+  document.getElementById('resultsTitle').textContent = title;
+  document.getElementById('resultsMsg').textContent = msg;
+
+  // Ring animation
+  const circumference = 2 * Math.PI * 65; // ~408
+  const offset = circumference - (pct / 100) * circumference;
+  const ring = document.getElementById('ringFg');
+  ring.style.strokeDashoffset = circumference;
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      ring.style.strokeDashoffset = offset;
+    });
+  });
+  document.getElementById('pctVal').textContent = pct;
+
+  // Color the ring based on score
+  if(pct >= 70) ring.style.stroke = '#27ae60';
+  else if(pct >= 50) ring.style.stroke = 'var(--c-yellow)';
+  else ring.style.stroke = 'var(--c-red)';
+
+  // Breakdown
+  const bd = document.getElementById('breakdown');
+  bd.innerHTML = '';
+  levelOrder.forEach(lvl => {
+    const count = questions[lvl].length;
+    const s = scores[lvl];
+    const div = document.createElement('div');
+    div.className = 'breakdown-item';
+    div.innerHTML = `
+      <div class="breakdown-label">${lvl.charAt(0).toUpperCase()+lvl.slice(1)}</div>
+      <div class="breakdown-val">${s}<small>/${count}</small></div>
+    `;
+    bd.appendChild(div);
+  });
+}
+
+/* ═══════════════════════════════
+   RESET
+   ═══════════════════════════════ */
+function resetQuiz(){
+  selectedLevel = null;
+  document.querySelectorAll('.diff-btn').forEach(b => b.classList.remove('selected'));
+  document.getElementById('btnStart').disabled = true;
+  showScreen('screen-start');
+}
+</script>
+
+</body>
+</html>
