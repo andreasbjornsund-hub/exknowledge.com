@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com http://100.69.78.46:8484; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://script.google.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Ex Knowledge Quiz — ATEX & IECEx Explosion Protection</title>
   <meta name="description" content="Test your explosion protection knowledge with 30 questions covering ATEX & IECEx fundamentals, zone classification, protection methods, gas groups, and temperature classes.">
@@ -1378,7 +1378,7 @@ function nextQuestion(){
 /* ═══════════════════════════════
    EMAIL CAPTURE
    ═══════════════════════════════ */
-const QUIZ_API = 'http://100.69.78.46:8484/api/quiz/submit';
+const QUIZ_API = 'https://script.google.com/macros/s/AKfycbyRPb3DaLcQutGLGqw_btwwgoH8_vKdYvlLR8m6FNHuOwsPv_0uCmgWP8WFDtv9ZoYu/exec';
 
 function showEmailCapture(){
   const total = allQ.length;
@@ -1397,7 +1397,8 @@ function showEmailCapture(){
 function submitToAPI(name, email){
   const total = allQ.length;
   const pct = Math.round((score / total) * 100);
-  const payload = {
+  const params = new URLSearchParams({
+    action: 'submit',
     name: name || '',
     email: email || '',
     score: score,
@@ -1407,12 +1408,9 @@ function submitToAPI(name, email){
     medium_score: scores.medium,
     hard_score: scores.hard,
     start_level: selectedLevel
-  };
-  fetch(QUIZ_API, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(payload)
-  }).catch(() => {});
+  });
+  // Use image beacon for reliable cross-origin GET
+  new Image().src = QUIZ_API + '?' + params.toString();
 }
 
 function handleEmailSubmit(e){
