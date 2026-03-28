@@ -25,6 +25,10 @@
 {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".hero-desc", "h2"]
+    },
     "mainEntity": [
       {"@type": "Question", "name": "What is ATEX?", "acceptedAnswer": {"@type": "Answer", "text": "ATEX refers to two European directives for controlling explosive atmospheres: Directive 2014/34/EU covers equipment and protective systems, while Directive 1999/92/EC covers workplace safety. ATEX derives from the French 'Atmosphères Explosibles'. Any electrical or mechanical equipment used in classified hazardous areas within the EU must be ATEX certified."}},
       {"@type": "Question", "name": "What is the difference between ATEX and IECEx?", "acceptedAnswer": {"@type": "Answer", "text": "ATEX is a European Union regulatory requirement (mandatory in the EU). IECEx is an international voluntary certification scheme managed by the IEC. Equipment sold in the EU needs ATEX certification. IECEx certificates are accepted in over 35 countries and can speed up national approvals, but they don't replace ATEX within the EU."}},
