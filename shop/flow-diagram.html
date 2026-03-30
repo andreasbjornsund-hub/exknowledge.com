@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Xshielder — Order Management Process</title>
 <style>
+  /* ── LOGIN GATE ── */
+  #login-screen {
+    display: flex; align-items: center; justify-content: center;
+    height: 100vh; background: #f8fafc;
+    font-family: 'Instrument Sans', -apple-system, sans-serif;
+  }
+  .login-box { width: 360px; text-align: center; }
+  .login-box h1 { font-size: 28px; font-weight: 700; letter-spacing: 6px; color: #1e293b; margin-bottom: 4px; }
+  .login-box .login-sub { font-size: 12px; color: #64748b; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 32px; }
+  .login-box input { width: 100%; padding: 10px 14px; border: 1px solid #e2e8f0; border-radius: 2px; font-family: inherit; font-size: 14px; margin-bottom: 12px; outline: none; }
+  .login-box input:focus { border-color: #FF6B00; }
+  .login-box .login-error { color: #dc2626; font-size: 13px; margin-bottom: 8px; min-height: 20px; }
+  .login-box button { width: 100%; padding: 10px; background: #FF6B00; color: #fff; border: none; border-radius: 2px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; letter-spacing: 1px; }
+  .login-box button:hover { background: #e06000; }
+  #app-content { display: none; }
+
   @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -558,6 +574,17 @@
 </head>
 <body>
 
+<div id="login-screen">
+  <div class="login-box">
+    <h1>XSHIELDER</h1>
+    <div class="login-sub">Order Flow — Internal</div>
+    <input type="password" id="pw-input" placeholder="Password" onkeydown="if(event.key==='Enter')checkPw()">
+    <div class="login-error" id="pw-error"></div>
+    <button onclick="checkPw()">ENTER</button>
+  </div>
+</div>
+
+<div id="app-content">
 <div class="header">
   <div class="header-inner">
     <div class="header-left">
@@ -1059,6 +1086,24 @@ function showView(view) {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeAllNodes();
 });
+</script>
+</div><!-- end app-content -->
+
+<script>
+function checkPw() {
+  const pw = document.getElementById('pw-input').value;
+  if (pw === 'xshielder2026') {
+    sessionStorage.setItem('xs-flow-auth', '1');
+    showApp();
+  } else {
+    document.getElementById('pw-error').textContent = 'Incorrect password';
+  }
+}
+function showApp() {
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('app-content').style.display = 'block';
+}
+if (sessionStorage.getItem('xs-flow-auth') === '1') showApp();
 </script>
 </body>
 </html>
