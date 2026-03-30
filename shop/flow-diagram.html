@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xshielder — Order Management Process</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --orange: #FF6B00;
+    --orange-light: #FFF3EB;
+    --orange-mid: #FFD6B8;
+    --slate-900: #1e293b;
+    --slate-700: #334155;
+    --slate-500: #64748b;
+    --slate-400: #94a3b8;
+    --slate-300: #cbd5e1;
+    --slate-200: #e2e8f0;
+    --slate-100: #f1f5f9;
+    --slate-50: #f8fafc;
+    --white: #ffffff;
+    --red-50: #fef2f2;
+    --red-100: #fee2e2;
+    --red-500: #ef4444;
+    --red-600: #dc2626;
+    --green-50: #f0fdf4;
+    --green-100: #dcfce7;
+    --green-500: #22c55e;
+    --green-600: #16a34a;
+    --green-700: #15803d;
+    --blue-50: #eff6ff;
+    --blue-500: #3b82f6;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    --radius: 10px;
+    --radius-lg: 14px;
+  }
+
+  body {
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--slate-50);
+    color: var(--slate-900);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    background: var(--white);
+    border-bottom: 1px solid var(--slate-200);
+    padding: 28px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .logo-mark {
+    width: 36px; height: 36px;
+    background: var(--orange);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 700; font-size: 16px;
+  }
+  .header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--slate-900);
+    letter-spacing: -0.3px;
+  }
+  .header h1 span {
+    color: var(--slate-400);
+    font-weight: 400;
+    margin-left: 6px;
+  }
+
+  /* Toggle */
+  .toggle-group {
+    display: flex;
+    background: var(--slate-100);
+    border-radius: 8px;
+    padding: 3px;
+    border: 1px solid var(--slate-200);
+  }
+  .toggle-btn {
+    padding: 8px 20px;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--slate-500);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  .toggle-btn.active {
+    background: var(--white);
+    color: var(--slate-900);
+    box-shadow: var(--shadow-sm);
+  }
+  .toggle-btn:hover:not(.active) {
+    color: var(--slate-700);
+  }
+  .toggle-btn.before-btn.active {
+    color: var(--red-600);
+  }
+  .toggle-btn.after-btn.active {
+    color: var(--green-700);
+  }
+
+  /* Main */
+  .main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px;
+  }
+
+  /* Section label */
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 20px;
+    padding: 6px 14px;
+    border-radius: 100px;
+  }
+  .section-label.before {
+    background: var(--red-50);
+    color: var(--red-600);
+    border: 1px solid var(--red-100);
+  }
+  .section-label.after {
+    background: var(--green-50);
+    color: var(--green-700);
+    border: 1px solid var(--green-100);
+  }
+  .section-label svg {
+    width: 14px; height: 14px;
+  }
+
+  /* Flow panels */
+  .flow-panel {
+    display: none;
+  }
+  .flow-panel.active {
+    display: block;
+  }
+
+  /* Side-by-side */
+  .side-by-side {
+    display: none;
+  }
+  .side-by-side.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .side-by-side .flow-column {
+    min-width: 0;
+  }
+
+  /* Flow container */
+  .flow-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* Connector arrow */
+  .connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40px;
+    position: relative;
+  }
+  .connector-line {
+    width: 2px;
+    flex: 1;
+    background: var(--slate-300);
+  }
+  .connector-arrow {
+    width: 0; height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid var(--slate-300);
+  }
+  .connector.green .connector-line { background: var(--green-500); }
+  .connector.green .connector-arrow { border-top-color: var(--green-500); }
+
+  /* Branch connector */
+  .branch-wrap {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    max-width: 560px;
+    position: relative;
+  }
+  .branch-wrap::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    background: var(--green-500);
+  }
+  .branch-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .branch-col .connector { height: 24px; }
+
+  /* Merge connector */
+  .merge-connector {
+    width: 100%;
+    max-width: 560px;
+    position: relative;
+    height: 30px;
+  }
+  .merge-connector::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    background: var(--green-500);
+  }
+  .merge-connector::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: var(--green-500);
+  }
+  .merge-arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid var(--green-500);
+  }
+
+  /* Node card */
+  .node {
+    width: 100%;
+    max-width: 560px;
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  .node:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--slate-300);
+  }
+  .node.expanded {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--orange);
+  }
+  .node.pain {
+    border-left: 4px solid var(--red-500);
+  }
+  .node.gain {
+    border-left: 4px solid var(--green-500);
+  }
+  .node.pain:hover { border-color: var(--red-500); border-left-color: var(--red-500); }
+  .node.gain:hover { border-color: var(--green-500); border-left-color: var(--green-500); }
+  .node.pain.expanded { border-color: var(--red-500); }
+  .node.gain.expanded { border-color: var(--green-500); }
+
+  .node-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .node-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .node.pain .node-icon {
+    background: var(--red-50);
+  }
+  .node.gain .node-icon {
+    background: var(--green-50);
+  }
+  .node-content { flex: 1; min-width: 0; }
+  .node-step {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 4px;
+  }
+  .node.pain .node-step { color: var(--red-500); }
+  .node.gain .node-step { color: var(--green-600); }
+  .node-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--slate-900);
+    margin-bottom: 4px;
+  }
+  .node-subtitle {
+    font-size: 13px;
+    color: var(--slate-500);
+    line-height: 1.5;
+  }
+  .node-badge {
+    position: absolute;
+    top: 12px; right: 14px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .node.pain .node-badge {
+    background: var(--red-50);
+    color: var(--red-600);
+  }
+  .node.gain .node-badge {
+    background: var(--green-50);
+    color: var(--green-700);
+  }
+  .node-expand-icon {
+    position: absolute;
+    bottom: 10px; right: 14px;
+    width: 20px; height: 20px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--slate-400);
+    transition: transform 0.2s;
+    font-size: 12px;
+  }
+  .node.expanded .node-expand-icon {
+    transform: rotate(180deg);
+  }
+
+  /* Detail panel */
+  .node-details {
+    display: none;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--slate-100);
+  }
+  .node.expanded .node-details {
+    display: block;
+  }
+  .detail-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: var(--slate-700);
+    line-height: 1.5;
+  }
+  .detail-icon {
+    flex-shrink: 0;
+    width: 18px;
+    text-align: center;
+    font-size: 13px;
+  }
+  .detail-label {
+    font-weight: 600;
+    color: var(--slate-900);
+    min-width: 80px;
+  }
+
+  /* Side-by-side compact nodes */
+  .side-by-side .node {
+    max-width: 100%;
+    padding: 16px 18px;
+  }
+  .side-by-side .node-title { font-size: 14px; }
+  .side-by-side .node-subtitle { font-size: 12px; }
+  .side-by-side .node-icon { width: 34px; height: 34px; font-size: 15px; }
+  .side-by-side .branch-wrap { max-width: 100%; gap: 12px; }
+  .side-by-side .merge-connector { max-width: 100%; }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+    padding: 16px 20px;
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius);
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--slate-600);
+  }
+  .legend-swatch {
+    width: 16px; height: 16px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+  }
+  .legend-line {
+    width: 24px; height: 4px;
+    border-radius: 2px;
+  }
+
+  /* Summary section */
+  .summary-section {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--slate-200);
+  }
+  .summary-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--slate-900);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .summary-subtitle {
+    font-size: 14px;
+    color: var(--slate-500);
+    margin-bottom: 28px;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .summary-card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: box-shadow 0.2s;
+  }
+  .summary-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+  .summary-card-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .summary-card-icon.time { background: var(--orange-light); }
+  .summary-card-icon.error { background: var(--green-50); }
+  .summary-card-icon.scale { background: var(--blue-50); }
+  .summary-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--slate-900);
+    margin-bottom: 6px;
+  }
+  .summary-card .stat {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .summary-card p {
+    font-size: 13px;
+    color: var(--slate-500);
+    line-height: 1.6;
+  }
+  .summary-card ul {
+    list-style: none;
+    margin-top: 10px;
+  }
+  .summary-card ul li {
+    font-size: 13px;
+    color: var(--slate-600);
+    padding: 4px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .summary-card ul li::before {
+    content: '→';
+    color: var(--orange);
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 32px;
+    font-size: 12px;
+    color: var(--slate-400);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .side-by-side.active {
+      grid-template-columns: 1fr;
+    }
+    .header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .main { padding: 20px 16px; }
+    .node { padding: 16px 18px; }
+    .branch-wrap { flex-direction: column; gap: 0; }
+    .branch-wrap::before { display: none; }
+    .merge-connector { display: none; }
+  }
+  @media (max-width: 600px) {
+    .legend { flex-direction: column; gap: 10px; }
+    .summary-grid { grid-template-columns: 1fr; }
+    .header h1 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="logo-mark">X</div>
+      <h1>Xshielder<span>Order Management Flow</span></h1>
+    </div>
+    <div class="toggle-group">
+      <button class="toggle-btn before-btn" onclick="showView('before')" id="btn-before">Before (Manual)</button>
+      <button class="toggle-btn after-btn" onclick="showView('after')" id="btn-after">After (Automated)</button>
+      <button class="toggle-btn active" onclick="showView('compare')" id="btn-compare">Compare</button>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-swatch" style="background:var(--red-50);border-color:var(--red-500);border-left:4px solid var(--red-500);"></div>
+      Manual / Pain point
+    </div>
+    <div class="legend-item">
+      <div class="legend-swatch" style="background:var(--green-50);border-color:var(--green-500);border-left:4px solid var(--green-500);"></div>
+      Automated / Improvement
+    </div>
+    <div class="legend-item">
+      <div class="legend-line" style="background:var(--slate-300);"></div>
+      Manual flow
+    </div>
+    <div class="legend-item">
+      <div class="legend-line" style="background:var(--green-500);"></div>
+      Automated flow
+    </div>
+    <div class="legend-item">
+      <span style="font-size:14px;">👆</span>
+      Click any node for details
+    </div>
+  </div>
+
+  <!-- BEFORE Panel (standalone) -->
+  <div class="flow-panel" id="panel-before">
+    <div class="section-label before">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      Current Process — Manual
+    </div>
+    <div class="flow-container" id="flow-before"></div>
+  </div>
+
+  <!-- AFTER Panel (standalone) -->
+  <div class="flow-panel" id="panel-after">
+    <div class="section-label after">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      New Process — Automated
+    </div>
+    <div class="flow-container" id="flow-after"></div>
+  </div>
+
+  <!-- COMPARE side-by-side -->
+  <div class="side-by-side active" id="panel-compare">
+    <div class="flow-column">
+      <div class="section-label before">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        Before — Manual
+      </div>
+      <div class="flow-container" id="flow-before-compare"></div>
+    </div>
+    <div class="flow-column">
+      <div class="section-label after">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        After — Automated
+      </div>
+      <div class="flow-container" id="flow-after-compare"></div>
+    </div>
+  </div>
+
+  <!-- Summary Section -->
+  <div class="summary-section">
+    <div class="summary-title">Transformation Impact</div>
+    <div class="summary-subtitle">Estimated gains from automating the order management process</div>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-card-icon time">⏱️</div>
+        <h3>Time Savings</h3>
+        <div class="stat">~70%</div>
+        <p>Reduction in manual processing time per order</p>
+        <ul>
+          <li>PO data entry: 15–30 min → instant (OCR/AI)</li>
+          <li>Supplier PO creation: 20 min → auto-generated</li>
+          <li>Invoice creation: 15 min → auto-generated</li>
+          <li>Status updates: 10+ emails → automated notifications</li>
+        </ul>
+      </div>
+      <div class="summary-card">
+        <div class="summary-card-icon error">✅</div>
+        <h3>Error Reduction</h3>
+        <div class="stat">~90%</div>
+        <p>Fewer data entry and transcription errors</p>
+        <ul>
+          <li>Eliminates manual re-keying of PO data</li>
+          <li>Currency and pricing validated automatically</li>
+          <li>Serial numbers linked to orders digitally</li>
+          <li>No more lost emails or missed status updates</li>
+        </ul>
+      </div>
+      <div class="summary-card">
+        <div class="summary-card-icon scale">📈</div>
+        <h3>Scalability</h3>
+        <div class="stat">10×</div>
+        <p>Handle 10× order volume without adding headcount</p>
+        <ul>
+          <li>Process orders 24/7 via webshop</li>
+          <li>Multi-currency handled automatically</li>
+          <li>Real-time inventory prevents overselling</li>
+          <li>Consistent experience across all customers globally</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Xshielder — ATEX/IECEx Certified Device Protection · Order Management Process Overview
+</div>
+
+<!-- Detail Modal Overlay -->
+<div id="detail-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.15);z-index:200;backdrop-filter:blur(2px);" onclick="closeAllNodes()"></div>
+
+<script>
+const beforeSteps = [
+  {
+    step: 'Step 1',
+    icon: '📄',
+    title: 'Customer Sends Purchase Order',
+    subtitle: 'PO arrives as PDF via email — multiple currencies (USD, EUR, GBP, NOK, SAR) and formats',
+    badge: 'Manual',
+    type: 'pain',
+    details: [
+      { icon: '⚠️', text: '<strong>Pain:</strong> No standardized format — every customer sends a different PO layout' },
+      { icon: '🌍', text: '<strong>Currencies:</strong> USD, EUR, GBP, NOK, SAR — exchange rates checked manually' },
+      { icon: '📧', text: '<strong>Channel:</strong> Arrives via email, must be opened, read, and interpreted by staff' },
+      { icon: '⏱️', text: '<strong>Time:</strong> 15–30 minutes to read, interpret, and validate each PO' },
+    ]
+  },
+  {
+    step: 'Step 2',
+    icon: '📊',
+    title: 'Logged in Google Sheet',
+    subtitle: 'Order details manually typed into a shared spreadsheet',
+    badge: 'Manual',
+    type: 'pain',
+    details: [
+      { icon: '⚠️', text: '<strong>Pain:</strong> Risk of typos, missed fields, and copy-paste errors' },
+      { icon: '🔓', text: '<strong>No validation:</strong> Incorrect part numbers, quantities, or pricing can slip through' },
+      { icon: '👥', text: '<strong>Conflict risk:</strong> Multiple people editing same sheet simultaneously' },
+      { icon: '📉', text: '<strong>No audit trail:</strong> Hard to track who changed what, and when' },
+    ]
+  },
+  {
+    step: 'Step 3',
+    icon: '🏭',
+    title: 'Create POs to Production Partners',
+    subtitle: 'Xshielder manually creates and sends purchase orders to manufacturing partners',
+    badge: 'Manual',
+    type: 'pain',
+    details: [
+      { icon: '⚠️', text: '<strong>Pain:</strong> Re-keying same data again — duplicated effort and error risk' },
+      { icon: '📝', text: '<strong>Format:</strong> Each production partner may need a different PO format' },
+      { icon: '⏱️', text: '<strong>Time:</strong> ~20 minutes per supplier PO, plus back-and-forth emails' },
+      { icon: '📦', text: '<strong>No link:</strong> Customer order ↔ supplier PO tracked only in spreadsheet' },
+    ]
+  },
+  {
+    step: 'Step 4',
+    icon: '🧾',
+    title: 'Create Proforma Invoices',
+    subtitle: 'Manually create proforma invoices to send to customers',
+    badge: 'Manual',
+    type: 'pain',
+    details: [
+      { icon: '⚠️', text: '<strong>Pain:</strong> Manual invoice creation — formatting, calculations, currency conversion' },
+      { icon: '💱', text: '<strong>Currency:</strong> Must match customer\'s PO currency and terms' },
+      { icon: '📎', text: '<strong>Delivery:</strong> Invoice sent as PDF attachment via email' },
+      { icon: '🔗', text: '<strong>No link:</strong> Invoice not digitally connected to order or payment tracking' },
+    ]
+  },
+  {
+    step: 'Step 5',
+    icon: '🔧',
+    title: 'Production & Shipping',
+    subtitle: 'Production partners manufacture ATEX/IECEx cases and ship products',
+    badge: 'Waiting',
+    type: 'pain',
+    details: [
+      { icon: '⏳', text: '<strong>Visibility:</strong> No real-time production status — must email or call for updates' },
+      { icon: '📦', text: '<strong>Shipping:</strong> Tracking info shared ad-hoc, not centrally logged' },
+      { icon: '🔍', text: '<strong>Customer asks:</strong> "Where\'s my order?" triggers manual investigation' },
+    ]
+  },
+  {
+    step: 'Step 6',
+    icon: '🔢',
+    title: 'Serial Numbers Received',
+    subtitle: 'Production partners send serial numbers back — manually recorded',
+    badge: 'Manual',
+    type: 'pain',
+    details: [
+      { icon: '⚠️', text: '<strong>Pain:</strong> Serial numbers arrive via email — must be manually matched to orders' },
+      { icon: '📋', text: '<strong>Compliance:</strong> ATEX/IECEx requires full traceability — manual tracking is risky' },
+      { icon: '🗄️', text: '<strong>Storage:</strong> Recorded in spreadsheet — no searchable database' },
+    ]
+  },
+  {
+    step: 'Step 7',
+    icon: '📧',
+    title: 'Manual Status Updates',
+    subtitle: 'Status communicated to customers and partners via individual emails',
+    badge: 'Manual',
+    type: 'pain',
+    details: [
+      { icon: '⚠️', text: '<strong>Pain:</strong> Each update is a manual email — easy to forget or delay' },
+      { icon: '👥', text: '<strong>Stakeholders:</strong> Customers, distributors, and production partners all need different info' },
+      { icon: '🕐', text: '<strong>Delays:</strong> Customer often hears about delays only when they follow up' },
+      { icon: '📉', text: '<strong>Experience:</strong> Inconsistent communication undermines professional image' },
+    ]
+  },
+];
+
+const afterSteps = [
+  {
+    step: 'Step 1',
+    icon: '🛒',
+    title: 'Order Intake — Two Paths',
+    subtitle: 'Webshop or PO PDF — both feed into the same system automatically',
+    badge: 'Automated',
+    type: 'gain',
+    isBranch: true,
+    branchA: {
+      icon: '🌐',
+      title: 'Webshop Order',
+      subtitle: 'Customer orders directly; catalog synced from Introw PRM',
+    },
+    branchB: {
+      icon: '🤖',
+      title: 'PO PDF → OCR/AI',
+      subtitle: 'AI extracts order data from any PO format automatically',
+    },
+    details: [
+      { icon: '✅', text: '<strong>Gain:</strong> Two intake channels — self-service webshop + AI-powered PO processing' },
+      { icon: '🔄', text: '<strong>Introw PRM:</strong> Product catalog, pricing, and availability synced in real time' },
+      { icon: '🤖', text: '<strong>OCR/AI:</strong> Handles any PO format, any currency — no manual interpretation' },
+      { icon: '⚡', text: '<strong>Speed:</strong> Orders enter the system in seconds, not 15–30 minutes' },
+    ]
+  },
+  {
+    step: 'Step 2',
+    icon: '⚙️',
+    title: 'Automatic Order Logging',
+    subtitle: 'Order data validated and stored in the system — replaces Google Sheet',
+    badge: 'Automated',
+    type: 'gain',
+    details: [
+      { icon: '✅', text: '<strong>Gain:</strong> Single source of truth — no more spreadsheet chaos' },
+      { icon: '🔒', text: '<strong>Validation:</strong> Part numbers, quantities, and pricing verified automatically' },
+      { icon: '📊', text: '<strong>Audit trail:</strong> Full history of every change, who made it, and when' },
+      { icon: '🔗', text: '<strong>Connected:</strong> Order links to customer, supplier PO, invoice, and serial numbers' },
+    ]
+  },
+  {
+    step: 'Step 3',
+    icon: '🏭',
+    title: 'Auto-Generate Supplier POs',
+    subtitle: 'System creates purchase orders for production partners based on the order',
+    badge: 'Automated',
+    type: 'gain',
+    details: [
+      { icon: '✅', text: '<strong>Gain:</strong> Supplier POs generated instantly — no re-keying needed' },
+      { icon: '📋', text: '<strong>Formats:</strong> Each partner receives PO in their preferred format' },
+      { icon: '🔗', text: '<strong>Linked:</strong> Customer order ↔ supplier PO always connected' },
+      { icon: '⏱️', text: '<strong>Time saved:</strong> 20 minutes → seconds per supplier PO' },
+    ]
+  },
+  {
+    step: 'Step 4',
+    icon: '🧾',
+    title: 'Auto-Generate Proforma Invoices',
+    subtitle: 'Invoices created automatically in correct currency and format',
+    badge: 'Automated',
+    type: 'gain',
+    details: [
+      { icon: '✅', text: '<strong>Gain:</strong> Invoices generated instantly with correct pricing and currency' },
+      { icon: '💱', text: '<strong>Multi-currency:</strong> USD, EUR, GBP, NOK, SAR — handled automatically' },
+      { icon: '📧', text: '<strong>Delivery:</strong> Sent automatically to customer with PDF attachment' },
+      { icon: '🔗', text: '<strong>Tracking:</strong> Invoice linked to order, payment status tracked' },
+    ]
+  },
+  {
+    step: 'Step 5',
+    icon: '📍',
+    title: 'Production Tracking',
+    subtitle: 'Serial numbers received and linked to orders automatically',
+    badge: 'Automated',
+    type: 'gain',
+    details: [
+      { icon: '✅', text: '<strong>Gain:</strong> Serial numbers scanned/imported and auto-linked to the correct order' },
+      { icon: '📋', text: '<strong>Compliance:</strong> ATEX/IECEx traceability maintained digitally — always audit-ready' },
+      { icon: '🔍', text: '<strong>Lookup:</strong> Instant serial number → order → customer lookup' },
+      { icon: '📦', text: '<strong>Shipping:</strong> Tracking integrated with carrier APIs' },
+    ]
+  },
+  {
+    step: 'Step 6',
+    icon: '📦',
+    title: 'Fulfillment & Inventory',
+    subtitle: 'Inventory updated, shipping arranged, stock levels tracked in real time',
+    badge: 'Automated',
+    type: 'gain',
+    details: [
+      { icon: '✅', text: '<strong>Gain:</strong> Real-time inventory — no overselling, no surprises' },
+      { icon: '🔔', text: '<strong>Reorder alerts:</strong> System notifies when stock falls below threshold' },
+      { icon: '📊', text: '<strong>Dashboard:</strong> Live view of stock levels, incoming, and committed inventory' },
+      { icon: '🌍', text: '<strong>Global:</strong> Supports multiple warehouses and shipping destinations' },
+    ]
+  },
+  {
+    step: 'Step 7',
+    icon: '🔔',
+    title: 'Automated Notifications',
+    subtitle: 'Customers and partners notified at every stage — no manual emails',
+    badge: 'Automated',
+    type: 'gain',
+    details: [
+      { icon: '✅', text: '<strong>Gain:</strong> Order confirmed → In production → Shipped → Delivered — all automated' },
+      { icon: '👥', text: '<strong>Stakeholders:</strong> Customers, distributors, and partners each get relevant updates' },
+      { icon: '📱', text: '<strong>Channels:</strong> Email + portal + optional SMS/WhatsApp' },
+      { icon: '🏆', text: '<strong>Experience:</strong> Professional, consistent communication builds trust and retention' },
+    ]
+  },
+];
+
+function createNode(data, id) {
+  const el = document.createElement('div');
+  el.className = `node ${data.type}`;
+  el.id = id;
+  el.onclick = (e) => { e.stopPropagation(); toggleNode(id); };
+  el.innerHTML = `
+    <div class="node-badge">${data.badge}</div>
+    <div class="node-header">
+      <div class="node-icon">${data.icon}</div>
+      <div class="node-content">
+        <div class="node-step">${data.step}</div>
+        <div class="node-title">${data.title}</div>
+        <div class="node-subtitle">${data.subtitle}</div>
+      </div>
+    </div>
+    <div class="node-details">
+      ${data.details.map(d => `
+        <div class="detail-row">
+          <div class="detail-icon">${d.icon}</div>
+          <div>${d.text}</div>
+        </div>
+      `).join('')}
+    </div>
+    <div class="node-expand-icon">▼</div>
+  `;
+  return el;
+}
+
+function createConnector(green) {
+  const c = document.createElement('div');
+  c.className = `connector${green ? ' green' : ''}`;
+  c.innerHTML = '<div class="connector-line"></div><div class="connector-arrow"></div>';
+  return c;
+}
+
+function createBranchNode(data, id) {
+  // Wrapper
+  const wrapper = document.createElement('div');
+  wrapper.style.cssText = 'width:100%;max-width:560px;display:flex;flex-direction:column;align-items:center;';
+
+  // Main clickable node
+  const mainNode = createNode(data, id);
+  wrapper.appendChild(mainNode);
+
+  // Connector down to branch split
+  wrapper.appendChild(createConnector(true));
+
+  // Branch container
+  const branchWrap = document.createElement('div');
+  branchWrap.className = 'branch-wrap';
+
+  // Branch A
+  const colA = document.createElement('div');
+  colA.className = 'branch-col';
+  const connA = createConnector(true);
+  connA.style.height = '20px';
+  colA.appendChild(connA);
+  const nodeA = document.createElement('div');
+  nodeA.className = 'node gain';
+  nodeA.style.cursor = 'default';
+  nodeA.innerHTML = `
+    <div class="node-header">
+      <div class="node-icon">${data.branchA.icon}</div>
+      <div class="node-content">
+        <div class="node-title" style="font-size:14px;">${data.branchA.title}</div>
+        <div class="node-subtitle">${data.branchA.subtitle}</div>
+      </div>
+    </div>
+  `;
+  colA.appendChild(nodeA);
+  branchWrap.appendChild(colA);
+
+  // Branch B
+  const colB = document.createElement('div');
+  colB.className = 'branch-col';
+  const connB = createConnector(true);
+  connB.style.height = '20px';
+  colB.appendChild(connB);
+  const nodeB = document.createElement('div');
+  nodeB.className = 'node gain';
+  nodeB.style.cursor = 'default';
+  nodeB.innerHTML = `
+    <div class="node-header">
+      <div class="node-icon">${data.branchB.icon}</div>
+      <div class="node-content">
+        <div class="node-title" style="font-size:14px;">${data.branchB.title}</div>
+        <div class="node-subtitle">${data.branchB.subtitle}</div>
+      </div>
+    </div>
+  `;
+  colB.appendChild(nodeB);
+  branchWrap.appendChild(colB);
+
+  wrapper.appendChild(branchWrap);
+
+  // Merge connector
+  const merge = document.createElement('div');
+  merge.className = 'merge-connector';
+  merge.innerHTML = '<div class="merge-arrow"></div>';
+  wrapper.appendChild(merge);
+
+  return wrapper;
+}
+
+function buildFlow(container, steps, prefix, isGreen) {
+  steps.forEach((step, i) => {
+    const nodeId = `${prefix}-${i}`;
+    if (step.isBranch) {
+      container.appendChild(createBranchNode(step, nodeId));
+    } else {
+      container.appendChild(createNode(step, nodeId));
+    }
+    if (i < steps.length - 1) {
+      container.appendChild(createConnector(isGreen));
+    }
+  });
+}
+
+// Build all flows
+buildFlow(document.getElementById('flow-before'), beforeSteps, 'before', false);
+buildFlow(document.getElementById('flow-after'), afterSteps, 'after', true);
+buildFlow(document.getElementById('flow-before-compare'), beforeSteps, 'before-c', false);
+buildFlow(document.getElementById('flow-after-compare'), afterSteps, 'after-c', true);
+
+function toggleNode(id) {
+  const node = document.getElementById(id);
+  if (!node) return;
+  const wasExpanded = node.classList.contains('expanded');
+  // Close all others
+  document.querySelectorAll('.node.expanded').forEach(n => n.classList.remove('expanded'));
+  document.getElementById('detail-overlay').style.display = 'none';
+  if (!wasExpanded) {
+    node.classList.add('expanded');
+    document.getElementById('detail-overlay').style.display = 'block';
+  }
+}
+
+function closeAllNodes() {
+  document.querySelectorAll('.node.expanded').forEach(n => n.classList.remove('expanded'));
+  document.getElementById('detail-overlay').style.display = 'none';
+}
+
+function showView(view) {
+  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(`btn-${view}`).classList.add('active');
+  document.getElementById('panel-before').classList.toggle('active', view === 'before');
+  document.getElementById('panel-after').classList.toggle('active', view === 'after');
+  const compare = document.getElementById('panel-compare');
+  if (view === 'compare') {
+    compare.classList.add('active');
+  } else {
+    compare.classList.remove('active');
+  }
+  closeAllNodes();
+}
+
+// Close on Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeAllNodes();
+});
+</script>
+</body>
+</html>
