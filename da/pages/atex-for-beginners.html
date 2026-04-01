@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>ATEX for begyndere: En introduktion i et letforståeligt sprog...</title>
+  <meta name="description" content="New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.">
+  <link rel="canonical" href="https://exknowledge.com/da/pages/atex-for-beginners.html">
+  <meta property="og:title" content="ATEX for Beginners: A Plain-Language Introduction. ExKnowledge">
+  <meta property="og:description" content="New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.">
+  <meta property="og:url" content="https://exknowledge.com/pages/atex-for-beginners.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ATEX for Beginners: A Plain-Language Introduction. ExKnowledge">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">  <script type="application/ld+json">
+[
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;TechArticle&quot;,
+    &quot;headline&quot;: &quot;ATEX for Beginners: A Plain-Language Introduction. ExKnowledge&quot;,
+    &quot;description&quot;: &quot;New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.&quot;,
+    &quot;url&quot;: &quot;https://exknowledge.com/pages/atex-for-beginners.html&quot;,
+    &quot;image&quot;: &quot;https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1000&amp;q=80&quot;,
+    &quot;author&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;publisher&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;inLanguage&quot;: &quot;en&quot;,
+    &quot;isPartOf&quot;: {
+      &quot;@type&quot;: &quot;WebSite&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;datePublished&quot;: &quot;2026-02-01&quot;,
+    &quot;dateModified&quot;: &quot;2026-03-08&quot;,
+    &quot;mainEntityOfPage&quot;: &quot;https://exknowledge.com/pages/atex-for-beginners.html&quot;,
+    &quot;about&quot;: {
+      &quot;@type&quot;: &quot;Thing&quot;,
+      &quot;name&quot;: &quot;Explosion Protection&quot;
+    }
+  },
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+    &quot;itemListElement&quot;: [
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 1,
+        &quot;name&quot;: &quot;Home&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/&quot;
+      },
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 2,
+        &quot;name&quot;: &quot;ATEX for Beginners&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/pages/atex-for-beginners.html&quot;
+      }
+    ]
+  }
+]
+  </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#x27;gtm.start&#x27;:
+new Date().getTime(),event:&#x27;gtm.js&#x27;});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=&#x27;dataLayer&#x27;?&#x27;&amp;l=&#x27;+l:&#x27;&#x27;;j.async=true;j.src=
+&#x27;https://www.googletagmanager.com/gtm.js?id=&#x27;+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,&#x27;script&#x27;,&#x27;dataLayer&#x27;,&#x27;GTM-5VSBXBSL&#x27;);</script>
+<!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/atex-for-beginners.html">
+                      <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/atex-for-beginners.html">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav">
+  <div class="container">
+    <a href="/da/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Viden</span></a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-book-open-text"></i>Viden<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+        <li><a href="/da/pages/fundamentals.html"><i class="ph ph-fire"></i> Grundlæggende</a></li>
+        <li><a href="/da/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zoneklassificering</a></li>
+        <li><a href="/da/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Beskyttelsesmetoder</a></li>
+        <li><a href="/da/pages/standards.html"><i class="ph ph-scales"></i> Standarder og forskrifter</a></li>
+        <li><a href="/da/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperaturklasser</a></li>
+        <li><a href="/da/pages/gas-groups.html"><i class="ph ph-flame"></i> Gasgrupper</a></li>
+        <li><a href="/da/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Udstyrskategorier</a></li>
+        <li><a href="/da/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Hurtig reference</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-folder-open"></i>Ressourcer<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Undersøgelse</a></li>
+          <li><a href="/da/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate"></i> Ordliste</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Kurser <span class="badge-soon">snart</span></a></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinarer <span class="badge-soon">snart</span></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i>Fællesskab<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Begivenheder <span class="badge-soon">snart</span></a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partnere <span class="badge-soon">snart</span></a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Branchelinks <span class="badge-soon">snart</span></a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> Om</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/atex-for-beginners.html" selected>🇬🇧 Engelsk</option>
+      <option value="/de/pages/atex-for-beginners.html">🇩🇪 Tysk</option>
+      <option value="/no/pages/atex-for-beginners.html">🇳🇴 Norsk</option>
+      <option value="/da/pages/atex-for-beginners.html">🇩🇰 Dansk</option>
+      <option value="/sv/pages/atex-for-beginners.html">🇸🇪 Svensk</option>
+      <option value="/fi/pages/atex-for-beginners.html">🇫🇮 Finsk</option>
+      <option value="/es/pages/atex-for-beginners.html">🇪🇸 Spansk</option>
+      <option value="/nl/pages/atex-for-beginners.html">🇳🇱 Nederlands</option>
+      <option value="/pt/pages/atex-for-beginners.html">🇵🇹 Portugisisk</option>
+      <option value="/it/pages/atex-for-beginners.html">🇮🇹 Italiensk</option>
+      <option value="/ar/pages/atex-for-beginners.html">🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1000&q=80" alt="ATEX for Beginners" loading="lazy" width="820" height="240">
+        <h1>ATEX for begyndere</h1>
+
+        <p class="last-updated" style="font-size:13px;color:var(--text-muted);margin:-12px 0 24px;"><i class="ph ph-clock"></i> Senest opdateret: marts 2026 · Baseret på IEC 60079 (2020-udgaven) og ATEX 2014/34/EU</p>
+<section>
+<h2>Hvad er ATEX?</h2>
+<p>ATEX er et sæt EU-regler, der regulerer, hvordan arbejdspladser og udstyr håndterer risikoen for eksplosioner. Navnet stammer fra det franske <em>&quot;ATmosphères EXplosibles&quot;</em>. eksplosive atmosfærer.</p>
+<p>I praksis besvarer ATEX to spørgsmål:</p>
+<ol>
+  <li><strong>For arbejdsgivere:</strong> Hvor i din virksomhed kan der opstå en eksplosion, og hvad skal du gøre ved det?</li>
+  <li><strong>For udstyrsproducenter:</strong> Hvilke standarder skal dit produkt opfylde, før det kan sælges til brug på disse steder?</li>
+</ol>
+<p>Hvis du arbejder inden for olie og gas, kemisk produktion, lægemidler, fødevareforarbejdning, minedrift eller en hvilken som helst branche, der håndterer brandfarlige gasser, dampe eller <a href="/da/pages/dust-explosion-protection.html">brændbart støv</a>, gælder ATEX for dig.</p>
+</section>
+
+<section>
+<h2>Hvorfor har vi brug for ATEX?</h2>
+<p>Der skal tre ting til for at der kan opstå en eksplosion:</p>
+<ol>
+  <li><strong>Brændstof</strong>. En brandfarlig gas, damp, tåge eller brændbart støv</li>
+  <li><strong>Luft</strong>. Ilt (findes overalt)</li>
+  <li><strong>En antændelseskilde</strong>. En gnist, en varm overflade, en flamme eller endda statisk elektricitet</li>
+</ol>
+<p>Dette kaldes brandtrekanten. Hvis alle tre elementer er til stede på samme tid og sted, opstår der en eksplosion.</p>
+<p>Mange industrielle processer skaber uundgåeligt brændbare atmosfærer. Et raffinaderi forarbejder kulbrinter. En mølle genererer brændbart støv. Et malerværksted bruger flygtige opløsningsmidler. Man kan ikke fjerne brændstoffet, og man kan ikke fjerne luften. Derfor ligger fokus på at kontrollere antændelseskilder og styre, hvor der kan dannes brændbare atmosfærer.</p>
+<p>Det er det, ATEX gør.</p>
+</section>
+
+<section>
+<h2>De to ATEX-direktiver</h2>
+<p>Der findes faktisk to separate ATEX-regler:</p>
+
+<h3>1. Udstyrsdirektivet (2014/34/EU)</h3>
+<p>Dette fortæller <strong>producenterne,</strong> hvad udstyret skal kunne, før det kan sælges til brug i eksplosive atmosfærer. Udstyret skal testes, <a href="/da/pages/certification.html">certificeres</a> og mærkes med et CE-mærke. Det er det, folk normalt mener, når de siger &quot;ATEX-certificering&quot;. For internationale markeder, se også <a href="/da/pages/atex-vs-iecex.html">ATEX vs. IECEx</a>.</p>
+
+<h3>2. Arbejdspladsdirektivet (1999/92/EF)</h3>
+<p>Dette fortæller <strong>arbejdsgivere,</strong> hvad de skal gøre for at beskytte arbejdstagerne. De skal identificere, hvor der kan dannes eksplosive atmosfærer, klassificere disse områder i zoner, vælge det rigtige udstyr til hver zone og dokumentere alt i et eksplosionsbeskyttelsesdokument.</p>
+
+<p>Begge direktiver fungerer sammen. Producenten fremstiller sikkert udstyr; arbejdsgiveren placerer det på det rette sted.</p>
+<p><a href="/da/pages/atex-directive.html"><i class="ph ph-scales"></i> → Detaljeret vejledning til ATEX-direktivet</a></p>
+</section>
+
+<section>
+<h2>Zoner: Risikovurdering</h2>
+<p>Ikke alle dele af et anlæg er lige farlige. I nogle områder er der altid brandfarlige gasser til stede, i andre kun sjældent. ATEX bruger et <strong>zonesystem</strong> til at klassificere hvert område efter, hvor ofte der forekommer en eksplosiv atmosfære:</p>
+
+<h3>For gas, damp eller tåge</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zone</th>
+      <th>Hvor ofte?</th>
+      <th>I klart sprog</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zone 0</strong></td>
+      <td>Altid eller det meste af tiden</td>
+      <td>Inde i en brændstoftank, inde i en kemisk reaktor</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 1</strong></td>
+      <td>Nogle gange, under normal drift</td>
+      <td>I nærheden af pumpepakninger, i nærheden af udluftningsåbninger, omkring påfyldningssteder</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 2</strong></td>
+      <td>Sjældent og kun kortvarigt</td>
+      <td>I nærheden af rørflanger, omkring udstyr, der kan lække, hvis noget går i stykker</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>For brændbart støv</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zone</th>
+      <th>Hvor ofte?</th>
+      <th>I et letforståeligt sprog</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zone 20</strong></td>
+      <td>Altid eller det meste af tiden</td>
+      <td>Inde i siloer, inde i formalingudstyr</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 21</strong></td>
+      <td>Nogle gange under normal drift</td>
+      <td>Omkring sækfyldestationer, åbne transportbåndsoverførsler</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 22</strong></td>
+      <td>Sjældent og kun kortvarigt</td>
+      <td>Områder, hvor der kan samle sig støvlag, som kan forstyrres</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Jo højere zonenummeret er, desto lavere er risikoen.</strong> Zone 0 er den farligste; Zone 2 er den mindst farlige. Områder uden for alle zoner kaldes &quot;sikre områder&quot; eller &quot;ikke-farlige&quot;.</p>
+<p><a href="/da/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> → Fuldstændig vejledning til zoneklassificering</a></p>
+</section>
+
+<section>
+<h2>Udstyrskategorier: Tilpasning af udstyr til zoner</h2>
+<p>Hver zone kræver udstyr, der er konstrueret til et bestemt sikkerhedsniveau. ATEX bruger <strong>kategorier</strong> til at klassificere udstyr:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Udstyrskategori</th>
+      <th>Kan bruges i</th>
+      <th>Sikkerhedsniveau</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Kategori 1</strong></td>
+      <td>Zone 0, 1 eller 2 (gas) / Zone 20, 21 eller 22 (støv)</td>
+      <td>Meget højt. Sikkert, selvom to ting går galt samtidigt</td>
+    </tr>
+    <tr>
+      <td><strong>Kategori 2</strong></td>
+      <td>Zone 1 eller 2 (gas) / Zone 21 eller 22 (støv)</td>
+      <td>Høj. Sikker, selvom én ting går galt</td>
+    </tr>
+    <tr>
+      <td><strong>Kategori 3</strong></td>
+      <td>Kun zone 2 (gas) / Kun zone 22 (støv)</td>
+      <td>Normal. Sikker under normal drift</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Enkel regel:</strong> Udstyr i højere kategorier kan altid bruges i zoner med lavere risiko. Udstyr i kategori 1 fungerer overalt. Udstyr i kategori 3 fungerer kun i zone 2 (det område, der er klassificeret som det med lavest risiko).</p>
+<p><a href="/da/pages/epl.html"><i class="ph ph-gauge"></i> → Forklaring af udstyrets beskyttelsesniveauer</a></p>
+</section>
+
+<section>
+<h2>Beskyttelsesmetoder: Hvordan udstyr gøres sikkert</h2>
+<p>Der findes flere forskellige måder at gøre udstyr sikkert til brug i eksplosive atmosfærer. Hver metode har et bogstavkode:</p>
+
+<h3>De mest almindelige metoder</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Kode</th>
+      <th>Navn</th>
+      <th>Sådan fungerer det (enkelt forklaret)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ex d</strong></td>
+      <td>Flammesikker (eksplosionssikker)</td>
+      <td>Tung metalkasse, der kan modstå en intern eksplosion og forhindre flammerne i at trænge ud</td>
+    </tr>
+    <tr>
+      <td><strong>Ex i</strong></td>
+      <td>Egensikker</td>
+      <td>Begrænser den elektriske effekt så meget, at den ikke kan skabe en gnist, der er stærk nok til at antænde noget</td>
+    </tr>
+    <tr>
+      <td><strong>Ex e</strong></td>
+      <td>Øget sikkerhed</td>
+      <td>Forhindrer, at der overhovedet opstår gnister og lysbuer (ingen bevægelige kontakter, ekstra afstand)</td>
+    </tr>
+    <tr>
+      <td><strong>Ex p</strong></td>
+      <td>Trykregulering</td>
+      <td>Opretholder et tryk af ren luft inde i kabinettet, så der ikke kan trænge gas ind</td>
+    </tr>
+    <tr>
+      <td><strong>Ex m</strong></td>
+      <td>Indkapsling</td>
+      <td>Forsegler de farlige dele i fast harpiks, så intet kan slippe ud</td>
+    </tr>
+    <tr>
+      <td><strong>Ex t</strong></td>
+      <td>Beskyttelse ved hjælp af kabinet (støv)</td>
+      <td>Støvtæt kabinet, der holder brændbart støv ude og begrænser overfladetemperaturen</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Forskellige beskyttelsesmetoder passer til forskellige anvendelser. Tunge motorer bruger Ex d. Følsomme instrumenter bruger Ex i. Terminalbokse bruger Ex e. Store kontrolpaneler bruger Ex p.</p>
+<p><a href="/da/pages/protection-methods.html"><i class="ph ph-shield-check"></i> → Alle beskyttelsesmetoder i detaljer</a></p>
+<p><a href="/da/pages/explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i> → Sammenligning af eksplosionssikring og egensikkerhed</a></p>
+</section>
+
+<section>
+<h2>Læsning af mærkaten</h2>
+<p>ATEX-udstyr har en mærkat (typerplade) med kodede oplysninger. Sådan ser en typisk mærkat ud:</p>
+<pre><code>CE 0344
+ ⚠  II 2 G Ex d IIC T4 Gb
+</code></pre>
+<p>Forklaring (se <a href="/da/pages/how-to-read-atex-nameplate.html">hvordan man læser et ATEX-typenummer</a> for flere eksempler):</p>
+<ul>
+  <li><strong>CE 0344</strong>. EU-godkendt, testet af certificeringsorgan nummer 0344</li>
+  <li><strong>⚠</strong>. ATEX-symbol (sekskant)</li>
+  <li><strong>II</strong>. Gruppe II (overfladeindustrier, ikke minedrift)</li>
+  <li><strong>2</strong>. Kategori 2 (egnet til zone 1)</li>
+  <li><strong>G</strong>. Til gasatmosfærer</li>
+  <li><strong>Ex d</strong>. Beskyttelsesmetode: eksplosionssikkert kabinet</li>
+  <li><strong>IIC</strong>. Egnet til alle gasgrupper (inklusive hydrogen)</li>
+  <li><strong>T4</strong>. Maksimal overfladetemperatur: 135 °C</li>
+  <li><strong>Gb</strong>. Udstyrets beskyttelsesniveau: Zone 1-klassificeret</li>
+</ul>
+<p><a href="/da/pages/how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i> → Komplet vejledning til aflæsning af typeskilt med flere eksempler</a></p>
+</section>
+
+<section>
+<h2>Gasgrupper: Hvilke gasser?</h2>
+<p>Forskellige gasser antændes ved forskellige energiniveauer. Udstyret er klassificeret til specifikke gasgrupper:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Gruppe</th>
+      <th>Almindelige gasser</th>
+      <th>Fareniveau</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>IIA</strong></td>
+      <td>Propan, metan, butan, ammoniak</td>
+      <td>Nemmest at beskytte sig imod</td>
+    </tr>
+    <tr>
+      <td><strong>IIB</strong></td>
+      <td>Ethylen, visse opløsningsmidler</td>
+      <td>Middel</td>
+    </tr>
+    <tr>
+      <td><strong>IIC</strong></td>
+      <td>Brint, acetylen</td>
+      <td>Mest krævende (antændes lettest)</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Vigtig regel:</strong> Udstyr, der er klassificeret til IIC, kan bruges med alle gasser. Udstyr, der er klassificeret til IIA, kan kun bruges med IIA-gasser. Sørg altid for, at udstyret mindst svarer til gasgruppen i dit miljø.</p>
+<p><a href="/da/pages/gas-groups.html"><i class="ph ph-flask"></i> → Gasgrupper forklaret i detaljer</a></p>
+</section>
+
+<section>
+<h2>Temperaturklasser: Hvor varmt kan det blive?</h2>
+<p>Alle brændbare gasser har en <strong>selvantændelsestemperatur</strong>, dvs. den temperatur, hvor de antændes uden en gnist. Udstyret må aldrig blive varmere end dette.</p>
+<table>
+  <thead>
+    <tr>
+      <th>T-klasse</th>
+      <th>Maksimal overfladetemperatur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>T1</td><td>450 °C</td></tr>
+    <tr><td>T2</td><td>300 °C</td></tr>
+    <tr><td>T3</td><td>200 °C</td></tr>
+    <tr><td>T4</td><td>135 °C</td></tr>
+    <tr><td>T5</td><td>100 °C</td></tr>
+    <tr><td>T6</td><td>85 °C</td></tr>
+  </tbody>
+</table>
+<p><strong>Højere T-tal = lavere temperatur = sikrere for flere gasser.</strong> T6-udstyr er det mest restriktive (forbliver koldest) og fungerer med næsten alle gasser.</p>
+<p><a href="/da/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> → Forklaring af temperaturklasser</a></p>
+</section>
+
+<section>
+<h2>ATEX vs. IECEx: Hvad er forskellen?</h2>
+<p>Der findes to certificeringssystemer:</p>
+<ul>
+  <li><strong>ATEX</strong>. EU-lovgivning. Kræves for at sælge udstyr i Europa. Bærer et CE-mærke.</li>
+  <li><strong>IECEx</strong>. International standard. Frivillig. Accepteret i over 60 lande uden for EU.</li>
+</ul>
+<p>Begge certificerer efter de samme tekniske standarder (IEC 60079-serien). Forskellen er juridisk: ATEX er obligatorisk i Europa; IECEx er frivilligt, men bredt anerkendt globalt. Mange produkter har begge certificeringer.</p>
+<p><a href="/da/pages/atex-vs-iecex.html"><i class="ph ph-arrows-left-right"></i> → Fuld sammenligning af ATEX og IECEx</a></p>
+</section>
+
+<section>
+<h2>Hvem har brug for at kende til ATEX?</h2>
+
+<h3>Hvis du er arbejdsgiver eller anlægsleder</h3>
+<p>Du skal:</p>
+<ul>
+  <li>Identificere farlige områder og klassificere dem i zoner</li>
+  <li>Udarbejde et eksplosionsbeskyttelsesdokument (EPD)</li>
+  <li>Sikre, at der kun anvendes udstyr med den korrekte klassificering i hver zone</li>
+  <li>Uddannelse af dine medarbejdere</li>
+  <li>Vedligeholde udstyret og revidere klassificeringerne, når forholdene ændrer sig</li>
+</ul>
+
+<h3>Hvis du er ingeniør eller konstruktør</h3>
+<p>Du skal:</p>
+<ul>
+  <li>Vælge udstyr med den korrekte kategori, gasgruppe og temperaturklasse til hver zone</li>
+  <li>Designe installationer i henhold til IEC 60079-14 (installationsstandard)</li>
+  <li>Sikre korrekt jordforbindelse, valg af kabelforskruninger og kredsløbsadskillelse</li>
+</ul>
+
+<h3>Hvis du er producent</h3>
+<p>Du skal:</p>
+<ul>
+  <li>Designe udstyr, der opfylder de væsentlige sundheds- og sikkerhedskrav i direktiv 2014/34/EU</li>
+  <li>Få udstyret testet og certificeret af et bemyndiget organ (for kategori 1 og det meste af kategori 2)</li>
+  <li>Anbringe CE-mærkning og fremlægge teknisk dokumentation</li>
+</ul>
+
+<h3>Hvis du er elektriker eller tekniker</h3>
+<p>Du skal:</p>
+<ul>
+  <li>Installere Ex-udstyr korrekt (momentværdier, kabelforskruninger, kredsløbsdokumentation)</li>
+  <li>Inspicere Ex-udstyr i henhold til IEC 60079-17 (inspektionsstandard)</li>
+  <li>Aldrig modificere Ex-udstyr uden tilladelse</li>
+  <li>Forstå mærkningerne på det udstyr, du arbejder med</li>
+</ul>
+</section>
+
+<section>
+<h2>Almindelige spørgsmål fra begyndere</h2>
+
+<h3>Gælder ATEX kun for elektrisk udstyr?</h3>
+<p>Nej. ATEX dækker både elektrisk og ikke-elektrisk udstyr. Mekaniske komponenter som pumper, ventilatorer, transportbånd og håndværktøj kan også generere antændelseskilder (friktion, varme overflader, mekaniske gnister) og kræver ATEX-certificering, hvis de anvendes i klassificerede områder.</p>
+
+<h3>Gælder ATEX uden for Europa?</h3>
+<p>ATEX-direktiverne er EU-lovgivning, så de gælder direkte i EU/EØS-lande. Andre lande har deres egne regler (NEC i USA, AS/NZS i Australien osv.), men mange henviser til de samme IEC 60079-standarder. IECEx er den internationale pendant.</p>
+
+<h3>Hvad sker der, hvis jeg bruger det forkerte udstyr?</h3>
+<p>Brug af ikke-certificeret udstyr i et klassificeret område er en lovovertrædelse. Endnu vigtigere er det, at det skaber en reel eksplosionsrisiko. Udstyr, der ikke er klassificeret til zonen, kan have varme overflader, gnister fra kontakter eller utilstrækkelig kabinetintegritet. I tilfælde af en ulykke påhviler ansvaret arbejdsgiveren og potentielt installatøren.</p>
+
+<h3>Kan jeg modificere ATEX-udstyr?</h3>
+<p>Nej. Enhver ændring (boring af huller, tilføjelse af kabelindgange, udskiftning af komponenter, svejsning, maling af eksplosionssikre samlinger) annullerer certificeringen. Ændringer skal foretages af den oprindelige producent eller et certificeret reparationsværksted.</p>
+
+<h3>Hvordan kommer jeg i gang med ATEX-overholdelse?</h3>
+<ol>
+  <li>Identificer alle brandfarlige stoffer i din virksomhed</li>
+  <li>Bestem, hvor der kan dannes eksplosive atmosfærer</li>
+  <li>Inddel disse områder i zoner (overvej at hyre en specialist)</li>
+  <li>Kontroller alt eksisterende udstyr i forhold til zonekravene</li>
+  <li>Udskift eller opgrader udstyr, der ikke overholder kravene</li>
+  <li>Udarbejd dit dokument om eksplosionsbeskyttelse</li>
+  <li>Uddann dit team</li>
+</ol>
+</section>
+
+<section>
+<h2>Ordliste over nøglebegreber</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Begreb</th>
+      <th>Betydning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>ATEX</strong></td><td>ATmosphères EXplosibles. EU&#x27;s ramme for eksplosionsbeskyttelse</td></tr>
+    <tr><td><strong>IECEx</strong></td><td>Internationalt certificeringssystem for Ex-udstyr</td></tr>
+    <tr><td><strong>Ex</strong></td><td>Præfiks for eksplosionsbeskyttet udstyr</td></tr>
+    <tr><td><strong>Zone</strong></td><td>Klassificeret område baseret på hyppigheden af eksplosive atmosfærer</td></tr>
+    <tr><td><strong>Kategori</strong></td><td>Udstyrets sikkerhedsklasse (1 = højeste, 3 = laveste)</td></tr>
+    <tr><td><strong>EPL</strong></td><td>Udstyrets beskyttelsesniveau (Ga/Gb/Gc for gas, Da/Db/Dc for støv)</td></tr>
+    <tr><td><strong>Gasgruppe</strong></td><td>IIA/IIB/IIC. klassificerer gasser efter antændelsesfølsomhed</td></tr>
+    <tr><td><strong>T-klasse</strong></td><td>Temperaturklasse (T1–T6). Maksimal overfladetemperatur på udstyret</td></tr>
+    <tr><td><strong>Bemyndiget organ</strong></td><td>Organisation, der er bemyndiget til at teste og certificere ATEX-udstyr</td></tr>
+    <tr><td><strong>CE-mærkning</strong></td><td>Mærke, der angiver overensstemmelse med EU-kravene (kræves for EU-markedet)</td></tr>
+    <tr><td><strong>EPD</strong></td><td>Explosion Protection Document (dokumentation vedrørende sikkerhed på arbejdspladsen)</td></tr>
+    <tr><td><strong>LEL</strong></td><td>Nedre eksplosionsgrænse. Mindste gaskoncentration for eksplosion</td></tr>
+    <tr><td><strong>AIT</strong></td><td>Selvantændelsestemperatur. Temperatur, hvor gassen selvantænder</td></tr>
+    <tr><td><strong>MESG</strong></td><td>Maksimal eksperimentel sikkerhedsafstand. Bestemmer klassificeringen af gasgrupper</td></tr>
+    <tr><td><strong>IP-klassificering</strong></td><td>Ingress Protection. Kabinetternes støv- og vandtæthed</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Hvad skal du læse nu</h2>
+<p>Nu hvor du har forstået det grundlæggende, kan du udforske de emner, der er mest relevante for din rolle:</p>
+<ul>
+  <li><a href="/da/pages/fundamentals.html"><i class="ph ph-fire"></i> Grundlæggende</a>. Dyk dybere ned i brandtrekanten, eksplosive atmosfærer og antændelseskilder</li>
+  <li><a href="/da/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zoneklassificering</a>. Hvordan zoner fastlægges, og hvad de enkelte betyder</li>
+  <li><a href="/da/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Beskyttelsesmetoder</a>. Alle Ex-typer forklaret i tekniske detaljer</li>
+  <li><a href="/da/pages/how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i> Sådan læser du ATEX-typenavneskiltet</a>. Praktisk guide til afkodning af udstyrsmærkater</li>
+  <li><a href="/da/pages/atex-directive.html"><i class="ph ph-scales"></i> ATEX-direktivet</a>. Komplet vejledning i lovgivningen for producenter og compliance-ansvarlige</li>
+  <li><a href="/da/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Oversigt</a>. Hurtig reference til zoner, kategorier, T-klasser og gasgrupper</li>
+</ul>
+</section>
+
+      
+        <div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">
+<strong style="color:var(--text);">Indholdsoversigt</strong><br>
+<strong style="color:var(--text);"></strong>
+Sammensat af IEC 60079-serien, ATEX 2014/34/EU og IECEx-driftsdokumenter. Denne referencevejledning erstatter ikke officielle standarder eller certificerede vurderinger af anlæg. Konsulter altid den gældende standardudgave og en kvalificeret Ex-ingeniør for din specifikke anvendelse.
+</div>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4><i class="ph ph-list-bullets"></i> Alle emner</h4>
+  <a href="fundamentals.html"><i class="ph ph-fire"></i>Grundlæggende</a>
+  <a href="zone-classification.html"><i class="ph ph-map-trifold"></i>Zoner</a>
+  <a href="gas-groups.html"><i class="ph ph-flask"></i>Gasgrupper</a>
+  <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i>Temperaturklasser</a>
+  <a href="protection-methods.html"><i class="ph ph-shield-check"></i>Beskyttelse</a>
+  <a href="epl.html"><i class="ph ph-gauge"></i></a>
+  <a href="ex-markings.html"><i class="ph ph-tag"></i></a>
+  <a href="epl.html">EPL</a>
+  <a href="ex-markings.html">-mærkning</a>
+  <a href="standards.html"><i class="ph ph-book-open"></i>Standarder</a>
+  <a href="certification.html"><i class="ph ph-certificate"></i>Certificering</a>
+  <a href="installation-inspection.html"><i class="ph ph-wrench"></i>Installation</a>
+  <a href="cheat-sheet.html"><i class="ph ph-lightning"></i>Oversigtsark</a>
+  <a href="atex-vs-iecex.html"><i class="ph ph-arrows-left-right"></i>ATEX vs. IECEx</a>
+  <a href="explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i>Ex-beskyttelse vs. IS</a>
+  <a href="how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i>ATEX-typenummer</a>
+  <a href="atex-directive.html"><i class="ph ph-scales"></i>ATEX-direktivet</a>
+  <a href="hazardous-area-classification.html"><i class="ph ph-map-pin"></i>Områdeklassificering</a>
+  <a href="dust-explosion-protection.html"><i class="ph ph-wind"></i>Støveksplosioner</a>
+  <a href="atex-for-beginners.html" class="current"><i class="ph ph-graduation-cap"></i>ATEX for begyndere</a>
+  <a href="compex-certification.html"><i class="ph ph-exam"></i>CompEx</a>
+  <a href="hydrogen-explosion-protection.html"><i class="ph ph-atom"></i>Hydrogensikkerhed</a>
+  <a href="cable-glands-hazardous-areas.html"><i class="ph ph-plug"></i>Kabelforskruninger</a>
+  <a href="ex-equipment-selection-guide.html">Valg af<i class="ph ph-clipboard-text"></i> udstyr</a>
+        </div>
+      </aside>
+</div>
+
+
+<div class="references-wrapper">
+
+    <section class="references">
+      <h2>Kilder og referencer</h2>
+      <ol>
+        <li><a href="https://en.wikipedia.org/wiki/ATEX_directives" target="_blank" rel="noopener">ATEX-direktiver – Wikipedia</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Fire_triangle" target="_blank" rel="noopener">Brandtrekanten – Wikipedia</a></li>
+        <li><a href="https://www.iecex.com/" target="_blank" rel="noopener">IECEx-systemet – IECEx</a></li>
+        <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0034" target="_blank" rel="noopener">ATEX-direktiv 2014/34/EU – EUR-Lex</a></li>
+      </ol>
+    </section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Viden</h4>
+        <a href="/da/pages/fundamentals.html">Grundlæggende</a>
+        
+        <a href="/da/pages/zone-classification.html">Zoneinddeling</a>
+        
+        <a href="/da/pages/protection-methods.html">Beskyttelsesmetoder</a>
+        
+        <a href="/da/pages/standards.html">Standarder</a>
+        
+        <a href="/da/pages/temperature-classes.html">Temperaturklasser</a>
+        
+        <a href="/da/pages/gas-groups.html">Gasgrupper</a>
+        
+        <a href="/da/pages/cheat-sheet.html">Hurtig reference</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ressourcer</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i>Quiz</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i>Undersøgelse</a>
+        <a href="/da/blog/"><i class="ph ph-newspaper"></i>Blog</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i>Ordliste</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i>Alle episoder</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i>Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i>Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i>RSS-feed</a>
+      </div>
+      <div class="footer-col">
+        <h4>Mere</h4>
+        <a href="/about.html"><i class="ph ph-info"></i>Om os</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i>Partnere</a>
+        <a href="/events.html"><i class="ph ph-calendar-blank"></i>Begivenheder</a>
+        <a href="/links.html">Links<i class="ph ph-link"></i> til branchen</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Udviklet til ingeniører, der arbejder i farlige områder. Indhold baseret på IEC 60079, ATEX 2014/34/EU og IECEx-standarder.</p>
+      <p>Er ikke en erstatning for officielle standarddokumenter eller professionel ingeniørrådgivning.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Rapporter en fejl eller foreslå en forbedring</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/js/nav.js"></script>
+
+<script src="/js/reveal.js"></script>
+<script src="/js/search.js"></script>
+</body>
+</html>

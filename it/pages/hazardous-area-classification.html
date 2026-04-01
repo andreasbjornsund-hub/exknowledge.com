@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Classificazione delle aree pericolose: guida completa. ExKnowledge</title>
+  <meta name="description" content="How hazardous areas are classified into zones. Covers the methodology, source of release, ventilation assessment, zone extent, and documentation requirements per IEC 60079-10.">
+  <link rel="canonical" href="https://exknowledge.com/it/pages/hazardous-area-classification.html">
+  <meta property="og:title" content="Hazardous Area Classification: Complete Guide. ExKnowledge">
+  <meta property="og:description" content="How hazardous areas are classified into zones. Covers the methodology, source of release, ventilation assessment, zone extent, and documentation requirements per IEC 60079-10.">
+  <meta property="og:url" content="https://exknowledge.com/pages/hazardous-area-classification.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hazardous Area Classification: Complete Guide. ExKnowledge">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">  <script type="application/ld+json">
+[
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;TechArticle&quot;,
+    &quot;headline&quot;: &quot;Hazardous Area Classification: Complete Guide. ExKnowledge&quot;,
+    &quot;description&quot;: &quot;How hazardous areas are classified into zones. Covers the methodology, source of release, ventilation assessment, zone extent, and documentation requirements per IEC 60079-10.&quot;,
+    &quot;url&quot;: &quot;https://exknowledge.com/pages/hazardous-area-classification.html&quot;,
+    &quot;image&quot;: &quot;https://images.unsplash.com/photo-1580561346873-4a76a13dce92?w=1000&amp;q=80&quot;,
+    &quot;author&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;publisher&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;inLanguage&quot;: &quot;en&quot;,
+    &quot;isPartOf&quot;: {
+      &quot;@type&quot;: &quot;WebSite&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;datePublished&quot;: &quot;2026-02-01&quot;,
+    &quot;dateModified&quot;: &quot;2026-03-08&quot;,
+    &quot;mainEntityOfPage&quot;: &quot;https://exknowledge.com/pages/hazardous-area-classification.html&quot;,
+    &quot;about&quot;: {
+      &quot;@type&quot;: &quot;Thing&quot;,
+      &quot;name&quot;: &quot;Explosion Protection&quot;
+    }
+  },
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+    &quot;itemListElement&quot;: [
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 1,
+        &quot;name&quot;: &quot;Home&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/&quot;
+      },
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 2,
+        &quot;name&quot;: &quot;Hazardous Area Classification&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/pages/hazardous-area-classification.html&quot;
+      }
+    ]
+  }
+]
+  </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#x27;gtm.start&#x27;:
+new Date().getTime(),event:&#x27;gtm.js&#x27;});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=&#x27;dataLayer&#x27;?&#x27;&amp;l=&#x27;+l:&#x27;&#x27;;j.async=true;j.src=
+&#x27;https://www.googletagmanager.com/gtm.js?id=&#x27;+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,&#x27;script&#x27;,&#x27;dataLayer&#x27;,&#x27;GTM-5VSBXBSL&#x27;);</script>
+<!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/hazardous-area-classification.html">
+                      <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/hazardous-area-classification.html">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav">
+  <div class="container">
+    <a href="/it/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Conoscenza</span></a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-book-open-text"></i>Conoscenza<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+        <li><a href="/it/pages/fundamentals.html"><i class="ph ph-fire"></i> Nozioni fondamentali</a></li>
+        <li><a href="/it/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Classificazione delle zone</a></li>
+        <li><a href="/it/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Metodi di protezione</a></li>
+        <li><a href="/it/pages/standards.html"><i class="ph ph-scales"></i> Norme e regolamenti</a></li>
+        <li><a href="/it/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Classi di temperatura</a></li>
+        <li><a href="/it/pages/gas-groups.html"><i class="ph ph-flame"></i> Gruppi di gas</a></li>
+        <li><a href="/it/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Categorie di apparecchiature</a></li>
+        <li><a href="/it/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Riferimento rapido</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-folder-open"></i>Risorse<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Sondaggio</a></li>
+          <li><a href="/it/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate"></i> Glossario</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Formazione <span class="badge-soon">in arrivo</span></a></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> <span class="badge-soon">Prossimi</span> webinar</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i>Comunità<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> <span class="badge-soon">Prossimi</span> eventi</a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partner <span class="badge-soon">in arrivo</span></a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Link di settore <span class="badge-soon">in arrivo</span></a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> Informazioni</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/hazardous-area-classification.html" selected>🇬🇧 Inglese</option>
+      <option value="/de/pages/hazardous-area-classification.html">🇩🇪 Tedesco</option>
+      <option value="/no/pages/hazardous-area-classification.html">🇳🇴 Norvegese</option>
+      <option value="/da/pages/hazardous-area-classification.html">🇩🇰 Danese</option>
+      <option value="/sv/pages/hazardous-area-classification.html">🇸🇪 Svenska</option>
+      <option value="/fi/pages/hazardous-area-classification.html">🇫🇮 Suomi</option>
+      <option value="/es/pages/hazardous-area-classification.html">🇪🇸 Español</option>
+      <option value="/nl/pages/hazardous-area-classification.html">🇳🇱 Olandese</option>
+      <option value="/pt/pages/hazardous-area-classification.html">🇵🇹 Portoghese</option>
+      <option value="/it/pages/hazardous-area-classification.html">🇮🇹 Italiano</option>
+      <option value="/ar/pages/hazardous-area-classification.html">🇸🇦 Arabo</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1580561346873-4a76a13dce92?w=1000&q=80" alt="Hazardous Area Classification" loading="lazy" width="820" height="240">
+        <h1>Classificazione delle aree pericolose</h1>
+
+        <p class="last-updated" style="font-size:13px;color:var(--text-muted);margin:-12px 0 24px;"><i class="ph ph-clock"></i> Ultimo aggiornamento: marzo 2026 · Basato su IEC 60079 (edizione 2020) e ATEX 2014/34/UE</p>
+<section>
+<h2>Perché la classificazione è importante</h2>
+<p>La classificazione delle aree pericolose è il primo e più importante passo nella <a href="/it/pages/fundamentals.html">protezione contro</a> <a href="/it/pages/fundamentals.html">le esplosioni</a>. Ogni decisione a valle (<a href="/it/pages/ex-equipment-selection-guide.html">scelta delle apparecchiature</a>, metodo di installazione, frequenza <a href="/it/pages/installation-inspection.html">delle ispezioni</a>, procedure operative) dipende da una corretta classificazione.</p>
+<p>Una classificazione troppo prudente comporta una spesa eccessiva per apparecchiature non necessarie. Una classificazione troppo permissiva comporta il rischio di incendio in aree in cui sono installate apparecchiature non adeguate.</p>
+<p>La classificazione è regolata da:</p>
+<ul>
+  <li><strong>IEC 60079-10-1</strong>. Classificazione delle aree con <a href="/it/pages/zone-classification.html">atmosfere gassose</a> esplosive</li>
+  <li><strong>IEC 60079-10-2</strong>. Classificazione delle aree con atmosfere <a href="/it/pages/dust-explosion-protection.html">di polveri combustibili</a></li>
+  <li><strong>Direttiva 1999/92/CE</strong> (<a href="/it/pages/atex-directive.html">ATEX</a> 137). Requisiti dell&#x27;UE per i luoghi di lavoro in presenza di atmosfere esplosive</li>
+</ul>
+</section>
+
+<section>
+<h2>Il sistema a zone</h2>
+<p>Le aree pericolose sono classificate in zone in base alla <strong>frequenza e </strong>alla <strong>durata</strong> della presenza di un&#x27;atmosfera esplosiva:</p>
+
+<h3>Zone gas/vapori</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zona</th>
+      <th>Definizione</th>
+      <th>Durata</th>
+      <th>Esempi tipici</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zona 0</strong></td>
+      <td>Atmosfera esplosiva presente <strong>in modo continuo</strong> o per lunghi periodi</td>
+      <td>&gt; 1.000 ore/anno</td>
+      <td>All&#x27;interno di serbatoi di stoccaggio, spazi di vapore sopra liquidi volatili, all&#x27;interno di recipienti di processo</td>
+    </tr>
+    <tr>
+      <td><strong>Zona 1</strong></td>
+      <td>Atmosfera esplosiva <strong>che può verificarsi</strong> durante il normale funzionamento</td>
+      <td>10–1.000 ore/anno</td>
+      <td>Intorno alle guarnizioni delle pompe, alle guarnizioni delle valvole, ai punti di campionamento, alle valvole di sicurezza, alle aree di carico</td>
+    </tr>
+    <tr>
+      <td><strong>Zona 2</strong></td>
+      <td>Atmosfera esplosiva <strong>improbabile</strong> durante il normale funzionamento; se si verifica, solo per <strong>brevi periodi</strong></td>
+      <td>&lt; 10 ore/anno</td>
+      <td>Intorno a flange con guarnizioni in buono stato, raccordi per tubi, aree vicine ai confini della Zona 1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Zone con presenza di polveri</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zona</th>
+      <th>Definizione</th>
+      <th>Esempi tipici</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zona 20</strong></td>
+      <td>Nube di polveri combustibili presente <strong>in modo continuo</strong> o frequente</td>
+      <td>All&#x27;interno di silos, tramogge, cicloni, sistemi di trasporto pneumatico</td>
+    </tr>
+    <tr>
+      <td><strong>Zona 21</strong></td>
+      <td><strong>Probabile formazione di</strong> una nube di polveri combustibili durante il normale funzionamento</td>
+      <td>Intorno alle stazioni di rovesciamento dei sacchi, al riempimento dei sacchi, ai punti di trasferimento dei trasportatori aperti</td>
+    </tr>
+    <tr>
+      <td><strong>Zona 22</strong></td>
+      <td><strong>Non è probabile</strong> la formazione di una nube di polveri combustibili; se si verifica, solo per <strong>brevi periodi</strong></td>
+      <td>In prossimità dei punti di raccolta delle polveri, intorno ai trasportatori sigillati, nelle aree in cui si accumulano strati di polvere</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Le aree non pericolose</strong> (talvolta denominate &quot;aree sicure&quot; o &quot;non classificate&quot;) sono luoghi in cui non è prevista la presenza di atmosfere esplosive.</p>
+</section>
+
+<section>
+<h2>Il processo di classificazione</h2>
+<p>La norma IEC 60079-10-1 definisce un processo sistematico per la classificazione di gas e vapori. La stessa metodologia si applica alle polveri (IEC 60079-10-2) con adeguamenti relativi al comportamento delle polveri.</p>
+
+<h3>Fase 1: Identificare le fonti di rilascio</h3>
+<p>Una <strong>fonte di rilascio</strong> è qualsiasi punto in cui gas, vapori o liquidi infiammabili possono fuoriuscire nell&#x27;atmosfera. Le fonti sono classificate in base alla frequenza:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Grado</th>
+      <th>Definizione</th>
+      <th>Esempi</th>
+      <th>Crea zona</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Continuo</strong></td>
+      <td>Il rilascio è continuo o previsto per lunghi periodi</td>
+      <td>Sfiati dei serbatoi, superfici liquide aperte, perdite costanti da guarnizioni difettose</td>
+      <td>Zona 0</td>
+    </tr>
+    <tr>
+      <td><strong>Primaria</strong></td>
+      <td>Il rilascio è previsto periodicamente o occasionalmente durante il normale funzionamento</td>
+      <td>Guarnizioni delle pompe, guarnizioni dei compressori, punti di campionamento, valvole di sicurezza, connessioni di carico/scarico</td>
+      <td>Zona 1</td>
+    </tr>
+    <tr>
+      <td><strong>Secondaria</strong></td>
+      <td>Non è prevista alcuna fuoriuscita durante il normale funzionamento; se si verifica, è solo sporadica e per brevi periodi</td>
+      <td>Giunti flangiati, steli delle valvole (non guarnizioni), connessioni degli strumenti, raccordi delle tubazioni in buone condizioni</td>
+      <td>Zona 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Per ogni fonte, documentare:</p>
+<ul>
+  <li>Posizione (coordinate X, Y, Z o riferimento P&amp;ID)</li>
+  <li>Sostanza rilasciata (gas, vapore, nebbia). Vedi <a href="/it/pages/gas-groups.html">gruppi di gas</a></li>
+  <li>Portata di rilascio (kg/s o portata volumetrica)</li>
+  <li>Velocità e direzione di rilascio</li>
+  <li>Proprietà della sostanza (densità rispetto all&#x27;aria, LEL, punto di ebollizione, punto di infiammabilità) e <a href="/it/pages/temperature-classes.html">temperatura di autoaccensione</a></li>
+</ul>
+
+<h3>Fase 2: Valutazione della ventilazione</h3>
+<p>La ventilazione determina la velocità con cui un gas rilasciato si disperde. La norma IEC 60079-10-1 valuta la ventilazione in base a due fattori:</p>
+
+<h4>Grado di ventilazione</h4>
+<ul>
+  <li><strong>Elevato</strong>. Ventilazione continua ed efficace che riduce la concentrazione ben al di sotto del LEL (ampie aree aperte, forti venti naturali, potente ventilazione meccanica)</li>
+  <li><strong>Media</strong>. Ventilazione controllata che diluisce in modo affidabile le emissioni durante il normale funzionamento, ma che potrebbe non impedire concentrazioni transitorie superiori al LEL (tipici sistemi di ventilazione interna)</li>
+  <li><strong>Basso</strong>. Ventilazione insufficiente a controllare efficacemente la concentrazione (spazi chiusi, zone morte, pozzi di raccolta)</li>
+</ul>
+
+<h4>Disponibilità di ventilazione</h4>
+<ul>
+  <li><strong>Buona</strong>. La ventilazione è praticamente continua (ventilazione naturale dall&#x27;esterno, sistemi meccanici ridondanti)</li>
+  <li><strong>Discreta</strong>. La ventilazione è prevista durante il normale funzionamento, ma sono possibili interruzioni intermittenti (sistema meccanico singolo, ventilazione naturale dipendente dal vento)</li>
+  <li><strong>Scarsa</strong>. Non è possibile fare affidamento sulla ventilazione (movimento d&#x27;aria sporadico, nessun sistema meccanico di riserva)</li>
+</ul>
+
+<p>La combinazione di grado e disponibilità determina come il livello di rilascio si traduce in tipo e estensione della zona.</p>
+
+<h3>Fase 3: Determinazione del tipo di zona</h3>
+<p>L&#x27;allegato B della norma IEC 60079-10-1 fornisce una matrice:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Grado di dispersione</th>
+      <th>Ventilazione elevata + Buona disponibilità</th>
+      <th>Ventilazione media + Buona accessibilità</th>
+      <th>Bassa ventilazione + scarsa disponibilità</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Continuo</strong></td>
+      <td>Zona 0 NE (entità trascurabile) → non pericoloso</td>
+      <td>Zona 0 + Zona 2</td>
+      <td>Zona 0 + Zona 1</td>
+    </tr>
+    <tr>
+      <td><strong>Primaria</strong></td>
+      <td>Zona 1 NE → non pericolosa</td>
+      <td>Zona 1 + Zona 2</td>
+      <td>Zona 1 + Zona 0</td>
+    </tr>
+    <tr>
+      <td><strong>Secondaria</strong></td>
+      <td>Zona 2 NE → non pericolosa</td>
+      <td>Zona 2</td>
+      <td>Zona 1 o anche Zona 0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>NE (entità trascurabile):</strong> se la ventilazione è così efficace che il volume pericoloso è trascurabile, l&#x27;area può essere classificata come non pericolosa. Ciò richiede una dimostrazione quantitativa e non è un presupposto predefinito.</p>
+
+<h3>Fase 4: Determinare l&#x27;estensione della zona</h3>
+<p>L&#x27;estensione della zona è il volume fisico intorno a una fonte di rilascio in cui potrebbe esistere una concentrazione infiammabile. Dipende da:</p>
+<ul>
+  <li><strong>Velocità di rilascio</strong>. Velocità più elevate creano volumi pericolosi più grandi</li>
+  <li><strong>Densità del gas</strong>. I gas più pesanti dell&#x27;aria (propano, butano) si accumulano a livelli bassi; i gas più leggeri dell&#x27;aria (idrogeno, metano) salgono e si disperdono</li>
+  <li><strong>Ventilazione</strong>. Una migliore ventilazione riduce l&#x27;estensione</li>
+  <li><strong>Ostacoli</strong>. Pareti, pavimenti e attrezzature possono intrappolare o incanalare i gas rilasciati</li>
+</ul>
+
+<p>La norma IEC 60079-10-1 fornisce un metodo di calcolo semplificato basato sul volume ipotetico (V<sub>z</sub>):</p>
+<pre><code>V<sub>z</sub> = f × (dG/dt) / (k × C × LEL)
+</code></pre>
+<p>Dove:</p>
+<ul>
+  <li>f = fattore di efficienza basato sulle caratteristiche di ventilazione</li>
+  <li>dG/dt = velocità di rilascio</li>
+  <li>k = fattore di sicurezza (tipicamente 0,25 per la soglia LEL)</li>
+  <li>C = numero di ricambi d&#x27;aria per unità di tempo</li>
+</ul>
+
+<p>Per installazioni complesse, è possibile ricorrere alla modellazione fluidodinamica computazionale (CFD) o alla modellazione della dispersione.</p>
+</section>
+
+<section>
+<h2>Classificazione delle polveri (IEC 60079-10-2)</h2>
+<p>La classificazione delle polveri segue la stessa metodologia generale, ma con alcune considerazioni aggiuntive:</p>
+
+<h3>Nube di polvere vs strato di polvere</h3>
+<ul>
+  <li><strong>Nube di polvere:</strong> polvere combustibile sospesa nell&#x27;aria a concentrazioni superiori alla concentrazione minima esplosiva (MEC). Crea rischio di esplosione.</li>
+  <li><strong>Strato di polvere:</strong> polvere depositata che può essere sollevata in una nube (dal vento, dalle vibrazioni o dal funzionamento delle apparecchiature) o accesa direttamente da una superficie calda.</li>
+</ul>
+
+<p>Entrambe devono essere valutate. Una Zona 22 a rischio di nube di polvere può avere una Zona 21 o addirittura una Zona 20 all&#x27;interno delle apparecchiature in cui la polvere viene trattata intenzionalmente.</p>
+
+<h3>Differenze chiave rispetto alla classificazione dei gas</h3>
+<ul>
+  <li>È necessario considerare <strong>la temperatura di accensione dello strato</strong> (spesso inferiore alla temperatura di accensione della nube)</li>
+  <li><strong>La pulizia</strong> è un fattore critico. Un accumulo di polvere superiore a 5 mm di profondità richiede in genere una riclassificazione</li>
+  <li><strong>La dimensione delle particelle</strong> influisce sull&#x27;esplosività. Le particelle più fini (&lt; 500 µm) sono più pericolose</li>
+  <li><strong>Il contenuto di umidità</strong> può ridurre l&#x27;esplosività della polvere, ma non si dovrebbe fare affidamento su di esso a meno che non sia controllato</li>
+</ul>
+</section>
+
+<section>
+<h2>Documentazione: il disegno di classificazione dell&#x27;area</h2>
+<p>Il risultato del processo di classificazione è una serie di <strong>disegni di classificazione dell&#x27;area</strong> che mostrano:</p>
+<ul>
+  <li>Viste in pianta e prospetti della struttura</li>
+  <li>Posizione e grado di ogni fonte di rilascio</li>
+  <li>Tipo di zona (0, 1, 2 o 20, 21, 22) per ciascuna area</li>
+  <li>Estensione della zona (confini orizzontali e verticali)</li>
+  <li>Gruppo di gas e classe di temperatura dell&#x27;atmosfera</li>
+  <li>Dettagli sulla ventilazione (naturale, meccanica, portata)</li>
+</ul>
+
+<h3>Documento di protezione contro le esplosioni (EPD)</h3>
+<p>Ai sensi <a href="/it/pages/atex-directive.html">della Direttiva 1999/92/CE</a>, i datori di lavoro devono redigere un <strong>Documento di protezione contro le esplosioni</strong> che includa:</p>
+<ul>
+  <li>Identificazione e valutazione dei rischi di esplosione</li>
+  <li>Disegni di classificazione delle aree</li>
+  <li>Descrizione delle misure di protezione (tecniche e organizzative)</li>
+  <li>Motivazione della scelta delle attrezzature (corrispondenza tra categoria e zona)</li>
+  <li>Piani di manutenzione e ispezione</li>
+  <li>Requisiti di formazione del personale</li>
+</ul>
+
+<p>L&#x27;EPD deve essere mantenuto e aggiornato ogni volta che il processo, le attrezzature o la disposizione cambiano.</p>
+</section>
+
+<section>
+<h2>Esempi specifici per settore</h2>
+
+<h3>Petrolio e gas: piattaforma offshore</h3>
+<ul>
+  <li><strong>Zona 0:</strong> Interno di separatori, scrubber, tamburi di separazione dei gas di torcia (spazi di vapore)</li>
+  <li><strong>Zona 1:</strong> Aree a ponte aperto intorno alle teste di pozzo, alle apparecchiature di processo, ai lanciatori/ricevitori di pig, al perimetro di rifugio temporaneo</li>
+  <li><strong>Zona 2:</strong> Aree adiacenti ai confini della Zona 1, rastrelliere per tubi con connessioni flangiate, passerelle portacavi vicino alle aree di processo</li>
+  <li><strong>Non pericolose:</strong> Alloggi (con pressurizzazione positiva), ponte elicotteri (a meno che non si stia effettuando il rifornimento)</li>
+</ul>
+
+<h3>Impianto chimico: Stoccaggio di solventi</h3>
+<ul>
+  <li><strong>Zona 0:</strong> Interno dei serbatoi di stoccaggio (spazio di galleggiamento), aree di contenimento con liquido stantio</li>
+  <li><strong>Zona 1:</strong> entro 3 m dagli sfiati dei serbatoi, dai raccordi di riempimento, dalle guarnizioni delle pompe; all&#x27;interno delle aree con bacino di contenimento</li>
+  <li><strong>Zona 2:</strong> 3–8 m dai confini della Zona 1 (varia in base alla ventilazione), intorno a flange e steli delle valvole</li>
+</ul>
+
+<h3>Movimentazione del grano: Complesso di silos</h3>
+<ul>
+  <li><strong>Zona 20:</strong> All&#x27;interno di silos, elevatori a tazze, trasportatori chiusi, cicloni</li>
+  <li><strong>Zona 21:</strong> Intorno ai punti di riempimento dei silos, alle fosse di ricezione dei camion, alle stazioni di insaccamento</li>
+  <li><strong>Zona 22:</strong> Aree in cui possono accumularsi strati di polvere (&gt; 5 mm) che potrebbero essere smossi formando una nube</li>
+</ul>
+
+<h3>Settore farmaceutico: rivestimento di compresse</h3>
+<ul>
+  <li><strong>Zona 1:</strong> All&#x27;interno delle vasche di rivestimento quando si utilizzano rivestimenti a base di solventi (IPA, etanolo)</li>
+  <li><strong>Zona 2:</strong> Intorno ai condotti di estrazione, entro 1 m dalle aperture delle vasche di rivestimento</li>
+  <li><strong>Zona 21:</strong> All&#x27;interno di granulatori, essiccatori a letto fluido (nube di polvere durante la lavorazione)</li>
+  <li><strong>Zona 22:</strong> Aree generali di lavorazione in cui si maneggiano polveri fini</li>
+</ul>
+
+<h3>Cabina di verniciatura a spruzzo</h3>
+<ul>
+  <li><strong>Zona 1:</strong> Interno della cabina di verniciatura durante il funzionamento (vapori di solvente dalla vernice)</li>
+  <li><strong>Zona 2:</strong> Area circostante entro 1–3 m dalle aperture della cabina; condutture che trasportano l&#x27;aria aspirata</li>
+  <li><strong>Non pericolose:</strong> aree al di fuori del raggio di estrazione con adeguata ventilazione generale</li>
+</ul>
+</section>
+
+<section>
+<h2>Approccio nordamericano: divisioni vs zone</h2>
+<p>Gli Stati Uniti e il Canada utilizzano due sistemi paralleli ai sensi del National Electrical Code (NEC) e del Canadian Electrical Code (CEC):</p>
+
+<h3>Sistema a divisioni (Articolo 500 del NEC)</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Classificazione</th>
+      <th>Zone equivalenti</th>
+      <th>Definizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Divisione 1</strong></td>
+      <td>Zona 0 + Zona 1</td>
+      <td>L&#x27;atmosfera pericolosa è presente in condizioni normali o frequentemente a causa di manutenzione/riparazione</td>
+    </tr>
+    <tr>
+      <td><strong>Divisione 2</strong></td>
+      <td>Zona 2</td>
+      <td>Atmosfera pericolosa solo in condizioni anomale (guasto alle apparecchiature, rottura di contenitori)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Sistema a zone (Articolo 505/506 del NEC)</h3>
+<p>Il NEC supporta anche il sistema di zone IEC (0, 1, 2 e 20, 21, 22), utilizzato principalmente in strutture che operano anche secondo gli standard internazionali. Le apparecchiature <a href="/it/pages/certification.html">certificate</a> secondo gli standard <a href="/it/pages/atex-vs-iecex.html">IECEx</a> possono essere accettate nelle installazioni delle zone NEC.</p>
+
+<p><strong>Differenza fondamentale:</strong> il sistema a divisioni ha solo due livelli (Divisione 1 e 2), il che lo rende meno granulare rispetto al sistema a zone a tre livelli. La Divisione 1 comprende quelle che sarebbero la Zona 0 e la Zona 1 nel sistema IEC, richiedendo il massimo livello di protezione per un&#x27;area più ampia.</p>
+</section>
+
+<section>
+<h2>Errori comuni di classificazione</h2>
+
+<h3>1. Classificazione in base al tipo di apparecchiatura anziché alla fonte di rilascio</h3>
+<p>Approccio corretto: partire dalla fonte di rilascio (da dove possono fuoriuscire gas/polveri?), non dall&#x27;apparecchiatura. Una pompa non rientra automaticamente nella Zona 1: dipende dal tipo di tenuta, dalla storia di manutenzione, dalla sostanza trattata e dalla ventilazione.</p>
+
+<h3>2. Ignorare le fonti secondarie</h3>
+<p>I raccordi flangiati, gli steli delle valvole e i raccordi degli strumenti sono fonti secondarie. In un impianto con centinaia di flange, ignorarle può lasciare ampie aree non classificate dove dovrebbe applicarsi la Zona 2.</p>
+
+<h3>3. Sovraclassificazione delle aree interne</h3>
+<p>Le aree interne con una buona ventilazione meccanica possono avere estensioni di zona ridotte o addirittura una classificazione non pericolosa. Lo standard consente di tenere conto della ventilazione, ma questa deve essere documentata e mantenuta. Se il sistema di ventilazione si guasta, la classificazione torna a quella precedente.</p>
+
+<h3>4. Trascurare il comportamento dei gas più pesanti dell&#x27;aria</h3>
+<p>Il propano (densità 1,52 volte quella dell&#x27;aria), il butano (2,01 volte quella dell&#x27;aria) e molti solventi si accumulano nelle zone basse, nelle fosse, nelle trincee, negli scantinati e nei pozzetti. La classificazione deve tenere conto del movimento dei gas, non solo della vicinanza alla fonte.</p>
+
+<h3>5. Utilizzo di distanze approssimative</h3>
+<p>I codici di condotta del settore (IP 15, IGEM, API RP 505) forniscono come punto di partenza le estensioni tipiche delle zone. Queste non sono universali, ma devono essere adattate all&#x27;installazione specifica. Applicare ciecamente la regola dei &quot;3 metri intorno a una pompa&quot; senza considerare lo scenario di rilascio effettivo può essere troppo conservativo o pericolosamente insufficiente.</p>
+
+<h3>6. Mancato aggiornamento della classificazione dopo le modifiche</h3>
+<p>Le modifiche alle apparecchiature di processo, alle tubazioni, ai sistemi di ventilazione o alla disposizione degli edifici possono modificare la classificazione. L&#x27;EPD deve essere rivisto e aggiornato ogni volta che si verificano cambiamenti.</p>
+</section>
+
+<section>
+<h2>Chi esegue la classificazione?</h2>
+<p>La classificazione dovrebbe essere eseguita da un <strong>team competente</strong> che includa:</p>
+<ul>
+  <li><strong>Ingegneri di processo</strong>. Comprensione delle fonti di rilascio, delle condizioni di processo e delle proprietà delle sostanze</li>
+  <li><strong>Ingegneri elettrici</strong>. Conoscenza dei requisiti di selezione e installazione delle apparecchiature Ex</li>
+  <li><strong>Ingegneri della sicurezza</strong>. Metodologia di valutazione dei rischi e requisiti normativi</li>
+  <li><strong>Personale operativo/di manutenzione</strong>. Conoscenza pratica del comportamento effettivo delle apparecchiature durante il funzionamento</li>
+</ul>
+
+<p>Il responsabile del team dovrebbe possedere competenze specifiche in materia di classificazione delle aree (ad es. modulo <a href="/it/pages/compex-certification.html">CompEx</a>, formazione IChemE o equivalente). In molte giurisdizioni, il datore di lavoro è legalmente responsabile della classificazione, anche se questa viene delegata a consulenti.</p>
+</section>
+
+<section>
+<h2>Codici di condotta e linee guida del settore</h2>
+<p>Diversi organismi di settore pubblicano linee guida sulla classificazione delle aree con esempi pratici ed estensioni tipiche delle zone:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Standard/Codice</th>
+      <th>Settore</th>
+      <th>Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>IP 15 (Energy Institute)</strong></td>
+      <td>Petrolio, stoccaggio di carburante</td>
+      <td>Linee guida complete con schemi standard per installazioni comuni</td>
+    </tr>
+    <tr>
+      <td><strong>IGEM/SR/25</strong></td>
+      <td>Gas (gas naturale, GPL)</td>
+      <td>Standard del settore del gas del Regno Unito</td>
+    </tr>
+    <tr>
+      <td><strong>API RP 505</strong></td>
+      <td>Petrolio (USA)</td>
+      <td>American Petroleum Institute, approccio basato sulle zone</td>
+    </tr>
+    <tr>
+      <td><strong>API RP 500</strong></td>
+      <td>Petrolio (USA)</td>
+      <td>Approccio basato sulle divisioni (Articolo 500 del NEC)</td>
+    </tr>
+    <tr>
+      <td><strong>NFPA 497</strong></td>
+      <td>Lavorazione chimica (USA)</td>
+      <td>Linee guida per la classificazione di gas e vapori</td>
+    </tr>
+    <tr>
+      <td><strong>NFPA 499</strong></td>
+      <td>Polveri (USA)</td>
+      <td>Linee guida per la classificazione delle polveri combustibili</td>
+    </tr>
+    <tr>
+      <td><strong>EN 60079-10-1/2</strong></td>
+      <td>Tutti i settori (UE)</td>
+      <td>Norma internazionale primaria, adottata come norma europea</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Estensione della zona: distanze tipiche</h2>
+<p>Questi sono <strong>punti di partenza indicativi</strong> tratti dai codici di buona pratica del settore. Le estensioni effettive devono essere calcolate o valutate per ogni installazione specifica.</p>
+
+<h3>Estensioni tipiche delle zone a rischio di esplosione (all&#x27;aperto, ventilazione adeguata)</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Fonte</th>
+      <th>Estensione della Zona 1</th>
+      <th>Estensione della Zona 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Guarnizione della pompa (centrifuga, in buone condizioni)</td>
+      <td>Raggio di 1 m</td>
+      <td>Raggio di 3 m</td>
+    </tr>
+    <tr>
+      <td>Guarnizione della valvola (valvola manuale)</td>
+      <td>Raggio di 0,5 m</td>
+      <td>Raggio di 1,5 m</td>
+    </tr>
+    <tr>
+      <td>Raccordo flangiato (&gt; DN50)</td>
+      <td>. </td>
+      <td>Raggio di 1,5 m</td>
+    </tr>
+    <tr>
+      <td>Valvola di sicurezza (scarico in atmosfera)</td>
+      <td>3 m dallo scarico</td>
+      <td>6 m dallo scarico</td>
+    </tr>
+    <tr>
+      <td>Scarico aperto/pozzetto</td>
+      <td>Raggio di 1,5 m + 1 m sopra il livello del suolo</td>
+      <td>Raggio di 3 m</td>
+    </tr>
+    <tr>
+      <td>Sfiato serbatoio (atmosferico)</td>
+      <td>Raggio di 3 m dall&#x27;apertura di sfiato</td>
+      <td>Raggio di 6 m</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Interni:</strong> le estensioni delle zone sono tipicamente maggiori a causa della ridotta ventilazione. L&#x27;intero locale può essere classificato se la ventilazione è insufficiente.</p>
+</section>
+
+<section>
+<h2>Revisione e manutenzione</h2>
+<p>La classificazione dell&#x27;area non è un&#x27;operazione una tantum. Deve essere rivista quando:</p>
+<ul>
+  <li><strong>Cambiamenti nel processo</strong>. Nuove sostanze, portate, pressioni o temperature</li>
+  <li><strong>Modifiche alle attrezzature</strong>. Sostituzione di pompe, aggiunta di flange, spostamento dei punti di sfiato</li>
+  <li><strong>Cambiamenti nella disposizione</strong>. Costruzione di pareti, recinzioni o rimozione di percorsi di ventilazione</li>
+  <li><strong>Incidenti</strong>. Dopo una fuoriuscita, un&#x27;esplosione o un quasi incidente</li>
+  <li><strong>Cambiamenti normativi</strong>. Aggiornamento di standard o codici di condotta</li>
+  <li><strong>Revisione periodica</strong>. In genere ogni 3–5 anni nell&#x27;ambito del sistema di gestione della sicurezza</li>
+</ul>
+
+<p>Qualsiasi modifica che influisca sulla fonte di fuoriuscita, sulla ventilazione o sulla disposizione fisica dovrebbe comportare una revisione della classificazione dell’area.</p>
+</section>
+
+<section>
+<h2>Riepilogo: Lista di controllo per la classificazione</h2>
+<ol>
+  <li>☐ Identificare tutte le sostanze trattate (gas, vapori, polveri)</li>
+  <li>☐ Determinare le proprietà delle sostanze (LEL, densità, punto di infiammabilità, temperatura di autoaccensione, MEC della polvere, temperatura di accensione dello strato di polvere)</li>
+  <li>☐ Individuare e classificare tutte le fonti di rilascio (continue, primarie, secondarie)</li>
+  <li>☐ Valutare la ventilazione (livello e disponibilità)</li>
+  <li>☐ Determinare il tipo di zona per ciascuna area (Zona 0/1/2 o 20/21/22)</li>
+  <li>☐ Calcolare o valutare l&#x27;estensione della zona (orizzontale e verticale)</li>
+  <li>☐ Documentare sui disegni di classificazione delle aree</li>
+  <li>☐ Identificare il gruppo di gas e la classe di temperatura per ciascuna zona</li>
+  <li>☐ Preparare il Documento di Protezione contro le Esplosioni (EPD)</li>
+  <li>☐ Selezionare le categorie di apparecchiature corrispondenti a ciascuna zona</li>
+  <li>☐ Stabilire il programma di revisione</li>
+</ol>
+</section>
+
+<section>
+<h2>Argomenti correlati</h2>
+<ul>
+  <li><a href="/it/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Classificazione delle zone</a>. Spiegazione delle zone 0, 1, 2 e 20, 21, 22</li>
+  <li><a href="/it/pages/gas-groups.html"><i class="ph ph-flask"></i> Gruppi di gas</a>. IIA, IIB, IIC e loro relazione con le proprietà delle sostanze</li>
+  <li><a href="/it/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Classi di temperatura</a>. T1–T6 e temperature di autoaccensione</li>
+  <li><a href="/it/pages/fundamentals.html"><i class="ph ph-fire"></i> Nozioni fondamentali</a>. Il triangolo del fuoco, le atmosfere esplosive e le fonti di accensione</li>
+  <li><a href="/it/pages/atex-directive.html"><i class="ph ph-scales"></i> Direttiva ATEX</a>. Requisiti delle apparecchiature ai sensi della direttiva 2014/34/UE</li>
+  <li><a href="/it/pages/epl.html"><i class="ph ph-gauge"></i> Livelli di protezione delle apparecchiature</a>. Come Ga/Gb/Gc si rapportano all&#x27;idoneità della zona</li>
+</ul>
+</section>
+
+      
+        <div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">
+<strong style="color:var(--text);">Riepilogo dei contenuti</strong><br>
+Compilato sulla base della serie IEC 60079, della direttiva ATEX 2014/34/UE e dei documenti operativi IECEx. La presente guida di riferimento non sostituisce le norme ufficiali né le valutazioni certificate in loco. Consultare sempre l&#x27;edizione della norma applicabile e un ingegnere Ex qualificato per la propria applicazione specifica.
+</div>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4><i class="ph ph-list-bullets"></i> Tutti gli argomenti</h4>
+  <a href="fundamentals.html"><i class="ph ph-fire"></i>Nozioni fondamentali</a>
+  <a href="zone-classification.html"><i class="ph ph-map-trifold"></i>Zone</a>
+  <a href="gas-groups.html">Gruppi<i class="ph ph-flask"></i> di gas</a>
+  <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i>Classi di temperatura</a>
+  <a href="protection-methods.html"><i class="ph ph-shield-check"></i>Protezione</a>
+  <a href="ex-markings.html">Marcature</a>
+  <a href="epl.html"><i class="ph ph-gauge"></i></a>
+  <a href="ex-markings.html"><i class="ph ph-tag"></i></a>
+  <a href="epl.html">EPL</a>
+  <a href="standards.html"><i class="ph ph-book-open"></i>Norme</a>
+  <a href="certification.html"><i class="ph ph-certificate"></i>Certificazione</a>
+  <a href="cheat-sheet.html">Scheda</a>
+  <a href="installation-inspection.html"><i class="ph ph-wrench"></i></a>
+  <a href="cheat-sheet.html"><i class="ph ph-lightning"></i>riassuntiva</a>
+  <a href="installation-inspection.html">per</a>
+  <a href="atex-vs-iecex.html"><i class="ph ph-arrows-left-right"></i></a>
+  <a href="installation-inspection.html">l&#x27;installazione</a>
+  <a href="atex-vs-iecex.html">ATEX vs IECEx</a>
+  <a href="explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i>Protezione Ex vs IS</a>
+  <a href="how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i>Targhetta</a>
+  <a href="atex-directive.html"><i class="ph ph-scales"></i></a>
+  <a href="how-to-read-atex-nameplate.html">ATEX</a>
+  <a href="atex-directive.html">Direttiva ATEX</a>
+  <a href="hazardous-area-classification.html" class="current">Classificazione<i class="ph ph-map-pin"></i> delle aree</a>
+  <a href="dust-explosion-protection.html"><i class="ph ph-wind"></i>Esplosioni da polveri</a>
+  <a href="atex-for-beginners.html"><i class="ph ph-graduation-cap"></i>Principianti ATEX</a>
+  <a href="compex-certification.html"><i class="ph ph-exam"></i>CompEx</a>
+  <a href="hydrogen-explosion-protection.html">Sicurezza<i class="ph ph-atom"></i></a>
+  <a href="cable-glands-hazardous-areas.html"><i class="ph ph-plug"></i></a>
+  <a href="hydrogen-explosion-protection.html">dell&#x27;idrogeno</a>
+  <a href="cable-glands-hazardous-areas.html">Pressacavi</a>
+  <a href="ex-equipment-selection-guide.html">Selezione<i class="ph ph-clipboard-text"></i> delle apparecchiature</a>
+        </div>
+      </aside>
+</div>
+
+
+<div class="references-wrapper">
+
+    <section class="references">
+      <h2>Fonti e riferimenti</h2>
+      <ol>
+        <li><a href="https://en.wikipedia.org/wiki/Electrical_equipment_in_hazardous_areas" target="_blank" rel="noopener">Apparecchiature elettriche in aree pericolose - Wikipedia</a></li>
+        <li><a href="https://webstore.iec.ch/en/publication/12943" target="_blank" rel="noopener">IEC 60079-10-1: Classificazione delle aree - IEC</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/ATEX_directives" target="_blank" rel="noopener">Direttive ATEX - Wikipedia</a></li>
+        <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31999L0092" target="_blank" rel="noopener">Direttiva ATEX sul luogo di lavoro 1999/92/CE - EUR-Lex</a></li>
+      </ol>
+    </section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Conoscenze</h4>
+        <a href="/it/pages/fundamentals.html">Nozioni fondamentali</a>
+        
+        <a href="/it/pages/zone-classification.html">Classificazione delle zone</a>
+        
+        <a href="/it/pages/protection-methods.html">Metodi di protezione</a>
+        
+        <a href="/it/pages/standards.html">Norme</a>
+        
+        <a href="/it/pages/temperature-classes.html">Classi di temperatura</a>
+        
+        <a href="/it/pages/gas-groups.html">Gruppi di gas</a>
+        
+        <a href="/it/pages/cheat-sheet.html">Riferimento rapido</a>
+      </div>
+      <div class="footer-col">
+        <h4>Risorse</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i>Quiz</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i>Sondaggio</a>
+        <a href="/it/blog/"><i class="ph ph-newspaper"></i>Blog</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i>Glossario</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i>Tutti gli episodi</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i>Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i>Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml">Feed<i class="ph ph-rss-simple"></i> RSS</a>
+      </div>
+      <div class="footer-col">
+        <h4>Altro</h4>
+        <a href="/about.html"><i class="ph ph-info"></i>Informazioni</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i>Partner</a>
+        <a href="/events.html"><i class="ph ph-calendar-blank"></i>Eventi</a>
+        <a href="/links.html">Link<i class="ph ph-link"></i> di settore</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Realizzato per gli ingegneri che operano in aree pericolose. Contenuti basati sulle norme IEC 60079, ATEX 2014/34/UE e IECEx.</p>
+      <p>Non sostituisce i documenti normativi ufficiali né la consulenza tecnica professionale.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Segnala un errore o suggerisci un miglioramento</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/js/nav.js"></script>
+
+<script src="/js/reveal.js"></script>
+<script src="/js/search.js"></script>
+</body>
+</html>

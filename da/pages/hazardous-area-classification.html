@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Klassificering af farlige områder: Den komplette guide. ExKnowledge</title>
+  <meta name="description" content="How hazardous areas are classified into zones. Covers the methodology, source of release, ventilation assessment, zone extent, and documentation requirements per IEC 60079-10.">
+  <link rel="canonical" href="https://exknowledge.com/da/pages/hazardous-area-classification.html">
+  <meta property="og:title" content="Hazardous Area Classification: Complete Guide. ExKnowledge">
+  <meta property="og:description" content="How hazardous areas are classified into zones. Covers the methodology, source of release, ventilation assessment, zone extent, and documentation requirements per IEC 60079-10.">
+  <meta property="og:url" content="https://exknowledge.com/pages/hazardous-area-classification.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hazardous Area Classification: Complete Guide. ExKnowledge">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">  <script type="application/ld+json">
+[
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;TechArticle&quot;,
+    &quot;headline&quot;: &quot;Hazardous Area Classification: Complete Guide. ExKnowledge&quot;,
+    &quot;description&quot;: &quot;How hazardous areas are classified into zones. Covers the methodology, source of release, ventilation assessment, zone extent, and documentation requirements per IEC 60079-10.&quot;,
+    &quot;url&quot;: &quot;https://exknowledge.com/pages/hazardous-area-classification.html&quot;,
+    &quot;image&quot;: &quot;https://images.unsplash.com/photo-1580561346873-4a76a13dce92?w=1000&amp;q=80&quot;,
+    &quot;author&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;publisher&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;inLanguage&quot;: &quot;en&quot;,
+    &quot;isPartOf&quot;: {
+      &quot;@type&quot;: &quot;WebSite&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;datePublished&quot;: &quot;2026-02-01&quot;,
+    &quot;dateModified&quot;: &quot;2026-03-08&quot;,
+    &quot;mainEntityOfPage&quot;: &quot;https://exknowledge.com/pages/hazardous-area-classification.html&quot;,
+    &quot;about&quot;: {
+      &quot;@type&quot;: &quot;Thing&quot;,
+      &quot;name&quot;: &quot;Explosion Protection&quot;
+    }
+  },
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+    &quot;itemListElement&quot;: [
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 1,
+        &quot;name&quot;: &quot;Home&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/&quot;
+      },
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 2,
+        &quot;name&quot;: &quot;Hazardous Area Classification&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/pages/hazardous-area-classification.html&quot;
+      }
+    ]
+  }
+]
+  </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#x27;gtm.start&#x27;:
+new Date().getTime(),event:&#x27;gtm.js&#x27;});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=&#x27;dataLayer&#x27;?&#x27;&amp;l=&#x27;+l:&#x27;&#x27;;j.async=true;j.src=
+&#x27;https://www.googletagmanager.com/gtm.js?id=&#x27;+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,&#x27;script&#x27;,&#x27;dataLayer&#x27;,&#x27;GTM-5VSBXBSL&#x27;);</script>
+<!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/hazardous-area-classification.html">
+                      <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/hazardous-area-classification.html">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav">
+  <div class="container">
+    <a href="/da/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Viden</span></a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-book-open-text"></i>Viden<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+        <li><a href="/da/pages/fundamentals.html"><i class="ph ph-fire"></i> Grundlæggende</a></li>
+        <li><a href="/da/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zoneklassificering</a></li>
+        <li><a href="/da/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Beskyttelsesmetoder</a></li>
+        <li><a href="/da/pages/standards.html"><i class="ph ph-scales"></i> Standarder og forskrifter</a></li>
+        <li><a href="/da/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperaturklasser</a></li>
+        <li><a href="/da/pages/gas-groups.html"><i class="ph ph-flame"></i> Gasgrupper</a></li>
+        <li><a href="/da/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Udstyrskategorier</a></li>
+        <li><a href="/da/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Hurtig reference</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-folder-open"></i>Ressourcer<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Undersøgelse</a></li>
+          <li><a href="/da/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate"></i> Ordliste</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Kurser <span class="badge-soon">snart</span></a></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinarer <span class="badge-soon">snart</span></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i>Fællesskab<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Begivenheder <span class="badge-soon">snart</span></a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partnere <span class="badge-soon">snart</span></a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Branchelinks <span class="badge-soon">snart</span></a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> Om</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/hazardous-area-classification.html" selected>🇬🇧 Engelsk</option>
+      <option value="/de/pages/hazardous-area-classification.html">🇩🇪 Tysk</option>
+      <option value="/no/pages/hazardous-area-classification.html">🇳🇴 Norsk</option>
+      <option value="/da/pages/hazardous-area-classification.html">🇩🇰 Dansk</option>
+      <option value="/sv/pages/hazardous-area-classification.html">🇸🇪 Svensk</option>
+      <option value="/fi/pages/hazardous-area-classification.html">🇫🇮 Finsk</option>
+      <option value="/es/pages/hazardous-area-classification.html">🇪🇸 Spansk</option>
+      <option value="/nl/pages/hazardous-area-classification.html">🇳🇱 Nederlands</option>
+      <option value="/pt/pages/hazardous-area-classification.html">🇵🇹 Portugisisk</option>
+      <option value="/it/pages/hazardous-area-classification.html">🇮🇹 Italiensk</option>
+      <option value="/ar/pages/hazardous-area-classification.html">🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1580561346873-4a76a13dce92?w=1000&q=80" alt="Hazardous Area Classification" loading="lazy" width="820" height="240">
+        <h1>Klassificering af farlige områder</h1>
+
+        <p class="last-updated" style="font-size:13px;color:var(--text-muted);margin:-12px 0 24px;"><i class="ph ph-clock"></i> Senest opdateret: marts 2026 · Baseret på IEC 60079 (2020-udgaven) og ATEX 2014/34/EU</p>
+<section>
+<h2>Hvorfor klassificering er vigtig</h2>
+<p>Klassificering af farlige områder er det første og mest afgørende trin i <a href="/da/pages/fundamentals.html">eksplosionsbeskyttelse</a>. Alle efterfølgende beslutninger – <a href="/da/pages/ex-equipment-selection-guide.html">valg af udstyr</a>, installationsmetode, <a href="/da/pages/installation-inspection.html">insp</a>ektionshyppighed, driftsprocedurer – afhænger af, at klassificeringen er korrekt.</p>
+<p>Hvis klassificeringen er for konservativ, bruger du for mange penge på udstyr, der ikke er nødvendigt. Hvis klassificeringen er for lempelig, risikerer du antændelse i områder, hvor der er installeret forkert udstyr.</p>
+<p>Klassificering reguleres af:</p>
+<ul>
+  <li><strong>IEC 60079-10-1</strong>. Klassificering af områder med eksplosive <a href="/da/pages/zone-classification.html">gasatmosfærer</a></li>
+  <li><strong>IEC 60079-10-2</strong>. Klassificering af områder med atmosfærer med <a href="/da/pages/dust-explosion-protection.html">brændbart støv</a></li>
+  <li><strong>Direktiv 1999/92/EF</strong> (<a href="/da/pages/atex-directive.html">ATEX</a> 137). EU-krav til arbejdspladser med eksplosive atmosfærer</li>
+</ul>
+</section>
+
+<section>
+<h2>Zonesystemet</h2>
+<p>Farlige områder klassificeres i zoner baseret på <strong>hyppigheden og varigheden</strong> af en eksplosiv atmosfære:</p>
+
+<h3>Gas-/dampzoner</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zone</th>
+      <th>Definition</th>
+      <th>Varighed</th>
+      <th>Typiske eksempler</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zone 0</strong></td>
+      <td>Eksplosiv atmosfære til stede <strong>kontinuerligt</strong> eller i lange perioder</td>
+      <td>&gt; 1.000 timer/år</td>
+      <td>Inde i lagertanke, i damprum over flygtige væsker, inde i procesbeholdere</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 1</strong></td>
+      <td>Eksplosiv atmosfære <strong>kan forekomme</strong> under normal drift</td>
+      <td>10–1.000 timer/år</td>
+      <td>Omkring pumpepakninger, ventilpakninger, prøveudtagningssteder, aflastningsventiler, påfyldningsområder</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 2</strong></td>
+      <td>Eksplosiv atmosfære <strong>forekommer sandsynligvis ikke</strong> under normal drift; hvis den forekommer, er det kun i <strong>korte perioder</strong></td>
+      <td>&lt; 10 timer/år</td>
+      <td>Omkring flanger med gode pakninger, rørfittings, områder nær Zone 1-grænser</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Støvzoner</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zone</th>
+      <th>Definition</th>
+      <th>Typiske eksempler</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zone 20</strong></td>
+      <td>Brændbar støvsky til stede <strong>kontinuerligt</strong> eller hyppigt</td>
+      <td>Inde i siloer, tragte, cykloner, pneumatiske transportsystemer</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 21</strong></td>
+      <td>Brændbar støvsky <strong>kan forekomme</strong> under normal drift</td>
+      <td>Omkring sækkeudtømningsstationer, sækkefyldning, åbne transportbåndsoverførselspunkter</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 22</strong></td>
+      <td>Brændbar støvsky <strong>er ikke sandsynlig</strong>; hvis den opstår, kun i <strong>korte perioder</strong></td>
+      <td>I nærheden af støvopsamlingssteder, omkring lukkede transportbånd, områder hvor der ophobes støvlag</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Ikke-farlige områder</strong> (undertiden kaldet &quot;sikre områder&quot; eller &quot;uklassificerede&quot;) er steder, hvor der ikke forventes at forekomme eksplosive atmosfærer.</p>
+</section>
+
+<section>
+<h2>Klassificeringsprocessen</h2>
+<p>IEC 60079-10-1 definerer en systematisk proces til klassificering af gas/damp. Den samme metode gælder for støv (IEC 60079-10-2) med justeringer for støvs adfærd.</p>
+
+<h3>Trin 1: Identificer udslipskilder</h3>
+<p>En <strong>udslipskilde</strong> er ethvert punkt, hvor brandfarlig gas, damp eller væske kan slippe ud i atmosfæren. Kilderne klassificeres efter hyppighed:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Grad</th>
+      <th>Definition</th>
+      <th>Eksempler</th>
+      <th>Opretter zone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Kontinuerlig</strong></td>
+      <td>Udslip er kontinuerligt eller forventes i lange perioder</td>
+      <td>Tankudluftninger, åbne væskeoverflader, konstante lækager fra defekte tætninger</td>
+      <td>Zone 0</td>
+    </tr>
+    <tr>
+      <td><strong>Primær</strong></td>
+      <td>Udslip forventes periodisk eller lejlighedsvis under normal drift</td>
+      <td>Pumpepakninger, kompressorpakninger, prøveudtagningssteder, aflastningsventiler, på- og aflæsningsforbindelser</td>
+      <td>Zone 1</td>
+    </tr>
+    <tr>
+      <td><strong>Sekundær</strong></td>
+      <td>Der forventes ikke udslip under normal drift; hvis det forekommer, er det kun sjældent og i korte perioder</td>
+      <td>Flangeforbindelser, ventilstænger (ikke pakninger), instrumenttilslutninger, rørfittings i god stand</td>
+      <td>Zone 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For hver kilde skal følgende dokumenteres:</p>
+<ul>
+  <li>Placering (X-, Y-, Z-koordinater eller P&amp;ID-reference)</li>
+  <li>Udledt stof (gas, damp, tåge). Se <a href="/da/pages/gas-groups.html">gasgrupper</a></li>
+  <li>Udslipshastighed (kg/s eller volumenstrøm)</li>
+  <li>Udslipshastighed og -retning</li>
+  <li>Stoffets egenskaber (densitet i forhold til luft, LEL, kogepunkt, flammepunkt) og <a href="/da/pages/temperature-classes.html">selvantændelsestemperatur</a></li>
+</ul>
+
+<h3>Trin 2: Vurdering af ventilation</h3>
+<p>Ventilationen bestemmer, hvor hurtigt en frigivet gas spredes. IEC 60079-10-1 vurderer ventilationen ud fra to faktorer:</p>
+
+<h4>Ventilationsgrad</h4>
+<ul>
+  <li><strong>Høj</strong>. Kontinuerlig og effektiv ventilation, der reducerer koncentrationen til et niveau langt under LEL (store åbne områder, stærk naturlig vind, kraftig mekanisk ventilation)</li>
+  <li><strong>Middel</strong>. Kontrolleret ventilation, der pålideligt fortynder udslip under normal drift, men som muligvis ikke forhindrer kortvarige koncentrationer over LEL (typiske indendørs ventilationssystemer)</li>
+  <li><strong>Lav</strong>. Ventilation, der er utilstrækkelig til at kontrollere koncentrationen effektivt (lukkede rum, døde zoner, sumpbrønde)</li>
+</ul>
+
+<h4>Tilgængelighed af ventilation</h4>
+<ul>
+  <li><strong>God</strong>. Ventilationen er praktisk talt kontinuerlig (naturlig udendørs ventilation, redundante mekaniske systemer)</li>
+  <li><strong>Rimelig</strong>. Ventilation forventes under normal drift, men intermitterende afbrydelser er mulige (enkelt mekanisk system, vindafhængig naturlig ventilation)</li>
+  <li><strong>Dårlig</strong>. Ventilationen er ikke pålidelig (sjælden luftbevægelse, ingen mekanisk backup)</li>
+</ul>
+
+<p>Kombinationen af grad og tilgængelighed bestemmer, hvordan frigivelsesgraden oversættes til zonetype og omfang.</p>
+
+<h3>Trin 3: Bestem zonetype</h3>
+<p>IEC 60079-10-1, bilag B, indeholder en matrix:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Frigørelsesgrad</th>
+      <th>Høj ventilation + god tilgængelighed</th>
+      <th>Middel ventilation + god tilgængelighed</th>
+      <th>Lav ventilation + dårlig tilgængelighed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Kontinuerlig</strong></td>
+      <td>Zone 0 NE (ubetydeligt omfang) → ikke-farlig</td>
+      <td>Zone 0 + Zone 2</td>
+      <td>Zone 0 + Zone 1</td>
+    </tr>
+    <tr>
+      <td><strong>Primær</strong></td>
+      <td>Zone 1 NE → ikke-farlig</td>
+      <td>Zone 1 + Zone 2</td>
+      <td>Zone 1 + Zone 0</td>
+    </tr>
+    <tr>
+      <td><strong>Sekundær</strong></td>
+      <td>Zone 2 NE → ikke-farlig</td>
+      <td>Zone 2</td>
+      <td>Zone 1 eller endda Zone 0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>NE (ubetydeligt omfang):</strong> Hvis ventilationen er så effektiv, at det farlige volumen er ubetydeligt, kan området klassificeres som ikke-farligt. Dette kræver kvantitativ dokumentation og er ikke en standardantagelse.</p>
+
+<h3>Trin 4: Bestem zoneomfang</h3>
+<p>Zonens omfang er det fysiske volumen omkring en udslipskilde, hvor der kan forekomme en brandfarlig koncentration. Det afhænger af:</p>
+<ul>
+  <li><strong>Udslipshastighed</strong>. Højere hastigheder skaber større farlige volumener</li>
+  <li><strong>Gasdensitet</strong>. Gasser, der er tungere end luft (propan, butan), samler sig i lav højde; gasser, der er lettere end luft (brint, metan), stiger op og spredes</li>
+  <li><strong>Ventilation</strong>. Bedre ventilation reducerer omfanget</li>
+  <li><strong>Forhindringer</strong>. Vægge, gulve og udstyr kan indkapsle eller lede udslipte gasser</li>
+</ul>
+
+<p>IEC 60079-10-1 angiver en forenklet beregningsmetode baseret på hypotetisk volumen (V<sub>z</sub>):</p>
+<pre><code>V<sub>z</sub> = f × (dG/dt) / (k × C × LEL)
+</code></pre>
+<p>Hvor:</p>
+<ul>
+  <li>f = effektivitetsfaktor baseret på ventilationskarakteristika</li>
+  <li>dG/dt = frigivelseshastighed</li>
+  <li>k = sikkerhedsfaktor (typisk 0,25 for LEL-tærskel)</li>
+  <li>C = antal luftskift pr. tidsenhed</li>
+</ul>
+
+<p>Ved komplekse installationer kan der anvendes CFD-modellering (computational fluid dynamics) eller spredningsmodellering.</p>
+</section>
+
+<section>
+<h2>Klassificering af støv (IEC 60079-10-2)</h2>
+<p>Støvklassificering følger den samme generelle metodologi, men med yderligere overvejelser:</p>
+
+<h3>Støvsky vs. støvlag</h3>
+<ul>
+  <li><strong>Støvsky:</strong> Luftbårent brændbart støv i koncentrationer over den minimale eksplosive koncentration (MEC). Udgør en eksplosionsrisiko.</li>
+  <li><strong>Støvlag:</strong> Aflejret støv, der kan hvirvles op til en sky (af vind, vibrationer eller drift af udstyr) eller antændes direkte af en varm overflade.</li>
+</ul>
+
+<p>Begge dele skal vurderes. En zone 22 med fare for støvsky kan have en zone 21 eller endda en zone 20 inde i udstyr, hvor støv behandles bevidst.</p>
+
+<h3>Vigtige forskelle i forhold til gasklassificering</h3>
+<ul>
+  <li><strong>Lagets antændelsestemperatur</strong> skal tages i betragtning (ofte lavere end skyens antændelsestemperatur)</li>
+  <li><strong>Rengøring</strong> er en kritisk faktor. Støvophobning på mere end 5 mm kræver typisk omklassificering</li>
+  <li><strong>Partikelstørrelsen</strong> påvirker eksplosiviteten. Finere partikler (&lt; 500 µm) er farligere</li>
+  <li><strong>Fugtindholdet</strong> kan reducere støvets eksplosivitet, men man bør ikke stole på dette, medmindre det kontrolleres</li>
+</ul>
+</section>
+
+<section>
+<h2>Dokumentation: Tegningen over områdeklassificering</h2>
+<p>Resultatet af klassificeringsprocessen er et sæt områdeklassificeringstegninger, der viser:</p>
+<ul>
+  <li>Grundplaner og opstaltninger af anlægget</li>
+  <li>Placering og klassificering af hver udslipskilde</li>
+  <li>Zonetype (0, 1, 2 eller 20, 21, 22) for hvert område</li>
+  <li>Zonens udstrækning (horisontale og vertikale grænser)</li>
+  <li>Gasgruppe og temperaturklasse for atmosfæren</li>
+  <li>Ventilationsdetaljer (naturlig, mekanisk, hastighed)</li>
+</ul>
+
+<h3>Dokument om eksplosionsbeskyttelse (EPD)</h3>
+<p>I henhold til <a href="/da/pages/atex-directive.html">direktiv 1999/92/EF</a> skal arbejdsgivere udarbejde et <strong>eksplosionsbeskyttelsesdokument</strong>, der indeholder:</p>
+<ul>
+  <li>Identifikation og vurdering af eksplosionsrisici</li>
+  <li>Tegninger over områdeklassificering</li>
+  <li>Beskrivelse af beskyttelsesforanstaltninger (tekniske og organisatoriske)</li>
+  <li>Begrundelse for valg af udstyr (tilpasning af kategori til zone)</li>
+  <li>Vedligeholdelses- og inspektionsplaner</li>
+  <li>Uddannelseskrav til personale</li>
+</ul>
+
+<p>EPD&#x27;en skal vedligeholdes og opdateres, hver gang processen, udstyret eller layoutet ændres.</p>
+</section>
+
+<section>
+<h2>Branchespecifikke eksempler</h2>
+
+<h3>Olie og gas: Offshore-platform</h3>
+<ul>
+  <li><strong>Zone 0:</strong> Inde i separatorer, skrubbere, flare-knock-out-tromler (damprum)</li>
+  <li><strong>Zone 1:</strong> Åbne dækområder omkring brøndhoveder, procesudstyr, pig-lancerings-/modtagelsesanlæg, midlertidig sikkerhedszone</li>
+  <li><strong>Zone 2:</strong> Områder, der støder op til Zone 1-grænser, rørstativer med flangetilslutninger, kabelbakker nær procesområder</li>
+  <li><strong>Ikke-farligt:</strong> Boligkvarterer (med overtryk), helikopterdæk (medmindre der tankes op)</li>
+</ul>
+
+<h3>Kemisk anlæg: Opbevaring af opløsningsmidler</h3>
+<ul>
+  <li><strong>Zone 0:</strong> Inde i lagertanke (tankrum), opsamlingsområder med stående væske</li>
+  <li><strong>Zone 1:</strong> Inden for 3 m fra tankudluftninger, påfyldningsforbindelser, pumpepakninger; inde i opsamlingsområder</li>
+  <li><strong>Zone 2:</strong> 3–8 m fra Zone 1-grænser (varierer afhængigt af ventilation), omkring flanger og ventilstænger</li>
+</ul>
+
+<h3>Kornbehandling: Siloanlæg</h3>
+<ul>
+  <li><strong>Zone 20:</strong> Inde i siloer, skovlelevatorer, lukkede transportbånd, cykloner</li>
+  <li><strong>Zone 21:</strong> Omkring silo-påfyldningssteder, modtagelsesbrønde til lastbiler, sækkefyldningsstationer</li>
+  <li><strong>Zone 22:</strong> Områder, hvor der kan samle sig støvlag (&gt; 5 mm), som kan hvirvles op til en sky</li>
+</ul>
+
+<h3>Farmaceutisk: Tabletbelægning</h3>
+<ul>
+  <li><strong>Zone 1:</strong> Inde i belægningspander ved brug af opløsningsmiddelbaserede belægninger (IPA, ethanol)</li>
+  <li><strong>Zone 2:</strong> Omkring udsugningskanaler, inden for 1 m fra belægningspandeåbningerne</li>
+  <li><strong>Zone 21:</strong> Inde i granulatorer, fluidbedtørrere (støvsky under forarbejdning)</li>
+  <li><strong>Zone 22:</strong> Generelle forarbejdningsområder, hvor der håndteres fint pulver</li>
+</ul>
+
+<h3>Malingssprøjtekabine</h3>
+<ul>
+  <li><strong>Zone 1:</strong> Inde i sprøjtekabinen under drift (opløsningsmiddeldampe fra maling)</li>
+  <li><strong>Zone 2:</strong> Omgivende område inden for 1–3 m fra kabineåbningerne; kanalsystem, der transporterer udsuget luft</li>
+  <li><strong>Ikke-farligt:</strong> Områder uden for udsugningsområdet med tilstrækkelig generel ventilation</li>
+</ul>
+</section>
+
+<section>
+<h2>Nordamerikansk tilgang: Opdelinger vs. zoner</h2>
+<p>USA og Canada anvender to parallelle systemer i henhold til National Electrical Code (NEC) og Canadian Electrical Code (CEC):</p>
+
+<h3>Divisionssystem (NEC artikel 500)</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Klassificering</th>
+      <th>Tilsvarende zoner</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Division 1</strong></td>
+      <td>Zone 0 + Zone 1</td>
+      <td>Der forekommer farlig atmosfære under normale forhold eller hyppigt på grund af vedligeholdelse/reparation</td>
+    </tr>
+    <tr>
+      <td><strong>Division 2</strong></td>
+      <td>Zone 2</td>
+      <td>Farlig atmosfære kun under unormale forhold (udstyrsfejl, brud på beholder)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Zonesystem (NEC artikel 505/506)</h3>
+<p>NEC understøtter også IEC-zonesystemet (0, 1, 2 og 20, 21, 22), der primært anvendes i anlæg, der også drives i henhold til internationale standarder. Udstyr<a href="/da/pages/certification.html">, der er certificeret</a> i henhold til <a href="/da/pages/atex-vs-iecex.html">IECEx</a>-standarder, kan accepteres i NEC-zoneinstallationer.</p>
+
+<p><strong>Vigtigste forskel:</strong> Divisionssystemet har kun to niveauer (Division 1 og 2), hvilket gør det mindre detaljeret end zonesystemet med tre niveauer. Division 1 omfatter det, der ville være Zone 0 og Zone 1 i IEC-systemet, hvilket kræver det højeste beskyttelsesniveau for et bredere område.</p>
+</section>
+
+<section>
+<h2>Almindelige klassificeringsfejl</h2>
+
+<h3>1. Klassificering efter udstyrstype i stedet for udslipskilde</h3>
+<p>Korrekt fremgangsmåde: Start med udslipskilden (hvor kan gas/støv slippe ud?), ikke udstyret. En pumpe er ikke automatisk Zone 1. Det afhænger af tætningstypen, vedligeholdelseshistorikken, det håndterede stof og ventilationen.</p>
+
+<h3>2. Ignorering af sekundære kilder</h3>
+<p>Flangeforbindelser, ventilstænger og instrumentforbindelser er sekundære kilder. I et anlæg med hundredvis af flanger kan det at ignorere dem medføre, at store områder forbliver uklassificerede, hvor Zone 2 burde gælde.</p>
+
+<h3>3. Overklassificering af indendørs områder</h3>
+<p>Indendørs områder med god mekanisk ventilation kan have reducerede zoneomfang eller endda en ikke-farlig klassificering. Standarden tillader kredit for ventilation, men det skal dokumenteres og vedligeholdes. Hvis ventilationssystemet svigter, vender klassificeringen tilbage.</p>
+
+<h3>4. Forsømmelse af gasers adfærd, der er tungere end luft</h3>
+<p>Propan (densitet 1,52× luft), butan (2,01× luft) og mange opløsningsmidler samler sig i lave områder, gruber, render, kældre og sumpbrønde. Klassificeringen skal tage højde for gasbevægelse, ikke kun nærhed til kilden.</p>
+
+<h3>5. Brug af tommelfingerregler for afstande</h3>
+<p>Branchekodekser (IP 15, IGEM, API RP 505) angiver typiske zoneudstrækninger som udgangspunkt. Disse er ikke universelle. De skal tilpasses den specifikke installation. Blind anvendelse af &quot;3 meter omkring en pumpe&quot; uden at tage hensyn til det faktiske udslipsscenarie kan være enten for konservativt eller farligt utilstrækkeligt.</p>
+
+<h3>6. Manglende opdatering af klassificeringen efter ændringer</h3>
+<p>Ændringer af procesudstyr, rørføring, ventilationssystemer eller bygningsindretning kan ændre klassificeringen. EPD&#x27;en skal gennemgås og opdateres, når der sker ændringer.</p>
+</section>
+
+<section>
+<h2>Hvem udfører klassificeringen?</h2>
+<p>Klassificeringen bør udføres af et <strong>kompetent team,</strong> der omfatter:</p>
+<ul>
+  <li><strong>Procesingeniører</strong>. Forståelse af udslipskilder, procesforhold og stoffers egenskaber</li>
+  <li><strong>Elektroingeniører</strong>. Kendskab til valg af Ex-udstyr og installationskrav</li>
+  <li><strong>Sikkerhedsingeniører</strong>. Metodik til risikovurdering og lovgivningsmæssige krav</li>
+  <li><strong>Drifts-/vedligeholdelsespersonale</strong>. Praktisk viden om, hvordan udstyret rent faktisk opfører sig i drift</li>
+</ul>
+
+<p>Teamlederen skal have specifik kompetence inden for områdeklassificering (f.eks. <a href="/da/pages/compex-certification.html">CompEx</a>-modul, IChemE-uddannelse eller tilsvarende). I mange jurisdiktioner er arbejdsgiveren juridisk ansvarlig for klassificeringen, selvom den er delegeret til konsulenter.</p>
+</section>
+
+<section>
+<h2>Praksisregler og vejledning for branchen</h2>
+<p>Flere brancheorganisationer udgiver vejledning om områdeklassificering med konkrete eksempler og typiske zoneomfang:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Standard/kodeks</th>
+      <th>Branche</th>
+      <th>Bemærkninger</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>IP 15 (Energy Institute)</strong></td>
+      <td>Olie, brændstofopbevaring</td>
+      <td>Omfattende vejledning med standarddiagrammer til almindelige installationer</td>
+    </tr>
+    <tr>
+      <td><strong>IGEM/SR/25</strong></td>
+      <td>Gas (naturgas, LPG)</td>
+      <td>Britisk standard for gasindustrien</td>
+    </tr>
+    <tr>
+      <td><strong>API RP 505</strong></td>
+      <td>Petroleum (USA)</td>
+      <td>American Petroleum Institute, zonebaseret tilgang</td>
+    </tr>
+    <tr>
+      <td><strong>API RP 500</strong></td>
+      <td>Petroleum (USA)</td>
+      <td>Divisionsbaseret tilgang (NEC artikel 500)</td>
+    </tr>
+    <tr>
+      <td><strong>NFPA 497</strong></td>
+      <td>Kemisk forarbejdning (USA)</td>
+      <td>Anbefalet praksis for klassificering af gasser og dampe</td>
+    </tr>
+    <tr>
+      <td><strong>NFPA 499</strong></td>
+      <td>Støv (USA)</td>
+      <td>Anbefalet praksis for klassificering af brændbart støv</td>
+    </tr>
+    <tr>
+      <td><strong>EN 60079-10-1/2</strong></td>
+      <td>Alle brancher (EU)</td>
+      <td>Primær international standard, vedtaget som europæisk norm</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Zoneomfang: Typiske afstande</h2>
+<p>Dette er <strong>vejledende udgangspunkter</strong> fra branchens praksis. De faktiske udstrækninger skal beregnes eller vurderes for hver enkelt installation.</p>
+
+<h3>Typiske gaszoneomfang (udendørs, tilstrækkelig ventilation)</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Kilde</th>
+      <th>Omfang af zone 1</th>
+      <th>Omfang af zone 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pumpetætning (centrifugal, god stand)</td>
+      <td>1 m radius</td>
+      <td>3 m radius</td>
+    </tr>
+    <tr>
+      <td>Ventilpakning (manuel ventil)</td>
+      <td>0,5 m radius</td>
+      <td>1,5 m radius</td>
+    </tr>
+    <tr>
+      <td>Flangeforbindelse (&gt; DN50)</td>
+      <td>. </td>
+      <td>1,5 m radius</td>
+    </tr>
+    <tr>
+      <td>Overtryksventil (udluftning til atmosfæren)</td>
+      <td>3 m fra udløbet</td>
+      <td>6 m fra udløbet</td>
+    </tr>
+    <tr>
+      <td>Åben afløbsbrønd</td>
+      <td>1,5 m radius + 1 m over jordoverfladen</td>
+      <td>3 m radius</td>
+    </tr>
+    <tr>
+      <td>Tankudluftning (atmosfærisk)</td>
+      <td>3 m radius fra udluftningsåbningen</td>
+      <td>6 m radius</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Indendørs:</strong> Zoneudstrækningen er typisk større på grund af reduceret ventilation. Hele rummet kan klassificeres, hvis ventilationen er utilstrækkelig.</p>
+</section>
+
+<section>
+<h2>Gennemgang og vedligeholdelse</h2>
+<p>Områdeklassificering er ikke en engangsforeteelse. Den skal gennemgås, når:</p>
+<ul>
+  <li><strong>Processændringer</strong>. Nye stoffer, gennemstrømningshastigheder, tryk eller temperaturer</li>
+  <li><strong>Udstyrsændringer</strong>. Udskiftning af pumper, tilføjelse af flanger, flytning af udluftningspunkter</li>
+  <li><strong>Ændringer i indretningen</strong>. Opførelse af vægge, indkapslinger eller fjernelse af ventilationsveje</li>
+  <li><strong>Hændelser</strong>. Efter en udslip, eksplosion eller nærved-ulykke</li>
+  <li><strong>Ændringer i lovgivningen</strong>. Opdaterede standarder eller adfærdskodekser</li>
+  <li><strong>Periodisk gennemgang</strong>. Typisk hvert 3.–5. år som en del af sikkerhedsstyringssystemet</li>
+</ul>
+
+<p>Enhver ændring, der påvirker udslipskilden, ventilationen eller det fysiske layout, bør udløse en gennemgang af områdets klassificering.</p>
+</section>
+
+<section>
+<h2>Resumé: Tjekliste for klassificering</h2>
+<ol>
+  <li>☐ Identificer alle håndterede stoffer (gas, damp, støv)</li>
+  <li>☐ Bestem stoffets egenskaber (LEL, densitet, flammepunkt, selvantændelsestemperatur, støv-MEC, støvlagets antændelsestemperatur)</li>
+  <li>☐ Lokalisér og klassificér alle udslipskilder (kontinuerlig, primær, sekundær)</li>
+  <li>☐ Vurder ventilationen (grad og tilgængelighed)</li>
+  <li>☐ Bestem zonetype for hvert område (zone 0/1/2 eller 20/21/22)</li>
+  <li>☐ Beregn eller vurder zoneomfanget (horisontalt og vertikalt)</li>
+  <li>☐ Dokumenter på områdeklassificeringstegninger</li>
+  <li>☐ Identificer gasgruppe og temperaturklasse for hver zone</li>
+  <li>☐ Udarbejd dokument om eksplosionsbeskyttelse (EPD)</li>
+  <li>☐ Vælg udstyrskategorier, der passer til hver zone</li>
+  <li>☐ Udarbejd en tidsplan for gennemgang</li>
+</ol>
+</section>
+
+<section>
+<h2>Relaterede emner</h2>
+<ul>
+  <li><a href="/da/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zoneklassificering</a>. Zonerne 0, 1, 2 og 20, 21, 22 forklaret</li>
+  <li><a href="/da/pages/gas-groups.html"><i class="ph ph-flask"></i> Gasgrupper</a>. IIA, IIB, IIC og deres forhold til stoffers egenskaber</li>
+  <li><a href="/da/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperaturklasser</a>. T1–T6 og selvantændelsestemperaturer</li>
+  <li><a href="/da/pages/fundamentals.html"><i class="ph ph-fire"></i> Grundlæggende principper</a>. Brandtrekanten, eksplosive atmosfærer og antændelseskilder</li>
+  <li><a href="/da/pages/atex-directive.html"><i class="ph ph-scales"></i> ATEX-direktivet</a>. Krav til udstyr i henhold til 2014/34/EU</li>
+  <li><a href="/da/pages/epl.html"><i class="ph ph-gauge"></i> Udstyrsbeskyttelsesniveauer</a>. Hvordan Ga/Gb/Gc afspejler zoneegnethed</li>
+</ul>
+</section>
+
+      
+        <div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">
+<strong style="color:var(--text);">Indholdsoversigt</strong><br>
+<strong style="color:var(--text);"></strong>
+Sammensat af IEC 60079-serien, ATEX 2014/34/EU og IECEx-driftsdokumenter. Denne referencevejledning erstatter ikke officielle standarder eller certificerede vurderinger af anlæg. Konsulter altid den gældende standardudgave og en kvalificeret Ex-ingeniør for din specifikke anvendelse.
+</div>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4><i class="ph ph-list-bullets"></i> Alle emner</h4>
+  <a href="fundamentals.html"><i class="ph ph-fire"></i>Grundlæggende</a>
+  <a href="zone-classification.html"><i class="ph ph-map-trifold"></i>Zoner</a>
+  <a href="gas-groups.html"><i class="ph ph-flask"></i>Gasgrupper</a>
+  <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i>Temperaturklasser</a>
+  <a href="protection-methods.html"><i class="ph ph-shield-check"></i>Beskyttelse</a>
+  <a href="epl.html"><i class="ph ph-gauge"></i></a>
+  <a href="ex-markings.html"><i class="ph ph-tag"></i></a>
+  <a href="epl.html">EPL</a>
+  <a href="ex-markings.html">-mærkninger</a>
+  <a href="standards.html"><i class="ph ph-book-open"></i>Standarder</a>
+  <a href="certification.html"><i class="ph ph-certificate"></i>Certificering</a>
+  <a href="installation-inspection.html"><i class="ph ph-wrench"></i></a>
+  <a href="cheat-sheet.html"><i class="ph ph-lightning"></i></a>
+  <a href="installation-inspection.html">Install</a>
+  <a href="cheat-sheet.html">ationsoversigt</a>
+  <a href="atex-vs-iecex.html"><i class="ph ph-arrows-left-right"></i>ATEX vs. IECEx</a>
+  <a href="explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i>Ex-beskyttelse vs. IS</a>
+  <a href="how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i>ATEX-typenummer</a>
+  <a href="atex-directive.html"><i class="ph ph-scales"></i>ATEX-direktivet</a>
+  <a href="hazardous-area-classification.html" class="current"><i class="ph ph-map-pin"></i>Områdeklassificering</a>
+  <a href="dust-explosion-protection.html"><i class="ph ph-wind"></i>Støveksplosioner</a>
+  <a href="atex-for-beginners.html"><i class="ph ph-graduation-cap"></i>ATEX for begyndere</a>
+  <a href="compex-certification.html"><i class="ph ph-exam"></i>CompEx</a>
+  <a href="hydrogen-explosion-protection.html"><i class="ph ph-atom"></i>Hydrogensikkerhed</a>
+  <a href="cable-glands-hazardous-areas.html"><i class="ph ph-plug"></i>Kabelforskruninger</a>
+  <a href="ex-equipment-selection-guide.html"><i class="ph ph-clipboard-text"></i>Valg af udstyr</a>
+        </div>
+      </aside>
+</div>
+
+
+<div class="references-wrapper">
+
+    <section class="references">
+      <h2>Kilder og referencer</h2>
+      <ol>
+        <li><a href="https://en.wikipedia.org/wiki/Electrical_equipment_in_hazardous_areas" target="_blank" rel="noopener">Elektrisk udstyr i farlige områder – Wikipedia</a></li>
+        <li><a href="https://webstore.iec.ch/en/publication/12943" target="_blank" rel="noopener">IEC 60079-10-1: Klassificering af områder – IEC</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/ATEX_directives" target="_blank" rel="noopener">ATEX-direktiver – Wikipedia</a></li>
+        <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31999L0092" target="_blank" rel="noopener">ATEX-arbejdspladsdirektiv 1999/92/EF – EUR-Lex</a></li>
+      </ol>
+    </section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Viden</h4>
+        <a href="/da/pages/fundamentals.html">Grundlæggende</a>
+        
+        <a href="/da/pages/zone-classification.html">Zoneinddeling</a>
+        
+        <a href="/da/pages/protection-methods.html">Beskyttelsesmetoder</a>
+        
+        <a href="/da/pages/standards.html">Standarder</a>
+        
+        <a href="/da/pages/temperature-classes.html">Temperaturklasser</a>
+        
+        <a href="/da/pages/gas-groups.html">Gasgrupper</a>
+        
+        <a href="/da/pages/cheat-sheet.html">Hurtig reference</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ressourcer</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i>Quiz</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i>Undersøgelse</a>
+        <a href="/da/blog/"><i class="ph ph-newspaper"></i>Blog</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i>Ordliste</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i>Alle episoder</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i>Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i>Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i>RSS-feed</a>
+      </div>
+      <div class="footer-col">
+        <h4>Mere</h4>
+        <a href="/about.html"><i class="ph ph-info"></i>Om os</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i>Partnere</a>
+        <a href="/events.html"><i class="ph ph-calendar-blank"></i>Begivenheder</a>
+        <a href="/links.html">Links<i class="ph ph-link"></i> til branchen</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Udviklet til ingeniører, der arbejder i farlige områder. Indhold baseret på IEC 60079, ATEX 2014/34/EU og IECEx-standarder.</p>
+      <p>Er ikke en erstatning for officielle standarddokumenter eller professionel ingeniørrådgivning.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Rapporter en fejl eller foreslå en forbedring</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/js/nav.js"></script>
+
+<script src="/js/reveal.js"></script>
+<script src="/js/search.js"></script>
+</body>
+</html>

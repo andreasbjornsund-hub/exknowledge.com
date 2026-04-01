@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Ex-laitteiden valintaopas: Oikean suojalaitteen valinta...</title>
+  <meta name="description" content="Practical guide to selecting Ex equipment. Decision flowcharts, zone-to-category mapping, protection method comparison, and application-specific recommendations.">
+  <link rel="canonical" href="https://exknowledge.com/fi/pages/ex-equipment-selection-guide.html">
+  <meta property="og:title" content="Ex Equipment Selection Guide: Choosing the Right Protection Method. ExKnowledge">
+  <meta property="og:description" content="Practical guide to selecting Ex equipment. Decision flowcharts, zone-to-category mapping, protection method comparison, and application-specific recommendations.">
+  <meta property="og:url" content="https://exknowledge.com/pages/ex-equipment-selection-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ex Equipment Selection Guide: Choosing the Right Protection Method. ExKnowledge">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">  <script type="application/ld+json">
+[
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;TechArticle&quot;,
+    &quot;headline&quot;: &quot;Ex Equipment Selection Guide: Choosing the Right Protection Method. ExKnowledge&quot;,
+    &quot;description&quot;: &quot;Practical guide to selecting Ex equipment. Decision flowcharts, zone-to-category mapping, protection method comparison, and application-specific recommendations.&quot;,
+    &quot;url&quot;: &quot;https://exknowledge.com/pages/ex-equipment-selection-guide.html&quot;,
+    &quot;image&quot;: &quot;https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1000&amp;q=80&quot;,
+    &quot;author&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;publisher&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;inLanguage&quot;: &quot;en&quot;,
+    &quot;isPartOf&quot;: {
+      &quot;@type&quot;: &quot;WebSite&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;datePublished&quot;: &quot;2026-02-01&quot;,
+    &quot;dateModified&quot;: &quot;2026-03-08&quot;,
+    &quot;mainEntityOfPage&quot;: &quot;https://exknowledge.com/pages/ex-equipment-selection-guide.html&quot;,
+    &quot;about&quot;: {
+      &quot;@type&quot;: &quot;Thing&quot;,
+      &quot;name&quot;: &quot;Explosion Protection&quot;
+    }
+  },
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+    &quot;itemListElement&quot;: [
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 1,
+        &quot;name&quot;: &quot;Home&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/&quot;
+      },
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 2,
+        &quot;name&quot;: &quot;Ex Equipment Selection Guide&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/pages/ex-equipment-selection-guide.html&quot;
+      }
+    ]
+  }
+]
+  </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#x27;gtm.start&#x27;:
+new Date().getTime(),event:&#x27;gtm.js&#x27;});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=&#x27;dataLayer&#x27;?&#x27;&amp;l=&#x27;+l:&#x27;&#x27;;j.async=true;j.src=
+&#x27;https://www.googletagmanager.com/gtm.js?id=&#x27;+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,&#x27;script&#x27;,&#x27;dataLayer&#x27;,&#x27;GTM-5VSBXBSL&#x27;);</script>
+<!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/ex-equipment-selection-guide.html">
+                      <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/ex-equipment-selection-guide.html">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav">
+  <div class="container">
+    <a href="/fi/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Tietoa</span></a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-book-open-text"></i>Tietoa<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+        <li><a href="/fi/pages/fundamentals.html"><i class="ph ph-fire"></i> Perusteet</a></li>
+        <li><a href="/fi/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Alueiden luokittelu</a></li>
+        <li><a href="/fi/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Suojausmenetelmät</a></li>
+        <li><a href="/fi/pages/standards.html"><i class="ph ph-scales"></i> Standardit ja määräykset</a></li>
+        <li><a href="/fi/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Lämpötilaluokat</a></li>
+        <li><a href="/fi/pages/gas-groups.html"><i class="ph ph-flame"></i> Kaasuryhmät</a></li>
+        <li><a href="/fi/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Laiteryhmät</a></li>
+        <li><a href="/fi/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Pikaopas</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-folder-open"></i>Resurssit<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Tietokilpailu</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Kysely</a></li>
+          <li><a href="/fi/blog/"><i class="ph ph-newspaper"></i> Blogi</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate"></i> Sanasto</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Koulutus <span class="badge-soon">pian</span></a></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinaarit <span class="badge-soon">pian</span></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i>Yhteisö<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Tapahtumat <span class="badge-soon">pian</span></a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Kumppanit <span class="badge-soon">pian</span></a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Alan linkit <span class="badge-soon">pian</span></a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> Tietoa</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/ex-equipment-selection-guide.html" selected>🇬🇧 Englanti</option>
+      <option value="/de/pages/ex-equipment-selection-guide.html">🇩🇪 Saksan kieli</option>
+      <option value="/no/pages/ex-equipment-selection-guide.html">🇳🇴 Norja</option>
+      <option value="/da/pages/ex-equipment-selection-guide.html">🇩🇰 Tanska</option>
+      <option value="/sv/pages/ex-equipment-selection-guide.html">🇸🇪 Ruotsi</option>
+      <option value="/fi/pages/ex-equipment-selection-guide.html">🇫🇮 Suomi</option>
+      <option value="/es/pages/ex-equipment-selection-guide.html">🇪🇸 Espanja</option>
+      <option value="/nl/pages/ex-equipment-selection-guide.html">🇳🇱 Hollanti</option>
+      <option value="/pt/pages/ex-equipment-selection-guide.html">🇵🇹 Portugali</option>
+      <option value="/it/pages/ex-equipment-selection-guide.html">🇮🇹 Italiano</option>
+      <option value="/ar/pages/ex-equipment-selection-guide.html">🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1000&q=80" alt="Ex Equipment Selection Guide" loading="lazy" width="820" height="240">
+        <h1>Ex-laitteiden valintaopas</h1>
+
+        <p class="last-updated" style="font-size:13px;color:var(--text-muted);margin:-12px 0 24px;"><i class="ph ph-clock"></i> Viimeisin päivitys: maaliskuu 2026 · Perustuu standardeihin IEC 60079 (vuoden 2020 painos) ja ATEX 2014/34/EU</p>
+<section>
+<h2>Valintaprosessi</h2>
+<p>Ex-laitteiden valinta edellyttää kuuden kysymyksen vastaamista järjestyksessä:</p>
+<ol>
+  <li><strong>Missä <a href="/fi/pages/zone-classification.html">vyöhykkeessä</a> laite sijaitsee?</strong> → Määrittää vähimmäisluokan (1, 2 tai 3)</li>
+  <li><strong>Mitä kaasua tai pölyä on läsnä?</strong> → Määrittää <a href="/fi/pages/gas-groups.html">kaasuryhmän</a> (IIA/IIB/IIC) tai pölyryhmän (IIIA/IIIB/IIIC)</li>
+  <li><strong>Mikä on itsesyttymislämpötila?</strong> → Määrittää <a href="/fi/pages/temperature-classes.html">lämpötilaluokan</a> (T1–T6) tai suurimman pintalämpötilan</li>
+  <li><strong>Mitä laite tekee?</strong> → Määrittää sopivat <a href="/fi/pages/protection-methods.html">suojausmenetelmät</a> (Ex d, Ex i jne.)</li>
+  <li><strong>Missä ympäristössä laite toimii?</strong> → Määrittää IP-luokituksen, materiaalit, ympäristön lämpötila-alueen (katso <a href="/fi/pages/installation-inspection.html">asennusvaatimukset</a>)</li>
+  <li><strong>Mitkä ovat sähköiset parametrit?</strong> → Jännite, virta, teho, taajuus</li>
+</ol>
+<p>Jokainen vastaus kaventaa valikoimaa, kunnes sinulla on luettelo vaatimustenmukaisista vaihtoehdoista. Tarkista <a href="/fi/pages/certification.html">sertifiointi</a> ennen ostamista. Valitse sitten kustannusten, saatavuuden ja sopivuuden perusteella. Tarkista <a href="/fi/pages/ex-markings.html">laitteen merkinnät</a> varmistaaksesi vaatimustenmukaisuuden.</p>
+</section>
+
+<section>
+<h2>Vaihe 1: Vyöhyke → Luokka</h2>
+<p>Vastaa vyöhyke vaadittuun laiteluokkaan tai <a href="/fi/pages/epl.html">EPL</a>:ään:</p>
+
+<h3>Kaasu-/höyryvyöhykkeet</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Alue</th>
+      <th>Vähimmäisluokka</th>
+      <th>EPL</th>
+      <th>Voidaan käyttää myös</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Alue 0</strong></td>
+      <td>Luokka 1 G</td>
+      <td>Ga</td>
+      <td>Vain Ga. Muuta ei sallita</td>
+    </tr>
+    <tr>
+      <td><strong>Alue 1</strong></td>
+      <td>Luokka 2 G</td>
+      <td>Gb</td>
+      <td>Luokka 1 G (Ga) myös hyväksyttävä</td>
+    </tr>
+    <tr>
+      <td><strong>Vyöhyke 2</strong></td>
+      <td>Luokka 3 G</td>
+      <td>Gc</td>
+      <td>Luokka 1 G (Ga) tai luokka 2 G (Gb) myös hyväksyttävä</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Pölyvyöhykkeet</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Vyöhyke</th>
+      <th>Vähimmäisluokka</th>
+      <th>EPL</th>
+      <th>Voidaan käyttää myös</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Vyöhyke 20</strong></td>
+      <td>Luokka 1 D</td>
+      <td>Da</td>
+      <td>Vain Da. Muuta ei sallita</td>
+    </tr>
+    <tr>
+      <td><strong>Alue 21</strong></td>
+      <td>Luokka 2 D</td>
+      <td>Db</td>
+      <td>Luokka 1 D (Da) myös hyväksyttävä</td>
+    </tr>
+    <tr>
+      <td><strong>Alue 22</strong></td>
+      <td>Luokka 3 D</td>
+      <td>Dc</td>
+      <td>Luokka 1 D (Da) tai luokka 2 D (Db) myös hyväksyttävä</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Keskeinen sääntö:</strong> Korkeamman luokan laitteita voidaan aina käyttää matalamman riskin vyöhykkeillä. Luokka 1 toimii kaikkialla; luokka 3 vain vyöhykkeillä 2/22.</p>
+</section>
+
+<section>
+<h2>Vaihe 2: Kaasu/pöly → Ryhmä</h2>
+
+<h3>Kaasu/höyry</h3>
+<p>Tunnista kaasu ja etsi sen ryhmä:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Yleiset kaasut</th>
+      <th>Kaasuryhmä</th>
+      <th>Tarvittavat laitteet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Propaani, metaani, butaani, ammoniakki, asetoni, etanoli, tolueeni, ksyleeni</td>
+      <td>IIA</td>
+      <td>IIA, IIB tai IIC (mikä tahansa sopii)</td>
+    </tr>
+    <tr>
+      <td>Eteeni, etyylieetteri, jotkut erikoisliuottimet</td>
+      <td>IIB</td>
+      <td>IIB tai IIC (IIA ei riitä)</td>
+    </tr>
+    <tr>
+      <td>Vety, asetyleeni, hiilidisulfidi</td>
+      <td>IIC</td>
+      <td>Vain IIC (IIA ja IIB eivät riitä)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Jos olet epävarma, käytä IIC:tä.</strong> Se toimii kaikkien kaasujen kanssa, lisää kustannuksia (noin 10–30 % enemmän kuin IIA), mutta eliminoi riskin, jos kaasun koostumus muuttuu.</p>
+
+<h3>Pöly</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Pölytyyppi</th>
+      <th>Ryhmä</th>
+      <th>Esimerkkejä</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Palavat lentävät hiukkaset</td>
+      <td>IIIA</td>
+      <td>Puuvillakuidut, paperi, tekstiililankat, puuhake</td>
+    </tr>
+    <tr>
+      <td>Ei-johtava pöly</td>
+      <td>IIIB</td>
+      <td>Jauhot, sokeri, tärkkelys, vilja, muovijauhe, farmaseuttiset jauheet</td>
+    </tr>
+    <tr>
+      <td>Johtava pöly</td>
+      <td>IIIC</td>
+      <td>Alumiinijauhe, magnesium, rautahileet, hiilimusta, grafiitti</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Laite, jossa on merkintä <strong>III</strong> (ilman kirjainta), kattaa kaikki pölytyypit (IIIA, IIIB, IIIC). Laite, jossa on merkintä <strong>IIIC,</strong> kattaa vain IIIC-tyypin.</p>
+</section>
+
+<section>
+<h2>Vaihe 3: Lämpötila → T-luokka tai suurin pintalämpötila</h2>
+
+<h3>Kaasu/höyry</h3>
+<p>Selvitä kaasun itsesyttymislämpötila (AIT) ja valitse laite, jonka T-luokka on alle kyseisen arvon:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Kaasu</th>
+      <th>AIT</th>
+      <th>Pienin T-luokka</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Metaani</td><td>595 °C</td><td>T1 (enintään 450 °C)</td></tr>
+    <tr><td>Vety</td><td>560 °C</td><td>T1</td></tr>
+    <tr><td>Propaani</td><td>470 °C</td><td>T1</td></tr>
+    <tr><td>Asetyleeni</td><td>305 °C</td><td>T2 (enintään 300 °C)</td></tr>
+    <tr><td>Eteeni</td><td>490 °C</td><td>T1</td></tr>
+    <tr><td>Bensiini</td><td>220–280 °C</td><td>T3 (enintään 200 °C)</td></tr>
+    <tr><td>Asetaldehydi</td><td>140 °C</td><td>T4 (enintään 135 °C)</td></tr>
+    <tr><td>Hiilidisulfidi</td><td>90 °C</td><td>T6 (enintään 85 °C)</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Turvamarginaali:</strong> Laitteen T-luokan on oltava vähintään yhden luokan alempi kuin kaasun AIT. Esimerkiksi, jos AIT = 200 °C, käytä T3 (200 °C) tai kylmempää, älä T2 (300 °C).</p>
+
+<h3>Pöly</h3>
+<p><a href="/fi/pages/dust-explosion-protection.html">Pölylle</a> käytetään suoraa lämpötilamerkintää (ei T-luokkia). Laitteen pinnan enimmäislämpötilan on oltava:</p>
+<ul>
+  <li><strong>⅔ pölypilven MIT:stä</strong> (pölypilven alin syttymislämpötila)</li>
+  <li><strong>75 °C alle</strong> 5 mm:n <strong>kerroksen syttymislämpötilan (LIT)</strong></li>
+</ul>
+<p>Käytä sitä, kumpi on tiukempi.</p>
+
+<p><strong>Esimerkki:</strong> Vehnäjauhon MIT = 440 °C, LIT (5 mm) = 220 °C.</p>
+<ul>
+  <li>Pilviraja: ⅔ × 440 = 293 °C</li>
+  <li>Kerroksen raja: 220 - 75 = 145 °C</li>
+  <li><strong>Käytä T145 °C tai alempaa</strong> (kerroksen raja-arvo on määräävä)</li>
+</ul>
+</section>
+
+<section>
+<h2>Vaihe 4: Sovellus → Suojausmenetelmä</h2>
+<p>Valitse suojausmenetelmä laitteen toiminnan ja tehotason perusteella:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sovellus</th>
+      <th>Tehotaso</th>
+      <th>Suositeltu menetelmä</th>
+      <th>Vaihtoehto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Sähkömoottori</strong></td>
+      <td>&gt; 1 kW</td>
+      <td><a href="/fi/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (palonkestävä)</a></td>
+      <td>Ex e (vain vyöhyke 2), Ex nA (vyöhyke 2)</td>
+    </tr>
+    <tr>
+      <td><strong>Pieni moottori</strong></td>
+      <td>&lt; 1 kW</td>
+      <td>Ex e (korotettu turvallisuus)</td>
+      <td>Ex d, Ex nA</td>
+    </tr>
+    <tr>
+      <td><strong>Valaisin</strong></td>
+      <td>Vaihtelee</td>
+      <td>Ex d (LED/loisteputki/halogeeni)</td>
+      <td>Ex e (vain LED, vyöhyke 1/2)</td>
+    </tr>
+    <tr>
+      <td><strong>Liitäntärasia</strong></td>
+      <td>Ei sovelleta (passiivinen)</td>
+      <td>Ex e (yleiseen johdotukseen)</td>
+      <td>Ex d (jos sisältää kipinöiviä laitteita)</td>
+    </tr>
+    <tr>
+      <td><strong>Anturi/lähetin</strong></td>
+      <td>&lt; 5 W</td>
+      <td><a href="/fi/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (luontainen turvallisuus)</a></td>
+      <td>Ex d (kotelo), Ex e</td>
+    </tr>
+    <tr>
+      <td><strong>Ohjauspaneeli</strong></td>
+      <td>&gt; 10 kW</td>
+      <td>Ex p (paineistus)</td>
+      <td>Ex d (pienet paneelit), Ex e (liitäntäosat)</td>
+    </tr>
+    <tr>
+      <td><strong>Magneettiventtiili</strong></td>
+      <td>5–50 W</td>
+      <td>Ex m (kapselointi)</td>
+      <td>Ex d, Ex ia</td>
+    </tr>
+    <tr>
+      <td><strong>Kannettavat laitteet</strong></td>
+      <td>Akku</td>
+      <td>Ex ia, Ex ib</td>
+      <td>Ex d (raskaampi)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Kustannusjärjestys (alhaisimmasta korkeimpaan):</strong> Ex nA (vain vyöhyke 2) &lt; Ex e &lt; Ex ia/ib &lt; Ex d &lt; Ex m &lt; Ex p</p>
+<p><strong>Painoluokitus (kevyt – raskas):</strong> Ex ia &lt; Ex e &lt; Ex m &lt; Ex d &lt; Ex p</p>
+</section>
+
+<section>
+<h2>Päätöksentekokaavio</h2>
+
+<h3>Ex d:n ja Ex i:n välillä valitseminen</h3>
+<pre><code>Is the power &lt; 20 W?
+├─ Yes → Consider Ex i (intrinsic safety)
+│  └─ Is it a sensor, transmitter, or low-power control circuit?
+│     ├─ Yes → Ex i is ideal
+│     └─ No → Check if barriers/isolators fit the system architecture
+│
+└─ No → Use Ex d or Ex e
+   └─ Does it have arcing/sparking parts (relays, switches, motors)?
+      ├─ Yes → Ex d (flameproof)
+      └─ No → Ex e (increased safety) is cheaper and lighter
+</code></pre>
+
+<h3>Vyöhyke 0 -laitteet</h3>
+<pre><code>Zone 0 requires EPL Ga. Options:
+├─ Ex ia (intrinsic safety, 2-fault tolerance)
+├─ Ex ma (encapsulation, 2-fault protection)
+└─ Special Ex d or Ex px designs (rare, very expensive)
+
+→ 95% of Zone 0 installations use Ex ia.
+</code></pre>
+
+<h3>Vyöhykkeen 2 laitteet</h3>
+<pre><code>Zone 2 has relaxed requirements. Options:
+├─ Ex nA (non-sparking, cheapest)
+├─ Ex nC (enclosed, sparking allowed but enclosed)
+├─ Ex nR (restricted breathing)
+├─ Any higher-rated equipment (Ex d, Ex e, Ex i)
+
+→ Use Ex nA for motors/lights when possible (cost savings).
+→ Use Ex e for terminal boxes (good practice even though Ex nA would suffice).
+</code></pre>
+</section>
+
+<section>
+<h2>Laitteet toimialoittain</h2>
+
+<h3>Öljy ja kaasu (merialustat)</h3>
+<ul>
+  <li><strong>Päämoottorit (pumput, kompressorit):</strong> Ex d IIC T3, luokka 2 G</li>
+  <li><strong>Valaistus:</strong> Ex d IIC T4 LED-valaisimet, IP66</li>
+  <li><strong>Liitäntäkotelot:</strong> Ex e IIC T6, ruostumaton teräs (meriympäristö)</li>
+  <li><strong>Lähettimet:</strong> Ex ia IIC T4, 4–20 mA:n silmukat, joissa on esteet turvallisella alueella</li>
+  <li><strong>Ohjauspaneelit:</strong> Ex px IIB T4 (paineistettuja koteloita vyöhykkeen 1 moduuleissa)</li>
+</ul>
+
+<h3>Kemiallinen prosessointi</h3>
+<ul>
+  <li><strong>Sekoittimen moottorit:</strong> Ex de IIB T3 (yhdistetty räjähdyssuojattu moottori, turvallisuustasoa korottava liitäntäkotelo)</li>
+  <li><strong>Prosessianturit:</strong> Ex ia IIC T4–T6 liuottimesta riippuen</li>
+  <li><strong>Analysaattorit:</strong> Ex d IIB T4 -kotelot tai Ex p -puhdistetut kaapit</li>
+  <li><strong>Kenttälaitteet:</strong> Ex ib IIC T5 vyöhykkeelle 1, Ex ia kriittisille silmukoille</li>
+</ul>
+
+<h3>Lääketeollisuus (liuotinprosessointi)</h3>
+<ul>
+  <li><strong>Tablettien päällystyskattilat:</strong> Ex d IIA T3 -moottorit (alkoholihöyry = IIA)</li>
+  <li><strong>Uuttolaitteet:</strong> Ex d IIB T4 (etanoli/IPA = IIA, mutta käytä IIB:tä varmuuden vuoksi)</li>
+  <li><strong>Mittauslaitteet:</strong> Ex ia IIC T4 (jotkut liuottimet ovat IIB)</li>
+  <li><strong>Valaistus:</strong> Ex d IIA T4 LED, IP66 (pesuympäristö)</li>
+</ul>
+
+<h3>Viljan käsittely (pöly)</h3>
+<ul>
+  <li><strong>Kauhakuljettimen moottorit:</strong> Ex tb IIIB T135°C Db, IP6X</li>
+  <li><strong>Siilon tasoanturit:</strong> Ex ia IIIB (jotkut anturit on sertifioitu pölyä varten)</li>
+  <li><strong>Valaistus:</strong> Ex tb IIIB T135°C Db, IP6X, LED</li>
+  <li><strong>Kuljettimien moottorit:</strong> Ex tb IIIB T120°C Db</li>
+</ul>
+
+<h3>Maalauskabinetti</h3>
+<ul>
+  <li><strong>Poistoilmapuhaltimen moottori:</strong> Ex d IIA T3 (liuotinhöyry)</li>
+  <li><strong>Valaistus:</strong> Ex d IIA T4 LED (kabin sisällä = vyöhyke 1)</li>
+  <li><strong>Ohjaus:</strong> Ex e IIA T6 painonappiasemat</li>
+  <li><strong>Lukitukset:</strong> Ex ia IIA -turvapiirit</li>
+</ul>
+</section>
+
+<section>
+<h2>Vaihe 5: Ympäristö → IP-luokitus ja materiaalit</h2>
+
+<h3>IP-luokituksen valinta</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Ympäristö</th>
+      <th>Suositeltu IP-luokitus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sisätilat, kuiva, ilmastoitu</td>
+      <td>IP54</td>
+    </tr>
+    <tr>
+      <td>Sisätilat, satunnaista pölyä/kosteutta</td>
+      <td>IP65</td>
+    </tr>
+    <tr>
+      <td>Ulkokäyttö, teollisuus</td>
+      <td>IP66</td>
+    </tr>
+    <tr>
+      <td>Merellä, rannikolla, kemiallinen pesu</td>
+      <td>IP66/67</td>
+    </tr>
+    <tr>
+      <td>Upotettava, märät kaivannot</td>
+      <td>IP68</td>
+    </tr>
+    <tr>
+      <td>Pölyalueet (vyöhyke 20/21)</td>
+      <td>Vähintään IP6X (pölytiivis)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Materiaalivalinta</h3>
+<ul>
+  <li><strong>Alumiini (AlSi10Mg, LM6):</strong> Kevyt, sopii useimpiin ympäristöihin. Vältä erittäin syövyttävissä ympäristöissä.</li>
+  <li><strong>Ruostumaton teräs (316L):</strong> Merenkulku, offshore, kemikaalialtistus. Painavampi ja kalliimpi kuin alumiini.</li>
+  <li><strong>Messinki:</strong> Pienet komponentit (<a href="/fi/pages/cable-glands-hazardous-areas.html">kaapeliläpiviennit</a>, liittimet). Hyvä korroosionkestävyys.</li>
+  <li><strong>Muovi/lasikuituvahvistettu muovi (GRP):</strong> Ex e-, Ex tb-kotelot. Kevyt, korroosionkestävä. Ei sovellu Ex d -käyttöön (ei kestä sisäistä räjähdystä).</li>
+  <li><strong>Pinnoitteet:</strong> Jauhemaalaus, epoksi tai merenkulun vaatimukset täyttävä maali alumiinille. Vältä palonkestävien liitosten maalaamista.</li>
+</ul>
+</section>
+
+<section>
+<h2>Yleisiä valintavirheitä</h2>
+
+<h3>1. Vyöhykkeen 2 laitteiden käyttö vyöhykkeellä 1</h3>
+<p>Luokka 3 (Gc) soveltuu vain vyöhykkeelle 2. Sen asentaminen vyöhykkeelle 1 rikkoo <a href="/fi/pages/atex-vs-iecex.html">ATEX/IECEx</a>-vaatimuksia ja aiheuttaa todellisen syttymisvaaran.</p>
+
+<h3>2. Kaasuryhmän yhteensopimattomuus</h3>
+<p>IIA-luokiteltujen laitteiden asentaminen <a href="/fi/pages/hydrogen-explosion-protection.html">vetypitoiseen</a> (IIC) ympäristöön. Palonkestävät raot ovat liian leveät ja syttymisenergian rajat liian korkeat. Räjähdys leviää.</p>
+
+<h3>3. Lämpötilaluokan virhe</h3>
+<p>T3-laitteiden (maks. 200 °C) käyttö bensiinihöyryn (AIT ~230 °C) kanssa. Laitteen pinta voi saavuttaa 200 °C:n lämpötilan, mikä on liian lähellä syttymiskynnystä. Käytä T4 (135 °C) tai kylmempää.</p>
+
+<h3>4. IP-luokituksen alimitoitus</h3>
+<p>IP54-luokituksen määrittäminen ulkoasennuksiin rannikkoalueilla. Veden tunkeutuminen ja suolakorroosio vahingoittavat laitteita muutamassa kuukaudessa. Käytä merenkulkuympäristöissä vähintään IP66/67-luokitusta.</p>
+
+<h3>5. Ex i -järjestelmän suunnitteluvirheet</h3>
+<p>Kaapelin kapasitanssirajojen ylitys. Este/eristin sallii 100 nF, kenttälaitteen sisäinen kapasitanssi on 50 nF ja kaapelin kapasitanssi on 50 nF/100 m. 150 m:n kaapelin (75 nF) asentaminen ylittää kokonaisrajan (100 nF). Räjähdysvaara, jos vika ilmenee.</p>
+
+<h3>6. Ympäristön lämpötilarajojen huomiotta jättäminen</h3>
+<p>Vakiolaitteiden nimellislämpötila-alue on -20 °C – +40 °C. Laitteen asentaminen aavikolle (ympäristön lämpötila 55 °C) tai arktiselle alueelle (-40 °C) ilman laajennetun lämpötila-alueen tarkistamista. T-luokka lasketaan korkeimmalla ympäristön lämpötilalla. Sen ylittäminen muuttaa pintalämpötilaa.</p>
+</section>
+
+<section>
+<h2>Valintatarkistuslista</h2>
+<ol>
+  <li>☐ Varmista vyöhykeluokitus <a href="/fi/pages/hazardous-area-classification.html">alueiden luokitus</a>piirustuksesta</li>
+  <li>☐ Tunnista kaikki mahdollisesti esiintyvät kaasut/pölyt (tarkista prosessitiedot, käyttöturvallisuustiedotteet)</li>
+  <li>☐ Määritä kaasuryhmä: IIA, IIB tai IIC</li>
+  <li>☐ Selvitä kaasun itsesyttymislämpötila (AIT) tai pölyn MIT/LIT</li>
+  <li>☐ Valitse lämpötilaluokka tai suurin pintalämpötila</li>
+  <li>☐ Sovita kategoria/EPL vyöhykkeeseen (kategoria 1 vyöhykkeelle 0, kategoria 2 vyöhykkeelle 1, kategoria 3 vyöhykkeelle 2)</li>
+  <li>☐ Valitse suojausmenetelmä sovelluksen perusteella (Ex d moottoreille, Ex i antureille jne.)</li>
+  <li>☐ Määritä IP-luokitus ympäristölle (IP66 ulkokäyttöön/merellä)</li>
+  <li>☐ Tarkista ympäristön lämpötila-alue (-20–+40 °C vakiona; laajennettu tarvittaessa)</li>
+  <li>☐ Ex i: laske laitteen parametrit (Ui/Ii vs. Uo/Io, Ci/Li vs. Co/Lo + kaapeli)</li>
+  <li>☐ Varmista, että sähköiset parametrit (jännite, virta, taajuus) vastaavat syöttöä</li>
+  <li>☐ Hanki laitteen sertifikaatti ja varmista, että se täyttää kaikki vaatimukset</li>
+</ol>
+</section>
+
+<section>
+<h2>Aiheeseen liittyvät aiheet</h2>
+<ul>
+  <li><a href="/fi/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Vyöhykeluokitus</a>. Vyöhykkeiden 0/1/2 ja 20/21/22 ymmärtäminen</li>
+  <li><a href="/fi/pages/gas-groups.html"><i class="ph ph-flask"></i> Kaasuryhmät</a>. IIA, IIB, IIC selitettynä</li>
+  <li><a href="/fi/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Lämpötilaluokat</a>. T1–T6- ja AIT-taulukot</li>
+  <li><a href="/fi/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Suojausmenetelmät</a>. Kaikki Ex-tyypit yksityiskohtaisesti</li>
+  <li><a href="/fi/pages/explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i> Räjähdyssuojattu vs. luontaisesti turvallinen</a>. Valinta Ex d:n ja Ex i:n välillä</li>
+  <li><a href="/fi/pages/epl.html"><i class="ph ph-gauge"></i> Laitteiden suojausluokat</a>. Ga/Gb/Gc ja Da/Db/Dc selitettynä</li>
+  <li><a href="/fi/pages/cable-glands-hazardous-areas.html"><i class="ph ph-plug"></i> Kaapeliläpiviennit</a>. Oikeiden läpivientien valinta laitteillesi</li>
+</ul>
+</section>
+
+      
+        <div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">
+<strong style="color:var(--text);">Sisällön tarkistus</strong><br>
+Koottu IEC 60079 -sarjasta, ATEX 2014/34/EU:sta ja IECEx-toimintadokumenteista. Tämä viiteopas ei korvaa virallisia standardeja tai sertifioituja paikan päällä tehtyjä arviointeja. Tutustu aina sovellettavaan standardiversioon ja ota yhteyttä pätevään Ex-insinööriin omassa sovelluksessasi.
+</div>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4><i class="ph ph-list-bullets"></i> Kaikki aiheet</h4>
+  <a href="fundamentals.html"><i class="ph ph-fire"></i>Perusteet</a>
+  <a href="zone-classification.html"><i class="ph ph-map-trifold"></i>Vyöhykkeet</a>
+  <a href="gas-groups.html"><i class="ph ph-flask"></i>Kaasuryhmät</a>
+  <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i>Lämpötilaluokat</a>
+  <a href="protection-methods.html"><i class="ph ph-shield-check"></i>Suojaus</a>
+  <a href="epl.html"><i class="ph ph-gauge"></i></a>
+  <a href="ex-markings.html"><i class="ph ph-tag"></i></a>
+  <a href="epl.html">EPL</a>
+  <a href="ex-markings.html">-merkinnät</a>
+  <a href="standards.html"><i class="ph ph-book-open"></i>Standardit</a>
+  <a href="certification.html"><i class="ph ph-certificate"></i>Sertifiointi</a>
+  <a href="installation-inspection.html"><i class="ph ph-wrench"></i></a>
+  <a href="cheat-sheet.html"><i class="ph ph-lightning"></i>Asennusohjeet</a>
+  <a href="atex-vs-iecex.html"><i class="ph ph-arrows-left-right"></i>ATEX vs. IECEx</a>
+  <a href="explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i>Ex-kestävä vs. IS</a>
+  <a href="how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i>ATEX-tyyppikilpi</a>
+  <a href="atex-directive.html"><i class="ph ph-scales"></i>ATEX-direktiivi</a>
+  <a href="hazardous-area-classification.html"><i class="ph ph-map-pin"></i>Alueiden luokittelu</a>
+  <a href="dust-explosion-protection.html"><i class="ph ph-wind"></i>Pölyräjähdykset</a>
+  <a href="atex-for-beginners.html"><i class="ph ph-graduation-cap"></i>ATEX-aloittelijat</a>
+  <a href="compex-certification.html"><i class="ph ph-exam"></i>CompEx</a>
+  <a href="hydrogen-explosion-protection.html"><i class="ph ph-atom"></i>Vetyturvallisuus</a>
+  <a href="cable-glands-hazardous-areas.html"><i class="ph ph-plug"></i>Kaapeliläpiviennit</a>
+  <a href="ex-equipment-selection-guide.html" class="current"><i class="ph ph-clipboard-text"></i>Laitteiden valinta</a>
+        </div>
+      </aside>
+</div>
+
+
+<div class="references-wrapper">
+
+    <section class="references">
+      <h2>Lähteet ja viitteet</h2>
+      <ol>
+        <li><a href="https://www.iecex.com/certified-equipment-scheme/overview/" target="_blank" rel="noopener">IECEx-sertifioitu laiteohjelma – IECEx</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Electrical_equipment_in_hazardous_areas" target="_blank" rel="noopener">Sähkölaitteet vaarallisilla alueilla – Wikipedia</a></li>
+        <li><a href="https://www.iecex.com/certified-equipment-scheme/guides/" target="_blank" rel="noopener">IECEx-oppaat – IECEx</a></li>
+        <li><a href="https://webstore.iec.ch/en/publication/635" target="_blank" rel="noopener">IEC 60079-0: Yleiset vaatimukset – IEC</a></li>
+      </ol>
+    </section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Tietoa</h4>
+        <a href="/fi/pages/fundamentals.html">Perusteet</a>
+        
+        <a href="/fi/pages/zone-classification.html">Alueiden luokittelu</a>
+        
+        <a href="/fi/pages/protection-methods.html">Suojausmenetelmät</a>
+        
+        <a href="/fi/pages/standards.html">Standardit</a>
+        
+        <a href="/fi/pages/temperature-classes.html">Lämpötilaluokat</a>
+        
+        <a href="/fi/pages/gas-groups.html">Kaasuryhmät</a>
+        
+        <a href="/fi/pages/cheat-sheet.html">Pikaopas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resurssit</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i>Tietokilpailu</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i>Kysely</a>
+        <a href="/fi/blog/"><i class="ph ph-newspaper"></i>Blogi</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i>Sanasto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i>Kaikki jaksot</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i>Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i>Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i>RSS-syöte</a>
+      </div>
+      <div class="footer-col">
+        <h4>Lisää</h4>
+        <a href="/about.html"><i class="ph ph-info"></i>Tietoa</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i>Kumppanit</a>
+        <a href="/events.html"><i class="ph ph-calendar-blank"></i>Tapahtumat</a>
+        <a href="/links.html"><i class="ph ph-link"></i>Alan linkit</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Suunniteltu vaarallisilla alueilla työskenteleville insinööreille. Sisältö perustuu standardeihin IEC 60079, ATEX 2014/34/EU ja IECEx.</p>
+      <p>Ei korvaa virallisia standardiasiakirjoja tai ammattimaista insinööri-neuvontaa.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Ilmoita virheestä tai ehdota parannusta</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/js/nav.js"></script>
+
+<script src="/js/reveal.js"></script>
+<script src="/js/search.js"></script>
+</body>
+</html>

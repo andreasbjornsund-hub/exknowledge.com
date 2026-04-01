@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>ATEX aloittelijoille: Helppotajuinen johdanto...</title>
+  <meta name="description" content="New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.">
+  <link rel="canonical" href="https://exknowledge.com/fi/pages/atex-for-beginners.html">
+  <meta property="og:title" content="ATEX for Beginners: A Plain-Language Introduction. ExKnowledge">
+  <meta property="og:description" content="New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.">
+  <meta property="og:url" content="https://exknowledge.com/pages/atex-for-beginners.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ATEX for Beginners: A Plain-Language Introduction. ExKnowledge">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">  <script type="application/ld+json">
+[
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;TechArticle&quot;,
+    &quot;headline&quot;: &quot;ATEX for Beginners: A Plain-Language Introduction. ExKnowledge&quot;,
+    &quot;description&quot;: &quot;New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.&quot;,
+    &quot;url&quot;: &quot;https://exknowledge.com/pages/atex-for-beginners.html&quot;,
+    &quot;image&quot;: &quot;https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1000&amp;q=80&quot;,
+    &quot;author&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;publisher&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;inLanguage&quot;: &quot;en&quot;,
+    &quot;isPartOf&quot;: {
+      &quot;@type&quot;: &quot;WebSite&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;datePublished&quot;: &quot;2026-02-01&quot;,
+    &quot;dateModified&quot;: &quot;2026-03-08&quot;,
+    &quot;mainEntityOfPage&quot;: &quot;https://exknowledge.com/pages/atex-for-beginners.html&quot;,
+    &quot;about&quot;: {
+      &quot;@type&quot;: &quot;Thing&quot;,
+      &quot;name&quot;: &quot;Explosion Protection&quot;
+    }
+  },
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+    &quot;itemListElement&quot;: [
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 1,
+        &quot;name&quot;: &quot;Home&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/&quot;
+      },
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 2,
+        &quot;name&quot;: &quot;ATEX for Beginners&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/pages/atex-for-beginners.html&quot;
+      }
+    ]
+  }
+]
+  </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#x27;gtm.start&#x27;:
+new Date().getTime(),event:&#x27;gtm.js&#x27;});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=&#x27;dataLayer&#x27;?&#x27;&amp;l=&#x27;+l:&#x27;&#x27;;j.async=true;j.src=
+&#x27;https://www.googletagmanager.com/gtm.js?id=&#x27;+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,&#x27;script&#x27;,&#x27;dataLayer&#x27;,&#x27;GTM-5VSBXBSL&#x27;);</script>
+<!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/atex-for-beginners.html">
+                      <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/atex-for-beginners.html">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav">
+  <div class="container">
+    <a href="/fi/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Tietoa</span></a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-book-open-text"></i>Tietoa<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+        <li><a href="/fi/pages/fundamentals.html"><i class="ph ph-fire"></i> Perusteet</a></li>
+        <li><a href="/fi/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Vyöhykeluokitus</a></li>
+        <li><a href="/fi/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Suojausmenetelmät</a></li>
+        <li><a href="/fi/pages/standards.html"><i class="ph ph-scales"></i> Standardit ja määräykset</a></li>
+        <li><a href="/fi/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Lämpötilaluokat</a></li>
+        <li><a href="/fi/pages/gas-groups.html"><i class="ph ph-flame"></i> Kaasuryhmät</a></li>
+        <li><a href="/fi/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Laiteryhmät</a></li>
+        <li><a href="/fi/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Pikaopas</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-folder-open"></i>Resurssit<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Tietokilpailu</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Kysely</a></li>
+          <li><a href="/fi/blog/"><i class="ph ph-newspaper"></i> Blogi</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate"></i> Sanasto</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Koulutus <span class="badge-soon">pian</span></a></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinaarit <span class="badge-soon">pian</span></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i>Yhteisö<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Tapahtumat <span class="badge-soon">pian</span></a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Kumppanit <span class="badge-soon">pian</span></a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Alan linkit <span class="badge-soon">pian</span></a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> Tietoa</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/atex-for-beginners.html" selected>🇬🇧 Englanti</option>
+      <option value="/de/pages/atex-for-beginners.html">🇩🇪 Saksan kieli</option>
+      <option value="/no/pages/atex-for-beginners.html">🇳🇴 Norja</option>
+      <option value="/da/pages/atex-for-beginners.html">🇩🇰 Tanska</option>
+      <option value="/sv/pages/atex-for-beginners.html">🇸🇪 Ruotsi</option>
+      <option value="/fi/pages/atex-for-beginners.html">🇫🇮 Suomi</option>
+      <option value="/es/pages/atex-for-beginners.html">🇪🇸 Espanja</option>
+      <option value="/nl/pages/atex-for-beginners.html">🇳🇱 Hollanti</option>
+      <option value="/pt/pages/atex-for-beginners.html">🇵🇹 Portugali</option>
+      <option value="/it/pages/atex-for-beginners.html">🇮🇹 Italiano</option>
+      <option value="/ar/pages/atex-for-beginners.html">🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1000&q=80" alt="ATEX for Beginners" loading="lazy" width="820" height="240">
+        <h1>ATEX aloittelijoille</h1>
+
+        <p class="last-updated" style="font-size:13px;color:var(--text-muted);margin:-12px 0 24px;"><i class="ph ph-clock"></i> Viimeisin päivitys: maaliskuu 2026 · Perustuu standardiin IEC 60079 (vuoden 2020 painos) ja ATEX-direktiiviin 2014/34/EU</p>
+<section>
+<h2>Mikä on ATEX?</h2>
+<p>ATEX on joukko Euroopan unionin sääntöjä, jotka säätelevät työpaikkojen ja laitteiden räjähdysriskien hallintaa. Nimi tulee ranskankielisestä sanasta <em>&quot;ATmosphères EXplosibles&quot;</em>, joka tarkoittaa räjähdysherkkiä ilmakehiä.</p>
+<p>Käytännössä ATEX vastaa kahteen kysymykseen:</p>
+<ol>
+  <li><strong>Työnantajille:</strong> Missä laitoksessasi voi tapahtua räjähdys, ja mitä sinun on tehtävä sen varalta?</li>
+  <li><strong>Laitteiden valmistajille:</strong> Mitä standardeja tuotteesi on täytettävä, ennen kuin sitä voidaan myydä käytettäväksi kyseisissä paikoissa?</li>
+</ol>
+<p>Jos työskentelet öljy- ja kaasualalla, kemianteollisuudessa, lääketeollisuudessa, elintarviketeollisuudessa, kaivosteollisuudessa tai muulla alalla, jossa käsitellään syttyviä kaasuja, höyryjä tai <a href="/fi/pages/dust-explosion-protection.html">palavia pölyjä</a>, ATEX koskee sinua.</p>
+</section>
+
+<section>
+<h2>Miksi tarvitsemme ATEX-direktiiviä?</h2>
+<p>Räjähdykseen tarvitaan kolme asiaa:</p>
+<ol>
+  <li><strong>Polttoaine</strong>. Syttyvä kaasu, höyry, sumu tai palava pöly</li>
+  <li><strong>Ilmaa</strong>. Happi (läsnä kaikkialla)</li>
+  <li><strong>Sytytyslähde</strong>. Kipinä, kuuma pinta, liekki tai jopa staattinen sähkö</li>
+</ol>
+<p>Tätä kutsutaan palokolmioksi. Jos kaikki kolme tekijää kohtaavat samanaikaisesti samassa paikassa, seurauksena on räjähdys.</p>
+<p>Monissa teollisissa prosesseissa syntyy väistämättä syttyviä ilmaseoksia. Jalostamo käsittelee hiilivetyjä. Jauhomylly tuottaa palavaa pölyä. Maalaamossa käytetään haihtuvia liuottimia. Polttoainetta ei voi poistaa, eikä ilmaa voi poistaa. Siksi keskitytään syttymislähteiden hallintaan ja syttyvien ilmaseosten muodostumispaikkojen hallintaan.</p>
+<p>Tätä varten on ATEX.</p>
+</section>
+
+<section>
+<h2>Kaksi ATEX-direktiiviä</h2>
+<p>ATEX-säännöksiä on itse asiassa kaksi erillistä:</p>
+
+<h3>1. Laitedirektiivi (2014/34/EU)</h3>
+<p>Tämä määrittelee <strong>valmistajille,</strong> mitä laitteiden on täytettävä, ennen kuin niitä voidaan myydä käytettäväksi räjähdysvaarallisissa tiloissa. Laitteet on testattava, <a href="/fi/pages/certification.html">sertifioitava</a> ja merkittävä CE-merkinnällä. Tätä tarkoitetaan yleensä, kun puhutaan &quot;ATEX-sertifioinnista&quot;. Kansainvälisten markkinoiden osalta katso myös <a href="/fi/pages/atex-vs-iecex.html">ATEX vs. IECEx</a>.</p>
+
+<h3>2. Työpaikkadirektiivi (1999/92/EY)</h3>
+<p>Tämä määrittelee <strong>työnantajille</strong>, mitä heidän on tehtävä työntekijöiden suojelemiseksi. Heidän on tunnistettava, missä räjähdysalttiita ilmakehä voi muodostua, luokiteltava nämä alueet vyöhykkeiksi, valittava oikeat laitteet kullekin vyöhykkeelle ja dokumentoitava kaikki räjähdyssuojausasiakirjaan.</p>
+
+<p>Molemmat direktiivit toimivat yhdessä. Valmistaja valmistaa turvallisia laitteita; työnantaja sijoittaa ne oikeaan paikkaan.</p>
+<p><a href="/fi/pages/atex-directive.html"><i class="ph ph-scales"></i> → Yksityiskohtainen opas ATEX-direktiiviin</a></p>
+</section>
+
+<section>
+<h2>Vyöhykkeet: riskin luokittelu</h2>
+<p>Kaikki laitoksen osat eivät ole yhtä vaarallisia. Joillakin alueilla on aina palavia kaasuja, toisilla vain harvoin. ATEX käyttää vyöhykejärjestelmää luokitellakseen kunkin alueen sen mukaan, kuinka usein räjähdysvaarallinen ilmaseos esiintyy:</p>
+
+<h3>Kaasu, höyry tai sumu</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Vyöhyke</th>
+      <th>Kuinka usein?</th>
+      <th>Selkokielellä</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Vyöhyke 0</strong></td>
+      <td>Aina tai suurimman osan ajasta</td>
+      <td>Polttoainesäiliön sisällä, kemiallisen reaktorin sisällä</td>
+    </tr>
+    <tr>
+      <td><strong>Vyöhyke 1</strong></td>
+      <td>Joskus, normaalin käytön aikana</td>
+      <td>Pumpputiivisteiden lähellä, tuuletusaukkojen lähellä, täyttöpaikkojen ympärillä</td>
+    </tr>
+    <tr>
+      <td><strong>Vyöhyke 2</strong></td>
+      <td>Harvoin ja vain lyhyen aikaa</td>
+      <td>Putkilaippojen lähellä, laitteiden ympärillä, joista voi vuotaa, jos jokin rikkoutuu</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Palavan pölyn osalta</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Vyöhyke</th>
+      <th>Kuinka usein?</th>
+      <th>Selkokielellä</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Vyöhyke 20</strong></td>
+      <td>Aina tai suurimman osan ajasta</td>
+      <td>Siilojen sisällä, jauhatuslaitteiden sisällä</td>
+    </tr>
+    <tr>
+      <td><strong>Vyöhyke 21</strong></td>
+      <td>Joskus, normaalin käytön aikana</td>
+      <td>Säkkitäyttöasemien ympärillä, avoimissa kuljetinliitoksissa</td>
+    </tr>
+    <tr>
+      <td><strong>Vyöhyke 22</strong></td>
+      <td>Harvoin ja vain lyhyesti</td>
+      <td>Alueet, joihin pölykerroksia voi kertyä ja jotka voivat häiriintyä</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Mitä suurempi vyöhykenumero, sitä pienempi riski.</strong> Vyöhyke 0 on vaarallisin; vyöhyke 2 on vähiten vaarallinen. Kaikkien vyöhykkeiden ulkopuolella olevia alueita kutsutaan &quot;turvallisiksi alueiksi&quot; tai &quot;vaarattomiksi&quot;.</p>
+<p><a href="/fi/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> → Täydellinen opas vyöhykeluokitukseen</a></p>
+</section>
+
+<section>
+<h2>Laiteryhmät: Laitteiden sovittaminen vyöhykkeisiin</h2>
+<p>Jokainen vyöhyke vaatii tietyn turvallisuustason mukaisesti valmistettuja laitteita. ATEX käyttää <strong>luokkia</strong> laitteiden luokitteluun:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Laiteryhmä</th>
+      <th>Voidaan käyttää</th>
+      <th>Turvallisuustaso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Luokka 1</strong></td>
+      <td>Vyöhyke 0, 1 tai 2 (kaasu) / Vyöhyke 20, 21 tai 22 (pöly)</td>
+      <td>Erittäin korkea. Turvallinen, vaikka kaksi asiaa menisi pieleen samanaikaisesti</td>
+    </tr>
+    <tr>
+      <td><strong>Luokka 2</strong></td>
+      <td>Vyöhyke 1 tai 2 (kaasu) / Vyöhyke 21 tai 22 (pöly)</td>
+      <td>Korkea. Turvallinen, vaikka yksi asia menisi pieleen</td>
+    </tr>
+    <tr>
+      <td><strong>Luokka 3</strong></td>
+      <td>Vain vyöhyke 2 (kaasu) / Vain vyöhyke 22 (pöly)</td>
+      <td>Normaali. Turvallinen normaalissa käytössä</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Yksinkertainen sääntö:</strong> Korkeamman luokan laitteita voidaan aina käyttää matalamman riskin vyöhykkeillä. Luokan 1 laitteet toimivat kaikkialla. Luokan 3 laitteet toimivat vain vyöhykkeellä 2 (matalimman riskin luokiteltu alue).</p>
+<p><a href="/fi/pages/epl.html"><i class="ph ph-gauge"></i> → Laitteiden suojausluokkien selitys</a></p>
+</section>
+
+<section>
+<h2>Suojausmenetelmät: miten laitteet tehdään turvallisiksi</h2>
+<p>On olemassa useita eri tapoja varmistaa laitteiden turvallisuus räjähdysvaarallisissa tiloissa. Jokaisella menetelmällä on oma koodikirjaimensa:</p>
+
+<h3>Yleisimmät menetelmät</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Koodi</th>
+      <th>Nimi</th>
+      <th>Kuinka se toimii (yksinkertaisesti)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ex d</strong></td>
+      <td>Palonkestävä (räjähdyssuojattu)</td>
+      <td>Raskas metallikotelo, joka kestää sisäisen räjähdyksen ja estää liekin leviämisen ulos</td>
+    </tr>
+    <tr>
+      <td><strong>Ex i</strong></td>
+      <td>Itsestään turvallinen</td>
+      <td>Rajoittaa sähkötehon niin alhaiseksi, ettei se voi tuottaa kipinää, joka olisi riittävän voimakas sytyttämään mitään</td>
+    </tr>
+    <tr>
+      <td><strong>Ex e</strong></td>
+      <td>Lisätty turvallisuus</td>
+      <td>Estää kipinöiden ja valokaarien syntymisen jo ennalta (ei liikkuvia koskettimia, ylimääräiset välykset)</td>
+    </tr>
+    <tr>
+      <td><strong>Ex p</strong></td>
+      <td>Paineistus</td>
+      <td>Pitää puhtaan ilman paineen kotelon sisällä, jotta kaasu ei pääse sisään</td>
+    </tr>
+    <tr>
+      <td><strong>Ex m</strong></td>
+      <td>Kapselointi</td>
+      <td>Sulkee vaaralliset osat kiinteään hartsiin, jotta mitään ei pääse karkaamaan</td>
+    </tr>
+    <tr>
+      <td><strong>Ex t</strong></td>
+      <td>Kotelon tarjoama suoja (pöly)</td>
+      <td>Pölytiivis kotelo, joka estää palavan pölyn pääsyn sisään ja rajoittaa pintalämpötilaa</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Eri suojausmenetelmät sopivat eri sovelluksiin. Raskaissa moottoreissa käytetään Ex d:tä. Herkissä laitteissa käytetään Ex i:tä. Liitäntäkoteloissa käytetään Ex e:tä. Suurissa ohjauspaneeleissa käytetään Ex p:tä.</p>
+<p><a href="/fi/pages/protection-methods.html"><i class="ph ph-shield-check"></i> → Kaikki suojausmenetelmät yksityiskohtaisesti</a></p>
+<p><a href="/fi/pages/explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i> → Räjähdyssuojattu vs. luontaisesti turvallinen -vertailu</a></p>
+</section>
+
+<section>
+<h2>Etiketin lukeminen</h2>
+<p>ATEX-laitteissa on etiketti (tyyppikilpi), jossa on koodattuja tietoja. Tässä on esimerkki tyypillisestä etiketistä:</p>
+<pre><code>CE 0344
+ ⚠  II 2 G Ex d IIC T4 Gb
+</code></pre>
+<p>Tarkastellaan sitä tarkemmin (katso lisää esimerkkejä <a href="/fi/pages/how-to-read-atex-nameplate.html">kohdasta ATEX-tyyppikilven lukeminen</a>):</p>
+<ul>
+  <li><strong>CE 0344</strong>. EU-hyväksytty, testattu sertifiointielimen numero 0344</li>
+  <li><strong>⚠</strong>. ATEX-symboli (kuusikulmio)</li>
+  <li><strong>II</strong>. Ryhmä II (pintateollisuus, ei kaivostoiminta)</li>
+  <li><strong>2</strong>. Luokka 2 (sopii vyöhykkeelle 1)</li>
+  <li><strong>G</strong>. Kaasuympäristöihin</li>
+  <li><strong>Ex d</strong>. Suojausmenetelmä: palonkestävä kotelo</li>
+  <li><strong>IIC</strong>. Sopii kaikille kaasuryhmille (mukaan lukien vety)</li>
+  <li><strong>T4</strong>. Suurin pintalämpötila: 135 °C</li>
+  <li><strong>Gb</strong>. Laitteen suojausluokka: vyöhyke 1</li>
+</ul>
+<p><a href="/fi/pages/how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i> → Täydellinen tyyppikilven lukemisen opas ja lisää esimerkkejä</a></p>
+</section>
+
+<section>
+<h2>Kaasuryhmät: Mitkä kaasut?</h2>
+<p>Eri kaasut syttyvät eri energiatasoilla. Laitteet on luokiteltu tiettyjä kaasuryhmiä varten:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Ryhmä</th>
+      <th>Yleiset kaasut</th>
+      <th>Vaarataso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>IIA</strong></td>
+      <td>Propaani, metaani, butaani, ammoniakki</td>
+      <td>Helpoin suojautua</td>
+    </tr>
+    <tr>
+      <td><strong>IIB</strong></td>
+      <td>Eteeni, jotkut liuottimet</td>
+      <td>Keskivaikea</td>
+    </tr>
+    <tr>
+      <td><strong>IIC</strong></td>
+      <td>Vety, asetyleeni</td>
+      <td>Vaativin (syttyy helpoimmin)</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Keskeinen sääntö:</strong> IIC-luokiteltuja laitteita voidaan käyttää minkä tahansa kaasun kanssa. IIA-luokiteltuja laitteita voidaan käyttää vain IIA-kaasujen kanssa. Valitse aina vähintään ympäristösi kaasuryhmän mukainen laite.</p>
+<p><a href="/fi/pages/gas-groups.html"><i class="ph ph-flask"></i> → Kaasuryhmät selitettyinä yksityiskohtaisesti</a></p>
+</section>
+
+<section>
+<h2>Lämpötilaluokat: Kuinka kuumaksi laite voi kuumentua?</h2>
+<p>Jokaisella syttyvällä kaasulla on itsesyttymislämpöt<strong>ila</strong>, eli lämpötila, jossa se syttyy ilman kipinää. Laitteiden lämpötila ei saa koskaan nousta tätä korkeammaksi.</p>
+<table>
+  <thead>
+    <tr>
+      <th>T-luokka</th>
+      <th>Pinnan maksimilämpötila</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>T1</td><td>450 °C</td></tr>
+    <tr><td>T2</td><td>300 °C</td></tr>
+    <tr><td>T3</td><td>200 °C</td></tr>
+    <tr><td>T4</td><td>135 °C</td></tr>
+    <tr><td>T5</td><td>100 °C</td></tr>
+    <tr><td>T6</td><td>85 °C</td></tr>
+  </tbody>
+</table>
+<p><strong>Korkeampi T-luku = matalampi lämpötila = turvallisempi useammille kaasuille.</strong> T6-laitteet ovat rajoittavimpia (pysyvät viileimpinä) ja toimivat lähes kaikkien kaasujen kanssa.</p>
+<p><a href="/fi/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> → Lämpötilaluokkien selitys</a></p>
+</section>
+
+<section>
+<h2>ATEX vs. IECEx: mikä on ero?</h2>
+<p>On olemassa kaksi sertifiointijärjestelmää:</p>
+<ul>
+  <li><strong>ATEX</strong>. EU-lainsäädäntö. Vaaditaan laitteiden myymiseksi Euroopassa. Merkitty CE-merkillä.</li>
+  <li><strong>IECEx</strong>. Kansainvälinen standardi. Vapaaehtoinen. Hyväksytty yli 60 maassa EU:n ulkopuolella.</li>
+</ul>
+<p>Molemmat sertifioivat samojen teknisten standardien (IEC 60079 -sarja) mukaisesti. Ero on lainsäädännöllinen: ATEX on pakollinen Euroopassa; IECEx on vapaaehtoinen, mutta laajalti tunnustettu maailmanlaajuisesti. Monilla tuotteilla on molemmat sertifioinnit.</p>
+<p><a href="/fi/pages/atex-vs-iecex.html"><i class="ph ph-arrows-left-right"></i> → Täydellinen ATEX- ja IECEx-vertailu</a></p>
+</section>
+
+<section>
+<h2>Kenen on tiedettävä ATEXista?</h2>
+
+<h3>Jos olet työnantaja tai työmaan johtaja</h3>
+<p>Sinun on:</p>
+<ul>
+  <li>Tunnistaa vaaralliset alueet ja luokitella ne vyöhykkeiksi</li>
+  <li>Laadittava räjähdyssuojausasiakirja (EPD)</li>
+  <li>Varmistettava, että kussakin vyöhykkeessä käytetään vain oikean luokituksen mukaisia laitteita</li>
+  <li>Kouluttaa työntekijöitäsi</li>
+  <li>Huoltaa laitteet ja tarkistaa luokitukset tilanteen muuttuessa</li>
+</ul>
+
+<h3>Jos olet insinööri tai suunnittelija</h3>
+<p>Sinun on</p>
+<ul>
+  <li>Valita laitteet, joiden kategoria, kaasuryhmä ja lämpötilaluokka ovat oikeat kussakin vyöhykkeessä</li>
+  <li>Suunnittele asennukset standardin IEC 60079-14 (asennusstandardi) mukaisesti</li>
+  <li>Varmistettava asianmukainen maadoitus, kaapeliläpivientien valinta ja piirien erottelu</li>
+</ul>
+
+<h3>Jos olet valmistaja</h3>
+<p>Sinun on:</p>
+<ul>
+  <li>Suunnitella laitteet siten, että ne täyttävät direktiivin 2014/34/EU olennaiset terveys- ja turvallisuusvaatimukset</li>
+  <li>Laite on testattava ja sertifioitava ilmoitetun laitoksen toimesta (luokan 1 ja useimpien luokan 2 laitteiden osalta)</li>
+  <li>kiinnitettävä CE-merkintä ja toimitettava tekninen dokumentaatio</li>
+</ul>
+
+<h3>Jos olet sähköasentaja tai teknikko</h3>
+<p>Sinun on:</p>
+<ul>
+  <li>Asentaa Ex-laitteet oikein (vääntömomenttivaatimukset, kaapeliläpiviennit, piiridokumentaatio)</li>
+  <li>Tarkastettava Ex-laitteet standardin IEC 60079-17 (tarkastusstandardi) mukaisesti</li>
+  <li>Älä koskaan muokkaa Ex-laitteita ilman lupaa</li>
+  <li>Ymmärtää käyttämiesi laitteiden merkinnät</li>
+</ul>
+</section>
+
+<section>
+<h2>Yleisiä aloittelijoiden kysymyksiä</h2>
+
+<h3>Koskeeko ATEX vain sähkölaitteita?</h3>
+<p>Ei. ATEX kattaa sekä sähkölaitteet että muut laitteet. Mekaaniset laitteet, kuten pumput, puhaltimet, kuljetinjärjestelmät ja käsityökalut, voivat myös aiheuttaa syttymislähteitä (kitka, kuumat pinnat, mekaaniset kipinät) ja tarvitsevat ATEX-sertifioinnin, jos niitä käytetään luokitelluilla alueilla.</p>
+
+<h3>Sovelletaanko ATEX-direktiivejä Euroopan ulkopuolella?</h3>
+<p>ATEX-direktiivit ovat EU-lainsäädäntöä, joten ne ovat suoraan voimassa EU- ja ETA-maissa. Muilla mailla on omat määräyksensä (NEC Yhdysvalloissa, AS/NZS Australiassa jne.), mutta monet viittaavat samoihin IEC 60079 -standardeihin. IECEx on kansainvälinen vastine.</p>
+
+<h3>Mitä tapahtuu, jos käytän vääriä laitteita?</h3>
+<p>Sertifioimattomien laitteiden käyttö luokitellulla alueella on lainvastaista. Vielä tärkeämpää on, että se aiheuttaa todellisen räjähdysvaaran. Laitteissa, joita ei ole luokiteltu kyseiselle alueelle, voi olla kuumia pintoja, kipinöiviä koskettimia tai riittämätön kotelon tiiviys. Onnettomuustapauksessa vastuu lankeaa työnantajalle ja mahdollisesti asentajalle.</p>
+
+<h3>Voinko muokata ATEX-laitteita?</h3>
+<p>Ei. Kaikki muutokset (reikien poraaminen, kaapeliläpivientien lisääminen, komponenttien vaihtaminen, hitsaus, palonkestävien liitosten maalaaminen) mitätöivät sertifioinnin. Muutokset on tehtävä alkuperäisen valmistajan tai sertifioidun korjauslaitoksen toimesta.</p>
+
+<h3>Miten aloitan ATEX-vaatimusten noudattamisen?</h3>
+<ol>
+  <li>Tunnista kaikki palavat aineet laitoksessasi</li>
+  <li>Määritä, missä räjähdysherkkiä ilmakehä voi muodostua</li>
+  <li>Luokittele nämä alueet vyöhykkeiksi (harkitse asiantuntijan palkkaamista)</li>
+  <li>Tarkista, että kaikki olemassa olevat laitteet täyttävät vyöhykkeen vaatimukset</li>
+  <li>Vaihda tai päivitä vaatimustenvastaiset laitteet</li>
+  <li>Laadi räjähdyssuojausasiakirja</li>
+  <li>Kouluta tiimisi</li>
+</ol>
+</section>
+
+<section>
+<h2>Keskeisten termien sanasto</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Termi</th>
+      <th>Merkitys</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>ATEX</strong></td><td>ATmosphères EXplosibles. EU:n räjähdyssuojauskehys</td></tr>
+    <tr><td><strong>IECEx</strong></td><td>Kansainvälinen sertifiointijärjestelmä räjähdyssuojatuille laitteille</td></tr>
+    <tr><td><strong>Ex</strong></td><td>Räjähdyssuojattujen laitteiden etuliite</td></tr>
+    <tr><td><strong>Vyöhyke</strong></td><td>Luokiteltu alue räjähdysherkän ilmakehän esiintymistiheyden perusteella</td></tr>
+    <tr><td><strong>Luokka</strong></td><td>Laitteiden turvallisuusluokitus (1 = korkein, 3 = matalin)</td></tr>
+    <tr><td><strong>EPL</strong></td><td>Laitteiden suojausluokka (Ga/Gb/Gc kaasulle, Da/Db/Dc pölylle)</td></tr>
+    <tr><td><strong>Kaasuryhmä</strong></td><td>IIA/IIB/IIC. luokittelee kaasut syttymisherkkyyden mukaan</td></tr>
+    <tr><td><strong>T-luokka</strong></td><td>Lämpötilaluokka (T1–T6). Laitteen pinnan enimmäislämpötila</td></tr>
+    <tr><td><strong>Ilmoitettu laitos</strong></td><td>Organisaatio, jolla on valtuudet testata ja sertifioida ATEX-laitteita</td></tr>
+    <tr><td><strong>CE-merkintä</strong></td><td>Merkki, joka osoittaa EU-vaatimustenmukaisuuden (vaaditaan EU-markkinoilla)</td></tr>
+    <tr><td><strong>EPD</strong></td><td>Räjähdyssuojausasiakirja (työturvallisuusasiakirja)</td></tr>
+    <tr><td><strong>LEL</strong></td><td>Alin räjähdysraja. Räjähdyksen syntymiseen tarvittava vähimmäiskaasupitoisuus</td></tr>
+    <tr><td><strong>AIT</strong></td><td>Itsesyttyvyyslämpötila. Lämpötila, jossa kaasu syttyy itsestään</td></tr>
+    <tr><td><strong>MESG</strong></td><td>Suurin kokeellinen turvallinen raja. Määrittää kaasuryhmän luokituksen</td></tr>
+    <tr><td><strong>IP-luokitus</strong></td><td>Suojausluokka. Koteloiden pöly- ja vesitiiviys</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Mitä seuraavaksi</h2>
+<p>Nyt kun olet perehtynyt perusasioihin, tutustu roolisi kannalta tärkeimpiin aiheisiin:</p>
+<ul>
+  <li><a href="/fi/pages/fundamentals.html"><i class="ph ph-fire"></i> Perusteet</a>. Syvenny palokolmiota, räjähdysherkkiä ilmakehiä ja syttymislähteitä</li>
+  <li><a href="/fi/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Vyöhykeluokitus</a>. Miten vyöhykkeet määritetään ja mitä kukin tarkoittaa</li>
+  <li><a href="/fi/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Suojausmenetelmät</a>. Kaikki Ex-tyypit selitettyinä teknisesti yksityiskohtaisesti</li>
+  <li><a href="/fi/pages/how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i> ATEX-tyyppikilven lukeminen</a>. Käytännön opas laitteiden etikettien tulkitsemiseen</li>
+  <li><a href="/fi/pages/atex-directive.html"><i class="ph ph-scales"></i> ATEX-direktiivi</a>. Kattava sääntelyopas valmistajille ja vaatimustenmukaisuudesta vastaaville</li>
+  <li><a href="/fi/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Pikaopas</a>. Pikaopas vyöhykkeisiin, luokkiin, T-luokkiin ja kaasuryhmiin</li>
+</ul>
+</section>
+
+      
+        <div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">
+<strong style="color:var(--text);">Sisällön katsaus</strong><br>
+Koottu IEC 60079 -sarjasta, ATEX 2014/34/EU -direktiivistä ja IECEx-toimintadokumenteista. Tämä viiteopas ei korvaa virallisia standardeja tai sertifioituja paikan päällä tehtyjä arviointeja. Tutustu aina sovellettavaan standardiversioon ja ota yhteyttä pätevään Ex-insinööriin, kun kyseessä on oma sovelluksesi.
+</div>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4><i class="ph ph-list-bullets"></i> Kaikki aiheet</h4>
+  <a href="fundamentals.html"><i class="ph ph-fire"></i>Perusteet</a>
+  <a href="zone-classification.html"><i class="ph ph-map-trifold"></i>Vyöhykkeet</a>
+  <a href="gas-groups.html"><i class="ph ph-flask"></i>Kaasuryhmät</a>
+  <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i>Lämpötilaluokat</a>
+  <a href="protection-methods.html"><i class="ph ph-shield-check"></i>Suojaus</a>
+  <a href="epl.html"><i class="ph ph-gauge"></i></a>
+  <a href="ex-markings.html"><i class="ph ph-tag"></i></a>
+  <a href="epl.html">EPL</a>
+  <a href="ex-markings.html">-merkinnät</a>
+  <a href="standards.html"><i class="ph ph-book-open"></i>Standardit</a>
+  <a href="certification.html"><i class="ph ph-certificate"></i>Sertifiointi</a>
+  <a href="installation-inspection.html"><i class="ph ph-wrench"></i>Asennus</a>
+  <a href="cheat-sheet.html"><i class="ph ph-lightning"></i>Pikaopas</a>
+  <a href="atex-vs-iecex.html"><i class="ph ph-arrows-left-right"></i>ATEX vs. IECEx</a>
+  <a href="explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i>Ex-suojaus vs. IS</a>
+  <a href="how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i>ATEX-tyyppikilpi</a>
+  <a href="atex-directive.html"><i class="ph ph-scales"></i>ATEX-direktiivi</a>
+  <a href="hazardous-area-classification.html"><i class="ph ph-map-pin"></i>Alueiden luokittelu</a>
+  <a href="dust-explosion-protection.html"><i class="ph ph-wind"></i>Pölyräjähdykset</a>
+  <a href="atex-for-beginners.html" class="current"><i class="ph ph-graduation-cap"></i>ATEX-aloittelijat</a>
+  <a href="compex-certification.html"><i class="ph ph-exam"></i>CompEx</a>
+  <a href="hydrogen-explosion-protection.html"><i class="ph ph-atom"></i>Vetyturvallisuus</a>
+  <a href="cable-glands-hazardous-areas.html"><i class="ph ph-plug"></i>Kaapeliläpiviennit</a>
+  <a href="ex-equipment-selection-guide.html"><i class="ph ph-clipboard-text"></i>Laitteiden valinta</a>
+        </div>
+      </aside>
+</div>
+
+
+<div class="references-wrapper">
+
+    <section class="references">
+      <h2>Lähteet ja viitteet</h2>
+      <ol>
+        <li><a href="https://en.wikipedia.org/wiki/ATEX_directives" target="_blank" rel="noopener">ATEX-direktiivit – Wikipedia</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Fire_triangle" target="_blank" rel="noopener">Palokolmio – Wikipedia</a></li>
+        <li><a href="https://www.iecex.com/" target="_blank" rel="noopener">IECEx-järjestelmä – IECEx</a></li>
+        <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0034" target="_blank" rel="noopener">ATEX-direktiivi 2014/34/EU – EUR-Lex</a></li>
+      </ol>
+    </section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Tietoa</h4>
+        <a href="/fi/pages/fundamentals.html">Perusteet</a>
+        
+        <a href="/fi/pages/zone-classification.html">Vyöhykeluokitus</a>
+        
+        <a href="/fi/pages/protection-methods.html">Suojausmenetelmät</a>
+        
+        <a href="/fi/pages/standards.html">Standardit</a>
+        
+        <a href="/fi/pages/temperature-classes.html">Lämpötilaluokat</a>
+        
+        <a href="/fi/pages/gas-groups.html">Kaasuryhmät</a>
+        
+        <a href="/fi/pages/cheat-sheet.html">Pikaopas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resurssit</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i>Tietokilpailu</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i>Kysely</a>
+        <a href="/fi/blog/"><i class="ph ph-newspaper"></i>Blogi</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i>Sanasto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i>Kaikki jaksot</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i>Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i>Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i>RSS-syöte</a>
+      </div>
+      <div class="footer-col">
+        <h4>Lisää</h4>
+        <a href="/about.html"><i class="ph ph-info"></i>Tietoa</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i>Kumppanit</a>
+        <a href="/events.html"><i class="ph ph-calendar-blank"></i>Tapahtumat</a>
+        <a href="/links.html"><i class="ph ph-link"></i>Alan linkit</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Suunniteltu vaarallisilla alueilla työskenteleville insinööreille. Sisältö perustuu standardeihin IEC 60079, ATEX 2014/34/EU ja IECEx.</p>
+      <p>Ei korvaa virallisia standardiasiakirjoja tai ammattimaista insinööri-neuvontaa.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Ilmoita virheestä tai ehdota parannusta</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/js/nav.js"></script>
+
+<script src="/js/reveal.js"></script>
+<script src="/js/search.js"></script>
+</body>
+</html>

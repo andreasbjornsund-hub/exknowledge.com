@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>ATEX per principianti: un&#x27;introduzione in parole semplici...</title>
+  <meta name="description" content="New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.">
+  <link rel="canonical" href="https://exknowledge.com/it/pages/atex-for-beginners.html">
+  <meta property="og:title" content="ATEX for Beginners: A Plain-Language Introduction. ExKnowledge">
+  <meta property="og:description" content="New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.">
+  <meta property="og:url" content="https://exknowledge.com/pages/atex-for-beginners.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ATEX for Beginners: A Plain-Language Introduction. ExKnowledge">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">  <script type="application/ld+json">
+[
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;TechArticle&quot;,
+    &quot;headline&quot;: &quot;ATEX for Beginners: A Plain-Language Introduction. ExKnowledge&quot;,
+    &quot;description&quot;: &quot;New to ATEX? This beginner-friendly guide explains explosion protection basics, zones, equipment categories, and Ex markings in plain language. No engineering degree required.&quot;,
+    &quot;url&quot;: &quot;https://exknowledge.com/pages/atex-for-beginners.html&quot;,
+    &quot;image&quot;: &quot;https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1000&amp;q=80&quot;,
+    &quot;author&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;publisher&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;inLanguage&quot;: &quot;en&quot;,
+    &quot;isPartOf&quot;: {
+      &quot;@type&quot;: &quot;WebSite&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;datePublished&quot;: &quot;2026-02-01&quot;,
+    &quot;dateModified&quot;: &quot;2026-03-08&quot;,
+    &quot;mainEntityOfPage&quot;: &quot;https://exknowledge.com/pages/atex-for-beginners.html&quot;,
+    &quot;about&quot;: {
+      &quot;@type&quot;: &quot;Thing&quot;,
+      &quot;name&quot;: &quot;Explosion Protection&quot;
+    }
+  },
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+    &quot;itemListElement&quot;: [
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 1,
+        &quot;name&quot;: &quot;Home&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/&quot;
+      },
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 2,
+        &quot;name&quot;: &quot;ATEX for Beginners&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/pages/atex-for-beginners.html&quot;
+      }
+    ]
+  }
+]
+  </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#x27;gtm.start&#x27;:
+new Date().getTime(),event:&#x27;gtm.js&#x27;});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=&#x27;dataLayer&#x27;?&#x27;&amp;l=&#x27;+l:&#x27;&#x27;;j.async=true;j.src=
+&#x27;https://www.googletagmanager.com/gtm.js?id=&#x27;+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,&#x27;script&#x27;,&#x27;dataLayer&#x27;,&#x27;GTM-5VSBXBSL&#x27;);</script>
+<!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/atex-for-beginners.html">
+                      <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/atex-for-beginners.html">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav">
+  <div class="container">
+    <a href="/it/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Conoscenze</span></a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-book-open-text"></i>Conoscenze<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+        <li><a href="/it/pages/fundamentals.html"><i class="ph ph-fire"></i> Nozioni fondamentali</a></li>
+        <li><a href="/it/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Classificazione delle zone</a></li>
+        <li><a href="/it/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Metodi di protezione</a></li>
+        <li><a href="/it/pages/standards.html"><i class="ph ph-scales"></i> Norme e regolamenti</a></li>
+        <li><a href="/it/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Classi di temperatura</a></li>
+        <li><a href="/it/pages/gas-groups.html"><i class="ph ph-flame"></i> Gruppi di gas</a></li>
+        <li><a href="/it/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Categorie di apparecchiature</a></li>
+        <li><a href="/it/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Riferimento rapido</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-folder-open"></i>Risorse<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Sondaggio</a></li>
+          <li><a href="/it/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate"></i> Glossario</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Formazione <span class="badge-soon">in arrivo</span></a></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> <span class="badge-soon">Prossimi</span> webinar</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i>Comunità<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> <span class="badge-soon">Prossimi</span> eventi</a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partner <span class="badge-soon">in arrivo</span></a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Link di settore <span class="badge-soon">in arrivo</span></a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> Informazioni</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/atex-for-beginners.html" selected>🇬🇧 Inglese</option>
+      <option value="/de/pages/atex-for-beginners.html">🇩🇪 Tedesco</option>
+      <option value="/no/pages/atex-for-beginners.html">🇳🇴 Norvegese</option>
+      <option value="/da/pages/atex-for-beginners.html">🇩🇰 Danese</option>
+      <option value="/sv/pages/atex-for-beginners.html">🇸🇪 Svenska</option>
+      <option value="/fi/pages/atex-for-beginners.html">🇫🇮 Finlandese</option>
+      <option value="/es/pages/atex-for-beginners.html">🇪🇸 Español</option>
+      <option value="/nl/pages/atex-for-beginners.html">🇳🇱 Olandese</option>
+      <option value="/pt/pages/atex-for-beginners.html">🇵🇹 Portoghese</option>
+      <option value="/it/pages/atex-for-beginners.html">🇮🇹 Italiano</option>
+      <option value="/ar/pages/atex-for-beginners.html">🇸🇦 Arabo</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1000&q=80" alt="ATEX for Beginners" loading="lazy" width="820" height="240">
+        <h1>ATEX per principianti</h1>
+
+        <p class="last-updated" style="font-size:13px;color:var(--text-muted);margin:-12px 0 24px;"><i class="ph ph-clock"></i> Ultimo aggiornamento: marzo 2026 · Basato su IEC 60079 (edizione 2020) e ATEX 2014/34/UE</p>
+<section>
+<h2>Che cos&#x27;è l&#x27;ATEX?</h2>
+<p>ATEX è un insieme di norme dell&#x27;Unione Europea che regolano la gestione del rischio di esplosione nei luoghi di lavoro e nelle attrezzature. Il nome deriva dal francese <em>&quot;ATmosphères EXplosibles&quot;</em>, ovvero atmosfere esplosive.</p>
+<p>In termini pratici, ATEX risponde a due domande:</p>
+<ol>
+  <li><strong>Per i datori di lavoro:</strong> in quali punti della vostra struttura potrebbe verificarsi un&#x27;esplosione e cosa dovete fare al riguardo?</li>
+  <li><strong>Per i produttori di attrezzature:</strong> quali standard deve soddisfare il vostro prodotto prima di poter essere venduto per l&#x27;uso in tali luoghi?</li>
+</ol>
+<p>Se lavorate nel settore petrolifero e del gas, nella produzione chimica, farmaceutica, nella trasformazione alimentare, nell&#x27;estrazione mineraria o in qualsiasi settore che maneggi gas infiammabili, vapori o <a href="/it/pages/dust-explosion-protection.html">polveri combustibili</a>, l&#x27;ATEX si applica a voi.</p>
+</section>
+
+<section>
+<h2>Perché abbiamo bisogno di ATEX?</h2>
+<p>Per provocare un&#x27;esplosione sono necessari tre elementi:</p>
+<ol>
+  <li><strong>Combustibile</strong>. Un gas infiammabile, un vapore, una nebbia o una polvere combustibile</li>
+  <li><strong>Aria</strong>. Ossigeno (presente ovunque)</li>
+  <li><strong>Una fonte di accensione</strong>. Una scintilla, una superficie calda, una fiamma o anche l&#x27;elettricità statica</li>
+</ol>
+<p>Questo è chiamato il <strong><a href="/it/pages/fundamentals.html">triangolo del fuoco</a></strong>. Se tutti e tre questi elementi si trovano nello stesso momento e nello stesso luogo, si verifica un&#x27;esplosione.</p>
+<p>Molti processi industriali creano inevitabilmente atmosfere infiammabili. Una raffineria lavora gli idrocarburi. Un mulino produce polvere combustibile. Un reparto verniciatura usa solventi volatili. Non puoi eliminare il combustibile e non puoi rimuovere l&#x27;aria. Quindi l&#x27;attenzione si concentra sul controllo delle fonti di accensione e sulla gestione dei luoghi in cui possono formarsi atmosfere infiammabili.</p>
+<p>Questo è ciò che fa ATEX.</p>
+</section>
+
+<section>
+<h2>Le due direttive ATEX</h2>
+<p>Esistono in realtà due norme ATEX distinte:</p>
+
+<h3>1. La direttiva sulle apparecchiature (2014/34/UE)</h3>
+<p>Questa direttiva indica <strong>ai produttori</strong> quali requisiti devono soddisfare le apparecchiature prima di poter essere vendute per l&#x27;uso in atmosfere esplosive. Le apparecchiature devono essere testate, <a href="/it/pages/certification.html">certificate</a> e contrassegnate con il marchio CE. Questo è ciò che si intende solitamente quando si parla di &quot;certificazione ATEX&quot;. Per i mercati internazionali, vedere anche <a href="/it/pages/atex-vs-iecex.html">ATEX vs IECEx</a>.</p>
+
+<h3>2. La direttiva sui luoghi di lavoro (1999/92/CE)</h3>
+<p>Questa direttiva indica <strong>ai datori di lavoro</strong> cosa devono fare per proteggere i lavoratori. Devono identificare dove possono formarsi atmosfere esplosive, classificare tali aree in zone, selezionare le attrezzature giuste per ciascuna zona e documentare tutto in un documento di protezione contro le esplosioni.</p>
+
+<p>Entrambe le direttive operano in sinergia. Il produttore realizza attrezzature sicure; il datore di lavoro le colloca nel posto giusto.</p>
+<p><a href="/it/pages/atex-directive.html"><i class="ph ph-scales"></i> → Guida dettagliata alla direttiva ATEX</a></p>
+</section>
+
+<section>
+<h2>Zone: classificazione del rischio</h2>
+<p>Non tutte le parti di un impianto sono ugualmente pericolose. In alcune aree sono sempre presenti gas infiammabili, in altre solo raramente. L&#x27;ATEX utilizza un <strong>sistema di zone</strong> per classificare ogni area in base alla frequenza con cui si verifica un&#x27;atmosfera esplosiva:</p>
+
+<h3>Per gas, vapori o nebbie</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zona</th>
+      <th>Con quale frequenza?</th>
+      <th>In parole semplici</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zona 0</strong></td>
+      <td>Sempre o quasi sempre</td>
+      <td>All&#x27;interno di un serbatoio di carburante, all&#x27;interno di un reattore chimico</td>
+    </tr>
+    <tr>
+      <td><strong>Zona 1</strong></td>
+      <td>A volte, durante il normale funzionamento</td>
+      <td>In prossimità delle guarnizioni delle pompe, in prossimità degli sfiati, intorno ai punti di carico</td>
+    </tr>
+    <tr>
+      <td><strong>Zona 2</strong></td>
+      <td>Raramente e solo per brevi periodi</td>
+      <td>Vicino alle flange dei tubi, intorno alle apparecchiature che potrebbero perdere in caso di rottura</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Per polveri combustibili</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zona</th>
+      <th>Con quale frequenza?</th>
+      <th>In parole semplici</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zona 20</strong></td>
+      <td>Sempre o quasi sempre</td>
+      <td>All&#x27;interno dei silos, all&#x27;interno delle attrezzature di macinazione</td>
+    </tr>
+    <tr>
+      <td><strong>Zona 21</strong></td>
+      <td>A volte, durante il normale funzionamento</td>
+      <td>Intorno alle stazioni di riempimento sacchi, trasferimenti su nastri trasportatori aperti</td>
+    </tr>
+    <tr>
+      <td><strong>Zona 22</strong></td>
+      <td>Raramente e solo per brevi periodi</td>
+      <td>Aree in cui potrebbero accumularsi strati di polvere e essere smossi</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Più alto è il numero della zona, minore è il rischio.</strong> La zona 0 è la più pericolosa; la zona 2 è la meno pericolosa. Le aree al di fuori di tutte le zone sono chiamate &quot;aree sicure&quot; o &quot;non pericolose&quot;.</p>
+<p><a href="/it/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> → Guida completa alla classificazione delle zone</a></p>
+</section>
+
+<section>
+<h2>Categorie di apparecchiature: abbinamento delle apparecchiature alle zone</h2>
+<p>Ogni zona richiede attrezzature costruite secondo un determinato livello di sicurezza. ATEX utilizza <strong>delle categorie</strong> per classificare le attrezzature:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Categoria di apparecchiature</th>
+      <th>Può essere utilizzata in</th>
+      <th>Livello di sicurezza</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Categoria 1</strong></td>
+      <td>Zona 0, 1 o 2 (gas) / Zona 20, 21 o 22 (polvere)</td>
+      <td>Molto alto. Sicuro anche se si verificano contemporaneamente due guasti</td>
+    </tr>
+    <tr>
+      <td><strong>Categoria 2</strong></td>
+      <td>Zona 1 o 2 (gas) / Zona 21 o 22 (polvere)</td>
+      <td>Elevato. Sicuro anche se si verifica un guasto</td>
+    </tr>
+    <tr>
+      <td><strong>Categoria 3</strong></td>
+      <td>Solo zona 2 (gas) / Solo zona 22 (polvere)</td>
+      <td>Normale. Sicuro in condizioni di funzionamento normale</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Regola semplice:</strong> le apparecchiature di categoria superiore possono sempre essere utilizzate in zone a rischio inferiore. Le apparecchiature di categoria 1 funzionano ovunque. Le apparecchiature di categoria 3 funzionano solo nella Zona 2 (l&#x27;area classificata a rischio più basso).</p>
+<p><a href="/it/pages/epl.html"><i class="ph ph-gauge"></i> → Spiegazione dei livelli di protezione delle apparecchiature</a></p>
+</section>
+
+<section>
+<h2>Metodi di protezione: come rendere sicure le apparecchiature</h2>
+<p>Esistono diversi modi per rendere le apparecchiature sicure in atmosfere esplosive. A ciascun metodo è associata una lettera di codice:</p>
+
+<h3>I metodi più comuni</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Codice</th>
+      <th>Nome</th>
+      <th>Come funziona (in breve)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ex d</strong></td>
+      <td>A prova di fiamma (a prova di esplosione)</td>
+      <td>Scatola in metallo pesante in grado di resistere a un&#x27;esplosione interna e impedire alla fiamma di fuoriuscire</td>
+    </tr>
+    <tr>
+      <td><strong>Ex i</strong></td>
+      <td>A sicurezza intrinseca</td>
+      <td>Limita la potenza elettrica a un livello talmente basso da non poter generare una scintilla abbastanza forte da provocare l&#x27;accensione di alcun materiale</td>
+    </tr>
+    <tr>
+      <td><strong>Ex e</strong></td>
+      <td>Sicurezza aumentata</td>
+      <td>Impedisce la formazione di scintille e archi elettrici (assenza di contatti mobili, distanze di sicurezza extra)</td>
+    </tr>
+    <tr>
+      <td><strong>Ex p</strong></td>
+      <td>Pressurizzazione</td>
+      <td>Mantiene la pressione dell&#x27;aria pulita all&#x27;interno dell&#x27;involucro in modo che il gas non possa entrare</td>
+    </tr>
+    <tr>
+      <td><strong>Ex m</strong></td>
+      <td>Incapsulamento</td>
+      <td>Sigilla le parti pericolose in resina solida in modo che nulla possa fuoriuscire</td>
+    </tr>
+    <tr>
+      <td><strong>Ex t</strong></td>
+      <td>Protezione tramite involucro (polvere)</td>
+      <td>Involucro a tenuta di polvere che impedisce l&#x27;ingresso di polveri combustibili e limita la temperatura superficiale</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Metodi di protezione diversi si adattano a diverse applicazioni. I motori pesanti utilizzano Ex d. Gli strumenti sensibili utilizzano Ex i. Le scatole dei morsetti utilizzano Ex e. I grandi pannelli di controllo utilizzano Ex p.</p>
+<p><a href="/it/pages/protection-methods.html"><i class="ph ph-shield-check"></i> → Tutti i metodi di protezione in dettaglio</a></p>
+<p><a href="/it/pages/explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i> → Confronto tra antideflagrante e a sicurezza intrinseca</a></p>
+</section>
+
+<section>
+<h2>Lettura dell&#x27;etichetta</h2>
+<p>Le apparecchiature ATEX sono dotate di un&#x27;etichetta (targhetta) con informazioni codificate. Ecco come si presenta una tipica etichetta:</p>
+<pre><code>CE 0344
+ ⚠  II 2 G Ex d IIC T4 Gb
+</code></pre>
+<p>Analizziamola (vedere <a href="/it/pages/how-to-read-atex-nameplate.html">come leggere una targhetta ATEX</a> per ulteriori esempi):</p>
+<ul>
+  <li><strong>CE 0344</strong>. Approvato dall&#x27;UE, testato dall&#x27;ente di certificazione numero 0344</li>
+  <li><strong>⚠</strong>. Simbolo ATEX (esagono)</li>
+  <li><strong>II</strong>. Gruppo II (industrie di superficie, non minerarie)</li>
+  <li><strong>2</strong>. Categoria 2 (adatto alla Zona 1)</li>
+  <li><strong>G</strong>. Per atmosfere gassose</li>
+  <li><strong>Ex d</strong>. Metodo di protezione: involucro antideflagrante</li>
+  <li><strong>IIC</strong>. Adatto a tutti i gruppi di gas (compreso l&#x27;idrogeno)</li>
+  <li><strong>T4</strong>. Temperatura massima della superficie: 135 °C</li>
+  <li><strong>Gb</strong>. Livello di protezione dell&#x27;apparecchiatura: classificato per Zona 1</li>
+</ul>
+<p><a href="/it/pages/how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i> → Guida completa alla lettura delle targhette con ulteriori esempi</a></p>
+</section>
+
+<section>
+<h2>Gruppi di gas: quali gas?</h2>
+<p>Gas diversi si accendono a livelli di energia diversi. Le apparecchiature sono classificate per specifici gruppi di gas:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Gruppo</th>
+      <th>Gas comuni</th>
+      <th>Livello di pericolo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>IIA</strong></td>
+      <td>Propano, metano, butano, ammoniaca</td>
+      <td>Più facile da proteggersi</td>
+    </tr>
+    <tr>
+      <td><strong>IIB</strong></td>
+      <td>Etilene, alcuni solventi</td>
+      <td>Medio</td>
+    </tr>
+    <tr>
+      <td><strong>IIC</strong></td>
+      <td>Idrogeno, acetilene</td>
+      <td>Il più esigente (si infiamma più facilmente)</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Regola fondamentale:</strong> le apparecchiature classificate per IIC possono essere utilizzate con qualsiasi gas. Le apparecchiature classificate per IIA possono essere utilizzate solo con gas IIA. Assicurarsi sempre che la classificazione sia pari o superiore al gruppo di gas dell&#x27;ambiente.</p>
+<p><a href="/it/pages/gas-groups.html"><i class="ph ph-flask"></i> → Spiegazione dettagliata dei gruppi di gas</a></p>
+</section>
+
+<section>
+<h2>Classi di temperatura: quanto può diventare caldo?</h2>
+<p>Ogni gas infiammabile ha una <strong>temperatura di autoaccensione</strong>, ovvero la temperatura alla quale prende fuoco senza bisogno di una scintilla. Le apparecchiature non devono mai superare tale temperatura.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Classe T</th>
+      <th>Temperatura massima della superficie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>T1</td><td>450 °C</td></tr>
+    <tr><td>T2</td><td>300 °C</td></tr>
+    <tr><td>T3</td><td>200 °C</td></tr>
+    <tr><td>T4</td><td>135 °C</td></tr>
+    <tr><td>T5</td><td>100 °C</td></tr>
+    <tr><td>T6</td><td>85 °C</td></tr>
+  </tbody>
+</table>
+<p><strong>Numero T più alto = temperatura più bassa = maggiore sicurezza per più gas.</strong> Le apparecchiature T6 sono le più restrittive (rimangono più fredde) e funzionano con quasi tutti i gas.</p>
+<p><a href="/it/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> → Spiegazione delle classi di temperatura</a></p>
+</section>
+
+<section>
+<h2>ATEX vs IECEx: qual è la differenza?</h2>
+<p>Esistono due sistemi di certificazione:</p>
+<ul>
+  <li><strong>ATEX</strong>. Normativa UE. Obbligatoria per vendere apparecchiature in Europa. Reca il marchio CE.</li>
+  <li><strong>IECEx</strong>. Standard internazionale. Volontario. Accettato in oltre 60 paesi al di fuori dell&#x27;UE.</li>
+</ul>
+<p>Entrambe certificano secondo gli stessi standard tecnici (serie IEC 60079). La differenza è di natura legale: ATEX è obbligatorio in Europa; IECEx è volontario ma ampiamente riconosciuto a livello globale. Molti prodotti possiedono entrambe le certificazioni.</p>
+<p><a href="/it/pages/atex-vs-iecex.html"><i class="ph ph-arrows-left-right"></i> → Confronto completo tra ATEX e IECEx</a></p>
+</section>
+
+<section>
+<h2>Chi deve conoscere l&#x27;ATEX?</h2>
+
+<h3>Se sei un datore di lavoro o un responsabile di sito</h3>
+<p>Devi:</p>
+<ul>
+  <li>Identificare le aree pericolose e classificarle in zone</li>
+  <li>Redigere un documento di protezione contro le esplosioni (EPD)</li>
+  <li>Assicurarti che in ogni zona vengano utilizzate solo attrezzature con le caratteristiche tecniche adeguate</li>
+  <li>Formare i propri lavoratori</li>
+  <li>Effettuare la manutenzione delle apparecchiature e rivedere le classificazioni in caso di cambiamenti</li>
+</ul>
+
+<h3>Se sei un ingegnere o un progettista</h3>
+<p>Devi:</p>
+<ul>
+  <li>Selezionare apparecchiature con la categoria, il gruppo di gas e la classe di temperatura corretti per ogni zona</li>
+  <li>Progettare gli impianti secondo la norma IEC 60079-14 (norma di installazione)</li>
+  <li>Garantire una corretta messa a terra, la scelta dei pressacavi e la separazione dei circuiti</li>
+</ul>
+
+<h3>Se sei un produttore</h3>
+<p>È necessario:</p>
+<ul>
+  <li>Progettare le apparecchiature in modo che soddisfino i requisiti essenziali di salute e sicurezza della Direttiva 2014/34/UE</li>
+  <li>Far testare e certificare le apparecchiature da un organismo notificato (per la categoria 1 e la maggior parte della categoria 2)</li>
+  <li>Apporre il marchio CE e fornire la documentazione tecnica</li>
+</ul>
+
+<h3>Se sei un elettricista o un tecnico</h3>
+<p>È necessario:</p>
+<ul>
+  <li>Installare correttamente le apparecchiature Ex (specifiche di coppia, pressacavi, documentazione dei circuiti)</li>
+  <li>Ispezionare le apparecchiature Ex secondo la norma IEC 60079-17 (norma di ispezione)</li>
+  <li>Non modificare mai le apparecchiature Ex senza autorizzazione</li>
+  <li>Comprendere le marcature presenti sulle apparecchiature con cui lavori</li>
+</ul>
+</section>
+
+<section>
+<h2>Domande comuni dei principianti</h2>
+
+<h3>L&#x27;ATEX riguarda solo le apparecchiature elettriche?</h3>
+<p>No. ATEX copre le apparecchiature elettriche e non elettriche. Anche gli articoli meccanici come pompe, ventilatori, sistemi di trasporto e utensili manuali possono generare fonti di accensione (attrito, superfici calde, scintille meccaniche) e necessitano della certificazione ATEX se utilizzati in aree classificate.</p>
+
+<h3>L&#x27;ATEX si applica al di fuori dell&#x27;Europa?</h3>
+<p>Le direttive ATEX sono leggi dell&#x27;UE, quindi si applicano direttamente nei paesi dell&#x27;UE/SEE. Altri paesi hanno le proprie normative (NEC negli Stati Uniti, AS/NZS in Australia, ecc.), ma molte fanno riferimento alle stesse norme IEC 60079. IECEx è l&#x27;equivalente internazionale.</p>
+
+<h3>Cosa succede se utilizzo un&#x27;apparecchiatura non idonea?</h3>
+<p>L&#x27;utilizzo di apparecchiature non certificate in un&#x27;area classificata costituisce una violazione della legge. Ancora più importante, crea un rischio reale di esplosione. Le apparecchiature non classificate per la zona potrebbero presentare superfici calde, contatti che generano scintille o un&#x27;integrità dell&#x27;involucro insufficiente. In caso di incidente, la responsabilità ricade sul datore di lavoro e potenzialmente sull&#x27;installatore.</p>
+
+<h3>Posso modificare le apparecchiature ATEX?</h3>
+<p>No. Qualsiasi modifica (foratura, aggiunta di passacavi, sostituzione di componenti, saldatura, verniciatura di giunti antideflagranti) invalida la certificazione. Le modifiche devono essere effettuate dal produttore originale o da un centro di riparazione certificato.</p>
+
+<h3>Come posso iniziare a garantire la conformità ATEX?</h3>
+<ol>
+  <li>Identificare tutte le sostanze infiammabili presenti nella propria struttura</li>
+  <li>Determina dove possono formarsi atmosfere esplosive</li>
+  <li>Classificare tali aree in zone (valutare la possibilità di rivolgersi a uno specialista)</li>
+  <li>Verifica che tutte le attrezzature esistenti siano conformi ai requisiti della zona</li>
+  <li>Sostituisci o aggiorna le attrezzature non conformi</li>
+  <li>Crea il tuo documento sulla protezione contro le esplosioni</li>
+  <li>Formare il proprio team</li>
+</ol>
+</section>
+
+<section>
+<h2>Glossario dei termini chiave</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Termine</th>
+      <th>Significato</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>ATEX</strong></td><td>ATmosphères EXplosibles. Quadro normativo UE sulla protezione contro le esplosioni</td></tr>
+    <tr><td><strong>IECEx</strong></td><td>Sistema di certificazione internazionale per le apparecchiature Ex</td></tr>
+    <tr><td><strong>Ex</strong></td><td>Prefisso per le apparecchiature protette contro le esplosioni</td></tr>
+    <tr><td><strong>Zona</strong></td><td>Area classificata in base alla frequenza dell&#x27;atmosfera esplosiva</td></tr>
+    <tr><td><strong>Categoria</strong></td><td>Classificazione di sicurezza delle apparecchiature (1 = massima, 3 = minima)</td></tr>
+    <tr><td><strong>EPL</strong></td><td>Livello di protezione dell&#x27;apparecchiatura (Ga/Gb/Gc per gas, Da/Db/Dc per polveri)</td></tr>
+    <tr><td><strong>Gruppo di gas</strong></td><td>IIA/IIB/IIC. Classifica i gas in base alla sensibilità all&#x27;accensione</td></tr>
+    <tr><td><strong>Classe T</strong></td><td>Classe di temperatura (T1–T6). Temperatura massima della superficie dell&#x27;apparecchiatura</td></tr>
+    <tr><td><strong>Organismo notificato</strong></td><td>Organismo autorizzato a testare e certificare le apparecchiature ATEX</td></tr>
+    <tr><td><strong>Marcatura CE</strong></td><td>Marchio che indica la conformità alle norme UE (richiesto per il mercato UE)</td></tr>
+    <tr><td><strong>EPD</strong></td><td>Documento di protezione contro le esplosioni (documentazione sulla sicurezza sul posto di lavoro)</td></tr>
+    <tr><td><strong>LEL</strong></td><td>Limite inferiore di esplosività. Concentrazione minima di gas necessaria per l&#x27;esplosione</td></tr>
+    <tr><td><strong>AIT</strong></td><td>Temperatura di autoaccensione. Temperatura alla quale il gas si autoaccende</td></tr>
+    <tr><td><strong>MESG</strong></td><td>Intervallo di sicurezza sperimentale massimo. Determina la classificazione del gruppo di gas</td></tr>
+    <tr><td><strong>Grado di protezione IP</strong></td><td>Protezione contro l&#x27;ingresso. Resistenza alla polvere e all&#x27;acqua degli involucri</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Prossimi passi</h2>
+<p>Ora che hai compreso le nozioni di base, esplora gli argomenti più rilevanti per il tuo ruolo:</p>
+<ul>
+  <li><a href="/it/pages/fundamentals.html"><i class="ph ph-fire"></i> Fondamenti</a>. Approfondimento sul triangolo del fuoco, sulle atmosfere esplosive e sulle fonti di accensione</li>
+  <li><a href="/it/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Classificazione delle zone</a>. Come vengono determinate le zone e cosa significa ciascuna di esse</li>
+  <li><a href="/it/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Metodi di protezione</a>. Tutti i tipi Ex spiegati in dettaglio tecnico</li>
+  <li><a href="/it/pages/how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i> Come leggere la targhetta ATEX</a>. Guida pratica alla decodifica delle etichette delle apparecchiature</li>
+  <li><a href="/it/pages/atex-directive.html"><i class="ph ph-scales"></i> Direttiva ATEX</a>. Guida normativa completa per produttori e responsabili della conformità</li>
+  <li><a href="/it/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Scheda riassuntiva</a>. Riferimento rapido per zone, categorie, classi T e gruppi di gas</li>
+</ul>
+</section>
+
+      
+        <div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">
+<strong style="color:var(--text);">Riepilogo dei contenuti</strong><br>
+Compilato sulla base della serie IEC 60079, della direttiva ATEX 2014/34/UE e dei documenti operativi IECEx. La presente guida di riferimento non sostituisce le norme ufficiali né le valutazioni certificate in loco. Consultare sempre l&#x27;edizione della norma applicabile e un ingegnere Ex qualificato per la propria applicazione specifica.
+</div>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4><i class="ph ph-list-bullets"></i> Tutti gli argomenti</h4>
+  <a href="fundamentals.html"><i class="ph ph-fire"></i>Nozioni fondamentali</a>
+  <a href="zone-classification.html"><i class="ph ph-map-trifold"></i>Zone</a>
+  <a href="gas-groups.html">Gruppi<i class="ph ph-flask"></i> di gas</a>
+  <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i>Classi di temperatura</a>
+  <a href="protection-methods.html"><i class="ph ph-shield-check"></i>Protezione</a>
+  <a href="ex-markings.html">Marcature</a>
+  <a href="epl.html"><i class="ph ph-gauge"></i></a>
+  <a href="ex-markings.html"><i class="ph ph-tag"></i></a>
+  <a href="epl.html">EPL</a>
+  <a href="standards.html"><i class="ph ph-book-open"></i>Norme</a>
+  <a href="certification.html"><i class="ph ph-certificate"></i>Certificazione</a>
+  <a href="installation-inspection.html"><i class="ph ph-wrench"></i>Installazione</a>
+  <a href="cheat-sheet.html"><i class="ph ph-lightning"></i>Scheda riassuntiva</a>
+  <a href="atex-vs-iecex.html"><i class="ph ph-arrows-left-right"></i>ATEX vs IECEx</a>
+  <a href="explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i>Ex Proof vs IS</a>
+  <a href="how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i>Targhetta</a>
+  <a href="atex-directive.html"><i class="ph ph-scales"></i></a>
+  <a href="how-to-read-atex-nameplate.html">ATEX</a>
+  <a href="atex-directive.html">Direttiva ATEX</a>
+  <a href="hazardous-area-classification.html">Classificazione<i class="ph ph-map-pin"></i> delle aree</a>
+  <a href="dust-explosion-protection.html"><i class="ph ph-wind"></i>Esplosioni da</a>
+  <a href="atex-for-beginners.html" class="current"><i class="ph ph-graduation-cap"></i></a>
+  <a href="dust-explosion-protection.html">polveri</a>
+  <a href="atex-for-beginners.html" class="current">ATEX per principianti</a>
+  <a href="compex-certification.html"><i class="ph ph-exam"></i>CompEx</a>
+  <a href="hydrogen-explosion-protection.html">Sicurezza<i class="ph ph-atom"></i></a>
+  <a href="cable-glands-hazardous-areas.html"><i class="ph ph-plug"></i></a>
+  <a href="hydrogen-explosion-protection.html">dell&#x27;idrogeno</a>
+  <a href="cable-glands-hazardous-areas.html">Pressacavi</a>
+  <a href="ex-equipment-selection-guide.html">Selezione<i class="ph ph-clipboard-text"></i> delle apparecchiature</a>
+        </div>
+      </aside>
+</div>
+
+
+<div class="references-wrapper">
+
+    <section class="references">
+      <h2>Fonti e riferimenti</h2>
+      <ol>
+        <li><a href="https://en.wikipedia.org/wiki/ATEX_directives" target="_blank" rel="noopener">Direttive ATEX - Wikipedia</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Fire_triangle" target="_blank" rel="noopener">Triangolo del fuoco - Wikipedia</a></li>
+        <li><a href="https://www.iecex.com/" target="_blank" rel="noopener">Sistema IECEx - IECEx</a></li>
+        <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0034" target="_blank" rel="noopener">Direttiva ATEX 2014/34/UE - EUR-Lex</a></li>
+      </ol>
+    </section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Conoscenze</h4>
+        <a href="/it/pages/fundamentals.html">Nozioni fondamentali</a>
+        
+        <a href="/it/pages/zone-classification.html">Classificazione delle zone</a>
+        
+        <a href="/it/pages/protection-methods.html">Metodi di protezione</a>
+        
+        <a href="/it/pages/standards.html">Norme</a>
+        
+        <a href="/it/pages/temperature-classes.html">Classi di temperatura</a>
+        
+        <a href="/it/pages/gas-groups.html">Gruppi di gas</a>
+        
+        <a href="/it/pages/cheat-sheet.html">Riferimento rapido</a>
+      </div>
+      <div class="footer-col">
+        <h4>Risorse</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i>Quiz</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i>Sondaggio</a>
+        <a href="/it/blog/"><i class="ph ph-newspaper"></i>Blog</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i>Glossario</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i>Tutti gli episodi</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i>Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i>Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml">Feed<i class="ph ph-rss-simple"></i> RSS</a>
+      </div>
+      <div class="footer-col">
+        <h4>Altro</h4>
+        <a href="/about.html"><i class="ph ph-info"></i>Informazioni</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i>Partner</a>
+        <a href="/events.html"><i class="ph ph-calendar-blank"></i>Eventi</a>
+        <a href="/links.html">Link<i class="ph ph-link"></i> di settore</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Realizzato per gli ingegneri che operano in aree pericolose. Contenuti basati sulle norme IEC 60079, ATEX 2014/34/UE e IECEx.</p>
+      <p>Non sostituisce i documenti normativi ufficiali né la consulenza tecnica professionale.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Segnala un errore o suggerisci un miglioramento</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/js/nav.js"></script>
+
+<script src="/js/reveal.js"></script>
+<script src="/js/search.js"></script>
+</body>
+</html>

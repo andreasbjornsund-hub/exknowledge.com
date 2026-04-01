@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Eksplosionssikret kontra egensikker: Teknisk sammenligning...</title>
+  <meta name="description" content="Ex d vs Ex i explained. Understand the difference between flameproof enclosures that contain explosions and intrinsic safety that prevents ignition. Technical guide for engineers.">
+  <link rel="canonical" href="https://exknowledge.com/da/pages/explosion-proof-vs-intrinsically-safe.html">
+  <meta property="og:title" content="Explosion Proof vs Intrinsically Safe: Technical Comparison. ExKnowledge">
+  <meta property="og:description" content="Ex d vs Ex i explained. Understand the difference between flameproof enclosures that contain explosions and intrinsic safety that prevents ignition. Technical guide for engineers.">
+  <meta property="og:url" content="https://exknowledge.com/pages/explosion-proof-vs-intrinsically-safe.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Explosion Proof vs Intrinsically Safe: Technical Comparison. ExKnowledge">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">  <script type="application/ld+json">
+[
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;TechArticle&quot;,
+    &quot;headline&quot;: &quot;Explosion Proof vs Intrinsically Safe: Technical Comparison. ExKnowledge&quot;,
+    &quot;description&quot;: &quot;Ex d vs Ex i explained. Understand the difference between flameproof enclosures that contain explosions and intrinsic safety that prevents ignition. Technical guide for engineers.&quot;,
+    &quot;url&quot;: &quot;https://exknowledge.com/pages/explosion-proof-vs-intrinsically-safe.html&quot;,
+    &quot;image&quot;: &quot;https://images.unsplash.com/photo-1566221857770-508d35ee6220?w=1000&amp;q=80&quot;,
+    &quot;author&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;publisher&quot;: {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;inLanguage&quot;: &quot;en&quot;,
+    &quot;isPartOf&quot;: {
+      &quot;@type&quot;: &quot;WebSite&quot;,
+      &quot;name&quot;: &quot;ExKnowledge&quot;,
+      &quot;url&quot;: &quot;https://exknowledge.com&quot;
+    },
+    &quot;datePublished&quot;: &quot;2026-02-01&quot;,
+    &quot;dateModified&quot;: &quot;2026-03-08&quot;,
+    &quot;mainEntityOfPage&quot;: &quot;https://exknowledge.com/pages/explosion-proof-vs-intrinsically-safe.html&quot;,
+    &quot;about&quot;: {
+      &quot;@type&quot;: &quot;Thing&quot;,
+      &quot;name&quot;: &quot;Explosion Protection&quot;
+    }
+  },
+  {
+    &quot;@context&quot;: &quot;https://schema.org&quot;,
+    &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+    &quot;itemListElement&quot;: [
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 1,
+        &quot;name&quot;: &quot;Home&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/&quot;
+      },
+      {
+        &quot;@type&quot;: &quot;ListItem&quot;,
+        &quot;position&quot;: 2,
+        &quot;name&quot;: &quot;Explosion Proof vs Intrinsically Safe&quot;,
+        &quot;item&quot;: &quot;https://exknowledge.com/pages/explosion-proof-vs-intrinsically-safe.html&quot;
+      }
+    ]
+  }
+]
+  </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#x27;gtm.start&#x27;:
+new Date().getTime(),event:&#x27;gtm.js&#x27;});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=&#x27;dataLayer&#x27;?&#x27;&amp;l=&#x27;+l:&#x27;&#x27;;j.async=true;j.src=
+&#x27;https://www.googletagmanager.com/gtm.js?id=&#x27;+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,&#x27;script&#x27;,&#x27;dataLayer&#x27;,&#x27;GTM-5VSBXBSL&#x27;);</script>
+<!-- End Google Tag Manager -->
+  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/explosion-proof-vs-intrinsically-safe.html">
+                      <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/explosion-proof-vs-intrinsically-safe.html">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav">
+  <div class="container">
+    <a href="/da/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Viden</span></a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-book-open-text"></i>Viden<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+        <li><a href="/da/pages/fundamentals.html"><i class="ph ph-fire"></i> Grundlæggende</a></li>
+        <li><a href="/da/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zoneklassificering</a></li>
+        <li><a href="/da/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Beskyttelsesmetoder</a></li>
+        <li><a href="/da/pages/standards.html"><i class="ph ph-scales"></i> Standarder og forskrifter</a></li>
+        <li><a href="/da/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperaturklasser</a></li>
+        <li><a href="/da/pages/gas-groups.html"><i class="ph ph-flame"></i> Gasgrupper</a></li>
+        <li><a href="/da/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Udstyrskategorier</a></li>
+        <li><a href="/da/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Hurtig reference</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-folder-open"></i>Ressourcer<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Undersøgelse</a></li>
+          <li><a href="/da/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate"></i> Ordliste</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Kurser <span class="badge-soon">snart</span></a></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinarer <span class="badge-soon">snart</span></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i>Fællesskab<i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Begivenheder <span class="badge-soon">snart</span></a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partnere <span class="badge-soon">snart</span></a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Branchelinks <span class="badge-soon">snart</span></a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> Om</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/explosion-proof-vs-intrinsically-safe.html" selected>🇬🇧 Engelsk</option>
+      <option value="/de/pages/explosion-proof-vs-intrinsically-safe.html">🇩🇪 Tysk</option>
+      <option value="/no/pages/explosion-proof-vs-intrinsically-safe.html">🇳🇴 Norsk</option>
+      <option value="/da/pages/explosion-proof-vs-intrinsically-safe.html">🇩🇰 Dansk</option>
+      <option value="/sv/pages/explosion-proof-vs-intrinsically-safe.html">🇸🇪 Svensk</option>
+      <option value="/fi/pages/explosion-proof-vs-intrinsically-safe.html">🇫🇮 Finsk</option>
+      <option value="/es/pages/explosion-proof-vs-intrinsically-safe.html">🇪🇸 Spansk</option>
+      <option value="/nl/pages/explosion-proof-vs-intrinsically-safe.html">🇳🇱 Nederlands</option>
+      <option value="/pt/pages/explosion-proof-vs-intrinsically-safe.html">🇵🇹 Portugisisk</option>
+      <option value="/it/pages/explosion-proof-vs-intrinsically-safe.html">🇮🇹 Italiensk</option>
+      <option value="/ar/pages/explosion-proof-vs-intrinsically-safe.html">🇸🇦 Arabisk</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1566221857770-508d35ee6220?w=1000&q=80" alt="Explosion Proof vs Intrinsically Safe" loading="lazy" width="820" height="240">
+        <h1>Eksplosionssikret vs. egensikker</h1>
+
+        <p class="last-updated" style="font-size:13px;color:var(--text-muted);margin:-12px 0 24px;"><i class="ph ph-clock"></i> Senest opdateret: marts 2026 · Baseret på IEC 60079 (2020-udgave) og ATEX 2014/34/EU</p>
+<section>
+<h2>Hurtigt svar</h2>
+<p><strong>Eksplosionssikret</strong> (Ex d, flammesikret) indkapsler interne eksplosioner i et robust kabinet og forhindrer flammespredning til den ydre atmosfære. <strong>Egensikker</strong> (Ex i) begrænser den elektriske energi så meget, at antændelse ikke kan forekomme, selv under fejlforhold. Ex d er robust og har høj effekt; Ex i er let og iboende sikker.</p>
+</section>
+
+<section>
+<h2>Det grundlæggende princip</h2>
+
+<h3>Eksplosionssikret (Ex d): Indeslutning</h3>
+<p>&quot;Lad det eksplodere, men hold det indeni.&quot;</p>
+<p>Flammesikkert udstyr accepterer, at <em>der kan</em> forekomme en intern antændelse. Kabinettet er designet til at:</p>
+<ol>
+  <li>Modstå det maksimale tryk fra en intern eksplosion</li>
+  <li>Køle de udstrømmende gasser ned under antændelsestemperaturen, når de passerer gennem præcist bearbejdede flammesikre samlinger</li>
+  <li>Forhindre ekstern antændelse, selvom den indre atmosfære detonerer</li>
+</ol>
+
+<h3>Egensikker (Ex i): Forebyggelse</h3>
+<p>&quot;Gør antændelse umulig.&quot;</p>
+<p>Egensikkert udstyr begrænser den elektriske energi (spænding, strøm, lagret energi i kapacitans/induktans) til niveauer, der er så lave, at ingen gnist, lysbue eller varm overflade kan antænde den omgivende atmosfære, selvom alle komponenter svigter samtidigt.</p>
+</section>
+
+<section>
+<h2>Sådan fungerer eksplosionssikring (Ex d)</h2>
+<p>Flammesikre kabinetter er reguleret af IEC 60079-1 (se alle <a href="/da/pages/protection-methods.html">beskyttelsesmetoder</a>). Vigtige designfunktioner:</p>
+
+<h3>Trykindeslutning</h3>
+<p>Kabinettet skal kunne modstå et internt eksplosionstryk på mindst 1,5 gange referencetrykket for gasgruppen. For gruppe IIC (<a href="/da/pages/hydrogen-explosion-protection.html">brint</a>) betyder dette, at kabinettet overlever en intern eksplosion, der genererer en betydelig kraft på flere titusinder atmosfærer på få millisekunder.</p>
+
+<h3>Flammesikre samlinger</h3>
+<p>Mellemrum mellem sammenføjningsflader (flanger, dæksler, aksler) kontrolleres nøje:</p>
+<ul>
+  <li><strong>Maksimalt mellemrum:</strong> Typisk 0,1–0,5 mm afhængigt af <a href="/da/pages/gas-groups.html">gasgruppe</a> og samlingslængde</li>
+  <li><strong>Minimum samlingslængde:</strong> 6–25 mm afhængigt af gasgruppe og kabinets volumen</li>
+  <li><strong>Overfladekvalitet:</strong> Bearbejdet eller slebet til snævre tolerancer, ingen gevind-/kabeltilslutninger i eksplosionssikre samlinger</li>
+</ul>
+<p>Når gasser undslipper gennem disse tætte mellemrum under en eksplosion, afkøles de hurtigt ved kontakt med metaloverfladerne. Når de når den ydre atmosfære, er deres temperatur faldet til under gasens antændelsestemperatur.</p>
+
+<h3>Mekanisk styrke</h3>
+<p>Kapslinger er typisk støbt aluminium, støbejern eller rustfrit stål. Vægtykkelsen beregnes ud fra volumen, gasgruppe og maksimalt eksperimentelt sikkert mellemrum (MESG). En 10-liters IIC-kapsling kan have vægge på 8–10 mm.</p>
+
+<h3>Indføringsanordninger</h3>
+<p>Kabeltilslutninger skal opretholde den eksplosionssikre integritet. Mulighederne omfatter:</p>
+<ul>
+  <li>Certificerede Ex d<a href="/da/pages/cable-glands-hazardous-areas.html">-kabelgennemføringer</a> med stopkasser</li>
+  <li>Indirekte indgange via terminalkamre med øget sikkerhed (Ex e)</li>
+  <li>Rørforseglinger i henhold til NEC 501.15 (i nordamerikanske installationer)</li>
+</ul>
+</section>
+
+<section>
+<h2>Sådan fungerer egensikkerhed (Ex i)</h2>
+<p>Egensikkerhed er reguleret af IEC 60079-11 (se <a href="/da/pages/standards.html">standardoversigt</a>). Systemet består af tre elementer:</p>
+
+<h3>1. Egensikre apparater (i det farlige område)</h3>
+<p>Feltudstyret. Sensor, transmitter, reguleringsventil osv. Komponenterne er konstrueret og <a href="/da/pages/certification.html">certificeret</a> for at sikre, at de ikke kan frigive farlig energi, selv under fejlforhold.</p>
+
+<h3>2. Tilknyttet udstyr (i det sikre område)</h3>
+<p>Typisk en sikkerhedsbarriere eller isolator, der begrænser spænding, strøm og lagret energi, der leveres til kredsløbet i det farlige område. Almindelige typer:</p>
+<ul>
+  <li><strong>Zener-barrierer:</strong> Passive enheder, der bruger Zener-dioder til at begrænse spændingen og modstande til at begrænse strømmen</li>
+  <li><strong>Galvaniske isolatorer:</strong> Aktive enheder, der bruger transformere eller optokoblere til at sikre elektrisk isolation med højere effektbudgetter</li>
+</ul>
+
+<h3>3. Tilslutningskabel</h3>
+<p>Kablet introducerer kapacitans og induktans, som kan lagre energi. Systemdesignet skal tage højde for:</p>
+<ul>
+  <li><strong>Maksimal kabellængde</strong> baseret på kapacitans/induktans pr. meter</li>
+  <li><strong>Kabelparametre</strong> (Ckabel, Lkabel) dokumenteret i installationsjournaler</li>
+</ul>
+
+<h3>Beregninger af energigrænser</h3>
+<p>Sikkerheden bevises ved beregning eller gnisttest. For resistive kredsløb er antændelsestærsklen i en hydrogenatmosfære omtrent:</p>
+<pre><code>20 µJ (microjoules)
+</code></pre>
+<p>Denne lille mængde energi, der er langt mindre end en statisk udladning, man kan mærke, er drivkraften bag designfilosofien. Typiske egensikre kredsløb fungerer ved:</p>
+<ul>
+  <li><strong>Spænding:</strong> 12–30 V DC (ofte meget lavere)</li>
+  <li><strong>Strøm:</strong> 20–100 mA (4–20 mA-sløjfer er almindelige)</li>
+  <li><strong>Effekt:</strong> Milliwatt til få watt</li>
+</ul>
+
+<h3>ia vs. ib</h3>
+<p>Der findes to niveauer af egensikkerhed:</p>
+<ul>
+  <li><strong>Ex ia:</strong> Sikker ved <strong>to fejl</strong> påført samtidigt (egnet til <a href="/da/pages/zone-classification.html">Zone 0</a>, <a href="/da/pages/epl.html">EPL Ga</a>)</li>
+  <li><strong>Ex ib:</strong> Sikker ved <strong>én fejl</strong> (egnet til zone 1, EPL Gb)</li>
+</ul>
+<p>Fejl omfatter kortslutninger, åbne kredsløb, jordfejl, komponentfejl og kombinationer heraf.</p>
+</section>
+
+<section>
+<h2>Praktisk sammenligning</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspekt</th>
+      <th>Eksplosionssikret (Ex d)</th>
+      <th>Egensikker (Ex i)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Filosofi</strong></td>
+      <td>Inddæmning af eksplosionen</td>
+      <td>Forhindre antændelse</td>
+    </tr>
+    <tr>
+      <td><strong>Effekthåndtering</strong></td>
+      <td>Høj (kW til MW muligt)</td>
+      <td>Meget lav (typisk mW til ~20 W)</td>
+    </tr>
+    <tr>
+      <td><strong>Kabinetvægt</strong></td>
+      <td>Tung (kg til flere kg for samledåser)</td>
+      <td>Let (ofte blot et hus af plast eller let metal)</td>
+    </tr>
+    <tr>
+      <td><strong>Installationskompleksitet</strong></td>
+      <td>Moderat (tunge kabinetter, omhyggelig samling)</td>
+      <td>Lav (lette enheder, enkel montering)</td>
+    </tr>
+    <tr>
+      <td><strong>Vedligeholdelse</strong></td>
+      <td>Kabinet må ikke åbnes i klassificeret område, medmindre strømmen er slukket (se regler <a href="/da/pages/installation-inspection.html">for installation og inspektion</a>) eller procedurerne for &quot;tilladelse til arbejde under spænding&quot; følges</td>
+      <td>Kan udføre arbejde på strømførende kredsløb i farligt område (hvis det er tilladt i henhold til anlæggets procedurer)</td>
+    </tr>
+    <tr>
+      <td><strong>Kabelindføring</strong></td>
+      <td>Der kræves certificerede <a href="/da/pages/cable-glands-hazardous-areas.html">kabelforskruninger</a>, afslutningsbokse eller rørforseglinger</td>
+      <td>Der kræves ingen specielle kabelforskruninger; kabelparametre skal verificeres</td>
+    </tr>
+    <tr>
+      <td><strong>Typisk pris (udstyr)</strong></td>
+      <td>Moderat til høj (kabinet + bearbejdning)</td>
+      <td>Lav til moderat (enkle feltanordninger, sikkerhedsbarrierer øger omkostningerne)</td>
+    </tr>
+    <tr>
+      <td><strong>Velegnet til</strong></td>
+      <td>Motorer, belysning, højtydende aktuatorer, kontrolpaneler</td>
+      <td>Sensorer, sendere, lavtydende styringer, kommunikationskredsløb</td>
+    </tr>
+    <tr>
+      <td><strong>Zoneegnethed</strong></td>
+      <td>Zone 1 og Zone 2 (også Div 1 i NEC)</td>
+      <td>Zone 0, 1, 2 (Ex ia); Zone 1, 2 (Ex ib)</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Hvornår skal man bruge eksplosionssikre (Ex d)</h2>
+
+<h3>Bedste anvendelsesområder:</h3>
+<ul>
+  <li><strong>Elektriske motorer</strong>. Høje startstrømme og kontinuerlige effektkrav</li>
+  <li><strong>Belysningsarmaturer</strong>. Halogen-, LED- eller lysstofrør, der kræver netspænding</li>
+  <li><strong>Store samledåser</strong>. Samlingspaneler med snesevis af kredsløb</li>
+  <li><strong>Aktuatorer og magnetventiler</strong>. Ventiler, der kræver betydelig kraft</li>
+  <li><strong>Kontrolpaneler</strong>. Lokale betjeningsgrænseflader med trykknapper, skærme og relæer</li>
+</ul>
+
+<h3>Fordele:</h3>
+<ul>
+  <li>Ingen strømbegrænsninger. Bruger standard industrielle spændings- og strømniveauer</li>
+  <li>Robust og gennemprøvet teknologi. Har været anvendt i over 80 år</li>
+  <li>Indbygget beskyttelse. Ingen afhængighed af eksterne barrierer eller beregninger</li>
+  <li>Standardindustrikomponenter kan placeres i Ex d-kabinetter</li>
+</ul>
+
+<h3>Ulemper:</h3>
+<ul>
+  <li>Tunge kabinetter øger installationsvanskelighederne og kravene til strukturel understøttelse</li>
+  <li>Kan ikke åbnes, mens der er strøm i det klassificerede område, uden en tilladelse til arbejde under spænding</li>
+  <li>Højere omkostninger til kabinetter på grund af bearbejdning og trykprøvning</li>
+  <li>Vedligeholdelse kræver omhyggelig samling for at bevare den eksplosionssikre integritet (momentværdier, renhed ved samlinger)</li>
+</ul>
+</section>
+
+<section>
+<h2>Hvornår skal man bruge egensikkerhed (Ex i)</h2>
+
+<h3>Bedste anvendelser:</h3>
+<ul>
+  <li><strong>Procesinstrumentering</strong>. Temperatur-, tryk-, niveau- og flowtransmittere (4–20 mA-sløjfer)</li>
+  <li><strong>Gasdetektorer</strong>. Bærbare og faste monitorer</li>
+  <li><strong>Styresystemer</strong>. DCS/PLC I/O-kredsløb, feltbusnetværk (HART, Profibus, Foundation Fieldbus)</li>
+  <li><strong>Telekommunikation</strong>. Telefoner, intercoms, datalink i farlige områder</li>
+  <li><strong>Analyseinstrumenter</strong>. Laboratorieudstyr, kromatografer, der fungerer i Zone 1-områder</li>
+</ul>
+
+<h3>Fordele:</h3>
+<ul>
+  <li>Egnet til Zone 0 (Ex ia). Den eneste almindelige beskyttelsesmetode, der er tilladt ved kontinuerlig tilstedeværelse af gas</li>
+  <li>Letvægts- og kompakte feltudstyr</li>
+  <li>Enkel installation. Ingen specielle kabinetter eller kabelforskruninger</li>
+  <li>Kan udføre fejlfinding på strømførende kredsløb i felten (under forbehold af stedets procedurer)</li>
+  <li>Iboende sikker. Komponentfejl kompromitterer ikke sikkerheden</li>
+</ul>
+
+<h3>Ulemper:</h3>
+<ul>
+  <li>Begrænset effekt. Uegnet til motorer, varmeapparater eller enheder med høj effekt</li>
+  <li>Begrænsninger i kabellængde på grund af kapacitans-/induktansgrænser (ofte maks. 1–3 km)</li>
+  <li>Systemdesign kræver omhyggelig beregning og dokumentation</li>
+  <li>Tilhørende udstyr (barrierer/isolatorer) øger omkostningerne og pladsbehovet i det sikre område</li>
+  <li>Blanding af ia- og ib-kredsløb kræver adskillelse for at forhindre krydskontaminering</li>
+</ul>
+</section>
+
+<section>
+<h2>Omkostningssammenligning</h2>
+<p>Omkostningerne varierer afhængigt af anvendelsen, men generelle tendenser:</p>
+
+<h3>Lille samledåse (6 kredsløb)</h3>
+<ul>
+  <li><strong>Ex d:</strong> 400–800 € for kabinet + 50–100 € pr. certificeret kabelforskruning = 700–1.400 € i alt</li>
+  <li><strong>Ex e (terminalboks med øget sikkerhed):</strong> 200–400 € + standardkabelgennemføringer = 300–600 € i alt</li>
+  <li><strong>Ex i-system:</strong> Feltterminering i ikke-Ex-kabinet (50 €) + 6× sikkerhedsbarrierer (100–300 € hver) = 650–1.850 € i alt</li>
+</ul>
+<p><strong>Vinder:</strong> Ex e til samledåser. Ex d er overkill; Ex i-omkostningerne stiger med antallet af barrierer.</p>
+
+<h3>Temperaturtransmitter</h3>
+<ul>
+  <li><strong>Ex d-hus + transmitter:</strong> 800–1.500 € (kræver tungt hus)</li>
+  <li><strong>Ex i-transmitter + barriere:</strong> 400–700 € (transmitter) + 100–300 € (barriere) = 500–1.000 € i alt</li>
+</ul>
+<p><strong>Vinder:</strong> Ex i til procesinstrumentering.</p>
+
+<h3>10 kW motor</h3>
+<ul>
+  <li><strong>Ex d-motor:</strong> 2.500–5.000 € (flammesikker ramme og kabinet)</li>
+  <li><strong>Ex nA-motor (gnistfri):</strong> 1.800–3.000 € (kun zone 2)</li>
+  <li><strong>Ex i:</strong> Ikke muligt ved dette effektniveau</li>
+</ul>
+<p><strong>Vinder:</strong> Ex d (eller Ex nA til zone 2). Intet alternativ til høj effekt i zone 1.</p>
+</section>
+
+<section>
+<h2>Forskelle i størrelse og vægt</h2>
+
+<h3>Eksempel: Samledåse til 12 tilslutninger</h3>
+<ul>
+  <li><strong>Ex d:</strong> 300 × 250 × 150 mm, 15 kg (støbt aluminium)</li>
+  <li><strong>Ex e:</strong> 250 × 200 × 120 mm, 3 kg (plast eller glasforstærket polyester)</li>
+  <li><strong>Ex i-feltkabinet:</strong> 150 × 100 × 80 mm, 0,5 kg (polycarbonat), tilslutninger typisk i kontrolrum</li>
+</ul>
+
+<p><strong>Indvirkning:</strong> Eksplosionssikre kabinetter kræver solide monteringsbeslag og kan kræve strukturel forstærkning. Egensikre feltanordninger kan ofte monteres med enkle klemmer eller DIN-skinneklips.</p>
+</section>
+
+<section>
+<h2>Almindelige misforståelser</h2>
+
+<h3>&quot;Eksplosionssikker betyder, at det ikke eksploderer&quot;</h3>
+<p>Nej. Det betyder, <em>at</em> <em>hvis der opstår en intern eksplosion</em>, bliver den inddæmmet og spreder sig ikke til den ydre atmosfære. Udstyret er designet til at modstå og sikkert udlufte en intern eksplosion.</p>
+
+<h3>&quot;Egensikkert udstyr kan aldrig antænde en gas&quot;</h3>
+<p>Korrekt, <em>hvis</em> systemet er korrekt konstrueret, installeret og vedligeholdt. Imidlertid er egensikkerhed et <em>system</em>koncept: feltudstyr + tilhørende apparatur + kabel. Hvis en del er forkert (forkert barriere, for lang kabellængde, installationsfejl), kompromitteres sikkerheden.</p>
+
+<h3>&quot;Ex i er altid sikrere end Ex d&quot;</h3>
+<p>Begge metoder giver samme sikkerhed, når de anvendes korrekt. Ex ia er unik, idet den er egnet til zone 0, men inden for deres respektive zoner er begge lige pålidelige.</p>
+
+<h3>&quot;Du kan bruge standardkabelgennemføringer med Ex d-udstyr&quot;</h3>
+<p>Nej. Kabelindføringer i eksplosionssikre kabinetter skal bruge certificerede Ex d-kabelgennemføringer eller godkendte afstemmingsteknikker. Standard industrielle kabelgennemføringer opretholder ikke eksplosionssikkerheden.</p>
+
+<h3>&quot;Egensikre kredsløb behøver ikke rørføring&quot;</h3>
+<p>Dette gælder for eksplosionsbeskyttelse (ingen specielle rør eller kabelforskruninger kræves), men fysisk beskyttelse og adskillelse fra ikke-IS-kredsløb gælder stadig i henhold til installationsstandarderne i IEC 60079-14.</p>
+</section>
+
+<section>
+<h2>Kombination af Ex d og Ex i</h2>
+<p>Hybridløsninger er almindelige:</p>
+
+<h3>Ex d + Ex i feltbus</h3>
+<p>En flammehæmmende samledåse (Ex d) i zone 1 indeholder et egensikkert feltbus-segment (Ex ia). Ex d-kabinettet giver mekanisk beskyttelse og et vejrbestandigt miljø, mens IS-kredsløbet muliggør zone 0-forgreninger til instrumenter.</p>
+
+<h3>Ex e + Ex i-terminaler</h3>
+<p>Terminalbokse med øget sikkerhed (Ex e) bruges ofte til IS-kredsløb. Ex e-kabinettet forhindrer lysbuer/gnister ved terminalerne, og IS-kredsløbet sørger for antændelsesforebyggelse. Denne kombination er populær til Zone 1-fordelingsskabe.</p>
+
+<h3>Ex d-motor med Ex i-styring</h3>
+<p>En eksplosionssikker motor (Ex d) sørger for mekanisk drev, mens dens styresignaler (start/stop, VFD-feedback) bruger IS-kredsløb for fleksibilitet og reducerede kabelføringsomkostninger.</p>
+</section>
+
+<section>
+<h2>Forskelle i installation og vedligeholdelse</h2>
+
+<h3>Eksplosionssikker (Ex d)</h3>
+<ul>
+  <li><strong>Installation:</strong> Spænd boltene til de angivne værdier (typisk 5–20 Nm afhængigt af størrelsen). Rengør de eksplosionssikre samlinger før montering (ingen maling, fedt eller snavs). Brug certificerede kabelforskruninger med korrekt gevindgreb og kabeldiameter.</li>
+  <li><strong>Inspektion:</strong> Visuel kontrol for skader på samlinger, korrosion eller mellemrum. Kontroller boltens tilspænding årligt. Kontroller for uautoriserede ændringer (borede huller, svejste fastgørelser).</li>
+  <li><strong>Vedligeholdelse:</strong> Afbryd strømmen før åbning i klassificerede områder, medmindre procedurer for varmt arbejde følges. Rengør samlinger med en fnugfri klud og isopropylalkohol. Udskift beskadigede pakninger eller tætninger. Spænd boltene igen ved samling.</li>
+</ul>
+
+<h3>Egensikker (Ex i)</h3>
+<ul>
+  <li><strong>Installation:</strong> Kontroller kabelparametre (C<sub>o</sub>, L<sub>o</sub>) i forhold til enhedsparametre (C<sub>i</sub>, L<sub>i</sub>, C<sub>o</sub>, L<sub>o</sub>). Sørg for korrekt jordforbindelse af barriere/isolator. Adskil IS-kabler fra ikke-IS-kredsløb (separat rør/kabelbakke eller mindst 50 mm afstand).</li>
+  <li><strong>Inspektion:</strong> Kontroller, at jordforbindelsen til barrieren/isolatoren er intakt (lav modstand mod potentialudligning). Kontroller for kabelskader eller uautoriserede ændringer af kredsløbet. Bekræft, at systemdokumentationen stemmer overens med den installerede konfiguration.</li>
+  <li><strong>Vedligeholdelse:</strong> Arbejdet kan udføres under spænding (hvis procedurerne på stedet tillader det). Udskift feltudstyr uden at afbryde strømmen. Test af barriere/isolator udføres typisk i et sikkert område. Brug kun certificerede reservedele med matchende enhedsparametre.</li>
+</ul>
+</section>
+
+<section>
+<h2>Resumé: Valg af den rigtige metode</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hvis du har brug for...</th>
+      <th>Vælg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Enheder med høj effekt (motorer, varmeapparater, store lys)</td>
+      <td>Ex d (eksplosionssikret)</td>
+    </tr>
+    <tr>
+      <td>Instrumenter med lav effekt (4–20 mA-sløjfer, sensorer)</td>
+      <td>Ex i (egensikker)</td>
+    </tr>
+    <tr>
+      <td>Zone 0-beskyttelse</td>
+      <td>Ex ia (egensikker)</td>
+    </tr>
+    <tr>
+      <td>Letvægtsfeltudstyr</td>
+      <td>Ex i (egensikker)</td>
+    </tr>
+    <tr>
+      <td>Ingen effektbegrænsninger</td>
+      <td>Ex d (eksplosionssikret)</td>
+    </tr>
+    <tr>
+      <td>Fejlfinding i realtid i felten</td>
+      <td>Ex i (egensikker)</td>
+    </tr>
+    <tr>
+      <td>Minimal installationskompleksitet</td>
+      <td>Ex i (egensikker)</td>
+    </tr>
+    <tr>
+      <td>Robust mekanisk beskyttelse</td>
+      <td>Ex d (eksplosionssikker)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Guldregel:</strong> Brug egensikkerhed til instrumenterings- og kommunikationskredsløb. Brug eksplosionssikring til strømkredsløb og udstyr, der overskrider IS-energigrænserne. Hvis du er i tvivl, skal du konsultere IEC 60079-14 (installationsstandard) eller en certificeret Ex-ekspert.</p>
+</section>
+
+<section>
+<h2>Relaterede emner</h2>
+<ul>
+  <li><a href="/da/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Beskyttelsesmetoder</a>. Alle Ex-typer, herunder Ex d, Ex i, Ex e og andre</li>
+  <li><a href="/da/pages/epl.html"><i class="ph ph-gauge"></i> Udstyrets beskyttelsesniveauer</a>. Hvordan Ga/Gb/Gc forholder sig til ia/ib og zoneegnethed</li>
+  <li><a href="/da/pages/installation-inspection.html"><i class="ph ph-wrench"></i> Installation og inspektion</a>. Korrekte installationsteknikker for Ex-udstyr</li>
+  <li><a href="/da/pages/ex-markings.html"><i class="ph ph-tag"></i> Læsning af Ex-mærkninger</a>. Afkodning af Ex d- og Ex ia/ib-typenavneskilte</li>
+</ul>
+</section>
+
+      
+        <div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">
+<strong style="color:var(--text);">Indholdsoversigt</strong><br>
+<strong style="color:var(--text);"></strong>
+Sammensat af IEC 60079-serien, ATEX 2014/34/EU og IECEx-driftsdokumenter. Denne referencevejledning erstatter ikke officielle standarder eller certificerede stedvurderinger. Konsulter altid den gældende standardudgave og en kvalificeret Ex-ingeniør for din specifikke anvendelse.
+</div>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4><i class="ph ph-list-bullets"></i> Alle emner</h4>
+  <a href="fundamentals.html"><i class="ph ph-fire"></i>Grundlæggende</a>
+  <a href="zone-classification.html"><i class="ph ph-map-trifold"></i>Zoner</a>
+  <a href="gas-groups.html"><i class="ph ph-flask"></i>Gasgrupper</a>
+  <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i>Temperaturklasser</a>
+  <a href="protection-methods.html"><i class="ph ph-shield-check"></i>Beskyttelse</a>
+  <a href="epl.html"><i class="ph ph-gauge"></i></a>
+  <a href="ex-markings.html"><i class="ph ph-tag"></i></a>
+  <a href="epl.html">EPL</a>
+  <a href="ex-markings.html">-mærkninger</a>
+  <a href="standards.html"><i class="ph ph-book-open"></i>Standarder</a>
+  <a href="certification.html"><i class="ph ph-certificate"></i>Certificering</a>
+  <a href="installation-inspection.html"><i class="ph ph-wrench"></i></a>
+  <a href="cheat-sheet.html"><i class="ph ph-lightning"></i></a>
+  <a href="installation-inspection.html">Install</a>
+  <a href="cheat-sheet.html">ationsoversigt</a>
+  <a href="atex-vs-iecex.html"><i class="ph ph-arrows-left-right"></i>ATEX vs. IECEx</a>
+  <a href="explosion-proof-vs-intrinsically-safe.html" class="current"><i class="ph ph-git-diff"></i>Ex-beskyttelse vs. IS</a>
+  <a href="how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i>ATEX-typerække</a>
+  <a href="atex-directive.html"><i class="ph ph-scales"></i>ATEX-direktiv</a>
+  <a href="hazardous-area-classification.html"><i class="ph ph-map-pin"></i>Områdeklassificering</a>
+  <a href="dust-explosion-protection.html"><i class="ph ph-wind"></i>Støveksplosioner</a>
+  <a href="atex-for-beginners.html"><i class="ph ph-graduation-cap"></i>ATEX for begyndere</a>
+  <a href="compex-certification.html"><i class="ph ph-exam"></i>CompEx</a>
+  <a href="hydrogen-explosion-protection.html"><i class="ph ph-atom"></i>Hydrogensikkerhed</a>
+  <a href="cable-glands-hazardous-areas.html"><i class="ph ph-plug"></i>Kabelforskruninger</a>
+  <a href="ex-equipment-selection-guide.html"><i class="ph ph-clipboard-text"></i>Valg af udstyr</a>
+        </div>
+      </aside>
+</div>
+
+
+<div class="references-wrapper">
+
+    <section class="references">
+      <h2>Kilder og referencer</h2>
+      <ol>
+        <li><a href="https://en.wikipedia.org/wiki/Intrinsic_safety" target="_blank" rel="noopener">Intrinsisk sikkerhed – Wikipedia</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Electrical_equipment_in_hazardous_areas" target="_blank" rel="noopener">Elektrisk udstyr i farlige områder – Wikipedia</a></li>
+        <li><a href="https://webstore.iec.ch/en/publication/636" target="_blank" rel="noopener">IEC 60079-1: Flammesikre kabinetter – IEC</a></li>
+        <li><a href="https://webstore.iec.ch/en/publication/645" target="_blank" rel="noopener">IEC 60079-11: Egensikkerhed – IEC</a></li>
+      </ol>
+    </section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Viden</h4>
+        <a href="/da/pages/fundamentals.html">Grundlæggende</a>
+        
+        <a href="/da/pages/zone-classification.html">Zoneinddeling</a>
+        
+        <a href="/da/pages/protection-methods.html">Beskyttelsesmetoder</a>
+        
+        <a href="/da/pages/standards.html">Standarder</a>
+        
+        <a href="/da/pages/temperature-classes.html">Temperaturklasser</a>
+        
+        <a href="/da/pages/gas-groups.html">Gasgrupper</a>
+        
+        <a href="/da/pages/cheat-sheet.html">Hurtig reference</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ressourcer</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i>Quiz</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i>Undersøgelse</a>
+        <a href="/da/blog/"><i class="ph ph-newspaper"></i>Blog</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i>Ordliste</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i>Alle episoder</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i>Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i>Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i>RSS-feed</a>
+      </div>
+      <div class="footer-col">
+        <h4>Mere</h4>
+        <a href="/about.html"><i class="ph ph-info"></i>Om os</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i>Partnere</a>
+        <a href="/events.html"><i class="ph ph-calendar-blank"></i>Begivenheder</a>
+        <a href="/links.html">Links<i class="ph ph-link"></i> til branchen</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Udviklet til ingeniører, der arbejder i farlige områder. Indhold baseret på IEC 60079, ATEX 2014/34/EU og IECEx-standarder.</p>
+      <p>Er ikke en erstatning for officielle standarddokumenter eller professionel ingeniørrådgivning.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Rapporter en fejl eller foreslå en forbedring</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/js/nav.js"></script>
+
+<script src="/js/reveal.js"></script>
+<script src="/js/search.js"></script>
+</body>
+</html>
