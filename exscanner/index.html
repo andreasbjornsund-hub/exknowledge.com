@@ -106,6 +106,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </section>
     </main>
 
+    <!-- Content Section -->
+    <section class="content-section" style="max-width:880px;margin:48px auto;padding:0 24px;line-height:1.65;">
+        <h2>What Ex Certificate Scanner does</h2>
+        <p>Ex Certificate Scanner reads ATEX, IECEx, and UKCA certificate PDFs and extracts the information engineers actually need: the marking string (for example <code>Ex db IIC T4 Gb</code>), gas or dust group, temperature class, protection type, equipment protection level (EPL), IP rating, ambient temperature range, notified body, validity dates, and any special conditions of use (the <em>X</em> suffix). Everything runs in your browser using PDF.js and Tesseract.js. The file never leaves your device.</p>
+
+        <h3>Supported certificate formats</h3>
+        <ul>
+            <li><strong>IECEx</strong> (IECEx Certificate of Conformity) — issued under the IEC System for Certification to Standards Relating to Equipment for Use in Explosive Atmospheres.</li>
+            <li><strong>ATEX</strong> (EU Type Examination Certificate) — issued by EU notified bodies under Directive 2014/34/EU.</li>
+            <li><strong>UKCA</strong> — UK Conformity Assessment certificates issued by UK approved bodies post-Brexit.</li>
+        </ul>
+        <p>Certificates from the major certification bodies parse reliably, including <strong>SIRA</strong>, <strong>DEKRA</strong>, <strong>TÜV</strong> (Rheinland, SÜD, Nord), <strong>UL</strong>, <strong>FM Approvals</strong>, <strong>CSA</strong>, <strong>Baseefa</strong>, <strong>KEMA</strong>, <strong>INERIS</strong>, <strong>PTB</strong>, <strong>Intertek</strong>, and <strong>Nemko</strong>. Text-based PDFs give the best accuracy; scanned or image-only PDFs fall back to OCR and may need manual review.</p>
+
+        <h3>Example extracted output</h3>
+        <p>A typical scan produces a structured record like this:</p>
+        <pre style="background:var(--surface-muted,#111);padding:16px;border-radius:6px;overflow-x:auto;font-size:13px;"><code>{
+  "certificateNumber": "IECEx DEK 18.0042X",
+  "standard": "IEC 60079-0:2017, IEC 60079-1:2014",
+  "manufacturer": "Example Instruments Ltd.",
+  "equipment": "Pressure Transmitter PT-2000",
+  "marking": "Ex db IIC T4 Gb",
+  "marking_breakdown": {
+    "protection": "db (flameproof enclosure)",
+    "gasGroup": "IIC",
+    "temperatureClass": "T4 (max 135 °C)",
+    "epl": "Gb (Zone 1)"
+  },
+  "ipRating": "IP66",
+  "ambientRange": "-40 °C to +70 °C",
+  "notifiedBody": "DEKRA Certification B.V. (0344)",
+  "issueDate": "2018-03-14",
+  "specialConditions": "X — see conditions of use"
+}</code></pre>
+
+        <h3 id="privacy">Privacy</h3>
+        <p>This scanner is <strong>entirely client-side</strong>. Your certificate PDF is parsed in the browser using JavaScript. Nothing is uploaded to a server, logged, or stored off-device. History is kept only in your browser's local storage, and you can clear it with one click. That matters because Ex certificates often carry confidential product, customer, or site information.</p>
+
+        <h3>FAQ</h3>
+        <details style="margin-bottom:8px;"><summary><strong>Is this a replacement for reading the actual certificate?</strong></summary><p>No. The scanner is a quick lookup tool for engineers and procurement teams. For compliance decisions, always read the original certificate, including the schedule of limitations, drawings, and conditions of safe use.</p></details>
+        <details style="margin-bottom:8px;"><summary><strong>What if my PDF is a scan or image?</strong></summary><p>The parser falls back to Tesseract OCR. Accuracy depends on scan quality — expect ~80–95% for clean scans, lower for faxed or low-DPI documents. Always spot-check the marking string and certificate number against the original.</p></details>
+        <details style="margin-bottom:8px;"><summary><strong>Does it verify that the certificate is still valid?</strong></summary><p>No. The tool extracts the issue and expiry dates printed on the certificate, but does not check against IECEx On-Line or notified-body registers. Always verify validity at the issuing body's public database before relying on a certificate commercially.</p></details>
+        <details style="margin-bottom:8px;"><summary><strong>Which fields are most reliable?</strong></summary><p>Certificate number, marking string, gas group, temperature class, and notified body parse correctly from almost all text-based certificates. Manufacturer and equipment model vary more with layout, and special conditions sometimes need manual review.</p></details>
+        <details style="margin-bottom:8px;"><summary><strong>Can I export scan results?</strong></summary><p>Yes. Each scan can be copied as JSON or exported to CSV. The history view can also export all scans at once.</p></details>
+        <details style="margin-bottom:8px;"><summary><strong>What are the limitations?</strong></summary><p>The parser targets the common IECEx/ATEX/UKCA templates in use since roughly 2010. Older certificates, mining (Group I) certificates, and non-English certificates may have fields that do not match the patterns. Parsing confidence is shown with every result so you can judge whether manual review is needed.</p></details>
+
+        <p style="margin-top:24px;"><a href="https://exknowledge.com" target="_blank" rel="noopener">Learn more about ATEX, IECEx, and equipment marking on ExKnowledge →</a></p>
+    </section>
+
     <!-- History Section -->
     <section id="history" class="history-section" style="display:none">
         <h2>Scan History</h2>
