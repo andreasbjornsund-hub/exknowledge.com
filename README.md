@@ -1,126 +1,119 @@
 # ExKnowledge.com
 
-Explosion protection reference site for engineers working in hazardous areas. Covers ATEX, IECEx, and UKCA certification, zone classification, protection methods, standards, and more.
+ExKnowledge is a multilingual reference site about hazardous areas and explosion protection. It covers ATEX, IECEx, UKEX / DSEAR-related topics, zone classification, equipment selection, protection methods, markings, certification, inspection, and practical field guidance.
 
-**Live:** https://exknowledge.com
+**Live site:** https://exknowledge.com
 
-## Site Structure
+## What is in the site
 
-```
+The site currently includes:
+- **26 core content pages** in English
+- **10 translated language versions** plus English, for **11 languages total**
+- **7 English blog posts** with translated blog libraries across the language folders
+- standalone utility/content pages like `about.html`, `links.html`, `partners.html`, `quiz.html`, and `survey.html`
+- a separate certificate tool at `/exscanner/`
+- a glossary section and supporting SEO / discovery files such as `sitemap.xml`, `robots.txt`, `llms.txt`, and verification files
+
+## Current language coverage
+
+Languages currently published:
+- English (`/`)
+- German (`/de/`)
+- Norwegian (`/no/`)
+- Spanish (`/es/`)
+- Danish (`/da/`)
+- Swedish (`/sv/`)
+- Finnish (`/fi/`)
+- Dutch (`/nl/`)
+- Portuguese (`/pt/`)
+- Italian (`/it/`)
+- Arabic (`/ar/`)
+
+## Repo structure
+
+```text
 exknowledge.com/
-├── index.html              # English homepage
-├── pages/                  # 12 English content pages
-│   ├── fundamentals.html
-│   ├── zone-classification.html
-│   ├── gas-groups.html
-│   ├── temperature-classes.html
-│   ├── protection-methods.html
-│   ├── epl.html
-│   ├── ex-markings.html
-│   ├── standards.html
-│   ├── certification.html
-│   ├── installation-inspection.html
-│   ├── cheat-sheet.html
-│   └── faq.html
-├── blog/                   # Monthly industry roundups (EN)
+├── index.html
+├── pages/                    # 26 English content pages
+├── blog/                     # English blog index + posts
+├── ar/ da/ de/ es/ fi/ it/ nl/ no/ pt/ sv/
 │   ├── index.html
-│   ├── 2025-11.html
-│   ├── 2025-12.html
-│   ├── 2026-01.html
-│   └── 2026-02.html
-├── {lang}/                 # 10 translated versions
-│   ├── index.html          # Translated homepage
-│   ├── pages/              # 12 translated content pages
-│   └── blog/               # Translated blog
-├── css/style.css           # Single shared stylesheet
-├── fonts/                  # KHTeka font files (.otf)
-├── images/                 # OG images, favicons
-├── js/                     # Shared scripts
-├── build/                  # Source content + metadata (see below)
-└── exscanner/              # Ex Certificate Scanner (separate app)
+│   ├── pages/                # translated content pages
+│   └── blog/                 # translated blog pages
+├── exscanner/                # Ex Certificate Scanner app
+├── glossary/                 # glossary section
+├── css/
+├── js/
+├── images/
+├── scripts/                  # maintenance / SEO / translation scripts
+├── sitemap.xml
+├── robots.txt
+├── llms.txt
+└── CNAME
 ```
 
-## Languages (11)
+## Current content footprint
 
-| Code | Language   | Status       |
-|------|-----------|--------------|
-| en   | English    | ✅ Complete  |
-| de   | German     | ✅ Complete  |
-| no   | Norwegian  | ✅ Complete  |
-| es   | Spanish    | ✅ Complete  |
-| da   | Danish     | 🔄 11/12     |
-| sv   | Swedish    | ⬜ Machine   |
-| fi   | Finnish    | ⬜ Machine   |
-| nl   | Dutch      | ⬜ Machine   |
-| pt   | Portuguese | ⬜ Machine   |
-| it   | Italian    | ⬜ Machine   |
-| ar   | Arabic     | ⬜ Machine   |
+Approximate current published footprint in the repo:
+- **286 core content pages** across all 11 languages
+- **77 blog post pages** across all 11 languages
+- **11 homepages**
+- **11 blog index pages**
+- **5 standalone pages**
+- **~388 HTML files total** in the repo
 
-## Stats
+## Main topics covered
 
-- **198 published HTML pages** (excl. build sources)
-- **12 content pages × 11 languages** = 132 content pages
-- **11 homepages** + **11 blog indexes** + **44 blog posts**
-- **Single CSS file** — all pages share `/css/style.css`
-
-## Design
-
-- **Theme:** Light warm surface, dark nav, amber accent (`#d4a843`)
-- **Fonts:** Space Grotesk (display), Source Serif 4 (body), JetBrains Mono (code/labels)
-- **Style:** Sharp edges (0 border-radius), 1px borders, industrial editorial aesthetic
-- **Responsive:** Mobile hamburger nav, collapsible sidebar, fluid typography
-
-## Content Pages
-
-Each page has:
-- Full SEO: `<title>`, meta description, Open Graph, Twitter Card
-- hreflang tags for all 11 languages
-- Canonical URL
-- Structured sidebar with current-page indicator
-- Hero image (Unsplash, industrial/offshore themed)
-- Navigation with language switcher
-
-## Build System
-
-Source content lives in `build/`:
-
-```
-build/
-├── meta.json               # Page titles, descriptions, translated titles
-├── content/
-│   ├── pages/              # English source fragments (body content only)
-│   └── {lang}/pages/       # Translated source fragments
-└── translations/           # UI string translations (nav, footer, labels)
-```
-
-**Important:** Source fragments in `build/content/` are body-only HTML. Published pages in `pages/` and `{lang}/pages/` are full HTML documents with `<head>`, nav, sidebar, footer, and scripts.
-
-### Workflow
-
-1. Edit source fragment in `build/content/{lang}/pages/{page}.html`
-2. Wrap with full HTML template (head, nav, sidebar, footer)
-3. Write to `{lang}/pages/{page}.html`
-4. Update `build/meta.json` if titles/descriptions changed
-5. `git add -A && git commit && git push`
-
-### CSS Changes
-
-Edit `css/style.css` directly — no build step needed, all 198 pages reference it.
+The content library includes pages on:
+- ATEX directive basics
+- ATEX equipment categories
+- ATEX vs IECEx
+- hazardous area classification
+- zone classification
+- gas groups
+- temperature classes
+- EPL
+- Ex markings
+- protection methods
+- certification
+- CompEx certification
+- installation and inspection
+- cable glands in hazardous areas
+- dust explosion protection
+- hydrogen explosion protection
+- DSEAR regulations
+- NEC 500 vs ATEX / IECEx
+- equipment selection
+- FAQ and cheat sheet style reference pages
 
 ## Deployment
 
-GitHub Pages from `main` branch. Push to deploy.
+This repo is deployed via **GitHub Pages** from the `main` branch to:
+- **https://exknowledge.com**
 
-- **Domain:** exknowledge.com (custom domain via CNAME)
+## SEO and discovery
 
-## SEO
+The site includes:
+- canonical URLs
+- hreflang tags across languages
+- sitemap submission support via `sitemap.xml`
+- `robots.txt`
+- `llms.txt` and `llms-full.txt`
+- verification / discovery files for external platforms
+- JSON-LD / structured-data support on key pages
 
-- All pages have unique titles and meta descriptions
-- hreflang tags on every page (11 languages + x-default)
-- Canonical URLs prevent duplicate content
-- JSON-LD structured data on key pages
-- Sitemap at `/sitemap.xml`
-- robots.txt configured
+## Utility scripts
+
+The `scripts/` folder contains helper scripts for tasks like:
+- translation workflows
+- SEO fixes
+- page verification
+- FAQ schema support
+- IndexNow submission
+
+## Notes
+
+This README reflects the site as it exists now in the public repo, not an older reduced-content version.
 
 ## License
 
