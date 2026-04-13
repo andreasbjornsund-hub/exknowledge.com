@@ -9,9 +9,12 @@ import time
 import urllib.request
 import urllib.parse
 
-API_KEY = "61f41621-eeab-40c9-bd52-63574b94309b"
+API_KEY = os.getenv("DEEPL_API_KEY")
 API_URL = "https://api.deepl.com/v2/translate"
 SITE_DIR = "/tmp/exknowledge"
+
+if not API_KEY:
+    raise RuntimeError("DEEPL_API_KEY environment variable is required")
 
 # Language code mapping (our dirs → DeepL target codes)
 LANG_MAP = {

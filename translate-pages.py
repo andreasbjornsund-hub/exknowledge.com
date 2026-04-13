@@ -13,8 +13,11 @@ import time
 import urllib.parse
 from html.parser import HTMLParser
 
-DEEPL_KEY = "61f41621-eeab-40c9-bd52-63574b94309b"
+DEEPL_KEY = os.getenv("DEEPL_API_KEY")
 DEEPL_URL = "https://api.deepl.com"
+
+if not DEEPL_KEY:
+    raise RuntimeError("DEEPL_API_KEY environment variable is required")
 
 # Load OpenAI key
 with open(os.path.expanduser("~/.openclaw/.env")) as f:

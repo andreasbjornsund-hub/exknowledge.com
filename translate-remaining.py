@@ -3,7 +3,9 @@
 
 import json, os, re, subprocess, sys, time, urllib.parse
 
-DEEPL_KEY = "61f41621-eeab-40c9-bd52-63574b94309b"
+DEEPL_KEY = os.getenv("DEEPL_API_KEY")
+if not DEEPL_KEY:
+    raise RuntimeError("DEEPL_API_KEY environment variable is required")
 
 with open(os.path.expanduser("~/.openclaw/.env")) as f:
     for line in f:

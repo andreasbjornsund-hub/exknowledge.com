@@ -111,7 +111,6 @@ Edit `css/style.css` directly — no build step needed, all 198 pages reference 
 
 GitHub Pages from `main` branch. Push to deploy.
 
-- **Repo:** `andreasbjornsund-hub/exknowledge.com`
 - **Domain:** exknowledge.com (custom domain via CNAME)
 
 ## SEO
