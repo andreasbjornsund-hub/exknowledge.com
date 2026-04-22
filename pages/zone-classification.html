@@ -43,7 +43,11 @@
     "inLanguage": "en",
     "speakable": {
       "@type": "SpeakableSpecification",
-      "cssSelector": ["h1", ".hero-desc", "h2"]
+      "cssSelector": [
+        "h1",
+        ".hero-desc",
+        "h2"
+      ]
     },
     "isPartOf": {
       "@type": "WebSite",
@@ -73,6 +77,36 @@
         "position": 2,
         "name": "Zone Classification for Hazardous Areas",
         "item": "https://exknowledge.com/pages/zone-classification.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between Zone 0, Zone 1, and Zone 2?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zone 0: explosive gas atmosphere is present continuously or for long periods (e.g. inside a fuel tank). Zone 1: explosive atmosphere is likely during normal operation (e.g. near a pressure relief valve). Zone 2: explosive atmosphere is not likely during normal operation but may occur briefly (e.g. around flanged pipe joints). Zone 0 requires the most stringent equipment (EPL Ga)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are dust zones 20, 21, and 22?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dust zones mirror gas zones: Zone 20 has a combustible dust cloud present continuously (inside a silo or hopper), Zone 21 has dust clouds likely during normal operation (near filling points), and Zone 22 has dust clouds unlikely but possible briefly (areas where dust layers may be disturbed). Equipment must be rated Da, Db, or Dc respectively."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is responsible for hazardous area zone classification?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The employer or site operator is legally responsible under ATEX Directive 1999/92/EC (workplace directive). In practice, classification is performed by competent engineers following IEC 60079-10-1 (gas) or IEC 60079-10-2 (dust). The classification must be documented in an Explosion Protection Document (EPD) and reviewed when processes or materials change."
+        }
       }
     ]
   }
@@ -121,6 +155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="/pages/gas-groups.html"><i class="ph ph-flame"></i> Gas Groups</a></li>
         <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Equipment Categories</a></li>
         <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Reference</a></li>
+        <li><a href="/pages/faq.html"><i class="ph ph-question"></i> FAQ</a></li>
         </ul>
       </li>
       <li class="has-dropdown">

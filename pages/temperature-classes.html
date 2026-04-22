@@ -71,6 +71,36 @@
         "item": "https://exknowledge.com/pages/temperature-classes.html"
       }
     ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What do temperature classes T1 through T6 mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Temperature classes define the maximum allowable surface temperature of Ex equipment: T1 (450°C), T2 (300°C), T3 (200°C), T4 (135°C), T5 (100°C), T6 (85°C). The equipment surface must stay below the auto-ignition temperature of any gas present. T6 is the most restrictive. Most industrial gases are covered by T3 or T4."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I choose the right temperature class?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Identify all flammable gases or vapours that could be present, find their auto-ignition temperatures (AIT), and select equipment with a T-class whose maximum surface temperature is below the lowest AIT. For example, if diethyl ether (AIT 160°C) is present, you need at least T4 (135°C). A higher T-class number means a lower max surface temperature and is always safe for gases requiring lower T-classes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are temperature limits calculated for dust atmospheres?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For dust, equipment maximum surface temperature must not exceed whichever is lower: two-thirds of the dust cloud ignition temperature (in Kelvin), or the dust layer ignition temperature minus 75°C (for a 5mm layer). Both the cloud and layer ignition temperatures must be tested for the specific dust present. This dual requirement makes dust temperature assessment more complex than for gases."
+        }
+      }
+    ]
   }
 ]
   </script>
@@ -117,6 +147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="/pages/gas-groups.html"><i class="ph ph-flame"></i> Gas Groups</a></li>
         <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Equipment Categories</a></li>
         <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Reference</a></li>
+        <li><a href="/pages/faq.html"><i class="ph ph-question"></i> FAQ</a></li>
         </ul>
       </li>
       <li class="has-dropdown">
