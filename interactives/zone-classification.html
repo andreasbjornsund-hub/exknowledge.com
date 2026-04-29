@@ -1,0 +1,1437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zone Classification — Plant Explorer · exknowledge</title>
+<!--
+  ════════════════════════════════════════════════════════════════════
+  exknowledge interactive — Zone Classification: Plant Explorer
+  ────────────────────────────────────────────────────────────────────
+  CONTENT CHECKLIST
+    • Eight clickable regions on a fuel-storage / loading-terminal
+      schematic, classified per IEC 60079-10-1 (gas) and -10-2 (dust).
+    • Default state teaches: legend, semantic colour key, orientation
+      paragraph, "how to read this" prompt.
+    • Active state: detail panel populated; non-selected regions
+      dimmed but legible (WCAG AA preserved).
+    • Filters: Gas only / Dust only / EPL highlight (Ga·Gb·Gc).
+    • Reset to default reachable in one click and via Esc.
+    • Language switch EN ⇄ NB through STRINGS swap; SVG uses <text>
+      so glyphs reflow with translation.
+    • Density toggle (comfortable ⇄ compact) for the editorial host.
+    • Reduced-motion respected via @media query AND a manual override.
+
+  DELIBERATE OMISSIONS
+    • No marketing CTAs, no email capture, no logos.
+    • No photography. Schematic is geometric, not pictorial.
+    • No external libraries. Single self-contained file. Google Fonts
+      via <link> is the only network dependency.
+    • No localStorage / cookies / analytics.
+    • Severity colour (red) reserved for Zone 0 / Zone 20 only.
+      Amber is interaction state, not a hazard signal.
+
+  KNOWN LIMITATIONS
+    • Region geometry is illustrative — real classification depends
+      on ventilation, release grade and source-specific dispersion.
+      The detail panel says so where it matters.
+    • NB translation is a working draft for the swap demo; final copy
+      would be reviewed by a native technical editor.
+    • Internal scroll inside the detail panel kicks in below ~640 px
+      tall to avoid forcing host-page scroll.
+  ════════════════════════════════════════════════════════════════════
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ─── Scoped reset ─────────────────────────────────────────────── */
+.exk-interactive, .exk-interactive *,
+.exk-interactive *::before, .exk-interactive *::after {
+  box-sizing: border-box;
+}
+.exk-interactive {
+  /* tokens — calibrated to exknowledge.com editorial palette */
+  --paper:        #F8F5EE;   /* warm cream page */
+  --paper-2:      #EFEAE0;   /* card / inset    */
+  --ink:          #0F172A;   /* slate-900       */
+  --ink-soft:     #334155;   /* slate-700       */
+  --ink-faint:    #64748B;   /* slate-500       */
+  --rule:         #D8D2C4;   /* warm hairline   */
+  --rule-strong:  #B7AE9C;
+  --amber:        #C2410C;   /* signature burnt-orange accent */
+  --amber-soft:   #FCE7CF;
+  --red:          #991B1B;   /* severity only   */
+  --red-soft:     #F2D2D0;
+
+  /* zone semantics — never decorative */
+  --z0:           #991B1B;   /* continuous            (severity red)  */
+  --z1:           #C2410C;   /* likely                (signature)     */
+  --z2:           #B45309;   /* occasional            (warm amber)    */
+  --z20:          #991B1B;   /* continuous (dust)                     */
+  --z21:          #C2410C;   /* likely (dust)                         */
+  --z22:          #B45309;   /* occasional (dust)                     */
+  --safe:         #8A8270;
+
+  /* spacing scales (toggled by [data-density]) */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 24px; --sp-6: 32px; --sp-7: 48px;
+
+  --serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --sans:  "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono:  "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  isolation: isolate;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.exk-interactive[data-density="compact"] {
+  --sp-3: 8px; --sp-4: 12px; --sp-5: 16px; --sp-6: 20px; --sp-7: 32px;
+}
+
+/* ─── Header strip ─────────────────────────────────────────────── */
+.exk-interactive .exk-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-5);
+  padding: var(--sp-5) var(--sp-6) var(--sp-4);
+  border-bottom: 1px solid var(--rule);
+  flex-wrap: wrap;
+}
+.exk-interactive .exk-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 var(--sp-2);
+}
+.exk-interactive .exk-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0;
+  max-width: 32ch;
+  text-wrap: balance;
+}
+.exk-interactive .exk-title em {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+.exk-interactive .exk-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--sp-2);
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+  letter-spacing: 0.04em;
+}
+.exk-interactive .exk-meta-row {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: center;
+}
+.exk-interactive .exk-meta-row span + span::before {
+  content: "·";
+  margin-right: var(--sp-3);
+  color: var(--rule-strong);
+}
+
+/* ─── Toolbar ──────────────────────────────────────────────────── */
+.exk-interactive .exk-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-5);
+  align-items: center;
+  padding: var(--sp-3) var(--sp-6);
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+}
+.exk-interactive .exk-toolgroup {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.exk-interactive .exk-toolgroup-label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-right: var(--sp-1);
+}
+.exk-interactive .exk-chip {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.exk-interactive .exk-chip:hover { border-color: var(--rule-strong); }
+.exk-interactive .exk-chip[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.exk-interactive .exk-chip .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--rule-strong);
+  display: inline-block;
+}
+.exk-interactive .exk-chip[data-tag="gas"] .dot { background: var(--amber); }
+.exk-interactive .exk-chip[data-tag="dust"] .dot { background: var(--z2); }
+.exk-interactive .exk-chip[data-tag="ga"] .dot { background: var(--z0); }
+.exk-interactive .exk-chip[data-tag="gb"] .dot { background: var(--z1); }
+.exk-interactive .exk-chip[data-tag="gc"] .dot { background: var(--z2); }
+.exk-interactive .exk-chip:focus-visible,
+.exk-interactive .exk-iconbtn:focus-visible,
+.exk-interactive .exk-textbtn:focus-visible,
+.exk-interactive .exk-tab:focus-visible,
+.exk-interactive .exk-region:focus-visible,
+.exk-interactive .exk-toggle:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.exk-interactive .exk-spacer { flex: 1; }
+
+.exk-interactive .exk-textbtn {
+  background: transparent;
+  border: 0;
+  padding: 4px 8px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  cursor: pointer;
+  border-radius: 2px;
+}
+.exk-interactive .exk-textbtn:hover { color: var(--ink); }
+
+.exk-interactive .exk-segmented {
+  display: inline-flex;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.exk-interactive .exk-segmented .exk-tab {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--paper);
+  border: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: var(--ink-soft);
+  border-right: 1px solid var(--rule);
+}
+.exk-interactive .exk-segmented .exk-tab:last-child { border-right: 0; }
+.exk-interactive .exk-segmented .exk-tab[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ─── Body grid ────────────────────────────────────────────────── */
+.exk-interactive .exk-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  min-height: 640px;
+}
+.exk-interactive .exk-canvas {
+  position: relative;
+  border-right: 1px solid var(--rule);
+  background:
+    linear-gradient(var(--paper), var(--paper)),
+    repeating-linear-gradient(0deg, transparent 0 39px, rgba(0,0,0,0.025) 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, rgba(0,0,0,0.025) 39px 40px);
+  background-blend-mode: multiply;
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+}
+.exk-interactive .exk-canvas-frame {
+  flex: 1;
+  position: relative;
+  min-height: 480px;
+}
+.exk-interactive .exk-canvas svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* tickmarks / canvas chrome */
+.exk-interactive .exk-canvas-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: var(--sp-3);
+}
+.exk-interactive .exk-canvas-meta b {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+/* ─── Detail panel ─────────────────────────────────────────────── */
+.exk-interactive .exk-panel {
+  padding: var(--sp-5) var(--sp-6) var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  min-width: 0;
+  max-height: 800px;
+  overflow: auto;
+}
+
+/* default panel (orientation) */
+.exk-interactive .exk-default .exk-panel-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 var(--sp-2);
+}
+.exk-interactive .exk-default h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 var(--sp-3);
+  letter-spacing: -0.005em;
+}
+.exk-interactive .exk-default p {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0 0 var(--sp-4);
+  text-wrap: pretty;
+}
+.exk-interactive .exk-legend {
+  border-top: 1px solid var(--rule);
+  padding-top: var(--sp-4);
+  display: grid;
+  gap: var(--sp-3);
+}
+.exk-interactive .exk-legend-row {
+  display: grid;
+  grid-template-columns: 22px 56px 1fr;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: 13px;
+  line-height: 1.4;
+}
+.exk-interactive .exk-legend-swatch {
+  width: 18px;
+  height: 12px;
+  border-radius: 1px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.exk-interactive .exk-legend-key {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.exk-interactive .exk-legend-desc { color: var(--ink-soft); }
+
+.exk-interactive .exk-howto {
+  border-top: 1px solid var(--rule);
+  padding-top: var(--sp-4);
+  display: grid;
+  gap: var(--sp-2);
+}
+.exk-interactive .exk-howto-step {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: var(--sp-3);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.exk-interactive .exk-howto-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  width: 20px; height: 20px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* active panel */
+.exk-interactive .exk-active .exk-panel-head {
+  display: flex; align-items: flex-start; gap: var(--sp-3);
+  justify-content: space-between;
+}
+.exk-interactive .exk-zone-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 var(--sp-2);
+}
+.exk-interactive .exk-zone-tag .swatch {
+  width: 10px; height: 10px; border-radius: 50%;
+  display: inline-block;
+}
+.exk-interactive .exk-active h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0 0 var(--sp-1);
+}
+.exk-interactive .exk-active .sub {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-faint);
+  margin: 0 0 var(--sp-4);
+}
+.exk-interactive .exk-iconbtn {
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  width: 28px; height: 28px;
+  cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+}
+.exk-interactive .exk-iconbtn:hover { color: var(--ink); border-color: var(--rule-strong); }
+.exk-interactive .exk-iconbtn svg { display: block; }
+
+.exk-interactive .exk-zone-banner {
+  border-left: 3px solid var(--rule-strong);
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--paper-2);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0 0 var(--sp-4);
+  text-wrap: pretty;
+}
+.exk-interactive .exk-zone-banner strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.exk-interactive .exk-defs {
+  display: grid;
+  gap: var(--sp-3);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--sp-4);
+}
+.exk-interactive .exk-def {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: var(--sp-3);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.exk-interactive .exk-def-label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding-top: 2px;
+}
+.exk-interactive .exk-def-value { color: var(--ink); }
+.exk-interactive .exk-def-value em {
+  font-style: normal;
+  color: var(--ink-soft);
+}
+.exk-interactive .exk-def-value code {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  background: var(--paper-2);
+  padding: 1px 6px;
+  border-radius: 2px;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+
+.exk-interactive .exk-clauseref {
+  border-top: 1px solid var(--rule);
+  padding-top: var(--sp-3);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  display: flex; gap: var(--sp-3); flex-wrap: wrap;
+}
+.exk-interactive .exk-clauseref b {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+/* ─── SVG region behaviour ─────────────────────────────────────── */
+.exk-interactive .exk-region {
+  cursor: pointer;
+  outline: none;
+  transition: opacity 200ms ease, filter 200ms ease;
+}
+.exk-interactive [data-reduced-motion="true"] .exk-region,
+.exk-interactive[data-reduced-motion="true"] .exk-region {
+  transition: none !important;
+}
+.exk-interactive .exk-region-fill {
+  transition: fill-opacity 200ms ease, stroke-width 200ms ease;
+}
+.exk-interactive[data-reduced-motion="true"] .exk-region-fill {
+  transition: none !important;
+}
+
+/* selected/dimmed states */
+.exk-interactive[data-selected] .exk-region:not([data-active="true"]) .exk-region-fill {
+  fill-opacity: 0.18;
+}
+.exk-interactive[data-selected] .exk-region:not([data-active="true"]) .exk-region-stroke {
+  stroke-opacity: 0.35;
+}
+.exk-interactive[data-selected] .exk-region:not([data-active="true"]) text {
+  opacity: 0.45;
+}
+.exk-interactive .exk-region[data-active="true"] .exk-region-fill {
+  fill-opacity: 0.55;
+  stroke-width: 2;
+}
+.exk-interactive .exk-region[data-active="true"] .exk-region-stroke {
+  stroke-width: 2.25;
+}
+.exk-interactive .exk-region[data-active="true"] text { font-weight: 600; }
+
+/* filter dim */
+.exk-interactive .exk-region[data-filtered="true"] {
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.exk-interactive .exk-region:hover .exk-region-fill {
+  fill-opacity: 0.5;
+}
+.exk-interactive .exk-region:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* equipment skeleton strokes */
+.exk-interactive .exk-skel { fill: none; stroke: var(--ink); stroke-width: 1.25; }
+.exk-interactive .exk-skel-soft { fill: none; stroke: var(--ink-soft); stroke-width: 1; }
+.exk-interactive .exk-skel-fill { fill: var(--paper-2); stroke: var(--ink); stroke-width: 1.25; }
+.exk-interactive .exk-skel-text {
+  font-family: var(--mono); font-size: 9px;
+  fill: var(--ink-soft); letter-spacing: 0.04em; text-transform: uppercase;
+}
+.exk-interactive .exk-region-label {
+  font-family: var(--mono); font-size: 9.5px;
+  fill: var(--ink); letter-spacing: 0.06em;
+  text-transform: uppercase; pointer-events: none;
+  font-weight: 500;
+}
+.exk-interactive .exk-region-num {
+  font-family: var(--mono); font-size: 10px;
+  fill: var(--paper); font-weight: 600;
+  pointer-events: none;
+  text-anchor: middle;
+}
+.exk-interactive .exk-marker {
+  fill: var(--ink); stroke: var(--paper); stroke-width: 1.25;
+}
+.exk-interactive .exk-region[data-active="true"] .exk-marker { fill: var(--amber); }
+
+/* ─── Footnote strip ───────────────────────────────────────────── */
+.exk-interactive .exk-foot {
+  border-top: 1px solid var(--rule);
+  padding: var(--sp-3) var(--sp-6);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  display: flex; gap: var(--sp-5); flex-wrap: wrap;
+  align-items: center;
+}
+.exk-interactive .exk-foot kbd {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-bottom-width: 2px;
+  border-radius: 2px;
+  padding: 1px 5px;
+  color: var(--ink);
+}
+
+/* a11y live region */
+.exk-interactive .exk-sr {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ─── Mobile ───────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .exk-interactive .exk-body {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .exk-interactive .exk-canvas {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+    padding: var(--sp-4);
+  }
+  .exk-interactive .exk-canvas-frame { min-height: 360px; }
+  .exk-interactive .exk-panel {
+    padding: var(--sp-4);
+    max-height: none;
+  }
+  .exk-interactive .exk-head { padding: var(--sp-4); }
+  .exk-interactive .exk-toolbar { padding: var(--sp-3) var(--sp-4); gap: var(--sp-2) var(--sp-4); }
+  .exk-interactive .exk-foot { padding: var(--sp-3) var(--sp-4); }
+  .exk-interactive .exk-meta { align-items: flex-start; }
+}
+
+/* ─── Reduced motion ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .exk-interactive *, .exk-interactive *::before, .exk-interactive *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="exk-interactive" id="exk-root" data-density="comfortable" lang="en">
+
+  <!-- ═══ HEADER ═════════════════════════════════════════════════ -->
+  <header class="exk-head">
+    <div>
+      <p class="exk-eyebrow" data-i="eyebrow">Interactive · Hazardous-area classification</p>
+      <h1 class="exk-title" data-i="title">Zone Classification — <em data-i="title_em">a plant explorer</em></h1>
+    </div>
+    <div class="exk-meta" aria-hidden="false">
+      <div class="exk-meta-row">
+        <span data-i="meta_standard">IEC 60079-10-1 · -10-2</span>
+        <span data-i="meta_scope">Gas + dust</span>
+      </div>
+      <div class="exk-meta-row">
+        <span data-i="meta_hint">Click any region · Esc to reset</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ TOOLBAR ════════════════════════════════════════════════ -->
+  <div class="exk-toolbar" role="toolbar" aria-label="Filters and controls">
+    <div class="exk-toolgroup">
+      <span class="exk-toolgroup-label" data-i="filter_show">Show</span>
+      <button class="exk-chip" type="button" data-tag="gas" data-filter="gas" aria-pressed="true">
+        <span class="dot" aria-hidden="true"></span><span data-i="filter_gas">Gas zones</span>
+      </button>
+      <button class="exk-chip" type="button" data-tag="dust" data-filter="dust" aria-pressed="true">
+        <span class="dot" aria-hidden="true"></span><span data-i="filter_dust">Dust zones</span>
+      </button>
+    </div>
+
+    <div class="exk-toolgroup">
+      <span class="exk-toolgroup-label" data-i="filter_epl">Highlight EPL</span>
+      <div class="exk-segmented" role="group" aria-label="Equipment Protection Level">
+        <button class="exk-tab" type="button" data-epl="all" aria-pressed="true" data-i="epl_all">All</button>
+        <button class="exk-tab" type="button" data-epl="Ga" aria-pressed="false">Ga</button>
+        <button class="exk-tab" type="button" data-epl="Gb" aria-pressed="false">Gb</button>
+        <button class="exk-tab" type="button" data-epl="Gc" aria-pressed="false">Gc</button>
+      </div>
+    </div>
+
+    <div class="exk-spacer"></div>
+
+    <div class="exk-toolgroup">
+      <button class="exk-textbtn" type="button" id="exk-reset" data-i="reset">↺ Reset</button>
+    </div>
+  </div>
+
+  <!-- ═══ BODY: canvas + detail ═════════════════════════════════ -->
+  <div class="exk-body">
+
+    <!-- ── Canvas pane ─────────────────────────────────────────── -->
+    <section class="exk-canvas" aria-label="Plant schematic">
+      <div class="exk-canvas-meta">
+        <span data-i="canvas_label"><b data-i="canvas_label_b">Fuel terminal</b> · loading bay, tank farm, vapour return</span>
+        <span data-i="canvas_state">Steady-state operation</span>
+      </div>
+
+      <div class="exk-canvas-frame">
+        <svg viewBox="0 0 800 560" role="img" aria-labelledby="exk-svg-title" preserveAspectRatio="xMidYMid meet">
+          <title id="exk-svg-title" data-i="svg_title">Schematic of a fuel-storage and loading terminal with eight hazardous-area regions.</title>
+
+          <!-- ground -->
+          <line class="exk-skel-soft" x1="20" y1="500" x2="780" y2="500"/>
+          <text class="exk-skel-text" x="20" y="518" data-i="g_grade">Grade level</text>
+
+          <!-- ── Region 1 — Inside tank (Zone 0) ── -->
+          <!-- tank shell -->
+          <g>
+            <rect class="exk-skel-fill" x="60" y="170" width="180" height="320" rx="4"/>
+            <ellipse class="exk-skel-fill" cx="150" cy="170" rx="90" ry="22"/>
+            <line class="exk-skel" x1="60" y1="490" x2="240" y2="490"/>
+            <text class="exk-skel-text" x="150" y="510" text-anchor="middle" data-i="g_tank">Storage tank · fixed roof</text>
+          </g>
+
+          <!-- region 1: interior vapour space -->
+          <g class="exk-region" tabindex="0" role="button" data-id="r1" aria-label="Region 1: tank vapour space, Zone 0">
+            <rect class="exk-region-fill" x="70" y="195" width="160" height="70" fill="var(--z0)" fill-opacity="0.42"/>
+            <rect class="exk-region-stroke" x="70" y="195" width="160" height="70" fill="none" stroke="var(--z0)" stroke-width="1.25" stroke-dasharray="4 3"/>
+            <text class="exk-region-label" x="80" y="215">VAPOUR SPACE</text>
+            <text class="exk-region-label" x="80" y="230" style="font-size:8.5px;fill:var(--ink-soft);">INSIDE TANK · ZONE 0</text>
+            <circle class="exk-marker" cx="218" cy="252" r="11"/>
+            <text class="exk-region-num" x="218" y="256">1</text>
+          </g>
+
+          <!-- ── Region 2 — Tank vent (Zone 1 cylinder, Zone 2 sphere) ── -->
+          <g>
+            <line class="exk-skel" x1="150" y1="170" x2="150" y2="120"/>
+            <path class="exk-skel" d="M138,120 h24 l-12,-14 z"/>
+            <text class="exk-skel-text" x="158" y="115" data-i="g_vent">Vent</text>
+          </g>
+          <g class="exk-region" tabindex="0" role="button" data-id="r2" aria-label="Region 2: vent outlet, Zone 1 with surrounding Zone 2">
+            <!-- z2 outer sphere -->
+            <circle class="exk-region-stroke" cx="150" cy="106" r="55" fill="var(--z2)" fill-opacity="0.18" stroke="var(--z2)" stroke-width="1" stroke-dasharray="2 3"/>
+            <!-- z1 inner cylinder -->
+            <circle class="exk-region-fill" cx="150" cy="106" r="28" fill="var(--z1)" fill-opacity="0.42"/>
+            <text class="exk-region-label" x="150" y="50" text-anchor="middle">VENT OUTLET</text>
+            <text class="exk-region-label" x="150" y="62" text-anchor="middle" style="font-size:8.5px;fill:var(--ink-soft);">Z1 + Z2 ENVELOPE</text>
+            <circle class="exk-marker" cx="180" cy="80" r="11"/>
+            <text class="exk-region-num" x="180" y="84">2</text>
+          </g>
+
+          <!-- ── Region 3 — Bund (Zone 2) ── -->
+          <g>
+            <path class="exk-skel" d="M30 490 L30 460 L260 460 L260 490"/>
+            <text class="exk-skel-text" x="38" y="476" data-i="g_bund">Bund</text>
+          </g>
+          <g class="exk-region" tabindex="0" role="button" data-id="r3" aria-label="Region 3: bund interior, Zone 2">
+            <rect class="exk-region-fill" x="32" y="462" width="226" height="28" fill="var(--z2)" fill-opacity="0.42"/>
+            <rect class="exk-region-stroke" x="32" y="462" width="226" height="28" fill="none" stroke="var(--z2)" stroke-width="1.25"/>
+            <text class="exk-region-label" x="40" y="481" style="font-size:8.5px;">BUND INTERIOR · Z2</text>
+            <circle class="exk-marker" cx="240" cy="476" r="10"/>
+            <text class="exk-region-num" x="240" y="480">3</text>
+          </g>
+
+          <!-- ── Pump skid ── -->
+          <g>
+            <rect class="exk-skel-fill" x="290" y="430" width="120" height="60" rx="2"/>
+            <circle class="exk-skel-fill" cx="320" cy="460" r="14"/>
+            <circle class="exk-skel" cx="320" cy="460" r="6"/>
+            <line class="exk-skel" x1="240" y1="460" x2="290" y2="460"/>
+            <line class="exk-skel" x1="410" y1="460" x2="500" y2="460"/>
+            <text class="exk-skel-text" x="350" y="495" text-anchor="middle" data-i="g_pump">Transfer pump skid</text>
+          </g>
+          <!-- ── Region 4 — Pump seal envelope (Zone 1) ── -->
+          <g class="exk-region" tabindex="0" role="button" data-id="r4" aria-label="Region 4: pump seal envelope, Zone 1">
+            <ellipse class="exk-region-fill" cx="320" cy="460" rx="38" ry="26" fill="var(--z1)" fill-opacity="0.42"/>
+            <ellipse class="exk-region-stroke" cx="320" cy="460" rx="38" ry="26" fill="none" stroke="var(--z1)" stroke-width="1.25"/>
+            <text class="exk-region-label" x="320" y="412" text-anchor="middle" style="font-size:8.5px;">PUMP SEAL · Z1</text>
+            <circle class="exk-marker" cx="356" cy="437" r="10"/>
+            <text class="exk-region-num" x="356" y="441">4</text>
+          </g>
+
+          <!-- ── Region 5 — Pump skid surround (Zone 2) ── -->
+          <g class="exk-region" tabindex="0" role="button" data-id="r5" aria-label="Region 5: pump skid surround, Zone 2">
+            <rect class="exk-region-fill" x="270" y="408" width="160" height="84" fill="var(--z2)" fill-opacity="0.30" rx="2"/>
+            <rect class="exk-region-stroke" x="270" y="408" width="160" height="84" fill="none" stroke="var(--z2)" stroke-width="1" stroke-dasharray="3 3" rx="2"/>
+            <text class="exk-region-label" x="278" y="422" style="font-size:8.5px;">SKID SURROUND · Z2</text>
+            <circle class="exk-marker" cx="416" cy="420" r="10"/>
+            <text class="exk-region-num" x="416" y="424">5</text>
+          </g>
+
+          <!-- ── Loading bay ── -->
+          <g>
+            <line class="exk-skel" x1="500" y1="460" x2="640" y2="460"/>
+            <line class="exk-skel" x1="640" y1="460" x2="640" y2="370"/>
+            <path class="exk-skel" d="M600 370 q40 -10 80 0"/>
+            <line class="exk-skel" x1="640" y1="370" x2="640" y2="345"/>
+            <circle class="exk-skel-fill" cx="640" cy="345" r="6"/>
+            <line class="exk-skel" x1="640" y1="339" x2="640" y2="320"/>
+            <!-- truck -->
+            <rect class="exk-skel-fill" x="540" y="430" width="220" height="55"/>
+            <rect class="exk-skel" x="555" y="442" width="180" height="35" rx="3"/>
+            <circle class="exk-skel-fill" cx="575" cy="495" r="14"/>
+            <circle class="exk-skel-fill" cx="730" cy="495" r="14"/>
+            <text class="exk-skel-text" x="650" y="515" text-anchor="middle" data-i="g_truck">Road tanker · top loading</text>
+          </g>
+          <!-- ── Region 6 — Top hatch open (Zone 1) ── -->
+          <g class="exk-region" tabindex="0" role="button" data-id="r6" aria-label="Region 6: open top-loading hatch, Zone 1">
+            <circle class="exk-region-fill" cx="640" cy="430" r="20" fill="var(--z1)" fill-opacity="0.45"/>
+            <circle class="exk-region-stroke" cx="640" cy="430" r="20" fill="none" stroke="var(--z1)" stroke-width="1.25"/>
+            <text class="exk-region-label" x="640" y="395" text-anchor="middle" style="font-size:8.5px;">OPEN HATCH · Z1</text>
+            <circle class="exk-marker" cx="668" cy="412" r="10"/>
+            <text class="exk-region-num" x="668" y="416">6</text>
+          </g>
+          <!-- ── Region 7 — Bay envelope (Zone 2) ── -->
+          <g class="exk-region" tabindex="0" role="button" data-id="r7" aria-label="Region 7: loading-bay envelope, Zone 2">
+            <rect class="exk-region-fill" x="500" y="380" width="280" height="80" fill="var(--z2)" fill-opacity="0.20" rx="2"/>
+            <rect class="exk-region-stroke" x="500" y="380" width="280" height="80" fill="none" stroke="var(--z2)" stroke-width="1" stroke-dasharray="3 3" rx="2"/>
+            <text class="exk-region-label" x="508" y="394" style="font-size:8.5px;">BAY ENVELOPE · Z2</text>
+            <circle class="exk-marker" cx="765" cy="392" r="10"/>
+            <text class="exk-region-num" x="765" y="396">7</text>
+          </g>
+
+          <!-- ── Silo for dust ── -->
+          <g>
+            <rect class="exk-skel-fill" x="440" y="170" width="60" height="200"/>
+            <path class="exk-skel" d="M440 370 L470 410 L500 370"/>
+            <line class="exk-skel" x1="470" y1="170" x2="470" y2="120"/>
+            <text class="exk-skel-text" x="470" y="115" text-anchor="middle" data-i="g_silo">Solids silo · additive</text>
+          </g>
+          <!-- ── Region 8 — Silo interior (Zone 20) ── -->
+          <g class="exk-region" tabindex="0" role="button" data-id="r8" aria-label="Region 8: silo interior, Zone 20">
+            <rect class="exk-region-fill" x="446" y="190" width="48" height="170" fill="var(--z20)" fill-opacity="0.42"/>
+            <rect class="exk-region-stroke" x="446" y="190" width="48" height="170" fill="none" stroke="var(--z20)" stroke-width="1.25" stroke-dasharray="4 3"/>
+            <text class="exk-region-label" x="470" y="215" text-anchor="middle" style="font-size:8.5px;">DUST CLOUD</text>
+            <text class="exk-region-label" x="470" y="227" text-anchor="middle" style="font-size:8.5px;fill:var(--ink-soft);">Z20</text>
+            <circle class="exk-marker" cx="500" cy="200" r="10"/>
+            <text class="exk-region-num" x="500" y="204">8</text>
+          </g>
+
+          <!-- compass / scale -->
+          <g transform="translate(40,40)">
+            <text class="exk-skel-text" x="0" y="0" data-i="g_north">N ↑</text>
+            <text class="exk-skel-text" x="0" y="14" data-i="g_wind">Prevailing wind →</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ── Detail pane ─────────────────────────────────────────── -->
+    <aside class="exk-panel" id="exk-panel" aria-label="Region detail">
+      <!-- populated by JS; default state below as fallback -->
+    </aside>
+  </div>
+
+  <!-- ═══ FOOTNOTE STRIP ═════════════════════════════════════════ -->
+  <div class="exk-foot">
+    <span><kbd>Tab</kbd> <span data-i="kbd_tab">move between regions</span></span>
+    <span><kbd>Enter</kbd> / <kbd>Space</kbd> <span data-i="kbd_enter">select</span></span>
+    <span><kbd>Esc</kbd> <span data-i="kbd_esc">reset</span></span>
+    <span class="exk-spacer"></span>
+    <button class="exk-textbtn" type="button" id="exk-lang" aria-label="Switch language">EN ⇄ NB</button>
+    <button class="exk-textbtn" type="button" id="exk-density" aria-label="Toggle density">⇿ <span data-i="density">Density</span></button>
+    <button class="exk-textbtn" type="button" id="exk-motion" aria-label="Toggle reduced motion" aria-pressed="false">◐ <span data-i="motion">Motion</span></button>
+  </div>
+
+  <div class="exk-sr" id="exk-live" aria-live="polite" aria-atomic="true"></div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // ─── Localised strings (EN + NB) ───────────────────────────────
+  const STRINGS = {
+    en: {
+      eyebrow: "Interactive · Hazardous-area classification",
+      title: "Zone Classification — ",
+      title_em: "a plant explorer",
+      meta_standard: "IEC 60079-10-1 · -10-2",
+      meta_scope: "Gas + dust",
+      meta_hint: "Click any region · Esc to reset",
+      filter_show: "Show",
+      filter_gas: "Gas zones",
+      filter_dust: "Dust zones",
+      filter_epl: "Highlight EPL",
+      epl_all: "All",
+      reset: "↺ Reset",
+      canvas_label: " · loading bay, tank farm, vapour return",
+      canvas_label_b: "Fuel terminal",
+      canvas_state: "Steady-state operation",
+      svg_title: "Schematic of a fuel-storage and loading terminal with eight hazardous-area regions.",
+      g_grade: "Grade level",
+      g_tank: "Storage tank · fixed roof",
+      g_vent: "Vent",
+      g_bund: "Bund",
+      g_pump: "Transfer pump skid",
+      g_truck: "Road tanker · top loading",
+      g_silo: "Solids silo · additive",
+      g_north: "N ↑",
+      g_wind: "Prevailing wind →",
+      kbd_tab: "move between regions",
+      kbd_enter: "select",
+      kbd_esc: "reset",
+      density: "Density",
+      motion: "Motion",
+      // Default panel
+      def_eyebrow: "Orientation",
+      def_title: "Eight regions, three zones each in gas and dust.",
+      def_lede: "Hazardous-area classification answers a single question for every cubic metre of plant: how often is an explosive atmosphere present? Click any numbered region to see how the answer is reached — and what it demands of the equipment installed there.",
+      legend_title: "Zone semantics",
+      legend_desc_z0:  "Continuously present, or for long periods.",
+      legend_desc_z1:  "Likely in normal operation, occasionally.",
+      legend_desc_z2:  "Not likely in normal operation; if it occurs, briefly.",
+      legend_desc_safe:"No explosive atmosphere expected.",
+      howto_title: "How to read this",
+      howto_1: "Each colour answers “how often,” not “how dangerous.” Severity follows from frequency.",
+      howto_2: "Region size is illustrative. Real extents come from release rate, ventilation and grade per IEC 60079-10-1.",
+      howto_3: "Use the filters above to isolate gas vs. dust, or to see which regions need EPL Ga, Gb, or Gc.",
+      // Active panel labels
+      act_definition: "Definition",
+      act_why:        "Why here",
+      act_epl:        "Equipment",
+      act_typical:    "Typical fixes",
+      act_clauseref_iec: "Per IEC 60079-10-1 / -10-2",
+      act_clauseref_caveat: "Extents are scenario-specific.",
+      act_close: "Reset",
+      // Severity banner phrases
+      sev_continuous: "Continuous presence — assume the atmosphere is always there.",
+      sev_likely:     "Likely in normal operation — design for the expected, not the exceptional.",
+      sev_occasional: "Occasional and brief — abnormal release, short duration.",
+      // Misc
+      ann_selected: (n) => `Region ${n} selected.`,
+      ann_reset: "Selection cleared.",
+    },
+    nb: {
+      eyebrow: "Interaktiv · Klassifisering av Ex-områder",
+      title: "Soneklassifisering — ",
+      title_em: "en anleggsutforsker",
+      meta_standard: "IEC 60079-10-1 · -10-2",
+      meta_scope: "Gass + støv",
+      meta_hint: "Klikk en sone · Esc for å nullstille",
+      filter_show: "Vis",
+      filter_gas: "Gassoner",
+      filter_dust: "Støvsoner",
+      filter_epl: "Uthev EPL",
+      epl_all: "Alle",
+      reset: "↺ Nullstill",
+      canvas_label: " · lasterampe, tankgård, gjenvinning",
+      canvas_label_b: "Drivstoffanlegg",
+      canvas_state: "Stabil drift",
+      svg_title: "Skjematisk fremstilling av et drivstoffterminalanlegg med åtte Ex-soner.",
+      g_grade: "Bakkenivå",
+      g_tank: "Lagringstank · fast tak",
+      g_vent: "Avlufting",
+      g_bund: "Oppsamling",
+      g_pump: "Pumpeskid",
+      g_truck: "Tankbil · topplasting",
+      g_silo: "Faststoffsilo · tilsetning",
+      g_north: "N ↑",
+      g_wind: "Fremherskende vind →",
+      kbd_tab: "bytt mellom soner",
+      kbd_enter: "velg",
+      kbd_esc: "nullstill",
+      density: "Tetthet",
+      motion: "Bevegelse",
+      def_eyebrow: "Orientering",
+      def_title: "Åtte soner, tre nivåer for både gass og støv.",
+      def_lede: "Ex-klassifisering svarer på ett spørsmål for hver kubikkmeter av anlegget: hvor ofte er en eksplosiv atmosfære til stede? Klikk en nummerert sone for å se hvordan svaret beregnes — og hvilke krav det stiller til utstyret.",
+      legend_title: "Soneoversikt",
+      legend_desc_z0:  "Tilstede kontinuerlig, eller over lange perioder.",
+      legend_desc_z1:  "Sannsynlig i normal drift, av og til.",
+      legend_desc_z2:  "Lite sannsynlig i normal drift; kort varighet hvis den oppstår.",
+      legend_desc_safe:"Ingen eksplosiv atmosfære forventet.",
+      howto_title: "Slik leses figuren",
+      howto_1: "Fargen svarer på «hvor ofte», ikke «hvor farlig». Alvoret følger av hyppigheten.",
+      howto_2: "Soneutstrekning er illustrativ. Reelle grenser bestemmes av utslippsrate, ventilasjon og grad iht. IEC 60079-10-1.",
+      howto_3: "Bruk filtrene over for å skille gass og støv, eller se hvilke soner som krever EPL Ga, Gb eller Gc.",
+      act_definition: "Definisjon",
+      act_why:        "Hvorfor her",
+      act_epl:        "Utstyr",
+      act_typical:    "Typiske tiltak",
+      act_clauseref_iec: "Per IEC 60079-10-1 / -10-2",
+      act_clauseref_caveat: "Utstrekning er scenarioavhengig.",
+      act_close: "Nullstill",
+      sev_continuous: "Kontinuerlig tilstedeværelse — anta at atmosfæren alltid er der.",
+      sev_likely:     "Sannsynlig i normal drift — dimensjoner for det forventede.",
+      sev_occasional: "Sjelden og kortvarig — unormalt utslipp, kort varighet.",
+      ann_selected: (n) => `Sone ${n} valgt.`,
+      ann_reset: "Valg nullstilt.",
+    }
+  };
+
+  // ─── Region data ───────────────────────────────────────────────
+  // Translatable fields are functions (lang)=>string so we can rebuild
+  // the active panel on language switch without losing structure.
+  const REGIONS = [
+    {
+      id: "r1", num: 1, kind: "gas", zone: "0", epl: "Ga", color: "var(--z0)",
+      en: {
+        title: "Tank vapour space",
+        sub:   "Inside a fixed-roof storage tank, above the liquid surface.",
+        definition: "An explosive atmosphere is present continuously, or for long periods.",
+        why: "The vapour space sits over volatile liquid at all times in normal operation. Even when the tank is filling or static, hydrocarbon vapour is in concentration above the lower explosive limit for most of the year.",
+        epl: "Ga · the highest equipment protection level. Two independent faults must not produce ignition.",
+        typical: "Internal floating roofs reduce vapour volume; level instruments must be Ex ia (intrinsically safe) and certified Ga.",
+      },
+      nb: {
+        title: "Damprom i tank",
+        sub:   "Inne i en lagringstank med fast tak, over væskeoverflaten.",
+        definition: "Eksplosiv atmosfære er til stede kontinuerlig eller i lange perioder.",
+        why: "Damprommet ligger over flyktig væske til enhver tid i normal drift. Også ved fylling eller statisk tilstand er hydrokarbondamp over nedre eksplosjonsgrense store deler av året.",
+        epl: "Ga · høyeste beskyttelsesnivå. To uavhengige feil må ikke føre til antennelse.",
+        typical: "Indre flytetak reduserer dampvolumet; nivåmålere må være Ex ia (egensikre) og sertifisert Ga.",
+      }
+    },
+    {
+      id: "r2", num: 2, kind: "gas", zone: "1", epl: "Gb", color: "var(--z1)",
+      en: {
+        title: "Tank vent outlet",
+        sub:   "Pressure/vacuum vent above the tank roof — the breathing point.",
+        definition: "An explosive atmosphere is likely to occur in normal operation, occasionally.",
+        why: "The vent breathes whenever the tank fills, empties, or warms. Each breath releases vapour at the LEL or above. Around it, a Zone 1 cylinder; further out, a Zone 2 sphere where dilution by wind dominates.",
+        epl: "Gb · suitable for Zone 1. Faults expected during operation must not ignite.",
+        typical: "Flame arrestors on vent lines; lighting fixtures within the envelope must be certified Ex db / Ex eb.",
+      },
+      nb: {
+        title: "Avluftingsutløp",
+        sub:   "Trykk-/vakuumventil over tanktaket — pustepunktet.",
+        definition: "Eksplosiv atmosfære er sannsynlig i normal drift, av og til.",
+        why: "Ventilen «puster» ved fylling, tømming eller oppvarming. Hvert pust slipper damp på eller over LEL. Rundt utløpet ligger en Sone 1-sylinder; lengre ut en Sone 2-sfære der vinden dominerer.",
+        epl: "Gb · egnet for Sone 1. Feil i normal drift skal ikke gi antennelse.",
+        typical: "Flammesperre i avluftingen; armatur innenfor sonen må være Ex db / Ex eb-sertifisert.",
+      }
+    },
+    {
+      id: "r3", num: 3, kind: "gas", zone: "2", epl: "Gc", color: "var(--z2)",
+      en: {
+        title: "Bund interior",
+        sub:   "Containment around the tank base — open to atmosphere, holds spills.",
+        definition: "An explosive atmosphere is not likely in normal operation; if it occurs, only briefly.",
+        why: "An empty bund is non-hazardous. After a release, vapour pools inside the walls before dispersing. The classification covers that abnormal-but-credible event, not the routine state.",
+        epl: "Gc · suitable for Zone 2. Equipment must not ignite under normal operating conditions.",
+        typical: "Cable glands sealed; lighting may be Ex nA where ventilation is adequate; no permanent ignition sources at low level.",
+      },
+      nb: {
+        title: "Oppsamlingskar",
+        sub:   "Tett vegg rundt tankfundamentet — åpen til atmosfæren, holder lekkasjer.",
+        definition: "Eksplosiv atmosfære er lite sannsynlig i normal drift; opptrer den, så kortvarig.",
+        why: "Et tomt oppsamlingskar er ufarlig. Etter et utslipp samler damp seg innenfor veggen før den fortynnes. Klassifiseringen dekker dette unormale, men troverdige scenarioet.",
+        epl: "Gc · egnet for Sone 2. Utstyr skal ikke kunne antenne under normal drift.",
+        typical: "Tette kabelinnføringer; armatur kan være Ex nA ved tilstrekkelig ventilasjon; ingen permanente tennkilder lavt.",
+      }
+    },
+    {
+      id: "r4", num: 4, kind: "gas", zone: "1", epl: "Gb", color: "var(--z1)",
+      en: {
+        title: "Pump seal envelope",
+        sub:   "The volume immediately around a transfer-pump mechanical seal.",
+        definition: "An explosive atmosphere is likely to occur in normal operation, occasionally.",
+        why: "Mechanical seals leak — that is what they do. The expected leak rate puts the immediate envelope at Zone 1; the wider skid surround sits at Zone 2 because dilution drops concentration below LEL within metres.",
+        epl: "Gb · the seal area itself.",
+        typical: "Seal flush plans (API 682) reduce release; junction boxes within the envelope are Ex e or Ex d, certified Gb.",
+      },
+      nb: {
+        title: "Pumpetetningssone",
+        sub:   "Volumet umiddelbart rundt en mekanisk pumpetetning.",
+        definition: "Eksplosiv atmosfære er sannsynlig i normal drift, av og til.",
+        why: "Mekaniske tetninger lekker — det er deres natur. Forventet lekkasje gir Sone 1 i nærsonen; skidens omgivelse er Sone 2 fordi konsentrasjonen faller under LEL innen få meter.",
+        epl: "Gb · selve tetningsområdet.",
+        typical: "Skylleplaner (API 682) reduserer utslipp; koblingsbokser i sonen er Ex e eller Ex d, sertifisert Gb.",
+      }
+    },
+    {
+      id: "r5", num: 5, kind: "gas", zone: "2", epl: "Gc", color: "var(--z2)",
+      en: {
+        title: "Pump skid surround",
+        sub:   "The general area around the pump within the open process structure.",
+        definition: "An explosive atmosphere is not likely in normal operation; if it occurs, only briefly.",
+        why: "Outdoor open structures are well-ventilated. Releases dilute below LEL within a few metres of the source. Classification falls one zone tier as you step away from the seal.",
+        epl: "Gc · suitable for Zone 2.",
+        typical: "Standard industrial enclosures with Ex nA marking; cable trays continuous; bonded earthing throughout.",
+      },
+      nb: {
+        title: "Skidens omgivelse",
+        sub:   "Generelt området rundt pumpa innenfor åpen prosesstruktur.",
+        definition: "Eksplosiv atmosfære er lite sannsynlig i normal drift; opptrer den, så kortvarig.",
+        why: "Åpne uteanlegg er godt ventilert. Utslipp fortynnes under LEL innen noen meter fra kilden. Klassifiseringen faller én sone idet man beveger seg vekk fra tetningen.",
+        epl: "Gc · egnet for Sone 2.",
+        typical: "Standard industrikapslinger med Ex nA-merking; gjennomgående kabelbaner; bondet jording overalt.",
+      }
+    },
+    {
+      id: "r6", num: 6, kind: "gas", zone: "1", epl: "Gb", color: "var(--z1)",
+      en: {
+        title: "Open top-loading hatch",
+        sub:   "The open hatch on the road tanker during product transfer.",
+        definition: "An explosive atmosphere is likely to occur in normal operation, occasionally.",
+        why: "Each filling cycle saturates the headspace and pushes vapour out of the open hatch. The hatch is open by procedure, not by failure — that is why it is Zone 1, not Zone 2.",
+        epl: "Gb · including the loading-arm body itself.",
+        typical: "Vapour-recovery arms collapse the zone to a small Zone 2; otherwise, no ignition sources within 1.5 m radius of the open hatch during transfer.",
+      },
+      nb: {
+        title: "Åpen topplukke",
+        sub:   "Tankbilens lukke åpen under produktoverføring.",
+        definition: "Eksplosiv atmosfære er sannsynlig i normal drift, av og til.",
+        why: "Hver fylling metter dampvolumet og presser damp ut av lukken. Lukken er åpen etter prosedyre, ikke ved feil — derfor Sone 1, ikke Sone 2.",
+        epl: "Gb · inkludert selve lastearmen.",
+        typical: "Damprekupererende armer reduserer sonen til et lite Sone 2-rom; ellers ingen tennkilder innen 1,5 m radius under overføring.",
+      }
+    },
+    {
+      id: "r7", num: 7, kind: "gas", zone: "2", epl: "Gc", color: "var(--z2)",
+      en: {
+        title: "Loading-bay envelope",
+        sub:   "The volume above and around the road tanker during transfer.",
+        definition: "An explosive atmosphere is not likely in normal operation; if it occurs, only briefly.",
+        why: "Outside the immediate hatch envelope, wind disperses vapour rapidly. The bay envelope catches the abnormal case: a hose disconnection, a quick spill, an over-fill alarm.",
+        epl: "Gc.",
+        typical: "Lighting and CCTV within the canopy must be Ex nA / Ex tc; truck earthing-and-permissive interlocks before pump start.",
+      },
+      nb: {
+        title: "Lastesonens omslutning",
+        sub:   "Volumet over og rundt tankbilen under overføring.",
+        definition: "Eksplosiv atmosfære er lite sannsynlig i normal drift; opptrer den, så kortvarig.",
+        why: "Utenfor lukens nærsone fortynner vinden damp raskt. Bay-volumet dekker det unormale: slangebrudd, raskt søl, overfyllingsalarm.",
+        epl: "Gc.",
+        typical: "Belysning og CCTV under taket må være Ex nA / Ex tc; jordingslås på bilen som tillatelse før pumpestart.",
+      }
+    },
+    {
+      id: "r8", num: 8, kind: "dust", zone: "20", epl: "Da", color: "var(--z20)",
+      en: {
+        title: "Silo dust cloud",
+        sub:   "Inside the silo body during charging and gravity discharge.",
+        definition: "A combustible dust cloud is present continuously, or for long periods.",
+        why: "Charging produces airborne dust above MEC for the duration of the operation. Even between batches, residual settling re-aerosolises with vibration. Per IEC 60079-10-2, the silo interior is Zone 20.",
+        epl: "Da · for combustible dust. Exterior surfaces around openings drop to Zone 21 / 22.",
+        typical: "Level instruments certified Ex tD or Ex iaD; explosion-relief panels sized per EN 14491; no internal lighting.",
+      },
+      nb: {
+        title: "Støvsky i silo",
+        sub:   "Inne i siloen under påfylling og uttak.",
+        definition: "En brennbar støvsky er til stede kontinuerlig eller i lange perioder.",
+        why: "Påfylling skaper luftbåret støv over MEC under hele operasjonen. Mellom partier virvles avsatt støv opp igjen ved vibrasjon. Iht. IEC 60079-10-2 er siloens innside Sone 20.",
+        epl: "Da · for brennbart støv. Utvendig rundt åpninger faller til Sone 21 / 22.",
+        typical: "Nivåmålere sertifisert Ex tD eller Ex iaD; eksplosjonsventiler dimensjonert iht. EN 14491; ingen innvendig belysning.",
+      }
+    }
+  ];
+
+  // ─── DOM helpers ───────────────────────────────────────────────
+  const root  = document.getElementById('exk-root');
+  const panel = document.getElementById('exk-panel');
+  const live  = document.getElementById('exk-live');
+  const $$ = (sel, ctx) => Array.from((ctx||root).querySelectorAll(sel));
+  const $  = (sel, ctx) => (ctx||root).querySelector(sel);
+
+  let state = {
+    lang: 'en',
+    selected: null,        // region id
+    filters: { gas: true, dust: true, epl: 'all' },
+    density: 'comfortable',
+    reducedMotion: false
+  };
+
+  const t = (key) => STRINGS[state.lang][key];
+
+  // ─── Render: default panel (orientation) ───────────────────────
+  function renderDefaultPanel() {
+    panel.classList.remove('exk-active');
+    panel.classList.add('exk-default');
+    panel.innerHTML = '';
+    const html = `
+      <p class="exk-panel-eyebrow">${t('def_eyebrow')}</p>
+      <h2>${t('def_title')}</h2>
+      <p>${t('def_lede')}</p>
+
+      <div class="exk-legend" aria-label="${t('legend_title')}">
+        <div class="exk-legend-row">
+          <span class="exk-legend-swatch" style="background:var(--z0)"></span>
+          <span class="exk-legend-key">Z0 / Z20</span>
+          <span class="exk-legend-desc">${t('legend_desc_z0')}</span>
+        </div>
+        <div class="exk-legend-row">
+          <span class="exk-legend-swatch" style="background:var(--z1)"></span>
+          <span class="exk-legend-key">Z1 / Z21</span>
+          <span class="exk-legend-desc">${t('legend_desc_z1')}</span>
+        </div>
+        <div class="exk-legend-row">
+          <span class="exk-legend-swatch" style="background:var(--z2)"></span>
+          <span class="exk-legend-key">Z2 / Z22</span>
+          <span class="exk-legend-desc">${t('legend_desc_z2')}</span>
+        </div>
+        <div class="exk-legend-row">
+          <span class="exk-legend-swatch" style="background:var(--paper-2);border-color:var(--rule);"></span>
+          <span class="exk-legend-key">Safe</span>
+          <span class="exk-legend-desc">${t('legend_desc_safe')}</span>
+        </div>
+      </div>
+
+      <div class="exk-howto">
+        <div class="exk-howto-step"><span class="exk-howto-num">1</span><span>${t('howto_1')}</span></div>
+        <div class="exk-howto-step"><span class="exk-howto-num">2</span><span>${t('howto_2')}</span></div>
+        <div class="exk-howto-step"><span class="exk-howto-num">3</span><span>${t('howto_3')}</span></div>
+      </div>
+    `;
+    panel.innerHTML = html;
+  }
+
+  // ─── Render: active panel ──────────────────────────────────────
+  function renderActivePanel(region) {
+    panel.classList.remove('exk-default');
+    panel.classList.add('exk-active');
+    const L = region[state.lang];
+    const zoneLabel = (region.kind === 'dust' ? 'Z' : 'Z') + region.zone;
+    const sevKey = (region.zone === '0' || region.zone === '20') ? 'sev_continuous'
+                 : (region.zone === '1' || region.zone === '21') ? 'sev_likely'
+                 : 'sev_occasional';
+
+    panel.innerHTML = `
+      <div class="exk-panel-head">
+        <div>
+          <div class="exk-zone-tag">
+            <span class="swatch" style="background:${region.color}"></span>
+            <span>Region ${region.num} · ${zoneLabel} · ${region.kind === 'dust' ? 'Dust' : 'Gas'}</span>
+          </div>
+          <h2>${L.title}</h2>
+          <p class="sub">${L.sub}</p>
+        </div>
+        <button class="exk-iconbtn" type="button" id="exk-close" aria-label="${t('act_close')}">
+          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+            <path d="M3 3 L11 11 M11 3 L3 11" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="exk-zone-banner">
+        <strong>${zoneLabel}.</strong> ${t(sevKey)}
+      </div>
+
+      <div class="exk-defs">
+        <div class="exk-def">
+          <span class="exk-def-label">${t('act_definition')}</span>
+          <span class="exk-def-value">${L.definition}</span>
+        </div>
+        <div class="exk-def">
+          <span class="exk-def-label">${t('act_why')}</span>
+          <span class="exk-def-value">${L.why}</span>
+        </div>
+        <div class="exk-def">
+          <span class="exk-def-label">${t('act_epl')}</span>
+          <span class="exk-def-value"><code>EPL ${region.epl}</code> · ${L.epl}</span>
+        </div>
+        <div class="exk-def">
+          <span class="exk-def-label">${t('act_typical')}</span>
+          <span class="exk-def-value"><em>${L.typical}</em></span>
+        </div>
+      </div>
+
+      <div class="exk-clauseref">
+        <b>${t('act_clauseref_iec')}</b>
+        <span>${t('act_clauseref_caveat')}</span>
+      </div>
+    `;
+    $('#exk-close', panel).addEventListener('click', resetSelection);
+    live.textContent = t('ann_selected')(region.num);
+  }
+
+  // ─── Selection ─────────────────────────────────────────────────
+  function selectRegion(id) {
+    const region = REGIONS.find(r => r.id === id);
+    if (!region) return;
+    state.selected = id;
+    root.setAttribute('data-selected', id);
+    $$('.exk-region').forEach(g => {
+      g.setAttribute('data-active', g.dataset.id === id ? 'true' : 'false');
+      g.setAttribute('aria-pressed', g.dataset.id === id ? 'true' : 'false');
+    });
+    renderActivePanel(region);
+  }
+
+  function resetSelection() {
+    state.selected = null;
+    root.removeAttribute('data-selected');
+    $$('.exk-region').forEach(g => {
+      g.removeAttribute('data-active');
+      g.removeAttribute('aria-pressed');
+    });
+    renderDefaultPanel();
+    live.textContent = t('ann_reset');
+  }
+
+  // ─── Filters ───────────────────────────────────────────────────
+  function applyFilters() {
+    REGIONS.forEach(r => {
+      const g = $(`.exk-region[data-id="${r.id}"]`);
+      if (!g) return;
+      const kindAllowed = (r.kind === 'gas' && state.filters.gas) ||
+                          (r.kind === 'dust' && state.filters.dust);
+      let eplAllowed = true;
+      if (state.filters.epl !== 'all') {
+        eplAllowed = (r.epl === state.filters.epl);
+      }
+      const visible = kindAllowed;
+      const highlightOnly = state.filters.epl !== 'all';
+      const filtered = !visible || (highlightOnly && !eplAllowed);
+      if (filtered) {
+        g.setAttribute('data-filtered', 'true');
+        g.setAttribute('aria-hidden', 'true');
+        g.setAttribute('tabindex', '-1');
+      } else {
+        g.removeAttribute('data-filtered');
+        g.removeAttribute('aria-hidden');
+        g.setAttribute('tabindex', '0');
+      }
+    });
+
+    // if currently-selected region is now filtered, reset
+    if (state.selected) {
+      const sel = $(`.exk-region[data-id="${state.selected}"]`);
+      if (sel && sel.getAttribute('data-filtered') === 'true') resetSelection();
+    }
+  }
+
+  // ─── Wire up region clicks + keyboard ──────────────────────────
+  $$('.exk-region').forEach(g => {
+    g.addEventListener('click', () => selectRegion(g.dataset.id));
+    g.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        selectRegion(g.dataset.id);
+      } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        focusNeighbor(g, +1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        focusNeighbor(g, -1);
+      }
+    });
+  });
+
+  function focusNeighbor(currentG, dir) {
+    const all = $$('.exk-region').filter(g => !g.hasAttribute('data-filtered'));
+    const idx = all.indexOf(currentG);
+    if (idx < 0 || all.length === 0) return;
+    const next = all[(idx + dir + all.length) % all.length];
+    next.focus();
+  }
+
+  // ─── Filter chips ──────────────────────────────────────────────
+  $$('.exk-chip[data-filter]').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const key = chip.dataset.filter;
+      const next = !(chip.getAttribute('aria-pressed') === 'true');
+      // disallow turning both off
+      if (!next) {
+        const other = key === 'gas' ? 'dust' : 'gas';
+        if (state.filters[other] === false) return;
+      }
+      state.filters[key] = next;
+      chip.setAttribute('aria-pressed', String(next));
+      applyFilters();
+    });
+  });
+
+  // ─── EPL segmented ─────────────────────────────────────────────
+  $$('.exk-tab[data-epl]').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const v = tab.dataset.epl;
+      state.filters.epl = v;
+      $$('.exk-tab[data-epl]').forEach(t => t.setAttribute('aria-pressed', String(t.dataset.epl === v)));
+      applyFilters();
+    });
+  });
+
+  // ─── Toolbar buttons ───────────────────────────────────────────
+  $('#exk-reset').addEventListener('click', () => {
+    state.filters = { gas: true, dust: true, epl: 'all' };
+    $$('.exk-chip[data-filter]').forEach(c => c.setAttribute('aria-pressed', 'true'));
+    $$('.exk-tab[data-epl]').forEach(t => t.setAttribute('aria-pressed', String(t.dataset.epl === 'all')));
+    applyFilters();
+    resetSelection();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && (state.selected || document.activeElement && root.contains(document.activeElement))) {
+      resetSelection();
+    }
+  });
+
+  // ─── Language switch ──────────────────────────────────────────
+  function applyStrings() {
+    $$('[data-i]').forEach(el => {
+      const k = el.getAttribute('data-i');
+      if (STRINGS[state.lang][k] !== undefined && typeof STRINGS[state.lang][k] === 'string') {
+        el.textContent = STRINGS[state.lang][k];
+      }
+    });
+    root.setAttribute('lang', state.lang);
+    if (state.selected) {
+      const r = REGIONS.find(r => r.id === state.selected);
+      renderActivePanel(r);
+    } else {
+      renderDefaultPanel();
+    }
+  }
+  $('#exk-lang').addEventListener('click', () => {
+    state.lang = state.lang === 'en' ? 'nb' : 'en';
+    $('#exk-lang').textContent = state.lang === 'en' ? 'EN ⇄ NB' : 'NB ⇄ EN';
+    applyStrings();
+  });
+
+  // ─── Density toggle ───────────────────────────────────────────
+  $('#exk-density').addEventListener('click', () => {
+    state.density = state.density === 'comfortable' ? 'compact' : 'comfortable';
+    root.setAttribute('data-density', state.density);
+  });
+
+  // ─── Reduced-motion override ──────────────────────────────────
+  const motionBtn = $('#exk-motion');
+  // seed from prefers-reduced-motion
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  state.reducedMotion = !!prefersReduced;
+  if (state.reducedMotion) {
+    root.setAttribute('data-reduced-motion', 'true');
+    motionBtn.setAttribute('aria-pressed', 'true');
+  }
+  motionBtn.addEventListener('click', () => {
+    state.reducedMotion = !state.reducedMotion;
+    if (state.reducedMotion) root.setAttribute('data-reduced-motion', 'true');
+    else root.removeAttribute('data-reduced-motion');
+    motionBtn.setAttribute('aria-pressed', String(state.reducedMotion));
+  });
+
+  // ─── Init ──────────────────────────────────────────────────────
+  renderDefaultPanel();
+  applyFilters();
+})();
+</script>
+
+</body>
+</html>
