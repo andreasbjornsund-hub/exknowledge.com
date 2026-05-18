@@ -88,13 +88,12 @@
 
     <h2 id="feedback" style="font-size:20px;margin:36px 0 12px;color:var(--accent)">Feedback</h2>
     <p style="font-size:16px;line-height:1.8;color:var(--text-muted);margin-bottom:20px">Found a mistake? Have a suggestion for improvement? We'd appreciate hearing from you.</p>
-    <form id="feedbackForm" style="max-width:600px;display:flex;flex-direction:column;gap:12px;margin-bottom:20px" onsubmit="return sendFeedback(event)">
-      <input type="email" id="fbEmail" placeholder="Your email address" required style="padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-family:inherit;font-size:14px">
-      <textarea id="fbMessage" placeholder="Your feedback — corrections, suggestions, or questions" required style="padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-family:inherit;font-size:14px;min-height:120px;resize:vertical"></textarea>
+    <form action="https://formspree.io/f/xzdwzbbd" method="POST" style="max-width:600px;display:flex;flex-direction:column;gap:12px;margin-bottom:20px">
+      <input type="email" name="email" placeholder="Your email address" required style="padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-family:inherit;font-size:14px">
+      <textarea name="message" placeholder="Your feedback — corrections, suggestions, or questions" required style="padding:12px 16px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-family:inherit;font-size:14px;min-height:120px;resize:vertical"></textarea>
       <button type="submit" style="align-self:flex-start;padding:10px 24px;border-radius:8px;border:none;background:var(--accent);color:#fff;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px"><i class="ph ph-paper-plane-tilt"></i> Send Feedback</button>
     </form>
     <script>
-    function sendFeedback(e){e.preventDefault();var em=document.getElementById("fbEmail").value;var msg=document.getElementById("fbMessage").value;var s=encodeURIComponent("ExKnowledge Feedback");var b=encodeURIComponent("From: "+em+"\n\n"+msg);window.location.href="mailto:apbopenclaw@gmail.com?subject="+s+"&body="+b;return false;}
     </script>
   </div>
 </main>
