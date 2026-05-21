@@ -103,6 +103,42 @@
       <iframe src="/interactives/zone-classification.html" style="width:100%;height:900px;border:0;display:block" title="Zone Classification — Plant Explorer" loading="lazy"></iframe>
     </div>
 
+    <!-- IECEx Certificate Statistics -->
+    <div style="margin-bottom:16px">
+      <h2 style="margin-top:48px;margin-bottom:8px"><i class="ph ph-chart-line-up" style="color:var(--accent)"></i> IECEx Certificate Statistics</h2>
+      <p style="color:var(--text-muted);margin-bottom:24px;font-size:15px">Data from the official IECEx Online Certificate System (OCS), covering all equipment Certificates of Conformity (CoC) issued under the IECEx Certified Equipment Scheme since its inception. Updated May 2026.</p>
+    </div>
+
+    <div style="margin-bottom:40px">
+      <h3 style="font-size:16px;margin-bottom:12px">Certificates Issued Per Year (2003–2025)</h3>
+      <p style="color:var(--text-muted);font-size:14px;margin-bottom:16px">IECEx certification has grown steadily since 2003, with over 79,500 equipment certificates issued to date. The 2020 dip reflects COVID-19 disruption to testing and manufacturing, followed by a strong recovery. 2025 is on track to be the highest year on record.</p>
+      <img src="/images/iecex_certs_by_year.png" alt="IECEx equipment certificates issued per year from 2003 to 2025, showing steady growth from 11 certificates in 2003 to over 7,400 in 2025" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+    </div>
+
+    <div style="margin-bottom:40px">
+      <h3 style="font-size:16px;margin-bottom:12px">Top 15 Certification Bodies (ExCBs)</h3>
+      <p style="color:var(--text-muted);font-size:14px;margin-bottom:16px">85 ExCBs worldwide are approved to issue IECEx certificates. The top 5 alone account for roughly 40% of all certificates issued. CSA Group (code: CP) leads with over 11,600 certificates, followed by Baseefa (UK), SIRA/CSA (UK), Bureau Veritas (France), and UL (USA).</p>
+      <img src="/images/iecex_top_excbs.png" alt="Top 15 IECEx Certification Bodies ranked by total certificates issued, led by CSA Group with over 11,600 certificates" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+    </div>
+
+    <div style="margin-bottom:40px">
+      <h3 style="font-size:16px;margin-bottom:12px">Market Share Over Time — Top 5 ExCBs</h3>
+      <p style="color:var(--text-muted);font-size:14px;margin-bottom:16px">The certification market has become increasingly distributed over time. While the top 5 ExCBs dominated early years, smaller and regional certification bodies have grown their share significantly since 2015.</p>
+      <img src="/images/iecex_excbs_by_year.png" alt="Stacked bar chart showing IECEx certificates by top 5 certification bodies versus all others from 2003 to 2025" style="width:100%;border-radius:8px;border:1px solid var(--border)" loading="lazy">
+    </div>
+
+    <div style="background:var(--surface);border:1px solid var(--border);padding:20px 24px;margin-bottom:56px;border-radius:8px">
+      <h4 style="font-size:14px;margin-bottom:8px;color:var(--text-muted)"><i class="ph ph-info"></i> Sources &amp; Methodology</h4>
+      <ul style="color:var(--text-muted);font-size:13px;margin:0;padding-left:20px;line-height:1.8">
+        <li>Data source: <a href="https://www.iecex-certs.com" style="color:var(--accent)" target="_blank" rel="noopener">IECEx Online Certificate System (OCS)</a> — the official public database operated by the IEC.</li>
+        <li>API endpoint: <code style="font-size:12px">ocs-api.iecex-certs.com/v1</code> — queried May 2026.</li>
+        <li>Scope: Equipment Certificates of Conformity (CoC) only. Test Reports (ExTR) and Quality Assessment Reports (QAR) are excluded.</li>
+        <li>Certificate counts reflect all issues (including reissues/renewals). Status breakdown: 72,262 current, 7,879 cancelled, 1,400 expired, 403 suspended.</li>
+        <li>ExCB list: <a href="https://www.iecex.com/certified-equipment-scheme/contact-a-certification-body/" style="color:var(--accent)" target="_blank" rel="noopener">IECEx Certified Equipment Scheme — Contact a Certification Body</a></li>
+        <li>Years 2014–2015 may be slightly undercounted due to API pagination limits (5,000 results per query).</li>
+      </ul>
+    </div>
+
     <div style="background:var(--accent-bg);border:1px solid var(--accent);padding:24px 28px;margin-bottom:56px;text-align:center">
       <h3 style="color:var(--accent-light);font-size:18px;margin-bottom:8px"><i class="ph ph-plus-circle"></i> More coming</h3>
       <p style="color:var(--text-muted);font-size:14px;margin-bottom:0">Additional interactive visualisations covering protection methods, equipment selection, and marking interpretation are in development.</p>
