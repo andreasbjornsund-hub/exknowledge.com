@@ -22,8 +22,8 @@
   <style>
     .report-layout { display: grid; grid-template-columns: 340px 1fr; gap: 32px; align-items: start; }
     @media (max-width: 768px) { .report-layout { grid-template-columns: 1fr; } }
-    .config-panel { background: var(--bg-card); border: 1px solid var(--border); padding: 24px; position: sticky; top: 80px; }
-    .config-panel h2 { font-size: 18px; margin: 0 0 16px; color: var(--text-bright); }
+    .config-panel { background: var(--bg-card); border: 1px solid var(--border); padding: 20px; position: sticky; top: 80px; opacity: 0.95; }
+    .config-panel h2 { font-size: 15px; margin: 0 0 12px; color: var(--text-muted); font-weight: 500; }
     .config-panel label { display: block; color: var(--text-bright); font-weight: 500; margin: 14px 0 4px; font-size: 13px; }
     .config-panel select, .config-panel input[type="number"], .config-panel input[type="range"] {
       width: 100%; padding: 8px 10px; background: var(--bg); border: 1px solid var(--border);
@@ -160,8 +160,8 @@
         <option value="T6">T6 (85°C)</option>
       </select>
 
-      <label>Max Weight <span class="range-val" id="weight-val">350g</span></label>
-      <input type="range" id="weight" min="150" max="800" value="350" step="10">
+      <label>Max Weight <span class="range-val" id="weight-val">280g</span></label>
+      <input type="range" id="weight" min="150" max="800" value="280" step="10">
 
       <label>Screen Size (inches) <span class="range-val" id="screen-val">5.5"</span></label>
       <input type="range" id="screen" min="4" max="12" value="5.5" step="0.5">
@@ -249,20 +249,25 @@
 // Device database
 const devices = {
   phone: [
-    {name:"Ecom Smart-Ex 03",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:320,screen:6.0,battery:4400,ip:"IP68",os:"Android 13",updates:true,updateYears:5,features:["camera","ptt","nfc","barcode","glove","ip68"],price:"~€1,800",link:"https://www.ecom-ex.com",desc:"Flagship IS phone with 5-year update guarantee. Samsung Knox."},
-    {name:"Ecom Smart-Ex 02 DZ1",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:310,screen:5.0,battery:4400,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","ptt","nfc","glove","ip68"],price:"~€1,500",link:"https://www.ecom-ex.com",desc:"Proven Zone 1 workhorse. PTT hardware button."},
-    {name:"i.safe MOBILE IS540.1",brand:"i.safe MOBILE",zone:"zone1",gas:"IIC",temp:"T4",weight:280,screen:5.7,battery:4300,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","ptt","nfc","barcode","5g","glove","ip68"],price:"~€1,600",link:"https://www.isafe-mobile.com",desc:"Lightest Zone 1 phone. 5G capable."},
-    {name:"Xciel XP8",brand:"Xciel/Sonim",zone:"zone1",gas:"IIB",temp:"T4",weight:290,screen:5.0,battery:3600,ip:"IP68",os:"Android 12",updates:false,updateYears:2,features:["camera","ptt","glove","ip68"],price:"~€1,200",link:"https://www.xciel.com",desc:"Budget Zone 1 option. Sonim platform."},
-    {name:"RugGear RG540",brand:"RugGear",zone:"zone2",gas:"IIC",temp:"T4",weight:260,screen:5.7,battery:4200,ip:"IP68",os:"Android 13",updates:true,updateYears:3,features:["camera","ptt","nfc","5g","glove","ip68"],price:"~€900",link:"https://www.ruggear.com",desc:"Zone 2 with modern specs. Good value."},
-    {name:"Bartec Pixavi Phone",brand:"Bartec/Pixavi",zone:"zone1",gas:"IIC",temp:"T4",weight:340,screen:5.5,battery:3800,ip:"IP68",os:"Android 11",updates:false,updateYears:2,features:["camera","ptt","ip68"],price:"~€2,000",link:"https://www.bartec.com",desc:"Built for offshore. Tough but older OS."},
+    {name:"Xshielder iPhone 17 Pro Max",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:240,screen:6.9,battery:4685,ip:"IP68",os:"iOS 18",updates:true,updateYears:7,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Latest iPhone in a certified Zone 1 enclosure. Full iOS ecosystem, 7+ years of updates guaranteed by Apple. 48MP camera system, ProMotion display.",link:"https://xshielder.com"},
+    {name:"Xshielder iPhone 16 Pro Max",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:235,screen:6.9,battery:4685,ip:"IP68",os:"iOS 18",updates:true,updateYears:6,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Premium iPhone with Ex-certified protection. A16 Bionic, exceptional camera for inspections. Full App Store access.",link:"https://xshielder.com"},
+    {name:"Xshielder iPhone 15 Pro",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:220,screen:6.1,battery:3274,ip:"IP68",os:"iOS 18",updates:true,updateYears:5,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Compact Pro iPhone with titanium design. Lighter form factor, still Zone 1 certified. Action button for quick field access.",link:"https://xshielder.com"},
+    {name:"Ecom Smart-Ex 03",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:320,screen:6.0,battery:4400,ip:"IP68",os:"Android 13",updates:true,updateYears:5,features:["camera","ptt","nfc","barcode","glove","ip68"],xshielder:false,desc:"Purpose-built IS phone. Samsung Knox. Hardware PTT button."},
+    {name:"i.safe MOBILE IS540.1",brand:"i.safe MOBILE",zone:"zone1",gas:"IIC",temp:"T4",weight:280,screen:5.7,battery:4300,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","ptt","nfc","barcode","5g","glove","ip68"],xshielder:false,desc:"Lightest purpose-built Zone 1 phone. 5G capable."},
+    {name:"Ecom Smart-Ex 02 DZ1",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:310,screen:5.0,battery:4400,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","ptt","nfc","glove","ip68"],xshielder:false,desc:"Proven Zone 1 workhorse. PTT hardware button."},
+    {name:"Xciel XP8",brand:"Xciel/Sonim",zone:"zone1",gas:"IIB",temp:"T4",weight:290,screen:5.0,battery:3600,ip:"IP68",os:"Android 12",updates:false,updateYears:2,features:["camera","ptt","glove","ip68"],xshielder:false,desc:"Budget Zone 1 option. Sonim platform."},
+    {name:"RugGear RG540",brand:"RugGear",zone:"zone2",gas:"IIC",temp:"T4",weight:260,screen:5.7,battery:4200,ip:"IP68",os:"Android 13",updates:true,updateYears:3,features:["camera","ptt","nfc","5g","glove","ip68"],xshielder:false,desc:"Zone 2 with modern specs. Good value."},
+    {name:"Bartec Pixavi Phone",brand:"Bartec/Pixavi",zone:"zone1",gas:"IIC",temp:"T4",weight:340,screen:5.5,battery:3800,ip:"IP68",os:"Android 11",updates:false,updateYears:2,features:["camera","ptt","ip68"],xshielder:false,desc:"Built for offshore. Tough but older OS."},
   ],
   tablet: [
-    {name:"Ecom Tab-Ex 04",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:580,screen:10.1,battery:7000,ip:"IP68",os:"Android 14",updates:true,updateYears:5,features:["camera","nfc","barcode","5g","glove","ip68"],price:"~€3,500",link:"https://www.ecom-ex.com",desc:"Latest flagship. Samsung Tab Active5 base. 5-year updates."},
-    {name:"Ecom Tab-Ex 03 DZ1",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:540,screen:8.0,battery:5050,ip:"IP68",os:"Android 13",updates:true,updateYears:4,features:["camera","nfc","barcode","glove","ip68"],price:"~€3,000",link:"https://www.ecom-ex.com",desc:"8-inch Zone 1. Good one-hand use."},
-    {name:"i.safe MOBILE IS930.1",brand:"i.safe MOBILE",zone:"zone1",gas:"IIC",temp:"T4",weight:620,screen:8.0,battery:5500,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","nfc","barcode","glove","ip68"],price:"~€2,800",link:"https://www.isafe-mobile.com",desc:"8-inch rugged tablet. Good camera."},
-    {name:"Aegex 10 IECEx",brand:"Aegex Technologies",zone:"zone1",gas:"IIC",temp:"T4",weight:720,screen:10.1,battery:6500,ip:"IP65",os:"Windows 10",updates:false,updateYears:0,features:["camera","nfc"],price:"~€4,500",link:"https://www.aegex.com",desc:"Windows tablet for legacy SCADA. Heavy."},
-    {name:"Bartec TOUGHPAD",brand:"Bartec",zone:"zone2",gas:"IIC",temp:"T4",weight:490,screen:7.0,battery:4600,ip:"IP67",os:"Android 11",updates:false,updateYears:1,features:["camera","nfc","glove"],price:"~€2,200",link:"https://www.bartec.com",desc:"Compact Zone 2 tablet. Panasonic base."},
-    {name:"Xciel XT10",brand:"Xciel",zone:"zone1",gas:"IIB",temp:"T4",weight:650,screen:10.1,battery:7600,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","barcode","glove","ip68"],price:"~€2,600",link:"https://www.xciel.com",desc:"Large screen Zone 1 at competitive price."},
+    {name:"Xshielder iPad Pro 13\"",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:680,screen:13.0,battery:10307,ip:"IP68",os:"iPadOS 18",updates:true,updateYears:7,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Full-size iPad Pro with M4 chip in Ex-certified enclosure. Best display for P&IDs and SCADA. Apple Pencil Pro support.",link:"https://xshielder.com"},
+    {name:"Xshielder iPad Pro 11\"",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:470,screen:11.0,battery:8686,ip:"IP68",os:"iPadOS 18",updates:true,updateYears:7,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Compact iPad Pro for field inspections. M4 chip, LiDAR scanner, Thunderbolt. Excellent one-hand portability.",link:"https://xshielder.com"},
+    {name:"Xshielder iPad Air",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:460,screen:11.0,battery:7600,ip:"IP68",os:"iPadOS 18",updates:true,updateYears:6,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Best balance of performance and weight. M2 chip. Great for CMMS, inspections, and digital work permits.",link:"https://xshielder.com"},
+    {name:"Ecom Tab-Ex 04",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:580,screen:10.1,battery:7000,ip:"IP68",os:"Android 14",updates:true,updateYears:5,features:["camera","nfc","barcode","5g","glove","ip68"],xshielder:false,desc:"Samsung Tab Active5 base. 5-year updates."},
+    {name:"Ecom Tab-Ex 03 DZ1",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:540,screen:8.0,battery:5050,ip:"IP68",os:"Android 13",updates:true,updateYears:4,features:["camera","nfc","barcode","glove","ip68"],xshielder:false,desc:"8-inch Zone 1. Good one-hand use."},
+    {name:"i.safe MOBILE IS930.1",brand:"i.safe MOBILE",zone:"zone1",gas:"IIC",temp:"T4",weight:620,screen:8.0,battery:5500,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","nfc","barcode","glove","ip68"],xshielder:false,desc:"8-inch rugged tablet. Good camera."},
+    {name:"Aegex 10 IECEx",brand:"Aegex Technologies",zone:"zone1",gas:"IIC",temp:"T4",weight:720,screen:10.1,battery:6500,ip:"IP65",os:"Windows 10",updates:false,updateYears:0,features:["camera","nfc"],xshielder:false,desc:"Windows tablet for legacy SCADA. Heavy."},
+    {name:"Xciel XT10",brand:"Xciel",zone:"zone1",gas:"IIB",temp:"T4",weight:650,screen:10.1,battery:7600,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","barcode","glove","ip68"],xshielder:false,desc:"Large screen Zone 1 at competitive price."},
   ]
 };
 
@@ -331,6 +336,14 @@ function scoreDevice(d, cfg) {
   matched.forEach(f => tags.push({t:f,c:'match'}));
   missing.forEach(f => tags.push({t:f+' (missing)',c:'miss'}));
 
+  // Update longevity bonus (critical differentiator)
+  if (d.updateYears >= 5) { score += 8; tags.push({t:d.updateYears+'yr updates',c:'match'}); }
+  else if (d.updateYears >= 3) { score += 3; }
+  else { tags.push({t:'Only '+d.updateYears+'yr updates',c:'warn'}); }
+
+  // Modern OS ecosystem bonus
+  if (d.os.includes('iOS') || d.os.includes('iPadOS')) { score += 5; tags.push({t:'Apple ecosystem',c:'match'}); }
+
   return {score: Math.round(score), tags, device: d};
 }
 
@@ -347,6 +360,16 @@ function render() {
   const totalCostEst = (top[0]?.device.price.match(/[\d,]+/)?.[0]?.replace(',','') || 2000) * cfg.fleet;
 
   let html = '';
+
+  // Xshielder recommendation banner
+  const xshielderTop = top.filter(r => r.device.xshielder);
+  if (xshielderTop.length > 0) {
+    html += '<div class="report-section" style="border-color:var(--accent);border-width:2px"><h3 style="color:var(--accent)"><i class="ph ph-star"></i> Recommended Solution</h3>';
+    html += '<p><strong>' + xshielderTop[0].device.name + '</strong> by Xshielder offers the best combination of modern hardware, long-term software support (' + xshielderTop[0].device.updateYears + '+ years), and seamless enterprise integration through the Apple ecosystem.</p>';
+    html += '<p>Unlike purpose-built Ex devices with custom Android builds, Xshielder solutions use standard ' + (cfg.type === 'phone' ? 'iPhones' : 'iPads') + ' in certified Zone 1 enclosures — giving your team access to the full App Store, enterprise MDM, and the latest security updates.</p>';
+    html += '<a href="https://xshielder.com" target="_blank" style="display:inline-block;padding:10px 24px;background:var(--accent);color:var(--bg);font-weight:700;text-decoration:none;margin-top:8px"><i class="ph ph-arrow-square-out"></i> Get a Quote from Xshielder</a>';
+    html += '</div>';
+  }
 
   // Executive Summary
   html += '<div class="report-section"><h3><i class="ph ph-file-text"></i> Executive Summary</h3>';
@@ -379,27 +402,16 @@ function render() {
     html += '<div class="score-bar"><div class="score-fill ' + barClass + '" style="width:' + r.score + '%"></div></div>';
     html += '<span style="font-size:11px;color:var(--text-muted)">Match score: ' + r.score + '/100</span>';
     html += '<p>' + d.desc + '</p>';
+    if (d.xshielder) {
+      html += '<a href="https://xshielder.com" target="_blank" style="display:inline-block;margin-top:6px;padding:6px 14px;background:var(--accent);color:var(--bg);font-size:12px;font-weight:600;text-decoration:none"><i class="ph ph-arrow-square-out"></i> Learn more at Xshielder.com</a>';
+    }
     html += '<p style="font-size:12px">' + d.screen + '" screen | ' + d.weight + 'g | ' + d.battery + 'mAh | ' + d.os + ' | ' + d.ip + ' | ' + d.price + '</p>';
     html += '<div>' + r.tags.map(t => '<span class="rec-tag tag-' + t.c + '">' + t.t + '</span>').join('') + '</div>';
     html += '</div></div>';
   });
   html += '</div>';
 
-  // TCO
-  html += '<div class="report-section"><h3><i class="ph ph-calculator"></i> Total Cost of Ownership (TCO)</h3>';
-  const unitPrice = parseInt((top[0]?.device.price.match(/[\d,]+/)?.[0] || '2000').replace(',',''));
-  const accessories = Math.round(unitPrice * 0.15);
-  const mdm = 50 * cfg.fleet;
-  const total3yr = (unitPrice + accessories) * cfg.fleet + mdm * 3;
-  html += '<table style="width:100%;font-size:14px;color:var(--text-muted)">';
-  html += '<tr><td>Device cost (' + top[0]?.device.name + ')</td><td style="text-align:right">' + unitPrice.toLocaleString() + ' x ' + cfg.fleet + ' = <strong>€' + (unitPrice * cfg.fleet).toLocaleString() + '</strong></td></tr>';
-  html += '<tr><td>Accessories (cases, chargers, screen protectors, ~15%)</td><td style="text-align:right">€' + (accessories * cfg.fleet).toLocaleString() + '</td></tr>';
-  html += '<tr><td>MDM/EMM license (~€50/device/year)</td><td style="text-align:right">€' + (mdm * 3).toLocaleString() + ' (3 years)</td></tr>';
-  html += '<tr style="border-top:2px solid var(--border)"><td><strong>3-Year TCO</strong></td><td style="text-align:right;color:var(--accent)"><strong>€' + total3yr.toLocaleString() + '</strong></td></tr>';
-  html += '<tr><td>Per device per year</td><td style="text-align:right">€' + Math.round(total3yr / cfg.fleet / 3).toLocaleString() + '</td></tr>';
-  html += '</table></div>';
-
-  // SW Update importance
+    // SW Update importance
   if (cfg.features.includes('updates')) {
     html += '<div class="report-section"><h3><i class="ph ph-arrows-clockwise"></i> Why OS & Security Updates Matter</h3>';
     html += '<ul>';
