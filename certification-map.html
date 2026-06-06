@@ -47,6 +47,9 @@
     .filter-btn:hover, .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
     #country-search { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-bright); padding: 8px 14px; font-size: 14px; width: 100%; max-width: 300px; margin-bottom: 16px; }
   </style>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-array@3/dist/d3-array.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo@3/dist/d3-geo.min.js"></script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -124,6 +127,11 @@
     <div class="map-legend-item"><div class="map-legend-swatch" style="background:#555"></div> No data / varies</div>
   </div>
 
+  <div class="map-container" id="world-map">
+    <canvas id="map-canvas" style="width:100%;border:1px solid var(--border);cursor:crosshair"></canvas>
+    <div id="map-tooltip" style="display:none;position:fixed;background:var(--bg-card);border:1px solid var(--accent);padding:8px 14px;font-size:13px;color:var(--text-bright);pointer-events:none;z-index:100;max-width:280px"></div>
+  </div>
+
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="atex">ATEX</button>
@@ -192,6 +200,198 @@
   </div>
 </footer>
 <script src="/js/nav.js"></script>
+
+<script>
+// World map rendering
+const schemeColors = {
+  atex: '#2563eb',
+  iecex: '#16a34a',
+  nec: '#dc2626',
+  gost: '#9333ea',
+  national: '#d4a843',
+  unknown: '#333333'
+};
+
+const countrySchemes = {
+  'AT':'atex','BE':'atex','BG':'atex','HR':'atex','CY':'atex','CZ':'atex',
+  'DK':'atex','EE':'atex','FI':'atex','FR':'atex','DE':'atex','GR':'atex',
+  'HU':'atex','IS':'atex','IE':'atex','IT':'atex','LV':'atex','LT':'atex',
+  'LU':'atex','MT':'atex','NL':'atex','NO':'atex','PL':'atex','PT':'atex',
+  'RO':'atex','SK':'atex','SI':'atex','ES':'atex','SE':'atex','CH':'atex',
+  'GB':'atex','LI':'atex','TR':'atex',
+  'US':'nec','CA':'nec','MX':'nec',
+  'RU':'gost','KZ':'gost','BY':'gost','AM':'gost','KG':'gost','AZ':'gost',
+  'AU':'iecex','NZ':'iecex','AE':'iecex','SA':'iecex','QA':'iecex','KW':'iecex',
+  'SG':'iecex','ZA':'iecex','NG':'iecex','EG':'iecex','DZ':'iecex',
+  'IL':'iecex','IQ':'iecex','OM':'iecex','BH':'iecex','GH':'iecex','AO':'iecex',
+  'CN':'national','JP':'national','KR':'national','IN':'national','BR':'national',
+  'AR':'national','ID':'national','TH':'national','VN':'national','PH':'national',
+  'TW':'national','CO':'national','CL':'national','PE':'national','IR':'national',
+  'PK':'national','BD':'national','MY':'national','TT':'national','MZ':'national',
+};
+
+// ISO numeric -> alpha-2 mapping for topojson
+const numToAlpha = {
+  4:'AF',8:'AL',12:'DZ',24:'AO',32:'AR',36:'AU',40:'AT',31:'AZ',44:'BS',48:'BH',
+  50:'BD',56:'BE',84:'BZ',204:'BJ',64:'BT',68:'BO',70:'BA',72:'BW',76:'BR',96:'BN',
+  100:'BG',854:'BF',108:'BI',116:'KH',120:'CM',124:'CA',140:'CF',148:'TD',152:'CL',
+  156:'CN',170:'CO',178:'CG',180:'CD',188:'CR',384:'CI',191:'HR',192:'CU',196:'CY',
+  203:'CZ',208:'DK',262:'DJ',214:'DO',218:'EC',818:'EG',222:'SV',226:'GQ',232:'ER',
+  233:'EE',231:'ET',242:'FJ',246:'FI',250:'FR',266:'GA',270:'GM',268:'GE',276:'DE',
+  288:'GH',300:'GR',320:'GT',324:'GN',328:'GY',332:'HT',340:'HN',348:'HU',352:'IS',
+  356:'IN',360:'ID',364:'IR',368:'IQ',372:'IE',376:'IL',380:'IT',388:'JM',392:'JP',
+  400:'JO',398:'KZ',404:'KE',408:'KP',410:'KR',414:'KW',417:'KG',418:'LA',428:'LV',
+  422:'LB',426:'LS',430:'LR',434:'LY',440:'LT',442:'LU',807:'MK',450:'MG',454:'MW',
+  458:'MY',466:'ML',478:'MR',484:'MX',496:'MN',499:'ME',504:'MA',508:'MZ',104:'MM',
+  516:'NA',524:'NP',528:'NL',554:'NZ',558:'NI',562:'NE',566:'NG',578:'NO',512:'OM',
+  586:'PK',591:'PA',598:'PG',600:'PY',604:'PE',608:'PH',616:'PL',620:'PT',634:'QA',
+  642:'RO',643:'RU',646:'RW',682:'SA',686:'SN',688:'RS',694:'SL',702:'SG',703:'SK',
+  705:'SI',706:'SO',710:'ZA',724:'ES',144:'LK',736:'SD',740:'SR',748:'SZ',752:'SE',
+  756:'CH',760:'SY',762:'TJ',834:'TZ',764:'TH',768:'TG',780:'TT',788:'TN',792:'TR',
+  795:'TM',800:'UG',804:'UA',784:'AE',826:'GB',840:'US',858:'UY',860:'UZ',862:'VE',
+  704:'VN',887:'YE',894:'ZM',716:'ZW',728:'SS',275:'PS',
+};
+
+const schemeLabels = {
+  atex: 'ATEX (EU/EEA)',
+  iecex: 'IECEx',
+  nec: 'NEC/CEC',
+  gost: 'GOST-R / TR CU',
+  national: 'National (IEC-based)',
+  unknown: 'No data'
+};
+
+let worldData = null;
+let geoFeatures = null;
+const canvas = document.getElementById('map-canvas');
+const ctx = canvas.getContext('2d');
+const tooltip = document.getElementById('map-tooltip');
+
+function resizeCanvas() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  const w = rect.width;
+  const h = Math.round(w * 0.5);
+  canvas.width = w * 2;  // retina
+  canvas.height = h * 2;
+  canvas.style.height = h + 'px';
+  ctx.scale(2, 2);
+  return { w, h };
+}
+
+function drawMap(highlightScheme) {
+  if (!geoFeatures) return;
+  const { w, h } = resizeCanvas();
+
+  const projection = d3.geoNaturalEarth1()
+    .fitSize([w, h], { type: 'Sphere' });
+  const path = d3.geoPath(projection, ctx);
+
+  // Background
+  ctx.fillStyle = '#0a0a0a';
+  ctx.fillRect(0, 0, w, h);
+
+  // Sphere outline
+  ctx.beginPath();
+  path({ type: 'Sphere' });
+  ctx.fillStyle = '#111';
+  ctx.fill();
+  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 0.5;
+  ctx.stroke();
+
+  // Draw countries
+  geoFeatures.forEach(f => {
+    const id = f.id || f.properties?.id;
+    const alpha2 = numToAlpha[id] || '';
+    const scheme = countrySchemes[alpha2] || 'unknown';
+    const color = schemeColors[scheme] || schemeColors.unknown;
+
+    let opacity = 1;
+    if (highlightScheme && highlightScheme !== 'all') {
+      opacity = (scheme === highlightScheme) ? 1 : 0.15;
+    }
+
+    ctx.beginPath();
+    path(f);
+    ctx.fillStyle = color;
+    ctx.globalAlpha = opacity;
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    ctx.strokeStyle = '#1a1a1a';
+    ctx.lineWidth = 0.3;
+    ctx.stroke();
+  });
+}
+
+// Load topojson
+fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+  .then(r => r.json())
+  .then(topo => {
+    worldData = topo;
+    geoFeatures = topojson.feature(topo, topo.objects.countries).features;
+    drawMap(activeFilter);
+  });
+
+// Tooltip on hover
+canvas.addEventListener('mousemove', (e) => {
+  if (!geoFeatures) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  const w = rect.width;
+  const h = rect.height;
+
+  const projection = d3.geoNaturalEarth1()
+    .fitSize([w, h], { type: 'Sphere' });
+
+  const coords = projection.invert([x, y]);
+  if (!coords) { tooltip.style.display = 'none'; return; }
+
+  for (const f of geoFeatures) {
+    if (d3.geoContains(f, coords)) {
+      const id = f.id || f.properties?.id;
+      const alpha2 = numToAlpha[id] || '??';
+      const scheme = countrySchemes[alpha2] || 'unknown';
+      const name = f.properties?.name || alpha2;
+
+      // Find full country info from table data
+      const info = countries.find(c => {
+        const cn = c.c.toLowerCase();
+        return cn === name.toLowerCase() || cn.includes(name.toLowerCase().substring(0, 5));
+      });
+
+      let tip = '<strong>' + name + '</strong> (' + alpha2 + ')<br>';
+      tip += '<span style="color:' + (schemeColors[scheme] || '#888') + '">' + (schemeLabels[scheme] || scheme) + '</span>';
+      if (info) {
+        tip += '<br>Primary: ' + info.p;
+        if (info.a) tip += '<br>Also: ' + info.a;
+        tip += '<br>Bodies: ' + info.b;
+      }
+
+      tooltip.innerHTML = tip;
+      tooltip.style.display = 'block';
+      tooltip.style.left = (e.clientX + 12) + 'px';
+      tooltip.style.top = (e.clientY - 10) + 'px';
+      return;
+    }
+  }
+  tooltip.style.display = 'none';
+});
+
+canvas.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+
+// Re-draw on filter change
+const origFilterHandler = filterBtns[0]?.onclick;
+filterBtns.forEach(btn => {
+  const origClick = btn.onclick;
+  btn.addEventListener('click', () => {
+    setTimeout(() => drawMap(activeFilter), 50);
+  });
+});
+
+// Also draw on resize
+window.addEventListener('resize', () => drawMap(activeFilter));
+</script>
 </body>
 </html>
 
@@ -333,6 +533,198 @@ if (new URLSearchParams(location.search).get('embed') === '1') {
   document.querySelector('.footer')?.remove();
   document.querySelector('.embed-box')?.remove();
 }
+</script>
+
+<script>
+// World map rendering
+const schemeColors = {
+  atex: '#2563eb',
+  iecex: '#16a34a',
+  nec: '#dc2626',
+  gost: '#9333ea',
+  national: '#d4a843',
+  unknown: '#333333'
+};
+
+const countrySchemes = {
+  'AT':'atex','BE':'atex','BG':'atex','HR':'atex','CY':'atex','CZ':'atex',
+  'DK':'atex','EE':'atex','FI':'atex','FR':'atex','DE':'atex','GR':'atex',
+  'HU':'atex','IS':'atex','IE':'atex','IT':'atex','LV':'atex','LT':'atex',
+  'LU':'atex','MT':'atex','NL':'atex','NO':'atex','PL':'atex','PT':'atex',
+  'RO':'atex','SK':'atex','SI':'atex','ES':'atex','SE':'atex','CH':'atex',
+  'GB':'atex','LI':'atex','TR':'atex',
+  'US':'nec','CA':'nec','MX':'nec',
+  'RU':'gost','KZ':'gost','BY':'gost','AM':'gost','KG':'gost','AZ':'gost',
+  'AU':'iecex','NZ':'iecex','AE':'iecex','SA':'iecex','QA':'iecex','KW':'iecex',
+  'SG':'iecex','ZA':'iecex','NG':'iecex','EG':'iecex','DZ':'iecex',
+  'IL':'iecex','IQ':'iecex','OM':'iecex','BH':'iecex','GH':'iecex','AO':'iecex',
+  'CN':'national','JP':'national','KR':'national','IN':'national','BR':'national',
+  'AR':'national','ID':'national','TH':'national','VN':'national','PH':'national',
+  'TW':'national','CO':'national','CL':'national','PE':'national','IR':'national',
+  'PK':'national','BD':'national','MY':'national','TT':'national','MZ':'national',
+};
+
+// ISO numeric -> alpha-2 mapping for topojson
+const numToAlpha = {
+  4:'AF',8:'AL',12:'DZ',24:'AO',32:'AR',36:'AU',40:'AT',31:'AZ',44:'BS',48:'BH',
+  50:'BD',56:'BE',84:'BZ',204:'BJ',64:'BT',68:'BO',70:'BA',72:'BW',76:'BR',96:'BN',
+  100:'BG',854:'BF',108:'BI',116:'KH',120:'CM',124:'CA',140:'CF',148:'TD',152:'CL',
+  156:'CN',170:'CO',178:'CG',180:'CD',188:'CR',384:'CI',191:'HR',192:'CU',196:'CY',
+  203:'CZ',208:'DK',262:'DJ',214:'DO',218:'EC',818:'EG',222:'SV',226:'GQ',232:'ER',
+  233:'EE',231:'ET',242:'FJ',246:'FI',250:'FR',266:'GA',270:'GM',268:'GE',276:'DE',
+  288:'GH',300:'GR',320:'GT',324:'GN',328:'GY',332:'HT',340:'HN',348:'HU',352:'IS',
+  356:'IN',360:'ID',364:'IR',368:'IQ',372:'IE',376:'IL',380:'IT',388:'JM',392:'JP',
+  400:'JO',398:'KZ',404:'KE',408:'KP',410:'KR',414:'KW',417:'KG',418:'LA',428:'LV',
+  422:'LB',426:'LS',430:'LR',434:'LY',440:'LT',442:'LU',807:'MK',450:'MG',454:'MW',
+  458:'MY',466:'ML',478:'MR',484:'MX',496:'MN',499:'ME',504:'MA',508:'MZ',104:'MM',
+  516:'NA',524:'NP',528:'NL',554:'NZ',558:'NI',562:'NE',566:'NG',578:'NO',512:'OM',
+  586:'PK',591:'PA',598:'PG',600:'PY',604:'PE',608:'PH',616:'PL',620:'PT',634:'QA',
+  642:'RO',643:'RU',646:'RW',682:'SA',686:'SN',688:'RS',694:'SL',702:'SG',703:'SK',
+  705:'SI',706:'SO',710:'ZA',724:'ES',144:'LK',736:'SD',740:'SR',748:'SZ',752:'SE',
+  756:'CH',760:'SY',762:'TJ',834:'TZ',764:'TH',768:'TG',780:'TT',788:'TN',792:'TR',
+  795:'TM',800:'UG',804:'UA',784:'AE',826:'GB',840:'US',858:'UY',860:'UZ',862:'VE',
+  704:'VN',887:'YE',894:'ZM',716:'ZW',728:'SS',275:'PS',
+};
+
+const schemeLabels = {
+  atex: 'ATEX (EU/EEA)',
+  iecex: 'IECEx',
+  nec: 'NEC/CEC',
+  gost: 'GOST-R / TR CU',
+  national: 'National (IEC-based)',
+  unknown: 'No data'
+};
+
+let worldData = null;
+let geoFeatures = null;
+const canvas = document.getElementById('map-canvas');
+const ctx = canvas.getContext('2d');
+const tooltip = document.getElementById('map-tooltip');
+
+function resizeCanvas() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  const w = rect.width;
+  const h = Math.round(w * 0.5);
+  canvas.width = w * 2;  // retina
+  canvas.height = h * 2;
+  canvas.style.height = h + 'px';
+  ctx.scale(2, 2);
+  return { w, h };
+}
+
+function drawMap(highlightScheme) {
+  if (!geoFeatures) return;
+  const { w, h } = resizeCanvas();
+
+  const projection = d3.geoNaturalEarth1()
+    .fitSize([w, h], { type: 'Sphere' });
+  const path = d3.geoPath(projection, ctx);
+
+  // Background
+  ctx.fillStyle = '#0a0a0a';
+  ctx.fillRect(0, 0, w, h);
+
+  // Sphere outline
+  ctx.beginPath();
+  path({ type: 'Sphere' });
+  ctx.fillStyle = '#111';
+  ctx.fill();
+  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 0.5;
+  ctx.stroke();
+
+  // Draw countries
+  geoFeatures.forEach(f => {
+    const id = f.id || f.properties?.id;
+    const alpha2 = numToAlpha[id] || '';
+    const scheme = countrySchemes[alpha2] || 'unknown';
+    const color = schemeColors[scheme] || schemeColors.unknown;
+
+    let opacity = 1;
+    if (highlightScheme && highlightScheme !== 'all') {
+      opacity = (scheme === highlightScheme) ? 1 : 0.15;
+    }
+
+    ctx.beginPath();
+    path(f);
+    ctx.fillStyle = color;
+    ctx.globalAlpha = opacity;
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    ctx.strokeStyle = '#1a1a1a';
+    ctx.lineWidth = 0.3;
+    ctx.stroke();
+  });
+}
+
+// Load topojson
+fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+  .then(r => r.json())
+  .then(topo => {
+    worldData = topo;
+    geoFeatures = topojson.feature(topo, topo.objects.countries).features;
+    drawMap(activeFilter);
+  });
+
+// Tooltip on hover
+canvas.addEventListener('mousemove', (e) => {
+  if (!geoFeatures) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  const w = rect.width;
+  const h = rect.height;
+
+  const projection = d3.geoNaturalEarth1()
+    .fitSize([w, h], { type: 'Sphere' });
+
+  const coords = projection.invert([x, y]);
+  if (!coords) { tooltip.style.display = 'none'; return; }
+
+  for (const f of geoFeatures) {
+    if (d3.geoContains(f, coords)) {
+      const id = f.id || f.properties?.id;
+      const alpha2 = numToAlpha[id] || '??';
+      const scheme = countrySchemes[alpha2] || 'unknown';
+      const name = f.properties?.name || alpha2;
+
+      // Find full country info from table data
+      const info = countries.find(c => {
+        const cn = c.c.toLowerCase();
+        return cn === name.toLowerCase() || cn.includes(name.toLowerCase().substring(0, 5));
+      });
+
+      let tip = '<strong>' + name + '</strong> (' + alpha2 + ')<br>';
+      tip += '<span style="color:' + (schemeColors[scheme] || '#888') + '">' + (schemeLabels[scheme] || scheme) + '</span>';
+      if (info) {
+        tip += '<br>Primary: ' + info.p;
+        if (info.a) tip += '<br>Also: ' + info.a;
+        tip += '<br>Bodies: ' + info.b;
+      }
+
+      tooltip.innerHTML = tip;
+      tooltip.style.display = 'block';
+      tooltip.style.left = (e.clientX + 12) + 'px';
+      tooltip.style.top = (e.clientY - 10) + 'px';
+      return;
+    }
+  }
+  tooltip.style.display = 'none';
+});
+
+canvas.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+
+// Re-draw on filter change
+const origFilterHandler = filterBtns[0]?.onclick;
+filterBtns.forEach(btn => {
+  const origClick = btn.onclick;
+  btn.addEventListener('click', () => {
+    setTimeout(() => drawMap(activeFilter), 50);
+  });
+});
+
+// Also draw on resize
+window.addEventListener('resize', () => drawMap(activeFilter));
 </script>
 </body>
 </html>
