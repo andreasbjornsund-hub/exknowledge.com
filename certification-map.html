@@ -116,11 +116,11 @@
 
 <main style="max-width:960px;margin:0 auto;padding:24px 20px">
   <h1><i class="ph ph-globe-hemisphere-west"></i> World Ex Certification Map</h1>
-  <p style="color:var(--text-muted);margin-bottom:24px">Which explosion protection certification schemes apply in each country? Use the filters to explore, or search for a specific country.</p>
+  <p style="color:var(--text-muted);margin-bottom:24px">Which explosion protection certification schemes apply in each country? <strong>IECEx is a global scheme</strong> accepted alongside local standards in 50+ countries. Use the filters to explore — click "IECEx Accepted" to see worldwide coverage.</p>
 
   <div class="map-legend">
     <div class="map-legend-item"><div class="map-legend-swatch" style="background:#2563eb"></div> ATEX (EU/EEA)</div>
-    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#16a34a"></div> IECEx</div>
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#16a34a"></div> IECEx (global — accepted in 50+ countries)</div>
     <div class="map-legend-item"><div class="map-legend-swatch" style="background:#dc2626"></div> NEC/CEC (North America)</div>
     <div class="map-legend-item"><div class="map-legend-swatch" style="background:#9333ea"></div> GOST-R/TR CU</div>
     <div class="map-legend-item"><div class="map-legend-swatch" style="background:#d4a843"></div> National scheme</div>
@@ -139,6 +139,7 @@
     <button class="filter-btn" data-filter="nec">NEC/CEC</button>
     <button class="filter-btn" data-filter="gost">GOST-R</button>
     <button class="filter-btn" data-filter="other">National</button>
+    <button class="filter-btn" data-filter="iecex-accepted" style="border-color:#16a34a44">IECEx Accepted</button>
   </div>
 
   <input type="text" id="country-search" placeholder="Search country..." autocomplete="off">
@@ -252,6 +253,26 @@ const numToAlpha = {
   704:'VN',887:'YE',894:'ZM',716:'ZW',728:'SS',275:'PS',
 };
 
+
+// IECEx is a GLOBAL scheme - accepted in 50+ countries alongside local primary schemes
+const iecexAccepted = new Set([
+  // EU/EEA (all accept IECEx alongside ATEX)
+  'AT','BE','BG','HR','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT',
+  'LV','LT','NL','NO','PL','PT','RO','SK','SI','ES','SE','CH','GB','TR','CY',
+  // Americas
+  'US','CA','BR','AR','CO','CL','PE','TT',
+  // Asia-Pacific
+  'AU','NZ','CN','JP','KR','IN','SG','MY','ID','TH','VN','PH','TW',
+  // Middle East
+  'AE','SA','QA','KW','OM','BH','IL','IQ','IR',
+  // Africa
+  'ZA','NG','EG','DZ','GH','AO',
+  // CIS
+  'RU','KZ','AZ',
+  // Others
+  'PK','BD',
+]);
+
 const schemeLabels = {
   atex: 'ATEX (EU/EEA)',
   iecex: 'IECEx',
@@ -307,7 +328,22 @@ function drawMap(highlightScheme) {
     const color = schemeColors[scheme] || schemeColors.unknown;
 
     let opacity = 1;
-    if (highlightScheme && highlightScheme !== 'all') {
+    if (highlightScheme === 'iecex-accepted') {
+      opacity = iecexAccepted.has(alpha2) ? 1 : 0.15;
+      // Override color: show IECEx green for accepted countries
+      if (iecexAccepted.has(alpha2)) {
+        ctx.beginPath();
+        path(f);
+        ctx.fillStyle = '#16a34a';
+        ctx.globalAlpha = 0.7;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+        ctx.strokeStyle = '#1a1a1a';
+        ctx.lineWidth = 0.3;
+        ctx.stroke();
+        return;
+      }
+    } else if (highlightScheme && highlightScheme !== 'all') {
       opacity = (scheme === highlightScheme) ? 1 : 0.15;
     }
 
@@ -510,6 +546,7 @@ function render() {
     if (activeFilter === 'nec') return all.includes('nec') || all.includes('cec');
     if (activeFilter === 'gost') return all.includes('gost') || all.includes('tr cu');
     if (activeFilter === 'other') return !all.includes('atex') && !all.includes('iecex') && !all.includes('nec') && !all.includes('cec') && !all.includes('gost') && !all.includes('tr cu');
+    if (activeFilter === 'iecex-accepted') return all.includes('iecex') || all.includes('atex');
     return true;
   }).forEach(r => {
     const tr = document.createElement('tr');
@@ -586,6 +623,26 @@ const numToAlpha = {
   704:'VN',887:'YE',894:'ZM',716:'ZW',728:'SS',275:'PS',
 };
 
+
+// IECEx is a GLOBAL scheme - accepted in 50+ countries alongside local primary schemes
+const iecexAccepted = new Set([
+  // EU/EEA (all accept IECEx alongside ATEX)
+  'AT','BE','BG','HR','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT',
+  'LV','LT','NL','NO','PL','PT','RO','SK','SI','ES','SE','CH','GB','TR','CY',
+  // Americas
+  'US','CA','BR','AR','CO','CL','PE','TT',
+  // Asia-Pacific
+  'AU','NZ','CN','JP','KR','IN','SG','MY','ID','TH','VN','PH','TW',
+  // Middle East
+  'AE','SA','QA','KW','OM','BH','IL','IQ','IR',
+  // Africa
+  'ZA','NG','EG','DZ','GH','AO',
+  // CIS
+  'RU','KZ','AZ',
+  // Others
+  'PK','BD',
+]);
+
 const schemeLabels = {
   atex: 'ATEX (EU/EEA)',
   iecex: 'IECEx',
@@ -641,7 +698,22 @@ function drawMap(highlightScheme) {
     const color = schemeColors[scheme] || schemeColors.unknown;
 
     let opacity = 1;
-    if (highlightScheme && highlightScheme !== 'all') {
+    if (highlightScheme === 'iecex-accepted') {
+      opacity = iecexAccepted.has(alpha2) ? 1 : 0.15;
+      // Override color: show IECEx green for accepted countries
+      if (iecexAccepted.has(alpha2)) {
+        ctx.beginPath();
+        path(f);
+        ctx.fillStyle = '#16a34a';
+        ctx.globalAlpha = 0.7;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+        ctx.strokeStyle = '#1a1a1a';
+        ctx.lineWidth = 0.3;
+        ctx.stroke();
+        return;
+      }
+    } else if (highlightScheme && highlightScheme !== 'all') {
       opacity = (scheme === highlightScheme) ? 1 : 0.15;
     }
 
