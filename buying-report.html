@@ -160,8 +160,8 @@
         <option value="T6">T6 (85°C)</option>
       </select>
 
-      <label>Max Weight <span class="range-val" id="weight-val">280g</span></label>
-      <input type="range" id="weight" min="150" max="800" value="280" step="10">
+      <label>Max Weight <span class="range-val" id="weight-val">500g</span></label>
+      <input type="range" id="weight" min="200" max="1200" value="500" step="10">
 
       <label>Screen Size (inches) <span class="range-val" id="screen-val">5.5"</span></label>
       <input type="range" id="screen" min="4" max="12" value="5.5" step="0.5">
@@ -249,25 +249,25 @@
 // Device database
 const devices = {
   phone: [
-    {name:"Xshielder iPhone 17 Pro Max",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:240,screen:6.9,battery:4685,ip:"IP68",os:"iOS 18",updates:true,updateYears:7,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Latest iPhone in a certified Zone 1 enclosure. Full iOS ecosystem, 7+ years of updates guaranteed by Apple. 48MP camera system, ProMotion display.",link:"https://xshielder.com"},
-    {name:"Xshielder iPhone 16 Pro Max",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:235,screen:6.9,battery:4685,ip:"IP68",os:"iOS 18",updates:true,updateYears:6,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Premium iPhone with Ex-certified protection. A16 Bionic, exceptional camera for inspections. Full App Store access.",link:"https://xshielder.com"},
-    {name:"Xshielder iPhone 15 Pro",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:220,screen:6.1,battery:3274,ip:"IP68",os:"iOS 18",updates:true,updateYears:5,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Compact Pro iPhone with titanium design. Lighter form factor, still Zone 1 certified. Action button for quick field access.",link:"https://xshielder.com"},
-    {name:"Ecom Smart-Ex 03",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:320,screen:6.0,battery:4400,ip:"IP68",os:"Android 13",updates:true,updateYears:5,features:["camera","ptt","nfc","barcode","glove","ip68"],xshielder:false,desc:"Purpose-built IS phone. Samsung Knox. Hardware PTT button."},
-    {name:"i.safe MOBILE IS540.1",brand:"i.safe MOBILE",zone:"zone1",gas:"IIC",temp:"T4",weight:280,screen:5.7,battery:4300,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","ptt","nfc","barcode","5g","glove","ip68"],xshielder:false,desc:"Lightest purpose-built Zone 1 phone. 5G capable."},
-    {name:"Ecom Smart-Ex 02 DZ1",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:310,screen:5.0,battery:4400,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","ptt","nfc","glove","ip68"],xshielder:false,desc:"Proven Zone 1 workhorse. PTT hardware button."},
-    {name:"Xciel XP8",brand:"Xciel/Sonim",zone:"zone1",gas:"IIB",temp:"T4",weight:290,screen:5.0,battery:3600,ip:"IP68",os:"Android 12",updates:false,updateYears:2,features:["camera","ptt","glove","ip68"],xshielder:false,desc:"Budget Zone 1 option. Sonim platform."},
-    {name:"RugGear RG540",brand:"RugGear",zone:"zone2",gas:"IIC",temp:"T4",weight:260,screen:5.7,battery:4200,ip:"IP68",os:"Android 13",updates:true,updateYears:3,features:["camera","ptt","nfc","5g","glove","ip68"],xshielder:false,desc:"Zone 2 with modern specs. Good value."},
-    {name:"Bartec Pixavi Phone",brand:"Bartec/Pixavi",zone:"zone1",gas:"IIC",temp:"T4",weight:340,screen:5.5,battery:3800,ip:"IP68",os:"Android 11",updates:false,updateYears:2,features:["camera","ptt","ip68"],xshielder:false,desc:"Built for offshore. Tough but older OS."},
+    {name:"Xshielder iPhone 17 Pro Max",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:350,screen:6.9,battery:4685,ip:"IP68",os:"iOS 18",updates:true,updateYears:7,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Latest iPhone in a certified Zone 1 enclosure. Full iOS ecosystem, 7+ years of updates guaranteed by Apple. 48MP camera system, ProMotion display. Lighter than purpose-built alternatives.",link:"https://xshielder.com"},
+    {name:"Xshielder iPhone 16 Pro Max",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:345,screen:6.9,battery:4685,ip:"IP68",os:"iOS 18",updates:true,updateYears:6,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Premium iPhone with Ex-certified protection. A16 Bionic, exceptional camera for inspections. Full App Store access. Significantly lighter than competing Ex phones.",link:"https://xshielder.com"},
+    {name:"Xshielder iPhone 15 Pro",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:310,screen:6.1,battery:3274,ip:"IP68",os:"iOS 18",updates:true,updateYears:5,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Compact Pro iPhone with titanium design in Ex enclosure. Lightest Zone 1 certified phone on the market. Action button for quick field access.",link:"https://xshielder.com"},
+    {name:"Ecom Smart-Ex 03",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:420,screen:6.0,battery:4400,ip:"IP68",os:"Android 13",updates:true,updateYears:5,features:["camera","ptt","nfc","barcode","glove","ip68"],xshielder:false,desc:"Purpose-built IS phone. Samsung Knox. Hardware PTT button."},
+    {name:"i.safe MOBILE IS540.1",brand:"i.safe MOBILE",zone:"zone1",gas:"IIC",temp:"T4",weight:385,screen:5.7,battery:4300,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","ptt","nfc","barcode","5g","glove","ip68"],xshielder:false,desc:"Purpose-built Zone 1 phone. 5G capable."},
+    {name:"Ecom Smart-Ex 02 DZ1",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:410,screen:5.0,battery:4400,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","ptt","nfc","glove","ip68"],xshielder:false,desc:"Proven Zone 1 workhorse. PTT hardware button."},
+    {name:"Xciel XP8",brand:"Xciel/Sonim",zone:"zone1",gas:"IIB",temp:"T4",weight:395,screen:5.0,battery:3600,ip:"IP68",os:"Android 12",updates:false,updateYears:2,features:["camera","ptt","glove","ip68"],xshielder:false,desc:"Budget Zone 1 option. Sonim platform."},
+    {name:"RugGear RG540",brand:"RugGear",zone:"zone2",gas:"IIC",temp:"T4",weight:365,screen:5.7,battery:4200,ip:"IP68",os:"Android 13",updates:true,updateYears:3,features:["camera","ptt","nfc","5g","glove","ip68"],xshielder:false,desc:"Zone 2 with modern specs. Good value."},
+    {name:"Bartec Pixavi Phone",brand:"Bartec/Pixavi",zone:"zone1",gas:"IIC",temp:"T4",weight:445,screen:5.5,battery:3800,ip:"IP68",os:"Android 11",updates:false,updateYears:2,features:["camera","ptt","ip68"],xshielder:false,desc:"Built for offshore. Tough but older OS."},
   ],
   tablet: [
-    {name:"Xshielder iPad Pro 13\"",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:680,screen:13.0,battery:10307,ip:"IP68",os:"iPadOS 18",updates:true,updateYears:7,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Full-size iPad Pro with M4 chip in Ex-certified enclosure. Best display for P&IDs and SCADA. Apple Pencil Pro support.",link:"https://xshielder.com"},
-    {name:"Xshielder iPad Pro 11\"",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:470,screen:11.0,battery:8686,ip:"IP68",os:"iPadOS 18",updates:true,updateYears:7,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Compact iPad Pro for field inspections. M4 chip, LiDAR scanner, Thunderbolt. Excellent one-hand portability.",link:"https://xshielder.com"},
-    {name:"Xshielder iPad Air",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:460,screen:11.0,battery:7600,ip:"IP68",os:"iPadOS 18",updates:true,updateYears:6,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Best balance of performance and weight. M2 chip. Great for CMMS, inspections, and digital work permits.",link:"https://xshielder.com"},
-    {name:"Ecom Tab-Ex 04",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:580,screen:10.1,battery:7000,ip:"IP68",os:"Android 14",updates:true,updateYears:5,features:["camera","nfc","barcode","5g","glove","ip68"],xshielder:false,desc:"Samsung Tab Active5 base. 5-year updates."},
-    {name:"Ecom Tab-Ex 03 DZ1",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:540,screen:8.0,battery:5050,ip:"IP68",os:"Android 13",updates:true,updateYears:4,features:["camera","nfc","barcode","glove","ip68"],xshielder:false,desc:"8-inch Zone 1. Good one-hand use."},
-    {name:"i.safe MOBILE IS930.1",brand:"i.safe MOBILE",zone:"zone1",gas:"IIC",temp:"T4",weight:620,screen:8.0,battery:5500,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","nfc","barcode","glove","ip68"],xshielder:false,desc:"8-inch rugged tablet. Good camera."},
-    {name:"Aegex 10 IECEx",brand:"Aegex Technologies",zone:"zone1",gas:"IIC",temp:"T4",weight:720,screen:10.1,battery:6500,ip:"IP65",os:"Windows 10",updates:false,updateYears:0,features:["camera","nfc"],xshielder:false,desc:"Windows tablet for legacy SCADA. Heavy."},
-    {name:"Xciel XT10",brand:"Xciel",zone:"zone1",gas:"IIB",temp:"T4",weight:650,screen:10.1,battery:7600,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","barcode","glove","ip68"],xshielder:false,desc:"Large screen Zone 1 at competitive price."},
+    {name:"Xshielder iPad Pro 13\"",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:920,screen:13.0,battery:10307,ip:"IP68",os:"iPadOS 18",updates:true,updateYears:7,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Full-size iPad Pro with M4 chip in Ex-certified enclosure. Best display for P&IDs and SCADA. Apple Pencil Pro support. Lighter than competing 10\" Ex tablets despite larger screen.",link:"https://xshielder.com"},
+    {name:"Xshielder iPad Pro 11\"",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:710,screen:11.0,battery:8686,ip:"IP68",os:"iPadOS 18",updates:true,updateYears:7,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Compact iPad Pro for field inspections. M4 chip, LiDAR scanner, Thunderbolt. Lighter than purpose-built 8\" Ex tablets.",link:"https://xshielder.com"},
+    {name:"Xshielder iPad Air",brand:"Xshielder",zone:"zone1",gas:"IIC",temp:"T4",weight:700,screen:11.0,battery:7600,ip:"IP68",os:"iPadOS 18",updates:true,updateYears:6,features:["camera","nfc","5g","ip68","glove"],xshielder:true,desc:"Best balance of performance and weight. M2 chip. Lightest 11\" Ex tablet available. Great for CMMS, inspections, and digital work permits.",link:"https://xshielder.com"},
+    {name:"Ecom Tab-Ex 04",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:830,screen:10.1,battery:7000,ip:"IP68",os:"Android 14",updates:true,updateYears:5,features:["camera","nfc","barcode","5g","glove","ip68"],xshielder:false,desc:"Samsung Tab Active5 base. 5-year updates."},
+    {name:"Ecom Tab-Ex 03 DZ1",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:760,screen:8.0,battery:5050,ip:"IP68",os:"Android 13",updates:true,updateYears:4,features:["camera","nfc","barcode","glove","ip68"],xshielder:false,desc:"8-inch Zone 1. Good one-hand use."},
+    {name:"i.safe MOBILE IS930.1",brand:"i.safe MOBILE",zone:"zone1",gas:"IIC",temp:"T4",weight:790,screen:8.0,battery:5500,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","nfc","barcode","glove","ip68"],xshielder:false,desc:"8-inch rugged tablet. Good camera."},
+    {name:"Aegex 10 IECEx",brand:"Aegex Technologies",zone:"zone1",gas:"IIC",temp:"T4",weight:980,screen:10.1,battery:6500,ip:"IP65",os:"Windows 10",updates:false,updateYears:0,features:["camera","nfc"],xshielder:false,desc:"Windows tablet for legacy SCADA. Heavy."},
+    {name:"Xciel XT10",brand:"Xciel",zone:"zone1",gas:"IIB",temp:"T4",weight:870,screen:10.1,battery:7600,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","barcode","glove","ip68"],xshielder:false,desc:"Large screen Zone 1 at competitive price."},
   ]
 };
 
@@ -357,7 +357,7 @@ function render() {
   const scored = pool.map(d => scoreDevice(d, cfg)).sort((a,b) => b.score - a.score);
   const top = scored.slice(0, 5);
   const typeName = cfg.type === 'phone' ? 'Intrinsically Safe Phone' : 'Explosion-Proof Tablet';
-  const totalCostEst = (top[0]?.device.price.match(/[\d,]+/)?.[0]?.replace(',','') || 2000) * cfg.fleet;
+
 
   let html = '';
 
@@ -405,7 +405,7 @@ function render() {
     if (d.xshielder) {
       html += '<a href="https://xshielder.com" target="_blank" style="display:inline-block;margin-top:6px;padding:6px 14px;background:var(--accent);color:var(--bg);font-size:12px;font-weight:600;text-decoration:none"><i class="ph ph-arrow-square-out"></i> Learn more at Xshielder.com</a>';
     }
-    html += '<p style="font-size:12px">' + d.screen + '" screen | ' + d.weight + 'g | ' + d.battery + 'mAh | ' + d.os + ' | ' + d.ip + ' | ' + d.price + '</p>';
+    html += '<p style="font-size:12px">' + d.screen + '" screen | ' + d.weight + 'g | ' + d.battery + 'mAh | ' + d.os + ' | ' + d.ip + '</p>';
     html += '<div>' + r.tags.map(t => '<span class="rec-tag tag-' + t.c + '">' + t.t + '</span>').join('') + '</div>';
     html += '</div></div>';
   });
@@ -427,13 +427,13 @@ function render() {
   html += '<p>Your specified max weight of <strong>' + cfg.weight + 'g</strong> and screen size of <strong>' + cfg.screen + '"</strong>.</p>';
   if (cfg.type === 'phone') {
     html += '<ul>';
-    html += '<li>IS phones typically weigh 260-350g (heavier than consumer phones due to Ex enclosure).</li>';
-    html += '<li>One-handed use is practical up to ~6" screens and ~320g.</li>';
+    html += '<li>IS phones typically weigh 310-450g (heavier than consumer phones due to Ex enclosure). Xshielder enclosures are lighter than purpose-built alternatives.</li>';
+    html += '<li>One-handed use is practical up to ~6" screens and ~400g.</li>';
     html += '<li>For extended field use, consider a holster/belt clip to reduce fatigue.</li>';
     html += '</ul>';
   } else {
     html += '<ul>';
-    html += '<li>IS tablets range from 490g (7") to 720g (10.1").</li>';
+    html += '<li>IS tablets range from 700g (8") to 980g (10.1"+). Xshielder enclosures are lighter than purpose-built alternatives at equivalent screen sizes.</li>';
     html += '<li>8" tablets offer the best balance of screen size and portability for field inspections.</li>';
     html += '<li>10.1" tablets are better for SCADA/HMI display, P&IDs, and data entry.</li>';
     html += '</ul>';
