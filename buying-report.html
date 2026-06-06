@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intrinsically Safe Device Buying Report Generator | ExKnowledge</title>
+  <meta name="description" content="Generate a custom buying report for intrinsically safe phones and tablets. Dynamic business case based on your requirements: weight, form factor, OS updates, certifications.">
+  <link rel="canonical" href="https://exknowledge.com/buying-report.html">
+  <meta property="og:title" content="IS Device Buying Report Generator — ExKnowledge">
+  <meta property="og:description" content="Generate a custom buying report for intrinsically safe phones and tablets based on your specific requirements.">
+  <meta property="og:url" content="https://exknowledge.com/buying-report.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5VSBXBSL');</script>
+  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
+  <style>
+    .report-layout { display: grid; grid-template-columns: 340px 1fr; gap: 32px; align-items: start; }
+    @media (max-width: 768px) { .report-layout { grid-template-columns: 1fr; } }
+    .config-panel { background: var(--bg-card); border: 1px solid var(--border); padding: 24px; position: sticky; top: 80px; }
+    .config-panel h2 { font-size: 18px; margin: 0 0 16px; color: var(--text-bright); }
+    .config-panel label { display: block; color: var(--text-bright); font-weight: 500; margin: 14px 0 4px; font-size: 13px; }
+    .config-panel select, .config-panel input[type="number"], .config-panel input[type="range"] {
+      width: 100%; padding: 8px 10px; background: var(--bg); border: 1px solid var(--border);
+      color: var(--text-bright); font-size: 14px; font-family: inherit;
+    }
+    .config-panel input[type="range"] { padding: 0; margin: 8px 0; }
+    .range-val { font-size: 12px; color: var(--accent); font-weight: 600; float: right; }
+    .checkbox-row { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+    .checkbox-row input { width: auto; }
+    .checkbox-row label { margin: 0; font-size: 13px; font-weight: 400; color: var(--text-muted); }
+    .report-output { min-height: 400px; }
+    .report-section { background: var(--bg-card); border: 1px solid var(--border); padding: 24px; margin-bottom: 16px; }
+    .report-section h3 { font-size: 16px; color: var(--text-bright); margin: 0 0 12px; }
+    .report-section p, .report-section li { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .score-bar { height: 8px; background: var(--border); margin: 8px 0 4px; position: relative; }
+    .score-fill { height: 100%; transition: width 0.3s; }
+    .score-fill.green { background: #16a34a; }
+    .score-fill.yellow { background: #eab308; }
+    .score-fill.red { background: #dc2626; }
+    .rec-card { display: flex; gap: 16px; padding: 16px; background: var(--bg); border: 1px solid var(--border); margin: 12px 0; }
+    .rec-card .rec-rank { font-size: 24px; font-weight: 800; color: var(--accent); min-width: 32px; }
+    .rec-card h4 { font-size: 14px; color: var(--text-bright); margin: 0 0 4px; }
+    .rec-card p { font-size: 12px; color: var(--text-muted); margin: 0; }
+    .rec-tag { display: inline-block; padding: 1px 6px; font-size: 10px; font-weight: 600; margin: 2px 2px 0 0; border-radius: 3px; }
+    .tag-match { background: #16a34a22; color: #4ade80; border: 1px solid #16a34a44; }
+    .tag-warn { background: #eab30822; color: #eab308; border: 1px solid #eab30844; }
+    .tag-miss { background: #dc262622; color: #f87171; border: 1px solid #dc262644; }
+    .gen-btn { width: 100%; padding: 12px; background: var(--accent); color: var(--bg); border: none; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 20px; }
+    .gen-btn:hover { opacity: 0.9; }
+    .embed-box { background: var(--bg-card); border: 1px solid var(--border); padding: 20px; margin: 24px 0; }
+    .embed-box h3 { margin: 0 0 8px; font-size: 15px; color: var(--text-bright); }
+    .embed-box textarea { width: 100%; height: 50px; background: var(--bg); border: 1px solid var(--border); color: var(--text-muted); padding: 8px; font-family: monospace; font-size: 11px; resize: none; }
+    .embed-box button { margin-top: 6px; background: var(--accent); color: var(--bg); border: none; padding: 6px 16px; font-weight: 600; cursor: pointer; font-size: 13px; }
+    .print-btn { background: none; border: 1px solid var(--border); color: var(--text-muted); padding: 8px 16px; cursor: pointer; font-size: 13px; margin-top: 8px; }
+    @media print { .config-panel, .embed-box, .gen-btn, .print-btn, nav, footer { display: none !important; } .report-layout { grid-template-columns: 1fr !important; } }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-book-open-text"></i> Knowledge <i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
+          <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zone Classification</a></li>
+          <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection Methods</a></li>
+          <li><a href="/pages/standards.html"><i class="ph ph-scales"></i> Standards &amp; Regulations</a></li>
+          <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperature Classes</a></li>
+          <li><a href="/pages/gas-groups.html"><i class="ph ph-flame"></i> Gas Groups</a></li>
+          <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Equipment Categories</a></li>
+          <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Reference</a></li>
+          <li><a href="/pages/faq.html"><i class="ph ph-question"></i> FAQ</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-folder-open"></i> Resources <i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a></li>
+          <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Training</a></li>
+          <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a>
+          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west"></i> Certification Map</a></li>
+          <li><a href="/buying-report.html"><i class="ph ph-file-text"></i> Buying Report</a></li></li>
+          <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinars <span class="badge-soon">Soon</span></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i> Community <i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Events <span class="badge-soon">Soon</span></a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Industry Links</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> About</a></li>
+    </ul>
+    <select class="lang-select" disabled aria-label="Language" style="opacity:0.4;cursor:not-allowed;pointer-events:none">
+      <option selected>🇬🇧 English</option>
+      <option>🇩🇪 Deutsch</option>
+      <option>🇳🇴 Norsk</option>
+      <option>🇩🇰 Dansk</option>
+      <option>🇸🇪 Svenska</option>
+      <option>🇫🇮 Suomi</option>
+      <option>🇪🇸 Español</option>
+      <option>🇳🇱 Nederlands</option>
+      <option>🇵🇹 Português</option>
+      <option>🇮🇹 Italiano</option>
+      <option>🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu"><i class="ph-bold ph-list"></i></div>
+  </div>
+</nav>
+
+<main style="max-width:1100px;margin:0 auto;padding:24px 20px">
+  <h1><i class="ph ph-file-text"></i> IS Device Buying Report</h1>
+  <p style="color:var(--text-muted);margin-bottom:24px">Configure your requirements below. The report updates in real-time to help you build a business case for management approval.</p>
+
+  <div class="report-layout">
+    <div class="config-panel">
+      <h2><i class="ph ph-sliders-horizontal"></i> Your Requirements</h2>
+
+      <label>Device Type</label>
+      <select id="device-type">
+        <option value="phone">Intrinsically Safe Phone</option>
+        <option value="tablet">Explosion-Proof Tablet</option>
+      </select>
+
+      <label>Zone Classification</label>
+      <select id="zone">
+        <option value="zone1">Zone 1 / Div 1</option>
+        <option value="zone2">Zone 2 / Div 2</option>
+        <option value="zone0">Zone 0 (rare)</option>
+      </select>
+
+      <label>Gas Group</label>
+      <select id="gas-group">
+        <option value="IIA">IIA (Propane, Methane)</option>
+        <option value="IIB">IIB (Ethylene)</option>
+        <option value="IIC">IIC (Hydrogen, Acetylene)</option>
+      </select>
+
+      <label>Temperature Class</label>
+      <select id="temp-class">
+        <option value="T4" selected>T4 (135°C) — recommended</option>
+        <option value="T3">T3 (200°C)</option>
+        <option value="T5">T5 (100°C)</option>
+        <option value="T6">T6 (85°C)</option>
+      </select>
+
+      <label>Max Weight <span class="range-val" id="weight-val">350g</span></label>
+      <input type="range" id="weight" min="150" max="800" value="350" step="10">
+
+      <label>Screen Size (inches) <span class="range-val" id="screen-val">5.5"</span></label>
+      <input type="range" id="screen" min="4" max="12" value="5.5" step="0.5">
+
+      <label>Min Battery (mAh) <span class="range-val" id="battery-val">3000</span></label>
+      <input type="range" id="battery" min="1500" max="10000" value="3000" step="100">
+
+      <label>Fleet Size</label>
+      <input type="number" id="fleet" value="25" min="1" max="10000" style="width:100%">
+
+      <label style="margin-top:16px;margin-bottom:8px">Must-Have Features</label>
+      <div class="checkbox-row"><input type="checkbox" id="feat-5g"><label for="feat-5g">5G connectivity</label></div>
+      <div class="checkbox-row"><input type="checkbox" id="feat-camera" checked><label for="feat-camera">Camera (photo/video)</label></div>
+      <div class="checkbox-row"><input type="checkbox" id="feat-ptt"><label for="feat-ptt">Push-to-Talk (PTT)</label></div>
+      <div class="checkbox-row"><input type="checkbox" id="feat-nfc"><label for="feat-nfc">NFC</label></div>
+      <div class="checkbox-row"><input type="checkbox" id="feat-barcode"><label for="feat-barcode">Barcode scanner</label></div>
+      <div class="checkbox-row"><input type="checkbox" id="feat-thermal"><label for="feat-thermal">Thermal camera</label></div>
+      <div class="checkbox-row"><input type="checkbox" id="feat-updates" checked><label for="feat-updates">Guaranteed OS/security updates (3+ yrs)</label></div>
+      <div class="checkbox-row"><input type="checkbox" id="feat-ip68" checked><label for="feat-ip68">IP68 water/dust rating</label></div>
+      <div class="checkbox-row"><input type="checkbox" id="feat-glove"><label for="feat-glove">Glove-friendly touchscreen</label></div>
+
+      <button class="gen-btn" onclick="window.print()"><i class="ph ph-printer"></i> Print / Save as PDF</button>
+    </div>
+
+    <div class="report-output" id="report-output">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+
+  <div class="embed-box">
+    <h3><i class="ph ph-code"></i> Embed this tool on your website</h3>
+    <textarea readonly id="embed-code">&lt;iframe src="https://exknowledge.com/buying-report.html?embed=1" width="100%" height="800" frameborder="0" title="IS Device Buying Report — ExKnowledge"&gt;&lt;/iframe&gt;
+&lt;p style="font-size:11px"&gt;Source: &lt;a href="https://exknowledge.com/buying-report.html"&gt;ExKnowledge&lt;/a&gt;&lt;/p&gt;</textarea>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').value);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)">Copy Embed Code</button>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Knowledge</h4>
+        <a href="/pages/fundamentals.html">Fundamentals</a>
+        <a href="/pages/zone-classification.html">Zone Classification</a>
+        <a href="/pages/protection-methods.html">Protection Methods</a>
+        <a href="/pages/standards.html">Standards</a>
+        <a href="/pages/temperature-classes.html">Temperature Classes</a>
+        <a href="/pages/gas-groups.html">Gas Groups</a>
+        <a href="/pages/cheat-sheet.html">Quick Reference</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a>
+        <a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i> All Episodes</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i> Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i> Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i> RSS Feed</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/about.html"><i class="ph ph-info"></i> About</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a>
+        <a href="/events.html"><i class="ph ph-calendar-blank"></i> Events</a>
+        <a href="/links.html"><i class="ph ph-link"></i> Industry Links</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+      <p>Not a substitute for official standards documents or professional engineering advice.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/js/nav.js"></script>
+</body>
+</html>
+
+<script src="/js/nav.js"></script>
+<script>
+// Device database
+const devices = {
+  phone: [
+    {name:"Ecom Smart-Ex 03",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:320,screen:6.0,battery:4400,ip:"IP68",os:"Android 13",updates:true,updateYears:5,features:["camera","ptt","nfc","barcode","glove","ip68"],price:"~€1,800",link:"https://www.ecom-ex.com",desc:"Flagship IS phone with 5-year update guarantee. Samsung Knox."},
+    {name:"Ecom Smart-Ex 02 DZ1",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:310,screen:5.0,battery:4400,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","ptt","nfc","glove","ip68"],price:"~€1,500",link:"https://www.ecom-ex.com",desc:"Proven Zone 1 workhorse. PTT hardware button."},
+    {name:"i.safe MOBILE IS540.1",brand:"i.safe MOBILE",zone:"zone1",gas:"IIC",temp:"T4",weight:280,screen:5.7,battery:4300,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","ptt","nfc","barcode","5g","glove","ip68"],price:"~€1,600",link:"https://www.isafe-mobile.com",desc:"Lightest Zone 1 phone. 5G capable."},
+    {name:"Xciel XP8",brand:"Xciel/Sonim",zone:"zone1",gas:"IIB",temp:"T4",weight:290,screen:5.0,battery:3600,ip:"IP68",os:"Android 12",updates:false,updateYears:2,features:["camera","ptt","glove","ip68"],price:"~€1,200",link:"https://www.xciel.com",desc:"Budget Zone 1 option. Sonim platform."},
+    {name:"RugGear RG540",brand:"RugGear",zone:"zone2",gas:"IIC",temp:"T4",weight:260,screen:5.7,battery:4200,ip:"IP68",os:"Android 13",updates:true,updateYears:3,features:["camera","ptt","nfc","5g","glove","ip68"],price:"~€900",link:"https://www.ruggear.com",desc:"Zone 2 with modern specs. Good value."},
+    {name:"Bartec Pixavi Phone",brand:"Bartec/Pixavi",zone:"zone1",gas:"IIC",temp:"T4",weight:340,screen:5.5,battery:3800,ip:"IP68",os:"Android 11",updates:false,updateYears:2,features:["camera","ptt","ip68"],price:"~€2,000",link:"https://www.bartec.com",desc:"Built for offshore. Tough but older OS."},
+  ],
+  tablet: [
+    {name:"Ecom Tab-Ex 04",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:580,screen:10.1,battery:7000,ip:"IP68",os:"Android 14",updates:true,updateYears:5,features:["camera","nfc","barcode","5g","glove","ip68"],price:"~€3,500",link:"https://www.ecom-ex.com",desc:"Latest flagship. Samsung Tab Active5 base. 5-year updates."},
+    {name:"Ecom Tab-Ex 03 DZ1",brand:"Ecom/Pepperl+Fuchs",zone:"zone1",gas:"IIC",temp:"T4",weight:540,screen:8.0,battery:5050,ip:"IP68",os:"Android 13",updates:true,updateYears:4,features:["camera","nfc","barcode","glove","ip68"],price:"~€3,000",link:"https://www.ecom-ex.com",desc:"8-inch Zone 1. Good one-hand use."},
+    {name:"i.safe MOBILE IS930.1",brand:"i.safe MOBILE",zone:"zone1",gas:"IIC",temp:"T4",weight:620,screen:8.0,battery:5500,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","nfc","barcode","glove","ip68"],price:"~€2,800",link:"https://www.isafe-mobile.com",desc:"8-inch rugged tablet. Good camera."},
+    {name:"Aegex 10 IECEx",brand:"Aegex Technologies",zone:"zone1",gas:"IIC",temp:"T4",weight:720,screen:10.1,battery:6500,ip:"IP65",os:"Windows 10",updates:false,updateYears:0,features:["camera","nfc"],price:"~€4,500",link:"https://www.aegex.com",desc:"Windows tablet for legacy SCADA. Heavy."},
+    {name:"Bartec TOUGHPAD",brand:"Bartec",zone:"zone2",gas:"IIC",temp:"T4",weight:490,screen:7.0,battery:4600,ip:"IP67",os:"Android 11",updates:false,updateYears:1,features:["camera","nfc","glove"],price:"~€2,200",link:"https://www.bartec.com",desc:"Compact Zone 2 tablet. Panasonic base."},
+    {name:"Xciel XT10",brand:"Xciel",zone:"zone1",gas:"IIB",temp:"T4",weight:650,screen:10.1,battery:7600,ip:"IP68",os:"Android 12",updates:true,updateYears:3,features:["camera","barcode","glove","ip68"],price:"~€2,600",link:"https://www.xciel.com",desc:"Large screen Zone 1 at competitive price."},
+  ]
+};
+
+const els = {
+  type: document.getElementById('device-type'),
+  zone: document.getElementById('zone'),
+  gas: document.getElementById('gas-group'),
+  temp: document.getElementById('temp-class'),
+  weight: document.getElementById('weight'),
+  screen: document.getElementById('screen'),
+  battery: document.getElementById('battery'),
+  fleet: document.getElementById('fleet'),
+};
+const feats = ['5g','camera','ptt','nfc','barcode','thermal','updates','ip68','glove'];
+
+function getConfig() {
+  return {
+    type: els.type.value,
+    zone: els.zone.value,
+    gas: els.gas.value,
+    temp: els.temp.value,
+    weight: +els.weight.value,
+    screen: +els.screen.value,
+    battery: +els.battery.value,
+    fleet: +els.fleet.value,
+    features: feats.filter(f => document.getElementById('feat-'+f)?.checked),
+  };
+}
+
+const gasRank = {IIA:1, IIB:2, IIC:3};
+const tempRank = {T1:1, T2:2, T3:3, T4:4, T5:5, T6:6};
+const zoneRank = {zone2:1, zone1:2, zone0:3};
+
+function scoreDevice(d, cfg) {
+  let score = 0, tags = [], max = 100;
+
+  // Zone compatibility (must match or exceed)
+  if (zoneRank[d.zone] >= zoneRank[cfg.zone]) { score += 25; tags.push({t:'Zone: '+d.zone.replace('zone','Zone '),c:'match'}); }
+  else { tags.push({t:'Zone: '+d.zone.replace('zone','Zone ')+' (insufficient)',c:'miss'}); }
+
+  // Gas group (must match or exceed)
+  if (gasRank[d.gas] >= gasRank[cfg.gas]) { score += 15; tags.push({t:'Gas: '+d.gas,c:'match'}); }
+  else { tags.push({t:'Gas: '+d.gas+' (need '+cfg.gas+')',c:'miss'}); }
+
+  // Temp class
+  if (tempRank[d.temp] >= tempRank[cfg.temp]) { score += 10; tags.push({t:d.temp,c:'match'}); }
+  else { tags.push({t:d.temp+' (need '+cfg.temp+')',c:'miss'}); }
+
+  // Weight
+  if (d.weight <= cfg.weight) { score += 10; }
+  else { tags.push({t:d.weight+'g (over '+cfg.weight+'g limit)',c:'warn'}); }
+
+  // Screen
+  const screenDiff = Math.abs(d.screen - cfg.screen);
+  if (screenDiff <= 1) score += 5;
+
+  // Battery
+  if (d.battery >= cfg.battery) { score += 5; }
+  else { tags.push({t:d.battery+'mAh (want '+cfg.battery+')',c:'warn'}); }
+
+  // Features
+  const matched = cfg.features.filter(f => d.features.includes(f));
+  const missing = cfg.features.filter(f => !d.features.includes(f));
+  const featScore = cfg.features.length > 0 ? (matched.length / cfg.features.length) * 30 : 30;
+  score += featScore;
+  matched.forEach(f => tags.push({t:f,c:'match'}));
+  missing.forEach(f => tags.push({t:f+' (missing)',c:'miss'}));
+
+  return {score: Math.round(score), tags, device: d};
+}
+
+function render() {
+  const cfg = getConfig();
+  document.getElementById('weight-val').textContent = cfg.weight + 'g';
+  document.getElementById('screen-val').textContent = cfg.screen + '"';
+  document.getElementById('battery-val').textContent = cfg.battery;
+
+  const pool = devices[cfg.type] || [];
+  const scored = pool.map(d => scoreDevice(d, cfg)).sort((a,b) => b.score - a.score);
+  const top = scored.slice(0, 5);
+  const typeName = cfg.type === 'phone' ? 'Intrinsically Safe Phone' : 'Explosion-Proof Tablet';
+  const totalCostEst = (top[0]?.device.price.match(/[\d,]+/)?.[0]?.replace(',','') || 2000) * cfg.fleet;
+
+  let html = '';
+
+  // Executive Summary
+  html += '<div class="report-section"><h3><i class="ph ph-file-text"></i> Executive Summary</h3>';
+  html += '<p>This report evaluates <strong>' + typeName + '</strong> options for a fleet of <strong>' + cfg.fleet + ' devices</strong> ';
+  html += 'in <strong>' + cfg.zone.replace('zone','Zone ') + '</strong> environments with <strong>Gas Group ' + cfg.gas + '</strong> ';
+  html += 'and <strong>Temperature Class ' + cfg.temp + '</strong>.</p>';
+  html += '<p>Key requirements: max weight ' + cfg.weight + 'g, ~' + cfg.screen + '" screen, min ' + cfg.battery + 'mAh battery. ';
+  html += 'Required features: ' + (cfg.features.length ? cfg.features.join(', ') : 'none specified') + '.</p>';
+  if (top[0]) {
+    html += '<p style="color:var(--accent);font-weight:600">Top recommendation: ' + top[0].device.name + ' (score ' + top[0].score + '/100)</p>';
+  }
+  html += '</div>';
+
+  // Why IS devices
+  html += '<div class="report-section"><h3><i class="ph ph-warning"></i> Why Intrinsically Safe Devices?</h3>';
+  html += '<ul>';
+  html += '<li><strong>Legal requirement:</strong> ATEX 2014/34/EU and IEC 60079 mandate certified equipment in classified hazardous areas.</li>';
+  html += '<li><strong>Safety:</strong> IS devices limit electrical energy to prevent ignition of flammable gases, vapors, or dust.</li>';
+  html += '<li><strong>Productivity:</strong> Workers can use smartphones/tablets for digital workflows, inspections, and communication in the field.</li>';
+  html += '<li><strong>Compliance:</strong> Avoids fines, shutdowns, and liability from using non-certified consumer devices in Ex zones.</li>';
+  html += '</ul></div>';
+
+  // Recommendations
+  html += '<div class="report-section"><h3><i class="ph ph-ranking"></i> Device Rankings</h3>';
+  top.forEach((r, i) => {
+    const d = r.device;
+    const barClass = r.score >= 70 ? 'green' : r.score >= 40 ? 'yellow' : 'red';
+    html += '<div class="rec-card"><div class="rec-rank">#' + (i+1) + '</div><div style="flex:1">';
+    html += '<h4>' + d.name + ' <span style="font-weight:400;color:var(--text-muted)">by ' + d.brand + '</span></h4>';
+    html += '<div class="score-bar"><div class="score-fill ' + barClass + '" style="width:' + r.score + '%"></div></div>';
+    html += '<span style="font-size:11px;color:var(--text-muted)">Match score: ' + r.score + '/100</span>';
+    html += '<p>' + d.desc + '</p>';
+    html += '<p style="font-size:12px">' + d.screen + '" screen | ' + d.weight + 'g | ' + d.battery + 'mAh | ' + d.os + ' | ' + d.ip + ' | ' + d.price + '</p>';
+    html += '<div>' + r.tags.map(t => '<span class="rec-tag tag-' + t.c + '">' + t.t + '</span>').join('') + '</div>';
+    html += '</div></div>';
+  });
+  html += '</div>';
+
+  // TCO
+  html += '<div class="report-section"><h3><i class="ph ph-calculator"></i> Total Cost of Ownership (TCO)</h3>';
+  const unitPrice = parseInt((top[0]?.device.price.match(/[\d,]+/)?.[0] || '2000').replace(',',''));
+  const accessories = Math.round(unitPrice * 0.15);
+  const mdm = 50 * cfg.fleet;
+  const total3yr = (unitPrice + accessories) * cfg.fleet + mdm * 3;
+  html += '<table style="width:100%;font-size:14px;color:var(--text-muted)">';
+  html += '<tr><td>Device cost (' + top[0]?.device.name + ')</td><td style="text-align:right">' + unitPrice.toLocaleString() + ' x ' + cfg.fleet + ' = <strong>€' + (unitPrice * cfg.fleet).toLocaleString() + '</strong></td></tr>';
+  html += '<tr><td>Accessories (cases, chargers, screen protectors, ~15%)</td><td style="text-align:right">€' + (accessories * cfg.fleet).toLocaleString() + '</td></tr>';
+  html += '<tr><td>MDM/EMM license (~€50/device/year)</td><td style="text-align:right">€' + (mdm * 3).toLocaleString() + ' (3 years)</td></tr>';
+  html += '<tr style="border-top:2px solid var(--border)"><td><strong>3-Year TCO</strong></td><td style="text-align:right;color:var(--accent)"><strong>€' + total3yr.toLocaleString() + '</strong></td></tr>';
+  html += '<tr><td>Per device per year</td><td style="text-align:right">€' + Math.round(total3yr / cfg.fleet / 3).toLocaleString() + '</td></tr>';
+  html += '</table></div>';
+
+  // SW Update importance
+  if (cfg.features.includes('updates')) {
+    html += '<div class="report-section"><h3><i class="ph ph-arrows-clockwise"></i> Why OS & Security Updates Matter</h3>';
+    html += '<ul>';
+    html += '<li><strong>Security patches:</strong> Unpatched devices are vulnerable to malware and data breaches — critical for OT/ICS-connected devices.</li>';
+    html += '<li><strong>App compatibility:</strong> Enterprise apps (SAP, Maximo, Salesforce) drop support for outdated OS versions within 2-3 years.</li>';
+    html += '<li><strong>Compliance:</strong> ISO 27001 and IEC 62443 require current, patched software on all connected devices.</li>';
+    html += '<li><strong>TCO:</strong> A device without updates becomes unusable in 2-3 years. 5-year update guarantees match the typical replacement cycle.</li>';
+    html += '</ul></div>';
+  }
+
+  // Form factor
+  html += '<div class="report-section"><h3><i class="ph ph-device-mobile"></i> Form Factor Considerations</h3>';
+  html += '<p>Your specified max weight of <strong>' + cfg.weight + 'g</strong> and screen size of <strong>' + cfg.screen + '"</strong>.</p>';
+  if (cfg.type === 'phone') {
+    html += '<ul>';
+    html += '<li>IS phones typically weigh 260-350g (heavier than consumer phones due to Ex enclosure).</li>';
+    html += '<li>One-handed use is practical up to ~6" screens and ~320g.</li>';
+    html += '<li>For extended field use, consider a holster/belt clip to reduce fatigue.</li>';
+    html += '</ul>';
+  } else {
+    html += '<ul>';
+    html += '<li>IS tablets range from 490g (7") to 720g (10.1").</li>';
+    html += '<li>8" tablets offer the best balance of screen size and portability for field inspections.</li>';
+    html += '<li>10.1" tablets are better for SCADA/HMI display, P&IDs, and data entry.</li>';
+    html += '</ul>';
+  }
+  html += '</div>';
+
+  html += '<p style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:32px">Generated by <a href="https://exknowledge.com/buying-report.html" style="color:var(--accent)">ExKnowledge Buying Report Generator</a> | Data is indicative — verify specs with manufacturers before purchasing.</p>';
+
+  document.getElementById('report-output').innerHTML = html;
+}
+
+// Bind all inputs
+Object.values(els).forEach(el => el.addEventListener('input', render));
+Object.values(els).forEach(el => el.addEventListener('change', render));
+feats.forEach(f => document.getElementById('feat-'+f)?.addEventListener('change', render));
+render();
+
+if (new URLSearchParams(location.search).get('embed') === '1') {
+  document.querySelector('.nav')?.remove();
+  document.querySelector('.footer')?.remove();
+  document.querySelector('.embed-box')?.remove();
+}
+</script>
+</body>
+</html>

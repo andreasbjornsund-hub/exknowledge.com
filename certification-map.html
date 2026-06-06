@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Ex Certification Map — ATEX, IECEx, NEC by Country | ExKnowledge</title>
+  <meta name="description" content="Interactive world map showing which explosion protection certification schemes apply in each country: ATEX, IECEx, NEC/CEC, GOST, NEPSI, and more.">
+  <link rel="canonical" href="https://exknowledge.com/certification-map.html">
+  <meta property="og:title" content="World Ex Certification Map — ExKnowledge">
+  <meta property="og:description" content="Interactive world map showing which explosion protection certification schemes apply in each country.">
+  <meta property="og:url" content="https://exknowledge.com/certification-map.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 40 44\'><polygon points=\'20,0 40,11 40,33 20,44 0,33 0,11\' fill=\'%231a1917\' stroke=\'%23d4a843\' stroke-width=\'2.5\'/><text x=\'20\' y=\'27\' text-anchor=\'middle\' font-size=\'16\' font-weight=\'700\' fill=\'%23d4a843\' font-family=\'system-ui\'>Ex</text></svg>">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://exknowledge.com/"},{"@type":"ListItem","position":2,"name":"Certification Map","item":"https://exknowledge.com/certification-map.html"}]}
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5VSBXBSL');</script>
+  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
+  <style>
+    .map-container { position: relative; width: 100%; max-width: 960px; margin: 0 auto 32px; }
+    .map-container svg { width: 100%; height: auto; }
+    .map-legend { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 20px 0 32px; }
+    .map-legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-muted); }
+    .map-legend-swatch { width: 16px; height: 16px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.1); }
+    .country-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 24px 0; }
+    .country-table th { text-align: left; padding: 10px 12px; border-bottom: 2px solid var(--border); color: var(--text-bright); font-weight: 600; }
+    .country-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); color: var(--text-muted); }
+    .country-table tr:hover td { background: rgba(212,168,67,0.05); }
+    .scheme-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin: 1px 2px; }
+    .scheme-atex { background: #2563eb22; color: #60a5fa; border: 1px solid #2563eb44; }
+    .scheme-iecex { background: #16a34a22; color: #4ade80; border: 1px solid #16a34a44; }
+    .scheme-nec { background: #dc262622; color: #f87171; border: 1px solid #dc262644; }
+    .scheme-gost { background: #9333ea22; color: #c084fc; border: 1px solid #9333ea44; }
+    .scheme-other { background: #d4a84322; color: #d4a843; border: 1px solid #d4a84344; }
+    .embed-box { background: var(--bg-card); border: 1px solid var(--border); padding: 20px; margin: 32px 0; }
+    .embed-box h3 { margin: 0 0 12px; font-size: 16px; color: var(--text-bright); }
+    .embed-box textarea { width: 100%; height: 60px; background: var(--bg); border: 1px solid var(--border); color: var(--text-muted); padding: 8px; font-family: monospace; font-size: 12px; resize: none; }
+    .embed-box button { margin-top: 8px; background: var(--accent); color: var(--bg); border: none; padding: 8px 20px; font-weight: 600; cursor: pointer; }
+    .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 16px 0 24px; }
+    .filter-btn { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); padding: 6px 14px; font-size: 13px; cursor: pointer; transition: all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    #country-search { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-bright); padding: 8px 14px; font-size: 14px; width: 100%; max-width: 300px; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-book-open-text"></i> Knowledge <i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
+          <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zone Classification</a></li>
+          <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection Methods</a></li>
+          <li><a href="/pages/standards.html"><i class="ph ph-scales"></i> Standards &amp; Regulations</a></li>
+          <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperature Classes</a></li>
+          <li><a href="/pages/gas-groups.html"><i class="ph ph-flame"></i> Gas Groups</a></li>
+          <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Equipment Categories</a></li>
+          <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Reference</a></li>
+          <li><a href="/pages/faq.html"><i class="ph ph-question"></i> FAQ</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-folder-open"></i> Resources <i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a></li>
+          <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Training</a></li>
+          <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a>
+          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west"></i> Certification Map</a></li>
+          <li><a href="/buying-report.html"><i class="ph ph-file-text"></i> Buying Report</a></li></li>
+          <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinars <span class="badge-soon">Soon</span></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i> Community <i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Events <span class="badge-soon">Soon</span></a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Industry Links</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> About</a></li>
+    </ul>
+    <select class="lang-select" disabled aria-label="Language" style="opacity:0.4;cursor:not-allowed;pointer-events:none">
+      <option selected>🇬🇧 English</option>
+      <option>🇩🇪 Deutsch</option>
+      <option>🇳🇴 Norsk</option>
+      <option>🇩🇰 Dansk</option>
+      <option>🇸🇪 Svenska</option>
+      <option>🇫🇮 Suomi</option>
+      <option>🇪🇸 Español</option>
+      <option>🇳🇱 Nederlands</option>
+      <option>🇵🇹 Português</option>
+      <option>🇮🇹 Italiano</option>
+      <option>🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu"><i class="ph-bold ph-list"></i></div>
+  </div>
+</nav>
+
+<main style="max-width:960px;margin:0 auto;padding:24px 20px">
+  <h1><i class="ph ph-globe-hemisphere-west"></i> World Ex Certification Map</h1>
+  <p style="color:var(--text-muted);margin-bottom:24px">Which explosion protection certification schemes apply in each country? Use the filters to explore, or search for a specific country.</p>
+
+  <div class="map-legend">
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#2563eb"></div> ATEX (EU/EEA)</div>
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#16a34a"></div> IECEx</div>
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#dc2626"></div> NEC/CEC (North America)</div>
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#9333ea"></div> GOST-R/TR CU</div>
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#d4a843"></div> National scheme</div>
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#555"></div> No data / varies</div>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="atex">ATEX</button>
+    <button class="filter-btn" data-filter="iecex">IECEx</button>
+    <button class="filter-btn" data-filter="nec">NEC/CEC</button>
+    <button class="filter-btn" data-filter="gost">GOST-R</button>
+    <button class="filter-btn" data-filter="other">National</button>
+  </div>
+
+  <input type="text" id="country-search" placeholder="Search country..." autocomplete="off">
+
+  <table class="country-table" id="cert-table">
+    <thead><tr><th>Country</th><th>Primary Scheme</th><th>Also Accepted</th><th>Certifying Body</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="embed-box">
+    <h3><i class="ph ph-code"></i> Embed this map on your website</h3>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px">Copy the code below to embed an interactive certification map on your site. Free to use with attribution.</p>
+    <textarea readonly id="embed-code">&lt;iframe src="https://exknowledge.com/certification-map.html?embed=1" width="100%" height="600" frameborder="0" title="World Ex Certification Map — ExKnowledge"&gt;&lt;/iframe&gt;
+&lt;p style="font-size:11px"&gt;Source: &lt;a href="https://exknowledge.com/certification-map.html"&gt;ExKnowledge&lt;/a&gt;&lt;/p&gt;</textarea>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').value);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)">Copy Embed Code</button>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Knowledge</h4>
+        <a href="/pages/fundamentals.html">Fundamentals</a>
+        <a href="/pages/zone-classification.html">Zone Classification</a>
+        <a href="/pages/protection-methods.html">Protection Methods</a>
+        <a href="/pages/standards.html">Standards</a>
+        <a href="/pages/temperature-classes.html">Temperature Classes</a>
+        <a href="/pages/gas-groups.html">Gas Groups</a>
+        <a href="/pages/cheat-sheet.html">Quick Reference</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a>
+        <a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i> All Episodes</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i> Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i> Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i> RSS Feed</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/about.html"><i class="ph ph-info"></i> About</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a>
+        <a href="/events.html"><i class="ph ph-calendar-blank"></i> Events</a>
+        <a href="/links.html"><i class="ph ph-link"></i> Industry Links</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+      <p>Not a substitute for official standards documents or professional engineering advice.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/js/nav.js"></script>
+</body>
+</html>
+
+<script>
+const countries = [
+  {c:"Austria",p:"ATEX",a:"IECEx",b:"TUV Austria"},
+  {c:"Belgium",p:"ATEX",a:"IECEx",b:"ISSeP, BVI"},
+  {c:"Bulgaria",p:"ATEX",a:"IECEx",b:"SASM"},
+  {c:"Croatia",p:"ATEX",a:"IECEx",b:"FSB Zagreb"},
+  {c:"Cyprus",p:"ATEX",a:"IECEx",b:"CYS"},
+  {c:"Czech Republic",p:"ATEX",a:"IECEx",b:"FTZÚ"},
+  {c:"Denmark",p:"ATEX",a:"IECEx",b:"DEMKO/UL"},
+  {c:"Estonia",p:"ATEX",a:"",b:"TJA"},
+  {c:"Finland",p:"ATEX",a:"IECEx",b:"Tukes/SGS Fimko"},
+  {c:"France",p:"ATEX",a:"IECEx",b:"INERIS, LCIE"},
+  {c:"Germany",p:"ATEX",a:"IECEx",b:"PTB, BAM, DMT, TUV"},
+  {c:"Greece",p:"ATEX",a:"",b:"ELOT"},
+  {c:"Hungary",p:"ATEX",a:"IECEx",b:"BKI"},
+  {c:"Iceland",p:"ATEX",a:"",b:"UST"},
+  {c:"Ireland",p:"ATEX",a:"",b:"NSAI"},
+  {c:"Italy",p:"ATEX",a:"IECEx",b:"CESI, IMQ, CEC"},
+  {c:"Latvia",p:"ATEX",a:"",b:"LATCERT"},
+  {c:"Liechtenstein",p:"ATEX",a:"",b:"via Switzerland"},
+  {c:"Lithuania",p:"ATEX",a:"",b:"LST"},
+  {c:"Luxembourg",p:"ATEX",a:"",b:"ILNAS"},
+  {c:"Malta",p:"ATEX",a:"",b:"MCCAA"},
+  {c:"Netherlands",p:"ATEX",a:"IECEx",b:"Dekra, KEMA/DNV"},
+  {c:"Norway",p:"ATEX",a:"IECEx",b:"Nemko, DNV, Presafe"},
+  {c:"Poland",p:"ATEX",a:"IECEx",b:"KDB (KOMAG), GIG, OBAC"},
+  {c:"Portugal",p:"ATEX",a:"",b:"ISQ"},
+  {c:"Romania",p:"ATEX",a:"IECEx",b:"INSEMEX"},
+  {c:"Slovakia",p:"ATEX",a:"",b:"SKTC"},
+  {c:"Slovenia",p:"ATEX",a:"",b:"SIQ"},
+  {c:"Spain",p:"ATEX",a:"IECEx",b:"Laboratorio Oficial JM Madariaga"},
+  {c:"Sweden",p:"ATEX",a:"IECEx",b:"RISE (SP)"},
+  {c:"Switzerland",p:"ATEX",a:"IECEx",b:"SUVA, Electrosuisse"},
+  {c:"Turkey",p:"ATEX",a:"IECEx",b:"TSE"},
+  {c:"United Kingdom",p:"ATEX/UKCA",a:"IECEx",b:"Baseefa, Sira, CSA, SGS"},
+  {c:"United States",p:"NEC (NFPA 70)",a:"IECEx (limited)",b:"UL, FM, CSA, Intertek"},
+  {c:"Canada",p:"CEC (CSA C22.1)",a:"IECEx (limited)",b:"CSA, QPS, Intertek"},
+  {c:"Mexico",p:"NOM (NEC-based)",a:"",b:"ANCE"},
+  {c:"Russia",p:"TR CU 012",a:"GOST-R",b:"Rostechnadzor, NANIO"},
+  {c:"Kazakhstan",p:"TR CU 012",a:"GOST-R",b:"KazEnergy"},
+  {c:"Belarus",p:"TR CU 012",a:"GOST-R",b:"Gosstandart"},
+  {c:"Armenia",p:"TR CU 012",a:"",b:"SARM"},
+  {c:"Kyrgyzstan",p:"TR CU 012",a:"",b:"CSM"},
+  {c:"China",p:"GB 3836 (NEPSI)",a:"IECEx",b:"NEPSI, CQST, PCEC, CNEX, TICR, Nanyang"},
+  {c:"Japan",p:"TIIS",a:"IECEx",b:"TIIS"},
+  {c:"South Korea",p:"KCs (KOSHA)",a:"IECEx",b:"KOSHA, KGS, KTL"},
+  {c:"India",p:"IS/IEC 60079",a:"IECEx",b:"PESO, CCOE, CMRI"},
+  {c:"Australia",p:"IECEx / AS/NZS",a:"ATEX (accepted)",b:"Simtars, TestSafe, TUV SUD"},
+  {c:"New Zealand",p:"IECEx / AS/NZS",a:"ATEX (accepted)",b:"WorkSafe NZ"},
+  {c:"Brazil",p:"INMETRO",a:"IECEx",b:"INMETRO, CEPEL"},
+  {c:"Argentina",p:"IRAM",a:"IECEx",b:"IRAM"},
+  {c:"South Africa",p:"SANS / IECEx",a:"ATEX (accepted)",b:"SABS, Exco"},
+  {c:"UAE",p:"IECEx",a:"ATEX (accepted)",b:"ESMA, ADNOC approved"},
+  {c:"Saudi Arabia",p:"IECEx",a:"ATEX (accepted)",b:"SASO, Saudi Aramco"},
+  {c:"Qatar",p:"IECEx",a:"ATEX (accepted)",b:"QP approved"},
+  {c:"Kuwait",p:"IECEx",a:"ATEX (accepted)",b:"KFSD/KOC approved"},
+  {c:"Singapore",p:"IECEx / SS",a:"ATEX (accepted)",b:"TUV SUD PSB, Spring"},
+  {c:"Malaysia",p:"IECEx / MS",a:"ATEX (accepted)",b:"SIRIM, DOSH"},
+  {c:"Indonesia",p:"SNI (IEC-based)",a:"IECEx",b:"SKK Migas, BSN"},
+  {c:"Thailand",p:"TIS (IEC-based)",a:"IECEx",b:"TISI"},
+  {c:"Vietnam",p:"QCVN (IEC-based)",a:"IECEx",b:"QUATEST"},
+  {c:"Philippines",p:"IEC-based",a:"IECEx",b:"BPS-DTI"},
+  {c:"Taiwan",p:"CNS (IEC-based)",a:"IECEx",b:"ITRI, BSMI"},
+  {c:"Nigeria",p:"IECEx",a:"ATEX (accepted)",b:"DPR, SON"},
+  {c:"Egypt",p:"IECEx",a:"ATEX (accepted)",b:"EOS"},
+  {c:"Algeria",p:"IECEx",a:"ATEX (accepted)",b:"IANOR"},
+  {c:"Colombia",p:"RETIE (IEC-based)",a:"IECEx",b:"CIDET"},
+  {c:"Chile",p:"IEC-based",a:"IECEx",b:"SEC"},
+  {c:"Peru",p:"NTP (IEC-based)",a:"IECEx",b:"INACAL"},
+  {c:"Israel",p:"IECEx",a:"ATEX (accepted)",b:"SII"},
+  {c:"Iran",p:"INSO (IEC-based)",a:"IECEx",b:"ISIRI"},
+  {c:"Iraq",p:"IECEx",a:"ATEX (accepted)",b:"COSQC"},
+  {c:"Azerbaijan",p:"GOST-R",a:"IECEx",b:"AzStandard"},
+  {c:"Oman",p:"IECEx",a:"ATEX (accepted)",b:"DGSM, PDO approved"},
+  {c:"Bahrain",p:"IECEx",a:"ATEX (accepted)",b:"MOI"},
+  {c:"Pakistan",p:"IEC-based",a:"IECEx",b:"PSQCA"},
+  {c:"Bangladesh",p:"IEC-based",a:"",b:"BSTI"},
+  {c:"Ghana",p:"IECEx",a:"",b:"GSA"},
+  {c:"Angola",p:"IECEx",a:"ATEX (accepted)",b:"IANORQ"},
+  {c:"Mozambique",p:"IECEx",a:"",b:"INNOQ"},
+  {c:"Trinidad & Tobago",p:"IEC-based",a:"NEC (accepted)",b:"TTBS"},
+];
+
+const tbody = document.querySelector('#cert-table tbody');
+const search = document.getElementById('country-search');
+const filterBtns = document.querySelectorAll('.filter-btn');
+let activeFilter = 'all';
+
+function schemeClass(s) {
+  s = s.toLowerCase();
+  if (s.includes('atex') || s.includes('ukca')) return 'atex';
+  if (s.includes('nec') || s.includes('cec') || s.includes('nom')) return 'nec';
+  if (s.includes('gost') || s.includes('tr cu')) return 'gost';
+  if (s.includes('iecex')) return 'iecex';
+  return 'other';
+}
+
+function badge(s) {
+  if (!s) return '';
+  return s.split(',').map(x => x.trim()).filter(Boolean)
+    .map(x => '<span class="scheme-badge scheme-' + schemeClass(x) + '">' + x + '</span>').join(' ');
+}
+
+function render() {
+  const q = search.value.toLowerCase();
+  tbody.innerHTML = '';
+  countries.filter(r => {
+    if (q && !r.c.toLowerCase().includes(q)) return false;
+    if (activeFilter === 'all') return true;
+    const all = (r.p + ' ' + r.a).toLowerCase();
+    if (activeFilter === 'atex') return all.includes('atex') || all.includes('ukca');
+    if (activeFilter === 'iecex') return all.includes('iecex');
+    if (activeFilter === 'nec') return all.includes('nec') || all.includes('cec');
+    if (activeFilter === 'gost') return all.includes('gost') || all.includes('tr cu');
+    if (activeFilter === 'other') return !all.includes('atex') && !all.includes('iecex') && !all.includes('nec') && !all.includes('cec') && !all.includes('gost') && !all.includes('tr cu');
+    return true;
+  }).forEach(r => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<td style="color:var(--text-bright);font-weight:500">' + r.c + '</td><td>' + badge(r.p) + '</td><td>' + badge(r.a) + '</td><td style="font-size:12px">' + r.b + '</td>';
+    tbody.appendChild(tr);
+  });
+}
+
+filterBtns.forEach(btn => btn.addEventListener('click', () => {
+  filterBtns.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeFilter = btn.dataset.filter;
+  render();
+}));
+search.addEventListener('input', render);
+render();
+
+// Embed mode: hide nav/footer
+if (new URLSearchParams(location.search).get('embed') === '1') {
+  document.querySelector('.nav')?.remove();
+  document.querySelector('.footer')?.remove();
+  document.querySelector('.embed-box')?.remove();
+}
+</script>
+</body>
+</html>
