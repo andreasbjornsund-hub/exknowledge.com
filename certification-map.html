@@ -534,7 +534,7 @@ function render() {
     if (activeFilter === 'iecex') return all.includes('iecex');
     if (activeFilter === 'nec') return all.includes('nec') || all.includes('cec');
     if (activeFilter === 'gost') return all.includes('gost') || all.includes('tr cu');
-    if (activeFilter === 'other') return !all.includes('atex') && !all.includes('iecex') && !all.includes('nec') && !all.includes('cec') && !all.includes('gost') && !all.includes('tr cu');
+    if (activeFilter === 'other') { const pri = r.p.toLowerCase(); return !pri.includes('atex') && !pri.includes('iecex') && !pri.includes('nec') && !pri.includes('cec') && !pri.includes('gost') && !pri.includes('tr cu'); }
     if (activeFilter === 'iecex-accepted') return all.includes('iecex') || all.includes('atex');
     return true;
   }).forEach(r => {
