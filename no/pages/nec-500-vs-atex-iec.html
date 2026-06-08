@@ -73,6 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Ads Remarketing -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16941652225"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16941652225');</script>
+<style>.soon-badge{display:inline-block;background:var(--accent);color:#fff;font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;margin-left:4px;vertical-align:middle;letter-spacing:0.5px;}</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
@@ -104,8 +105,173 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Training</a></li>
           <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a>
           <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west"></i> Certification Map</a></li>
+          <li><a href="/buying-report.html"><i class="ph ph-file-text"></i> Buying Report <span class="soon-badge">SOON</span></a></li></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinars <span class="badge-soon">Soon</span></a></li>
         </ul>
       </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i> Community <i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Events <span class="badge-soon">Soon</span></a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Industry Links <span class="badge-soon">Soon</span></a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> About</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/nec-500-vs-atex-iec.html">🇬🇧 English</option>
+      <option value="/de/pages/nec-500-vs-atex-iec.html">🇩🇪 Deutsch</option>
+      <option value="/no/pages/nec-500-vs-atex-iec.html" selected>🇳🇴 Norsk</option>
+      <option value="/da/pages/nec-500-vs-atex-iec.html">🇩🇰 Dansk</option>
+      <option value="/sv/pages/nec-500-vs-atex-iec.html">🇸🇪 Svenska</option>
+      <option value="/fi/pages/nec-500-vs-atex-iec.html">🇫🇮 Suomi</option>
+      <option value="/es/pages/nec-500-vs-atex-iec.html">🇪🇸 Español</option>
+      <option value="/nl/pages/nec-500-vs-atex-iec.html">🇳🇱 Nederlands</option>
+      <option value="/pt/pages/nec-500-vs-atex-iec.html">🇵🇹 Português</option>
+      <option value="/it/pages/nec-500-vs-atex-iec.html">🇮🇹 Italiano</option>
+      <option value="/ar/pages/nec-500-vs-atex-iec.html">🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb"><div class="container"><a href="/no/">Hjem</a> / <span>NEC 500/505 vs ATEX/IECEx</span></div></div>
+
+<div class="content-grid container">
+  <div class="content-main">
+    <h1><i class="ph ph-scales"></i> NEC 500/505 vs ATEX/IECEx: Nordamerikansk vs internasjonal eksplosjonssikring</h1>
+
+    <p>To klassifiseringsfilosofier dominerer elektriske installasjoner i eksplosjonsfarlige områder. <strong>Nord-Amerika</strong> bruker NEC-systemet (National Electrical Code) med Classes, Divisions og Groups. <strong>Europa og mesteparten av verden</strong> bruker ATEX/IECEx-systemet med soner, gassgrupper og EPL (Equipment Protection Levels). Å forstå begge systemene er nødvendig for alle som jobber på internasjonale anlegg eller eksporterer utstyr globalt.</p>
+
+    <h2 id="the-two-systems">Oversikt over de to systemene</h2>
+
+    <p>NEC-tilnærmingen, kodifisert i artikkel 500 og 505 i NFPA 70, har utviklet seg uavhengig av IEC-systemet som brukes av ATEX og IECEx. Artikkel 500 bruker den tradisjonelle <strong>Class/Division</strong>-metoden. Artikkel 505, introdusert senere, adopterer <strong>sone</strong>-konseptet fra IEC 60079-10 for å bedre internasjonal tilpasning.</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Aspekt</th><th>NEC 500 (Class/Division)</th><th>NEC 505 (Zone)</th><th>ATEX / IECEx (Zone)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Geografisk bruk</strong></td><td>USA, Canada</td><td>USA, Canada</td><td>EU, UK, mesteparten av verden</td></tr>
+        <tr><td><strong>Faregrunnlag</strong></td><td>Class I (gass), II (støv), III (fibre)</td><td>Zone 0, 1, 2 (kun gass)</td><td>Zone 0, 1, 2 (gass); Zone 20, 21, 22 (støv)</td></tr>
+        <tr><td><strong>Risikogradering</strong></td><td>2 nivåer (Div 1, Div 2)</td><td>3 nivåer (Zone 0, 1, 2)</td><td>3 nivåer (Zone 0, 1, 2)</td></tr>
+        <tr><td><strong>Gassklassifisering</strong></td><td>Groups A, B, C, D</td><td>Groups IIC, IIB, IIA</td><td>Groups IIC, IIB, IIA</td></tr>
+        <tr><td><strong>Støvklassifisering</strong></td><td>Class II Groups E, F, G</td><td>Ikke dekket</td><td>Zone 20, 21, 22 (IIIA, IIIB, IIIC)</td></tr>
+        <tr><td><strong>Lovramme</strong></td><td>NFPA 70 (vedtatt av AHJs)</td><td>NFPA 70 (vedtatt av AHJs)</td><td>EU-direktiv 2014/34/EU / IECEx-ordning</td></tr>
+        <tr><td><strong>Sertifiseringsorgan</strong></td><td>NRTLs (UL, FM, CSA)</td><td>NRTLs</td><td>Teknisk kontrollorgan (ATEX) / ExCBs (IECEx)</td></tr>
+        <tr><td><strong>Beskyttelseskonsept</strong></td><td>Explosion-proof (XP), intrinsically safe (IS)</td><td>IEC-tilpassede typer (Ex d, Ex i osv.)</td><td>IEC-tilpassede typer (Ex d, Ex i, Ex e osv.)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 id="division-to-zone-mapping">Tilordning Division til sone</h2>
+
+    <p>Det vanligste spørsmålet i praksis: <em>hvordan forholder NEC Divisions seg til IEC-soner?</em> Kort svar: de passer ikke perfekt, men det finnes praktiske ekvivalenter:</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>NEC 500 (Division)</th><th>IEC / ATEX / NEC 505 (Zone)</th><th>Farefrekvens</th></tr></thead>
+      <tbody>
+        <tr><td>. </td><td><strong>Zone 0</strong></td><td>Eksplosiv atmosfære kontinuerlig eller langvarig (&gt;1000 timer/år)</td></tr>
+        <tr><td><strong>Division 1</strong></td><td><strong>Zone 1</strong> (+ Zone 0)</td><td>Eksplosiv atmosfære sannsynlig ved normal drift (10–1000 timer/år)</td></tr>
+        <tr><td><strong>Division 2</strong></td><td><strong>Zone 2</strong></td><td>Eksplosiv atmosfære usannsynlig; kun ved unormal drift (&lt;10 timer/år)</td></tr>
+      </tbody>
+    </table></div>
+
+    <p><strong>Viktig forskjell:</strong> NEC 500 har ingen ekvivalent til sone 0. Division 1 dekker både sone 0 og sone 1. Det betyr at Division 1-utstyr teknisk er <em>overspesifisert</em> for sone 1 og underspesifisert for sone 0 (hvor kun EPL "a"-utstyr er tillatt etter IEC).</p>
+
+    <h2 id="gas-group-mapping">Sammenligning gassgrupper</h2>
+
+    <p>Begge systemene klassifiserer gasser etter tennegenskaper, men bruker ulike betegnelser:</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>NEC Group</th><th>IEC-gassgruppe</th><th>Representative gasser</th><th>MESG-område</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>IIC</td><td>Acetylen</td><td>&lt;0,50 mm</td></tr>
+        <tr><td>B</td><td>IIC (delvis IIB+H₂)</td><td>Hydrogen, butadien</td><td>&lt;0,50 mm</td></tr>
+        <tr><td>C</td><td>IIB</td><td>Etylen, dietyleter</td><td>0,50–0,90 mm</td></tr>
+        <tr><td>D</td><td>IIA</td><td>Metan, propan, bensin</td><td>&gt;0,90 mm</td></tr>
+      </tbody>
+    </table></div>
+
+    <p>NEC Groups A og B faller begge under IEC Group IIC, selv om IEC skiller mellom hydrogen og acetylen gjennom ulike testmetoder. Se <a href="gas-groups.html"><i class="ph ph-flask"></i> Gassgrupper</a> for mer bakgrunn.</p>
+
+    <h2 id="protection-methods-comparison">Beskyttelsesmetoder: ulike navn, samme fysikk</h2>
+
+    <p>NEC og IEC bruker ulike termer for tilsvarende beskyttelseskonsepter:</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>NEC-term</th><th>IEC/ATEX-betegnelse</th><th>IEC-standard</th><th>Prinsipp</th></tr></thead>
+      <tbody>
+        <tr><td>Explosion-proof (XP)</td><td>Ex d (flammesikker kapsling)</td><td>IEC 60079-1</td><td>Inneholde eksplosjonen i kapslingen</td></tr>
+        <tr><td>Intrinsically Safe (IS)</td><td>Ex i (Ex ia, Ex ib)</td><td>IEC 60079-11</td><td>Begrense energi under tenningsterskel</td></tr>
+        <tr><td>Purged/Pressurized</td><td>Ex p (Ex px, Ex py, Ex pz)</td><td>IEC 60079-2</td><td>Opprettholde overtrykk med inaktivt gass</td></tr>
+        <tr><td>Dust-ignition-proof</td><td>Ex t (støvbeskyttelse ved kapsling)</td><td>IEC 60079-31</td><td>Forhindre støvinntrengning og begrense overflatetemperatur</td></tr>
+        <tr><td>Non-incendive</td><td>Ex nA / Ex ec</td><td>IEC 60079-15 / -7</td><td>Ingen tenning ved normal drift</td></tr>
+        <tr><td>Hermetically sealed</td><td>Ex nC / Ex m</td><td>IEC 60079-15 / -18</td><td>Forsegle tennkilde fra atmosfære</td></tr>
+      </tbody>
+    </table></div>
+
+    <p>Fullstendig katalog over IEC-beskyttelsestyper finnes under <a href="protection-methods.html"><i class="ph ph-shield-check"></i> Beskyttelsesmetoder</a>. Forskjellen mellom egensikkerhet og flammesikker kapsling forklares på <a href="/pages/explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-scales"></i> Flammesikker kapsling vs egensikkerhet</a>.</p>
+
+    <h2 id="dual-certification">Dobbel sertifisering for globalt utstyr</h2>
+
+    <p>Utstyr for global bruk har ofte både NEC- og ATEX/IECEx-sertifiseringer. Dette innebærer:</p>
+
+    <ul>
+      <li><strong>Testoverlapp:</strong> Mange tester er i utgangspunktet identiske (flammespaltemål, slagprøving, temperaturstigning). Ett sett testresultater kan ofte tilfredsstille både NRTLs og tekniske kontrollorganer.</li>
+      <li><strong>Merkekrav:</strong> Dobbelt sertifisert utstyr bærer begge merker. Et typisk typeskilt kan vise: <code>Class I, Div 1, Groups C &amp; D</code> ved siden av <code>Ex db IIB T4 Gb</code>.</li>
+      <li><strong>Kvalitetssystemer:</strong> ATEX krever ISO 80079-34 (erstatter EN 13980); NEC-sertifisering via NRTLs som UL eller FM har eget fabrikkinspesjonsregime. Å drive begge gir merkostnader, men muliggjør global markedsadgang.</li>
+      <li><strong>IECEx som bro:</strong> IECEx-sertifikater aksepteres i økende grad som grunnlag for nasjonale godkjenninger i både ATEX- og ikke-ATEX-land. Det reduserer doble tester. Over 30 land aksepterer IECEx direkte.</li>
+    </ul>
+
+    <h2 id="practical-guidance">Praktisk veiledning for internasjonale anlegg</h2>
+
+    <h3>Scenario 1: Amerikansk selskap ekspanderer til Europa</h3>
+    <p>Division 1/Division 2-klassifiseringstegningene blir ikke akseptert i EU. Nødvendig:</p>
+    <ol>
+      <li>Reklassifisere områder etter IEC 60079-10-1 (gass) eller IEC 60079-10-2 (støv)</li>
+      <li>Tilordne eksisterende utstyr til ATEX-kategorier (Division 1-utstyr tilfredsstiller normalt kategori 2; Division 2 tilfredsstiller kategori 3)</li>
+      <li>Skaffe ATEX- eller IECEx-sertifisering for utstyr som ikke allerede er dobbelt sertifisert</li>
+      <li>Sørge for at installasjonen følger IEC 60079-14 (ikke NEC Article 501/502)</li>
+    </ol>
+
+    <h3>Scenario 2: Europeisk utstyr går til Nord-Amerika</h3>
+    <p>ATEX/IECEx-sertifisering er <em>ikke</em> anerkjent i USA og Canada. Nødvendig:</p>
+    <ol>
+      <li>Skaffe NRTL-listing (UL, FM, CSA eller tilsvarende)</li>
+      <li>NEC 505 (sonebasert) er akseptert i USA og gjør det lettere å oversette fra IEC-soner</li>
+      <li>Hvis anlegget bruker NEC 500 (divisionsbasert), må soneutstyr tilordnes riktig Division</li>
+      <li>Sjekk AHJ (Authority Having Jurisdiction). noen jurisdiksjoner aksepterer kun NEC 500</li>
+    </ol>
+
+    <h3>Scenario 3: Internasjonalt anlegg (f.eks. oljeplattform)</h3>
+    <p>Offshore plattformer opererer ofte under flere regelverk samtidig. Anbefalt fremgangsmåte:</p>
+    <ul>
+      <li>Bruk IEC 60079-10 for områdeklassifisering (sonesystem), selv om NEC er primærkode</li>
+      <li>Spesifiser dobbelt sertifisert utstyr der det er mulig</li>
+      <li>Vedlikehold to dokumentasjonssett: IEC-basert for internasjonalt og NEC-basert for amerikanske/canadiske inspektører</li>
+      <li>Tren personell i begge systemene. en sone 1-ingeniør bør forstå hva Division 1 betyr, og omvendt</li>
+    </ul>
+
+    <h2 id="key-differences">Grunnleggende filosofiske forskjeller</h2>
+
+    <ul>
+      <li><strong>Preskriptivt vs. ytelsesbasert:</strong> NEC 500 er mer preskriptiv ("bruk explosion-proof utstyr i Division 1"). IEC/ATEX er mer ytelsesbasert ("velg utstyr med passende EPL for sonen").</li>
+      <li><strong>Sone 0-gap:</strong> De farligste omgivelsene (kontinuerlig eksplosiv atmosfære) har ingen direkte NEC 500-ekvivalent. NEC 505 og IEC definerer begge sone 0 og krever EPL "a"-utstyr.</li>
+      <li><strong>Støvhåndtering:</strong> NEC separerer støv i Class II (Groups E, F, G); IEC integrerer støv i samme sonerammeverk (sone 20/21/22) med støvgrupper IIIA, IIIB, IIIC.</li>
+      <li><strong>Fiberfarer:</strong> NEC Class III (fibre/fnugg) har ingen IEC-ekvivalent. IEC behandler fibre innenfor støvrammeverket.</li>
+    </ul>
+
+    <h2 id="related-pages">Relaterte emner</h2>
+    <ul>
+      <li><a href="zone-classification.html"><i class="ph ph-map-trifold"></i> Soneklassifisering</a>. IEC-sonesystem i detalj</li>
+      <li><a href="standards.html"><i class="ph ph-book-open"></i> Standarder</a>. IEC 60079, ATEX, NEC-regelverk</li>
+      <li><a href="/pages/atex-vs-iecex.html"><i class="ph ph-scales"></i> ATEX vs IECEx</a>. europeisk vs internasjonal sertifisering</li>
+      <li><a href="protection-methods.html"><i class="ph ph-shield-check"></i> Beskyttelsesmetoder</a>. alle Ex-beskyttelsestyper</li>
+      <li><a href="gas-groups.html"><i class="ph ph-flask"></i> Gassgrupper</a>. IIA, IIB, IIC og hierarkiregelen</li>
+      <li><a href="/pages/explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-scales"></i> Flammesikker kapsling vs egensikkerhet</a></li>
+      <li><a href="atex-equipment-categories.html"><i class="ph ph-funnel"></i> ATEX-utstyrskategorier</a>. valgguide kategori 1, 2, 3</li>
+      <li><a href="dsear-regulations-uk.html"><i class="ph ph-flag"></i> DSEAR-forskrifter (UK)</a></li>
     </ul>
 
     <div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">

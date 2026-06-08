@@ -73,6 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Ads Remarketing -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16941652225"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16941652225');</script>
+<style>.soon-badge{display:inline-block;background:var(--accent);color:#fff;font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;margin-left:4px;vertical-align:middle;letter-spacing:0.5px;}</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -106,8 +107,173 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Training</a></li>
           <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a>
           <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west"></i> Certification Map</a></li>
+          <li><a href="/buying-report.html"><i class="ph ph-file-text"></i> Buying Report <span class="soon-badge">SOON</span></a></li></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinars <span class="badge-soon">Soon</span></a></li>
         </ul>
       </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i> Community <i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Events <span class="badge-soon">Soon</span></a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Industry Links <span class="badge-soon">Soon</span></a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> About</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/nec-500-vs-atex-iec.html">🇬🇧 English</option>
+      <option value="/de/pages/nec-500-vs-atex-iec.html">🇩🇪 Deutsch</option>
+      <option value="/no/pages/nec-500-vs-atex-iec.html">🇳🇴 Norsk</option>
+      <option value="/da/pages/nec-500-vs-atex-iec.html">🇩🇰 Dansk</option>
+      <option value="/sv/pages/nec-500-vs-atex-iec.html">🇸🇪 Svenska</option>
+      <option value="/fi/pages/nec-500-vs-atex-iec.html">🇫🇮 Suomi</option>
+      <option value="/es/pages/nec-500-vs-atex-iec.html" selected>🇪🇸 Español</option>
+      <option value="/nl/pages/nec-500-vs-atex-iec.html">🇳🇱 Nederlands</option>
+      <option value="/pt/pages/nec-500-vs-atex-iec.html">🇵🇹 Português</option>
+      <option value="/it/pages/nec-500-vs-atex-iec.html">🇮🇹 Italiano</option>
+      <option value="/ar/pages/nec-500-vs-atex-iec.html">🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb"><div class="container"><a href="/es/">Inicio</a> / <span>NEC 500/505 vs ATEX/IECEx</span></div></div>
+
+<div class="content-grid container">
+  <div class="content-main">
+    <h1><i class="ph ph-scales"></i> NEC 500/505 vs ATEX/IECEx: Protección contra explosiones en Norteamérica vs internacional</h1>
+
+    <p>Dos filosofías de clasificación dominan el mundo de las instalaciones eléctricas en emplazamientos peligrosos. <strong>Norteamérica</strong> utiliza el sistema NEC (National Electrical Code) con Clases, Divisiones y Grupos. <strong>Europa y la mayor parte del resto del mundo</strong> utiliza el sistema ATEX/IECEx con Zonas, grupos de gas y niveles de protección del equipo. Conocer ambos sistemas es necesario para cualquiera que trabaje en instalaciones multinacionales o exporte equipos a nivel global.</p>
+
+    <h2 id="the-two-systems">Los dos sistemas de un vistazo</h2>
+
+    <p>El enfoque NEC, recogido en los Artículos 500 y 505 de NFPA 70, evolucionó de forma independiente respecto al sistema IEC utilizado por ATEX e IECEx. El Artículo 500 emplea el método tradicional de <strong>Clase/División</strong>. El Artículo 505, introducido posteriormente, adopta el concepto de <strong>Zona</strong> de IEC 60079-10 para mejorar la armonización internacional.</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Aspecto</th><th>NEC 500 (Clase/División)</th><th>NEC 505 (Zona)</th><th>ATEX / IECEx (Zona)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Uso geográfico</strong></td><td>EE. UU., Canadá</td><td>EE. UU., Canadá</td><td>UE, Reino Unido, mayor parte del mundo</td></tr>
+        <tr><td><strong>Base del peligro</strong></td><td>Clase I (gas), II (polvo), III (fibras)</td><td>Zona 0, 1, 2 (solo gas)</td><td>Zona 0, 1, 2 (gas); Zona 20, 21, 22 (polvo)</td></tr>
+        <tr><td><strong>Graduación del riesgo</strong></td><td>2 niveles (Div 1, Div 2)</td><td>3 niveles (Zona 0, 1, 2)</td><td>3 niveles (Zona 0, 1, 2)</td></tr>
+        <tr><td><strong>Clasificación de gases</strong></td><td>Grupos A, B, C, D</td><td>Grupos IIC, IIB, IIA</td><td>Grupos IIC, IIB, IIA</td></tr>
+        <tr><td><strong>Clasificación de polvos</strong></td><td>Clase II Grupos E, F, G</td><td>No cubierto</td><td>Zona 20, 21, 22 (IIIA, IIIB, IIIC)</td></tr>
+        <tr><td><strong>Marco legal</strong></td><td>NFPA 70 (adoptado por AHJs)</td><td>NFPA 70 (adoptado por AHJs)</td><td>Directiva UE 2014/34/EU / esquema IECEx</td></tr>
+        <tr><td><strong>Organismo de certificación</strong></td><td>NRTLs (UL, FM, CSA)</td><td>NRTLs</td><td>Organismos notificados (ATEX) / ExCBs (IECEx)</td></tr>
+        <tr><td><strong>Concepto de protección</strong></td><td>A prueba de explosión (XP), seguridad intrínseca (IS)</td><td>Tipos alineados con IEC (Ex d, Ex i, etc.)</td><td>Tipos alineados con IEC (Ex d, Ex i, Ex e, etc.)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 id="division-to-zone-mapping">Correspondencia División-Zona</h2>
+
+    <p>La pregunta más habitual entre ingenieros: <em>¿cómo se relacionan las Divisiones NEC con las Zonas IEC?</em> La respuesta corta es que no encajan de forma exacta, pero existen equivalencias prácticas:</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>NEC 500 (División)</th><th>IEC / ATEX / NEC 505 (Zona)</th><th>Frecuencia del peligro</th></tr></thead>
+      <tbody>
+        <tr><td>. </td><td><strong>Zona 0</strong></td><td>Atmósfera explosiva de forma continua o durante largos periodos (&gt;1000 h/año)</td></tr>
+        <tr><td><strong>División 1</strong></td><td><strong>Zona 1</strong> (+ Zona 0)</td><td>Atmósfera explosiva probable durante el funcionamiento normal (10–1000 h/año)</td></tr>
+        <tr><td><strong>División 2</strong></td><td><strong>Zona 2</strong></td><td>Atmósfera explosiva improbable; solo en condiciones anormales (&lt;10 h/año)</td></tr>
+      </tbody>
+    </table></div>
+
+    <p><strong>Diferencia clave:</strong> NEC 500 no tiene equivalente de Zona 0. La División 1 abarca tanto Zona 0 como Zona 1. Esto significa que el equipo de División 1 está técnicamente <em>sobredimensionado</em> para aplicaciones de Zona 1 e infradimensionado para Zona 0 (donde solo se permite equipo con el nivel EPL "a" más exigente según IEC).</p>
+
+    <h2 id="gas-group-mapping">Referencia cruzada de grupos de gas</h2>
+
+    <p>Ambos sistemas clasifican los gases por sus características de ignición, pero usan convenciones de nomenclatura diferentes:</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Grupo NEC</th><th>Grupo de gas IEC</th><th>Gases representativos</th><th>Rango MESG</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>IIC</td><td>Acetileno</td><td>&lt;0,50 mm</td></tr>
+        <tr><td>B</td><td>IIC (parcialmente IIB+H₂)</td><td>Hidrógeno, butadieno</td><td>&lt;0,50 mm</td></tr>
+        <tr><td>C</td><td>IIB</td><td>Etileno, éter etílico</td><td>0,50–0,90 mm</td></tr>
+        <tr><td>D</td><td>IIA</td><td>Metano, propano, gasolina</td><td>&gt;0,90 mm</td></tr>
+      </tbody>
+    </table></div>
+
+    <p>Hay que tener en cuenta que los Grupos NEC A y B caen ambos dentro del Grupo IEC IIC, aunque IEC distingue el hidrógeno del acetileno mediante métodos de ensayo diferentes. Para los fundamentos de los grupos de gas, consulte <a href="gas-groups.html"><i class="ph ph-flask"></i> Grupos de gas</a>.</p>
+
+    <h2 id="protection-methods-comparison">Métodos de protección: nombres diferentes, misma física</h2>
+
+    <p>Los sistemas NEC e IEC usan terminología diferente para conceptos de protección equivalentes:</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Término NEC</th><th>Designación IEC/ATEX</th><th>Norma IEC</th><th>Principio</th></tr></thead>
+      <tbody>
+        <tr><td>Explosion-proof (XP)</td><td>Ex d (Antideflagrante)</td><td>IEC 60079-1</td><td>Contener la explosión dentro de la envolvente</td></tr>
+        <tr><td>Intrinsically Safe (IS)</td><td>Ex i (Ex ia, Ex ib)</td><td>IEC 60079-11</td><td>Limitar la energía por debajo del umbral de ignición</td></tr>
+        <tr><td>Purged/Pressurized</td><td>Ex p (Ex px, Ex py, Ex pz)</td><td>IEC 60079-2</td><td>Mantener presión positiva con gas inerte</td></tr>
+        <tr><td>Dust-ignition-proof</td><td>Ex t (Protección por envolvente contra polvo)</td><td>IEC 60079-31</td><td>Impedir la entrada de polvo y limitar la temperatura superficial</td></tr>
+        <tr><td>Non-incendive</td><td>Ex nA / Ex ec</td><td>IEC 60079-15 / -7</td><td>El funcionamiento normal no puede causar ignición</td></tr>
+        <tr><td>Hermetically sealed</td><td>Ex nC / Ex m</td><td>IEC 60079-15 / -18</td><td>Sellar la fuente de ignición respecto a la atmósfera</td></tr>
+      </tbody>
+    </table></div>
+
+    <p>Para el catálogo completo de tipos de protección IEC, consulte <a href="protection-methods.html"><i class="ph ph-shield-check"></i> Métodos de protección</a>. Para una explicación de la diferencia entre seguridad intrínseca y diseño antideflagrante, consulte <a href="/pages/explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-scales"></i> A prueba de explosión vs seguridad intrínseca</a>.</p>
+
+    <h2 id="dual-certification">Certificación dual para equipos globales</h2>
+
+    <p>Los equipos destinados a uso global suelen llevar certificaciones NEC y ATEX/IECEx simultáneamente. Esto es lo que implica:</p>
+
+    <ul>
+      <li><strong>Solapamiento de ensayos:</strong> Muchos ensayos son fundamentalmente iguales (dimensiones de juntas antillama, ensayos de impacto, elevación de temperatura). Un único conjunto de resultados puede satisfacer tanto a los NRTLs como a los organismos notificados.</li>
+      <li><strong>Requisitos de marcado:</strong> Los equipos con doble certificación llevan ambos marcados. Una placa típica podría mostrar: <code>Class I, Div 1, Groups C &amp; D</code> junto a <code>Ex db IIB T4 Gb</code>.</li>
+      <li><strong>Sistemas de calidad:</strong> ATEX requiere ISO 80079-34 (que sustituye a EN 13980); la certificación NEC mediante NRTLs como UL o FM tiene su propio régimen de inspección de fábrica. Mantener ambos supone un coste adicional, pero permite acceder al mercado global.</li>
+      <li><strong>IECEx como puente:</strong> Los certificados IECEx son cada vez más aceptados como base para aprobaciones nacionales tanto en países ATEX como en los que no lo son, lo que reduce los ensayos duplicados. Más de 30 países aceptan IECEx directamente.</li>
+    </ul>
+
+    <h2 id="practical-guidance">Orientación práctica para instalaciones multinacionales</h2>
+
+    <h3>Escenario 1: Empresa estadounidense que se expande a Europa</h3>
+    <p>Los planos de clasificación de División 1 / División 2 no serán aceptados en la UE. Es necesario:</p>
+    <ol>
+      <li>Reclasificar las áreas utilizando la metodología IEC 60079-10-1 (gas) o IEC 60079-10-2 (polvo)</li>
+      <li>Asignar los equipos existentes a categorías ATEX (el equipo de División 1 generalmente satisface la categoría 2; el de División 2 satisface la categoría 3)</li>
+      <li>Obtener la certificación ATEX o IECEx para cualquier equipo que no disponga ya de doble certificación</li>
+      <li>Asegurar que la instalación cumple con IEC 60079-14 (no con NEC Artículo 501/502)</li>
+    </ol>
+
+    <h3>Escenario 2: Equipo europeo que va a Norteamérica</h3>
+    <p>La certificación ATEX/IECEx <em>no</em> está reconocida en EE. UU. ni en Canadá. Se debe:</p>
+    <ol>
+      <li>Obtener un listado NRTL (UL, FM, CSA o equivalente)</li>
+      <li>NEC 505 (basado en Zonas) está aceptado en EE. UU. y facilita la correspondencia desde zonas IEC</li>
+      <li>Si la instalación usa NEC 500 (basado en Divisiones), hay que asignar el equipo de Zona a la División correspondiente</li>
+      <li>Consultar con la AHJ (Authority Having Jurisdiction). algunas jurisdicciones solo aceptan NEC 500</li>
+    </ol>
+
+    <h3>Escenario 3: Instalación multinacional (p. ej., plataforma petrolífera)</h3>
+    <p>Las plataformas offshore operan a menudo bajo múltiples regímenes regulatorios. Buenas prácticas:</p>
+    <ul>
+      <li>Usar IEC 60079-10 para la clasificación de emplazamientos (sistema de Zonas), incluso si NEC es el código principal</li>
+      <li>Especificar equipo con doble certificación siempre que sea posible</li>
+      <li>Mantener dos conjuntos de documentación: uno basado en IEC para el ámbito internacional y otro basado en NEC para los inspectores de EE. UU./Canadá</li>
+      <li>Formar al personal en ambos sistemas. un ingeniero de Zona 1 debe entender qué significa División 1, y viceversa</li>
+    </ul>
+
+    <h2 id="key-differences">Diferencias filosóficas clave</h2>
+
+    <ul>
+      <li><strong>Prescriptivo vs. basado en prestaciones:</strong> NEC 500 es más prescriptivo ("usar equipo a prueba de explosión en División 1"). IEC/ATEX es más basado en prestaciones ("seleccionar equipo con el EPL adecuado para la zona").</li>
+      <li><strong>Vacío de Zona 0:</strong> Los entornos más peligrosos (atmósfera explosiva continua) no tienen equivalente directo en NEC 500. NEC 505 e IEC definen la Zona 0, que exige equipo con EPL "a".</li>
+      <li><strong>Tratamiento del polvo:</strong> NEC separa el polvo en Clase II (Grupos E, F, G); IEC integra el polvo en el mismo marco de zonas (Zona 20/21/22) con grupos de polvo IIIA, IIIB, IIIC.</li>
+      <li><strong>Peligros por fibras:</strong> La Clase III de NEC (fibras/pelusas) no tiene equivalente IEC. IEC considera las fibras dentro del marco del polvo.</li>
+    </ul>
+
+    <h2 id="related-pages">Páginas relacionadas</h2>
+    <ul>
+      <li><a href="zone-classification.html"><i class="ph ph-map-trifold"></i> Clasificación de emplazamientos</a>. sistema de zonas IEC en detalle</li>
+      <li><a href="standards.html"><i class="ph ph-book-open"></i> Normas</a>. marcos regulatorios IEC 60079, ATEX, NEC</li>
+      <li><a href="/pages/atex-vs-iecex.html"><i class="ph ph-scales"></i> ATEX vs IECEx</a>. certificación europea vs internacional</li>
+      <li><a href="protection-methods.html"><i class="ph ph-shield-check"></i> Métodos de protección</a>. todos los tipos de protección Ex</li>
+      <li><a href="gas-groups.html"><i class="ph ph-flask"></i> Grupos de gas</a>. IIA, IIB, IIC y la regla de jerarquía</li>
+      <li><a href="/pages/explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-scales"></i> A prueba de explosión vs seguridad intrínseca</a></li>
+      <li><a href="atex-equipment-categories.html"><i class="ph ph-funnel"></i> Categorías de equipos ATEX</a>. guía de selección categoría 1, 2, 3</li>
+      <li><a href="dsear-regulations-uk.html"><i class="ph ph-flag"></i> Regulación DSEAR (Reino Unido)</a></li>
     </ul>
 
     <div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">

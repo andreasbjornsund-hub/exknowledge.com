@@ -182,6 +182,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Ads Remarketing -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16941652225"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16941652225');</script>
+<style>.soon-badge{display:inline-block;background:var(--accent);color:#fff;font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;margin-left:4px;vertical-align:middle;letter-spacing:0.5px;}</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -218,6 +219,536 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Training</a></li>
           <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a>
           <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west"></i> Certification Map</a></li>
+          <li><a href="/buying-report.html"><i class="ph ph-file-text"></i> Buying Report <span class="soon-badge">SOON</span></a></li></li>
+          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinars <span class="badge-soon">Soon</span></a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#"><i class="ph ph-users-three"></i> Community <i class="ph ph-caret-down dd-arrow"></i></a>
+        <ul class="dropdown">
+          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Events <span class="badge-soon">Soon</span></a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link"></i> Industry Links <span class="badge-soon">Soon</span></a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info"></i> About</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/pages/ex-equipment-selection-guide.html" selected>🇬🇧 English</option>
+      <option value="/de/pages/ex-equipment-selection-guide.html">🇩🇪 Deutsch</option>
+      <option value="/no/pages/ex-equipment-selection-guide.html">🇳🇴 Norsk</option>
+      <option value="/da/pages/ex-equipment-selection-guide.html">🇩🇰 Dansk</option>
+      <option value="/sv/pages/ex-equipment-selection-guide.html">🇸🇪 Svenska</option>
+      <option value="/fi/pages/ex-equipment-selection-guide.html">🇫🇮 Suomi</option>
+      <option value="/es/pages/ex-equipment-selection-guide.html">🇪🇸 Español</option>
+      <option value="/nl/pages/ex-equipment-selection-guide.html">🇳🇱 Nederlands</option>
+      <option value="/pt/pages/ex-equipment-selection-guide.html">🇵🇹 Português</option>
+      <option value="/it/pages/ex-equipment-selection-guide.html">🇮🇹 Italiano</option>
+      <option value="/ar/pages/ex-equipment-selection-guide.html">🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1000&q=80" alt="Ex Equipment Selection Guide" loading="lazy" width="820" height="240">
+        <h1>Ex Equipment Selection Guide</h1>
+
+        <p class="last-updated" style="font-size:13px;color:var(--text-muted);margin:-12px 0 24px;"><i class="ph ph-clock"></i> Last updated: March 2026 · Based on IEC 60079 (2020 edition) and ATEX 2014/34/EU</p>
+<section>
+<h2>The Selection Process</h2>
+<p>Selecting Ex equipment requires answering six questions in order:</p>
+<ol>
+  <li><strong>What <a href="/pages/zone-classification.html">zone</a> is the equipment in?</strong> → Determines minimum category (1, 2, or 3)</li>
+  <li><strong>What gas or dust is present?</strong> → Determines <a href="/pages/gas-groups.html">gas group</a> (IIA/IIB/IIC) or dust group (IIIA/IIIB/IIIC)</li>
+  <li><strong>What is the auto-ignition temperature?</strong> → Determines <a href="/pages/temperature-classes.html">temperature class</a> (T1–T6) or maximum surface temperature</li>
+  <li><strong>What does the equipment do?</strong> → Determines suitable <a href="/pages/protection-methods.html">protection methods</a> (Ex d, Ex i, etc.)</li>
+  <li><strong>What environment does it operate in?</strong> → Determines IP rating, materials, ambient temperature range (see <a href="/pages/installation-inspection.html">installation requirements</a>)</li>
+  <li><strong>What are the electrical parameters?</strong> → Voltage, current, power, frequency</li>
+</ol>
+<p>Each answer narrows the field until you have a shortlist of compliant options. Verify <a href="/pages/certification.html">certification</a> before purchasing. Then choose based on cost, availability, and suitability. Check the <a href="/pages/ex-markings.html">equipment marking</a> to confirm compliance.</p>
+</section>
+
+<section>
+<h2>Step 1: Zone → Category</h2>
+<p>Match the zone to the required equipment category or <a href="/pages/epl.html">EPL</a>:</p>
+
+<h3>Gas/Vapor Zones</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zone</th>
+      <th>Minimum Category</th>
+      <th>EPL</th>
+      <th>Can Also Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zone 0</strong></td>
+      <td>Category 1 G</td>
+      <td>Ga</td>
+      <td>Only Ga. nothing else allowed</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 1</strong></td>
+      <td>Category 2 G</td>
+      <td>Gb</td>
+      <td>Category 1 G (Ga) also acceptable</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 2</strong></td>
+      <td>Category 3 G</td>
+      <td>Gc</td>
+      <td>Category 1 G (Ga) or Category 2 G (Gb) also acceptable</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Dust Zones</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Zone</th>
+      <th>Minimum Category</th>
+      <th>EPL</th>
+      <th>Can Also Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Zone 20</strong></td>
+      <td>Category 1 D</td>
+      <td>Da</td>
+      <td>Only Da. nothing else allowed</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 21</strong></td>
+      <td>Category 2 D</td>
+      <td>Db</td>
+      <td>Category 1 D (Da) also acceptable</td>
+    </tr>
+    <tr>
+      <td><strong>Zone 22</strong></td>
+      <td>Category 3 D</td>
+      <td>Dc</td>
+      <td>Category 1 D (Da) or Category 2 D (Db) also acceptable</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Key rule:</strong> Higher-category equipment can always be used in lower-risk zones. Category 1 works everywhere; Category 3 only in Zone 2/22.</p>
+</section>
+
+<section>
+<h2>Step 2: Gas/Dust → Group</h2>
+
+<h3>For Gas/Vapor</h3>
+<p>Identify the gas and find its group:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Common Gases</th>
+      <th>Gas Group</th>
+      <th>Equipment Required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Propane, methane, butane, ammonia, acetone, ethanol, toluene, xylene</td>
+      <td>IIA</td>
+      <td>IIA, IIB, or IIC (any will work)</td>
+    </tr>
+    <tr>
+      <td>Ethylene, ethyl ether, some specialty solvents</td>
+      <td>IIB</td>
+      <td>IIB or IIC (IIA not sufficient)</td>
+    </tr>
+    <tr>
+      <td>Hydrogen, acetylene, carbon disulfide</td>
+      <td>IIC</td>
+      <td>IIC only (IIA and IIB not sufficient)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>When in doubt, use IIC.</strong> It works for all gases, adds cost (~10–30% more than IIA), but eliminates risk if gas composition changes.</p>
+
+<h3>For Dust</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Dust Type</th>
+      <th>Group</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Combustible flyings</td>
+      <td>IIIA</td>
+      <td>Cotton fibers, paper, textile lint, wood shavings</td>
+    </tr>
+    <tr>
+      <td>Non-conductive dust</td>
+      <td>IIIB</td>
+      <td>Flour, sugar, starch, grain, plastic powder, pharmaceutical powders</td>
+    </tr>
+    <tr>
+      <td>Conductive dust</td>
+      <td>IIIC</td>
+      <td>Aluminum powder, magnesium, iron filings, carbon black, graphite</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Equipment marked <strong>III</strong> (no letter) covers all dust types (IIIA, IIIB, IIIC). Equipment marked <strong>IIIC</strong> covers IIIC only.</p>
+</section>
+
+<section>
+<h2>Step 3: Temperature → T-Class or Maximum Surface Temp</h2>
+
+<h3>For Gas/Vapor</h3>
+<p>Find the gas's auto-ignition temperature (AIT) and select equipment with a T-class below that value:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Gas</th>
+      <th>AIT</th>
+      <th>Minimum T-Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Methane</td><td>595°C</td><td>T1 (450°C max)</td></tr>
+    <tr><td>Hydrogen</td><td>560°C</td><td>T1</td></tr>
+    <tr><td>Propane</td><td>470°C</td><td>T1</td></tr>
+    <tr><td>Acetylene</td><td>305°C</td><td>T2 (300°C max)</td></tr>
+    <tr><td>Ethylene</td><td>490°C</td><td>T1</td></tr>
+    <tr><td>Gasoline (petrol)</td><td>220–280°C</td><td>T3 (200°C max)</td></tr>
+    <tr><td>Acetaldehyde</td><td>140°C</td><td>T4 (135°C max)</td></tr>
+    <tr><td>Carbon disulfide</td><td>90°C</td><td>T6 (85°C max)</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Safety margin:</strong> Equipment T-class must be at least one class below the gas AIT. For example, if AIT = 200°C, use T3 (200°C) or colder, not T2 (300°C).</p>
+
+<h3>For Dust</h3>
+<p><a href="/pages/dust-explosion-protection.html">Dust</a> uses direct temperature marking (not T-classes). The equipment maximum surface temperature must be:</p>
+<ul>
+  <li><strong>⅔ of the dust cloud MIT</strong> (minimum ignition temperature of dust cloud)</li>
+  <li><strong>75°C below the layer ignition temperature (LIT)</strong> for a 5 mm layer</li>
+</ul>
+<p>Use whichever is more restrictive.</p>
+
+<p><strong>Example:</strong> Wheat flour has MIT = 440°C, LIT (5 mm) = 220°C.</p>
+<ul>
+  <li>Cloud limit: ⅔ × 440 = 293°C</li>
+  <li>Layer limit: 220 - 75 = 145°C</li>
+  <li><strong>Use T145°C or lower</strong> (layer limit is controlling)</li>
+</ul>
+</section>
+
+<section>
+<h2>Step 4: Application → Protection Method</h2>
+<p>Choose the protection method based on what the equipment does and the power level:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Application</th>
+      <th>Power Level</th>
+      <th>Recommended Method</th>
+      <th>Alternative</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Electric motor</strong></td>
+      <td>&gt; 1 kW</td>
+      <td><a href="/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (flameproof)</a></td>
+      <td>Ex e (Zone 2 only), Ex nA (Zone 2)</td>
+    </tr>
+    <tr>
+      <td><strong>Small motor</strong></td>
+      <td>&lt; 1 kW</td>
+      <td>Ex e (increased safety)</td>
+      <td>Ex d, Ex nA</td>
+    </tr>
+    <tr>
+      <td><strong>Light fixture</strong></td>
+      <td>Varies</td>
+      <td>Ex d (LED/fluorescent/halogen)</td>
+      <td>Ex e (LED only, Zone 1/2)</td>
+    </tr>
+    <tr>
+      <td><strong>Junction box</strong></td>
+      <td>N/A (passive)</td>
+      <td>Ex e (for general wiring)</td>
+      <td>Ex d (if contains sparking devices)</td>
+    </tr>
+    <tr>
+      <td><strong>Sensor/transmitter</strong></td>
+      <td>&lt; 5 W</td>
+      <td><a href="/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (intrinsic safety)</a></td>
+      <td>Ex d (housing), Ex e</td>
+    </tr>
+    <tr>
+      <td><strong>Control panel</strong></td>
+      <td>&gt; 10 kW</td>
+      <td>Ex p (pressurization)</td>
+      <td>Ex d (small panels), Ex e (terminal sections)</td>
+    </tr>
+    <tr>
+      <td><strong>Solenoid valve</strong></td>
+      <td>5–50 W</td>
+      <td>Ex m (encapsulation)</td>
+      <td>Ex d, Ex ia</td>
+    </tr>
+    <tr>
+      <td><strong>Portable equipment</strong></td>
+      <td>Battery</td>
+      <td>Ex ia, Ex ib</td>
+      <td>Ex d (heavier)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Cost ranking (low to high):</strong> Ex nA (Zone 2 only) &lt; Ex e &lt; Ex ia/ib &lt; Ex d &lt; Ex m &lt; Ex p</p>
+<p><strong>Weight ranking (light to heavy):</strong> Ex ia &lt; Ex e &lt; Ex m &lt; Ex d &lt; Ex p</p>
+</section>
+
+<section>
+<h2>Decision Flowchart</h2>
+
+<h3>Choosing Between Ex d and Ex i</h3>
+<pre><code>Is the power &lt; 20 W?
+├─ Yes → Consider Ex i (intrinsic safety)
+│  └─ Is it a sensor, transmitter, or low-power control circuit?
+│     ├─ Yes → Ex i is ideal
+│     └─ No → Check if barriers/isolators fit the system architecture
+│
+└─ No → Use Ex d or Ex e
+   └─ Does it have arcing/sparking parts (relays, switches, motors)?
+      ├─ Yes → Ex d (flameproof)
+      └─ No → Ex e (increased safety) is cheaper and lighter
+</code></pre>
+
+<h3>Zone 0 Equipment</h3>
+<pre><code>Zone 0 requires EPL Ga. Options:
+├─ Ex ia (intrinsic safety, 2-fault tolerance)
+├─ Ex ma (encapsulation, 2-fault protection)
+└─ Special Ex d or Ex px designs (rare, very expensive)
+
+→ 95% of Zone 0 installations use Ex ia.
+</code></pre>
+
+<h3>Zone 2 Equipment</h3>
+<pre><code>Zone 2 has relaxed requirements. Options:
+├─ Ex nA (non-sparking, cheapest)
+├─ Ex nC (enclosed, sparking allowed but enclosed)
+├─ Ex nR (restricted breathing)
+├─ Any higher-rated equipment (Ex d, Ex e, Ex i)
+
+→ Use Ex nA for motors/lights when possible (cost savings).
+→ Use Ex e for terminal boxes (good practice even though Ex nA would suffice).
+</code></pre>
+</section>
+
+<section>
+<h2>Equipment by Industry</h2>
+
+<h3>Oil & Gas (Offshore Platform)</h3>
+<ul>
+  <li><strong>Main motors (pumps, compressors):</strong> Ex d IIC T3, Category 2 G</li>
+  <li><strong>Lighting:</strong> Ex d IIC T4 LED fixtures, IP66</li>
+  <li><strong>Junction boxes:</strong> Ex e IIC T6, stainless steel (marine environment)</li>
+  <li><strong>Transmitters:</strong> Ex ia IIC T4, 4–20 mA loops with barriers in safe area</li>
+  <li><strong>Control panels:</strong> Ex px IIB T4 (pressurized enclosures in Zone 1 modules)</li>
+</ul>
+
+<h3>Chemical Processing</h3>
+<ul>
+  <li><strong>Agitator motors:</strong> Ex de IIB T3 (combined flameproof motor, increased safety terminal box)</li>
+  <li><strong>Process sensors:</strong> Ex ia IIC T4–T6 depending on solvent</li>
+  <li><strong>Analyzers:</strong> Ex d IIB T4 housings or Ex p purged cabinets</li>
+  <li><strong>Field instruments:</strong> Ex ib IIC T5 for Zone 1, Ex ia for critical loops</li>
+</ul>
+
+<h3>Pharmaceutical (Solvent Processing)</h3>
+<ul>
+  <li><strong>Tablet coating pans:</strong> Ex d IIA T3 motors (alcohol vapor = IIA)</li>
+  <li><strong>Extraction equipment:</strong> Ex d IIB T4 (ethanol/IPA = IIA, but use IIB for margin)</li>
+  <li><strong>Instrumentation:</strong> Ex ia IIC T4 (some solvents are IIB)</li>
+  <li><strong>Lighting:</strong> Ex d IIA T4 LED, IP66 (washdown environment)</li>
+</ul>
+
+<h3>Grain Handling (Dust)</h3>
+<ul>
+  <li><strong>Bucket elevator motors:</strong> Ex tb IIIB T135°C Db, IP6X</li>
+  <li><strong>Silo level sensors:</strong> Ex ia IIIB (some sensors certified for dust)</li>
+  <li><strong>Lighting:</strong> Ex tb IIIB T135°C Db, IP6X, LED</li>
+  <li><strong>Conveyor motors:</strong> Ex tb IIIB T120°C Db</li>
+</ul>
+
+<h3>Paint Spray Booth</h3>
+<ul>
+  <li><strong>Exhaust fan motor:</strong> Ex d IIA T3 (solvent vapor)</li>
+  <li><strong>Lighting:</strong> Ex d IIA T4 LED (inside booth = Zone 1)</li>
+  <li><strong>Controls:</strong> Ex e IIA T6 push-button stations</li>
+  <li><strong>Interlocks:</strong> Ex ia IIA safety circuits</li>
+</ul>
+</section>
+
+<section>
+<h2>Step 5: Environment → IP Rating and Materials</h2>
+
+<h3>IP Rating Selection</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Environment</th>
+      <th>Recommended IP Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Indoor, dry, climate-controlled</td>
+      <td>IP54</td>
+    </tr>
+    <tr>
+      <td>Indoor, occasional dust/moisture</td>
+      <td>IP65</td>
+    </tr>
+    <tr>
+      <td>Outdoor, industrial</td>
+      <td>IP66</td>
+    </tr>
+    <tr>
+      <td>Offshore, coastal, chemical washdown</td>
+      <td>IP66/67</td>
+    </tr>
+    <tr>
+      <td>Submersible, wet pits</td>
+      <td>IP68</td>
+    </tr>
+    <tr>
+      <td>Dust zones (Zone 20/21)</td>
+      <td>IP6X minimum (dust-tight)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Material Selection</h3>
+<ul>
+  <li><strong>Aluminum (AlSi10Mg, LM6):</strong> Light, good for most environments. Avoid in highly corrosive areas.</li>
+  <li><strong>Stainless steel (316L):</strong> Marine, offshore, chemical exposure. Heavier and more expensive than aluminum.</li>
+  <li><strong>Brass:</strong> Small components (<a href="/pages/cable-glands-hazardous-areas.html">cable glands</a>, connectors). Good corrosion resistance.</li>
+  <li><strong>Plastic/GRP:</strong> Ex e, Ex tb enclosures. Lightweight, corrosion-proof. Not suitable for Ex d (can't withstand internal explosion).</li>
+  <li><strong>Coatings:</strong> Powder coat, epoxy, or marine-grade paint for aluminum. Avoid painting flameproof joints.</li>
+</ul>
+</section>
+
+<section>
+<h2>Common Selection Mistakes</h2>
+
+<h3>1. Using Zone 2 Equipment in Zone 1</h3>
+<p>Category 3 (Gc) is only suitable for Zone 2. Installing it in Zone 1 violates <a href="/pages/atex-vs-iecex.html">ATEX/IECEx</a> requirements and creates real ignition risk.</p>
+
+<h3>2. Gas Group Mismatch</h3>
+<p>Installing IIA-rated equipment in a <a href="/pages/hydrogen-explosion-protection.html">hydrogen</a> (IIC) atmosphere. The flameproof gaps are too wide, and ignition energy limits are too high. Explosion will propagate.</p>
+
+<h3>3. Temperature Class Error</h3>
+<p>Using T3 equipment (200°C max) with gasoline vapor (AIT ~230°C). The equipment surface could reach 200°C, which is too close to the ignition threshold. Use T4 (135°C) or colder.</p>
+
+<h3>4. IP Rating Underspecification</h3>
+<p>Specifying IP54 for outdoor coastal installations. Water ingress and salt corrosion will damage the equipment within months. Use IP66/67 minimum for marine environments.</p>
+
+<h3>5. Ex i System Design Errors</h3>
+<p>Exceeding cable capacitance limits. The barrier/isolator allows 100 nF, the field device has 50 nF internal capacitance, and the cable is 50 nF/100m. Installing 150m of cable (75 nF) exceeds the total budget (100 nF). Explosion risk if a fault occurs.</p>
+
+<h3>6. Ignoring Ambient Temperature Limits</h3>
+<p>Standard equipment is rated for -20°C to +40°C. Installing it in a desert (55°C ambient) or Arctic location (-40°C) without verifying extended temperature rating. The T-class is calculated at max ambient. exceeding that changes the surface temperature.</p>
+</section>
+
+<section>
+<h2>Selection Checklist</h2>
+<ol>
+  <li>☐ Confirm zone classification from <a href="/pages/hazardous-area-classification.html">area classification</a> drawing</li>
+  <li>☐ Identify all gases/dusts that may be present (check process data, safety data sheets)</li>
+  <li>☐ Determine gas group: IIA, IIB, or IIC</li>
+  <li>☐ Find auto-ignition temperature (AIT) for gas or MIT/LIT for dust</li>
+  <li>☐ Select temperature class or maximum surface temperature</li>
+  <li>☐ Match category/EPL to zone (Category 1 for Zone 0, Category 2 for Zone 1, Category 3 for Zone 2)</li>
+  <li>☐ Choose protection method based on application (Ex d for motors, Ex i for sensors, etc.)</li>
+  <li>☐ Specify IP rating for environment (IP66 for outdoor/offshore)</li>
+  <li>☐ Check ambient temperature range (-20 to +40°C standard; extended if needed)</li>
+  <li>☐ For Ex i: calculate entity parameters (Ui/Ii vs Uo/Io, Ci/Li vs Co/Lo + cable)</li>
+  <li>☐ Verify electrical parameters (voltage, current, frequency) match supply</li>
+  <li>☐ Obtain equipment certificate and verify it matches all requirements</li>
+</ol>
+</section>
+
+<section>
+<h2>Related Topics</h2>
+<ul>
+  <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zone Classification</a>. Understanding zones 0/1/2 and 20/21/22</li>
+  <li><a href="/pages/gas-groups.html"><i class="ph ph-flask"></i> Gas Groups</a>. IIA, IIB, IIC explained</li>
+  <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperature Classes</a>. T1–T6 and AIT tables</li>
+  <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection Methods</a>. All Ex types in detail</li>
+  <li><a href="/pages/explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i> Explosion Proof vs Intrinsically Safe</a>. Choosing between Ex d and Ex i</li>
+  <li><a href="/pages/epl.html"><i class="ph ph-gauge"></i> Equipment Protection Levels</a>. Ga/Gb/Gc and Da/Db/Dc explained</li>
+  <li><a href="/pages/cable-glands-hazardous-areas.html"><i class="ph ph-plug"></i> Cable Glands</a>. Selecting the right glands for your equipment</li>
+</ul>
+</section>
+
+      
+        <div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">
+<strong style="color:var(--text);">Content Review</strong><br>
+Compiled from IEC 60079 series, ATEX 2014/34/EU, and IECEx operational documents. This reference guide does not replace official standards or certified site assessments. Always consult the applicable standard edition and a qualified Ex engineer for your specific application.
+</div>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4><i class="ph ph-list-bullets"></i> All Topics</h4>
+  <a href="fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a>
+  <a href="zone-classification.html"><i class="ph ph-map-trifold"></i> Zones</a>
+  <a href="gas-groups.html"><i class="ph ph-flask"></i> Gas Groups</a>
+  <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temp Classes</a>
+  <a href="protection-methods.html"><i class="ph ph-shield-check"></i> Protection</a>
+  <a href="epl.html"><i class="ph ph-gauge"></i> EPL</a>
+  <a href="ex-markings.html"><i class="ph ph-tag"></i> Markings</a>
+  <a href="standards.html"><i class="ph ph-book-open"></i> Standards</a>
+  <a href="certification.html"><i class="ph ph-certificate"></i> Certification</a>
+  <a href="installation-inspection.html"><i class="ph ph-wrench"></i> Installation</a>
+  <a href="cheat-sheet.html"><i class="ph ph-lightning"></i> Cheat Sheet</a>
+  <a href="atex-vs-iecex.html"><i class="ph ph-arrows-left-right"></i> ATEX vs IECEx</a>
+  <a href="explosion-proof-vs-intrinsically-safe.html"><i class="ph ph-git-diff"></i> Ex Proof vs IS</a>
+  <a href="how-to-read-atex-nameplate.html"><i class="ph ph-identification-badge"></i> ATEX Nameplate</a>
+  <a href="atex-directive.html"><i class="ph ph-scales"></i> ATEX Directive</a>
+  <a href="hazardous-area-classification.html"><i class="ph ph-map-pin"></i> Area Classification</a>
+  <a href="dust-explosion-protection.html"><i class="ph ph-wind"></i> Dust Explosions</a>
+  <a href="atex-for-beginners.html"><i class="ph ph-graduation-cap"></i> ATEX Beginners</a>
+  <a href="compex-certification.html"><i class="ph ph-exam"></i> CompEx</a>
+  <a href="hydrogen-explosion-protection.html"><i class="ph ph-atom"></i> Hydrogen Safety</a>
+  <a href="cable-glands-hazardous-areas.html"><i class="ph ph-plug"></i> Cable Glands</a>
+  <a href="ex-equipment-selection-guide.html" class="current"><i class="ph ph-clipboard-text"></i> Equipment Selection</a>
+        </div>
+      </aside>
+</div>
+
+
+<div class="references-wrapper">
+
+    <section class="references">
+      <h2>Sources &amp; References</h2>
+      <ol>
+        <li><a href="https://www.iecex.com/certified-equipment-scheme/overview/" target="_blank" rel="noopener">IECEx Certified Equipment Scheme - IECEx</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Electrical_equipment_in_hazardous_areas" target="_blank" rel="noopener">Electrical Equipment in Hazardous Areas - Wikipedia</a></li>
+        <li><a href="https://www.iecex.com/certified-equipment-scheme/guides/" target="_blank" rel="noopener">IECEx Guides - IECEx</a></li>
+        <li><a href="https://webstore.iec.ch/en/publication/635" target="_blank" rel="noopener">IEC 60079-0: General Requirements - IEC</a></li>
       </ol>
     </section>
 </div>
