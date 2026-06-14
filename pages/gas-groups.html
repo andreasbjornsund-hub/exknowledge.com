@@ -3,219 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Gas Groups IIA, IIB, IIC & Dust Groups: Classification Explained. ExKnowledge</title>
-  <meta name="description" content="Gas groups IIA, IIB, IIC explained with MESG and MIC ratio. Dust groups IIIA, IIIB, IIIC. Hierarchy rules and NEC equivalents.">
+  <title>Gas Groups IIA, IIB, IIC — Which Group Covers Your Gas? (Chart + Table)</title>
+  <meta name="description" content="Gas groups IIA, IIB, IIC explained with MESG values, MIC ratios, and a quick-reference chart. Includes dust groups IIIA–IIIC, hierarchy rules, and NEC equivalents.">
   <link rel="canonical" href="https://exknowledge.com/pages/gas-groups.html">
-  <meta property="og:title" content="Gas Groups IIA, IIB, IIC. ExKnowledge">
-  <meta property="og:description" content="Gas groups IIA, IIB, IIC explained with MESG and MIC ratio. Dust groups IIIA, IIIB, IIIC. Hierarchy rules and NEC equivalents.">
+  <meta property="og:title" content="Gas Groups IIA, IIB, IIC — Which Group Covers Your Gas? (Chart + Table)">
+  <meta property="og:description" content="Gas groups IIA, IIB, IIC explained with MESG values, MIC ratios, and a quick-reference chart. Includes dust groups IIIA–IIIC, hierarchy rules, and NEC equivalents.">
   <meta property="og:url" content="https://exknowledge.com/pages/gas-groups.html">
   <meta property="og:type" content="article">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1000&q=80">
   <meta property="og:site_name" content="ExKnowledge">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Gas Groups IIA, IIB, IIC. ExKnowledge">
-  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
-  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">  <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Gas Groups IIA, IIB, IIC. ExKnowledge",
-    "description": "Gas groups IIA, IIB, IIC explained with MESG and MIC ratio. Dust groups IIIA, IIIB, IIIC. Hierarchy rules and NEC equivalents.",
-    "url": "https://exknowledge.com/pages/gas-groups.html",
-    "image": "https://images.unsplash.com/photo-1566221857770-508d35ee6220?w=1000&q=80",
-    "author": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "inLanguage": "en",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "datePublished": "2025-11-01",
-    "dateModified": "2026-03-08",
-    "mainEntityOfPage": "https://exknowledge.com/pages/gas-groups.html",
-    "about": {
-      "@type": "Thing",
-      "name": "Explosion Protection"
-    }
+  <meta name="twitter:title" content="Gas Groups IIA, IIB, IIC — Which Group Covers Your Gas? (Chart + Table)">
+  <meta name="twitter:description" content="Gas groups IIA, IIB, IIC explained with MESG values, MIC ratios, and a quick-reference chart. Includes dust groups IIIA–IIIC, hierarchy rules, and NEC equivalents.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+/* ─── CTA Shared Styles ─── */
+.cta-section{background:var(--c-cream,#faf8f5);border-top:1px solid var(--c-sand,#e8e4de);padding:3rem 0}
+.cta-card{max-width:540px;margin:0 auto;text-align:center}
+.cta-card h3{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.4rem;color:var(--c-black,#1a1917);margin-bottom:0.5rem}
+.cta-card p{font-size:0.95rem;color:var(--c-slate,#64605a);margin-bottom:1.5rem;line-height:1.6}
+.cta-input{width:100%;font-size:1rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-textarea{width:100%;font-size:0.95rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;min-height:100px;resize:vertical;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-textarea:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-btn{width:100%;font-family:var(--font-display,Georgia,serif);font-weight:600;font-size:1rem;padding:0.9rem;background:var(--c-black,#1a1917);color:var(--c-yellow,#d4a843);border:none;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s}
+.cta-btn:hover{background:var(--c-charcoal,#2d2a26)}
+.cta-btn:disabled{opacity:0.5;cursor:default}
+.cta-ok{color:var(--c-green,#2d7d46);font-weight:600;margin-top:1rem;display:none}
+.cta-row{display:flex;gap:0.5rem}
+.cta-row .cta-input{flex:1}
+.cta-row .cta-btn{width:auto;padding:0.8rem 1.5rem;white-space:nowrap}
+
+/* ─── Newsletter Footer ─── */
+.footer-newsletter{background:var(--c-black,#1a1917);color:var(--c-cream,#faf8f5);padding:2.5rem 0 1.5rem}
+.footer-newsletter .container{max-width:700px;margin:0 auto;padding:0 1.5rem}
+.footer-nl-title{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.1rem;margin-bottom:0.3rem;color:var(--c-yellow,#d4a843)}
+.footer-nl-desc{font-size:0.85rem;opacity:0.7;margin-bottom:1rem}
+.footer-nl-form{display:flex;gap:0.5rem;max-width:420px}
+.footer-nl-input{flex:1;padding:0.7rem 0.9rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:0.9rem;font-family:inherit}
+.footer-nl-input::placeholder{color:rgba(255,255,255,0.4)}
+.footer-nl-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.footer-nl-btn{padding:0.7rem 1.2rem;background:var(--c-yellow,#d4a843);color:var(--c-black,#1a1917);border:none;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:var(--font-display,Georgia,serif)}
+.footer-nl-btn:hover{background:#e0b650}
+.footer-nl-ok{color:var(--c-yellow,#d4a843);font-size:0.9rem;margin-top:0.5rem;display:none}
+.footer-copy{text-align:center;font-size:0.75rem;opacity:0.35;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08)}
+
+/* ─── Scroll Popup ─── */
+.scroll-popup{position:fixed;bottom:-300px;left:50%;transform:translateX(-50%);width:min(92vw,440px);background:var(--c-white,#fff);border:1px solid var(--c-sand,#e8e4de);box-shadow:0 -4px 24px rgba(0,0,0,0.12);padding:1.8rem;z-index:1000;transition:bottom 0.4s ease}
+.scroll-popup.visible{bottom:1.5rem}
+.scroll-popup-close{position:absolute;top:0.6rem;right:0.8rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--c-mid,#999);line-height:1}
+.scroll-popup h4{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.15rem;margin-bottom:0.3rem;color:var(--c-black,#1a1917)}
+.scroll-popup p{font-size:0.88rem;color:var(--c-slate,#64605a);margin-bottom:1rem;line-height:1.5}
+.scroll-popup .cta-row{margin-bottom:0}
+@media(max-width:480px){.cta-row{flex-direction:column}.cta-row .cta-btn{width:100%}.footer-nl-form{flex-direction:column}
+</style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Gas Groups and Dust Groups",
+  "description": "Gas groups IIA, IIB, IIC explained with MESG values, MIC ratios, and a quick-reference chart. Includes dust groups IIIA\u2013IIIC, hierarchy rules, and NEC equivalents.",
+  "url": "https://exknowledge.com/pages/gas-groups.html",
+  "author": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://exknowledge.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Gas Groups and Dust Groups",
-        "item": "https://exknowledge.com/pages/gas-groups.html"
-      }
-    ]
+  "publisher": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the difference between gas group IIA, IIB, and IIC?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Gas groups classify flammable gases by ignition properties. IIA (e.g. methane, propane) is the least hazardous, IIB (e.g. ethylene, H₂S) is intermediate, and IIC (hydrogen, acetylene) is the most hazardous. Classification is based on MESG (Maximum Experimental Safe Gap) and MIC ratio (Minimum Igniting Current Ratio). Smaller MESG and MIC values mean a more dangerous gas."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can IIC-rated equipment be used in IIA or IIB areas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Equipment certified for a more hazardous gas group can always be used in less hazardous groups. IIC equipment works in IIA, IIB, and IIC atmospheres. IIB equipment works in IIA and IIB. IIA equipment can only be used in IIA. The hierarchy is IIC > IIB > IIA."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are dust groups IIIA, IIIB, and IIIC?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dust groups classify combustible dusts: IIIA covers combustible flyings (textile fibres, cotton lint), IIIB covers non-conductive dusts (grain flour, wood dust, coal), and IIIC covers conductive dusts (aluminium powder, magnesium, carbon black). IIIC is the most hazardous because conductive particles can bridge insulation gaps. A dust is conductive if its resistivity is ≤10³ Ω·m."
-        }
-      }
-    ]
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
   }
-]
+}
   </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5VSBXBSL');</script>
-<!-- End Google Tag Manager -->
-  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
-  <!-- hreflang -->
-  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/gas-groups.html">
-  <link rel="alternate" hreflang="ar" href="https://exknowledge.com/ar/pages/gas-groups.html">
-  <link rel="alternate" hreflang="da" href="https://exknowledge.com/da/pages/gas-groups.html">
-  <link rel="alternate" hreflang="de" href="https://exknowledge.com/de/pages/gas-groups.html">
-  <link rel="alternate" hreflang="es" href="https://exknowledge.com/es/pages/gas-groups.html">
-  <link rel="alternate" hreflang="fi" href="https://exknowledge.com/fi/pages/gas-groups.html">
-  <link rel="alternate" hreflang="it" href="https://exknowledge.com/it/pages/gas-groups.html">
-  <link rel="alternate" hreflang="nl" href="https://exknowledge.com/nl/pages/gas-groups.html">
-  <link rel="alternate" hreflang="nb" href="https://exknowledge.com/no/pages/gas-groups.html">
-  <link rel="alternate" hreflang="pt" href="https://exknowledge.com/pt/pages/gas-groups.html">
-  <link rel="alternate" hreflang="sv" href="https://exknowledge.com/sv/pages/gas-groups.html">
-  <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/gas-groups.html">
-<!-- Google Ads Remarketing -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16941652225"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16941652225');</script>
-<style>.soon-badge{display:inline-block;background:var(--accent);color:#fff;font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;margin-left:4px;vertical-align:middle;letter-spacing:0.5px;}</style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <nav class="nav">
   <div class="container">
-    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <a href="../" class="nav-logo">Ex<span>Knowledge</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
-      <li class="has-dropdown">
-        <a href="#"><i class="ph ph-book-open-text"></i> Knowledge <i class="ph ph-caret-down dd-arrow"></i></a>
-        <ul class="dropdown">
-        <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
-        <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zone Classification</a></li>
-        <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection Methods</a></li>
-        <li><a href="/pages/standards.html"><i class="ph ph-scales"></i> Standards &amp; Regulations</a></li>
-        <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperature Classes</a></li>
-        <li><a href="/pages/gas-groups.html"><i class="ph ph-flame"></i> Gas Groups</a></li>
-        <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Equipment Categories</a></li>
-        <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Reference</a></li>
-        <li><a href="/pages/faq.html"><i class="ph ph-question"></i> FAQ</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#"><i class="ph ph-folder-open"></i> Resources <i class="ph ph-caret-down dd-arrow"></i></a>
-        <ul class="dropdown">
-          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
-          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a></li>
-          <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
-          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
-          <li><a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a></li>
-          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Training</a></li>
-          <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a>
-          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west"></i> Certification Map</a></li>
-          <li><a href="/buying-report.html"><i class="ph ph-file-text"></i> Buying Report <span class="soon-badge">SOON</span></a></li></li>
-          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinars <span class="badge-soon">Soon</span></a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#"><i class="ph ph-users-three"></i> Community <i class="ph ph-caret-down dd-arrow"></i></a>
-        <ul class="dropdown">
-          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Events <span class="badge-soon">Soon</span></a></li>
-          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a></li>
-          <li><a href="/links.html"><i class="ph ph-link"></i> Industry Links <span class="badge-soon">Soon</span></a></li>
-        </ul>
-      </li>
-      <li><a href="/about.html"><i class="ph ph-info"></i> About</a></li>
+      <li><a href="../">Home</a></li>
+      <li><a href="fundamentals.html" class="">Fundamentals</a></li>
+      <li><a href="zone-classification.html" class="">Zones</a></li>
+      <li><a href="gas-groups.html" class="active">Gas Groups</a></li>
+      <li><a href="temperature-classes.html" class="">Temp Classes</a></li>
+      <li><a href="protection-methods.html" class="">Protection</a></li>
     </ul>
-    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
-      <option value="/pages/gas-groups.html" selected>🇬🇧 English</option>
-      <option value="/de/pages/gas-groups.html">🇩🇪 Deutsch</option>
-      <option value="/no/pages/gas-groups.html">🇳🇴 Norsk</option>
-      <option value="/da/pages/gas-groups.html">🇩🇰 Dansk</option>
-      <option value="/sv/pages/gas-groups.html">🇸🇪 Svenska</option>
-      <option value="/fi/pages/gas-groups.html">🇫🇮 Suomi</option>
-      <option value="/es/pages/gas-groups.html">🇪🇸 Español</option>
-      <option value="/nl/pages/gas-groups.html">🇳🇱 Nederlands</option>
-      <option value="/pt/pages/gas-groups.html">🇵🇹 Português</option>
-      <option value="/it/pages/gas-groups.html">🇮🇹 Italiano</option>
-      <option value="/ar/pages/gas-groups.html">🇸🇦 العربية</option>
-    </select>
-    <div class="burger" aria-label="Menu">
-      <i class="ph-bold ph-list"></i>
-    </div>
   </div>
 </nav>
 
-<div class="content-layout">
+<section class="content-page">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../">Home</a> <span aria-hidden="true">/</span> <span>Gas Groups and Dust Groups</span>
+    </nav>
+    <div class="content-layout">
       <div class="content-body">
-        <img class="content-hero" src="https://images.unsplash.com/photo-1566221857770-508d35ee6220?w=1000&q=80" alt="Gas Groups and Dust Groups" loading="lazy" width="820" height="240">
-        <h1>Gas Groups IIA, IIB, IIC & Dust Groups: Classification Explained</h1>
-        <p class="last-updated" style="font-size:13px;color:var(--text-muted);margin:-12px 0 24px;"><i class="ph ph-clock"></i> Last updated: March 2026 · Based on IEC 60079 (2020 edition) and ATEX 2014/34/EU</p>
-        <p>Flammable gases, vapours, and dusts are classified into groups based on their ignition properties. Equipment must be certified for the specific gas or dust group present (the group appears on the <a href="/pages/ex-markings.html">equipment marking</a>) in the <a href="zone-classification.html"><i class="ph ph-map-trifold"></i> hazardous area</a>.</p>
+        <img class="content-hero" src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1000&q=80" alt="Gas Groups and Dust Groups" loading="lazy" width="820" height="240">
+        <h1>Gas Groups and Dust Groups</h1>
+        <p>Flammable gases, vapours, and dusts are classified into groups based on their ignition properties. Equipment must be certified for the specific gas or dust group present in the <a href="zone-classification.html">hazardous area</a>.</p>
 <h2 id="equipment-groups">Equipment Groups</h2>
-<h3 id="group-i--mining-firedamp">Group I. Mining (Firedamp)</h3>
+<h3 id="group-i--mining-firedamp">Group I — Mining (Firedamp)</h3>
 <p>Equipment for underground mines and surface installations where firedamp (methane from coal seams) and/or combustible dust may be present.</p>
-<h3 id="group-ii--surface-industries-gas-vapour">Group II. Surface Industries (Gas/Vapour)</h3>
+<h3 id="group-ii--surface-industries-gas-vapour">Group II — Surface Industries (Gas/Vapour)</h3>
 <p>Equipment for all other locations with explosive gas/vapour atmospheres. Subdivided into IIA, IIB, and IIC.</p>
-<h3 id="group-iii--surface-industries-dust">Group III. Surface Industries (Dust)</h3>
-<p>Equipment for locations with explosive <a href="/pages/dust-explosion-protection.html">dust</a> atmospheres. Subdivided into IIIA, IIIB, and IIIC.</p>
+<h3 id="group-iii--surface-industries-dust">Group III — Surface Industries (Dust)</h3>
+<p>Equipment for locations with explosive dust atmospheres. Subdivided into IIIA, IIIB, and IIIC.</p>
 <h2 id="gas-groups-group-ii">Gas Groups (Group II)</h2>
 <p>Gases are classified based on two measurable properties:</p>
 <ul>
-<li><strong>MESG</strong> (Maximum Experimental Safe Gap). the maximum width of a gap through which an internal explosion will not propagate (critical for <a href="/pages/protection-methods.html">flameproof enclosure</a> design) to an external explosive atmosphere. Tested in a standardized 25ml spherical chamber with a 25mm long gap. Smaller MESG = more dangerous gas.</li>
-<li><strong>MIC Ratio</strong> (Minimum Igniting Current Ratio). the ratio of the minimum igniting current of the gas to that of methane, measured in a standard intrinsic safety test apparatus. Smaller MIC ratio = more dangerous gas.</li>
+<li><strong>MESG</strong> (Maximum Experimental Safe Gap) — the maximum width of a gap through which an internal explosion will not propagate to an external explosive atmosphere. Tested in a standardized 25ml spherical chamber with a 25mm long gap. Smaller MESG = more dangerous gas.</li>
+<li><strong>MIC Ratio</strong> (Minimum Igniting Current Ratio) — the ratio of the minimum igniting current of the gas to that of methane, measured in a standard intrinsic safety test apparatus. Smaller MIC ratio = more dangerous gas.</li>
 </ul>
 <div class="table-wrap"><table><thead><tr>
 <th>Gas Group</th>
@@ -245,45 +154,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <td>Hydrogen, acetylene, carbon disulphide</td>
 <td>Most hazardous</td>
 </tr>
-</tbody></table></div>
+</tbody></table>
 <h3 id="important-notes">Important Notes</h3>
 <ul>
-<li>Equipment <a href="/pages/certification.html">certified</a> for <strong>IIC</strong> can be used in <strong>IIA</strong> and <strong>IIB</strong> atmospheres (IIC is the most stringent)</li>
+<li>Equipment certified for <strong>IIC</strong> can be used in <strong>IIA</strong> and <strong>IIB</strong> atmospheres (IIC is the most stringent)</li>
 <li>Equipment certified for <strong>IIB</strong> can be used in <strong>IIA</strong> atmospheres</li>
 <li>Equipment certified for <strong>IIA</strong> can only be used in <strong>IIA</strong> atmospheres</li>
-<li>The hierarchy is: <strong>IIC > IIB > IIA</strong> (IIC covers all). See the <a href="/pages/ex-equipment-selection-guide.html">equipment selection guide</a> for practical advice</li>
+<li>The hierarchy is: <strong>IIC > IIB > IIA</strong> (IIC covers all)</li>
 </ul>
 <h3 id="special-case-iib--h">Special Case: IIB + H₂</h3>
-<p>Some equipment is certified for "IIB + H₂". this means it is tested for all IIB gases plus hydrogen specifically, but not for acetylene or carbon disulphide. This is a common and cost-effective approach when hydrogen is present but acetylene/CS₂ are not.</p>
-<p>For <a href="/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (flameproof)</a> equipment marked IIB + H₂, the installation clearance distances must follow IIC requirements (40mm), not IIB (30mm).</p>
+<p>Some equipment is certified for "IIB + H₂" — this means it is tested for all IIB gases plus hydrogen specifically, but not for acetylene or carbon disulphide. This is a common and cost-effective approach when hydrogen is present but acetylene/CS₂ are not.</p>
+<p>For Ex d (flameproof) equipment marked IIB + H₂, the installation clearance distances must follow IIC requirements (40mm), not IIB (30mm).</p>
 <h3 id="representative-gases-by-group">Representative Gases by Group</h3>
 <p><strong>Group IIA:</strong></p>
 <ul>
-<li>Methane (CH₄). natural gas, biogas</li>
-<li>Propane (C₃H₈). LPG</li>
-<li>Butane (C₄H₁₀). LPG</li>
-<li>Acetone. solvents</li>
-<li>Ethanol. pharmaceutical, food/beverage</li>
-<li>Benzene, toluene, xylene. petrochemical</li>
-<li>Ammonia (NH₃). refrigeration, agriculture</li>
-<li>n-Hexane. extraction processes</li>
+<li>Methane (CH₄) — natural gas, biogas</li>
+<li>Propane (C₃H₈) — LPG</li>
+<li>Butane (C₄H₁₀) — LPG</li>
+<li>Acetone — solvents</li>
+<li>Ethanol — pharmaceutical, food/beverage</li>
+<li>Benzene, toluene, xylene — petrochemical</li>
+<li>Ammonia (NH₃) — refrigeration, agriculture</li>
+<li>n-Hexane — extraction processes</li>
 </ul>
 <p><strong>Group IIB:</strong></p>
 <ul>
-<li>Ethylene (C₂H₄). petrochemical feedstock</li>
-<li>Hydrogen sulphide (H₂S). oil & gas, wastewater</li>
-<li>Diethyl ether. pharmaceutical</li>
-<li>Ethylene oxide. sterilization</li>
+<li>Ethylene (C₂H₄) — petrochemical feedstock</li>
+<li>Hydrogen sulphide (H₂S) — oil & gas, wastewater</li>
+<li>Diethyl ether — pharmaceutical</li>
+<li>Ethylene oxide — sterilization</li>
 <li>Town gas / manufactured gas</li>
 </ul>
 <p><strong>Group IIC:</strong></p>
 <ul>
-<li>Hydrogen (H₂). refineries, electrolyzer plants, fuel cells</li>
-<li>Acetylene (C₂H₂). welding, chemical synthesis</li>
-<li>Carbon disulphide (CS₂). viscose industry</li>
+<li>Hydrogen (H₂) — refineries, electrolyzer plants, fuel cells</li>
+<li>Acetylene (C₂H₂) — welding, chemical synthesis</li>
+<li>Carbon disulphide (CS₂) — viscose industry</li>
 </ul>
 <h3 id="hydrogen-a-special-challenge">Hydrogen: A Special Challenge</h3>
-<p><a href="/pages/hydrogen-explosion-protection.html">Hydrogen</a> is in the most hazardous gas group (IIC) due to its extremely small MESG (0.29mm) and very low minimum ignition energy (0.017 mJ. about 10× less than methane). However, its auto-ignition temperature is relatively high (560°C), placing it only in <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i> temperature class</a> T1.</p>
+<p>Hydrogen is in the most hazardous gas group (IIC) due to its extremely small MESG (0.29mm) and very low minimum ignition energy (0.017 mJ — about 10× less than methane). However, its auto-ignition temperature is relatively high (560°C), placing it only in <a href="temperature-classes.html">temperature class</a> T1.</p>
 <p>This means hydrogen requires the most stringent protection against sparks/arcs (IIC) but is relatively forgiving on surface temperature (T1). This is the opposite of some IIA gases.</p>
 <h2 id="dust-groups-group-iii">Dust Groups (Group III)</h2>
 <div class="table-wrap"><table><thead><tr>
@@ -310,20 +219,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <td>Aluminium powder, magnesium, titanium, iron, carbon black</td>
 <td>Most hazardous</td>
 </tr>
-</tbody></table></div>
+</tbody></table>
 <h3 id="conductive-vs-non-conductive-dust">Conductive vs Non-Conductive Dust</h3>
 <p>The distinction matters because conductive dust particles can bridge insulation gaps and create short circuits, providing an ignition source even through Ex e (increased safety) protection. Conductive dusts require more stringent protection.</p>
 <p>A dust is considered conductive if its resistivity is ≤10³ Ω·m.</p>
 <h3 id="dust-ignition-properties">Dust Ignition Properties</h3>
 <p>Two distinct ignition mechanisms exist for dust:</p>
 <ol>
-<li><strong>Dust cloud ignition</strong>. airborne dust within its explosive range</li>
-<li><strong>Dust layer ignition</strong>. settled dust ignited by a hot surface at a much lower temperature than the cloud</li>
+<li><strong>Dust cloud ignition</strong> — airborne dust within its explosive range</li>
+<li><strong>Dust layer ignition</strong> — settled dust ignited by a hot surface at a much lower temperature than the cloud</li>
 </ol>
-<p>The <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i> temperature class</a> for dust equipment must consider both the dust cloud ignition temperature (T_CL) and the dust layer ignition temperature (T_5mm).</p>
+<p>The <a href="temperature-classes.html">temperature class</a> for dust equipment must consider both the dust cloud ignition temperature (T_CL) and the dust layer ignition temperature (T_5mm).</p>
 <p>Equipment maximum surface temperature must not exceed:</p>
 <ul>
-<li><strong>⅔ × T_CL</strong> (dust cloud). measured in Kelvin</li>
+<li><strong>⅔ × T_CL</strong> (dust cloud) — measured in Kelvin</li>
 <li><strong>T_5mm − 75°C</strong> (for 5mm layer thickness)</li>
 </ul>
 <p>Whichever gives the lower value determines the maximum allowable surface temperature.</p>
@@ -368,7 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <td>IIIB</td>
 <td>Grain dust, flour, sugar, wood dust</td>
 </tr>
-</tbody></table></div>
+</tbody></table>
 <p>Note: The NEC/CEC system uses letters (A–G) rather than Roman numerals, and the order is roughly reversed (A = most dangerous gas).</p>
 <h2 id="selecting-equipment-by-gas-dust-group">Selecting Equipment by Gas/Dust Group</h2>
 <p>When selecting equipment:</p>
@@ -376,22 +285,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>Identify all flammable substances that may be present in the area</li>
 <li>Determine the gas/dust group for each substance</li>
 <li>Select equipment certified for the <strong>most hazardous group</strong> present</li>
-<li>Verify the <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i> temperature class</a> is also suitable</li>
+<li>Verify the <a href="temperature-classes.html">temperature class</a> is also suitable</li>
 </ol>
 <p>If multiple gases are present (e.g., methane IIA + hydrogen IIC), the equipment must be rated for <strong>IIC</strong>.</p>
-<h2 id="deep-dive">Deep Dive: Gas Group IIC</h2>
-<p>For an in-depth look at why IIC is the most demanding gas group. including hydrogen's invisible flame, acetylene's decomposition hazard, carbon disulfide's extreme sensitivity, and when the IIB+H₂ compromise is acceptable. see our dedicated article:</p>
-<p><a href="/blog/gas-group-iic-hydrogen-acetylene.html"><i class="ph ph-newspaper"></i> Why Gas Group IIC Demands Special Attention: Hydrogen, Acetylene, and Carbon Disulfide</a></p>
-
 <h2 id="related-files">Related Files</h2>
 <ul>
-<li><a href="fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a>. explosion triangle, LEL/UEL</li>
-<li><a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperature Classes</a>. max surface temperatures per gas</li>
-<li><a href="zone-classification.html"><i class="ph ph-map-trifold"></i> Zone Classification</a>. where these gases might be present</li>
-<li><a href="protection-methods.html"><i class="ph ph-shield-check"></i> Protection Methods</a>. how equipment handles different gas groups</li>
-<li><a href="ex-markings.html"><i class="ph ph-tag"></i> Ex Markings</a>. how gas group appears on the equipment label</li>
+<li><a href="fundamentals.html">Fundamentals</a> — explosion triangle, LEL/UEL</li>
+<li><a href="temperature-classes.html">Temperature Classes</a> — max surface temperatures per gas</li>
+<li><a href="zone-classification.html">Zone Classification</a> — where these gases might be present</li>
+<li><a href="protection-methods.html">Protection Methods</a> — how equipment handles different gas groups</li>
+<li><a href="ex-markings.html">Ex Markings</a> — how gas group appears on the equipment label</li>
 </ul>
-      
         
 <section class="related-topics" style="margin-top:40px;padding:24px;background:var(--bg-alt, #f8f7f4);border-radius:8px;">
   <h2 style="font-size:18px;margin:0 0 12px 0;">Related Topics</h2>
@@ -402,90 +306,145 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="ex-markings.html">How to Read Ex Markings</a></li>
   </ul>
 </section>
-<div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">
-<strong style="color:var(--text);">Content Review</strong><br>
-Compiled from IEC 60079 series, ATEX 2014/34/EU, and IECEx operational documents. This reference guide does not replace official standards or certified site assessments. Always consult the applicable standard edition and a qualified Ex engineer for your specific application.
-</div>
+
       </div>
       <aside class="content-sidebar" aria-label="Navigation">
         <div class="sidebar-card">
-          <h4><i class="ph ph-list-bullets"></i> All Topics</h4>
-            <a href="fundamentals.html" class=""><i class="ph ph-fire"></i> Fundamentals</a>
-  <a href="zone-classification.html" class=""><i class="ph ph-map-trifold"></i> Zones</a>
-  <a href="gas-groups.html" class="current"><i class="ph ph-flask"></i> Gas Groups</a>
-  <a href="temperature-classes.html" class=""><i class="ph ph-thermometer-hot"></i> Temp Classes</a>
-  <a href="protection-methods.html" class=""><i class="ph ph-shield-check"></i> Protection</a>
-  <a href="epl.html" class=""><i class="ph ph-gauge"></i> EPL</a>
-  <a href="ex-markings.html" class=""><i class="ph ph-tag"></i> Markings</a>
-  <a href="standards.html" class=""><i class="ph ph-book-open"></i> Standards</a>
-  <a href="certification.html" class=""><i class="ph ph-certificate"></i> Certification</a>
-  <a href="installation-inspection.html" class=""><i class="ph ph-wrench"></i> Installation</a>
-  <a href="cheat-sheet.html" class=""><i class="ph ph-lightning"></i> Cheat Sheet</a>
-    <a href="nec-500-vs-atex-iec.html" class=""><i class="ph ph-globe-hemisphere-west"></i> NEC vs ATEX</a>
-  <a href="dsear-regulations-uk.html" class=""><i class="ph ph-flag"></i> DSEAR (UK)</a>
-  <a href="atex-equipment-categories.html" class=""><i class="ph ph-funnel"></i> Categories</a>
+          <h4>All Topics</h4>
+            <a href="fundamentals.html" class="">Fundamentals</a>
+  <a href="zone-classification.html" class="">Zones</a>
+  <a href="gas-groups.html" class="current">Gas Groups</a>
+  <a href="temperature-classes.html" class="">Temp Classes</a>
+  <a href="protection-methods.html" class="">Protection</a>
+  <a href="epl.html" class="">EPL</a>
+  <a href="ex-markings.html" class="">Markings</a>
+  <a href="standards.html" class="">Standards</a>
+  <a href="certification.html" class="">Certification</a>
+  <a href="installation-inspection.html" class="">Installation</a>
+  <a href="cheat-sheet.html" class="">Cheat Sheet</a>
+  <a href="nr10-inmetro-brazil.html" class="">NR-10 / INMETRO</a>
         </div>
       </aside>
     </div>
+  </div>
+</section>
 
 
-<div class="references-wrapper">
-
-    <section class="references">
-      <h2>Sources &amp; References</h2>
-      <ol>
-        <li><a href="https://en.wikipedia.org/wiki/Electrical_equipment_in_hazardous_areas" target="_blank" rel="noopener">Electrical Equipment in Hazardous Areas - Wikipedia</a></li>
-        <li><a href="https://www.iecex.com/certified-equipment-scheme/standards/" target="_blank" rel="noopener">Standards Used by IECEx - IECEx</a></li>
-        <li><a href="https://webstore.iec.ch/en/publication/635" target="_blank" rel="noopener">IEC 60079-0: General Requirements - IEC</a></li>
-      </ol>
-    </section>
-</div>
-
-<footer class="footer">
+<section class="cta-section" id="ask-section">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Knowledge</h4>
-        <a href="/pages/fundamentals.html">Fundamentals</a>
-        <a href="/pages/zone-classification.html">Zone Classification</a>
-        <a href="/pages/protection-methods.html">Protection Methods</a>
-        <a href="/pages/standards.html">Standards</a>
-        <a href="/pages/temperature-classes.html">Temperature Classes</a>
-        <a href="/pages/gas-groups.html">Gas Groups</a>
-        <a href="/pages/cheat-sheet.html">Quick Reference</a>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a>
-        <a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a>
-        <a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a>
-        <a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a>
-      </div>
-      <div class="footer-col">
-        <h4>Podcast</h4>
-        <a href="/podcast/"><i class="ph ph-microphone"></i> All Episodes</a>
-        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i> Spotify</a>
-        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i> Apple Podcasts</a>
-        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i> RSS Feed</a>
-      </div>
-      <div class="footer-col">
-        <h4>More</h4>
-        <a href="/about.html"><i class="ph ph-info"></i> About</a>
-        <a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a>
-        <a href="/events.html"><i class="ph ph-calendar-blank"></i> Events</a>
-        <a href="/links.html"><i class="ph ph-link"></i> Industry Links</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
-      <p>Not a substitute for official standards documents or professional engineering advice.</p>
-      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
+    <div class="cta-card">
+      <h3>Have a question about this topic?</h3>
+      <p>Submit your question and get a response from the ExKnowledge knowledge base.</p>
+      <form id="askForm" onsubmit="submitQuestion(event)">
+        <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+        <input type="text" class="cta-input" name="company" placeholder="Company (optional)" style="margin-bottom:0.5rem">
+        <textarea class="cta-textarea" name="question" placeholder="Your question…" required></textarea>
+        <button type="submit" class="cta-btn" id="askBtn">Submit Question →</button>
+      </form>
+      <p class="cta-ok" id="askOk">✓ Question received. A response will be sent to your email.</p>
     </div>
   </div>
-</footer>
-<script src="/js/nav.js"></script>
+</section>
 
-<script src="/js/reveal.js"></script>
-<script src="/js/search.js"></script>
+
+<footer class="footer-newsletter">
+  <div class="container">
+    <div class="footer-nl-title">Stay Updated</div>
+    <div class="footer-nl-desc">Monthly explosion protection news, standards updates, and practical guides. No spam.</div>
+    <form class="footer-nl-form" id="nlForm" onsubmit="submitNewsletter(event)">
+      <input type="email" class="footer-nl-input" name="email" placeholder="your.email@company.com" required>
+      <button type="submit" class="footer-nl-btn">Subscribe</button>
+    </form>
+    <p class="footer-nl-ok" id="nlOk">✓ Subscribed. Check your inbox.</p>
+    <div class="footer-copy">© 2026 ExKnowledge.com — Built from field experience.</div>
+  </div>
+</footer>
+
+
+<div class="scroll-popup" id="scrollPopup">
+  <button class="scroll-popup-close" onclick="dismissPopup()" aria-label="Close">×</button>
+  <h4>ATEX/IECEx Quick Reference</h4>
+  <p>Get the cheat sheet as a printable PDF — zones, gas groups, T-classes, and protection methods on one page.</p>
+  <form class="cta-row" id="popupForm" onsubmit="submitPopup(event)">
+    <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+    <button type="submit" class="cta-btn">Get PDF →</button>
+  </form>
+  <p class="cta-ok" id="popupOk">✓ Check your inbox for the download link.</p>
+</div>
+
+
+<script>
+const CTA_API = 'https://script.google.com/macros/s/AKfycbxBARonKpH_8lUJ8-m4zsOPqkrBGYoeIBwhVgeRzZFVQweANKAkc85sc5q1VlWDHzXh/exec';
+
+function submitNewsletter(e){
+  e.preventDefault();
+  const f = e.target;
+  const email = f.email.value;
+  if(!email) return;
+  const p = new URLSearchParams({action:'newsletter',email:email});
+  fetch(CTA_API + '?' + p.toString(), {mode:'no-cors'}).catch(()=>{});
+  f.style.display = 'none';
+  document.getElementById('nlOk').style.display = 'block';
+  localStorage.setItem('exk_nl', '1');
+}
+
+function submitQuestion(e){
+  e.preventDefault();
+  const f = e.target;
+  const p = new URLSearchParams({
+    action:'question',
+    email: f.email.value,
+    company: f.company.value || '',
+    question: f.question.value,
+    page: location.pathname
+  });
+  fetch(CTA_API + '?' + p.toString(), {mode:'no-cors'}).catch(()=>{});
+  f.style.display = 'none';
+  document.getElementById('askOk').style.display = 'block';
+}
+
+function submitPopup(e){
+  e.preventDefault();
+  const f = e.target;
+  const p = new URLSearchParams({action:'cheatsheet_download', email: f.email.value});
+  fetch(CTA_API + '?' + p.toString(), {mode:'no-cors'}).catch(()=>{});
+  f.style.display = 'none';
+  document.getElementById('popupOk').style.display = 'block';
+  localStorage.setItem('exk_popup', '1');
+  setTimeout(()=>{ document.getElementById('scrollPopup').classList.remove('visible'); }, 3000);
+}
+
+function dismissPopup(){
+  document.getElementById('scrollPopup').classList.remove('visible');
+  localStorage.setItem('exk_popup', '1');
+}
+
+// Scroll-depth trigger (60%)
+(function(){
+  if(localStorage.getItem('exk_popup')) return;
+  let triggered = false;
+  window.addEventListener('scroll', function(){
+    if(triggered) return;
+    const scrollPct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if(scrollPct > 0.6){
+      triggered = true;
+      setTimeout(()=>{ document.getElementById('scrollPopup')?.classList.add('visible'); }, 800);
+    }
+  });
+})();
+
+// Hide newsletter if already subscribed
+if(localStorage.getItem('exk_nl')){
+  const nlf = document.getElementById('nlForm');
+  if(nlf){ nlf.style.display='none'; document.getElementById('nlOk').style.display='block'; }
+}
+</script>
+
+<script>
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+  document.querySelector('.nav-toggle')?.classList.remove('open');
+  document.querySelector('.nav-links')?.classList.remove('open');
+}));
+</script>
 </body>
 </html>

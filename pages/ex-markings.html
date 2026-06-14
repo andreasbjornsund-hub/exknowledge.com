@@ -3,186 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>How to Read Ex Markings on ATEX & IECEx Equipment. ExKnowledge</title>
+  <title>ATEX and IECEx Marking Guide: How to Read Ex Equipment Labels</title>
   <meta name="description" content="Decode ATEX and IECEx markings step by step. Five real-world examples walked through piece by piece. Group, zone, temperature class, EPL.">
   <link rel="canonical" href="https://exknowledge.com/pages/ex-markings.html">
-  <meta property="og:title" content="Reading Ex Markings. ExKnowledge">
+  <meta property="og:title" content="ATEX and IECEx Marking Guide: How to Read Ex Equipment Labels">
   <meta property="og:description" content="Decode ATEX and IECEx markings step by step. Five real-world examples walked through piece by piece. Group, zone, temperature class, EPL.">
   <meta property="og:url" content="https://exknowledge.com/pages/ex-markings.html">
   <meta property="og:type" content="article">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=1000&q=80">
   <meta property="og:site_name" content="ExKnowledge">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Reading Ex Markings. ExKnowledge">
-  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
-  <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">  <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "Reading Ex Markings. ExKnowledge",
-    "description": "Decode ATEX and IECEx markings step by step. Five real-world examples walked through piece by piece. Group, zone, temperature class, EPL.",
-    "url": "https://exknowledge.com/pages/ex-markings.html",
-    "image": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1000&q=80",
-    "author": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "inLanguage": "en",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "ExKnowledge",
-      "url": "https://exknowledge.com"
-    },
-    "datePublished": "2025-11-01",
-    "dateModified": "2026-03-08",
-    "mainEntityOfPage": "https://exknowledge.com/pages/ex-markings.html",
-    "about": {
-      "@type": "Thing",
-      "name": "Explosion Protection"
-    }
+  <meta name="twitter:title" content="ATEX and IECEx Marking Guide: How to Read Ex Equipment Labels">
+  <meta name="twitter:description" content="Decode ATEX and IECEx markings step by step. Five real-world examples walked through piece by piece. Group, zone, temperature class, EPL.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+/* ─── CTA Shared Styles ─── */
+.cta-section{background:var(--c-cream,#faf8f5);border-top:1px solid var(--c-sand,#e8e4de);padding:3rem 0}
+.cta-card{max-width:540px;margin:0 auto;text-align:center}
+.cta-card h3{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.4rem;color:var(--c-black,#1a1917);margin-bottom:0.5rem}
+.cta-card p{font-size:0.95rem;color:var(--c-slate,#64605a);margin-bottom:1.5rem;line-height:1.6}
+.cta-input{width:100%;font-size:1rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-textarea{width:100%;font-size:0.95rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;min-height:100px;resize:vertical;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-textarea:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-btn{width:100%;font-family:var(--font-display,Georgia,serif);font-weight:600;font-size:1rem;padding:0.9rem;background:var(--c-black,#1a1917);color:var(--c-yellow,#d4a843);border:none;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s}
+.cta-btn:hover{background:var(--c-charcoal,#2d2a26)}
+.cta-btn:disabled{opacity:0.5;cursor:default}
+.cta-ok{color:var(--c-green,#2d7d46);font-weight:600;margin-top:1rem;display:none}
+.cta-row{display:flex;gap:0.5rem}
+.cta-row .cta-input{flex:1}
+.cta-row .cta-btn{width:auto;padding:0.8rem 1.5rem;white-space:nowrap}
+
+/* ─── Newsletter Footer ─── */
+.footer-newsletter{background:var(--c-black,#1a1917);color:var(--c-cream,#faf8f5);padding:2.5rem 0 1.5rem}
+.footer-newsletter .container{max-width:700px;margin:0 auto;padding:0 1.5rem}
+.footer-nl-title{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.1rem;margin-bottom:0.3rem;color:var(--c-yellow,#d4a843)}
+.footer-nl-desc{font-size:0.85rem;opacity:0.7;margin-bottom:1rem}
+.footer-nl-form{display:flex;gap:0.5rem;max-width:420px}
+.footer-nl-input{flex:1;padding:0.7rem 0.9rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:0.9rem;font-family:inherit}
+.footer-nl-input::placeholder{color:rgba(255,255,255,0.4)}
+.footer-nl-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.footer-nl-btn{padding:0.7rem 1.2rem;background:var(--c-yellow,#d4a843);color:var(--c-black,#1a1917);border:none;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:var(--font-display,Georgia,serif)}
+.footer-nl-btn:hover{background:#e0b650}
+.footer-nl-ok{color:var(--c-yellow,#d4a843);font-size:0.9rem;margin-top:0.5rem;display:none}
+.footer-copy{text-align:center;font-size:0.75rem;opacity:0.35;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08)}
+
+/* ─── Scroll Popup ─── */
+.scroll-popup{position:fixed;bottom:-300px;left:50%;transform:translateX(-50%);width:min(92vw,440px);background:var(--c-white,#fff);border:1px solid var(--c-sand,#e8e4de);box-shadow:0 -4px 24px rgba(0,0,0,0.12);padding:1.8rem;z-index:1000;transition:bottom 0.4s ease}
+.scroll-popup.visible{bottom:1.5rem}
+.scroll-popup-close{position:absolute;top:0.6rem;right:0.8rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--c-mid,#999);line-height:1}
+.scroll-popup h4{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.15rem;margin-bottom:0.3rem;color:var(--c-black,#1a1917)}
+.scroll-popup p{font-size:0.88rem;color:var(--c-slate,#64605a);margin-bottom:1rem;line-height:1.5}
+.scroll-popup .cta-row{margin-bottom:0}
+@media(max-width:480px){.cta-row{flex-direction:column}.cta-row .cta-btn{width:100%}.footer-nl-form{flex-direction:column}
+</style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How to Read Ex Markings on Equipment",
+  "description": "Decode ATEX and IECEx markings step by step. Five real-world examples walked through piece by piece. Group, zone, temperature class, EPL.",
+  "url": "https://exknowledge.com/pages/ex-markings.html",
+  "author": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://exknowledge.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "How to Read Ex Markings on Equipment",
-        "item": "https://exknowledge.com/pages/ex-markings.html"
-      }
-    ]
+  "publisher": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  },
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
   }
-]
+}
   </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5VSBXBSL');</script>
-<!-- End Google Tag Manager -->
-  <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
-  <!-- hreflang -->
-  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/ex-markings.html">
-  <link rel="alternate" hreflang="ar" href="https://exknowledge.com/ar/pages/ex-markings.html">
-  <link rel="alternate" hreflang="da" href="https://exknowledge.com/da/pages/ex-markings.html">
-  <link rel="alternate" hreflang="de" href="https://exknowledge.com/de/pages/ex-markings.html">
-  <link rel="alternate" hreflang="es" href="https://exknowledge.com/es/pages/ex-markings.html">
-  <link rel="alternate" hreflang="fi" href="https://exknowledge.com/fi/pages/ex-markings.html">
-  <link rel="alternate" hreflang="it" href="https://exknowledge.com/it/pages/ex-markings.html">
-  <link rel="alternate" hreflang="nl" href="https://exknowledge.com/nl/pages/ex-markings.html">
-  <link rel="alternate" hreflang="nb" href="https://exknowledge.com/no/pages/ex-markings.html">
-  <link rel="alternate" hreflang="pt" href="https://exknowledge.com/pt/pages/ex-markings.html">
-  <link rel="alternate" hreflang="sv" href="https://exknowledge.com/sv/pages/ex-markings.html">
-  <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/ex-markings.html">
-<!-- Google Ads Remarketing -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16941652225"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16941652225');</script>
-<style>.soon-badge{display:inline-block;background:var(--accent);color:#fff;font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;margin-left:4px;vertical-align:middle;letter-spacing:0.5px;}</style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSBXBSL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <nav class="nav">
   <div class="container">
-    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <a href="../" class="nav-logo">Ex<span>Knowledge</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
-      <li class="has-dropdown">
-        <a href="#"><i class="ph ph-book-open-text"></i> Knowledge <i class="ph ph-caret-down dd-arrow"></i></a>
-        <ul class="dropdown">
-        <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
-        <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zone Classification</a></li>
-        <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection Methods</a></li>
-        <li><a href="/pages/standards.html"><i class="ph ph-scales"></i> Standards &amp; Regulations</a></li>
-        <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperature Classes</a></li>
-        <li><a href="/pages/gas-groups.html"><i class="ph ph-flame"></i> Gas Groups</a></li>
-        <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Equipment Categories</a></li>
-        <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Reference</a></li>
-        <li><a href="/pages/faq.html"><i class="ph ph-question"></i> FAQ</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#"><i class="ph ph-folder-open"></i> Resources <i class="ph ph-caret-down dd-arrow"></i></a>
-        <ul class="dropdown">
-          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
-          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a></li>
-          <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
-          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
-          <li><a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a></li>
-          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Training</a></li>
-          <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a>
-          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west"></i> Certification Map</a></li>
-          <li><a href="/buying-report.html"><i class="ph ph-file-text"></i> Buying Report <span class="soon-badge">SOON</span></a></li></li>
-          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinars <span class="badge-soon">Soon</span></a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#"><i class="ph ph-users-three"></i> Community <i class="ph ph-caret-down dd-arrow"></i></a>
-        <ul class="dropdown">
-          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Events <span class="badge-soon">Soon</span></a></li>
-          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a></li>
-          <li><a href="/links.html"><i class="ph ph-link"></i> Industry Links <span class="badge-soon">Soon</span></a></li>
-        </ul>
-      </li>
-      <li><a href="/about.html"><i class="ph ph-info"></i> About</a></li>
+      <li><a href="../">Home</a></li>
+      <li><a href="fundamentals.html" class="">Fundamentals</a></li>
+      <li><a href="zone-classification.html" class="">Zones</a></li>
+      <li><a href="gas-groups.html" class="">Gas Groups</a></li>
+      <li><a href="temperature-classes.html" class="">Temp Classes</a></li>
+      <li><a href="protection-methods.html" class="">Protection</a></li>
     </ul>
-    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
-      <option value="/pages/ex-markings.html" selected>🇬🇧 English</option>
-      <option value="/de/pages/ex-markings.html">🇩🇪 Deutsch</option>
-      <option value="/no/pages/ex-markings.html">🇳🇴 Norsk</option>
-      <option value="/da/pages/ex-markings.html">🇩🇰 Dansk</option>
-      <option value="/sv/pages/ex-markings.html">🇸🇪 Svenska</option>
-      <option value="/fi/pages/ex-markings.html">🇫🇮 Suomi</option>
-      <option value="/es/pages/ex-markings.html">🇪🇸 Español</option>
-      <option value="/nl/pages/ex-markings.html">🇳🇱 Nederlands</option>
-      <option value="/pt/pages/ex-markings.html">🇵🇹 Português</option>
-      <option value="/it/pages/ex-markings.html">🇮🇹 Italiano</option>
-      <option value="/ar/pages/ex-markings.html">🇸🇦 العربية</option>
-    </select>
-    <div class="burger" aria-label="Menu">
-      <i class="ph-bold ph-list"></i>
-    </div>
   </div>
 </nav>
 
-<div class="content-layout">
+<section class="content-page">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../">Home</a> <span aria-hidden="true">/</span> <span>How to Read Ex Markings on Equipment</span>
+    </nav>
+    <div class="content-layout">
       <div class="content-body">
-        <img class="content-hero" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1000&q=80" alt="How to Read Ex Markings on Equipment" loading="lazy" width="820" height="240">
-        <h1>How to Read Ex Markings on ATEX & IECEx Equipment</h1>
-        <p class="last-updated" style="font-size:13px;color:var(--text-muted);margin:-12px 0 24px;"><i class="ph ph-clock"></i> Last updated: March 2026 · Based on IEC 60079 (2020 edition) and ATEX 2014/34/EU</p>
-        <p>Every certified Ex device carries a marking that encodes its protection type, gas/dust group, temperature class, and equipment protection level. Understanding these markings is essential for selecting, installing, and inspecting equipment. For a step-by-step walkthrough with real photos, see <a href="/pages/how-to-read-atex-nameplate.html">how to read an ATEX nameplate</a>.</p>
+        <img class="content-hero" src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=1000&q=80" alt="How to Read Ex Markings on Equipment" loading="lazy" width="820" height="240">
+        <h1>How to Read Ex Markings on Equipment</h1>
+        <p>Every certified Ex device carries a marking that encodes its protection type, gas/dust group, temperature class, and equipment protection level. Understanding these markings is essential for selecting, installing, and inspecting equipment.</p>
 <h2 id="atex-marking-structure">ATEX Marking Structure</h2>
-<p>ATEX equipment carries a structured marking per <a href="/pages/atex-directive.html">Directive 2014/34/EU</a>:</p>
-<div class="marking-breakdown" style="font-family:var(--font-mono);font-size:14px;background:var(--bg);border:1px solid var(--border);padding:24px 28px;margin:16px 0 24px;color:var(--text);line-height:2.2;overflow-x:auto;">
-<table style="border-collapse:collapse;border:none;background:transparent;">
-<tr style="border:none;"><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">CE</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">0539</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">⟨Ex⟩</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">II</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">2G</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">Ex</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">db</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">IIC</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">T4</td><td style="border:none;padding:0;color:var(--accent);font-weight:700;">Gb</td></tr>
-<tr style="border:none;"><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 0;color:var(--text-muted);font-size:11px;">↓</td></tr>
-<tr style="border:none;vertical-align:top;"><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">CE mark</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Notified Body</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">ATEX hex symbol</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Group II<br><span style="font-size:10px;color:var(--text-muted);">(surface)</span></td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Cat 2, Gas</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Ex symbol</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;"><a href="/pages/explosion-proof-vs-intrinsically-safe.html">Flameproof</a><br><span style="font-size:10px;color:var(--text-muted);">EPL b</span></td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Gas group<br><span style="font-size:10px;color:var(--text-muted);">H₂/C₂H₂</span></td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Temp class<br><span style="font-size:10px;color:var(--text-muted);">max 135°C</span></td><td style="border:none;padding:0;color:var(--text);font-size:12px;">EPL<br><span style="font-size:10px;color:var(--text-muted);">High, Zone 1</span></td></tr>
-</table>
-</div>
+<p>ATEX equipment carries a structured marking per Directive 2014/34/EU:</p>
+<pre><code>
+CE 0539  ⟨Ex⟩  II 2G  Ex db IIC T4 Gb
+│   │     │     │  │    │  │  │   │  │
+│   │     │     │  │    │  │  │   │  └─ EPL (Gb = High, Zone 1)
+│   │     │     │  │    │  │  │   └──── Temperature class (T4 = max 135°C)
+│   │     │     │  │    │  │  └──────── Gas group (IIC = hydrogen/acetylene)
+│   │     │     │  │    │  └─────────── Protection type (db = flameproof, EPL b)
+│   │     │     │  │    └────────────── Ex symbol (explosion protected)
+│   │     │     │  └─────────────────── Category (2G = Category 2, Gas)
+│   │     │     └────────────────────── Equipment Group (II = surface industries)
+│   │     └──────────────────────────── ATEX hexagonal "Ex" symbol
+│   └────────────────────────────────── Notified Body number
+└────────────────────────────────────── CE mark
+</code></pre>
 <h3 id="atex-equipment-groups">ATEX Equipment Groups</h3>
 <div class="table-wrap"><table><thead><tr>
 <th>Group</th>
@@ -194,13 +140,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </tr>
 <tr>
 <td><strong>II</strong></td>
-<td>Surface industries. gas/vapour</td>
+<td>Surface industries — gas/vapour</td>
 </tr>
 <tr>
 <td><strong>III</strong></td>
-<td>Surface industries. dust</td>
+<td>Surface industries — dust</td>
 </tr>
-</tbody></table></div>
+</tbody></table>
 <h3 id="atex-categories">ATEX Categories</h3>
 <div class="table-wrap"><table><thead><tr>
 <th>Marking</th>
@@ -244,24 +190,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <td>Dc</td>
 <td>22</td>
 </tr>
-</tbody></table></div>
+</tbody></table>
 <h2 id="iecex-marking-structure">IECEx Marking Structure</h2>
-<p><a href="/pages/atex-vs-iecex.html">IECEx</a> markings follow IEC 60079-0:</p>
-<div class="marking-breakdown" style="font-family:var(--font-mono);font-size:14px;background:var(--bg);border:1px solid var(--border);padding:24px 28px;margin:16px 0 24px;color:var(--text);line-height:2.2;overflow-x:auto;">
-<table style="border-collapse:collapse;border:none;background:transparent;">
-<tr style="border:none;"><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">Ex</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">db</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">IIC</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">T4</td><td style="border:none;padding:0;color:var(--accent);font-weight:700;">Gb</td></tr>
-<tr style="border:none;"><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 0;color:var(--text-muted);font-size:11px;">↓</td></tr>
-<tr style="border:none;"><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Ex symbol</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Protection type</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Gas group</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">Temp class</td><td style="border:none;padding:0;color:var(--text);font-size:12px;">EPL</td></tr>
-</table>
-</div>
+<p>IECEx markings follow IEC 60079-0:</p>
+<pre><code>
+Ex db IIC T4 Gb
+│  │  │   │  │
+│  │  │   │  └─ EPL
+│  │  │   └──── Temperature class
+│  │  └──────── Gas group
+│  └─────────── Protection type with level suffix
+└────────────── Ex symbol
+</code></pre>
 <p>IECEx markings do not include the CE mark, group number, or category. Instead, the IECEx certificate number provides traceability:</p>
-<div class="marking-breakdown" style="font-family:var(--font-mono);font-size:14px;background:var(--bg);border:1px solid var(--border);padding:24px 28px;margin:16px 0 24px;color:var(--text);line-height:2.2;overflow-x:auto;">
-<table style="border-collapse:collapse;border:none;background:transparent;">
-<tr style="border:none;"><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">IECEx</td><td style="border:none;padding:0 12px 0 0;color:var(--accent);font-weight:700;">BAS</td><td style="border:none;padding:0;color:var(--accent);font-weight:700;">12.0034X</td></tr>
-<tr style="border:none;"><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 12px 2px 0;color:var(--text-muted);font-size:11px;">↓</td><td style="border:none;padding:2px 0;color:var(--text-muted);font-size:11px;">↓</td></tr>
-<tr style="border:none;"><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">IECEx scheme</td><td style="border:none;padding:0 12px 0 0;color:var(--text);font-size:12px;">ExCB code<br><span style="font-size:10px;color:var(--text-muted);">(Baseefa, UK)</span></td><td style="border:none;padding:0;color:var(--text);font-size:12px;">Certificate + revision<br><span style="font-size:10px;color:var(--text-muted);">(X = specific conditions)</span></td></tr>
-</table>
-</div>
+<pre><code>
+IECEx BAS 12.0034X
+│     │   │
+│     │   └─ Certificate number + revision (X = specific conditions)
+│     └───── ExCB code (BAS = Baseefa, UK)
+└─────────── IECEx scheme identifier
+</code></pre>
 <h2 id="reading-the-protection-type">Reading the Protection Type</h2>
 <p>The protection type uses the two-letter "Ex" prefix followed by the method letter and level suffix:</p>
 <div class="table-wrap"><table><thead><tr>
@@ -351,19 +299,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <tr>
 <td>Ex nA</td>
 <td>Non-sparking</td>
-<td>. </td>
+<td>—</td>
 <td>Zone 2 only</td>
 </tr>
 <tr>
 <td>Ex nC</td>
 <td>Closed/sealed contacts</td>
-<td>. </td>
+<td>—</td>
 <td>Zone 2 only</td>
 </tr>
 <tr>
 <td>Ex nR</td>
 <td>Restricted breathing</td>
-<td>. </td>
+<td>—</td>
 <td>Zone 2 only</td>
 </tr>
 <tr>
@@ -387,16 +335,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <tr>
 <td>Ex o</td>
 <td>Oil immersion</td>
-<td>. </td>
+<td>—</td>
 <td>Zone 1 capable</td>
 </tr>
 <tr>
 <td>Ex q</td>
 <td>Powder filling</td>
-<td>. </td>
+<td>—</td>
 <td>Zone 1 capable</td>
 </tr>
-</tbody></table></div>
+</tbody></table>
 <h2 id="combined-markings">Combined Markings</h2>
 <p>Equipment with multiple protection methods:</p>
 <pre><code>
@@ -457,7 +405,7 @@ CE 0539 ⟨Ex⟩ II 2G Ex db eb IIC T4 Gb
 CE 0539 ⟨Ex⟩ II 1G Ex ia IIC T4 Ga
 </code></pre>
 <ul>
-<li>Category 1G. suitable for Zone 0</li>
+<li>Category 1G — suitable for Zone 0</li>
 <li>Intrinsically safe (highest level, Ex ia)</li>
 <li>All gas groups (IIC)</li>
 <li>T4 (135°C max)</li>
@@ -468,7 +416,7 @@ CE 0539 ⟨Ex⟩ II 1G Ex ia IIC T4 Ga
 CE 0539 ⟨Ex⟩ II 3G Ex nA IIB T3 Gc
 </code></pre>
 <ul>
-<li>Category 3G. Zone 2 only</li>
+<li>Category 3G — Zone 2 only</li>
 <li>Non-sparking (Ex nA)</li>
 <li>Gas groups IIA and IIB only (not IIC)</li>
 <li>T3 (200°C max)</li>
@@ -508,8 +456,8 @@ CE 0539 ⟨Ex⟩ II 3G Ex nA IIB T3 Gc
 <td><strong>Year of manufacture</strong></td>
 <td>Required for audit trail</td>
 </tr>
-</tbody></table></div>
-<p>The <strong>"X"</strong> suffix is important. it means there are special conditions documented in the certificate that must be observed during installation and use. Always retrieve and read the <a href="/pages/certification.html">certificate</a> when you see "X".</p>
+</tbody></table>
+<p>The <strong>"X"</strong> suffix is important — it means there are special conditions documented in the certificate that must be observed during installation and use. Always retrieve and read the certificate when you see "X".</p>
 <h2 id="nec-cec-markings-north-america">NEC/CEC Markings (North America)</h2>
 <p>North American marking follows a different format:</p>
 <pre><code>
@@ -522,108 +470,162 @@ Class I, Zone 1, AEx db IIC T4 Gb
 <p>The "A" prefix before "Ex" indicates the equipment is certified to North American standards (NEC/CEC) using the Zone system.</p>
 <h2 id="related-files">Related Files</h2>
 <ul>
-<li><a href="protection-methods.html"><i class="ph ph-shield-check"></i> Protection Methods</a>. detailed explanation of each method</li>
-<li><a href="gas-groups.html"><i class="ph ph-flask"></i> Gas Groups</a>. what IIA/IIB/IIC means</li>
-<li><a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperature Classes</a>. what T1–T6 means</li>
-<li><a href="epl.html">EPL</a>. what Ga/Gb/Gc means</li>
-<li><a href="standards.html"><i class="ph ph-book-open"></i> Standards</a>. which standard governs each marking element</li>
-<li><a href="certification.html"><i class="ph ph-certificate"></i> Certification</a>. how certificates and markings are issued</li>
+<li><a href="protection-methods.html">Protection Methods</a> — detailed explanation of each method</li>
+<li><a href="gas-groups.html">Gas Groups</a> — what IIA/IIB/IIC means</li>
+<li><a href="temperature-classes.html">Temperature Classes</a> — what T1–T6 means</li>
+<li><a href="EPL.html">EPL</a> — what Ga/Gb/Gc means</li>
+<li><a href="standards.html">Standards</a> — which standard governs each marking element</li>
+<li><a href="certification.html">Certification</a> — how certificates and markings are issued</li>
 </ul>
-      
         
 <section class="related-topics" style="margin-top:40px;padding:24px;background:var(--bg-alt, #f8f7f4);border-radius:8px;">
   <h2 style="font-size:18px;margin:0 0 12px 0;">Related Topics</h2>
   <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:8px;">
         <li><a href="gas-groups.html">Gas Groups & Dust Groups</a></li>
         <li><a href="temperature-classes.html">Temperature Classes T1–T6</a></li>
-        <li><a href="epl.html">Equipment Protection Levels (EPL)</a></li>
+        <li><a href="epl.html">Equipment Protection Levels</a></li>
         <li><a href="protection-methods.html">Protection Methods</a></li>
   </ul>
 </section>
-<div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">
-<strong style="color:var(--text);">Content Review</strong><br>
-Compiled from IEC 60079 series, ATEX 2014/34/EU, and IECEx operational documents. This reference guide does not replace official standards or certified site assessments. Always consult the applicable standard edition and a qualified Ex engineer for your specific application.
-</div>
+
       </div>
       <aside class="content-sidebar" aria-label="Navigation">
         <div class="sidebar-card">
-          <h4><i class="ph ph-list-bullets"></i> All Topics</h4>
-            <a href="fundamentals.html" class=""><i class="ph ph-fire"></i> Fundamentals</a>
-  <a href="zone-classification.html" class=""><i class="ph ph-map-trifold"></i> Zones</a>
-  <a href="gas-groups.html" class=""><i class="ph ph-flask"></i> Gas Groups</a>
-  <a href="temperature-classes.html" class=""><i class="ph ph-thermometer-hot"></i> Temp Classes</a>
-  <a href="protection-methods.html" class=""><i class="ph ph-shield-check"></i> Protection</a>
-  <a href="epl.html" class=""><i class="ph ph-gauge"></i> EPL</a>
-  <a href="ex-markings.html" class="current"><i class="ph ph-tag"></i> Markings</a>
-  <a href="standards.html" class=""><i class="ph ph-book-open"></i> Standards</a>
-  <a href="certification.html" class=""><i class="ph ph-certificate"></i> Certification</a>
-  <a href="installation-inspection.html" class=""><i class="ph ph-wrench"></i> Installation</a>
-  <a href="cheat-sheet.html" class=""><i class="ph ph-lightning"></i> Cheat Sheet</a>
-    <a href="nec-500-vs-atex-iec.html" class=""><i class="ph ph-globe-hemisphere-west"></i> NEC vs ATEX</a>
-  <a href="dsear-regulations-uk.html" class=""><i class="ph ph-flag"></i> DSEAR (UK)</a>
-  <a href="atex-equipment-categories.html" class=""><i class="ph ph-funnel"></i> Categories</a>
+          <h4>All Topics</h4>
+            <a href="fundamentals.html" class="">Fundamentals</a>
+  <a href="zone-classification.html" class="">Zones</a>
+  <a href="gas-groups.html" class="">Gas Groups</a>
+  <a href="temperature-classes.html" class="">Temp Classes</a>
+  <a href="protection-methods.html" class="">Protection</a>
+  <a href="epl.html" class="">EPL</a>
+  <a href="ex-markings.html" class="current">Markings</a>
+  <a href="standards.html" class="">Standards</a>
+  <a href="certification.html" class="">Certification</a>
+  <a href="installation-inspection.html" class="">Installation</a>
+  <a href="cheat-sheet.html" class="">Cheat Sheet</a>
+  <a href="nr10-inmetro-brazil.html" class="">NR-10 / INMETRO</a>
         </div>
       </aside>
     </div>
+  </div>
+</section>
 
 
-<div class="references-wrapper">
-
-    <section class="references">
-      <h2>Sources &amp; References</h2>
-      <ol>
-        <li><a href="https://en.wikipedia.org/wiki/ATEX_directives" target="_blank" rel="noopener">ATEX Directives - Wikipedia</a></li>
-        <li><a href="https://www.iecex.com/certified-equipment-scheme/overview/" target="_blank" rel="noopener">IECEx Certified Equipment Scheme - IECEx</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Electrical_equipment_in_hazardous_areas" target="_blank" rel="noopener">Electrical Equipment in Hazardous Areas - Wikipedia</a></li>
-      </ol>
-    </section>
-</div>
-
-<footer class="footer">
+<section class="cta-section" id="ask-section">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Knowledge</h4>
-        <a href="/pages/fundamentals.html">Fundamentals</a>
-        <a href="/pages/zone-classification.html">Zone Classification</a>
-        <a href="/pages/protection-methods.html">Protection Methods</a>
-        <a href="/pages/standards.html">Standards</a>
-        <a href="/pages/temperature-classes.html">Temperature Classes</a>
-        <a href="/pages/gas-groups.html">Gas Groups</a>
-        <a href="/pages/cheat-sheet.html">Quick Reference</a>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a>
-        <a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a>
-        <a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a>
-        <a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a>
-      </div>
-      <div class="footer-col">
-        <h4>Podcast</h4>
-        <a href="/podcast/"><i class="ph ph-microphone"></i> All Episodes</a>
-        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i> Spotify</a>
-        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i> Apple Podcasts</a>
-        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i> RSS Feed</a>
-      </div>
-      <div class="footer-col">
-        <h4>More</h4>
-        <a href="/about.html"><i class="ph ph-info"></i> About</a>
-        <a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a>
-        <a href="/events.html"><i class="ph ph-calendar-blank"></i> Events</a>
-        <a href="/links.html"><i class="ph ph-link"></i> Industry Links</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
-      <p>Not a substitute for official standards documents or professional engineering advice.</p>
-      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
+    <div class="cta-card">
+      <h3>Have a question about this topic?</h3>
+      <p>Submit your question and get a response from the ExKnowledge knowledge base.</p>
+      <form id="askForm" onsubmit="submitQuestion(event)">
+        <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+        <input type="text" class="cta-input" name="company" placeholder="Company (optional)" style="margin-bottom:0.5rem">
+        <textarea class="cta-textarea" name="question" placeholder="Your question…" required></textarea>
+        <button type="submit" class="cta-btn" id="askBtn">Submit Question →</button>
+      </form>
+      <p class="cta-ok" id="askOk">✓ Question received. A response will be sent to your email.</p>
     </div>
   </div>
-</footer>
-<script src="/js/nav.js"></script>
+</section>
 
-<script src="/js/reveal.js"></script>
-<script src="/js/search.js"></script>
+
+<footer class="footer-newsletter">
+  <div class="container">
+    <div class="footer-nl-title">Stay Updated</div>
+    <div class="footer-nl-desc">Monthly explosion protection news, standards updates, and practical guides. No spam.</div>
+    <form class="footer-nl-form" id="nlForm" onsubmit="submitNewsletter(event)">
+      <input type="email" class="footer-nl-input" name="email" placeholder="your.email@company.com" required>
+      <button type="submit" class="footer-nl-btn">Subscribe</button>
+    </form>
+    <p class="footer-nl-ok" id="nlOk">✓ Subscribed. Check your inbox.</p>
+    <div class="footer-copy">© 2026 ExKnowledge.com — Built from field experience.</div>
+  </div>
+</footer>
+
+
+<div class="scroll-popup" id="scrollPopup">
+  <button class="scroll-popup-close" onclick="dismissPopup()" aria-label="Close">×</button>
+  <h4>ATEX/IECEx Quick Reference</h4>
+  <p>Get the cheat sheet as a printable PDF — zones, gas groups, T-classes, and protection methods on one page.</p>
+  <form class="cta-row" id="popupForm" onsubmit="submitPopup(event)">
+    <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+    <button type="submit" class="cta-btn">Get PDF →</button>
+  </form>
+  <p class="cta-ok" id="popupOk">✓ Check your inbox for the download link.</p>
+</div>
+
+
+<script>
+const CTA_API = 'https://script.google.com/macros/s/AKfycbxBARonKpH_8lUJ8-m4zsOPqkrBGYoeIBwhVgeRzZFVQweANKAkc85sc5q1VlWDHzXh/exec';
+
+function submitNewsletter(e){
+  e.preventDefault();
+  const f = e.target;
+  const email = f.email.value;
+  if(!email) return;
+  const p = new URLSearchParams({action:'newsletter',email:email});
+  fetch(CTA_API + '?' + p.toString(), {mode:'no-cors'}).catch(()=>{});
+  f.style.display = 'none';
+  document.getElementById('nlOk').style.display = 'block';
+  localStorage.setItem('exk_nl', '1');
+}
+
+function submitQuestion(e){
+  e.preventDefault();
+  const f = e.target;
+  const p = new URLSearchParams({
+    action:'question',
+    email: f.email.value,
+    company: f.company.value || '',
+    question: f.question.value,
+    page: location.pathname
+  });
+  fetch(CTA_API + '?' + p.toString(), {mode:'no-cors'}).catch(()=>{});
+  f.style.display = 'none';
+  document.getElementById('askOk').style.display = 'block';
+}
+
+function submitPopup(e){
+  e.preventDefault();
+  const f = e.target;
+  const p = new URLSearchParams({action:'cheatsheet_download', email: f.email.value});
+  fetch(CTA_API + '?' + p.toString(), {mode:'no-cors'}).catch(()=>{});
+  f.style.display = 'none';
+  document.getElementById('popupOk').style.display = 'block';
+  localStorage.setItem('exk_popup', '1');
+  setTimeout(()=>{ document.getElementById('scrollPopup').classList.remove('visible'); }, 3000);
+}
+
+function dismissPopup(){
+  document.getElementById('scrollPopup').classList.remove('visible');
+  localStorage.setItem('exk_popup', '1');
+}
+
+// Scroll-depth trigger (60%)
+(function(){
+  if(localStorage.getItem('exk_popup')) return;
+  let triggered = false;
+  window.addEventListener('scroll', function(){
+    if(triggered) return;
+    const scrollPct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if(scrollPct > 0.6){
+      triggered = true;
+      setTimeout(()=>{ document.getElementById('scrollPopup')?.classList.add('visible'); }, 800);
+    }
+  });
+})();
+
+// Hide newsletter if already subscribed
+if(localStorage.getItem('exk_nl')){
+  const nlf = document.getElementById('nlForm');
+  if(nlf){ nlf.style.display='none'; document.getElementById('nlOk').style.display='block'; }
+}
+</script>
+
+<script>
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
+  document.querySelector('.nav-toggle')?.classList.remove('open');
+  document.querySelector('.nav-links')?.classList.remove('open');
+}));
+</script>
 </body>
 </html>

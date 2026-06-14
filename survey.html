@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com https://script.google.com data:; connect-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://www.google-analytics.com https://region1.google-analytics.com https://script.google.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com https://script.google.com data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://script.google.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Digitization in Hazardous Areas — Industry Survey 2026</title>
   <meta name="description" content="Help us map the current state of digital transformation in explosive atmospheres. Anonymous industry survey — takes 3 minutes. Get the free report.">
@@ -521,10 +521,47 @@ body{
   .other-text{margin-left: 0}
 }
 </style>
-<!-- Google Ads Remarketing -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16941652225"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16941652225');</script>
-<style>.soon-badge{display:inline-block;background:var(--accent);color:#fff;font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;margin-left:4px;vertical-align:middle;letter-spacing:0.5px;}</style>
+<style>
+/* ─── CTA Shared Styles ─── */
+.cta-section{background:var(--c-cream,#faf8f5);border-top:1px solid var(--c-sand,#e8e4de);padding:3rem 0}
+.cta-card{max-width:540px;margin:0 auto;text-align:center}
+.cta-card h3{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.4rem;color:var(--c-black,#1a1917);margin-bottom:0.5rem}
+.cta-card p{font-size:0.95rem;color:var(--c-slate,#64605a);margin-bottom:1.5rem;line-height:1.6}
+.cta-input{width:100%;font-size:1rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-textarea{width:100%;font-size:0.95rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;min-height:100px;resize:vertical;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-textarea:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-btn{width:100%;font-family:var(--font-display,Georgia,serif);font-weight:600;font-size:1rem;padding:0.9rem;background:var(--c-black,#1a1917);color:var(--c-yellow,#d4a843);border:none;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s}
+.cta-btn:hover{background:var(--c-charcoal,#2d2a26)}
+.cta-btn:disabled{opacity:0.5;cursor:default}
+.cta-ok{color:var(--c-green,#2d7d46);font-weight:600;margin-top:1rem;display:none}
+.cta-row{display:flex;gap:0.5rem}
+.cta-row .cta-input{flex:1}
+.cta-row .cta-btn{width:auto;padding:0.8rem 1.5rem;white-space:nowrap}
+
+/* ─── Newsletter Footer ─── */
+.footer-newsletter{background:var(--c-black,#1a1917);color:var(--c-cream,#faf8f5);padding:2.5rem 0 1.5rem}
+.footer-newsletter .container{max-width:700px;margin:0 auto;padding:0 1.5rem}
+.footer-nl-title{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.1rem;margin-bottom:0.3rem;color:var(--c-yellow,#d4a843)}
+.footer-nl-desc{font-size:0.85rem;opacity:0.7;margin-bottom:1rem}
+.footer-nl-form{display:flex;gap:0.5rem;max-width:420px}
+.footer-nl-input{flex:1;padding:0.7rem 0.9rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:0.9rem;font-family:inherit}
+.footer-nl-input::placeholder{color:rgba(255,255,255,0.4)}
+.footer-nl-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.footer-nl-btn{padding:0.7rem 1.2rem;background:var(--c-yellow,#d4a843);color:var(--c-black,#1a1917);border:none;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:var(--font-display,Georgia,serif)}
+.footer-nl-btn:hover{background:#e0b650}
+.footer-nl-ok{color:var(--c-yellow,#d4a843);font-size:0.9rem;margin-top:0.5rem;display:none}
+.footer-copy{text-align:center;font-size:0.75rem;opacity:0.35;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08)}
+
+/* ─── Scroll Popup ─── */
+.scroll-popup{position:fixed;bottom:-300px;left:50%;transform:translateX(-50%);width:min(92vw,440px);background:var(--c-white,#fff);border:1px solid var(--c-sand,#e8e4de);box-shadow:0 -4px 24px rgba(0,0,0,0.12);padding:1.8rem;z-index:1000;transition:bottom 0.4s ease}
+.scroll-popup.visible{bottom:1.5rem}
+.scroll-popup-close{position:absolute;top:0.6rem;right:0.8rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--c-mid,#999);line-height:1}
+.scroll-popup h4{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.15rem;margin-bottom:0.3rem;color:var(--c-black,#1a1917)}
+.scroll-popup p{font-size:0.88rem;color:var(--c-slate,#64605a);margin-bottom:1rem;line-height:1.5}
+.scroll-popup .cta-row{margin-bottom:0}
+@media(max-width:480px){.cta-row{flex-direction:column}.cta-row .cta-btn{width:100%}.footer-nl-form{flex-direction:column}}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -536,57 +573,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
     <ul class="nav-links">
-      <li class="has-dropdown">
-        <a href="#"><i class="ph ph-book-open-text"></i> Knowledge <i class="ph ph-caret-down dd-arrow"></i></a>
-        <ul class="dropdown">
-        <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
-        <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zone Classification</a></li>
-        <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection Methods</a></li>
-        <li><a href="/pages/standards.html"><i class="ph ph-scales"></i> Standards &amp; Regulations</a></li>
-        <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperature Classes</a></li>
-        <li><a href="/pages/gas-groups.html"><i class="ph ph-flame"></i> Gas Groups</a></li>
-        <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Equipment Categories</a></li>
-        <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Reference</a></li>
-        <li><a href="/pages/faq.html"><i class="ph ph-question"></i> FAQ</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#"><i class="ph ph-folder-open"></i> Resources <i class="ph ph-caret-down dd-arrow"></i></a>
-        <ul class="dropdown">
-          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
-          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a></li>
-          <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
-          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
-          <li><a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a></li>
-          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Training</a></li>
-          <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a>
-          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west"></i> Certification Map</a></li>
-          <li><a href="/buying-report.html"><i class="ph ph-file-text"></i> Buying Report <span class="soon-badge">SOON</span></a></li></li>
-          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinars <span class="badge-soon">Soon</span></a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#"><i class="ph ph-users-three"></i> Community <i class="ph ph-caret-down dd-arrow"></i></a>
-        <ul class="dropdown">
-          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Events <span class="badge-soon">Soon</span></a></li>
-          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a></li>
-          <li><a href="/links.html"><i class="ph ph-link"></i> Industry Links <span class="badge-soon">Soon</span></a></li>
-        </ul>
-      </li>
-      <li><a href="/about.html"><i class="ph ph-info"></i> About</a></li>
+      <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
+      <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zones</a></li>
+      <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection</a></li>
+      <li><a href="/pages/standards.html"><i class="ph ph-book-open"></i> Standards</a></li>
+      <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Ref</a></li>
+      <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+      <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
     </ul>
-    <select class="lang-select" disabled aria-label="Language" style="opacity:0.4;cursor:not-allowed;pointer-events:none">
-      <option selected>🇬🇧 English</option>
-      <option>🇩🇪 Deutsch</option>
-      <option>🇳🇴 Norsk</option>
-      <option>🇩🇰 Dansk</option>
-      <option>🇸🇪 Svenska</option>
-      <option>🇫🇮 Suomi</option>
-      <option>🇪🇸 Español</option>
-      <option>🇳🇱 Nederlands</option>
-      <option>🇵🇹 Português</option>
-      <option>🇮🇹 Italiano</option>
-      <option>🇸🇦 العربية</option>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/" selected>🇬🇧 English</option>
+      <option value="/de/">🇩🇪 Deutsch</option>
+      <option value="/no/">🇳🇴 Norsk</option>
+      <option value="/da/">🇩🇰 Dansk</option>
+      <option value="/sv/">🇸🇪 Svenska</option>
+      <option value="/fi/">🇫🇮 Suomi</option>
+      <option value="/es/">🇪🇸 Español</option>
+      <option value="/nl/">🇳🇱 Nederlands</option>
+      <option value="/pt/">🇵🇹 Português</option>
+      <option value="/it/">🇮🇹 Italiano</option>
+      <option value="/ar/">🇸🇦 العربية</option>
     </select>
     <div class="burger" aria-label="Menu">
       <i class="ph-bold ph-list"></i>
@@ -978,46 +984,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div><!-- main -->
 </div><!-- app -->
 
-<footer class="footer">
+<footer class="footer-newsletter">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Knowledge</h4>
-        <a href="/pages/fundamentals.html">Fundamentals</a>
-        <a href="/pages/zone-classification.html">Zone Classification</a>
-        <a href="/pages/protection-methods.html">Protection Methods</a>
-        <a href="/pages/standards.html">Standards</a>
-        <a href="/pages/temperature-classes.html">Temperature Classes</a>
-        <a href="/pages/gas-groups.html">Gas Groups</a>
-        <a href="/pages/cheat-sheet.html">Quick Reference</a>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a>
-        <a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a>
-        <a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a>
-        <a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a>
-      </div>
-      <div class="footer-col">
-        <h4>Podcast</h4>
-        <a href="/podcast/"><i class="ph ph-microphone"></i> All Episodes</a>
-        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i> Spotify</a>
-        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i> Apple Podcasts</a>
-        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i> RSS Feed</a>
-      </div>
-      <div class="footer-col">
-        <h4>More</h4>
-        <a href="/about.html"><i class="ph ph-info"></i> About</a>
-        <a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a>
-        <a href="/events.html"><i class="ph ph-calendar-blank"></i> Events</a>
-        <a href="/links.html"><i class="ph ph-link"></i> Industry Links</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
-      <p>Not a substitute for official standards documents or professional engineering advice.</p>
-      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
-    </div>
+    <div class="footer-nl-title">Stay Updated</div>
+    <div class="footer-nl-desc">Monthly explosion protection news, standards updates, and practical guides. No spam.</div>
+    <form class="footer-nl-form" id="nlForm" onsubmit="submitNewsletter(event)">
+      <input type="email" class="footer-nl-input" name="email" placeholder="your.email@company.com" required>
+      <button type="submit" class="footer-nl-btn">Subscribe</button>
+    </form>
+    <p class="footer-nl-ok" id="nlOk">✓ Subscribed. Check your inbox.</p>
+    <div class="footer-copy">© 2026 ExKnowledge.com — Built from field experience.</div>
   </div>
 </footer>
 <script src="/js/nav.js"></script>
@@ -1287,6 +1263,24 @@ function updateResponseBar(count){
    INIT
    ═══════════════════════════════ */
 updateProgress();
+</script>
+
+
+<script>
+const CTA_API_NL = 'https://script.google.com/macros/s/AKfycbxBARonKpH_8lUJ8-m4zsOPqkrBGYoeIBwhVgeRzZFVQweANKAkc85sc5q1VlWDHzXh/exec';
+function submitNewsletter(e){
+  e.preventDefault();
+  const f=e.target;
+  const p=new URLSearchParams({action:'newsletter',email:f.email.value});
+  fetch(CTA_API_NL+'?'+p.toString(),{mode:'no-cors'}).catch(()=>{});
+  f.style.display='none';
+  document.getElementById('nlOk').style.display='block';
+  localStorage.setItem('exk_nl','1');
+}
+if(localStorage.getItem('exk_nl')){
+  const nlf=document.getElementById('nlForm');
+  if(nlf){nlf.style.display='none';document.getElementById('nlOk').style.display='block';}
+}
 </script>
 
 </body>
