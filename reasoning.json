@@ -1,0 +1,22 @@
+{
+  "site": "exknowledge.com",
+  "claims": [
+    {
+      "claim": "ATEX Directive 2014/34/EU is mandatory for equipment in EU/EEA explosive atmospheres",
+      "evidence": "Official EU legislation, EUR-Lex reference 32014L0034",
+      "confidence": "high"
+    },
+    {
+      "claim": "IECEx certification is accepted in over 30 countries",
+      "evidence": "IECEx member country list at iecex.com",
+      "confidence": "high"
+    },
+    {
+      "claim": "Gas Group IIC covers hydrogen and acetylene atmospheres",
+      "evidence": "IEC 60079-0 Table 1, gas group classification",
+      "confidence": "high"
+    }
+  ],
+  "methodology": "Content sourced from IEC 60079 standards series, ATEX directives 2014/34/EU and 1999/92/EC, and official certification body publications. No vendor sponsorship.",
+  "lastUpdated": "2026-06"
+}

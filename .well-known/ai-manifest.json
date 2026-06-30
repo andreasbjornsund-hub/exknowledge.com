@@ -1,0 +1,11 @@
+{
+  "name": "ExKnowledge",
+  "description": "Free reference for ATEX, IECEx, and explosion protection. Zones, protection methods, gas groups, temperature classes, and Ex markings for engineers.",
+  "url": "https://exknowledge.com",
+  "documentation": "https://exknowledge.com/llms.txt",
+  "full_content": "https://exknowledge.com/llms-full.txt",
+  "structured_claims": "https://exknowledge.com/reasoning.json",
+  "sitemap": "https://exknowledge.com/sitemap.xml",
+  "contact": null,
+  "topics": ["ATEX", "IECEx", "explosion protection", "hazardous areas", "zone classification", "gas groups", "temperature classes", "Ex markings", "IEC 60079"]
+}
