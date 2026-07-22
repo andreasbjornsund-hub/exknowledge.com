@@ -6,16 +6,16 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>ATEX Equipment Categories 1, 2 &amp; 3 Explained: Zone Selection Guide | ExKnowledge</title>
+  <title>ATEX Equipment Categories</title>
   <meta name="description" content="ATEX Directive 2014/34/EU equipment categories explained. Category 1 → Zone 0/20, Category 2 → Zone 1/21, Category 3 → Zone 2/22. Includes EPL mapping, fault tolerance levels, Group I mining vs Group II surface industries, and category-to-zone selection table.">
   <link rel="canonical" href="https://exknowledge.com/pages/atex-equipment-categories.html">
-  <meta property="og:title" content="ATEX Equipment Categories 1, 2 &amp; 3: Zone Selection Guide">
+  <meta property="og:title" content="ATEX Equipment Categories">
   <meta property="og:description" content="ATEX equipment categories 1, 2, 3 explained with zone mapping, EPL equivalents, fault tolerance, and selection guidance per ATEX Directive 2014/34/EU.">
   <meta property="og:url" content="https://exknowledge.com/pages/atex-equipment-categories.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="ExKnowledge">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ATEX Equipment Categories 1, 2, 3: Selection Guide for Hazardous Areas">
+  <meta name="twitter:title" content="ATEX Equipment Categories">
   <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
   <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
   <link rel="stylesheet" href="/css/style.css">
@@ -47,7 +47,7 @@
       "url": "https://exknowledge.com"
     },
     "datePublished": "2026-03-21",
-    "dateModified": "2026-03-21",
+    "dateModified": "2026-07-22",
     "mainEntityOfPage": "https://exknowledge.com/pages/atex-equipment-categories.html",
     "about": {
       "@type": "Thing",
@@ -244,6 +244,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="content-layout">
       <div class="content-body">
     <h1><i class="ph ph-funnel"></i> ATEX Equipment Categories 1, 2, 3: Selection Guide</h1>
+    <p class="last-updated" style="font-size:13px;color:var(--text-muted);margin:-12px 0 24px;"><i class="ph ph-clock"></i> Last updated: July 2026 · Reviewed against ATEX 2014/34/EU category logic and IEC 60079 EPL terminology</p>
+    <p>Use this page with the <a href="zone-classification.html"><i class="ph ph-map-trifold"></i> zone classification guide</a> to decide the required category, then verify the matching <a href="epl.html"><i class="ph ph-gauge"></i> Equipment Protection Level</a> and confirm the complete equipment code in <a href="ex-markings.html"><i class="ph ph-tag"></i> Ex markings</a>.</p>
 
     <p>The ATEX Directive 2014/34/EU classifies equipment into <strong>categories</strong> based on the level of protection they provide. Categories determine which <a href="zone-classification.html">zones</a> equipment can be installed in. Understanding this system is essential for correct equipment selection and regulatory compliance.</p>
 
@@ -379,6 +381,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><a href="nec-500-vs-atex-iec.html"><i class="ph ph-scales"></i> NEC vs ATEX/IECEx</a>. North American comparison</li>
       <li><a href="dsear-regulations-uk.html"><i class="ph ph-flag"></i> DSEAR Regulations (UK)</a>. UK equipment requirements</li>
     </ul>
+
+    <section class="faq-block" style="margin-top:40px;">
+      <h2>ATEX Equipment Categories FAQ</h2>
+      <h3>What are ATEX equipment categories?</h3>
+      <p>ATEX equipment categories define how much ignition protection equipment must provide in an explosive atmosphere. Category 1 is for continuous or long-duration explosive atmospheres, Category 2 is for areas where an explosive atmosphere is likely during normal operation, and Category 3 is for areas where it is unlikely and brief.</p>
+
+      <h3>Which ATEX category is required for Zone 1?</h3>
+      <p>Zone 1 normally requires Category 2G equipment as a minimum. Category 1G equipment may also be used because it provides a higher protection level, but Category 3G equipment is not sufficient for Zone 1.</p>
+
+      <h3>Which ATEX category is required for Zone 2?</h3>
+      <p>Zone 2 normally requires Category 3G equipment as a minimum. Category 2G or Category 1G equipment can also be used if the owner wants a higher safety margin or if portable equipment may move into Zone 1.</p>
+
+      <h3>How do ATEX categories map to EPL?</h3>
+      <p>For gas atmospheres, Category 1 maps to EPL Ga, Category 2 maps to EPL Gb, and Category 3 maps to EPL Gc. For dust atmospheres, Category 1 maps to Da, Category 2 maps to Db, and Category 3 maps to Dc.</p>
+
+      <h3>Can one device be both gas and dust certified?</h3>
+      <p>Yes. A product may be marked for both gas and dust, for example 2G and 2D. Always check both suffixes because a device certified for gas is not automatically approved for combustible dust.</p>
+
+      <h3>Is a higher ATEX category always acceptable?</h3>
+      <p>Usually yes, if the equipment also matches the gas group, dust group, temperature class, ambient rating, and installation conditions. Category alone is not enough to approve a device for use.</p>
+    </section>
 
     <div class="reviewer-note" style="margin-top:40px;padding:16px 20px;border:1px solid var(--border);font-size:13px;color:var(--text-muted);line-height:1.6;">
       <strong style="color:var(--text);">Content Review</strong><br>
