@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gas Groups IIA, IIB, IIC Explained: Which Group Covers Your Gas? | ExKnowledge</title>
+  <title>Gas Groups IIA, IIB, IIC Explained — MESG, MIC Ratios & Equipment Selection | ExKnowledge</title>
   <meta name="description" content="Gas groups IIA, IIB, IIC explained with MESG values, MIC ratios, and full gas-to-group lookup table. Covers IIB+H₂ special case, dust groups IIIA–IIIC, hierarchy rules, and NEC equivalents.">
   <link rel="canonical" href="https://exknowledge.com/pages/gas-groups.html">
   <meta property="og:title" content="Gas Groups IIA, IIB, IIC — Which Group Covers Your Gas? (Chart + Table)">
@@ -64,7 +64,7 @@
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Gas Groups and Dust Groups",
+  "headline": "Gas Groups IIA, IIB, IIC — Which Group Covers Your Gas?",
   "description": "Gas groups IIA, IIB, IIC explained with MESG values, MIC ratios, and a quick-reference chart. Includes dust groups IIIA\u2013IIIC, hierarchy rules, and NEC equivalents.",
   "url": "https://exknowledge.com/pages/gas-groups.html",
   "author": {
@@ -196,6 +196,68 @@
         <img class="content-hero" src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1000&q=80" alt="Gas Groups and Dust Groups" loading="lazy" width="820" height="240">
         <h1>Gas Groups and Dust Groups</h1>
         <p>Flammable gases, vapours, and dusts are classified into groups based on their ignition properties. Equipment must be certified for the specific gas or dust group present in the <a href="zone-classification.html">hazardous area</a>.</p>
+
+<h2 id="what-are-gas-groups">What are gas groups IIA, IIB, and IIC?</h2>
+<p>Gas groups are a classification system used in ATEX and IECEx standards to categorise flammable gases and vapours by how easily they ignite. The three gas groups — <strong>IIA</strong>, <strong>IIB</strong>, and <strong>IIC</strong> — are defined in <strong>IEC 60079-20-1</strong> and determine which explosion-protected equipment can be used in a given atmosphere.</p>
+
+<ul>
+  <li><strong>Group IIA</strong> — least easily ignited gases. Includes methane, propane, butane, acetone, and ammonia. Equipment certified for IIA is the least costly to manufacture but can only be used in IIA atmospheres.</li>
+  <li><strong>Group IIB</strong> — intermediate ignition risk. Includes ethylene, hydrogen sulphide, and diethyl ether. Equipment certified for IIB can also protect against all IIA gases.</li>
+  <li><strong>Group IIC</strong> — most easily ignited gases. Includes hydrogen, acetylene, and carbon disulphide. Equipment certified for IIC provides protection against all gas groups (IIA, IIB, and IIC). This is why most portable equipment (radios, phones, flashlights) is certified to IIC — it can be used anywhere regardless of which gases are present.</li>
+</ul>
+
+<p>The hierarchy is <strong>IIC &gt; IIB &gt; IIA</strong>. Equipment certified for a higher group always covers the lower groups. This means IIC-certified equipment is universally compatible, while IIA equipment is restricted to IIA atmospheres only.</p>
+
+<h2 id="how-gas-groups-determined">How are gas groups determined?</h2>
+<p>Gas groups are determined by two laboratory measurements that quantify how easily a gas ignites and how effectively a flame propagates through narrow gaps:</p>
+
+<ol>
+  <li><strong>MESG (Maximum Experimental Safe Gap)</strong> — the widest gap through which an internal explosion cannot propagate to an external explosive atmosphere. Measured using a standardised 25 ml spherical test chamber with a 25 mm long gap. A smaller MESG means the gas flame can pass through narrower openings, making it more dangerous. Hydrogen has a MESG of just 0.29 mm.</li>
+  <li><strong>MIC ratio (Minimum Igniting Current ratio)</strong> — the ratio of the minimum current needed to ignite the gas compared to methane, tested in a standard intrinsic safety apparatus. A lower MIC ratio means the gas ignites with less electrical energy. This measurement is critical for intrinsically safe (Ex i) equipment design.</li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gas Group</th>
+      <th>MESG range</th>
+      <th>MIC ratio range</th>
+      <th>Example gases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>IIA</strong></td>
+      <td>&gt; 0.90 mm</td>
+      <td>&gt; 0.80</td>
+      <td>Methane, propane, butane, acetone, ammonia, ethanol</td>
+    </tr>
+    <tr>
+      <td><strong>IIB</strong></td>
+      <td>0.50 – 0.90 mm</td>
+      <td>0.45 – 0.80</td>
+      <td>Ethylene, hydrogen sulphide, diethyl ether, ethylene oxide</td>
+    </tr>
+    <tr>
+      <td><strong>IIC</strong></td>
+      <td>&lt; 0.50 mm</td>
+      <td>&lt; 0.45</td>
+      <td>Hydrogen, acetylene, carbon disulphide</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="which-gas-group-do-i-need">Which gas group certification do I need?</h2>
+<p>To select the correct equipment, identify every flammable gas or vapour that could be present in the hazardous area — including gases from adjacent process areas, maintenance activities, and upset conditions. Then choose equipment certified for the <strong>most demanding gas group</strong> present.</p>
+
+<p>In practice, most facilities take one of two approaches:</p>
+<ul>
+  <li><strong>Site-wide IIC standardisation.</strong> Purchasing all portable equipment (radios, flashlights, phones, gas detectors) as IIC eliminates the risk of the wrong equipment entering the wrong area. The cost premium over IIA or IIB equipment is modest for portable devices.</li>
+  <li><strong>Zone-specific selection.</strong> For fixed equipment (motors, lighting, junction boxes, <a href="https://hazardousareaguide.com/" target="_blank">cameras and surveillance systems</a>), selecting by zone can reduce costs. An area with only propane (IIA) does not require IIC-rated fixed luminaires, which are heavier and more expensive.</li>
+</ul>
+
+<p>If multiple gases are present — for example, methane (IIA) in one process and hydrogen (IIC) in another — and personnel move between areas, all portable equipment must be rated for <strong>IIC</strong>.</p>
+
 <h2 id="equipment-groups">Equipment Groups</h2>
 <h3 id="group-i--mining-firedamp">Group I — Mining (Firedamp)</h3>
 <p>Equipment for underground mines and surface installations where firedamp (methane from coal seams) and/or combustible dust may be present.</p>
