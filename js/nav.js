@@ -1,6 +1,34 @@
-/* exknowledge.com — shared nav component */
 (function(){
-  var n = '<nav class="nav">\n  <div class="container">\n    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>\n    <ul class="nav-links">\n      <li class="has-dropdown">\n        <a href="#"><i class="ph ph-book-open-text"></i> Knowledge <i class="ph ph-caret-down dd-arrow"></i></a>\n        <ul class="dropdown">\n        <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>\n        <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zone Classification</a></li>\n        <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection Methods</a></li>\n        <li><a href="/pages/standards.html"><i class="ph ph-scales"></i> Standards &amp; Regulations</a></li>\n        <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperature Classes</a></li>\n        <li><a href="/pages/gas-groups.html"><i class="ph ph-flame"></i> Gas Groups</a></li>\n        <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Equipment Categories</a></li>\n        <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Reference</a></li>\n        <li><a href="/pages/faq.html"><i class="ph ph-question"></i> FAQ</a></li>\n        </ul>\n      </li>\n      <li class="has-dropdown">\n        <a href="#"><i class="ph ph-folder-open"></i> Resources <i class="ph ph-caret-down dd-arrow"></i></a>\n        <ul class="dropdown">\n          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>\n          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a></li>\n          <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>\n          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>\n          <li><a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a></li>\n          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Training</a></li>\n          <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a>\n          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west"></i> Certification Map</a></li>\n          <li><a href="/buying-report.html"><i class="ph ph-file-text"></i> Buying Report <span class="soon-badge">SOON</span></a></li></li>\n          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinars <span class="badge-soon">Soon</span></a></li>\n        </ul>\n      </li>\n      <li class="has-dropdown">\n        <a href="#"><i class="ph ph-users-three"></i> Community <i class="ph ph-caret-down dd-arrow"></i></a>\n        <ul class="dropdown">\n          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Events <span class="badge-soon">Soon</span></a></li>\n          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a></li>\n          <li><a href="/links.html"><i class="ph ph-link"></i> Industry Links <span class="badge-soon">Soon</span></a></li>\n        </ul>\n      </li>\n      <li><a href="/about.html"><i class="ph ph-info"></i> About</a></li>\n    </ul>\n    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">\n      <option value="/" selected>🇬🇧 English</option>\n      <option value="/de/">🇩🇪 Deutsch</option>\n      <option value="/no/">🇳🇴 Norsk</option>\n      <option value="/da/">🇩🇰 Dansk</option>\n      <option value="/sv/">🇸🇪 Svenska</option>\n      <option value="/fi/">🇫🇮 Suomi</option>\n      <option value="/es/">🇪🇸 Español</option>\n      <option value="/nl/">🇳🇱 Nederlands</option>\n      <option value="/pt/">🇵🇹 Português</option>\n      <option value="/it/">🇮🇹 Italiano</option>\n      <option value="/ar/">🇸🇦 العربية</option>\n    </select>\n    <div class="burger" aria-label="Menu">\n      <i class="ph-bold ph-list"></i>\n    </div>\n  </div>\n</nav>';
-  var el = document.getElementById('site-nav');
-  if(el) el.innerHTML = n;
+  var b=document.querySelector('.burger'),n=document.querySelector('.nav-links');
+  if(b)b.addEventListener('click',function(e){e.stopPropagation();b.classList.toggle('open');n.classList.toggle('open')});
+  document.addEventListener('click',function(e){
+    if(b&&!b.contains(e.target)&&!n.contains(e.target)){b.classList.remove('open');n.classList.remove('open')}
+  });
 })();
+
+// Mobile dropdown toggles
+document.querySelectorAll('.has-dropdown > a').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      var li = a.parentElement;
+      document.querySelectorAll('.has-dropdown.open').forEach(function(el) { if (el !== li) el.classList.remove('open'); });
+      li.classList.toggle('open');
+    }
+  });
+});
+
+function slideVideos(dir) {
+  var track = document.getElementById('sliderTrack');
+  var slide = track.querySelector('.slide');
+  if (!slide) return;
+  var w = slide.offsetWidth + 16; // width + gap
+  track.scrollBy({ left: dir * w * 2, behavior: 'smooth' });
+}
+
+function playVideo(el, id) {
+  var thumb = el.querySelector('.slide-thumb');
+  thumb.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"></iframe>';
+  el.style.cursor = 'default';
+  el.onclick = null;
+}

@@ -34,27 +34,6 @@
   --font-display: 'Instrument Sans', system-ui, sans-serif;
   --font-body: 'Figtree', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
-
-  /* Shared design system token aliases */
-  --color-bg: var(--bg);
-  --color-surface: var(--bg-card);
-  --color-text: var(--text);
-  --color-text-muted: var(--text-muted);
-  --color-border: var(--border);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-light);
-  --callout-info: #dbeafe;
-  --callout-success: #dcfce7;
-  --callout-warning: #fef3c7;
-  --callout-note: #f3f4f6;
-  --font-body: 'Instrument Sans', system-ui, sans-serif;
-  --font-heading: 'Instrument Sans', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 2rem;
-  --space-xl: 4rem;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1104,10 +1083,4 @@ body { padding-top: 60px; }
 }
 .references ol li a:hover {
   text-decoration: underline;
-}
-
-/* Focus states */
-a:focus-visible, button:focus-visible, select:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
 }

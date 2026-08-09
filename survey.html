@@ -35,6 +35,533 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --c-black: #1a1a18;
+  --c-charcoal: #2d2d2a;
+  --c-slate: #4a4a45;
+  --c-mid: #7a7a72;
+  --c-warm-gray: #b8b5ad;
+  --c-sand: #e8e4db;
+  --c-cream: #f5f3ee;
+  --c-white: #fafaf7;
+
+  --c-yellow: #f0c808;
+  --c-yellow-dim: #d4b107;
+  --c-yellow-glow: #fde74c;
+  --c-amber: #e8a500;
+  --c-orange: #e06c00;
+  --c-red: #c0392b;
+  --c-green: #27ae60;
+  --c-green-soft: #2ecc71;
+  --c-blue: #2c6fbb;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html{
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  font-family: var(--font-body);
+  background: var(--c-cream);
+  color: var(--c-charcoal);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ─── Shell ─── */
+.app{
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.5rem 1rem 3rem;
+}
+
+/* ─── Survey Container ─── */
+.survey-wrap{
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ─── Cards ─── */
+.survey-card{
+  background: var(--c-white);
+  border: 1px solid var(--c-sand);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  animation: cardIn 0.5s var(--ease-out-expo) both;
+}
+.survey-card::before{
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--c-yellow);
+}
+
+@keyframes cardIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ─── Header section ─── */
+.survey-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--c-black);
+  color: var(--c-yellow);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.survey-title{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4.5vw, 2.25rem);
+  line-height: 1.2;
+  color: var(--c-black);
+  margin-bottom: 1rem;
+}
+
+.survey-subtitle{
+  font-size: 1rem;
+  color: var(--c-slate);
+  margin-bottom: 1rem;
+  max-width: 56ch;
+  line-height: 1.6;
+}
+
+.survey-meta{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--c-mid);
+  margin-bottom: 2rem;
+}
+.survey-meta i{
+  font-size: 1rem;
+  color: var(--c-yellow-dim);
+}
+
+/* ─── Progress bar ─── */
+.survey-progress{
+  margin-bottom: 2.5rem;
+}
+.progress-label{
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-mid);
+  margin-bottom: 0.5rem;
+}
+.progress-track{
+  height: 4px;
+  background: var(--c-sand);
+  overflow: hidden;
+}
+.progress-fill{
+  height: 100%;
+  background: var(--c-yellow);
+  width: 0%;
+  transition: width 0.5s var(--ease-out-expo);
+}
+
+/* ─── Sections ─── */
+.survey-section{
+  display: none;
+}
+.survey-section.active{
+  display: block;
+  animation: sectionIn 0.4s var(--ease-out-expo) both;
+}
+@keyframes sectionIn{
+  from{opacity:0;transform:translateX(24px)}
+  to{opacity:1;transform:translateX(0)}
+}
+
+.section-label{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-mid);
+  margin-bottom: 0.5rem;
+}
+
+.section-title{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  line-height: 1.45;
+  color: var(--c-black);
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Form elements ─── */
+.field-group{
+  margin-bottom: 1.25rem;
+}
+.field-label{
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--c-slate);
+  margin-bottom: 0.4rem;
+}
+.field-label .req{
+  color: var(--c-red);
+  margin-left: 2px;
+}
+
+.text-input{
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--c-sand);
+  background: var(--c-white);
+  color: var(--c-charcoal);
+  transition: border-color 0.2s;
+}
+.text-input:focus{
+  outline: none;
+  border-color: var(--c-yellow);
+}
+.text-input::placeholder{
+  color: var(--c-warm-gray);
+}
+
+/* Select */
+.select-wrap{
+  position: relative;
+}
+.select-input{
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 2px solid var(--c-sand);
+  background: var(--c-white);
+  color: var(--c-charcoal);
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.select-input:focus{
+  outline: none;
+  border-color: var(--c-yellow);
+}
+.select-wrap::after{
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0; height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--c-mid);
+  pointer-events: none;
+}
+
+/* Radio & Checkbox groups */
+.option-list{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.option-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--c-sand);
+  background: var(--c-white);
+  cursor: pointer;
+  transition: all 0.2s var(--ease-out-quart);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--c-charcoal);
+}
+.option-item:hover{
+  border-color: var(--c-yellow);
+  background: #fffef5;
+}
+.option-item.selected{
+  border-color: var(--c-yellow);
+  background: #fffdf0;
+}
+
+.option-item input[type="radio"],
+.option-item input[type="checkbox"]{
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--c-yellow-dim);
+  cursor: pointer;
+}
+
+.option-item label{
+  cursor: pointer;
+  flex: 1;
+}
+
+/* Other text field */
+.other-text{
+  margin-top: 0.5rem;
+  margin-left: 2.5rem;
+  display: none;
+}
+.other-text.visible{
+  display: block;
+}
+.other-text input{
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--c-sand);
+  background: var(--c-white);
+  color: var(--c-charcoal);
+  transition: border-color 0.2s;
+}
+.other-text input:focus{
+  outline: none;
+  border-color: var(--c-yellow);
+}
+
+/* Textarea */
+.textarea-input{
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--c-sand);
+  background: var(--c-white);
+  color: var(--c-charcoal);
+  min-height: 100px;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+.textarea-input:focus{
+  outline: none;
+  border-color: var(--c-yellow);
+}
+
+/* ─── Navigation buttons ─── */
+.survey-nav{
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+.btn-prev,
+.btn-next-section{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-out-quart);
+  letter-spacing: 0.02em;
+}
+.btn-prev{
+  background: var(--c-sand);
+  color: var(--c-slate);
+}
+.btn-prev:hover{
+  background: var(--c-warm-gray);
+  color: var(--c-charcoal);
+}
+.btn-next-section{
+  flex: 1;
+  background: var(--c-black);
+  color: var(--c-yellow);
+}
+.btn-next-section:hover{
+  background: var(--c-charcoal);
+}
+
+.btn-submit{
+  flex: 1;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--c-yellow);
+  color: var(--c-black);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-out-quart);
+  letter-spacing: 0.02em;
+}
+.btn-submit:hover{
+  background: var(--c-yellow-dim);
+}
+.btn-submit:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ─── Validation ─── */
+.field-error{
+  font-size: 0.78rem;
+  color: var(--c-red);
+  margin-top: 0.3rem;
+  display: none;
+}
+.field-error.show{
+  display: block;
+}
+
+/* ─── Thank you screen ─── */
+.thank-you{
+  display: none;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.thank-you.active{
+  display: block;
+  animation: cardIn 0.5s var(--ease-out-expo) both;
+}
+
+.thank-icon{
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.thank-title{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 4vw, 1.85rem);
+  color: var(--c-black);
+  margin-bottom: 0.75rem;
+}
+.thank-msg{
+  font-size: 1rem;
+  color: var(--c-slate);
+  max-width: 42ch;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.response-progress{
+  max-width: 360px;
+  margin: 0 auto 1.5rem;
+}
+.response-label{
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--c-mid);
+  margin-bottom: 0.4rem;
+}
+.response-track{
+  height: 8px;
+  background: var(--c-sand);
+  overflow: hidden;
+}
+.response-fill{
+  height: 100%;
+  background: var(--c-green);
+  transition: width 1s var(--ease-out-expo);
+}
+
+.thank-footer{
+  font-size: 0.8rem;
+  color: var(--c-mid);
+  margin-top: 1.5rem;
+}
+.thank-footer a{
+  color: var(--c-blue);
+  text-decoration: none;
+}
+
+/* ─── Responsive ─── */
+@media(max-width:480px){
+  .survey-card{padding: 1.5rem 1.25rem}
+  .survey-nav{flex-direction: column}
+  .btn-prev{order: 1}
+  .other-text{margin-left: 0}
+}
+</style>
+<style>
+/* ─── CTA Shared Styles ─── */
+.cta-section{background:var(--c-cream,#faf8f5);border-top:1px solid var(--c-sand,#e8e4de);padding:3rem 0}
+.cta-card{max-width:540px;margin:0 auto;text-align:center}
+.cta-card h3{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.4rem;color:var(--c-black,#1a1917);margin-bottom:0.5rem}
+.cta-card p{font-size:0.95rem;color:var(--c-slate,#64605a);margin-bottom:1.5rem;line-height:1.6}
+.cta-input{width:100%;font-size:1rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-textarea{width:100%;font-size:0.95rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;min-height:100px;resize:vertical;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-textarea:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-btn{width:100%;font-family:var(--font-display,Georgia,serif);font-weight:600;font-size:1rem;padding:0.9rem;background:var(--c-black,#1a1917);color:var(--c-yellow,#d4a843);border:none;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s}
+.cta-btn:hover{background:var(--c-charcoal,#2d2a26)}
+.cta-btn:disabled{opacity:0.5;cursor:default}
+.cta-ok{color:var(--c-green,#2d7d46);font-weight:600;margin-top:1rem;display:none}
+.cta-row{display:flex;gap:0.5rem}
+.cta-row .cta-input{flex:1}
+.cta-row .cta-btn{width:auto;padding:0.8rem 1.5rem;white-space:nowrap}
+
+/* ─── Newsletter Footer ─── */
+.footer-newsletter{background:var(--c-black,#1a1917);color:var(--c-cream,#faf8f5);padding:2.5rem 0 1.5rem}
+.footer-newsletter .container{max-width:700px;margin:0 auto;padding:0 1.5rem}
+.footer-nl-title{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.1rem;margin-bottom:0.3rem;color:var(--c-yellow,#d4a843)}
+.footer-nl-desc{font-size:0.85rem;opacity:0.7;margin-bottom:1rem}
+.footer-nl-form{display:flex;gap:0.5rem;max-width:420px}
+.footer-nl-input{flex:1;padding:0.7rem 0.9rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:0.9rem;font-family:inherit}
+.footer-nl-input::placeholder{color:rgba(255,255,255,0.4)}
+.footer-nl-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.footer-nl-btn{padding:0.7rem 1.2rem;background:var(--c-yellow,#d4a843);color:var(--c-black,#1a1917);border:none;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:var(--font-display,Georgia,serif)}
+.footer-nl-btn:hover{background:#e0b650}
+.footer-nl-ok{color:var(--c-yellow,#d4a843);font-size:0.9rem;margin-top:0.5rem;display:none}
+.footer-copy{text-align:center;font-size:0.75rem;opacity:0.35;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08)}
+
+/* ─── Scroll Popup ─── */
+.scroll-popup{position:fixed;bottom:-300px;left:50%;transform:translateX(-50%);width:min(92vw,440px);background:var(--c-white,#fff);border:1px solid var(--c-sand,#e8e4de);box-shadow:0 -4px 24px rgba(0,0,0,0.12);padding:1.8rem;z-index:1000;transition:bottom 0.4s ease}
+.scroll-popup.visible{bottom:1.5rem}
+.scroll-popup-close{position:absolute;top:0.6rem;right:0.8rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--c-mid,#999);line-height:1}
+.scroll-popup h4{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.15rem;margin-bottom:0.3rem;color:var(--c-black,#1a1917)}
+.scroll-popup p{font-size:0.88rem;color:var(--c-slate,#64605a);margin-bottom:1rem;line-height:1.5}
+.scroll-popup .cta-row{margin-bottom:0}
+@media(max-width:480px){.cta-row{flex-direction:column}.cta-row .cta-btn{width:100%}.footer-nl-form{flex-direction:column}}
+</style>
 <!-- GA4 Hazardous Area Guide Network -->
 <script src="https://hazardousareaguide.com/consent-banner.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXVW6MS2C5"></script>
@@ -46,8 +573,36 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div id="site-nav"></div>
-
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <ul class="nav-links">
+      <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
+      <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zones</a></li>
+      <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection</a></li>
+      <li><a href="/pages/standards.html"><i class="ph ph-book-open"></i> Standards</a></li>
+      <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Ref</a></li>
+      <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
+      <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/" selected>🇬🇧 English</option>
+      <option value="/de/">🇩🇪 Deutsch</option>
+      <option value="/no/">🇳🇴 Norsk</option>
+      <option value="/da/">🇩🇰 Dansk</option>
+      <option value="/sv/">🇸🇪 Svenska</option>
+      <option value="/fi/">🇫🇮 Suomi</option>
+      <option value="/es/">🇪🇸 Español</option>
+      <option value="/nl/">🇳🇱 Nederlands</option>
+      <option value="/pt/">🇵🇹 Português</option>
+      <option value="/it/">🇮🇹 Italiano</option>
+      <option value="/ar/">🇸🇦 العربية</option>
+    </select>
+    <div class="burger" aria-label="Menu">
+      <i class="ph-bold ph-list"></i>
+    </div>
+  </div>
+</nav>
 
 <div class="app">
 <div class="main">
@@ -433,8 +988,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div><!-- main -->
 </div><!-- app -->
 
-<div id="site-footer"></div>
-
+<footer class="footer-newsletter">
+  <div class="container">
+    <div class="footer-nl-title">Stay Updated</div>
+    <div class="footer-nl-desc">Monthly explosion protection news, standards updates, and practical guides. No spam.</div>
+    <form class="footer-nl-form" id="nlForm" onsubmit="submitNewsletter(event)">
+      <input type="email" class="footer-nl-input" name="email" placeholder="your.email@company.com" required>
+      <button type="submit" class="footer-nl-btn">Subscribe</button>
+    </form>
+    <p class="footer-nl-ok" id="nlOk">✓ Subscribed. Check your inbox.</p>
+    <div class="footer-copy">© 2026 ExKnowledge.com — Built from field experience.</div>
+  </div>
+</footer>
 <script src="/js/nav.js"></script>
 
 <script>
