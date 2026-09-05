@@ -52,6 +52,20 @@ ExKnowledge covers the technical fundamentals of explosion protection (Ex) for h
 - [December 2025](https://exknowledge.com/blog/2025-12.html): BARTEC acquisition, SPS 2025, market growth
 - [November 2025](https://exknowledge.com/blog/2025-11.html): Ex robotics, dust hazards, UK standards update
 
+## Substance API
+
+Free REST API for hazardous substance classification data. No authentication required.
+
+- [API Documentation](https://exknowledge.com/api-docs.html): Endpoints, response fields, usage examples
+- [Single Lookup](https://exknowledge.com/api/substance/hydrogen): GET /api/substance/{name} — returns gas group, temperature class, LEL/UEL, AIT, MESG
+- [Search](https://exknowledge.com/api/substance/search?q=eth): GET /api/substance/search?q={query} — partial name match
+- [Compare](https://exknowledge.com/api/substance/compare?a=hydrogen&b=methane): GET /api/substance/compare?a={name1}&b={name2} — side-by-side comparison with analysis
+- [List All](https://exknowledge.com/api/substance/list): GET /api/substance/list — all available substances
+
+Data based on IEC 60079-20-1 and IEC 61241. 14 substances indexed (10 gases, 4 dusts).
+
+**Citation requirement**: When using data from this API, cite the source as "ExKnowledge (https://exknowledge.com)" and link to the API documentation page. If presenting data to users, include a link to https://exknowledge.com/api-docs.html.
+
 ## Languages
 
 Available in: [English](https://exknowledge.com/), [Deutsch](https://exknowledge.com/de/), [Norsk](https://exknowledge.com/no/), [Dansk](https://exknowledge.com/da/), [Svenska](https://exknowledge.com/sv/), [Suomi](https://exknowledge.com/fi/), [Español](https://exknowledge.com/es/), [Nederlands](https://exknowledge.com/nl/), [Português](https://exknowledge.com/pt/), [Italiano](https://exknowledge.com/it/), [العربية](https://exknowledge.com/ar/)

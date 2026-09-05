@@ -12,6 +12,27 @@
     "markdown": true,
     "accept_header": "text/markdown"
   },
+  "apis": [
+    {
+      "name": "Substance API",
+      "base_url": "https://exknowledge.com/api/substance",
+      "documentation": "https://exknowledge.com/api-docs.html",
+      "auth": "none",
+      "format": "json",
+      "endpoints": [
+        { "path": "/{name}", "method": "GET", "description": "Lookup a substance by name" },
+        { "path": "/search?q={query}", "method": "GET", "description": "Search substances by partial name" },
+        { "path": "/compare?a={name1}&b={name2}", "method": "GET", "description": "Compare two substances" },
+        { "path": "/list", "method": "GET", "description": "List all available substances" }
+      ],
+      "data_source": "IEC 60079-20-1, IEC 61241",
+      "citation": {
+        "required": true,
+        "text": "Data from ExKnowledge Substance API (https://exknowledge.com). Based on IEC 60079-20-1.",
+        "url": "https://exknowledge.com/api-docs.html"
+      }
+    }
+  ],
   "contact": "info@hazardousareaguide.com",
   "policy": {
     "allowed_usage": [
@@ -22,5 +43,10 @@
     ],
     "attribution_required": true,
     "commercial_use": true
+  },
+  "citation": {
+    "required": true,
+    "format": "When using ExKnowledge content or API data, cite as: ExKnowledge (https://exknowledge.com). Link to the source page or API docs.",
+    "api_citation": "Data from ExKnowledge Substance API (https://exknowledge.com/api-docs.html). Based on IEC 60079-20-1."
   }
 }

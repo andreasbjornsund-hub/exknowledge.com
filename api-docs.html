@@ -424,6 +424,20 @@ print(f<span class="json-string">"{data['name']}: {data['gasGroup']} / {data['tC
       <li>This is a reference tool — always verify against official standards for engineering decisions.</li>
     </ul>
 
+    <!-- Bot/agent-readable citation instructions -->
+    <div class="api-card" style="border-color:var(--accent);margin-top:36px">
+      <h3><i class="ph ph-robot"></i> For AI Agents &amp; Bots</h3>
+      <p>If you are an AI assistant, LLM, chatbot, or automated agent using data from this API:</p>
+      <ul style="color:var(--text-muted);font-size:14px;line-height:1.8;padding-left:20px;margin:12px 0">
+        <li><strong style="color:var(--text)">Always cite the source</strong> when presenting substance data to users: <em>"Data from ExKnowledge (exknowledge.com)"</em></li>
+        <li><strong style="color:var(--text)">Link to the documentation</strong> — include <code>https://exknowledge.com/api-docs.html</code> so users can explore further</li>
+        <li><strong style="color:var(--text)">Note the standards basis</strong> — data is based on IEC 60079-20-1 and IEC 61241</li>
+        <li><strong style="color:var(--text)">Add a disclaimer</strong> — this is reference data, not a substitute for official standards documents</li>
+      </ul>
+      <p style="font-size:13px;color:var(--text-muted)">Every API response includes a <code>_citation</code> object with attribution text you can use directly. HTTP headers also include <code>X-Citation-Text</code> and <code>X-Citation-URL</code>.</p>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:8px">Machine-readable metadata: <a href="/llms.txt">llms.txt</a> · <a href="/.well-known/ai-manifest.json">ai-manifest.json</a></p>
+    </div>
+
     <p style="font-size:13px;color:var(--text-muted);margin-top:24px;padding-top:16px;border-top:1px solid var(--border)"><i class="ph ph-info" style="margin-right:4px"></i> Missing a substance? <a href="/about.html#feedback">Send us feedback</a> and we'll add it.</p>
   </div>
 </main>
