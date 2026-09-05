@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Substance API — ExKnowledge</title>
-  <meta name="description" content="Free REST API for hazardous substance classification data — gas groups, temperature classes, explosive limits, and more.">
+  <title>Ex Classification API — ExKnowledge</title>
+  <meta name="description" content="Free REST API for explosion protection engineering data — substances, zones, protection methods, temperature classes, gas groups, cable glands, IP requirements, NEC/IECEx conversion.">
   <link rel="canonical" href="https://exknowledge.com/api-docs.html">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
@@ -237,9 +237,10 @@
 <main style="min-height:60vh;padding:80px 24px">
   <div style="max-width:780px;margin:0 auto">
     <i class="ph ph-code" style="font-size:48px;color:var(--accent);display:block;margin-bottom:24px"></i>
-    <h1 style="font-size:32px;margin-bottom:8px;color:var(--accent)">Substance API</h1>
-    <p style="font-size:16px;line-height:1.8;color:var(--text-muted);margin-bottom:8px">Free REST API for hazardous substance classification data. Look up gas groups, temperature classes, explosive limits (LEL/UEL), auto-ignition temperatures, and MESG values for gases and dusts used in Ex zone classification.</p>
-    <p style="font-size:13px;color:var(--text-muted);margin-bottom:36px">Base URL: <code style="font-family:var(--font-mono);background:var(--bg-card);padding:3px 8px;border-radius:4px;color:var(--accent);font-size:13px">https://exknowledge.com/api/substance</code> &nbsp;·&nbsp; No authentication required &nbsp;·&nbsp; CORS enabled for exknowledge.com</p>
+    <h1 style="font-size:32px;margin-bottom:8px;color:var(--accent)">Ex Classification API</h1>
+    <p style="font-size:16px;line-height:1.8;color:var(--text-muted);margin-bottom:8px">Free REST API for explosion protection engineering data. Substances, zone classification, protection methods, temperature classes, gas groups, cable glands, IP requirements, and NEC↔IECEx conversion — all in one place.</p>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px">Base URL: <code style="font-family:var(--font-mono);background:var(--bg-card);padding:3px 8px;border-radius:4px;color:var(--accent);font-size:13px">https://exknowledge.com/api</code> &nbsp;·&nbsp; No authentication required &nbsp;·&nbsp; CORS enabled &nbsp;·&nbsp; <a href="/api/" style="color:var(--accent)">View API index</a></p>
+    <p style="font-size:12px;color:var(--text-muted);margin-bottom:36px">8 resource types · 16+ endpoints · Based on IEC 60079, ATEX 2014/34/EU, IECEx, NEC 500/505</p>
 
     <!-- Endpoints -->
     <h2 style="font-size:20px;margin:0 0 20px;color:var(--accent)">Endpoints</h2>
@@ -329,6 +330,187 @@
       <p>Return all available substance names.</p>
       <div class="api-url"><span class="api-method">GET</span>/api/substance/list</div>
       <a href="/api/substance/list" target="_blank" class="try-it"><i class="ph ph-play"></i> Try it live</a>
+    </div>
+
+    <!-- ==================== -->
+    <!-- ZONE CLASSIFICATION   -->
+    <!-- ==================== -->
+    <h2 style="font-size:20px;margin:48px 0 20px;color:var(--accent)"><i class="ph ph-map-trifold" style="margin-right:6px"></i> Zone Classification</h2>
+
+    <div class="api-card">
+      <h3><i class="ph ph-map-pin"></i> Zone Lookup</h3>
+      <p>Get allowed EPLs, ATEX equipment categories, and permitted protection methods for any zone.</p>
+      <div class="api-url"><span class="api-method">GET</span>/api/zone/<em style="color:var(--accent)">{id}</em></div>
+      <table class="param-table">
+        <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+        <tr><td><code>id</code></td><td>path</td><td>Zone number: <code>0</code>, <code>1</code>, <code>2</code>, <code>20</code>, <code>21</code>, <code>22</code></td></tr>
+      </table>
+      <p style="font-size:12px;color:var(--text-muted);margin-bottom:4px">Example response for Zone 1:</p>
+      <div class="api-response"><pre>{
+  <span class="json-key">"zone"</span>: <span class="json-string">"1"</span>,
+  <span class="json-key">"type"</span>: <span class="json-string">"gas"</span>,
+  <span class="json-key">"description"</span>: <span class="json-string">"Explosive gas atmosphere likely to occur in normal operation occasionally"</span>,
+  <span class="json-key">"allowedEPL"</span>: [<span class="json-string">"Ga"</span>, <span class="json-string">"Gb"</span>],
+  <span class="json-key">"atexCategory"</span>: [<span class="json-string">"1G"</span>, <span class="json-string">"2G"</span>],
+  <span class="json-key">"allowedProtection"</span>: [<span class="json-string">"d"</span>, <span class="json-string">"e"</span>, <span class="json-string">"ia"</span>, <span class="json-string">"ib"</span>, <span class="json-string">"m"</span>, ...]
+}</pre></div>
+      <a href="/api/zone/1" target="_blank" class="try-it"><i class="ph ph-play"></i> Try it live</a>
+      <a href="/api/zone/list" target="_blank" class="try-it" style="margin-left:8px"><i class="ph ph-list"></i> List all zones</a>
+    </div>
+
+    <!-- ==================== -->
+    <!-- PROTECTION METHODS    -->
+    <!-- ==================== -->
+    <h2 style="font-size:20px;margin:48px 0 20px;color:var(--accent)"><i class="ph ph-shield-check" style="margin-right:6px"></i> Protection Methods</h2>
+
+    <div class="api-card">
+      <h3><i class="ph ph-shield-check"></i> Protection Method Lookup</h3>
+      <p>Get full details for any Ex protection method: suitable zones, EPLs, applications, advantages/disadvantages, and standards.</p>
+      <div class="api-url"><span class="api-method">GET</span>/api/protection/<em style="color:var(--accent)">{code}</em></div>
+      <table class="param-table">
+        <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+        <tr><td><code>code</code></td><td>path</td><td>Protection code: <code>d</code>, <code>e</code>, <code>i</code>, <code>p</code>, <code>n</code>, <code>m</code>, <code>o</code>, <code>q</code>, <code>t</code></td></tr>
+      </table>
+      <p style="font-size:12px;color:var(--text-muted);margin-bottom:4px">Example response for Ex i (Intrinsic Safety):</p>
+      <div class="api-response"><pre>{
+  <span class="json-key">"code"</span>: <span class="json-string">"Ex i"</span>,
+  <span class="json-key">"name"</span>: <span class="json-string">"Intrinsic safety"</span>,
+  <span class="json-key">"standard"</span>: <span class="json-string">"IEC 60079-11"</span>,
+  <span class="json-key">"zones"</span>: [<span class="json-string">"0"</span>, <span class="json-string">"1"</span>, <span class="json-string">"2"</span>, <span class="json-string">"20"</span>, <span class="json-string">"21"</span>, <span class="json-string">"22"</span>],
+  <span class="json-key">"principle"</span>: <span class="json-string">"Energy limitation..."</span>,
+  <span class="json-key">"typicalApplications"</span>: [<span class="json-string">"Sensors"</span>, <span class="json-string">"Instruments"</span>, ...],
+  <span class="json-key">"levels"</span>: { <span class="json-key">"ia"</span>: <span class="json-string">"Zone 0/20"</span>, <span class="json-key">"ib"</span>: <span class="json-string">"Zone 1/21"</span>, <span class="json-key">"ic"</span>: <span class="json-string">"Zone 2/22"</span> }
+}</pre></div>
+      <a href="/api/protection/i" target="_blank" class="try-it"><i class="ph ph-play"></i> Try it live</a>
+      <a href="/api/protection/list" target="_blank" class="try-it" style="margin-left:8px"><i class="ph ph-list"></i> List all methods</a>
+    </div>
+
+    <!-- ==================== -->
+    <!-- TEMPERATURE CLASSES   -->
+    <!-- ==================== -->
+    <h2 style="font-size:20px;margin:48px 0 20px;color:var(--accent)"><i class="ph ph-thermometer-hot" style="margin-right:6px"></i> Temperature Classes</h2>
+
+    <div class="api-card">
+      <h3><i class="ph ph-thermometer-hot"></i> T-Class Lookup</h3>
+      <p>Get maximum surface temperature and typical substances for any temperature class.</p>
+      <div class="api-url"><span class="api-method">GET</span>/api/tclass/<em style="color:var(--accent)">{class}</em></div>
+      <a href="/api/tclass/T3" target="_blank" class="try-it"><i class="ph ph-play"></i> Try T3</a>
+      <a href="/api/tclass/list" target="_blank" class="try-it" style="margin-left:8px"><i class="ph ph-list"></i> List all</a>
+    </div>
+
+    <div class="api-card">
+      <h3><i class="ph ph-calculator"></i> AIT → T-Class Calculator</h3>
+      <p>Given a substance’s auto-ignition temperature, determine the required temperature class.</p>
+      <div class="api-url"><span class="api-method">GET</span>/api/tclass/lookup?ait=<em style="color:var(--accent)">{temperature_celsius}</em></div>
+      <p style="font-size:12px;color:var(--text-muted);margin-bottom:4px">Example: AIT of 225°C → requires T3 (max surface 200°C)</p>
+      <div class="api-response"><pre>{
+  <span class="json-key">"ait_c"</span>: <span class="json-number">225</span>,
+  <span class="json-key">"requiredTClass"</span>: <span class="json-string">"T3"</span>,
+  <span class="json-key">"maxSurfaceTemp_c"</span>: <span class="json-number">200</span>
+}</pre></div>
+      <a href="/api/tclass/lookup?ait=225" target="_blank" class="try-it"><i class="ph ph-play"></i> Try it live</a>
+    </div>
+
+    <!-- ==================== -->
+    <!-- GAS GROUPS            -->
+    <!-- ==================== -->
+    <h2 style="font-size:20px;margin:48px 0 20px;color:var(--accent)"><i class="ph ph-flame" style="margin-right:6px"></i> Gas &amp; Dust Groups</h2>
+
+    <div class="api-card">
+      <h3><i class="ph ph-flame"></i> Gas/Dust Group Lookup</h3>
+      <p>Get MESG range, MIC ratio, NEC equivalent, representative substances, and classification notes for any gas or dust group.</p>
+      <div class="api-url"><span class="api-method">GET</span>/api/gasgroup/<em style="color:var(--accent)">{group}</em></div>
+      <table class="param-table">
+        <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+        <tr><td><code>group</code></td><td>path</td><td>Gas group (<code>IIA</code>, <code>IIB</code>, <code>IIC</code>) or dust group (<code>IIIA</code>, <code>IIIB</code>, <code>IIIC</code>)</td></tr>
+      </table>
+      <div class="api-response"><pre>{
+  <span class="json-key">"group"</span>: <span class="json-string">"IIC"</span>,
+  <span class="json-key">"mesgRange_mm"</span>: <span class="json-string">"&lt;0.5"</span>,
+  <span class="json-key">"micRatio"</span>: <span class="json-string">"&lt;0.45"</span>,
+  <span class="json-key">"necEquivalent"</span>: <span class="json-string">"Group A (acetylene) / Group B (hydrogen)"</span>,
+  <span class="json-key">"substances"</span>: [<span class="json-string">"hydrogen"</span>, <span class="json-string">"acetylene"</span>, <span class="json-string">"carbon disulfide"</span>]
+}</pre></div>
+      <a href="/api/gasgroup/IIC" target="_blank" class="try-it"><i class="ph ph-play"></i> Try IIC</a>
+      <a href="/api/gasgroup/IIIC" target="_blank" class="try-it" style="margin-left:8px"><i class="ph ph-play"></i> Try IIIC (dust)</a>
+      <a href="/api/gasgroup/list" target="_blank" class="try-it" style="margin-left:8px"><i class="ph ph-list"></i> List all</a>
+    </div>
+
+    <!-- ==================== -->
+    <!-- CABLE GLANDS          -->
+    <!-- ==================== -->
+    <h2 style="font-size:20px;margin:48px 0 20px;color:var(--accent)"><i class="ph ph-plug" style="margin-right:6px"></i> Cable Gland Selection</h2>
+
+    <div class="api-card">
+      <h3><i class="ph ph-plug"></i> Cable Gland Requirements</h3>
+      <p>Get cable gland requirements, IP ratings, and standards for each protection type.</p>
+      <div class="api-url"><span class="api-method">GET</span>/api/cablegland/<em style="color:var(--accent)">{protection}</em></div>
+      <table class="param-table">
+        <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+        <tr><td><code>protection</code></td><td>path</td><td>Protection type: <code>d</code>, <code>e</code>, <code>i</code>, <code>n</code>, <code>t</code></td></tr>
+      </table>
+      <a href="/api/cablegland/d" target="_blank" class="try-it"><i class="ph ph-play"></i> Try Ex d</a>
+      <a href="/api/cablegland/i" target="_blank" class="try-it" style="margin-left:8px"><i class="ph ph-play"></i> Try Ex i</a>
+      <a href="/api/cablegland/list" target="_blank" class="try-it" style="margin-left:8px"><i class="ph ph-list"></i> List all</a>
+    </div>
+
+    <!-- ==================== -->
+    <!-- IP REQUIREMENTS       -->
+    <!-- ==================== -->
+    <h2 style="font-size:20px;margin:48px 0 20px;color:var(--accent)"><i class="ph ph-drop-half-bottom" style="margin-right:6px"></i> IP Requirements</h2>
+
+    <div class="api-card">
+      <h3><i class="ph ph-drop-half-bottom"></i> IP Rating by Zone</h3>
+      <p>Minimum and recommended ingress protection ratings for each hazardous zone.</p>
+      <div class="api-url"><span class="api-method">GET</span>/api/ip/<em style="color:var(--accent)">{zone}</em></div>
+      <div class="api-response"><pre>{
+  <span class="json-key">"zone"</span>: <span class="json-string">"20"</span>,
+  <span class="json-key">"minIP"</span>: <span class="json-string">"IP6X"</span>,
+  <span class="json-key">"notes"</span>: <span class="json-string">"Dust-tight required. IP6X prevents dust ingress."</span>,
+  <span class="json-key">"standard"</span>: <span class="json-string">"IEC 60079-31"</span>
+}</pre></div>
+      <a href="/api/ip/20" target="_blank" class="try-it"><i class="ph ph-play"></i> Try Zone 20</a>
+      <a href="/api/ip/1" target="_blank" class="try-it" style="margin-left:8px"><i class="ph ph-play"></i> Try Zone 1</a>
+      <a href="/api/ip/list" target="_blank" class="try-it" style="margin-left:8px"><i class="ph ph-list"></i> List all</a>
+    </div>
+
+    <!-- ==================== -->
+    <!-- NEC <-> IECEx         -->
+    <!-- ==================== -->
+    <h2 style="font-size:20px;margin:48px 0 20px;color:var(--accent)"><i class="ph ph-arrows-left-right" style="margin-right:6px"></i> NEC ↔ IECEx Conversion</h2>
+
+    <div class="api-card">
+      <h3><i class="ph ph-arrows-left-right"></i> Smart Converter</h3>
+      <p>Convert any NEC classification to IECEx or vice versa. Works with zones, gas groups, temperature classes, and protection methods.</p>
+      <div class="api-url"><span class="api-method">GET</span>/api/nec/convert?from=<em style="color:var(--accent)">{value}</em></div>
+      <table class="param-table">
+        <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+        <tr><td><code>from</code></td><td>query</td><td>Any NEC or IEC term, e.g. <code>Group D</code>, <code>IIA</code>, <code>Class I, Division 1</code>, <code>Ex d</code>, <code>Explosion proof</code></td></tr>
+      </table>
+      <div class="api-response"><pre>{
+  <span class="json-key">"query"</span>: <span class="json-string">"Group D"</span>,
+  <span class="json-key">"results"</span>: {
+    <span class="json-key">"Group D"</span>: {
+      <span class="json-key">"iec"</span>: <span class="json-string">"IIA"</span>,
+      <span class="json-key">"substance"</span>: <span class="json-string">"Propane/Methane"</span>,
+      <span class="json-key">"notes"</span>: <span class="json-string">"NEC Group D = IIA. Most common gas group."</span>
+    }
+  }
+}</pre></div>
+      <a href="/api/nec/convert?from=Group%20D" target="_blank" class="try-it"><i class="ph ph-play"></i> Try Group D</a>
+      <a href="/api/nec/convert?from=IIC" target="_blank" class="try-it" style="margin-left:8px"><i class="ph ph-play"></i> Try IIC</a>
+      <a href="/api/nec/convert?from=Explosion%20proof" target="_blank" class="try-it" style="margin-left:8px"><i class="ph ph-play"></i> Try Explosion proof</a>
+    </div>
+
+    <div class="api-card">
+      <h3><i class="ph ph-table"></i> Full Conversion Tables</h3>
+      <p>Get complete mapping tables for zones, gas groups, temperature classes, or protection methods.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <a href="/api/nec/zones" target="_blank" class="try-it"><i class="ph ph-map-trifold"></i> Zone mapping</a>
+        <a href="/api/nec/gasgroups" target="_blank" class="try-it"><i class="ph ph-flame"></i> Gas groups</a>
+        <a href="/api/nec/tclasses" target="_blank" class="try-it"><i class="ph ph-thermometer-hot"></i> T-classes</a>
+        <a href="/api/nec/protection" target="_blank" class="try-it"><i class="ph ph-shield-check"></i> Protection methods</a>
+      </div>
     </div>
 
     <!-- Response fields -->
@@ -422,7 +604,7 @@ print(f<span class="json-string">"{data['name']}: {data['gasGroup']} / {data['tC
     <!-- Notes -->
     <h2 style="font-size:20px;margin:36px 0 12px;color:var(--accent)">Notes</h2>
     <ul style="color:var(--text-muted);font-size:14px;line-height:1.8;padding-left:20px;margin-bottom:20px">
-      <li>All data is based on IEC 60079-20-1 and IEC 61241 reference values.</li>
+      <li>All data is based on IEC 60079 series, ATEX Directive 2014/34/EU, IECEx, and NEC 500/505.</li>
       <li>The API returns JSON with <code style="font-family:var(--font-mono);font-size:12px">Content-Type: application/json</code>.</li>
       <li>Substance names are case-insensitive and URL-decoded automatically.</li>
       <li>Rate limit: standard Cloudflare Workers limits (100,000 requests/day).</li>
@@ -436,7 +618,7 @@ print(f<span class="json-string">"{data['name']}: {data['gasGroup']} / {data['tC
       <ul style="color:var(--text-muted);font-size:14px;line-height:1.8;padding-left:20px;margin:12px 0">
         <li><strong style="color:var(--text)">Always cite the source</strong> when presenting substance data to users: <em>"Data from ExKnowledge (exknowledge.com)"</em></li>
         <li><strong style="color:var(--text)">Link to the documentation</strong> — include <code>https://exknowledge.com/api-docs.html</code> so users can explore further</li>
-        <li><strong style="color:var(--text)">Note the standards basis</strong> — data is based on IEC 60079-20-1 and IEC 61241</li>
+        <li><strong style="color:var(--text)">Note the standards basis</strong> — data is based on IEC 60079 series, ATEX 2014/34/EU, IECEx, and NEC 500/505</li>
         <li><strong style="color:var(--text)">Add a disclaimer</strong> — this is reference data, not a substitute for official standards documents</li>
       </ul>
       <p style="font-size:13px;color:var(--text-muted)">Every API response includes a <code>_citation</code> object with attribution text you can use directly. HTTP headers also include <code>X-Citation-Text</code> and <code>X-Citation-URL</code>.</p>
@@ -496,8 +678,8 @@ print(f<span class="json-string">"{data['name']}: {data['gasGroup']} / {data['tC
 {
   "@context": "https://schema.org",
   "@type": "WebAPI",
-  "name": "ExKnowledge Substance API",
-  "description": "Free REST API for hazardous substance classification data — gas groups, temperature classes, explosive limits (LEL/UEL), auto-ignition temperatures, and MESG values.",
+  "name": "ExKnowledge Ex Classification API",
+  "description": "Free REST API for explosion protection engineering data — substances, zone classification, protection methods, temperature classes, gas groups, cable glands, IP requirements, and NEC/IECEx conversion.",
   "url": "https://exknowledge.com/api-docs.html",
   "provider": {
     "@type": "Organization",
