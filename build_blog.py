@@ -86,7 +86,6 @@ document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click
   document.querySelector('.nav-links')?.classList.remove('open');
 }}));
 </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8a52fab1070a496bad146ccf3bbf696d"}'></script>
 </body>
 </html>"""
 
