@@ -726,49 +726,88 @@ IECEx BAS 12.0034X
     <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
     <button type="submit" class="cta-btn">Get PDF →</button>
   </form>
-  <p class="cta-ok" id="popupOk">✓ Check your inbox for the download link.</p>
+  <p class="cta-ok" id="popupOk">✓ Your download is starting. We have also emailed you the link.</p>
 </div>
 
 
 <script>
-const CTA_API = 'https://script.google.com/macros/s/AKfycbxBARonKpH_8lUJ8-m4zsOPqkrBGYoeIBwhVgeRzZFVQweANKAkc85sc5q1VlWDHzXh/exec';
+const EXK_FORM_API = 'https://formsubmit.co/ajax/apbopenclaw@gmail.com';
+function exkSend(fields){
+  return fetch(EXK_FORM_API, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    body: JSON.stringify(fields)
+  }).then(r => r.json()).then(j => {
+    if(!j || String(j.success) !== 'true') throw new Error(j && j.message || 'formsubmit error');
+  });
+}
+function exkOk(f, okId){
+  const ok = document.getElementById(okId);
+  if(ok.dataset.orig) ok.textContent = ok.dataset.orig;
+  ok.style.display = 'block';
+  f.style.display = 'none';
+}
+function exkFail(f, okId, msg){
+  const ok = document.getElementById(okId);
+  if(!ok.dataset.orig) ok.dataset.orig = ok.textContent;
+  ok.textContent = msg;
+  ok.style.display = 'block';
+  f.querySelector('button[type=submit]').disabled = false;
+}
 
 function submitNewsletter(e){
   e.preventDefault();
   const f = e.target;
-  const email = f.email.value;
-  if(!email) return;
-  const p = new URLSearchParams({action:'newsletter',email:email});
-  fetch(CTA_API + '?' + p.toString(), {mode:'no-cors'}).catch(()=>{});
-  f.style.display = 'none';
-  document.getElementById('nlOk').style.display = 'block';
-  localStorage.setItem('exk_nl', '1');
+  f.querySelector('button[type=submit]').disabled = true;
+  exkSend({
+    _subject: 'ExKnowledge newsletter signup',
+    _template: 'table',
+    _replyto: f.email.value,
+    email: f.email.value,
+    page: location.href
+  }).then(() => {
+    exkOk(f, 'nlOk');
+    localStorage.setItem('exk_nl', '1');
+  }).catch(() => exkFail(f, 'nlOk', '✗ Could not send. Please try again.'));
 }
 
 function submitQuestion(e){
   e.preventDefault();
   const f = e.target;
-  const p = new URLSearchParams({
-    action:'question',
+  f.querySelector('button[type=submit]').disabled = true;
+  exkSend({
+    _subject: 'ExKnowledge question from ' + f.email.value,
+    _template: 'table',
+    _replyto: f.email.value,
     email: f.email.value,
     company: f.company.value || '',
     question: f.question.value,
-    page: location.pathname
-  });
-  fetch(CTA_API + '?' + p.toString(), {mode:'no-cors'}).catch(()=>{});
-  f.style.display = 'none';
-  document.getElementById('askOk').style.display = 'block';
+    page: location.href
+  }).then(() => {
+    exkOk(f, 'askOk');
+  }).catch(() => exkFail(f, 'askOk', '✗ Could not send. Please try again.'));
 }
 
 function submitPopup(e){
   e.preventDefault();
   const f = e.target;
-  const p = new URLSearchParams({action:'cheatsheet_download', email: f.email.value});
-  fetch(CTA_API + '?' + p.toString(), {mode:'no-cors'}).catch(()=>{});
-  f.style.display = 'none';
-  document.getElementById('popupOk').style.display = 'block';
-  localStorage.setItem('exk_popup', '1');
-  setTimeout(()=>{ document.getElementById('scrollPopup').classList.remove('visible'); }, 3000);
+  f.querySelector('button[type=submit]').disabled = true;
+  exkSend({
+    _subject: 'ExKnowledge cheat sheet PDF request',
+    _template: 'table',
+    _replyto: f.email.value,
+    _autoresponse: 'Thanks for your interest in the ExKnowledge quick reference. Download the ATEX/IECEx Pocket Guide (PDF) here: https://exknowledge.com/downloads/atex-iecex-pocket-guide.pdf',
+    email: f.email.value,
+    page: location.href
+  }).then(() => {
+    exkOk(f, 'popupOk');
+    localStorage.setItem('exk_popup', '1');
+    const a = document.createElement('a');
+    a.href = 'https://exknowledge.com/downloads/atex-iecex-pocket-guide.pdf';
+    a.download = 'ATEX-IECEx-Pocket-Guide-ExKnowledge.pdf';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => { document.getElementById('scrollPopup').classList.remove('visible'); }, 4000);
+  }).catch(() => exkFail(f, 'popupOk', '✗ Could not send. Please try again.'));
 }
 
 function dismissPopup(){
