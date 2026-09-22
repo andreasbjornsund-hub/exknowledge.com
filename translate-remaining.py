@@ -104,6 +104,48 @@ def translate_openai_chunk(text, target_lang_name):
         print(f"  Parse error: {e}", file=sys.stderr)
     return None
 
+def markup_intact(source_html, translated_html):
+    """Return (ok, reason). Reject translator output that touched the markup.
+
+    Google's plain-text endpoint (and occasionally an LLM) will "translate" tag
+    and attribute names, e.g. </footer> -> </تذييل>, <meta charset=..> -> <ميتا محارف = ..>.
+    Two checks: (1) any tag or attribute name containing non-ASCII characters,
+    (2) the multiset of tags in the output differs from the source page.
+    """
+    from collections import Counter
+    from html.parser import HTMLParser
+
+    bad_tag = re.findall(r'<(?:/\s*)?([^\x00-\x7F][^\s/>]*)', translated_html)
+    if bad_tag:
+        return False, f"non-ASCII tag names: {sorted(set(bad_tag))[:5]}"
+    bad_attr = []
+    for tag in re.findall(r'<[a-zA-Z][^>]*>', translated_html):
+        bad_attr += re.findall(r'\s([^\s=]*[^\x00-\x7F][^\s=]*)\s*=', tag)
+    if bad_attr:
+        return False, f"non-ASCII attribute names: {sorted(set(bad_attr))[:5]}"
+
+    class _Tags(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.tags = []
+        def handle_starttag(self, tag, attrs):
+            self.tags.append(tag)
+        def handle_startendtag(self, tag, attrs):
+            self.tags.append(tag)
+        def handle_endtag(self, tag):
+            self.tags.append('/' + tag)
+
+    def tags_of(html):
+        p = _Tags()
+        p.feed(html)
+        return Counter(p.tags)
+
+    src, out = tags_of(source_html), tags_of(translated_html)
+    diff = {t: (src[t], out[t]) for t in set(src) | set(out) if src[t] != out[t]}
+    if diff:
+        return False, f"tag counts differ (source, translated): {diff}"
+    return True, ""
+
 def adapt_html(html, lang):
     html = re.sub(r'<html lang="en">', f'<html lang="{lang}">', html)
     html = re.sub(
@@ -146,6 +188,10 @@ def main():
             translated = translate_openai_chunked(en_html, target)
         
         if translated:
+            ok, why = markup_intact(en_html, translated)
+            if not ok:
+                print(f"❌ Translator damaged the markup ({why}); not writing {out_path}")
+                continue
             translated = adapt_html(translated, lang)
             with open(out_path, 'w') as f:
                 f.write(translated)
