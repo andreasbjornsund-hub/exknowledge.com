@@ -114,6 +114,7 @@
           <p style="color:var(--text-muted);font-size:13px;margin-bottom:20px">Enter your email and we'll send the PDF straight to your inbox.</p>
 
           <form action="https://formsubmit.co/info@hazardousareaguide.com" method="POST" id="ebook-form">
+            <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="ExKnowledge Ebook Download">
             <input type="hidden" name="_next" value="https://exknowledge.com/downloads/atex-iecex-pocket-guide.pdf">
 
@@ -198,22 +199,26 @@ if (window.location.hash === '#thanks' || document.referrer.includes('formsubmit
 document.getElementById('ebook-form').addEventListener('submit', function(e) {
   e.preventDefault();
   var form = this;
-  fetch(form.action, {
+  var btn = form.querySelector('button[type=submit]');
+  btn.disabled = true;
+  fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
     method: 'POST',
     body: new FormData(form),
     headers: { 'Accept': 'application/json' }
-  }).then(function(r) {
-    if (r.ok) {
-      document.getElementById('download-form').style.display = 'none';
-      document.getElementById('download-success').style.display = 'block';
-      // Auto-start download
-      var a = document.createElement('a');
-      a.href = '/downloads/atex-iecex-pocket-guide.pdf';
-      a.download = 'ATEX-IECEx-Pocket-Guide-ExKnowledge.pdf';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    }
+  }).then(function(r) { return r.json(); }).then(function(j) {
+    if (String(j.success) !== 'true') throw new Error(j.message || 'formsubmit error');
+    document.getElementById('download-form').style.display = 'none';
+    document.getElementById('download-success').style.display = 'block';
+    // Auto-start download
+    var a = document.createElement('a');
+    a.href = '/downloads/atex-iecex-pocket-guide.pdf';
+    a.download = 'ATEX-IECEx-Pocket-Guide-ExKnowledge.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }).catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Could not send. Please try again.';
   });
 });
 </script>

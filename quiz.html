@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://static.cloudflareinsights.com https://hazardousareaguide.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com https://script.google.com data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://script.google.com https://cloudflareinsights.com https://*.analytics.google.com https://*.google-analytics.com https://stats.g.doubleclick.net https://ad.doubleclick.net; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://static.cloudflareinsights.com https://hazardousareaguide.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com https://script.google.com data:; connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://region1.google-analytics.com https://script.google.com https://cloudflareinsights.com https://*.analytics.google.com https://*.google-analytics.com https://stats.g.doubleclick.net https://ad.doubleclick.net; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Ex Knowledge Quiz — ATEX & IECEx Explosion Protection</title>
   <meta name="description" content="Test your explosion protection knowledge with 10 questions per difficulty level covering ATEX & IECEx fundamentals, zone classification, protection methods, gas groups, and temperature classes.">
@@ -1698,15 +1698,43 @@ function generateCertificate(){
 </script>
 
 <script>
-const CTA_API_NL = 'https://script.google.com/macros/s/AKfycbxBARonKpH_8lUJ8-m4zsOPqkrBGYoeIBwhVgeRzZFVQweANKAkc85sc5q1VlWDHzXh/exec';
+const EXK_FORM_API = 'https://formsubmit.co/ajax/apbopenclaw@gmail.com';
+function exkSend(fields){
+  return fetch(EXK_FORM_API, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    body: JSON.stringify(fields)
+  }).then(r => r.json()).then(j => {
+    if(!j || String(j.success) !== 'true') throw new Error(j && j.message || 'formsubmit error');
+  });
+}
+function exkOk(f, okId){
+  const ok = document.getElementById(okId);
+  if(ok.dataset.orig) ok.textContent = ok.dataset.orig;
+  ok.style.display = 'block';
+  f.style.display = 'none';
+}
+function exkFail(f, okId, msg){
+  const ok = document.getElementById(okId);
+  if(!ok.dataset.orig) ok.dataset.orig = ok.textContent;
+  ok.textContent = msg;
+  ok.style.display = 'block';
+  f.querySelector('button[type=submit]').disabled = false;
+}
 function submitNewsletter(e){
   e.preventDefault();
-  const f=e.target;
-  const p=new URLSearchParams({action:'newsletter',email:f.email.value});
-  fetch(CTA_API_NL+'?'+p.toString(),{mode:'no-cors'}).catch(()=>{});
-  f.style.display='none';
-  document.getElementById('nlOk').style.display='block';
-  localStorage.setItem('exk_nl','1');
+  const f = e.target;
+  f.querySelector('button[type=submit]').disabled = true;
+  exkSend({
+    _subject: 'ExKnowledge newsletter signup',
+    _template: 'table',
+    _replyto: f.email.value,
+    email: f.email.value,
+    page: location.href
+  }).then(() => {
+    exkOk(f, 'nlOk');
+    localStorage.setItem('exk_nl', '1');
+  }).catch(() => exkFail(f, 'nlOk', '✗ Could not send. Please try again.'));
 }
 if(localStorage.getItem('exk_nl')){
   const nlf=document.getElementById('nlForm');
