@@ -1,8 +1,37 @@
 #!/usr/bin/env python3
-"""Build blog HTML pages."""
-import os
+"""Build the English monthly blog posts (blog/*.html).
 
-BLOG_DIR = "/tmp/exknowledge/blog"
+The page chrome (security policy, analytics, favicons, stylesheets, nav,
+footer and scripts) is copied from the live blog index at build time, so
+generated posts always match the current site. See DESIGN.md.
+Run from the repo root: python3 build_blog.py
+"""
+import os
+import re
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+BLOG_DIR = os.path.join(ROOT, "blog")
+CHROME_SOURCE = os.path.join(BLOG_DIR, "index.html")
+
+
+def site_chrome():
+    """Extract shared head tags, nav, footer and trailing scripts from a live page."""
+    s = open(CHROME_SOURCE, encoding="utf-8").read()
+    head = s.split("</head>")[0]
+    keep = []
+    for pat in (r'<meta http-equiv="Content-Security-Policy"[^>]*>', r'<meta name="referrer"[^>]*>',
+                r'<script src="https://hazardousareaguide\.com/consent-banner\.js"></script>',
+                r'<link rel="(?:icon|apple-touch-icon)"[^>]*>', r'<link rel="stylesheet"[^>]*>',
+                r'<script async src="https://www\.googletagmanager\.com/gtag/js[^"]*"></script>',
+                r'<script>window\.dataLayer=.*?</script>'):
+        keep += re.findall(pat, head, re.S)
+    nav = re.search(r'<nav class="nav">.*?</nav>', s, re.S).group(0)
+    nav = nav.replace(' aria-current="page" class="active"', '')
+    footer = re.search(r'<footer class="footer">.*?</footer>', s, re.S).group(0)
+    scripts = "\n".join(sorted(set(re.findall(r'<script src="/js/[a-z]+\.js"></script>', s)) | {'<script src="/js/forms.js"></script>'},
+                               key=lambda t: ["nav", "reveal", "search", "forms", "toast"].index(re.search(r"/js/([a-z]+)", t).group(1))))
+    return "\n  ".join(keep), nav, footer, scripts
+
 
 BLOG_TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
@@ -18,8 +47,7 @@ BLOG_TEMPLATE = """<!DOCTYPE html>
   <meta property="og:type" content="article">
   <meta property="og:image" content="{hero_img}">
   <meta property="article:published_time" content="{iso_date}">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  {site_head}
   <script type="application/ld+json">
   {{
     "@context": "https://schema.org",
@@ -35,37 +63,35 @@ BLOG_TEMPLATE = """<!DOCTYPE html>
   </script>
 </head>
 <body>
-
-<nav class="nav">
-  <div class="container">
-    <a href="../" class="nav-logo">Ex<span>Knowledge</span></a>
-    <button class="nav-toggle" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="../">Home</a></li>
-      <li><a href="../pages/fundamentals.html">Fundamentals</a></li>
-      <li><a href="../pages/protection-methods.html">Protection</a></li>
-      <li><a href="index.html" class="active">Blog</a></li>
-    </ul>
-  </div>
-</nav>
+{site_nav}
 
 <section class="content-page">
   <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="../">Home</a> <span>/</span> <a href="index.html">Blog</a> <span>/</span> <span>{date_label}</span>
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/blog/">Blog</a> <span aria-hidden="true">/</span> <span>{date_label}</span>
     </nav>
     <div class="content-layout">
       <article class="content-body">
         <img class="content-hero" src="{hero_img}" alt="{h1}" loading="lazy" width="820" height="240">
-        <p style="font-size:13px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">{date_label}</p>
+        <p class="post-date">{date_label}</p>
         <h1>{h1}</h1>
         {content}
+        <aside class="news-cta" aria-labelledby="newsCtaTitle">
+          <h2 class="news-cta-title" id="newsCtaTitle">Get the monthly Ex industry update</h2>
+          <p>Standards changes, incidents worth learning from and new guides, once a month. No spam.</p>
+          <form class="news-cta-form" action="https://formsubmit.co/apbopenclaw@gmail.com" method="POST" data-exk-form data-subject="ExKnowledge newsletter signup (blog)" data-success="Thanks for subscribing. The next update is on its way.">
+            <input type="hidden" name="_subject" value="ExKnowledge newsletter signup (blog)">
+            <label class="field-label" for="newsEmail">Work email</label>
+            <div class="news-cta-row">
+              <input class="field" type="email" id="newsEmail" name="email" autocomplete="email" placeholder="name@company.com" required>
+              <button type="submit" class="btn btn--primary">Subscribe</button>
+            </div>
+          </form>
+        </aside>
       </article>
       <aside class="content-sidebar" aria-label="More posts">
         <div class="sidebar-card">
-          <h4>All Issues</h4>
+          <h4><i class="ph ph-archive" aria-hidden="true"></i> All issues</h4>
           {sidebar_links}
         </div>
       </aside>
@@ -73,19 +99,9 @@ BLOG_TEMPLATE = """<!DOCTYPE html>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <p>ExKnowledge — Built from field experience.</p>
-    <p style="margin-top:8px">© 2026 ExKnowledge.com</p>
-  </div>
-</footer>
+{site_footer}
 
-<script>
-document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {{
-  document.querySelector('.nav-toggle')?.classList.remove('open');
-  document.querySelector('.nav-links')?.classList.remove('open');
-}}));
-</script>
+{site_scripts}
 </body>
 </html>"""
 
@@ -255,15 +271,18 @@ POSTS = [
     },
 ]
 
-ALL_ISSUES = [("2026-02.html","February 2026"),("2026-01.html","January 2026"),("2025-12.html","December 2025"),("2025-11.html","November 2025")]
+ALL_ISSUES = [("2026-03.html", "March 2026"), ("2026-02.html", "February 2026"), ("2026-01.html", "January 2026"),
+              ("2025-12.html", "December 2025"), ("2025-11.html", "November 2025")]
 
-for post in POSTS:
-    sb = "\n".join(f'<a href="{f}" {"class=current" if f==post["filename"] else ""}>{l}</a>' for f,l in ALL_ISSUES)
-    post["sidebar_links"] = sb
-    html = BLOG_TEMPLATE.format(**post)
-    path = os.path.join(BLOG_DIR, post["filename"])
-    with open(path, 'w') as f:
-        f.write(html)
-    print(f"Built: {post['filename']} ({len(html)} bytes)")
-
-print(f"\nDone! {len(POSTS)} blog posts built.")
+if __name__ == "__main__":
+    site_head, site_nav, site_footer, site_scripts = site_chrome()
+    for post in POSTS:
+        post["sidebar_links"] = "\n          ".join(
+            f'<a href="{f}"{" class=\"current\" aria-current=\"page\"" if f == post["filename"] else ""}>{l}</a>' for f, l in ALL_ISSUES)
+        html = BLOG_TEMPLATE.format(site_head=site_head, site_nav=site_nav, site_footer=site_footer,
+                                    site_scripts=site_scripts, **post)
+        path = os.path.join(BLOG_DIR, post["filename"])
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html)
+        print(f"Built: {post['filename']} ({len(html)} bytes)")
+    print(f"\nDone! {len(POSTS)} blog posts built.")

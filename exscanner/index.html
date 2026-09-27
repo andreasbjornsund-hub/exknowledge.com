@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://static.cloudflareinsights.com https://hazardousareaguide.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com https://cloudflareinsights.com https://*.analytics.google.com https://*.google-analytics.com https://stats.g.doubleclick.net https://ad.doubleclick.net; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://static.cloudflareinsights.com https://hazardousareaguide.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com https://cloudflareinsights.com https://*.analytics.google.com https://*.google-analytics.com https://stats.g.doubleclick.net https://ad.doubleclick.net; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com https://www.youtube-nocookie.com">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Ex Certificate Scanner. ExKnowledge</title>
-    <meta name="description" content="Upload your ATEX or IECEx certificates and instantly extract equipment marking, gas group, temperature class, protection type, and more. 100% client-side. your data never leaves your browser.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+  <script src="https://hazardousareaguide.com/consent-banner.js"></script>
+    <title>Ex Certificate Scanner | ExKnowledge</title>
+  <link rel="canonical" href="https://exknowledge.com/exscanner/">
+  <meta property="og:title" content="Ex Certificate Scanner | ExKnowledge">
+  <meta property="og:description" content="Upload your ATEX or IECEx certificates and instantly extract equipment marking, gas group, temperature class, protection type, and more.">
+  <meta property="og:url" content="https://exknowledge.com/exscanner/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+    <meta name="description" content="Upload your ATEX or IECEx certificates and instantly extract equipment marking, gas group, temperature class, protection type, and more.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+
     <!-- Google Tag Manager placeholder -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -20,7 +30,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   <meta name="google-site-verification" content="sOyXKWrVaIkNjUyjMsArnZ8b-TeqkR3Jft9mz-EBhWQ">
 <!-- Google Ads Remarketing -->
-<script src="https://hazardousareaguide.com/consent-banner.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16941652225"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16941652225');</script>
 <!-- GA4 Hazardous Area Guide Network -->
@@ -55,7 +64,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header class="hero">
         <div class="hero-content">
             <h1>Scan Ex Certificates Instantly</h1>
-            <p class="hero-sub">Upload an ATEX or IECEx certificate PDF. The parser extracts equipment marking, gas group, temperature class, protection type, and more. all in your browser.</p>
+            <p class="hero-sub">Upload an ATEX or IECEx certificate PDF. The parser extracts equipment marking, gas group, temperature class, protection type, and more, all in your browser.</p>
             <div class="trust-badges">
                 <span class="badge">🔒 100% Client-Side</span>
                 <span class="badge">📄 No Upload to Server</span>
@@ -67,7 +76,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Scanner Section -->
     <main id="scanner">
         <section class="scanner-section">
-            <div class="upload-zone" id="dropZone">
+            <div class="upload-zone" id="dropZone" role="button" tabindex="0" aria-label="Choose a certificate PDF to scan">
                 <div class="upload-icon">📄</div>
                 <p class="upload-text">Drag & drop a certificate PDF here</p>
                 <p class="upload-sub">or click to browse files</p>
@@ -76,7 +85,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <!-- Processing indicator -->
-            <div class="processing" id="processing" style="display:none">
+            <div class="processing" id="processing" role="status" aria-live="polite" style="display:none">
                 <div class="spinner"></div>
                 <p>Extracting certificate data...</p>
             </div>
@@ -199,9 +208,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="about-card">
                 <h3>📄 Supported Certificates</h3>
                 <ul>
-                    <li><strong>IECEx</strong>. International Electrotechnical Commission</li>
-                    <li><strong>ATEX</strong>. EU Directive 2014/34/EU</li>
-                    <li><strong>UKCA</strong>. UK Conformity Assessment</li>
+                    <li><strong>IECEx</strong>: International Electrotechnical Commission</li>
+                    <li><strong>ATEX</strong>: EU Directive 2014/34/EU</li>
+                    <li><strong>UKCA</strong>: UK Conformity Assessment</li>
                 </ul>
                 <p>Best results with text-based PDFs. Scanned/image PDFs may have reduced accuracy.</p>
             </div>

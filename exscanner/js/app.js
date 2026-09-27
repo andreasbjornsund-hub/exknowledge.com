@@ -52,13 +52,18 @@
 
     // === File Upload ===
     dropZone.addEventListener('click', () => fileInput.click());
+    dropZone.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
+    });
     dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
     dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
     dropZone.addEventListener('drop', e => {
         e.preventDefault();
         dropZone.classList.remove('dragover');
         const file = e.dataTransfer.files[0];
-        if (file && file.type === 'application/pdf') processFile(file);
+        if (!file) return;
+        if (file.type === 'application/pdf' || /\.pdf$/i.test(file.name)) processFile(file);
+        else toast('That file is not a PDF. Drop an IECEx, ATEX or UKCA certificate PDF.');
     });
     fileInput.addEventListener('change', () => {
         if (fileInput.files[0]) processFile(fileInput.files[0]);
@@ -116,7 +121,9 @@
             processing.innerHTML = `
                 <div style="color: #f85149; text-align: center; padding: 40px;">
                     <p style="font-size: 1.2rem; margin-bottom: 8px;">Failed to process PDF</p>
-                    <p style="color: #8b949e;">${err.message || 'Unknown error'}</p>
+                    <p style="color: #9aa4b0;">${typeof pdfjsLib === 'undefined'
+                        ? 'The PDF reader could not be loaded. Check your connection and try again.'
+                        : 'This file could not be read. It may be scanned at low quality, password-protected or not a certificate.'}</p>
                     <button class="btn btn-secondary" style="margin-top: 16px;" onclick="location.reload()">Try Again</button>
                 </div>
             `;
@@ -336,6 +343,7 @@
     function toast(msg) {
         const el = document.createElement('div');
         el.className = 'toast';
+        el.setAttribute('role', 'status');
         el.textContent = msg;
         document.body.appendChild(el);
         setTimeout(() => el.remove(), 2500);
