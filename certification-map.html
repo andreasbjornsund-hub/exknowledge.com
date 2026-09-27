@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>World Ex Certification Map — ATEX, IECEx, NEC by Country | ExKnowledge</title>
+  <script src="https://hazardousareaguide.com/consent-banner.js"></script>
+  <title>World Ex Certification Map: ATEX, IECEx, NEC by Country</title>
   <meta name="description" content="Interactive world map showing which explosion protection certification schemes apply in each country: ATEX, IECEx, NEC/CEC, GOST, NEPSI, and more.">
   <link rel="canonical" href="https://exknowledge.com/certification-map.html">
   <meta property="og:title" content="World Ex Certification Map — ExKnowledge">
@@ -13,10 +14,12 @@
   <meta property="og:site_name" content="ExKnowledge">
   <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 40 44\'><polygon points=\'20,0 40,11 40,33 20,44 0,33 0,11\' fill=\'%231a1917\' stroke=\'%23d4a843\' stroke-width=\'2.5\'/><text x=\'20\' y=\'27\' text-anchor=\'middle\' font-size=\'16\' font-weight=\'700\' fill=\'%23d4a843\' font-family=\'system-ui\'>Ex</text></svg>">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://exknowledge.com/"},{"@type":"ListItem","position":2,"name":"Certification Map","item":"https://exknowledge.com/certification-map.html"}]}
   </script>
@@ -29,29 +32,32 @@
     .map-legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-muted); }
     .map-legend-swatch { width: 16px; height: 16px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.1); }
     .country-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 24px 0; }
-    .country-table th { text-align: left; padding: 10px 12px; border-bottom: 2px solid var(--border); color: #1a1917; font-weight: 600; }
-    .country-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); color: #333; }
+    .country-table th { text-align: left; padding: 10px 12px; border-bottom: 2px solid var(--border); color: var(--ink); font-weight: 600; }
+    .country-table td { padding: 8px 12px; border-bottom: 1px solid var(--line); color: var(--ink-muted); }
     .country-table tr:hover td { background: rgba(212,168,67,0.05); }
-    .scheme-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin: 1px 2px; }
-    .scheme-atex { background: #2563eb18; color: #1d4ed8; border: 1px solid #2563eb44; }
-    .scheme-iecex { background: #16a34a18; color: #15803d; border: 1px solid #16a34a44; }
-    .scheme-nec { background: #dc262618; color: #b91c1c; border: 1px solid #dc262644; }
-    .scheme-gost { background: #9333ea18; color: #7e22ce; border: 1px solid #9333ea44; }
-    .scheme-other { background: #d4a84318; color: #92730a; border: 1px solid #d4a84344; }
+    .scheme-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; margin: 1px 2px; }
+    .scheme-atex { background: #eef3fd; color: #1d4ed8; border: 1px solid #2563eb44; }
+    .scheme-iecex { background: #edf7f0; color: #166534; border: 1px solid #16a34a44; }
+    .scheme-nec { background: #fdf0f0; color: #b91c1c; border: 1px solid #dc262644; }
+    .scheme-gost { background: #f6effd; color: #7e22ce; border: 1px solid #9333ea44; }
+    .scheme-other { background: #faf3e3; color: #7a5a0c; border: 1px solid #d4a84344; }
+    .table-scroll { overflow-x: auto; }
     .embed-box { background: var(--bg-card); border: 1px solid var(--border); padding: 20px; margin: 32px 0; }
     .embed-box h3 { margin: 0 0 12px; font-size: 16px; color: var(--text-bright); }
     .embed-box textarea { width: 100%; height: 60px; background: var(--bg); border: 1px solid var(--border); color: var(--text-muted); padding: 8px; font-family: monospace; font-size: 12px; resize: none; }
     .embed-box button { margin-top: 8px; background: var(--accent); color: var(--bg); border: none; padding: 8px 20px; font-weight: 600; cursor: pointer; }
     .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 16px 0 24px; }
-    .filter-btn { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); padding: 6px 14px; font-size: 13px; cursor: pointer; transition: all 0.2s; }
-    .filter-btn:hover, .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
-    #country-search { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-bright); padding: 8px 14px; font-size: 14px; width: 100%; max-width: 300px; margin-bottom: 16px; }
-  </style>
+    .filter-btn { background: var(--surface-raised); border: 1px solid var(--line-strong); color: var(--ink); padding: 6px 14px; font-size: 14px; border-radius: var(--radius-pill); cursor: pointer; transition: all 0.2s; }
+    .filter-btn:hover { border-color: var(--ink); }
+    .filter-btn.active { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+    #country-search { background: var(--surface-raised); border: 1px solid var(--line-strong); color: var(--ink); padding: 10px 12px; font-size: 16px; min-height: var(--tap); width: 100%; max-width: 300px; margin-bottom: 16px; }
+  /* dark-surface tokens */
+.embed-box{--text:#c4bfb5;--text-muted:#a8a296;--text-bright:#f0eeea;--border:#2a2825;--link:#d4a843;--focus:#d4a843;color:var(--text)}
+</style>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-array@3/dist/d3-array.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-geo@3/dist/d3-geo.min.js"></script>
 <!-- Google Ads Remarketing -->
-<script src="https://hazardousareaguide.com/consent-banner.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16941652225"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16941652225');</script>
 <!-- GA4 Hazardous Area Guide Network -->
@@ -63,47 +69,57 @@
 <nav class="nav">
   <div class="container">
     <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="site-nav">
       <li class="has-dropdown">
-        <a href="#"><i class="ph ph-book-open-text"></i> Knowledge <i class="ph ph-caret-down dd-arrow"></i></a>
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-book-open-text" aria-hidden="true"></i> Knowledge <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
         <ul class="dropdown">
-          <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
-          <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zone Classification</a></li>
-          <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection Methods</a></li>
-          <li><a href="/pages/standards.html"><i class="ph ph-scales"></i> Standards &amp; Regulations</a></li>
-          <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperature Classes</a></li>
-          <li><a href="/pages/gas-groups.html"><i class="ph ph-flame"></i> Gas Groups</a></li>
-          <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Equipment Categories</a></li>
-          <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Reference</a></li>
-          <li><a href="/pages/faq.html"><i class="ph ph-question"></i> FAQ</a></li>
+          <li><a href="/pages/fundamentals.html"><i class="ph ph-fire" aria-hidden="true"></i> Fundamentals</a></li>
+          <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold" aria-hidden="true"></i> Zone Classification</a></li>
+          <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check" aria-hidden="true"></i> Protection Methods</a></li>
+          <li><a href="/pages/standards.html"><i class="ph ph-scales" aria-hidden="true"></i> Standards &amp; Regulations</a></li>
+          <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot" aria-hidden="true"></i> Temperature Classes</a></li>
+          <li><a href="/pages/gas-groups.html"><i class="ph ph-flame" aria-hidden="true"></i> Gas Groups</a></li>
+          <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six" aria-hidden="true"></i> Equipment Categories</a></li>
+          <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning" aria-hidden="true"></i> Quick Reference</a></li>
+          <li><a href="/pages/faq.html"><i class="ph ph-question" aria-hidden="true"></i> FAQ</a></li>
         </ul>
       </li>
       <li class="has-dropdown">
-        <a href="#"><i class="ph ph-folder-open"></i> Resources <i class="ph ph-caret-down dd-arrow"></i></a>
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-folder-open" aria-hidden="true"></i> Resources <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
         <ul class="dropdown">
-          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
-          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a></li>
-          <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
-          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
-          <li><a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a></li>
-          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Training</a></li>
-          <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a>
-          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west"></i> Certification Map</a></li>
+          <li><a href="/quiz.html"><i class="ph ph-exam" aria-hidden="true"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar" aria-hidden="true"></i> Survey</a></li>
+          <li><a href="/blog/"><i class="ph ph-newspaper" aria-hidden="true"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone" aria-hidden="true"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate" aria-hidden="true"></i> Glossary</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher" aria-hidden="true"></i> Training</a></li>
+          <li><a href="/visualisations.html"><i class="ph ph-eye" aria-hidden="true"></i> Visualisations</a></li>
+          <li><a href="/certification-map.html" aria-current="page" class="active"><i class="ph ph-globe-hemisphere-west" aria-hidden="true"></i> Certification Map</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-users-three" aria-hidden="true"></i> Community <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/partners.html"><i class="ph ph-handshake" aria-hidden="true"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link" aria-hidden="true"></i> Industry Links</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info" aria-hidden="true"></i> About</a></li>
     </ul>
-    <select class="lang-select" disabled aria-label="Language" style="opacity:0.4;cursor:not-allowed;pointer-events:none">
-      <option selected>🇬🇧 English</option>
-      <option>🇩🇪 Deutsch</option>
-      <option>🇳🇴 Norsk</option>
-      <option>🇩🇰 Dansk</option>
-      <option>🇸🇪 Svenska</option>
-      <option>🇫🇮 Suomi</option>
-      <option>🇪🇸 Español</option>
-      <option>🇳🇱 Nederlands</option>
-      <option>🇵🇹 Português</option>
-      <option>🇮🇹 Italiano</option>
-      <option>🇸🇦 العربية</option>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/" selected>🇬🇧 English</option>
+      <option value="/de/">🇩🇪 Deutsch</option>
+      <option value="/no/">🇳🇴 Norsk</option>
+      <option value="/da/">🇩🇰 Dansk</option>
+      <option value="/sv/">🇸🇪 Svenska</option>
+      <option value="/fi/">🇫🇮 Suomi</option>
+      <option value="/es/">🇪🇸 Español</option>
+      <option value="/nl/">🇳🇱 Nederlands</option>
+      <option value="/pt/">🇵🇹 Português</option>
+      <option value="/it/">🇮🇹 Italiano</option>
+      <option value="/ar/">🇸🇦 العربية</option>
     </select>
-    <div class="burger" aria-label="Menu"><i class="ph-bold ph-list"></i></div>
+    <button type="button" class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="ph-bold ph-list" aria-hidden="true"></i></button>
   </div>
 </nav>
 
@@ -121,6 +137,7 @@
   </div>
 
   <div class="map-container" id="world-map">
+    <p id="map-status" class="state-msg" role="status">Loading map…</p>
     <canvas id="map-canvas" style="width:100%;border:1px solid var(--border);cursor:crosshair"></canvas>
     <div id="map-tooltip" style="display:none;position:fixed;background:var(--bg-card);border:1px solid var(--accent);padding:8px 14px;font-size:13px;color:var(--text-bright);pointer-events:none;z-index:100;max-width:280px"></div>
   </div>
@@ -135,12 +152,13 @@
     <button class="filter-btn" data-filter="iecex-accepted" style="border-color:#16a34a44">IECEx Accepted</button>
   </div>
 
-  <input type="text" id="country-search" placeholder="Search country..." autocomplete="off">
+  <label class="field-label" for="country-search">Find a country</label>
+  <input type="search" id="country-search" placeholder="e.g. Brazil" autocomplete="off">
 
-  <table class="country-table" id="cert-table">
+  <div class="table-scroll"><table class="country-table" id="cert-table">
     <thead><tr><th>Country</th><th>Primary Scheme</th><th>Also Accepted</th><th>Certifying Body</th></tr></thead>
     <tbody></tbody>
-  </table>
+  </table></div>
 
   <div class="embed-box">
     <h3><i class="ph ph-code"></i> Embed this map on your website</h3>
@@ -181,8 +199,9 @@
       <div class="footer-col">
         <h4>More</h4>
         <a href="/about.html"><i class="ph ph-info"></i> About</a>
+        <a href="/ebook.html"><i class="ph ph-file-pdf"></i> Free PDF guide</a>
+        <a href="/privacy.html"><i class="ph ph-shield-check"></i> Privacy</a>
         <a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a>
-        <a href="/events.html"><i class="ph ph-calendar-blank"></i> Events</a>
         <a href="/links.html"><i class="ph ph-link"></i> Industry Links</a>
         <a href="https://hazardousareaguide.com"><i class="ph ph-compass"></i> Hazardous Area Guide</a>
         <a href="https://intrinsicallysafephones.com"><i class="ph ph-device-mobile"></i> Intrinsically Safe Phones</a>
@@ -192,242 +211,15 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+      <p><i class="ph ph-lightning" style="color:var(--link)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
       <p>Not a substitute for official standards documents or professional engineering advice.</p>
-      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" class="footer-report"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
     </div>
   </div>
 </footer>
 <script src="/js/nav.js"></script>
+<script src="/js/search.js"></script>
 
-<script>
-// World map rendering
-const schemeColors = {
-  atex: '#2563eb',
-  iecex: '#16a34a',
-  nec: '#dc2626',
-  gost: '#9333ea',
-  national: '#d4a843',
-  unknown: '#333333'
-};
-
-const countrySchemes = {
-  'AT':'atex','BE':'atex','BG':'atex','HR':'atex','CY':'atex','CZ':'atex',
-  'DK':'atex','EE':'atex','FI':'atex','FR':'atex','DE':'atex','GR':'atex',
-  'HU':'atex','IS':'atex','IE':'atex','IT':'atex','LV':'atex','LT':'atex',
-  'LU':'atex','MT':'atex','NL':'atex','NO':'atex','PL':'atex','PT':'atex',
-  'RO':'atex','SK':'atex','SI':'atex','ES':'atex','SE':'atex','CH':'atex',
-  'GB':'atex','LI':'atex','TR':'atex',
-  'US':'nec','CA':'nec','MX':'nec',
-  'RU':'gost','KZ':'gost','BY':'gost','AM':'gost','KG':'gost','AZ':'gost',
-  'AU':'iecex','NZ':'iecex','AE':'iecex','SA':'iecex','QA':'iecex','KW':'iecex',
-  'SG':'iecex','ZA':'iecex','NG':'iecex','EG':'iecex','DZ':'iecex',
-  'IL':'iecex','IQ':'iecex','OM':'iecex','BH':'iecex','GH':'iecex','AO':'iecex',
-  'CN':'national','JP':'national','KR':'national','IN':'national','BR':'national',
-  'AR':'national','ID':'national','TH':'national','VN':'national','PH':'national',
-  'TW':'national','CO':'national','CL':'national','PE':'national','IR':'national',
-  'PK':'national','BD':'national','MY':'national','TT':'national','MZ':'national',
-};
-
-// ISO numeric -> alpha-2 mapping for topojson
-const numToAlpha = {
-  4:'AF',8:'AL',12:'DZ',24:'AO',32:'AR',36:'AU',40:'AT',31:'AZ',44:'BS',48:'BH',
-  50:'BD',56:'BE',84:'BZ',204:'BJ',64:'BT',68:'BO',70:'BA',72:'BW',76:'BR',96:'BN',
-  100:'BG',854:'BF',108:'BI',116:'KH',120:'CM',124:'CA',140:'CF',148:'TD',152:'CL',
-  156:'CN',170:'CO',178:'CG',180:'CD',188:'CR',384:'CI',191:'HR',192:'CU',196:'CY',
-  203:'CZ',208:'DK',262:'DJ',214:'DO',218:'EC',818:'EG',222:'SV',226:'GQ',232:'ER',
-  233:'EE',231:'ET',242:'FJ',246:'FI',250:'FR',266:'GA',270:'GM',268:'GE',276:'DE',
-  288:'GH',300:'GR',320:'GT',324:'GN',328:'GY',332:'HT',340:'HN',348:'HU',352:'IS',
-  356:'IN',360:'ID',364:'IR',368:'IQ',372:'IE',376:'IL',380:'IT',388:'JM',392:'JP',
-  400:'JO',398:'KZ',404:'KE',408:'KP',410:'KR',414:'KW',417:'KG',418:'LA',428:'LV',
-  422:'LB',426:'LS',430:'LR',434:'LY',440:'LT',442:'LU',807:'MK',450:'MG',454:'MW',
-  458:'MY',466:'ML',478:'MR',484:'MX',496:'MN',499:'ME',504:'MA',508:'MZ',104:'MM',
-  516:'NA',524:'NP',528:'NL',554:'NZ',558:'NI',562:'NE',566:'NG',578:'NO',512:'OM',
-  586:'PK',591:'PA',598:'PG',600:'PY',604:'PE',608:'PH',616:'PL',620:'PT',634:'QA',
-  642:'RO',643:'RU',646:'RW',682:'SA',686:'SN',688:'RS',694:'SL',702:'SG',703:'SK',
-  705:'SI',706:'SO',710:'ZA',724:'ES',144:'LK',736:'SD',740:'SR',748:'SZ',752:'SE',
-  756:'CH',760:'SY',762:'TJ',834:'TZ',764:'TH',768:'TG',780:'TT',788:'TN',792:'TR',
-  795:'TM',800:'UG',804:'UA',784:'AE',826:'GB',840:'US',858:'UY',860:'UZ',862:'VE',
-  704:'VN',887:'YE',894:'ZM',716:'ZW',728:'SS',275:'PS',
-};
-
-
-// IECEx is a GLOBAL scheme - accepted in 50+ countries alongside local primary schemes
-const iecexAccepted = new Set([
-  // EU/EEA (all accept IECEx alongside ATEX)
-  'AT','BE','BG','HR','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT',
-  'LV','LT','NL','NO','PL','PT','RO','SK','SI','ES','SE','CH','GB','TR','CY',
-  // Americas
-  'US','CA','BR','AR','CO','CL','PE','TT',
-  // Asia-Pacific
-  'AU','NZ','CN','JP','KR','IN','SG','MY','ID','TH','VN','PH','TW',
-  // Middle East
-  'AE','SA','QA','KW','OM','BH','IL','IQ','IR',
-  // Africa
-  'ZA','NG','EG','DZ','GH','AO',
-  // CIS
-  'RU','KZ','AZ',
-  // Others
-  'PK','BD',
-]);
-
-const schemeLabels = {
-  atex: 'ATEX (EU/EEA)',
-  iecex: 'IECEx',
-  nec: 'NEC/CEC',
-  gost: 'GOST-R / TR CU',
-  national: 'National (IEC-based)',
-  unknown: 'No data'
-};
-
-let worldData = null;
-let geoFeatures = null;
-const canvas = document.getElementById('map-canvas');
-const ctx = canvas.getContext('2d');
-const tooltip = document.getElementById('map-tooltip');
-
-function resizeCanvas() {
-  const rect = canvas.parentElement.getBoundingClientRect();
-  const w = rect.width;
-  const h = Math.round(w * 0.5);
-  canvas.width = w * 2;  // retina
-  canvas.height = h * 2;
-  canvas.style.height = h + 'px';
-  ctx.scale(2, 2);
-  return { w, h };
-}
-
-function drawMap(highlightScheme) {
-  if (!geoFeatures) return;
-  const { w, h } = resizeCanvas();
-
-  const projection = d3.geoNaturalEarth1()
-    .fitSize([w, h], { type: 'Sphere' });
-  const path = d3.geoPath(projection, ctx);
-
-  // Background
-  ctx.fillStyle = '#0a0a0a';
-  ctx.fillRect(0, 0, w, h);
-
-  // Sphere outline
-  ctx.beginPath();
-  path({ type: 'Sphere' });
-  ctx.fillStyle = '#111';
-  ctx.fill();
-  ctx.strokeStyle = '#333';
-  ctx.lineWidth = 0.5;
-  ctx.stroke();
-
-  // Draw countries
-  geoFeatures.forEach(f => {
-    const id = f.id || f.properties?.id;
-    const alpha2 = numToAlpha[id] || '';
-    const scheme = countrySchemes[alpha2] || 'unknown';
-    const color = schemeColors[scheme] || schemeColors.unknown;
-
-    let opacity = 1;
-    if (highlightScheme === 'iecex-accepted') {
-      opacity = iecexAccepted.has(alpha2) ? 1 : 0.15;
-      // Override color: show IECEx green for accepted countries
-      if (iecexAccepted.has(alpha2)) {
-        ctx.beginPath();
-        path(f);
-        ctx.fillStyle = '#16a34a';
-        ctx.globalAlpha = 0.7;
-        ctx.fill();
-        ctx.globalAlpha = 1;
-        ctx.strokeStyle = '#1a1a1a';
-        ctx.lineWidth = 0.3;
-        ctx.stroke();
-        return;
-      }
-    } else if (highlightScheme && highlightScheme !== 'all') {
-      opacity = (scheme === highlightScheme) ? 1 : 0.15;
-    }
-
-    ctx.beginPath();
-    path(f);
-    ctx.fillStyle = color;
-    ctx.globalAlpha = opacity;
-    ctx.fill();
-    ctx.globalAlpha = 1;
-    ctx.strokeStyle = '#1a1a1a';
-    ctx.lineWidth = 0.3;
-    ctx.stroke();
-  });
-}
-
-// Load topojson
-fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
-  .then(r => r.json())
-  .then(topo => {
-    worldData = topo;
-    geoFeatures = topojson.feature(topo, topo.objects.countries).features;
-    drawMap(activeFilter);
-  });
-
-// Tooltip on hover
-canvas.addEventListener('mousemove', (e) => {
-  if (!geoFeatures) return;
-  const rect = canvas.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-  const w = rect.width;
-  const h = rect.height;
-
-  const projection = d3.geoNaturalEarth1()
-    .fitSize([w, h], { type: 'Sphere' });
-
-  const coords = projection.invert([x, y]);
-  if (!coords) { tooltip.style.display = 'none'; return; }
-
-  for (const f of geoFeatures) {
-    if (d3.geoContains(f, coords)) {
-      const id = f.id || f.properties?.id;
-      const alpha2 = numToAlpha[id] || '??';
-      const scheme = countrySchemes[alpha2] || 'unknown';
-      const name = f.properties?.name || alpha2;
-
-      // Find full country info from table data
-      const info = countries.find(c => {
-        const cn = c.c.toLowerCase();
-        return cn === name.toLowerCase() || cn.includes(name.toLowerCase().substring(0, 5));
-      });
-
-      let tip = '<strong>' + name + '</strong> (' + alpha2 + ')<br>';
-      tip += '<span style="color:' + (schemeColors[scheme] || '#888') + '">' + (schemeLabels[scheme] || scheme) + '</span>';
-      if (info) {
-        tip += '<br>Primary: ' + info.p;
-        if (info.a) tip += '<br>Also: ' + info.a;
-        tip += '<br>Bodies: ' + info.b;
-      }
-
-      tooltip.innerHTML = tip;
-      tooltip.style.display = 'block';
-      tooltip.style.left = (e.clientX + 12) + 'px';
-      tooltip.style.top = (e.clientY - 10) + 'px';
-      return;
-    }
-  }
-  tooltip.style.display = 'none';
-});
-
-canvas.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
-
-// Re-draw on filter change
-const origFilterHandler = filterBtns[0]?.onclick;
-filterBtns.forEach(btn => {
-  const origClick = btn.onclick;
-  btn.addEventListener('click', () => {
-    setTimeout(() => drawMap(activeFilter), 50);
-  });
-});
-
-// Also draw on resize
-window.addEventListener('resize', () => drawMap(activeFilter));
-</script>
-</body>
-</html>
 
 <script>
 const countries = [
@@ -728,12 +520,18 @@ function drawMap(highlightScheme) {
 }
 
 // Load topojson
+const mapStatus = document.getElementById('map-status');
 fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
-  .then(r => r.json())
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
   .then(topo => {
     worldData = topo;
     geoFeatures = topojson.feature(topo, topo.objects.countries).features;
+    mapStatus.hidden = true;
     drawMap(activeFilter);
+  })
+  .catch(() => {
+    mapStatus.textContent = 'The map could not be loaded. The country table below still works.';
+    mapStatus.classList.add('state-msg--error');
   });
 
 // Tooltip on hover

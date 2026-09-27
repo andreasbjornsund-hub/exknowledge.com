@@ -3,9 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explosion Protection Fundamentals: Fire Triangle, LEL/UEL, Ignition Sources</title>
+  <title>Explosion Protection Fundamentals: Fire Triangle, LEL, UEL</title>
   <meta name="description" content="The fire triangle, explosive atmospheres, LEL and UEL limits, 13 ignition sources, and the three protection principles. A practical guide for engineers.">
   <link rel="canonical" href="https://exknowledge.com/pages/fundamentals.html">
+  <link rel="alternate" hreflang="en" href="https://exknowledge.com/pages/fundamentals.html">
+  <link rel="alternate" hreflang="ar" href="https://exknowledge.com/ar/pages/fundamentals.html">
+  <link rel="alternate" hreflang="da" href="https://exknowledge.com/da/pages/fundamentals.html">
+  <link rel="alternate" hreflang="de" href="https://exknowledge.com/de/pages/fundamentals.html">
+  <link rel="alternate" hreflang="es" href="https://exknowledge.com/es/pages/fundamentals.html">
+  <link rel="alternate" hreflang="fi" href="https://exknowledge.com/fi/pages/fundamentals.html">
+  <link rel="alternate" hreflang="it" href="https://exknowledge.com/it/pages/fundamentals.html">
+  <link rel="alternate" hreflang="nl" href="https://exknowledge.com/nl/pages/fundamentals.html">
+  <link rel="alternate" hreflang="nb" href="https://exknowledge.com/no/pages/fundamentals.html">
+  <link rel="alternate" hreflang="pt" href="https://exknowledge.com/pt/pages/fundamentals.html">
+  <link rel="alternate" hreflang="sv" href="https://exknowledge.com/sv/pages/fundamentals.html">
+  <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/pages/fundamentals.html">
   <meta property="og:title" content="Explosion Protection Fundamentals: Fire Triangle, LEL/UEL, Ignition Sources">
   <meta property="og:description" content="The fire triangle, explosive atmospheres, LEL and UEL limits, 13 ignition sources, and the three protection principles. A practical guide for engineers.">
   <meta property="og:url" content="https://exknowledge.com/pages/fundamentals.html">
@@ -15,15 +27,18 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Explosion Protection Fundamentals: Fire Triangle, LEL/UEL, Ignition Sources">
   <meta name="twitter:description" content="The fire triangle, explosive atmospheres, LEL and UEL limits, 13 ignition sources, and the three protection principles. A practical guide for engineers.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <style>
 /* ─── CTA Shared Styles ─── */
 .cta-section{background:var(--c-cream,#faf8f5);border-top:1px solid var(--c-sand,#e8e4de);padding:3rem 0}
-.cta-card{max-width:540px;margin:0 auto;text-align:center}
-.cta-card h3{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.4rem;color:var(--c-black,#1a1917);margin-bottom:0.5rem}
-.cta-card p{font-size:0.95rem;color:var(--c-slate,#64605a);margin-bottom:1.5rem;line-height:1.6}
+.ask-card{max-width:540px;margin:0 auto;text-align:center}
+.ask-card h3{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.4rem;color:var(--c-black,#1a1917);margin-bottom:0.5rem}
+.ask-card p{font-size:0.95rem;color:var(--c-slate,#64605a);margin-bottom:1.5rem;line-height:1.6}
 .cta-input{width:100%;font-size:1rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;margin-bottom:0.5rem;box-sizing:border-box}
 .cta-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
 .cta-textarea{width:100%;font-size:0.95rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;min-height:100px;resize:vertical;margin-bottom:0.5rem;box-sizing:border-box}
@@ -59,7 +74,7 @@
 .scroll-popup .cta-row{margin-bottom:0}
 @media(max-width:480px){.cta-row{flex-direction:column}.cta-row .cta-btn{width:100%}.footer-nl-form{flex-direction:column}
 </style>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -103,45 +118,42 @@
 <nav class="nav">
   <div class="container">
     <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="site-nav">
       <li class="has-dropdown">
-        <a href="#"><i class="ph ph-book-open-text"></i> Knowledge <i class="ph ph-caret-down dd-arrow"></i></a>
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-book-open-text" aria-hidden="true"></i> Knowledge <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
         <ul class="dropdown">
-        <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
-        <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zone Classification</a></li>
-        <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection Methods</a></li>
-        <li><a href="/pages/standards.html"><i class="ph ph-scales"></i> Standards &amp; Regulations</a></li>
-        <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperature Classes</a></li>
-        <li><a href="/pages/gas-groups.html"><i class="ph ph-flame"></i> Gas Groups</a></li>
-        <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six"></i> Equipment Categories</a></li>
-        <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Reference</a></li>
-        <li><a href="/pages/faq.html"><i class="ph ph-question"></i> FAQ</a></li>
+          <li><a href="/pages/fundamentals.html" aria-current="page" class="active"><i class="ph ph-fire" aria-hidden="true"></i> Fundamentals</a></li>
+          <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold" aria-hidden="true"></i> Zone Classification</a></li>
+          <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check" aria-hidden="true"></i> Protection Methods</a></li>
+          <li><a href="/pages/standards.html"><i class="ph ph-scales" aria-hidden="true"></i> Standards &amp; Regulations</a></li>
+          <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot" aria-hidden="true"></i> Temperature Classes</a></li>
+          <li><a href="/pages/gas-groups.html"><i class="ph ph-flame" aria-hidden="true"></i> Gas Groups</a></li>
+          <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six" aria-hidden="true"></i> Equipment Categories</a></li>
+          <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning" aria-hidden="true"></i> Quick Reference</a></li>
+          <li><a href="/pages/faq.html"><i class="ph ph-question" aria-hidden="true"></i> FAQ</a></li>
         </ul>
       </li>
       <li class="has-dropdown">
-        <a href="#"><i class="ph ph-folder-open"></i> Resources <i class="ph ph-caret-down dd-arrow"></i></a>
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-folder-open" aria-hidden="true"></i> Resources <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
         <ul class="dropdown">
-          <li><a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a></li>
-          <li><a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a></li>
-          <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
-          <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
-          <li><a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a></li>
-          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher"></i> Training</a></li>
-          <li><a href="/visualisations.html"><i class="ph ph-eye"></i> Visualisations</a></li>
-          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west"></i> Certification Map</a></li>
-          <li><a href="/buying-report.html"><i class="ph ph-file-text"></i> Buying Report <span class="soon-badge">SOON</span></a></li>
-          <li><a href="/webinars.html"><i class="ph ph-monitor-play"></i> Webinars <span class="badge-soon">Soon</span></a></li>
+          <li><a href="/quiz.html"><i class="ph ph-exam" aria-hidden="true"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar" aria-hidden="true"></i> Survey</a></li>
+          <li><a href="/blog/"><i class="ph ph-newspaper" aria-hidden="true"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone" aria-hidden="true"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate" aria-hidden="true"></i> Glossary</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher" aria-hidden="true"></i> Training</a></li>
+          <li><a href="/visualisations.html"><i class="ph ph-eye" aria-hidden="true"></i> Visualisations</a></li>
+          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west" aria-hidden="true"></i> Certification Map</a></li>
         </ul>
       </li>
       <li class="has-dropdown">
-        <a href="#"><i class="ph ph-users-three"></i> Community <i class="ph ph-caret-down dd-arrow"></i></a>
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-users-three" aria-hidden="true"></i> Community <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
         <ul class="dropdown">
-          <li><a href="/events.html"><i class="ph ph-calendar-blank"></i> Events <span class="badge-soon">Soon</span></a></li>
-          <li><a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a></li>
-          <li><a href="/links.html"><i class="ph ph-link"></i> Industry Links <span class="badge-soon">Soon</span></a></li>
+          <li><a href="/partners.html"><i class="ph ph-handshake" aria-hidden="true"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link" aria-hidden="true"></i> Industry Links</a></li>
         </ul>
       </li>
-      <li><a href="/about.html"><i class="ph ph-info"></i> About</a></li>
+      <li><a href="/about.html"><i class="ph ph-info" aria-hidden="true"></i> About</a></li>
     </ul>
     <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
       <option value="/" selected>🇬🇧 English</option>
@@ -156,9 +168,7 @@
       <option value="/it/">🇮🇹 Italiano</option>
       <option value="/ar/">🇸🇦 العربية</option>
     </select>
-    <div class="burger" aria-label="Menu">
-      <i class="ph-bold ph-list"></i>
-    </div>
+    <button type="button" class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="ph-bold ph-list" aria-hidden="true"></i></button>
   </div>
 </nav>
 
@@ -225,7 +235,7 @@
 <h3 id="mists">Mists</h3>
 <p>Fine droplets of flammable liquids. The tricky part: a mist can form an explosive atmosphere even when the liquid is below its flash point. This gets missed in hazard assessments more than it should.</p>
 <h3 id="dusts">Dusts</h3>
-<p>Combustible dusts from organic materials (grain, sugar, wood, coal), metals (aluminium, magnesium), and synthetic materials (plastics, pharmaceuticals). Classified into <a href="gas-groups.html#dust-groups">dust groups</a> (IIIA, IIIB, IIIC).</p>
+<p>Combustible dusts from organic materials (grain, sugar, wood, coal), metals (aluminium, magnesium), and synthetic materials (plastics, pharmaceuticals). Classified into <a href="gas-groups.html#dust-groups-group-iii">dust groups</a> (IIIA, IIIB, IIIC).</p>
 <p>The particles need to be fine enough to stay airborne (under ~500 μm). One thing people forget: a dust layer on a hot surface can ignite at a lower temperature than the same dust as a cloud.</p>
 <h2 id="ignition-sources">Ignition Sources</h2>
 <p>IEC/EN 60079-0 and EN 1127-1 identify <strong>13 potential ignition sources</strong>:</p>
@@ -298,7 +308,7 @@
 </tr>
 <tr>
 <td><strong>EPL</strong></td>
-<td><a href="EPL.html">Equipment Protection Level</a> — Ga, Gb, Gc, Da, Db, Dc</td>
+<td><a href="epl.html">Equipment Protection Level</a> — Ga, Gb, Gc, Da, Db, Dc</td>
 </tr>
 <tr>
 <td><strong>Type of protection</strong></td>
@@ -355,8 +365,8 @@
 </ul>
         
 <section class="related-topics" style="margin-top:40px;padding:24px;background:var(--bg-alt, #f8f7f4);border-radius:8px;">
-  <h2 style="font-size:18px;margin:0 0 12px 0;">Related Topics</h2>
-  <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:8px;">
+  <h2 style="margin:0 0 12px 0;">Related Topics</h2>
+  <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(min(200px, 100%), 1fr));gap:8px;">
         <li><a href="zone-classification.html">Zone Classification</a></li>
         <li><a href="gas-groups.html">Gas Groups & Dust Groups</a></li>
         <li><a href="protection-methods.html">Protection Methods</a></li>
@@ -364,6 +374,14 @@
   </ul>
 </section>
 
+              <aside class="pdf-cta inverse" aria-labelledby="pdfCtaTitle">
+          <div>
+            <p class="pdf-cta-eyebrow">Free PDF</p>
+            <h2 class="pdf-cta-title" id="pdfCtaTitle">The ATEX &amp; IECEx Pocket Guide</h2>
+            <p>Zones, gas groups, temperature classes, protection methods and marking examples on 12 printable pages.</p>
+          </div>
+          <a class="btn btn--primary" href="/ebook.html">Get the free PDF</a>
+        </aside>
       </div>
       <aside class="content-sidebar" aria-label="Navigation">
         <div class="sidebar-card">
@@ -389,7 +407,7 @@
 
 <section class="cta-section" id="ask-section">
   <div class="container">
-    <div class="cta-card">
+    <div class="ask-card">
       <h3>Have a question about this topic?</h3>
       <p>Submit your question and get a response from the ExKnowledge knowledge base.</p>
       <form id="askForm" onsubmit="submitQuestion(event)">
@@ -434,8 +452,9 @@
       <div class="footer-col">
         <h4>More</h4>
         <a href="/about.html"><i class="ph ph-info"></i> About</a>
+        <a href="/ebook.html"><i class="ph ph-file-pdf"></i> Free PDF guide</a>
+        <a href="/privacy.html"><i class="ph ph-shield-check"></i> Privacy</a>
         <a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a>
-        <a href="/events.html"><i class="ph ph-calendar-blank"></i> Events</a>
         <a href="/links.html"><i class="ph ph-link"></i> Industry Links</a>
         <a href="https://hazardousareaguide.com"><i class="ph ph-compass"></i> Hazardous Area Guide</a>
         <a href="https://intrinsicallysafephones.com"><i class="ph ph-device-mobile"></i> Intrinsically Safe Phones</a>
@@ -444,18 +463,10 @@
         <a href="https://explosionprooftablets.com"><i class="ph ph-device-tablet"></i> Explosion Proof Tablets</a>
       </div>
     </div>
-    <div style="max-width:380px;margin:1.5rem auto 0;text-align:center">
-      <p style="font-size:0.8rem;color:var(--c-mid,#999);margin-bottom:0.5rem">Monthly standards updates &amp; guides. No spam.</p>
-      <form id="nlForm" onsubmit="submitNewsletter(event)" style="display:flex;gap:0.4rem">
-        <input type="email" name="email" placeholder="your.email@company.com" required style="flex:1;padding:0.5rem 0.7rem;border:1px solid var(--c-sand,#e8e4de);font-size:0.85rem;font-family:inherit;background:var(--c-white,#fff)">
-        <button type="submit" style="padding:0.5rem 1rem;background:var(--c-black,#1a1917);color:var(--c-yellow,#d4a843);border:none;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:inherit">Subscribe</button>
-      </form>
-      <p id="nlOk" style="color:var(--c-green,#2d7d46);font-size:0.85rem;margin-top:0.4rem;display:none">✓ Subscribed.</p>
-    </div>
     <div class="footer-bottom">
-      <p><i class="ph ph-lightning" style="color:var(--accent)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+      <p><i class="ph ph-lightning" style="color:var(--link)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
       <p>Not a substitute for official standards documents or professional engineering advice.</p>
-      <p style="margin-top:8px"><a href="/about.html#feedback" style="color:var(--accent);font-size:11px"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" class="footer-report"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
     </div>
   </div>
 </footer>
@@ -473,127 +484,9 @@
 </div>
 
 
-<script>
-const EXK_FORM_API = 'https://formsubmit.co/ajax/apbopenclaw@gmail.com';
-function exkSend(fields){
-  return fetch(EXK_FORM_API, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-    body: JSON.stringify(fields)
-  }).then(r => r.json()).then(j => {
-    if(!j || String(j.success) !== 'true') throw new Error(j && j.message || 'formsubmit error');
-  });
-}
-function exkOk(f, okId){
-  const ok = document.getElementById(okId);
-  if(ok.dataset.orig) ok.textContent = ok.dataset.orig;
-  ok.style.display = 'block';
-  f.style.display = 'none';
-}
-function exkFail(f, okId, msg){
-  const ok = document.getElementById(okId);
-  if(!ok.dataset.orig) ok.dataset.orig = ok.textContent;
-  ok.textContent = msg;
-  ok.style.display = 'block';
-  f.querySelector('button[type=submit]').disabled = false;
-}
 
-function submitNewsletter(e){
-  e.preventDefault();
-  const f = e.target;
-  f.querySelector('button[type=submit]').disabled = true;
-  exkSend({
-    _subject: 'ExKnowledge newsletter signup',
-    _template: 'table',
-    _replyto: f.email.value,
-    email: f.email.value,
-    page: location.href
-  }).then(() => {
-    exkOk(f, 'nlOk');
-    localStorage.setItem('exk_nl', '1');
-  }).catch(() => exkFail(f, 'nlOk', '✗ Could not send. Please try again.'));
-}
-
-function submitQuestion(e){
-  e.preventDefault();
-  const f = e.target;
-  f.querySelector('button[type=submit]').disabled = true;
-  exkSend({
-    _subject: 'ExKnowledge question from ' + f.email.value,
-    _template: 'table',
-    _replyto: f.email.value,
-    email: f.email.value,
-    company: f.company.value || '',
-    question: f.question.value,
-    page: location.href
-  }).then(() => {
-    exkOk(f, 'askOk');
-  }).catch(() => exkFail(f, 'askOk', '✗ Could not send. Please try again.'));
-}
-
-function submitPopup(e){
-  e.preventDefault();
-  const f = e.target;
-  f.querySelector('button[type=submit]').disabled = true;
-  exkSend({
-    _subject: 'ExKnowledge cheat sheet PDF request',
-    _template: 'table',
-    _replyto: f.email.value,
-    _autoresponse: 'Thanks for your interest in the ExKnowledge quick reference. Download the ATEX/IECEx Pocket Guide (PDF) here: https://exknowledge.com/downloads/atex-iecex-pocket-guide.pdf',
-    email: f.email.value,
-    page: location.href
-  }).then(() => {
-    exkOk(f, 'popupOk');
-    localStorage.setItem('exk_popup', '1');
-    const a = document.createElement('a');
-    a.href = 'https://exknowledge.com/downloads/atex-iecex-pocket-guide.pdf';
-    a.download = 'ATEX-IECEx-Pocket-Guide-ExKnowledge.pdf';
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    setTimeout(() => { document.getElementById('scrollPopup').classList.remove('visible'); }, 4000);
-  }).catch(() => exkFail(f, 'popupOk', '✗ Could not send. Please try again.'));
-}
-
-function dismissPopup(){
-  document.getElementById('scrollPopup').classList.remove('visible');
-  localStorage.setItem('exk_popup', '1');
-}
-
-// Scroll-depth trigger (60%)
-(function(){
-  if(localStorage.getItem('exk_popup')) return;
-  let triggered = false;
-  window.addEventListener('scroll', function(){
-    if(triggered) return;
-    const scrollPct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-    if(scrollPct > 0.6){
-      triggered = true;
-      setTimeout(()=>{ document.getElementById('scrollPopup')?.classList.add('visible'); }, 800);
-    }
-  });
-})();
-
-// Hide newsletter if already subscribed
-if(localStorage.getItem('exk_nl')){
-  const nlf = document.getElementById('nlForm');
-  if(nlf){ nlf.style.display='none'; document.getElementById('nlOk').style.display='block'; }
-}
-</script>
-
-<script>
-// Burger menu toggle
-document.querySelector('.burger')?.addEventListener('click', function(){
-  document.querySelector('.nav-links')?.classList.toggle('open');
-  this.classList.toggle('open');
-});
-// Dropdown toggle on mobile
-document.querySelectorAll('.has-dropdown > a').forEach(a => {
-  a.addEventListener('click', function(e){
-    if(window.innerWidth <= 768){
-      e.preventDefault();
-      this.parentElement.classList.toggle('open');
-    }
-  });
-});
-</script>
+<script src="/js/nav.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/forms.js"></script>
 </body>
 </html>

@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://static.cloudflareinsights.com https://hazardousareaguide.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com https://script.google.com data:; connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://region1.google-analytics.com https://script.google.com https://cloudflareinsights.com https://*.analytics.google.com https://*.google-analytics.com https://stats.g.doubleclick.net https://ad.doubleclick.net; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://static.cloudflareinsights.com https://hazardousareaguide.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com https://script.google.com data:; connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://region1.google-analytics.com https://script.google.com https://cloudflareinsights.com https://*.analytics.google.com https://*.google-analytics.com https://stats.g.doubleclick.net https://ad.doubleclick.net; font-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.googletagmanager.com https://www.youtube-nocookie.com">
   <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script src="https://hazardousareaguide.com/consent-banner.js"></script>
   <title>Ex Knowledge Quiz — ATEX & IECEx Explosion Protection</title>
-  <meta name="description" content="Test your explosion protection knowledge with 10 questions per difficulty level covering ATEX & IECEx fundamentals, zone classification, protection methods, gas groups, and temperature classes.">
+  <meta name="description" content="Test your explosion protection knowledge with 10 questions per difficulty level covering ATEX &amp; IECEx fundamentals, zone classification, protection methods.">
   <link rel="canonical" href="https://exknowledge.com/quiz.html">
   <meta property="og:title" content="Ex Knowledge Quiz — Test Your Explosion Protection Knowledge">
   <meta property="og:description" content="10 questions per difficulty level covering ATEX & IECEx fundamentals, zone classification, protection methods, gas groups, and temperature classes.">
@@ -18,10 +19,13 @@
   <meta name="twitter:title" content="Ex Knowledge Quiz — Test Your Explosion Protection Knowledge">
   <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
   <meta name="twitter:image" content="https://exknowledge.com/images/og-default.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 44'><polygon points='20,0 40,11 40,33 20,44 0,33 0,11' fill='%231a1917' stroke='%23d4a843' stroke-width='2.5'/><text x='20' y='27' text-anchor='middle' font-size='16' font-weight='700' fill='%23d4a843' font-family='system-ui'>Ex</text></svg>">
+
   
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -31,36 +35,34 @@
   })(window,document,'script','dataLayer','GTM-5VSBXBSL');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- Quiz-specific fonts (DM Sans, Space Grotesk) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
-  --c-black: #1a1a18;
-  --c-charcoal: #2d2d2a;
-  --c-slate: #4a4a45;
-  --c-mid: #7a7a72;
-  --c-warm-gray: #b8b5ad;
-  --c-sand: #e8e4db;
-  --c-cream: #f5f3ee;
-  --c-white: #fafaf7;
+  --c-black: #1a1917;
+  --c-charcoal: #23211e;
+  --c-slate: #5a544a;
+  --c-mid: #5a544a;
+  --c-warm-gray: #a8a296;
+  --c-sand: #ddd9d2;
+  --c-cream: #f8f7f5;
+  --c-white: #ffffff;
 
-  --c-yellow: #f0c808;
-  --c-yellow-dim: #d4b107;
-  --c-yellow-glow: #fde74c;
-  --c-amber: #e8a500;
-  --c-orange: #e06c00;
-  --c-red: #c0392b;
-  --c-green: #27ae60;
-  --c-green-soft: #2ecc71;
-  --c-blue: #2c6fbb;
+  --c-yellow: #d4a843;
+  --c-yellow-dim: #86621a;
+  --c-yellow-glow: #e0bc5e;
+  --c-amber: #d4a843;
+  --c-orange: #9a5a14;
+  --c-red: #b04236;
+  --c-green: #2d7d46;
+  --c-green-soft: #7cc98b;
+  --c-blue: #86621a;
 
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Instrument Sans', system-ui, sans-serif;
+  --font-body: 'Figtree', system-ui, sans-serif;
 
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -360,7 +362,7 @@ body{
 
 .opt-btn:hover:not(:disabled){
   border-color: var(--c-yellow);
-  background: #fffef5;
+  background: #fbf6e8;
 }
 
 .opt-btn .opt-letter{
@@ -771,7 +773,6 @@ body{
 @media(max-width:480px){.cta-row{flex-direction:column}.cta-row .cta-btn{width:100%}.footer-nl-form{flex-direction:column}}
 </style>
 <!-- GA4 Hazardous Area Guide Network -->
-<script src="https://hazardousareaguide.com/consent-banner.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXVW6MS2C5"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SXVW6MS2C5');</script>
 </head>
@@ -784,14 +785,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="nav">
   <div class="container">
     <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
-    <ul class="nav-links">
-      <li><a href="/pages/fundamentals.html"><i class="ph ph-fire"></i> Fundamentals</a></li>
-      <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold"></i> Zones</a></li>
-      <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check"></i> Protection</a></li>
-      <li><a href="/pages/standards.html"><i class="ph ph-book-open"></i> Standards</a></li>
-      <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning"></i> Quick Ref</a></li>
-      <li><a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a></li>
-      <li><a href="/podcast/"><i class="ph ph-microphone"></i> Podcast</a></li>
+    <ul class="nav-links" id="site-nav">
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-book-open-text" aria-hidden="true"></i> Knowledge <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/pages/fundamentals.html"><i class="ph ph-fire" aria-hidden="true"></i> Fundamentals</a></li>
+          <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold" aria-hidden="true"></i> Zone Classification</a></li>
+          <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check" aria-hidden="true"></i> Protection Methods</a></li>
+          <li><a href="/pages/standards.html"><i class="ph ph-scales" aria-hidden="true"></i> Standards &amp; Regulations</a></li>
+          <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot" aria-hidden="true"></i> Temperature Classes</a></li>
+          <li><a href="/pages/gas-groups.html"><i class="ph ph-flame" aria-hidden="true"></i> Gas Groups</a></li>
+          <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six" aria-hidden="true"></i> Equipment Categories</a></li>
+          <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning" aria-hidden="true"></i> Quick Reference</a></li>
+          <li><a href="/pages/faq.html"><i class="ph ph-question" aria-hidden="true"></i> FAQ</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-folder-open" aria-hidden="true"></i> Resources <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/quiz.html" aria-current="page" class="active"><i class="ph ph-exam" aria-hidden="true"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar" aria-hidden="true"></i> Survey</a></li>
+          <li><a href="/blog/"><i class="ph ph-newspaper" aria-hidden="true"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone" aria-hidden="true"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate" aria-hidden="true"></i> Glossary</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher" aria-hidden="true"></i> Training</a></li>
+          <li><a href="/visualisations.html"><i class="ph ph-eye" aria-hidden="true"></i> Visualisations</a></li>
+          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west" aria-hidden="true"></i> Certification Map</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-users-three" aria-hidden="true"></i> Community <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/partners.html"><i class="ph ph-handshake" aria-hidden="true"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link" aria-hidden="true"></i> Industry Links</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info" aria-hidden="true"></i> About</a></li>
     </ul>
     <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
       <option value="/" selected>🇬🇧 English</option>
@@ -806,9 +835,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <option value="/it/">🇮🇹 Italiano</option>
       <option value="/ar/">🇸🇦 العربية</option>
     </select>
-    <div class="burger" aria-label="Menu">
-      <i class="ph-bold ph-list"></i>
-    </div>
+    <button type="button" class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="ph-bold ph-list" aria-hidden="true"></i></button>
   </div>
 </nav>
 
@@ -861,9 +888,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="q-card" id="qCard">
     <div class="q-number" id="qNumber"></div>
-    <div class="q-text" id="qText"></div>
+    <div class="q-text" id="qText" tabindex="-1"></div>
     <div class="options" id="optionsWrap"></div>
-    <div class="feedback" id="feedback"></div>
+    <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
     <button class="btn-next" id="btnNext" onclick="nextQuestion()">Next Question →</button>
   </div>
 </div>
@@ -871,8 +898,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ═══ EMAIL CAPTURE ═══ -->
 <div class="screen" id="screen-email">
 <div class="email-card">
-  <h2 class="email-title">Enter your email to see your detailed results</h2>
-  <p class="email-msg">Get your score breakdown and personalized feedback.</p>
+  <h2 class="email-title" tabindex="-1">Your results are ready</h2>
+  <p class="email-msg">Add your name and email if you want a copy and a certificate. Both are optional.</p>
 
   <form class="email-form" id="emailForm" onsubmit="handleEmailSubmit(event)">
     <input type="hidden" id="formScore">
@@ -882,12 +909,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <input type="hidden" id="formHard">
     <input type="hidden" id="formDifficulty">
     
-    <input type="text" name="name" id="captureName" class="email-input" placeholder="Your name" style="margin-bottom:10px">
-    <input type="email" name="email" id="captureEmail" class="email-input" placeholder="your.email@example.com" required>
-    <button type="submit" class="btn-submit-email">Show My Results →</button>
+    <label class="field-label" for="captureName">Name (optional)</label>
+    <input type="text" name="name" id="captureName" class="email-input" placeholder="Your name" autocomplete="name" style="margin-bottom:10px">
+    <label class="field-label" for="captureEmail">Email (optional)</label>
+    <input type="email" name="email" id="captureEmail" class="email-input" placeholder="name@company.com" autocomplete="email">
+    <button type="submit" class="btn-submit-email">Show my results →</button>
+    <button type="button" class="btn btn--ghost btn--block quiz-skip" onclick="skipEmail()">Skip and show my results</button>
   </form>
 
-  <p style="font-size:0.8rem;color:var(--c-mid);margin-top:1rem;">Your email is required to view detailed results and receive your certificate.</p>
+  <p class="email-fineprint">We only use your email to send your result and occasional ExKnowledge updates. No spam.</p>
 </div>
 </div>
 
@@ -911,7 +941,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="breakdown" id="breakdown"></div>
 
   <div id="nextLevelWrap"></div>
-  <button class="btn-retry" onclick="resetQuiz()">Try Again ↻</button>
+  <button type="button" class="btn-retry" onclick="resetQuiz()">Try again ↻</button>
+  <button type="button" class="btn btn--secondary" onclick="generateCertificate()"><i class="ph ph-certificate" aria-hidden="true"></i> Download certificate</button>
   <p class="results-footer">Learn more at <a href="https://exknowledge.com">exknowledge.com</a></p>
 </div>
 </div>
@@ -1339,6 +1370,8 @@ function showScreen(id){
   el.style.animation = 'none';
   el.offsetHeight;
   el.style.animation = '';
+  const h = el.querySelector('h1, h2');
+  if(h && id !== 'screen-quiz'){ if(!h.hasAttribute('tabindex')) h.setAttribute('tabindex', '-1'); h.focus({preventScroll: true}); }
 }
 
 /* ═══════════════════════════════
@@ -1364,6 +1397,7 @@ function renderQuestion(){
   // Question
   document.getElementById('qNumber').textContent = `Question ${currentIdx + 1} of ${total}`;
   document.getElementById('qText').textContent = q.q;
+  setTimeout(() => document.getElementById('qText').focus({preventScroll: true}), 0);
 
   // Options
   const wrap = document.getElementById('optionsWrap');
@@ -1481,7 +1515,18 @@ function submitToAPI(name, email){
 function handleEmailSubmit(e){
   e.preventDefault();
   const name = document.getElementById('captureName').value;
-  const email = document.getElementById('captureEmail').value;
+  const emailEl = document.getElementById('captureEmail');
+  const email = emailEl.value.trim();
+  if(email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
+    let err = document.getElementById('captureEmailErr');
+    if(!err){ err = document.createElement('p'); err.id = 'captureEmailErr'; err.className = 'field-error'; emailEl.insertAdjacentElement('afterend', err); }
+    err.textContent = 'Please enter a valid email address, like name@company.com, or leave it empty.';
+    err.hidden = false;
+    emailEl.setAttribute('aria-invalid', 'true');
+    emailEl.setAttribute('aria-describedby', 'captureEmailErr');
+    emailEl.focus();
+    return;
+  }
   submitToAPI(name, email);
   showResults();
 }
@@ -1603,7 +1648,7 @@ window.addEventListener('DOMContentLoaded', () => {
     showScreen('screen-results');
     document.getElementById('resultsIcon').textContent = '✉️';
     document.getElementById('resultsTitle').textContent = 'Thank You!';
-    document.getElementById('resultsMsg').textContent = 'Your results have been sent. Check your email for a copy.';
+    document.getElementById('resultsMsg').textContent = 'Thanks for taking the ExKnowledge quiz. Start again any time to see your full breakdown.';
     document.getElementById('breakdown').style.display = 'none';
     document.querySelector('.score-ring-wrap').style.display = 'none';
     document.getElementById('nextLevelWrap').style.display = 'none';
@@ -1697,50 +1742,8 @@ function generateCertificate(){
 }
 </script>
 
-<script>
-const EXK_FORM_API = 'https://formsubmit.co/ajax/apbopenclaw@gmail.com';
-function exkSend(fields){
-  return fetch(EXK_FORM_API, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-    body: JSON.stringify(fields)
-  }).then(r => r.json()).then(j => {
-    if(!j || String(j.success) !== 'true') throw new Error(j && j.message || 'formsubmit error');
-  });
-}
-function exkOk(f, okId){
-  const ok = document.getElementById(okId);
-  if(ok.dataset.orig) ok.textContent = ok.dataset.orig;
-  ok.style.display = 'block';
-  f.style.display = 'none';
-}
-function exkFail(f, okId, msg){
-  const ok = document.getElementById(okId);
-  if(!ok.dataset.orig) ok.dataset.orig = ok.textContent;
-  ok.textContent = msg;
-  ok.style.display = 'block';
-  f.querySelector('button[type=submit]').disabled = false;
-}
-function submitNewsletter(e){
-  e.preventDefault();
-  const f = e.target;
-  f.querySelector('button[type=submit]').disabled = true;
-  exkSend({
-    _subject: 'ExKnowledge newsletter signup',
-    _template: 'table',
-    _replyto: f.email.value,
-    email: f.email.value,
-    page: location.href
-  }).then(() => {
-    exkOk(f, 'nlOk');
-    localStorage.setItem('exk_nl', '1');
-  }).catch(() => exkFail(f, 'nlOk', '✗ Could not send. Please try again.'));
-}
-if(localStorage.getItem('exk_nl')){
-  const nlf=document.getElementById('nlForm');
-  if(nlf){nlf.style.display='none';document.getElementById('nlOk').style.display='block';}
-}
-</script>
 
+<script src="/js/forms.js"></script>
+<script src="/js/search.js"></script>
 </body>
 </html>
