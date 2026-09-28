@@ -1198,7 +1198,7 @@ h2, h3, h4 { font-weight: 600; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: var(--tap); padding: 12px 24px;
-  font-family: var(--font-display); font-size: var(--fs-small); font-weight: 600; letter-spacing: 0.02em;
+  font-family: var(--font-display); font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.04em;
   line-height: 1.2; text-align: center; text-decoration: none; cursor: pointer;
   border: 1px solid transparent; border-radius: var(--radius);
   transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
@@ -1298,18 +1298,17 @@ textarea.field { min-height: 120px; resize: vertical; }
   .dropdown {
     display: block; visibility: hidden; opacity: 0; transform: translate(-50%, 6px);
     transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0.15s;
-    border-radius: var(--radius);
+    border-radius: 8px;
   }
   .has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown, .has-dropdown.open .dropdown {
     visibility: visible; opacity: 1; transform: translate(-50%, 0);
     transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s;
   }
   .has-dropdown.open .dd-arrow, .has-dropdown:focus-within .dd-arrow { transform: rotate(180deg); }
-  .dropdown li a { min-height: 40px; }
 }
-.dropdown li a { color: var(--ink-muted-on-inverse); font-size: 0.875rem; }
+.dropdown li a { color: var(--ink-muted-on-inverse); font-size: 0.8125rem; }
 .dropdown li a:hover { color: var(--ink-on-inverse); text-decoration: none; }
-.lang-select { color: var(--ink-muted-on-inverse); border-color: var(--line-inverse); min-height: 36px; font-size: 0.8125rem; }
+.lang-select { color: var(--ink-muted-on-inverse); border-color: var(--line-inverse); min-height: 32px; font-size: 0.75rem; }
 .lang-select:hover { color: var(--ink-on-inverse); }
 .burger { background: none; border: 0; color: var(--accent); }
 
@@ -1320,14 +1319,14 @@ textarea.field { min-height: 120px; resize: vertical; }
   .dd-toggle { justify-content: flex-start; }
   .dropdown li a { padding: 10px 16px; font-size: 0.9375rem; min-height: var(--tap); }
   .nav-search-label { position: static; width: auto; height: auto; clip: auto; }
-  .lang-select { min-height: var(--tap); }
+  .lang-select { min-height: 36px; }
   input, select, textarea { font-size: 1rem !important; } /* stops iOS zoom on focus */
 }
 @media (max-width: 420px) {
   .nav .container { padding: 0 12px; gap: 8px; }
   .nav-logo { font-size: 1rem; min-width: 0; }
   .nav-logo .ex-hex { width: 24px; height: 26px; }
-  .lang-select { max-width: 76px; padding: 4px 6px; }
+  .lang-select { padding: 4px 6px; }
 }
 
 /* ---------- Layout: nothing wider than the screen ---------- */
@@ -1426,7 +1425,7 @@ h4 { font-size: var(--fs-lead); }
 @media (max-width: 380px) { .hero h1 { font-size: 1.625rem; } }
 
 /* ---------- Legacy buttons aligned with .btn (DESIGN.md → Components) ---------- */
-.cta-form button { text-transform: none; letter-spacing: 0.02em; font-size: var(--fs-small); min-height: var(--tap); }
+.cta-form button { min-height: var(--tap); }
 .ask-card .cta-btn, .scroll-popup .cta-btn { background: var(--accent); color: var(--on-accent); font-family: var(--font-display); font-size: var(--fs-small); min-height: var(--tap); }
 .ask-card .cta-btn:hover:not(:disabled), .scroll-popup .cta-btn:hover:not(:disabled) { background: var(--accent-hover); }
 .ask-card .cta-input, .ask-card .cta-textarea, .scroll-popup .cta-input { border: 1px solid var(--line-strong); font-size: var(--fs-body); }
@@ -1434,3 +1433,10 @@ h4 { font-size: var(--fs-lead); }
 .dl-btn { min-height: var(--tap); }
 .hero .container { max-width: 1000px; }
 @media (max-width: 900px) { .nav .lang-select { margin-left: auto; } .nav .container { gap: 8px; } }
+
+/* ---------- Refinement pass 2026-09-28: keep the pre-audit look, keep the accessibility ---------- */
+/* Dark magnifier on the gold search button (it inherited the hero's light text colour). */
+.hero-search-btn, .hero-search-btn .ph { color: var(--on-accent); }
+/* 44px targets on touch screens; slimmer 40px controls with a mouse, closer to the original design. */
+@media (min-width: 901px) and (pointer: fine) { :root { --tap: 40px; } }
+@media (max-width: 359px) { .lang-select { max-width: 92px; } }  /* flag + short code only on the narrowest phones */

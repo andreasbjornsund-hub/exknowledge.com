@@ -168,10 +168,12 @@
   function initLang() {
     var sel = document.querySelector('.lang-select');
     if (!sel || !window.matchMedia) return;
-    var mq = window.matchMedia('(max-width: 420px)');
+    var mq = window.matchMedia('(max-width: 359px)');
     function codeFor(opt) {
       var m = (opt.value || '').match(/^\/(ar|da|de|es|fi|it|nl|no|pt|sv)\//);
-      return m ? m[1].toUpperCase() : 'EN';
+      var code = m ? m[1].toUpperCase() : 'EN';
+      var flag = (opt.dataset.full || opt.textContent).trim().split(' ')[0];
+      return /^[A-Za-z]/.test(flag) ? code : flag + ' ' + code;
     }
     function apply() {
       [].forEach.call(sel.options, function (o) {

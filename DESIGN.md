@@ -58,7 +58,8 @@ Mark a new dark block with `class="inverse"` or `data-surface="inverse"`.
 
 ## Type
 
-- **Display:** Instrument Sans 600/700, for headings, buttons and nav.
+- **Display:** Instrument Sans 600/700 for headings. Buttons use Instrument Sans 500 at 13px
+  with 0.04em letter spacing; form submit buttons like Subscribe are uppercase.
 - **Body:** Figtree 400/500.
 - **Mono:** JetBrains Mono, for labels, codes and markings.
 - No other families.
@@ -83,10 +84,13 @@ per page. Never skip a heading level for styling.
   96px (`--space-1` … `--space-24`).
 - **Radii:** `--radius` is 0 and the default for cards, buttons and inputs.
   `--radius-sm` (4px) is for badges only. `--radius-pill` is for filter chips
-  only.
+  only. Dropdown panels are the exception: 8px corners, compact 13px rows.
 - **Shadows:** `--shadow-sm`, `--shadow-md`, `--shadow-lg`. Use them only for
   floating things: dropdowns, popups and modals.
-- **Tap targets:** at least 44 × 44px (`--tap`) at phone widths.
+- **Tap targets:** `--tap` is 44px on touch screens and 40px with a mouse
+  (desktop, `pointer: fine`), which keeps the original slim look.
+- **Language picker:** slim mono box with flag and full name. Only under 360px
+  does it shorten to flag plus code (for example "🇬🇧 EN").
 
 ## Components
 
@@ -144,7 +148,7 @@ given those states. New work uses the classes above.
     `aria-expanded`.
   - Escape closes the innermost open thing and returns focus.
   - Dropdowns open on hover, keyboard focus or click.
-  - Shows a two-letter language code under 420px.
+  - Shows the flag plus a two-letter language code under 360px.
   - `EXK.openDialog(el, opts)` gives any popup Escape handling, focus in, a
     focus trap and focus back.
 - **`js/search.js`**
