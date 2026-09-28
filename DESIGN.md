@@ -172,7 +172,12 @@ site is already consistent.
 ```
 python3 scripts/build_nav.py   # translated, accessible nav on every page
 python3 scripts/build_seo.py   # canonical, og:url, hreflang, sitemap.xml
+python3 scripts/build_lang_stubs.py   # /<lang>/ redirect pages for English-only pages
 ```
+
+Cloudflare geo-redirects first-time visitors from `/<path>` to `/<lang>/<path>`.
+Every English-only page therefore needs a redirect page in each language folder,
+or those visitors get a 404. `build_lang_stubs.py` creates the missing ones.
 
 Translated pages that are still English inside get
 `<meta name="robots" content="noindex, follow">` and a canonical link to the
