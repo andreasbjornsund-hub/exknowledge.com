@@ -27,26 +27,52 @@ st = collections.Counter()
 TITLES = {  # hand-written English titles (<= 60 chars)
  'pages/fundamentals.html': 'Explosion Protection Fundamentals: Fire Triangle, LEL, UEL',
  'pages/zone-classification.html': 'ATEX Zone Classification: Zones 0, 1, 2, 20, 21 and 22',
- 'pages/gas-groups.html': 'Gas Groups IIA, IIB, IIC Explained: MESG and MIC',
- 'pages/temperature-classes.html': 'Temperature Classes T1 to T6: Which T-Class Do You Need?',
+ 'pages/gas-groups.html': 'Gas Groups IIA, IIB, IIC: Table, MESG & IIB vs IIC',
+ 'pages/temperature-classes.html': 'Temperature Classes T1–T6 Table: T3 vs T4 Explained',
  'pages/protection-methods.html': 'Ex Protection Methods: Ex d, Ex e, Ex i, Ex p, Ex n, Ex m',
- 'pages/standards.html': 'Explosion Protection Standards: IEC 60079, ATEX, NEC 505',
+ 'pages/standards.html': 'IEC 60079 Series & ATEX: Every Explosion Protection Standard',
  'pages/certification.html': 'ATEX and IECEx Certification: Notified Bodies and Tests',
  'pages/installation-inspection.html': 'Ex Installation and Inspection: IEC 60079-14 and -17',
  'pages/atex-equipment-categories.html': 'ATEX Equipment Categories 1, 2 and 3 Explained',
  'pages/compex-certification.html': 'CompEx Certification: Modules and Training Guide (2026)',
- 'pages/nec-500-vs-atex-iec.html': 'NEC 500 and 505 vs ATEX/IEC: Comparison Guide',
+ 'pages/nec-500-vs-atex-iec.html': 'NEC 500 vs NEC 505 vs ATEX: Divisions vs Zones',
  'pages/faq.html': 'ATEX and IECEx FAQ: Explosion Protection Questions',
  'pages/nr10-inmetro-brazil.html': 'NR-10 and INMETRO: Brazil Ex Certification (2026)',
  'pages/dsear-regulations-uk.html': 'DSEAR Regulations: UK Explosive Atmospheres Guide',
  'pages/atex-for-beginners.html': 'ATEX for Beginners: A Plain-Language Introduction',
- 'pages/how-to-read-atex-nameplate.html': 'How to Read an ATEX Nameplate: Complete Decoding Guide',
- 'pages/explosion-proof-vs-intrinsically-safe.html': 'Explosion Proof vs Intrinsically Safe: Full Comparison',
+ 'pages/how-to-read-atex-nameplate.html': 'ATEX Nameplate Explained: Ex Symbol, CE Number, Markings',
+ 'pages/explosion-proof-vs-intrinsically-safe.html': 'Intrinsically Safe vs Explosion Proof (Ex i vs Ex d)',
  'pages/dust-explosion-protection.html': 'Dust Explosion Protection: Zones, Prevention, Equipment',
- 'pages/cable-glands-hazardous-areas.html': 'Cable Glands for Hazardous Areas: Ex d, Ex e, Barrier',
+ 'pages/cable-glands-hazardous-areas.html': 'Ex Cable Glands for Hazardous Areas: Ex d, Ex e, Barrier',
  'pages/hydrogen-explosion-protection.html': 'Hydrogen Explosion Protection: IIC Equipment and Safety',
  'pages/ex-equipment-selection-guide.html': 'Ex Equipment Selection Guide: Choosing the Right Method',
+ # Search Console query/page fixes (2026-09-28): titles that match what people search
+ 'pages/atex-directive.html': 'ATEX 114 Directive 2014/34/EU Explained (Equipment)',
+ 'training.html': 'Free ATEX Training Courses for Engineers (IECEx, CompEx)',
+ 'de/pages/temperature-classes.html': 'Temperaturklassen T1–T6: Tabelle & Zündtemperaturen',
+ 'de/pages/nec-500-vs-atex-iec.html': 'NEC 500 und NEC 505 vs. ATEX: Divisions und Zonen',
+ 'de/pages/atex-equipment-categories.html': 'ATEX-Kategorien 1, 2, 3: Gerätekategorien und Zonen',
+ 'de/pages/fundamentals.html': 'Grundlagen des Explosionsschutzes: Explosionsdreieck',
+ 'it/pages/epl.html': 'EPL (Equipment Protection Level): Ga, Gb, Gc – Guida',
+ 'no/pages/atex-equipment-categories.html': 'Ex-godkjent utstyr: ATEX-kategorier 1, 2 og 3',
+ 'no/pages/zone-classification.html': 'Ex-soner: Sone 0, 1, 2 og 20–22 forklart',
+ 'da/pages/gas-groups.html': 'Gasgrupper IIA, IIB, IIC – liste over gasarter',
 }
+# Hand-written descriptions (<= 160 chars), applied before trimming
+DESCS = {
+ 'pages/temperature-classes.html': 'T1 450 °C, T2 300 °C, T3 200 °C, T4 135 °C, T5 100 °C, T6 85 °C: maximum surface temperatures per IEC 60079-0, gas ignition values and T3 vs T4.',
+ 'pages/gas-groups.html': 'IIA (propane), IIB (ethylene), IIC (hydrogen, acetylene): gas group table with MESG and MIC values, IIB vs IIC, IIB+H2 and dust groups IIIA–IIIC.',
+ 'pages/nec-500-vs-atex-iec.html': 'NEC 500 Class/Division and NEC 505 Zones compared with ATEX and IECEx: area mapping, gas groups, protection methods and dual certification.',
+ 'pages/atex-directive.html': 'ATEX 114 (Directive 2014/34/EU) explained: scope, equipment groups and categories, conformity assessment, CE marking and the link to ATEX 137.',
+ 'pages/standards.html': 'The IEC 60079 series part by part, ATEX 2014/34/EU and 1999/92/EC, EN and UL 60079 adoptions, NEC 500/505, CEC and regional standards worldwide.',
+ 'pages/how-to-read-atex-nameplate.html': 'How to read an ATEX nameplate: the Ex symbol, CE and notified body number (e.g. CE 0123), equipment group and category, Ex marking and T-class.',
+ 'pages/cable-glands-hazardous-areas.html': 'How to choose Ex cable glands for hazardous areas: flameproof Ex d, increased safety Ex e and barrier glands, thread types, IP rating and installation.',
+ 'training.html': 'Free, self-paced ATEX and IECEx training courses for engineers: structured learning paths from explosion protection basics to CompEx preparation.',
+ 'de/pages/temperature-classes.html': 'Temperaturklassen T1 bis T6 im Ex-Schutz: Tabelle der maximalen Oberflächentemperaturen und Zündtemperaturen von Benzin, Diesel und Lösungsmitteln.',
+ 'de/pages/atex-equipment-categories.html': 'ATEX-Kategorien 1, 2 und 3 (Gerätekategorien) nach 2014/34/EU: Schutzniveau, zulässige Zonen 0/20, 1/21 und 2/22, EPL und Auswahl in der Praxis.',
+}
+for _rel, _d in DESCS.items():
+    assert len(_d) <= 160, (_rel, len(_d))
 FOOT = {
  'en': ('Free PDF guide', 'Privacy'), 'de': ('Kostenloser PDF-Leitfaden', 'Datenschutz'), 'no': ('Gratis PDF-guide', 'Personvern'),
  'da': ('Gratis PDF-guide', 'Privatliv'), 'sv': ('Gratis PDF-guide', 'Integritet'), 'fi': ('Ilmainen PDF-opas', 'Tietosuoja'),
@@ -79,8 +105,7 @@ def trim_desc(d, limit=160):
     m = max(cut.rfind('. '), cut.rfind('! '), cut.rfind('? '))
     if m >= 70:
         return cut[:m + 1]
-    w = cut.rsplit(' ', 1)[0].rstrip(',;:–-')
-    return w + '.'
+    return d   # no sentence boundary: keep it whole (Google truncates long snippets itself; a cut sentence reads broken)
 
 def meta(s, prop, attr='property'):
     m = re.search(rf'<meta {attr}="{re.escape(prop)}" content="([^"]*)"', s)
@@ -144,6 +169,9 @@ for rel, s in list(pages.items()):
 
     # ---- description ----
     d = meta(s, 'description', 'name')
+    if d is not None and rel in DESCS and html.unescape(d) != DESCS[rel]:
+        nd = html.escape(DESCS[rel], quote=True)
+        s = s.replace(f'<meta name="description" content="{d}"', f'<meta name="description" content="{nd}"', 1); d = nd; st['description set'] += 1
     if d and len(html.unescape(d)) > 160:
         nd = html.escape(trim_desc(html.unescape(d)), quote=True)
         s = s.replace(f'<meta name="description" content="{d}"', f'<meta name="description" content="{nd}"', 1); st['description trimmed'] += 1
