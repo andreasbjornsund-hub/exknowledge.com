@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Privacy | ExKnowledge</title>
-  <meta name="description" content="What ExKnowledge collects when you use the site or send a form, why, and how to ask for your data to be removed.">
+  <meta name="description" content="What ExKnowledge collects when you use the site or send a form, why, how long we keep it, and how to use your privacy rights.">
   <link rel="canonical" href="https://exknowledge.com/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://exknowledge.com/privacy.html">
+  <link rel="alternate" hreflang="nb" href="https://exknowledge.com/no/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://exknowledge.com/privacy.html">
   <meta property="og:title" content="Privacy | ExKnowledge">
-  <meta property="og:description" content="What ExKnowledge collects when you use the site or send a form, why, and how to ask for your data to be removed.">
+  <meta property="og:description" content="What ExKnowledge collects when you use the site or send a form, why, how long we keep it, and how to use your privacy rights.">
   <meta property="og:url" content="https://exknowledge.com/privacy.html">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
@@ -86,19 +89,57 @@
     <div class="content-layout">
       <div class="content-body">
         <h1>Privacy</h1>
-        <p class="page-intro">ExKnowledge is a free reference site. This page explains what we collect, why, and how to reach us about it.</p>
-        <h2 id="forms">When you send a form</h2>
-        <p>Newsletter sign-ups, questions, feedback, partner requests, PDF and glossary downloads are sent through <a href="https://formsubmit.co">FormSubmit</a> and delivered as an email to the ExKnowledge editors. We receive what you typed, the page you sent it from and the time.</p>
-        <p>We use it to answer you, to send the file or update you asked for, and for occasional related ExKnowledge updates. We never sell or rent your details.</p>
-        <h2 id="analytics">Analytics and advertising</h2>
-        <p>With your consent, the site uses Google Analytics and Google Ads to count visits and measure campaigns, and Cloudflare Web Analytics for privacy-friendly page counts. You choose in the cookie banner on your first visit. Choosing Reject keeps analytics and advertising cookies off.</p>
-        <h2 id="rights">Your choices</h2>
+        <p class="page-intro">This page explains what ExKnowledge collects, why, how long we keep it and how you use your rights. Last updated 28 September 2026.</p>
+        <h2 id="who">Who is responsible</h2>
+        <p>ExKnowledge is run by Andreas Parr Bjørnsund and his company in Norway, who are the data controller for this site. Privacy questions and requests go through the form at the bottom of this page.</p>
+        <h2 id="what">What we collect and why</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Where</th><th>What we get</th><th>Why, and the legal basis</th><th>How long we keep it</th></tr></thead>
+          <tbody>
+            <tr><td>Forms: newsletter, questions, feedback, partner listings, PDF and glossary downloads</td><td>Your email address; your name, company, role or message if you add them; the page you sent it from</td><td>To reply, to send what you asked for and, if you subscribe, to send the monthly update. Newsletter: your consent. Replies and requests: our legitimate interest in answering you.</td><td>24 months. Newsletter: until you unsubscribe.</td></tr>
+            <tr><td>Quiz and survey</td><td>Your answers and score, and your name and email if you give them</td><td>Industry statistics and sending you your result. Your consent.</td><td>24 months</td></tr>
+            <tr><td>Analytics and advertising, only if you accept cookies</td><td>Pages viewed, device and approximate location, cookie identifiers</td><td>To see which content helps engineers and to advertise our guides. Your consent.</td><td>14 months</td></tr>
+            <tr><td>Hosting and security</td><td>IP address and technical request logs</td><td>To deliver the site and protect it against abuse. Our legitimate interest.</td><td>Short-term, as set by the hosting providers</td></tr>
+          </tbody>
+        </table></div>
+        <h2 id="processors">Who processes data for us</h2>
         <ul>
-          <li>Ask us to delete your details, or to stop sending updates, with the <a href="/about.html#feedback">feedback form</a>.</li>
-          <li>Change your cookie choice at any time by clearing this site's cookies in your browser.</li>
+          <li>FormSubmit (formsubmit.co) forwards form submissions to our email inbox, which is hosted by Google (Gmail).</li>
+          <li>Google stores quiz and survey answers (Google Sheets) and, only with your consent, runs Google Analytics, Tag Manager and Google Ads.</li>
+          <li>Cloudflare delivers the site and counts visits without cookies. GitHub Pages hosts the files.</li>
         </ul>
+        <p>Some of these providers are based in the United States and may process data outside the EU/EEA. Where they do, the transfer relies on the safeguards the provider offers, such as the EU standard contractual clauses. We never sell or rent your data.</p>
+        <h2 id="cookies">Cookies</h2>
+        <p>On your first visit a banner asks whether you accept analytics and advertising cookies. Choosing Reject keeps them off. To change your choice, clear this site's cookies and stored data in your browser, and the banner appears again. One small cookie remembers for 24 hours which language version you were sent to.</p>
+        <h2 id="rights">Your rights</h2>
+        <ul>
+          <li>See the data we hold about you, and get a copy.</li>
+          <li>Have it corrected or deleted.</li>
+          <li>Object to or restrict how we use it.</li>
+          <li>Withdraw your consent or unsubscribe at any time.</li>
+          <li>Complain to Datatilsynet, the Norwegian Data Protection Authority, at <a href="https://www.datatilsynet.no/">datatilsynet.no</a>.</li>
+        </ul>
+        <p>We answer requests within 30 days.</p>
+        <h2 id="contact">Contact us about privacy</h2>
+        <p>Use this form for any privacy question or request. We reply to the email address you give.</p>
+        <form action="#" method="POST" class="stack-form" data-exk-form data-subject="ExKnowledge privacy request (en)" data-success="Thanks. We will reply by email within 30 days.">
+          <input type="hidden" name="_subject" value="ExKnowledge privacy request (en)">
+          <label class="field-label" for="pv-email">Your email</label>
+          <input class="field" type="email" id="pv-email" name="email" autocomplete="email" placeholder="name@company.com" required>
+          <label class="field-label" for="pv-type">What do you need?</label>
+          <select class="field" id="pv-type" name="request" required>
+            <option>See my data</option>
+            <option>Correct my data</option>
+            <option>Delete my data</option>
+            <option>Stop the newsletter</option>
+            <option>Other privacy question</option>
+          </select>
+          <label class="field-label" for="pv-msg">Details (optional)</label>
+          <textarea class="field" id="pv-msg" name="message" rows="4" placeholder="For example which email address you used, or what should be corrected"></textarea>
+          <button type="submit" class="btn btn--primary">Send request</button>
+        </form>
         <h2 id="network">Hazardous Area Guide network</h2>
-        <p>ExKnowledge is part of the Hazardous Area Guide network of sites. The network's full privacy policy is at <a href="https://hazardousareaguide.com/privacy/">hazardousareaguide.com/privacy</a>.</p>
+        <p>ExKnowledge is part of the Hazardous Area Guide network of sites. The network's shared policy is at <a href="https://hazardousareaguide.com/privacy/">hazardousareaguide.com/privacy</a>.</p>
       </div>
     </div>
   </div>
@@ -155,5 +196,6 @@
 
 <script src="/js/nav.js"></script>
 <script src="/js/search.js"></script>
+<script src="/js/forms.js"></script>
 </body>
 </html>

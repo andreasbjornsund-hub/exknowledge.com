@@ -1,11 +1,15 @@
 /* ExKnowledge forms: one sender, field-level validation, sending/success/failure states.
    Every form posts to formsubmit.co (AJAX) and is delivered to the site inbox.
+   Form actions in HTML are "#": the address never appears in the markup.
    Usage:
      <form data-exk-form data-subject="…" data-success="…"> … </form>   (generic)
      onsubmit="submitPopup(event)" / submitQuestion / submitNewsletter  (topic-page CTAs)
    See DESIGN.md → Forms. */
 (function () {
-  var API = 'https://formsubmit.co/ajax/apbopenclaw@gmail.com';
+  // The inbox address is not written anywhere in the page source (spam harvesters read HTML and
+  // plain JS). It is stored reversed and base64-encoded and only assembled when a form is sent.
+  var INBOX = 'bW9jLmxpYW1nQHdhbGNuZXBvYnBh';
+  function endpoint() { return 'https://formsubmit.co/ajax/' + atob(INBOX).split('').reverse().join(''); }
   var PDF = '/downloads/atex-iecex-pocket-guide.pdf';
   var LANG = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2);
   if (LANG === 'nb' || LANG === 'nn') LANG = 'no';
@@ -129,7 +133,7 @@
     form.setAttribute('aria-busy', 'true');
     status.hidden = true;
     var subject = opts.subject || form.getAttribute('data-subject') || (form.querySelector('[name=_subject]') || {}).value || 'ExKnowledge form';
-    return fetch(API, {
+    return fetch(endpoint(), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(collect(form, Object.assign({ _subject: subject }, opts.extra || {})))
