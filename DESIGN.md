@@ -176,6 +176,7 @@ site is already consistent.
 ```
 python3 scripts/build_nav.py   # translated, accessible nav on every page
 python3 scripts/build_seo.py   # canonical, og:url, hreflang, sitemap.xml
+python3 scripts/bust_cache.py  # after any change in css/ or js/: versions the links (1-year browser cache)
 python3 scripts/build_lang_stubs.py   # /<lang>/ redirect pages for English-only pages
 ```
 
