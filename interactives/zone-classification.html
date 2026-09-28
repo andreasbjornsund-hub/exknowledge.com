@@ -3,7 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Zone Classification — Plant Explorer · exknowledge</title>
+<title>Zone Classification Plant Explorer | ExKnowledge</title>
+  <link rel="canonical" href="https://exknowledge.com/interactives/zone-classification.html">
+  <meta property="og:title" content="Zone Classification Plant Explorer | ExKnowledge">
+  <meta property="og:description" content="Click through a fuel terminal schematic to see how each area is classified into gas and dust zones under IEC 60079-10-1 and -10-2.">
+  <meta property="og:url" content="https://exknowledge.com/interactives/zone-classification.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://exknowledge.com/images/og-default.png">
+  <meta name="description" content="Click through a fuel terminal schematic to see how each area is classified into gas and dust zones under IEC 60079-10-1 and -10-2.">
 <!--
   ════════════════════════════════════════════════════════════════════
   exknowledge interactive — Zone Classification: Plant Explorer
@@ -43,7 +50,7 @@
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 /* ─── Scoped reset ─────────────────────────────────────────────── */
@@ -53,15 +60,15 @@
 }
 .exk-interactive {
   /* tokens — calibrated to exknowledge.com editorial palette */
-  --paper:        #F8F5EE;   /* warm cream page */
-  --paper-2:      #EFEAE0;   /* card / inset    */
-  --ink:          #0F172A;   /* slate-900       */
-  --ink-soft:     #334155;   /* slate-700       */
-  --ink-faint:    #64748B;   /* slate-500       */
-  --rule:         #D8D2C4;   /* warm hairline   */
-  --rule-strong:  #B7AE9C;
-  --amber:        #C2410C;   /* signature burnt-orange accent */
-  --amber-soft:   #FCE7CF;
+  --paper:        #f8f7f5;   /* warm cream page */
+  --paper-2:      #f0eeea;   /* card / inset    */
+  --ink:          #23211e;   /* slate-900       */
+  --ink-soft:     #5a544a;   /* slate-700       */
+  --ink-faint:    #6b655a;   /* slate-500       */
+  --rule:         #ddd9d2;   /* warm hairline   */
+  --rule-strong:  #c9c3b8;
+  --amber:        #86621a;   /* site accent for text on light (--accent-ink) */
+  --amber-soft:   #f6ecd3;
   --red:          #991B1B;   /* severity only   */
   --red-soft:     #F2D2D0;
 
@@ -78,8 +85,8 @@
   --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px;
   --sp-5: 24px; --sp-6: 32px; --sp-7: 48px;
 
-  --serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
-  --sans:  "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --serif: 'Instrument Sans', system-ui, sans-serif;
+  --sans:  'Figtree', system-ui, sans-serif;
   --mono:  "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   font-family: var(--sans);
@@ -637,6 +644,11 @@
     animation: none !important;
   }
 }
+
+/* phone tap targets */
+@media (max-width: 900px) {
+  .exk-interactive button, .exk-interactive [role="tab"], .exk-interactive [role="button"] { min-height: 44px; }
+}
 </style>
 <!-- Google Ads Remarketing -->
 <script src="https://hazardousareaguide.com/consent-banner.js"></script>
@@ -646,7 +658,8 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXVW6MS2C5"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SXVW6MS2C5');</script>
 </head>
-<body style="margin:0;padding:0;background:#F8F5EE">
+<body style="margin:0;padding:0;background:#f8f7f5;font-family:'Figtree',system-ui,sans-serif;color:#23211e">
+<p style="margin:0;padding:12px 16px;font-size:14px"><a href="/" style="color:#86621a">← ExKnowledge</a> · <a href="/pages/zone-classification.html" style="color:#86621a">Zone classification guide</a></p>
 
 <div class="exk-interactive" id="exk-root" data-density="comfortable" lang="en">
 

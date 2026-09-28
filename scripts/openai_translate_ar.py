@@ -54,10 +54,12 @@ def extract_and_translate_chunks(html):
     work = re.sub(r'<script[^>]*>.*?</script>', protect, work, flags=re.DOTALL)
     # Protect style tags
     work = re.sub(r'<style[^>]*>.*?</style>', protect, work, flags=re.DOTALL)
+    # Protect meta/link tags first. Attribute values may contain '>' (inline
+    # SVG favicons), so match quoted values as a whole. Protecting <svg> first
+    # used to swallow the favicon's data URI and leave __PROTECTED_N__ behind.
+    work = re.sub(r'<(?:meta|link)\b(?:[^>"\']|"[^"]*"|\'[^\']*\')*>', protect, work)
     # Protect SVG
     work = re.sub(r'<svg[^>]*>.*?</svg>', protect, work, flags=re.DOTALL)
-    # Protect meta/link tags in head
-    work = re.sub(r'<(meta|link)\s[^>]*/?>', protect, work)
     
     # Split into chunks at section boundaries (~4-8K chars each)
     # Find good split points
@@ -122,8 +124,13 @@ def extract_and_translate_chunks(html):
     full = "".join(translated_chunks)
     
     # Restore protected blocks
-    for key, value in protected.items():
+    # Restore in reverse so nested placeholders resolve, then refuse to write
+    # a page that still contains a placeholder or a mangled one like __P6__.
+    for key, value in reversed(list(protected.items())):
         full = full.replace(key, value)
+    leftover = re.findall(r'__P(?:ROTECTED_)?\d+__', full)
+    if leftover:
+        raise RuntimeError(f"unrestored placeholders: {sorted(set(leftover))[:5]}")
     
     return full
 

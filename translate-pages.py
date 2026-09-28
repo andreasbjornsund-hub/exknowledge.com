@@ -201,12 +201,19 @@ def adapt_html_for_lang(html, lang_code, page_name):
         html
     )
     
-    # Update og:url
+    # Update og:url and JSON-LD urls (pages and blog posts)
     html = re.sub(
-        r'content="https://exknowledge.com/pages/',
-        f'content="https://exknowledge.com/{lang_code}/pages/',
+        r'(content="|"url":\s*")https://exknowledge.com/(pages|blog)/',
+        lambda m: f'{m.group(1)}https://exknowledge.com/{lang_code}/{m.group(2)}/',
         html
     )
+    html = re.sub(
+        r'<link rel="canonical" href="https://exknowledge.com/blog/',
+        f'<link rel="canonical" href="https://exknowledge.com/{lang_code}/blog/',
+        html
+    )
+    # Machine translation leaves zero-width spaces between words
+    html = html.replace('\u200b', '')
     
     # Fix relative paths (css, js, images, fonts)
     html = html.replace('href="../css/', 'href="../../css/')
