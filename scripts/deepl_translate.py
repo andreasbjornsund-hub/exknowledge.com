@@ -79,6 +79,7 @@ def translate_html(html_content, target_lang):
         "source_lang": "EN",
         "target_lang": target_lang,
         "tag_handling": "html",
+        "ignore_tags": "script",   # keep JSON-LD and inline scripts untouched (DeepL escaped them before)
         "split_sentences": "nonewlines",
     }).encode("utf-8")
 
@@ -94,6 +95,10 @@ def translate_html(html_content, target_lang):
 
 def fix_translated_page(html, lang, page_name, is_index=False):
     """Post-process translated HTML: fix lang attr, paths, meta."""
+    # JSON-LD must stay raw JSON: undo any HTML escaping (&quot; …) inside ld+json blocks
+    import html as _h
+    html = re.sub(r'(<script type="application/ld\+json">)(.*?)(</script>)',
+                  lambda m: m.group(1) + (_h.unescape(m.group(2)) if '&quot;' in m.group(2) else m.group(2)) + m.group(3), html, flags=re.S)
     # Fix html lang attribute
     html = re.sub(r'<html\s+lang="[^"]*"', f'<html lang="{HTML_LANG[lang]}"', html)
 
