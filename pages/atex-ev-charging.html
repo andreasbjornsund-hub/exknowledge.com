@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EV Charger Hazardous Area Rules: Fuel Stations and ATEX</title>
+  <meta name="description" content="Do EV chargers need ATEX zoning? Not in car parks. At petrol stations the charger, vehicle and cable must sit outside the forecourt hazardous areas (UK and US).">
+  <link rel="canonical" href="https://exknowledge.com/pages/atex-ev-charging.html">
+  <meta property="og:title" content="EV Charger Hazardous Area Rules: Fuel Stations and ATEX">
+  <meta property="og:description" content="Do EV chargers need ATEX zoning? Not in car parks. At petrol stations the charger, vehicle and cable must sit outside the forecourt hazardous areas (UK and US).">
+  <meta property="og:url" content="https://exknowledge.com/pages/atex-ev-charging.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1000&amp;q=80">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EV Charger Hazardous Area Rules: Fuel Stations and ATEX">
+  <meta name="twitter:description" content="Do EV chargers need ATEX zoning? Not in car parks. At petrol stations the charger, vehicle and cable must sit outside the forecourt hazardous areas (UK and US).">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <style>
+/* ─── CTA Shared Styles ─── */
+.cta-section{background:var(--c-cream,#faf8f5);border-top:1px solid var(--c-sand,#e8e4de);padding:3rem 0}
+.ask-card{max-width:540px;margin:0 auto;text-align:center}
+.ask-card h3{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.4rem;color:var(--c-black,#1a1917);margin-bottom:0.5rem}
+.ask-card p{font-size:0.95rem;color:var(--c-slate,#64605a);margin-bottom:1.5rem;line-height:1.6}
+.cta-input{width:100%;font-size:1rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-textarea{width:100%;font-size:0.95rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;min-height:100px;resize:vertical;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-textarea:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-btn{width:100%;font-family:var(--font-display,Georgia,serif);font-weight:600;font-size:1rem;padding:0.9rem;background:var(--c-black,#1a1917);color:var(--c-yellow,#d4a843);border:none;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s}
+.cta-btn:hover{background:var(--c-charcoal,#2d2a26)}
+.cta-btn:disabled{opacity:0.5;cursor:default}
+.cta-ok{color:var(--c-green,#2d7d46);font-weight:600;margin-top:1rem;display:none}
+.cta-row{display:flex;gap:0.5rem}
+.cta-row .cta-input{flex:1}
+.cta-row .cta-btn{width:auto;padding:0.8rem 1.5rem;white-space:nowrap}
+
+/* ─── Newsletter Footer ─── */
+.footer-newsletter{background:var(--c-black,#1a1917);color:var(--c-cream,#faf8f5);padding:2.5rem 0 1.5rem}
+.footer-newsletter .container{max-width:700px;margin:0 auto;padding:0 1.5rem}
+.footer-nl-title{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.1rem;margin-bottom:0.3rem;color:var(--c-yellow,#d4a843)}
+.footer-nl-desc{font-size:0.85rem;opacity:0.7;margin-bottom:1rem}
+.footer-nl-form{display:flex;gap:0.5rem;max-width:420px}
+.footer-nl-input{flex:1;padding:0.7rem 0.9rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:0.9rem;font-family:inherit}
+.footer-nl-input::placeholder{color:rgba(255,255,255,0.4)}
+.footer-nl-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.footer-nl-btn{padding:0.7rem 1.2rem;background:var(--c-yellow,#d4a843);color:var(--c-black,#1a1917);border:none;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:var(--font-display,Georgia,serif)}
+.footer-nl-btn:hover{background:#e0b650}
+.footer-nl-ok{color:var(--c-yellow,#d4a843);font-size:0.9rem;margin-top:0.5rem;display:none}
+.footer-copy{text-align:center;font-size:0.75rem;opacity:0.35;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08)}
+
+/* ─── Scroll Popup ─── */
+.scroll-popup{position:fixed;bottom:-300px;left:50%;transform:translateX(-50%);width:min(92vw,440px);background:var(--c-white,#fff);border:1px solid var(--c-sand,#e8e4de);box-shadow:0 -4px 24px rgba(0,0,0,0.12);padding:1.8rem;z-index:1000;transition:bottom 0.4s ease}
+.scroll-popup.visible{bottom:1.5rem}
+.scroll-popup-close{position:absolute;top:0.6rem;right:0.8rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--c-mid,#999);line-height:1}
+.scroll-popup h4{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.15rem;margin-bottom:0.3rem;color:var(--c-black,#1a1917)}
+.scroll-popup p{font-size:0.88rem;color:var(--c-slate,#64605a);margin-bottom:1rem;line-height:1.5}
+.scroll-popup .cta-row{margin-bottom:0}
+@media(max-width:480px){.cta-row{flex-direction:column}.cta-row .cta-btn{width:100%}.footer-nl-form{flex-direction:column}
+</style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "EV charging and hazardous areas: petrol stations, car parks and ATEX",
+  "description": "Do EV chargers need ATEX zoning? Not in car parks. At petrol stations the charger, vehicle and cable must sit outside the forecourt hazardous areas (UK and US).",
+  "url": "https://exknowledge.com/pages/atex-ev-charging.html",
+  "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1000&q=80",
+  "datePublished": "2026-09-29",
+  "dateModified": "2026-09-29",
+  "author": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  },
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://exknowledge.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "EV Charging",
+      "item": "https://exknowledge.com/pages/atex-ev-charging.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you install an EV charger at a petrol station?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if it is outside the forecourt hazardous areas. UK guidance requires the charger, the vehicle being charged and the full reach of the charging cable to be outside both permanent and temporary hazardous zones, with the charger linked to the site emergency stop and the DSEAR assessment updated."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does an EV charger need to be ATEX rated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Normally no. EV chargers are placed outside hazardous areas rather than protected for use inside them, because the vehicle being charged is itself an ignition source. Ordinary charging in car parks and garages is not zoned."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the hazardous area around a petrol pump?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the code. In the UK the Blue Book, Chapter 3, gives the forecourt zones. In the US, NEC Table 514.3(B)(1) classifies the inside of the dispenser as Division 1 and a band up to 18 in above grade within 20 ft of the dispenser as Division 2."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do EV charging bays in car parks need hazardous area classification?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Lithium-ion vehicles do not release flammable gas in normal charging. Battery fires and thermal runaway are handled by fire safety design, detection and emergency isolation, as in the UK government's 2023 guidance on EVs in covered car parks."
+      }
+    }
+  ]
+}
+  </script>
+<!-- GA4 Hazardous Area Guide Network -->
+<script src="https://hazardousareaguide.com/consent-banner.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SXVW6MS2C5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SXVW6MS2C5');</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <ul class="nav-links" id="site-nav">
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-book-open-text" aria-hidden="true"></i> Knowledge <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/pages/fundamentals.html"><i class="ph ph-fire" aria-hidden="true"></i> Fundamentals</a></li>
+          <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold" aria-hidden="true"></i> Zone Classification</a></li>
+          <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check" aria-hidden="true"></i> Protection Methods</a></li>
+          <li><a href="/pages/standards.html"><i class="ph ph-scales" aria-hidden="true"></i> Standards &amp; Regulations</a></li>
+          <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot" aria-hidden="true"></i> Temperature Classes</a></li>
+          <li><a href="/pages/gas-groups.html"><i class="ph ph-flame" aria-hidden="true"></i> Gas Groups</a></li>
+          <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six" aria-hidden="true"></i> Equipment Categories</a></li>
+          <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning" aria-hidden="true"></i> Quick Reference</a></li>
+          <li><a href="/pages/faq.html"><i class="ph ph-question" aria-hidden="true"></i> FAQ</a></li>
+          <li><a href="/pages/atex-applications.html"><i class="ph ph-factory" aria-hidden="true"></i> ATEX by Application</a></li>
+          <li><a href="/pages/ex-certification-schemes.html"><i class="ph ph-globe" aria-hidden="true"></i> Certification by Country</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-folder-open" aria-hidden="true"></i> Resources <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam" aria-hidden="true"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar" aria-hidden="true"></i> Survey</a></li>
+          <li><a href="/blog/"><i class="ph ph-newspaper" aria-hidden="true"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone" aria-hidden="true"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate" aria-hidden="true"></i> Glossary</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher" aria-hidden="true"></i> Training</a></li>
+          <li><a href="/visualisations.html"><i class="ph ph-eye" aria-hidden="true"></i> Visualisations</a></li>
+          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west" aria-hidden="true"></i> Certification Map</a></li>
+          <li><a href="/pages/intrinsic-safety-calculator.html"><i class="ph ph-calculator" aria-hidden="true"></i> IS Loop Calculator</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-users-three" aria-hidden="true"></i> Community <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/partners.html"><i class="ph ph-handshake" aria-hidden="true"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link" aria-hidden="true"></i> Industry Links</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info" aria-hidden="true"></i> About</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/" selected>🇬🇧 English</option>
+      <option value="/de/">🇩🇪 Deutsch</option>
+      <option value="/no/">🇳🇴 Norsk</option>
+      <option value="/da/">🇩🇰 Dansk</option>
+      <option value="/sv/">🇸🇪 Svenska</option>
+      <option value="/fi/">🇫🇮 Suomi</option>
+      <option value="/es/">🇪🇸 Español</option>
+      <option value="/nl/">🇳🇱 Nederlands</option>
+      <option value="/pt/">🇵🇹 Português</option>
+      <option value="/it/">🇮🇹 Italiano</option>
+      <option value="/ar/">🇸🇦 العربية</option>
+    </select>
+    <button type="button" class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="ph-bold ph-list" aria-hidden="true"></i></button>
+  </div>
+</nav>
+
+<section class="content-page">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../">Home</a> <span aria-hidden="true">/</span> <span>EV Charging</span>
+    </nav>
+    <div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1000&amp;q=80" alt="High-voltage power lines at sunset" loading="lazy" width="820" height="240">
+        <h1>EV charging and hazardous areas: petrol stations, car parks and ATEX</h1>
+<p>An EV charger does not create a hazardous area: battery electric vehicles release no flammable gas during normal charging, so car parks, depots and home garages are not zoned for charging. The question becomes real at fuel stations, where petrol and diesel dispensers, tank fills and vents have their own hazardous areas. There the rule is location: in the UK, the charger, the vehicle being charged and the full reach of the charging cable must all be outside the forecourt hazardous areas. In the US, anything inside the NEC Article 514 classified areas must be suitable for Class I locations, which in practice also means siting chargers outside them.</p>
+
+<h2 id="why-not-zoned">Why EV charging is not zoned in itself</h2>
+<p>Zoning is needed where a flammable gas or vapor can form an explosive atmosphere. Lithium-ion traction batteries are sealed and do not gas during normal charging. The exception is vehicles with batteries that do release hydrogen when charged, such as some lead-acid industrial vehicles. Charging standards cover these through a "ventilation required" signal: the IEC 61851-1 control pilot has a separate state for vehicles that need ventilation, and NEC 625.52 requires mechanical ventilation, interlocked with the charger, for indoor charging where the equipment is marked "Ventilation Required".</p>
+<p>Two further points keep ordinary charging outside area classification:</p>
+<ul>
+  <li><strong>Battery fires are a fire safety question.</strong> Thermal runaway is a fault, not a normal release, and IEC 60079-10-1 excludes catastrophic failures and rare malfunctions. The UK government's 2023 interim guidance on EVs in covered car parks recognizes that thermal runaway gas can cause a vapor cloud explosion, but treats car park design through fire safety measures (sprinklers, detection, ventilation, isolation switches) and refers explosion matters to DSEAR rather than zoning parking bays.</li>
+  <li><strong>Domestic premises are out of scope.</strong> IEC 60079-10-1 does not apply to domestic premises, so a home charger in a garage is not an area classification question.</li>
+</ul>
+
+<h2 id="forecourt-hazard">The hazard on a fuel station forecourt</h2>
+<p>Petrol gives off flammable vapor at normal ambient temperatures. The vapor is heavier than air, so it spreads at ground level and collects in pits, sumps, drains and interceptors. Petrol vapor is gas group IIA with a T3 temperature class. Diesel has a flash point above normal ambient temperatures, so on its own it produces little or no zone unless heated or sprayed as a mist, but it is normally dispensed alongside petrol.</p>
+<p>Typical sources of release on a forecourt:</p>
+<ul>
+  <li><strong>Dispensers:</strong> inside the housing, around the nozzle during filling, and at ground level around the island.</li>
+  <li><strong>Tank fill points and vapor recovery connections:</strong> hazardous during deliveries, creating temporary zones around the tanker stand and fill area.</li>
+  <li><strong>Vent pipe outlets:</strong> vapor is expelled when tanks are filled.</li>
+  <li><strong>Tank manholes, sumps, drains and interceptors:</strong> below-grade spaces where vapor can collect.</li>
+</ul>
+<p>Other fuels on the same site have their own zones: LPG (IIA, heavier than air), CNG and LNG (methane, IIA, lighter than air when warm) and hydrogen (IIC, very buoyant). Each dispenser and storage installation must be taken into account when positioning chargers. See <a href="/pages/gas-groups.html">Gas Groups</a>.</p>
+
+<h2 id="uk-rules">UK: Blue Book, IET/APEA supplement and DSEAR</h2>
+<p>In the UK, forecourt hazardous areas are defined in the APEA/Energy Institute publication <em>Design, construction, modification, maintenance and decommissioning of filling stations</em> (the "Blue Book", 5th edition, November 2024). Chapter 3 contains the hazardous area drawings for tanks, dispensers, road tanker positions and vent pipes. EV charging on filling stations is covered by the APEA/IET <em>Electric Vehicle Charging Installations at Filling Stations</em> (2nd edition, 2025), which works alongside the IET Code of Practice for EV Charging Equipment Installation (5th edition).</p>
+<p>The key requirements reported by APEA and the IET:</p>
+<ul>
+  <li>The charger, the vehicle being charged and the full extent of the charging cable must be outside the hazardous area.</li>
+  <li>"Hazardous areas" include both permanent zones and temporary zones, such as those created during tanker deliveries.</li>
+  <li>The EV charging equipment must be interlocked with the filling station's emergency shutdown, so one emergency stop isolates both fuel dispensing and EV charging.</li>
+  <li>The site's DSEAR risk assessment must be reviewed and the EV charging added to it. DSEAR also covers equipment outside a zone that could affect the safety of the flammable atmospheres.</li>
+  <li>The fire risk assessment under the Regulatory Reform (Fire Safety) Order 2005 must include the chargers.</li>
+</ul>
+<p>APEA notes that adding an EV charger is not a prescribed material change needing notice under the Petroleum (Consolidation) Regulations 2014. The Petroleum Enforcement Liaison Group guidance note PETEL 20 covers EV charging equipment on petrol forecourts and includes a template letter setting out installers' responsibilities.</p>
+
+<h2 id="us-rules">US: NEC Article 514 and NFPA 30A</h2>
+<p>In the US, the classified areas at motor fuel dispensing facilities are set out in NEC Table 514.3(B)(1), which follows NFPA 30A. Around a dispenser, the space inside the enclosure is Class I, Division 1, and a Division 2 band extends up to 18 in (450 mm) above grade within 20 ft (6 m) horizontally of the dispenser enclosure. Below-grade pits within these areas are Division 1. Fill openings and vents have their own envelopes.</p>
+<p>Electrical equipment within these areas must be suitable for the classification, and general-purpose EV supply equipment is not. So chargers go outside the classified envelope, with the charging position and cable reach considered as in the UK. A proposal to add EV-specific separation distances to NFPA 30A was not adopted: after the NFPA Standards Council denied an appeal in August 2023, the 2024 edition contains no EV charging requirements. Local authorities having jurisdiction may set their own conditions, so check before design.</p>
+
+<h2 id="eu-iec">EU and IEC countries</h2>
+<p>Under Directive 1999/92/EC, the station operator's explosion protection document defines the forecourt zones, usually based on IEC 60079-10-1 and national codes for filling stations. The same principle applies: the charger, the parked vehicle and the cable must stay outside the zones. Where national guidance sets fixed distances, those govern; otherwise the classification drawings do. Adding chargers is a change that needs the explosion protection document to be updated.</p>
+
+<h2 id="typical-layout">Typical layout principles</h2>
+<ul>
+  <li>Charging bays sit away from the dispenser islands, tanker stand, fill points and vent stacks, with their positions checked against the classification drawing including temporary zones.</li>
+  <li>The longest cable reach, not just the charger position, is plotted against zone boundaries.</li>
+  <li>Cable routes avoid running through zoned areas where possible. Where they must pass through, the ducts and draw pits need sealing so they cannot carry vapor out of the zone.</li>
+  <li>Charging traffic is kept apart from the tanker route during deliveries.</li>
+</ul>
+
+<h2 id="ex-chargers">Why an Ex-certified charger does not solve it</h2>
+<p>Even if the charger itself were Ex-certified for the zone, the vehicle being charged is not. It is a source of ignition, and so are the connector and the charging electronics on board. That is why the UK guidance sets the rule for the vehicle and the cable too, and why the practical answer is almost always to move the charger outside the zone rather than to specify protected equipment.</p>
+
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+  <li>Checking the charger position against the zone drawing but not the parked vehicle or the cable at full reach.</li>
+  <li>Using the permanent zone drawing only and forgetting temporary zones during fuel deliveries.</li>
+  <li>Not linking the charger isolation to the forecourt emergency stop.</li>
+  <li>Installing chargers without updating the DSEAR assessment or explosion protection document.</li>
+  <li>Routing charger cables through ducts that connect to zoned draw pits without sealing.</li>
+  <li>Treating EV fires in car parks as an ATEX zoning issue, which leads to Ex equipment in parking areas instead of the fire safety measures that actually address the risk.</li>
+</ul>
+<p>This page summarizes published guidance. Positioning on a specific site depends on that site's classification drawings and the authority that enforces petroleum and DSEAR rules there.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Can you install an EV charger at a petrol station?</h3>
+<p>Yes, if it is outside the forecourt hazardous areas. UK guidance requires the charger, the vehicle being charged and the full reach of the charging cable to be outside both permanent and temporary hazardous zones, with the charger linked to the site emergency stop and the DSEAR assessment updated.</p>
+<h3>Does an EV charger need to be ATEX rated?</h3>
+<p>Normally no. EV chargers are placed outside hazardous areas rather than protected for use inside them, because the vehicle being charged is itself an ignition source. Ordinary charging in car parks and garages is not zoned.</p>
+<h3>What is the hazardous area around a petrol pump?</h3>
+<p>It depends on the code. In the UK the Blue Book, Chapter 3, gives the forecourt zones. In the US, NEC Table 514.3(B)(1) classifies the inside of the dispenser as Division 1 and a band up to 18 in above grade within 20 ft of the dispenser as Division 2.</p>
+<h3>Do EV charging bays in car parks need hazardous area classification?</h3>
+<p>No. Lithium-ion vehicles do not release flammable gas in normal charging. Battery fires and thermal runaway are handled by fire safety design, detection and emergency isolation, as in the UK government&#x27;s 2023 guidance on EVs in covered car parks.</p>
+
+<h2 id="sources">Sources</h2>
+<ol class="sources">
+<li><a href="https://apea.org.uk/new-challenges-for-filling-station-operators/" target="_blank" rel="noopener">APEA: New challenges for filling station operators</a></li>
+<li><a href="https://apea.org.uk/shop/all-publications/electric-vehicle-charging-installations-at-filling-stations/" target="_blank" rel="noopener">APEA: Electric Vehicle Charging Installations at Filling Stations (2nd edition)</a></li>
+<li><a href="https://electrical.theiet.org/wiring-matters/years/2025/104-march-2025/some-evse-installations-aren-t-normal/" target="_blank" rel="noopener">IET Wiring Matters: Some EVSE installations aren’t “normal” (March 2025)</a></li>
+<li><a href="https://apea.org.uk/ask-the-experts-2/" target="_blank" rel="noopener">APEA: Ask the Experts (EV charging points on petrol forecourts, PETEL 20)</a></li>
+<li><a href="https://assets.publishing.service.gov.uk/media/65bb7b5ccc6fd600145dbe1a/covered-car-parks-fire-safety-guidance-for-electric-vehicles.pdf" target="_blank" rel="noopener">OZEV / Arup: Covered car parks - fire safety guidance for electric vehicles (July 2023)</a></li>
+<li><a href="https://papetroleum.org/nfpa-ev-charging-update/" target="_blank" rel="noopener">Pennsylvania Petroleum Association: NFPA EV charging update</a></li>
+<li><a href="https://webstore.iec.ch/en/publication/63327" target="_blank" rel="noopener">IEC: IEC 60079-10-1:2020 Classification of areas - Explosive gas atmospheres</a></li>
+</ol>
+
+<section class="related-topics" style="margin-top:40px;padding:24px;background:var(--bg-alt, #f8f7f4);border-radius:8px;">
+  <h2 style="margin:0 0 12px 0;">Related Topics</h2>
+  <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(min(200px, 100%), 1fr));gap:8px;">
+        <li><a href="/pages/atex-applications.html">Does It Need ATEX Zoning?</a></li>
+        <li><a href="/pages/atex-battery-rooms.html">Battery Rooms and BESS</a></li>
+        <li><a href="/pages/dsear-regulations-uk.html">DSEAR Regulations (UK)</a></li>
+        <li><a href="/pages/nec-500-vs-atex-iec.html">NEC 500 vs ATEX/IEC</a></li>
+        <li><a href="/pages/zone-classification.html">Zone Classification</a></li>
+  </ul>
+</section>
+
+              <aside class="pdf-cta inverse" aria-labelledby="pdfCtaTitle">
+          <div>
+            <p class="pdf-cta-eyebrow">Free PDF</p>
+            <h2 class="pdf-cta-title" id="pdfCtaTitle">The ATEX &amp; IECEx Pocket Guide</h2>
+            <p>Zones, gas groups, temperature classes, protection methods and marking examples on 12 printable pages.</p>
+          </div>
+          <a class="btn btn--primary" href="/ebook.html">Get the free PDF</a>
+        </aside>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4>All Topics</h4>
+            <a href="/pages/fundamentals.html" class="">Fundamentals</a>
+  <a href="/pages/zone-classification.html" class="">Zones</a>
+  <a href="/pages/gas-groups.html" class="">Gas Groups</a>
+  <a href="/pages/temperature-classes.html" class="">Temp Classes</a>
+  <a href="/pages/protection-methods.html" class="">Protection</a>
+  <a href="/pages/epl.html" class="">EPL</a>
+  <a href="/pages/ex-markings.html" class="">Markings</a>
+  <a href="/pages/standards.html" class="">Standards</a>
+  <a href="/pages/certification.html" class="">Certification</a>
+  <a href="/pages/installation-inspection.html" class="">Installation</a>
+  <a href="/pages/cheat-sheet.html" class="">Cheat Sheet</a>
+  <a href="/pages/nr10-inmetro-brazil.html" class="">NR-10 / INMETRO</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta-section" id="ask-section">
+  <div class="container">
+    <div class="ask-card">
+      <h3>Have a question about this topic?</h3>
+      <p>Submit your question and get a response from the ExKnowledge knowledge base.</p>
+      <form id="askForm" onsubmit="submitQuestion(event)">
+        <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+        <input type="text" class="cta-input" name="company" placeholder="Company (optional)" style="margin-bottom:0.5rem">
+        <textarea class="cta-textarea" name="question" placeholder="Your question…" required></textarea>
+        <button type="submit" class="cta-btn" id="askBtn">Submit Question →</button>
+      </form>
+      <p class="cta-ok" id="askOk">✓ Question received. A response will be sent to your email.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Knowledge</h4>
+        <a href="/pages/fundamentals.html">Fundamentals</a>
+        <a href="/pages/zone-classification.html">Zone Classification</a>
+        <a href="/pages/protection-methods.html">Protection Methods</a>
+        <a href="/pages/standards.html">Standards</a>
+        <a href="/pages/temperature-classes.html">Temperature Classes</a>
+        <a href="/pages/gas-groups.html">Gas Groups</a>
+        <a href="/pages/cheat-sheet.html">Quick Reference</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a>
+        <a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i> All Episodes</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i> Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i> Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i> RSS Feed</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/about.html"><i class="ph ph-info"></i> About</a>
+        <a href="/ebook.html"><i class="ph ph-file-pdf"></i> Free PDF guide</a>
+        <a href="/privacy.html"><i class="ph ph-shield-check"></i> Privacy</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a>
+        <a href="/links.html"><i class="ph ph-link"></i> Industry Links</a>
+        <a href="https://hazardousareaguide.com"><i class="ph ph-compass"></i> Hazardous Area Guide</a>
+        <a href="https://intrinsicallysafephones.com"><i class="ph ph-device-mobile"></i> Intrinsically Safe Phones</a>
+        <a href="https://intrinsicallysafeheadsets.com"><i class="ph ph-headset"></i> Intrinsically Safe Headsets</a>
+        <a href="https://explosionproofradios.com"><i class="ph ph-radio"></i> Explosion Proof Radios</a>
+        <a href="https://explosionprooftablets.com"><i class="ph ph-device-tablet"></i> Explosion Proof Tablets</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--link)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+      <p>Not a substitute for official standards documents or professional engineering advice.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" class="footer-report"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<div class="scroll-popup" id="scrollPopup">
+  <button class="scroll-popup-close" onclick="dismissPopup()" aria-label="Close">×</button>
+  <h4>ATEX/IECEx Quick Reference</h4>
+  <p>Get the cheat sheet as a printable PDF — zones, gas groups, T-classes, and protection methods on one page.</p>
+  <form class="cta-row" id="popupForm" onsubmit="submitPopup(event)">
+    <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+    <button type="submit" class="cta-btn">Get PDF →</button>
+  </form>
+  <p class="cta-ok" id="popupOk">✓ Your download is starting. We have also emailed you the link.</p>
+</div>
+
+
+
+<script src="/js/nav.js?v=6015dda8"></script>
+<script src="/js/search.js?v=fd234037"></script>
+<script src="/js/forms.js?v=da25789d"></script>
+</body>
+</html>

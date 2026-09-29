@@ -82,6 +82,8 @@
           <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six" aria-hidden="true"></i> Equipment Categories</a></li>
           <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning" aria-hidden="true"></i> Quick Reference</a></li>
           <li><a href="/pages/faq.html"><i class="ph ph-question" aria-hidden="true"></i> FAQ</a></li>
+          <li><a href="/pages/atex-applications.html"><i class="ph ph-factory" aria-hidden="true"></i> ATEX by Application</a></li>
+          <li><a href="/pages/ex-certification-schemes.html"><i class="ph ph-globe" aria-hidden="true"></i> Certification by Country</a></li>
         </ul>
       </li>
       <li class="has-dropdown">
@@ -95,6 +97,7 @@
           <li><a href="/training.html"><i class="ph ph-chalkboard-teacher" aria-hidden="true"></i> Training</a></li>
           <li><a href="/visualisations.html"><i class="ph ph-eye" aria-hidden="true"></i> Visualisations</a></li>
           <li><a href="/certification-map.html" aria-current="page" class="active"><i class="ph ph-globe-hemisphere-west" aria-hidden="true"></i> Certification Map</a></li>
+          <li><a href="/pages/intrinsic-safety-calculator.html"><i class="ph ph-calculator" aria-hidden="true"></i> IS Loop Calculator</a></li>
         </ul>
       </li>
       <li class="has-dropdown">
@@ -125,11 +128,11 @@
 
 <main style="max-width:960px;margin:0 auto;padding:24px 20px">
   <h1><i class="ph ph-globe-hemisphere-west"></i> World Ex Certification Map</h1>
-  <p style="color:var(--text-muted);margin-bottom:24px">Which explosion protection certification schemes apply in each country? <strong>IECEx is a global scheme</strong> accepted alongside local standards in 50+ countries. Use the filters to explore — click "IECEx Accepted" to see worldwide coverage.</p>
+  <p style="color:var(--text-muted);margin-bottom:24px">Which explosion protection certification schemes apply in each country? <strong>IECEx is an international scheme</strong> (37 member countries) used alongside national schemes; only Australia and New Zealand accept IECEx certificates directly. Details per country: <a href="/pages/ex-certification-schemes.html">Ex certification by country</a>. Use the filters to explore — click "IECEx Accepted" to see worldwide coverage.</p>
 
   <div class="map-legend">
     <div class="map-legend-item"><div class="map-legend-swatch" style="background:#2563eb"></div> ATEX (EU/EEA)</div>
-    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#16a34a"></div> IECEx (global — accepted in 50+ countries)</div>
+    <div class="map-legend-item"><div class="map-legend-swatch" style="background:#16a34a"></div> IECEx (international scheme, 37 member countries)</div>
     <div class="map-legend-item"><div class="map-legend-swatch" style="background:#dc2626"></div> NEC/CEC (North America)</div>
     <div class="map-legend-item"><div class="map-legend-swatch" style="background:#9333ea"></div> GOST-R/TR CU</div>
     <div class="map-legend-item"><div class="map-legend-swatch" style="background:#d4a843"></div> National scheme</div>
@@ -218,7 +221,7 @@
   </div>
 </footer>
 <script src="/js/nav.js?v=6015dda8"></script>
-<script src="/js/search.js?v=97b3c0ca"></script>
+<script src="/js/search.js?v=fd234037"></script>
 
 
 <script>
@@ -259,17 +262,17 @@ const countries = [
   {c:"United States",p:"NEC (NFPA 70)",a:"IECEx (limited)",b:"UL, FM, CSA, Intertek"},
   {c:"Canada",p:"CEC (CSA C22.1)",a:"IECEx (limited)",b:"CSA, QPS, Intertek"},
   {c:"Mexico",p:"NOM (NEC-based)",a:"",b:"ANCE"},
-  {c:"Russia",p:"TR CU 012",a:"GOST-R",b:"Rostechnadzor, NANIO"},
-  {c:"Kazakhstan",p:"TR CU 012",a:"GOST-R",b:"KazEnergy"},
+  {c:"Russia",p:"TR CU 012",a:"EAC Ex",b:"EAEU-accredited certification bodies"},
+  {c:"Kazakhstan",p:"TR CU 012",a:"EAC Ex",b:"EAEU-accredited certification bodies"},
   {c:"Belarus",p:"TR CU 012",a:"GOST-R",b:"Gosstandart"},
   {c:"Armenia",p:"TR CU 012",a:"",b:"SARM"},
   {c:"Kyrgyzstan",p:"TR CU 012",a:"",b:"CSM"},
-  {c:"China",p:"GB 3836 (NEPSI)",a:"IECEx",b:"NEPSI, CQST, PCEC, CNEX, TICR, Nanyang"},
-  {c:"Japan",p:"TIIS",a:"IECEx",b:"TIIS"},
+  {c:"China",p:"CCC (GB/T 3836)",a:"IECEx test reports",b:"CQC, CQM, CNEx (CQST), NEPSI, PCEC, JEXM"},
+  {c:"Japan",p:"Type examination (MHLW)",a:"IECEx test reports",b:"TIIS and other registered bodies"},
   {c:"South Korea",p:"KCs (KOSHA)",a:"IECEx",b:"KOSHA, KGS, KTL"},
   {c:"India",p:"IS/IEC 60079",a:"IECEx",b:"PESO, CCOE, CMRI"},
-  {c:"Australia",p:"IECEx / AS/NZS",a:"ATEX (accepted)",b:"Simtars, TestSafe, TUV SUD"},
-  {c:"New Zealand",p:"IECEx / AS/NZS",a:"ATEX (accepted)",b:"WorkSafe NZ"},
+  {c:"Australia",p:"IECEx / AS/NZS",a:"ANZEx",b:"Simtars, TestSafe, TUV SUD"},
+  {c:"New Zealand",p:"IECEx / AS/NZS",a:"ANZEx",b:"WorkSafe NZ"},
   {c:"Brazil",p:"INMETRO",a:"IECEx",b:"INMETRO, CEPEL"},
   {c:"Argentina",p:"IRAM",a:"IECEx",b:"IRAM"},
   {c:"South Africa",p:"SANS / IECEx",a:"ATEX (accepted)",b:"SABS, Exco"},

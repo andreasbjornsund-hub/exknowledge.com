@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrolyser ATEX Zoning: Hydrogen Hazardous Areas</title>
+  <meta name="description" content="How hydrogen electrolyser containers and rooms are zoned: IEC 60079-10-1 release sources, ventilation and Zone 2 NE, IIC equipment, vents and the oxygen side.">
+  <link rel="canonical" href="https://exknowledge.com/pages/atex-hydrogen-electrolysers.html">
+  <meta property="og:title" content="Electrolyser ATEX Zoning: Hydrogen Hazardous Areas">
+  <meta property="og:description" content="How hydrogen electrolyser containers and rooms are zoned: IEC 60079-10-1 release sources, ventilation and Zone 2 NE, IIC equipment, vents and the oxygen side.">
+  <meta property="og:url" content="https://exknowledge.com/pages/atex-hydrogen-electrolysers.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=1000&amp;q=80">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Electrolyser ATEX Zoning: Hydrogen Hazardous Areas">
+  <meta name="twitter:description" content="How hydrogen electrolyser containers and rooms are zoned: IEC 60079-10-1 release sources, ventilation and Zone 2 NE, IIC equipment, vents and the oxygen side.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <style>
+/* ─── CTA Shared Styles ─── */
+.cta-section{background:var(--c-cream,#faf8f5);border-top:1px solid var(--c-sand,#e8e4de);padding:3rem 0}
+.ask-card{max-width:540px;margin:0 auto;text-align:center}
+.ask-card h3{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.4rem;color:var(--c-black,#1a1917);margin-bottom:0.5rem}
+.ask-card p{font-size:0.95rem;color:var(--c-slate,#64605a);margin-bottom:1.5rem;line-height:1.6}
+.cta-input{width:100%;font-size:1rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-textarea{width:100%;font-size:0.95rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;min-height:100px;resize:vertical;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-textarea:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-btn{width:100%;font-family:var(--font-display,Georgia,serif);font-weight:600;font-size:1rem;padding:0.9rem;background:var(--c-black,#1a1917);color:var(--c-yellow,#d4a843);border:none;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s}
+.cta-btn:hover{background:var(--c-charcoal,#2d2a26)}
+.cta-btn:disabled{opacity:0.5;cursor:default}
+.cta-ok{color:var(--c-green,#2d7d46);font-weight:600;margin-top:1rem;display:none}
+.cta-row{display:flex;gap:0.5rem}
+.cta-row .cta-input{flex:1}
+.cta-row .cta-btn{width:auto;padding:0.8rem 1.5rem;white-space:nowrap}
+
+/* ─── Newsletter Footer ─── */
+.footer-newsletter{background:var(--c-black,#1a1917);color:var(--c-cream,#faf8f5);padding:2.5rem 0 1.5rem}
+.footer-newsletter .container{max-width:700px;margin:0 auto;padding:0 1.5rem}
+.footer-nl-title{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.1rem;margin-bottom:0.3rem;color:var(--c-yellow,#d4a843)}
+.footer-nl-desc{font-size:0.85rem;opacity:0.7;margin-bottom:1rem}
+.footer-nl-form{display:flex;gap:0.5rem;max-width:420px}
+.footer-nl-input{flex:1;padding:0.7rem 0.9rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:0.9rem;font-family:inherit}
+.footer-nl-input::placeholder{color:rgba(255,255,255,0.4)}
+.footer-nl-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.footer-nl-btn{padding:0.7rem 1.2rem;background:var(--c-yellow,#d4a843);color:var(--c-black,#1a1917);border:none;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:var(--font-display,Georgia,serif)}
+.footer-nl-btn:hover{background:#e0b650}
+.footer-nl-ok{color:var(--c-yellow,#d4a843);font-size:0.9rem;margin-top:0.5rem;display:none}
+.footer-copy{text-align:center;font-size:0.75rem;opacity:0.35;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08)}
+
+/* ─── Scroll Popup ─── */
+.scroll-popup{position:fixed;bottom:-300px;left:50%;transform:translateX(-50%);width:min(92vw,440px);background:var(--c-white,#fff);border:1px solid var(--c-sand,#e8e4de);box-shadow:0 -4px 24px rgba(0,0,0,0.12);padding:1.8rem;z-index:1000;transition:bottom 0.4s ease}
+.scroll-popup.visible{bottom:1.5rem}
+.scroll-popup-close{position:absolute;top:0.6rem;right:0.8rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--c-mid,#999);line-height:1}
+.scroll-popup h4{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.15rem;margin-bottom:0.3rem;color:var(--c-black,#1a1917)}
+.scroll-popup p{font-size:0.88rem;color:var(--c-slate,#64605a);margin-bottom:1rem;line-height:1.5}
+.scroll-popup .cta-row{margin-bottom:0}
+@media(max-width:480px){.cta-row{flex-direction:column}.cta-row .cta-btn{width:100%}.footer-nl-form{flex-direction:column}
+</style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Hydrogen electrolysers: ATEX zoning and hazardous area classification",
+  "description": "How hydrogen electrolyser containers and rooms are zoned: IEC 60079-10-1 release sources, ventilation and Zone 2 NE, IIC equipment, vents and the oxygen side.",
+  "url": "https://exknowledge.com/pages/atex-hydrogen-electrolysers.html",
+  "image": "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=1000&q=80",
+  "datePublished": "2026-09-29",
+  "dateModified": "2026-09-29",
+  "author": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  },
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://exknowledge.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Hydrogen Electrolysers",
+      "item": "https://exknowledge.com/pages/atex-hydrogen-electrolysers.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does a hydrogen electrolyser need ATEX zoning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it must be assessed. Any enclosure or area with hydrogen-carrying equipment needs a hazardous area classification under 1999/92/EC or DSEAR, normally to IEC 60079-10-1. With monitored ventilation and moderate pressure, much of the interior may end up as Zone 2 NE, but vents and relief outlets still get zones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What gas group and temperature class is needed for hydrogen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hydrogen is gas group IIC (Group B in the NEC Division system) and temperature class T1. Equipment must be marked IIC or IIB+H2; plain IIB equipment is not suitable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Zone 2 NE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A zone of negligible extent under IEC 60079-10-1:2020: a zone so small that an ignition would have negligible consequences. It may be treated as non-hazardous for equipment selection, but it should not be applied above 20 barg without a specific detailed risk assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the oxygen from an electrolyser need an ATEX zone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Oxygen is not flammable, so it does not create a zone. Oxygen enrichment still increases fire risk, so the oxygen vent must be kept away from ignition sources, combustible materials and the hydrogen vent."
+      }
+    }
+  ]
+}
+  </script>
+<!-- GA4 Hazardous Area Guide Network -->
+<script src="https://hazardousareaguide.com/consent-banner.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SXVW6MS2C5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SXVW6MS2C5');</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <ul class="nav-links" id="site-nav">
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-book-open-text" aria-hidden="true"></i> Knowledge <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/pages/fundamentals.html"><i class="ph ph-fire" aria-hidden="true"></i> Fundamentals</a></li>
+          <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold" aria-hidden="true"></i> Zone Classification</a></li>
+          <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check" aria-hidden="true"></i> Protection Methods</a></li>
+          <li><a href="/pages/standards.html"><i class="ph ph-scales" aria-hidden="true"></i> Standards &amp; Regulations</a></li>
+          <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot" aria-hidden="true"></i> Temperature Classes</a></li>
+          <li><a href="/pages/gas-groups.html"><i class="ph ph-flame" aria-hidden="true"></i> Gas Groups</a></li>
+          <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six" aria-hidden="true"></i> Equipment Categories</a></li>
+          <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning" aria-hidden="true"></i> Quick Reference</a></li>
+          <li><a href="/pages/faq.html"><i class="ph ph-question" aria-hidden="true"></i> FAQ</a></li>
+          <li><a href="/pages/atex-applications.html"><i class="ph ph-factory" aria-hidden="true"></i> ATEX by Application</a></li>
+          <li><a href="/pages/ex-certification-schemes.html"><i class="ph ph-globe" aria-hidden="true"></i> Certification by Country</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-folder-open" aria-hidden="true"></i> Resources <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam" aria-hidden="true"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar" aria-hidden="true"></i> Survey</a></li>
+          <li><a href="/blog/"><i class="ph ph-newspaper" aria-hidden="true"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone" aria-hidden="true"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate" aria-hidden="true"></i> Glossary</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher" aria-hidden="true"></i> Training</a></li>
+          <li><a href="/visualisations.html"><i class="ph ph-eye" aria-hidden="true"></i> Visualisations</a></li>
+          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west" aria-hidden="true"></i> Certification Map</a></li>
+          <li><a href="/pages/intrinsic-safety-calculator.html"><i class="ph ph-calculator" aria-hidden="true"></i> IS Loop Calculator</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-users-three" aria-hidden="true"></i> Community <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/partners.html"><i class="ph ph-handshake" aria-hidden="true"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link" aria-hidden="true"></i> Industry Links</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info" aria-hidden="true"></i> About</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/" selected>🇬🇧 English</option>
+      <option value="/de/">🇩🇪 Deutsch</option>
+      <option value="/no/">🇳🇴 Norsk</option>
+      <option value="/da/">🇩🇰 Dansk</option>
+      <option value="/sv/">🇸🇪 Svenska</option>
+      <option value="/fi/">🇫🇮 Suomi</option>
+      <option value="/es/">🇪🇸 Español</option>
+      <option value="/nl/">🇳🇱 Nederlands</option>
+      <option value="/pt/">🇵🇹 Português</option>
+      <option value="/it/">🇮🇹 Italiano</option>
+      <option value="/ar/">🇸🇦 العربية</option>
+    </select>
+    <button type="button" class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="ph-bold ph-list" aria-hidden="true"></i></button>
+  </div>
+</nav>
+
+<section class="content-page">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../">Home</a> <span aria-hidden="true">/</span> <span>Hydrogen Electrolysers</span>
+    </nav>
+    <div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=1000&amp;q=80" alt="Wind turbines on green hills, a typical power source for electrolysers" loading="lazy" width="820" height="240">
+        <h1>Hydrogen electrolysers: ATEX zoning and hazardous area classification</h1>
+<p>Yes. An electrolyser produces hydrogen, so every container, room or skid that holds hydrogen-carrying equipment needs a hazardous area classification under Directive 1999/92/EC (DSEAR in Great Britain), normally done to IEC 60079-10-1:2020. The result is not always a large zone. With monitored mechanical ventilation, few joints and moderate pressure, much of an enclosure can be classed as Zone 2 of negligible extent (Zone 2 NE) and treated as non-hazardous for equipment selection. Vent outlets, relief discharges and compressors still get zones, and equipment that must work when ventilation fails still needs Ex protection for gas group IIC.</p>
+
+<h2 id="hydrogen-properties">What makes hydrogen different</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Property</th><th>Hydrogen</th><th>Consequence for classification</th></tr></thead>
+<tbody>
+<tr><td>Explosive limits in air</td><td>4 % to 75 % by volume</td><td>Low LEL and very wide range; ventilation is sized against 4 %</td></tr>
+<tr><td>Relative density</td><td>About 0.07 (air = 1)</td><td>Rises fast; collects under roofs and in ceiling pockets</td></tr>
+<tr><td>Minimum ignition energy</td><td>About 0.02 mJ</td><td>Static and small sparks are credible ignition sources</td></tr>
+<tr><td>Gas group</td><td>IIC (NEC Division system: Group B)</td><td>Equipment must be IIC or marked IIB+H2</td></tr>
+<tr><td>Temperature class</td><td>T1 (auto-ignition above 450 °C)</td><td>T-class is rarely the limiting factor</td></tr>
+</tbody></table></div>
+<p>Hydrogen also has no odor and burns with a nearly invisible flame in daylight, so detection matters more than it does for hydrocarbons. See <a href="/pages/hydrogen-explosion-protection.html">Hydrogen explosion protection</a> for the full property set and the effect on Ex d and Ex i design.</p>
+
+<h2 id="who-does-what">Standards and who is responsible</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Document</th><th>What it covers</th><th>Responsible party</th></tr></thead>
+<tbody>
+<tr><td>ISO 22734-1:2025 (replaced ISO 22734:2019)</td><td>Safety requirements for hydrogen generators using water electrolysis</td><td>Electrolyser manufacturer</td></tr>
+<tr><td>Directive 2014/34/EU (ATEX equipment)</td><td>Equipment and protective systems placed in zones, including those inside the package</td><td>Manufacturer of each Ex item</td></tr>
+<tr><td>Directive 1999/92/EC / DSEAR 2002</td><td>Classifying the workplace into zones, explosion protection document</td><td>Operator / employer</td></tr>
+<tr><td>IEC 60079-10-1:2020</td><td>Method for zone type and extent, including Zone NE (clause 4.4.2) and an informative annex on hydrogen (Annex H)</td><td>Whoever carries out the classification</td></tr>
+<tr><td>IEC 60079-13:2017</td><td>Protection by pressurized room "p" and artificially ventilated room "v"</td><td>Package designer</td></tr>
+<tr><td>NFPA 2 and NEC Articles 500/505 (US)</td><td>Hydrogen Technologies Code (production, storage, use); hazardous location wiring</td><td>Designer, installer, AHJ</td></tr>
+</tbody></table></div>
+<p>In practice the manufacturer supplies a list of release sources, pressures, ventilation design and a proposed classification for the inside of the package. The operator has to adopt, check and extend it to the site: vent stack outlets, the space around container openings, compressors and storage outside the package, and interaction with nearby equipment.</p>
+
+<h2 id="release-sources">Typical sources of release</h2>
+<ul>
+  <li><strong>Stack and gas/liquid separators:</strong> flanged and threaded connections, sampling and instrument connections. Normally secondary grade releases.</li>
+  <li><strong>Hydrogen vent lines:</strong> start-up and shutdown venting, purging, off-spec gas and depressurization. Venting that happens as part of normal operation gives a primary grade release at the vent outlet.</li>
+  <li><strong>Relief valves and bursting discharges:</strong> routed to a safe location, usually a common vent stack above the roof line.</li>
+  <li><strong>Gas purification (deoxidizer, dryer):</strong> connections, and regeneration purge streams that may carry hydrogen.</li>
+  <li><strong>Compressors:</strong> seals, packing vents and distance pieces; often a significant source on the site.</li>
+  <li><strong>Valves, fittings and hoses:</strong> each threaded or compression joint is a potential leak point; welded joints are generally not treated as sources of release.</li>
+</ul>
+<p>The inside of process equipment is dealt with separately (IEC 60079-10-1, clause 4.3). Pure hydrogen in pipework is above its upper explosive limit, so the internal risk comes mainly from air getting in during start-up, purging and maintenance.</p>
+
+<h2 id="ventilation-and-ne">Ventilation, Zone 2 NE and Ex "v"</h2>
+<p>In an enclosure, ventilation decides the result. IEC 60079-10-1 assesses the degree of dilution and the availability of ventilation for each release. A zone of negligible extent (Zone NE) is one where, if ignition did occur, the consequences would be negligible. The standard sets pressure limits on its use: Zone NE shall not be applied to releases from systems above 20 barg (2000 kPag) unless a specific detailed risk assessment documents otherwise, and between 10 and 20 barg consideration shall be given to a specific risk assessment. It also requires that an ignition would not cause harm from overpressure or from heat.</p>
+<p>A 2023 paper at the International Conference on Hydrogen Safety worked through this for a PEM electrolyser enclosure operating at 30 barg. Without mechanical ventilation, the enclosure interior was taken as Zone 1. With mechanical ventilation, the enclosure could be assessed as protected by ventilation (Ex "v" under IEC 60079-13) with the local area around leak sources treated as non-hazardous or Zone NE, supported by safeguards such as:</p>
+<ul>
+  <li>ventilation that starts before the system is pressurized, with airflow monitoring that shuts down and depressurizes on low flow;</li>
+  <li>hydrogen detection with a warning at 10 % LFL and alarm plus shutdown at 25 % LFL;</li>
+  <li>door interlocks so nobody enters while the system is pressurized;</li>
+  <li>pressure monitoring and automatic pressure-hold leak tests;</li>
+  <li>Ex-rated equipment for the functions that must work without ventilation (gas detectors, pressure sensors, the fan).</li>
+</ul>
+<p>Because the example ran above 20 barg, the authors also needed a specific detailed risk assessment to justify NE. Treat these as one worked example, not default values.</p>
+
+<h2 id="typical-arrangement">Typical zone arrangement</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Location</th><th>Typical outcome</th><th>What changes it</th></tr></thead>
+<tbody>
+<tr><td>Enclosure interior, monitored mechanical ventilation, low or moderate pressure</td><td>Zone 2 NE or non-hazardous around joints</td><td>Pressure above 10 to 20 barg, poor air distribution, no interlocks</td></tr>
+<tr><td>Enclosure interior, natural ventilation only</td><td>Zone 2, or Zone 1 where releases are frequent or ventilation is poor</td><td>Opening area, roof shape, pockets under the roof</td></tr>
+<tr><td>Hydrogen vent stack outlet</td><td>Zone 1 and/or Zone 2 around and above the outlet</td><td>Vent frequency, flow, outlet height and orientation</td></tr>
+<tr><td>Around ventilation outlets and openings of the enclosure</td><td>Often Zone 2 near the opening</td><td>Whether an internal release can leave through the opening (IEC 60079-10-1, Annex B.8)</td></tr>
+<tr><td>Compressor and storage outside the package</td><td>Zone 2 around joints and seals; Zone 1 at packing vents if they vent in normal operation</td><td>Pressure, enclosure, seal design</td></tr>
+</tbody></table></div>
+<p>Because hydrogen rises, zones around outdoor releases often extend further upward than downward, and high points of enclosures need particular attention.</p>
+
+<h2 id="equipment">Equipment selection</h2>
+<ul>
+  <li><strong>Zone 1:</strong> EPL Gb (ATEX Category 2G), gas group IIC or IIB+H2, T1 or better.</li>
+  <li><strong>Zone 2:</strong> EPL Gc (Category 3G), IIC or IIB+H2.</li>
+  <li><strong>Zone 2 NE / non-hazardous by ventilation:</strong> general-purpose equipment may be acceptable, but only where the assessment says so and the ventilation is monitored and interlocked. Anything that must operate if ventilation fails, such as detectors, the fan and emergency lighting, is normally Ex-rated.</li>
+</ul>
+<p>In the US Division system, hydrogen is Class I, Group B, and equipment rated only for Group C or D is not acceptable. See <a href="/pages/epl.html">EPL</a>, <a href="/pages/gas-groups.html">Gas Groups</a> and <a href="/pages/nec-500-vs-atex-iec.html">NEC 500 vs ATEX/IEC</a>.</p>
+
+<h2 id="oxygen-side">The oxygen side</h2>
+<p>Water electrolysis produces half as much oxygen as hydrogen by volume, and it is usually vented. Oxygen is not flammable and does not create an ATEX zone; IEC 60079-10-1 is written for flammable gas mixed with air. Oxygen enrichment still matters: it makes materials, clothing and oil-contaminated surfaces burn far more readily. Keep the oxygen vent apart from the hydrogen vent and from ignition sources and combustible materials, and use oxygen-compatible, clean components on the oxygen side. Hydrogen crossing into the oxygen stream (or the reverse) inside the stack is an equipment design hazard, controlled by the manufacturer's gas purity monitoring and shutdown logic, not by zoning the room.</p>
+
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+  <li>Accepting a vendor's statement that the package is "non-hazardous" without checking the ventilation interlocks and pressure limits it relies on.</li>
+  <li>Applying Zone NE to systems above 20 barg without the specific detailed risk assessment IEC 60079-10-1 requires.</li>
+  <li>Forgetting the vent stack outlet and the area around enclosure openings when the interior has been classified.</li>
+  <li>Using IIB equipment near hydrogen (IIB+H2 is acceptable; plain IIB is not).</li>
+  <li>Placing gas detectors at low level, where hydrogen does not collect.</li>
+  <li>Treating the oxygen vent as harmless because it is not zoned.</li>
+</ul>
+
+<h2 id="what-else-applies">What else applies</h2>
+<ul>
+  <li><strong>Explosion venting of enclosures:</strong> containers can be fitted with vent panels sized to NFPA 68 or EN 14994 as a mitigation measure.</li>
+  <li><strong>Materials:</strong> hydrogen embrittlement of some steels, addressed in piping codes such as ASME B31.12.</li>
+  <li><strong>Earthing and static control:</strong> given the low ignition energy, bonding of all conductive parts is essential.</li>
+  <li><strong>Major hazards:</strong> in the EU, the Seveso III Directive applies from 5 tonnes of hydrogen stored on site (lower tier) and 50 tonnes (upper tier).</li>
+</ul>
+<p>This page describes typical practice. The classification for a given electrolyser belongs in the operator's explosion protection document, made by a competent person with the manufacturer's data.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Does a hydrogen electrolyser need ATEX zoning?</h3>
+<p>Yes, it must be assessed. Any enclosure or area with hydrogen-carrying equipment needs a hazardous area classification under 1999/92/EC or DSEAR, normally to IEC 60079-10-1. With monitored ventilation and moderate pressure, much of the interior may end up as Zone 2 NE, but vents and relief outlets still get zones.</p>
+<h3>What gas group and temperature class is needed for hydrogen?</h3>
+<p>Hydrogen is gas group IIC (Group B in the NEC Division system) and temperature class T1. Equipment must be marked IIC or IIB+H2; plain IIB equipment is not suitable.</p>
+<h3>What is Zone 2 NE?</h3>
+<p>A zone of negligible extent under IEC 60079-10-1:2020: a zone so small that an ignition would have negligible consequences. It may be treated as non-hazardous for equipment selection, but it should not be applied above 20 barg without a specific detailed risk assessment.</p>
+<h3>Does the oxygen from an electrolyser need an ATEX zone?</h3>
+<p>No. Oxygen is not flammable, so it does not create a zone. Oxygen enrichment still increases fire risk, so the oxygen vent must be kept away from ignition sources, combustible materials and the hydrogen vent.</p>
+
+<h2 id="sources">Sources</h2>
+<ol class="sources">
+<li><a href="https://webstore.iec.ch/en/publication/63327" target="_blank" rel="noopener">IEC: IEC 60079-10-1:2020 Classification of areas - Explosive gas atmospheres</a></li>
+<li><a href="https://cdn.standards.iteh.ai/samples/102275/5de5dff488a747608648235d04665ffa/IEC-60079-10-1-2020.pdf" target="_blank" rel="noopener">iTeh preview: IEC 60079-10-1:2020 (scope, contents and Zone NE definition)</a></li>
+<li><a href="https://hysafe.info/uploads/papers/2023/128.pdf" target="_blank" rel="noopener">ICHS 2023 (HySafe): Zone negligible extent - example of specific detailed risk assessment for a hydrogen electrolyser enclosure</a></li>
+<li><a href="https://knowledge.bsigroup.com/products/hydrogen-generators-using-water-electrolysis-part-1-safety" target="_blank" rel="noopener">BSI: ISO 22734-1:2025 Hydrogen generators using water electrolysis - Part 1: Safety</a></li>
+<li><a href="https://www1.eere.energy.gov/hydrogenandfuelcells/pdfs/h2_safety_fsheet.pdf" target="_blank" rel="noopener">US DOE: Hydrogen safety fact sheet</a></li>
+<li><a href="https://www.hse.gov.uk/fireandexplosion/atex.htm" target="_blank" rel="noopener">HSE: ATEX and explosive atmospheres</a></li>
+</ol>
+
+<section class="related-topics" style="margin-top:40px;padding:24px;background:var(--bg-alt, #f8f7f4);border-radius:8px;">
+  <h2 style="margin:0 0 12px 0;">Related Topics</h2>
+  <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(min(200px, 100%), 1fr));gap:8px;">
+        <li><a href="/pages/hydrogen-explosion-protection.html">Hydrogen Explosion Protection</a></li>
+        <li><a href="/pages/atex-applications.html">Does It Need ATEX Zoning?</a></li>
+        <li><a href="/pages/gas-groups.html">Gas Groups</a></li>
+        <li><a href="/pages/zone-classification.html">Zone Classification</a></li>
+        <li><a href="/pages/epl.html">Equipment Protection Levels</a></li>
+  </ul>
+</section>
+
+              <aside class="pdf-cta inverse" aria-labelledby="pdfCtaTitle">
+          <div>
+            <p class="pdf-cta-eyebrow">Free PDF</p>
+            <h2 class="pdf-cta-title" id="pdfCtaTitle">The ATEX &amp; IECEx Pocket Guide</h2>
+            <p>Zones, gas groups, temperature classes, protection methods and marking examples on 12 printable pages.</p>
+          </div>
+          <a class="btn btn--primary" href="/ebook.html">Get the free PDF</a>
+        </aside>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4>All Topics</h4>
+            <a href="/pages/fundamentals.html" class="">Fundamentals</a>
+  <a href="/pages/zone-classification.html" class="">Zones</a>
+  <a href="/pages/gas-groups.html" class="">Gas Groups</a>
+  <a href="/pages/temperature-classes.html" class="">Temp Classes</a>
+  <a href="/pages/protection-methods.html" class="">Protection</a>
+  <a href="/pages/epl.html" class="">EPL</a>
+  <a href="/pages/ex-markings.html" class="">Markings</a>
+  <a href="/pages/standards.html" class="">Standards</a>
+  <a href="/pages/certification.html" class="">Certification</a>
+  <a href="/pages/installation-inspection.html" class="">Installation</a>
+  <a href="/pages/cheat-sheet.html" class="">Cheat Sheet</a>
+  <a href="/pages/nr10-inmetro-brazil.html" class="">NR-10 / INMETRO</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta-section" id="ask-section">
+  <div class="container">
+    <div class="ask-card">
+      <h3>Have a question about this topic?</h3>
+      <p>Submit your question and get a response from the ExKnowledge knowledge base.</p>
+      <form id="askForm" onsubmit="submitQuestion(event)">
+        <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+        <input type="text" class="cta-input" name="company" placeholder="Company (optional)" style="margin-bottom:0.5rem">
+        <textarea class="cta-textarea" name="question" placeholder="Your question…" required></textarea>
+        <button type="submit" class="cta-btn" id="askBtn">Submit Question →</button>
+      </form>
+      <p class="cta-ok" id="askOk">✓ Question received. A response will be sent to your email.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Knowledge</h4>
+        <a href="/pages/fundamentals.html">Fundamentals</a>
+        <a href="/pages/zone-classification.html">Zone Classification</a>
+        <a href="/pages/protection-methods.html">Protection Methods</a>
+        <a href="/pages/standards.html">Standards</a>
+        <a href="/pages/temperature-classes.html">Temperature Classes</a>
+        <a href="/pages/gas-groups.html">Gas Groups</a>
+        <a href="/pages/cheat-sheet.html">Quick Reference</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a>
+        <a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i> All Episodes</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i> Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i> Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i> RSS Feed</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/about.html"><i class="ph ph-info"></i> About</a>
+        <a href="/ebook.html"><i class="ph ph-file-pdf"></i> Free PDF guide</a>
+        <a href="/privacy.html"><i class="ph ph-shield-check"></i> Privacy</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a>
+        <a href="/links.html"><i class="ph ph-link"></i> Industry Links</a>
+        <a href="https://hazardousareaguide.com"><i class="ph ph-compass"></i> Hazardous Area Guide</a>
+        <a href="https://intrinsicallysafephones.com"><i class="ph ph-device-mobile"></i> Intrinsically Safe Phones</a>
+        <a href="https://intrinsicallysafeheadsets.com"><i class="ph ph-headset"></i> Intrinsically Safe Headsets</a>
+        <a href="https://explosionproofradios.com"><i class="ph ph-radio"></i> Explosion Proof Radios</a>
+        <a href="https://explosionprooftablets.com"><i class="ph ph-device-tablet"></i> Explosion Proof Tablets</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--link)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+      <p>Not a substitute for official standards documents or professional engineering advice.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" class="footer-report"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<div class="scroll-popup" id="scrollPopup">
+  <button class="scroll-popup-close" onclick="dismissPopup()" aria-label="Close">×</button>
+  <h4>ATEX/IECEx Quick Reference</h4>
+  <p>Get the cheat sheet as a printable PDF — zones, gas groups, T-classes, and protection methods on one page.</p>
+  <form class="cta-row" id="popupForm" onsubmit="submitPopup(event)">
+    <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+    <button type="submit" class="cta-btn">Get PDF →</button>
+  </form>
+  <p class="cta-ok" id="popupOk">✓ Your download is starting. We have also emailed you the link.</p>
+</div>
+
+
+
+<script src="/js/nav.js?v=6015dda8"></script>
+<script src="/js/search.js?v=fd234037"></script>
+<script src="/js/forms.js?v=da25789d"></script>
+</body>
+</html>

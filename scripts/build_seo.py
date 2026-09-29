@@ -26,7 +26,7 @@ st = collections.Counter()
 
 TITLES = {  # hand-written English titles (<= 60 chars)
  'pages/fundamentals.html': 'Explosion Protection Fundamentals: Fire Triangle, LEL, UEL',
- 'pages/zone-classification.html': 'ATEX Zone Classification: Zones 0, 1, 2, 20, 21 and 22',
+ 'pages/zone-classification.html': 'ATEX Zones 0, 1, 2, 20, 21 and 22: Zone Classification',
  'pages/gas-groups.html': 'Gas Groups IIA, IIB, IIC: Table, MESG & IIB vs IIC',
  'pages/temperature-classes.html': 'Temperature Classes T1–T6 Table: T3 vs T4 Explained',
  'pages/protection-methods.html': 'Ex Protection Methods: Ex d, Ex e, Ex i, Ex p, Ex n, Ex m',
@@ -38,7 +38,7 @@ TITLES = {  # hand-written English titles (<= 60 chars)
  'pages/nec-500-vs-atex-iec.html': 'NEC 500 vs NEC 505 vs ATEX: Divisions vs Zones',
  'pages/faq.html': 'ATEX and IECEx FAQ: Explosion Protection Questions',
  'pages/nr10-inmetro-brazil.html': 'NR-10 and INMETRO: Brazil Ex Certification (2026)',
- 'pages/dsear-regulations-uk.html': 'DSEAR Regulations: UK Explosive Atmospheres Guide',
+ 'pages/dsear-regulations-uk.html': 'DSEAR Regulations 2002: UK ATEX Rules and Risk Assessment',
  'pages/atex-for-beginners.html': 'ATEX for Beginners: A Plain-Language Introduction',
  'pages/how-to-read-atex-nameplate.html': 'ATEX Nameplate Explained: Ex Symbol, CE Number, Markings',
  'pages/explosion-proof-vs-intrinsically-safe.html': 'Intrinsically Safe vs Explosion Proof (Ex i vs Ex d)',
@@ -46,6 +46,7 @@ TITLES = {  # hand-written English titles (<= 60 chars)
  'pages/cable-glands-hazardous-areas.html': 'Ex Cable Glands for Hazardous Areas: Ex d, Ex e, Barrier',
  'pages/hydrogen-explosion-protection.html': 'Hydrogen Explosion Protection: IIC Equipment and Safety',
  'pages/ex-equipment-selection-guide.html': 'Ex Equipment Selection Guide: Choosing the Right Method',
+ 'pages/atex-vs-iecex.html': 'IECEx vs ATEX: Differences, Certificates and Marking',
  # Search Console query/page fixes (2026-09-28): titles that match what people search
  'pages/atex-directive.html': 'ATEX 114 Directive 2014/34/EU Explained (Equipment)',
  'training.html': 'Free ATEX Training Courses for Engineers (IECEx, CompEx)',
@@ -60,6 +61,9 @@ TITLES = {  # hand-written English titles (<= 60 chars)
 }
 # Hand-written descriptions (<= 160 chars), applied before trimming
 DESCS = {
+ 'pages/dsear-regulations-uk.html': 'DSEAR (SI 2002/2776) explained: who it applies to, what the risk assessment must cover, zoning and UKEX/CE equipment, DSEAR vs ATEX and a checklist.',
+ 'pages/atex-vs-iecex.html': 'What is the difference between ATEX and IECEx? Legal status, CoC vs EU-type certificate, ExTR, QAR vs QAN, marking, and what IECEx certifies.',
+ 'pages/zone-classification.html': 'ATEX zone classification: each zone, its equipment category and EPL (Zone 0, 1, 2 gas; 20, 21, 22 dust), with examples, Zone NE and the CO2 question.',
  'pages/temperature-classes.html': 'T1 450 °C, T2 300 °C, T3 200 °C, T4 135 °C, T5 100 °C, T6 85 °C: maximum surface temperatures per IEC 60079-0, gas ignition values and T3 vs T4.',
  'pages/gas-groups.html': 'IIA (propane), IIB (ethylene), IIC (hydrogen, acetylene): gas group table with MESG and MIC values, IIB vs IIC, IIB+H2 and dust groups IIIA–IIIC.',
  'pages/nec-500-vs-atex-iec.html': 'NEC 500 Class/Division and NEC 505 Zones compared with ATEX and IECEx: area mapping, gas groups, protection methods and dual certification.',
