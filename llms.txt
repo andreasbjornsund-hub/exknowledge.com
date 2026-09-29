@@ -115,3 +115,26 @@ Available in: [English](https://exknowledge.com/), [Deutsch](https://exknowledge
 ## ATEX Equipment Categories
 - URL: https://exknowledge.com/pages/atex-equipment-categories.html
 - Category 1, 2, 3 selection guide with zone mapping and practical examples
+
+## Does it need ATEX zoning? (by application)
+- [ATEX by Application](https://exknowledge.com/pages/atex-applications.html): A practical test for when a site needs ATEX zoning, with quick answers for battery rooms, EV charging, electrolysers, CO2, spray booths, silos and more.
+- [Battery Rooms](https://exknowledge.com/pages/atex-battery-rooms.html): Do battery charging rooms need ATEX zones? How IEC 62485 ventilation keeps hydrogen below 4 %, when a zone remains, and how NFPA 855 treats lithium-ion BESS.
+- [EV Charging](https://exknowledge.com/pages/atex-ev-charging.html): Do EV chargers need ATEX zoning? Not in car parks. At petrol stations the charger, vehicle and cable must sit outside the forecourt hazardous areas (UK and US).
+- [Hydrogen Electrolysers](https://exknowledge.com/pages/atex-hydrogen-electrolysers.html): How hydrogen electrolyser containers and rooms are zoned: IEC 60079-10-1 release sources, ventilation and Zone 2 NE, IIC equipment, vents and the oxygen side.
+- [CO2 and ATEX](https://exknowledge.com/pages/atex-co2.html): CO2 is not flammable, so it never creates an ATEX zone. What CO2 areas need instead, and when breweries, CCS plants or inerted vessels still need zoning.
+- [Spray Booths](https://exknowledge.com/pages/atex-spray-booths.html): Do paint spray booths need ATEX zoning? Yes. How zones are set inside booths, ducts and around openings under EN 16985, DSEAR and NFPA 33, plus powder booths.
+- [Grain Silos and Mills](https://exknowledge.com/pages/atex-grain-silos-flour-mills.html): Grain, flour and feed dust is combustible. How Zones 20, 21 and 22 are set in silos, elevators and mills, why housekeeping matters, and OSHA and NFPA 660 rules.
+- [Biogas Plants](https://exknowledge.com/pages/atex-biogas-plants.html): Biogas plants need hazardous area classification: methane and H2S data, zones around digesters, relief valves, condensate traps and CHP rooms, and TRGS 529.
+- [Distilleries](https://exknowledge.com/pages/atex-distilleries.html): Do distilleries need ATEX zoning? Usually yes. Ethanol data, zones around stills, receivers, cask filling, warehouses and malt mills, and DSEAR and US rules.
+
+## Ex certification by country
+- [Ex Schemes by Country](https://exknowledge.com/pages/ex-certification-schemes.html): Compare Ex certification schemes by country: ATEX, IECEx, UKCA, NEC/CEC, INMETRO, CCC, KCs, Japan, PESO, EAC and ANZEx, with IECEx use and local rules.
+- [UKCA Ex / UKEX](https://exknowledge.com/pages/ukca-ex-certification.html): UKCA/UKEX for Ex equipment under the 2016 Regulations: approved vs notified bodies, marking, CE recognized in GB indefinitely, Northern Ireland and DSEAR.
+- [EAC Ex (TR CU 012)](https://exknowledge.com/pages/eac-ex-certification.html): EAC Ex certification under TR CU 012/2011 for the Eurasian Economic Union: schemes, local applicant, accredited bodies, GOST standards, Ex and EAC marking.
+- [India PESO](https://exknowledge.com/pages/india-peso-ex-certification.html): How PESO approves Ex electrical equipment in India under the Petroleum Rules 2002: IECEx and EU routes, Indian applicant, recognized labs, BIS and marking.
+- [China CCC Ex](https://exknowledge.com/pages/china-ccc-ex-certification.html): Since October 2020 Ex electrical products sold in China need CCC. Scope, designated bodies such as NEPSI and CNEx, GB/T 3836, IECEx use and marking.
+- [Korea KCs Ex](https://exknowledge.com/pages/korea-kcs-ex-certification.html): Ex electrical equipment sold in South Korea needs KCs safety certification from KOSHA, KTL or KGS. IECEx route, agent rules, reviews and KCs marking.
+- [Japan Ex (JPEx)](https://exknowledge.com/pages/japan-jpex-ex-certification.html): Ex electrical equipment for Japan needs type examination by an MHLW-registered body. Two routes, IECEx ExTR use, the 8 bodies, 3-year validity, marking.
+
+## Tools
+- [Intrinsic Safety Loop Calculator](https://exknowledge.com/pages/intrinsic-safety-calculator.html): Free intrinsic safety loop calculator: check Uo, Io, Po, Co and Lo against Ui, Ii, Pi, Ci, Li and cable per IEC 60079-14, with the 1 % mixed-circuit rule.
