@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distillery ATEX Zones: Stills, Casks, Warehouses</title>
+  <meta name="description" content="Do distilleries need ATEX zoning? Usually yes. Ethanol data, zones around stills, receivers, cask filling, warehouses and malt mills, and DSEAR and US rules.">
+  <link rel="canonical" href="https://exknowledge.com/pages/atex-distilleries.html">
+  <meta property="og:title" content="Distillery ATEX Zones: Stills, Casks, Warehouses">
+  <meta property="og:description" content="Do distilleries need ATEX zoning? Usually yes. Ethanol data, zones around stills, receivers, cask filling, warehouses and malt mills, and DSEAR and US rules.">
+  <meta property="og:url" content="https://exknowledge.com/pages/atex-distilleries.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1000&amp;q=80">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Distillery ATEX Zones: Stills, Casks, Warehouses">
+  <meta name="twitter:description" content="Do distilleries need ATEX zoning? Usually yes. Ethanol data, zones around stills, receivers, cask filling, warehouses and malt mills, and DSEAR and US rules.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <style>
+/* ─── CTA Shared Styles ─── */
+.cta-section{background:var(--c-cream,#faf8f5);border-top:1px solid var(--c-sand,#e8e4de);padding:3rem 0}
+.ask-card{max-width:540px;margin:0 auto;text-align:center}
+.ask-card h3{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.4rem;color:var(--c-black,#1a1917);margin-bottom:0.5rem}
+.ask-card p{font-size:0.95rem;color:var(--c-slate,#64605a);margin-bottom:1.5rem;line-height:1.6}
+.cta-input{width:100%;font-size:1rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-textarea{width:100%;font-size:0.95rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;min-height:100px;resize:vertical;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-textarea:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-btn{width:100%;font-family:var(--font-display,Georgia,serif);font-weight:600;font-size:1rem;padding:0.9rem;background:var(--c-black,#1a1917);color:var(--c-yellow,#d4a843);border:none;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s}
+.cta-btn:hover{background:var(--c-charcoal,#2d2a26)}
+.cta-btn:disabled{opacity:0.5;cursor:default}
+.cta-ok{color:var(--c-green,#2d7d46);font-weight:600;margin-top:1rem;display:none}
+.cta-row{display:flex;gap:0.5rem}
+.cta-row .cta-input{flex:1}
+.cta-row .cta-btn{width:auto;padding:0.8rem 1.5rem;white-space:nowrap}
+
+/* ─── Newsletter Footer ─── */
+.footer-newsletter{background:var(--c-black,#1a1917);color:var(--c-cream,#faf8f5);padding:2.5rem 0 1.5rem}
+.footer-newsletter .container{max-width:700px;margin:0 auto;padding:0 1.5rem}
+.footer-nl-title{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.1rem;margin-bottom:0.3rem;color:var(--c-yellow,#d4a843)}
+.footer-nl-desc{font-size:0.85rem;opacity:0.7;margin-bottom:1rem}
+.footer-nl-form{display:flex;gap:0.5rem;max-width:420px}
+.footer-nl-input{flex:1;padding:0.7rem 0.9rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:0.9rem;font-family:inherit}
+.footer-nl-input::placeholder{color:rgba(255,255,255,0.4)}
+.footer-nl-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.footer-nl-btn{padding:0.7rem 1.2rem;background:var(--c-yellow,#d4a843);color:var(--c-black,#1a1917);border:none;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:var(--font-display,Georgia,serif)}
+.footer-nl-btn:hover{background:#e0b650}
+.footer-nl-ok{color:var(--c-yellow,#d4a843);font-size:0.9rem;margin-top:0.5rem;display:none}
+.footer-copy{text-align:center;font-size:0.75rem;opacity:0.35;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08)}
+
+/* ─── Scroll Popup ─── */
+.scroll-popup{position:fixed;bottom:-300px;left:50%;transform:translateX(-50%);width:min(92vw,440px);background:var(--c-white,#fff);border:1px solid var(--c-sand,#e8e4de);box-shadow:0 -4px 24px rgba(0,0,0,0.12);padding:1.8rem;z-index:1000;transition:bottom 0.4s ease}
+.scroll-popup.visible{bottom:1.5rem}
+.scroll-popup-close{position:absolute;top:0.6rem;right:0.8rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--c-mid,#999);line-height:1}
+.scroll-popup h4{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.15rem;margin-bottom:0.3rem;color:var(--c-black,#1a1917)}
+.scroll-popup p{font-size:0.88rem;color:var(--c-slate,#64605a);margin-bottom:1rem;line-height:1.5}
+.scroll-popup .cta-row{margin-bottom:0}
+@media(max-width:480px){.cta-row{flex-direction:column}.cta-row .cta-btn{width:100%}.footer-nl-form{flex-direction:column}
+</style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Do Distilleries Need ATEX Zoning? Whisky, Gin and Ethanol Plants",
+  "description": "Do distilleries need ATEX zoning? Usually yes. Ethanol data, zones around stills, receivers, cask filling, warehouses and malt mills, and DSEAR and US rules.",
+  "url": "https://exknowledge.com/pages/atex-distilleries.html",
+  "image": "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1000&q=80",
+  "datePublished": "2026-09-29",
+  "dateModified": "2026-09-29",
+  "author": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  },
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://exknowledge.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Distilleries",
+      "item": "https://exknowledge.com/pages/atex-distilleries.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the flash point of whisky or gin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on strength. GESTIS lists 12 °C for pure ethanol (closed cup), 22.5 °C at 60 % ethanol by mass and 25.5 °C at 40 % by mass. A 40 % ABV spirit is about 33 % ethanol by mass, so its flash point is in the mid-to-high 20s °C."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ethanol gas group IIA or IIB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dry ethanol is IIB (MESG 0.89 mm). ISO/IEC 80079-20-1:2017 adds an IIA entry for ethanol in air containing at least 4 % water vapor. Specifying IIB equipment covers both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a whisky maturation warehouse need ATEX zones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It needs an assessment, and the outcome varies. Slow evaporation from casks is diffuse, while leaks and damaged casks are the main release sources; building ventilation, drainage and ignition controls decide whether any zone is assigned."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What temperature class is needed for ethanol?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "T2 or better. Ethanol's ignition temperature is 400 °C (GESTIS), so equipment marked T2 through T6 is acceptable for ethanol alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do craft distilleries need DSEAR assessments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. DSEAR applies to any workplace in Great Britain where flammable substances such as ethanol are present, regardless of size, and requires the risk assessment and, where needed, hazardous zones and suitable equipment."
+      }
+    }
+  ]
+}
+  </script>
+<!-- GA4 Hazardous Area Guide Network -->
+<script src="https://hazardousareaguide.com/consent-banner.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SXVW6MS2C5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SXVW6MS2C5');</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <ul class="nav-links" id="site-nav">
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-book-open-text" aria-hidden="true"></i> Knowledge <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/pages/fundamentals.html"><i class="ph ph-fire" aria-hidden="true"></i> Fundamentals</a></li>
+          <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold" aria-hidden="true"></i> Zone Classification</a></li>
+          <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check" aria-hidden="true"></i> Protection Methods</a></li>
+          <li><a href="/pages/standards.html"><i class="ph ph-scales" aria-hidden="true"></i> Standards &amp; Regulations</a></li>
+          <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot" aria-hidden="true"></i> Temperature Classes</a></li>
+          <li><a href="/pages/gas-groups.html"><i class="ph ph-flame" aria-hidden="true"></i> Gas Groups</a></li>
+          <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six" aria-hidden="true"></i> Equipment Categories</a></li>
+          <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning" aria-hidden="true"></i> Quick Reference</a></li>
+          <li><a href="/pages/faq.html"><i class="ph ph-question" aria-hidden="true"></i> FAQ</a></li>
+          <li><a href="/pages/atex-applications.html"><i class="ph ph-factory" aria-hidden="true"></i> ATEX by Application</a></li>
+          <li><a href="/pages/ex-certification-schemes.html"><i class="ph ph-globe" aria-hidden="true"></i> Certification by Country</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-folder-open" aria-hidden="true"></i> Resources <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam" aria-hidden="true"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar" aria-hidden="true"></i> Survey</a></li>
+          <li><a href="/blog/"><i class="ph ph-newspaper" aria-hidden="true"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone" aria-hidden="true"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate" aria-hidden="true"></i> Glossary</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher" aria-hidden="true"></i> Training</a></li>
+          <li><a href="/visualisations.html"><i class="ph ph-eye" aria-hidden="true"></i> Visualisations</a></li>
+          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west" aria-hidden="true"></i> Certification Map</a></li>
+          <li><a href="/pages/intrinsic-safety-calculator.html"><i class="ph ph-calculator" aria-hidden="true"></i> IS Loop Calculator</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-users-three" aria-hidden="true"></i> Community <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/partners.html"><i class="ph ph-handshake" aria-hidden="true"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link" aria-hidden="true"></i> Industry Links</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info" aria-hidden="true"></i> About</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/" selected>🇬🇧 English</option>
+      <option value="/de/">🇩🇪 Deutsch</option>
+      <option value="/no/">🇳🇴 Norsk</option>
+      <option value="/da/">🇩🇰 Dansk</option>
+      <option value="/sv/">🇸🇪 Svenska</option>
+      <option value="/fi/">🇫🇮 Suomi</option>
+      <option value="/es/">🇪🇸 Español</option>
+      <option value="/nl/">🇳🇱 Nederlands</option>
+      <option value="/pt/">🇵🇹 Português</option>
+      <option value="/it/">🇮🇹 Italiano</option>
+      <option value="/ar/">🇸🇦 العربية</option>
+    </select>
+    <button type="button" class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="ph-bold ph-list" aria-hidden="true"></i></button>
+  </div>
+</nav>
+
+<section class="content-page">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../">Home</a> <span aria-hidden="true">/</span> <span>Distilleries</span>
+    </nav>
+    <div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1000&amp;q=80" alt="Stainless steel process plant with pipework, valves and vessels" loading="lazy" width="820" height="240">
+        <h1>Do Distilleries Need ATEX Zoning? Whisky, Gin and Ethanol Plants</h1>
+<p>Usually yes. Ethanol has a flash point of about 12 °C, and spirit at every strength a distillery normally handles, from low wines to bottling strength, gives off flammable vapor at or near room temperature. Zones are therefore expected around stills, spirit receivers and their vents, spirit safes, tank farms, cask filling, tanker loading and high-strength bottling, and malt or grain milling adds a dust hazard. Maturation warehouses need an assessment that often concludes differently from the stillhouse. The employer decides and records the classification (the DSEAR assessment in Great Britain, the explosion protection document elsewhere in Europe); in the US, the fire code and NEC set the framework.</p>
+<h2 id="ethanol-properties">Ethanol and spirit properties</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Property (ethanol)</th><th>Value</th><th>Source / note</th></tr></thead>
+<tbody>
+<tr><td>Flash point, closed cup</td><td>12 °C</td><td>GESTIS (CHEMSAFE data)</td></tr>
+<tr><td>Lower / upper explosion limit</td><td>3.1 / 27.7 vol %</td><td>GESTIS; many data sheets and regulators quote 3.3 vol % for the LEL</td></tr>
+<tr><td>Ignition temperature</td><td>400 °C, temperature class T2</td><td>GESTIS</td></tr>
+<tr><td>MESG / gas group</td><td>0.89 mm; IIB when dry, IIA with at least 4 % water vapor in the air</td><td>ISO/IEC 80079-20-1:2017, which replaced IEC 60079-20-1:2010</td></tr>
+<tr><td>Vapor density</td><td>Heavier than air</td><td>Vapor spreads at low level and into pits and drains</td></tr>
+</tbody></table></div>
+<p>The gas group deserves a note. Ethanol's MESG sits just below the 0.90 mm boundary between IIA and IIB. ISO/IEC 80079-20-1:2017 keeps dry ethanol in IIB and adds a second entry of IIA for ethanol in air containing at least 4 % water vapor, "as in common atmospheres". Specifying IIB equipment avoids depending on humidity; if the classification uses IIA, it should say why. Temperature class T2 is the minimum; equipment marked T3 to T6 also satisfies it. See <a href="/pages/gas-groups.html">gas groups</a> and <a href="/pages/temperature-classes.html">temperature classes</a>.</p>
+<p>Water raises the flash point, but slowly. GESTIS lists these flash points for aqueous ethanol (note: percent <em>by mass</em>; 40 % by volume is roughly 33 % by mass):</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Ethanol, % by mass</th><th>95</th><th>80</th><th>60</th><th>50</th><th>40</th><th>30</th><th>20</th><th>10</th></tr></thead>
+<tbody><tr><td>Flash point, °C</td><td>16</td><td>19.5</td><td>22.5</td><td>24</td><td>25.5</td><td>29</td><td>35.5</td><td>47</td></tr></tbody>
+</table></div>
+<p>So new-make spirit, feints and cask-strength whisky are all flammable at warm indoor temperatures, and even bottling-strength spirit is only a few degrees above typical room temperature. Stillhouses run warm, and liquid leaving a condenser or spirit safe can be well above ambient.</p>
+<h2 id="release-sources">Release sources in a distillery</h2>
+<ul>
+<li><strong>Stills and condensers:</strong> manways, sight glasses, sample points, pressure/vacuum relief (anti-collapse) valves, and vents on condensers or tail pipes. On pot stills, opening the manway to charge or clean is a routine release.</li>
+<li><strong>Spirit safe:</strong> where running spirit is sampled and cut between foreshots, heart and feints. It is a normal-operation release point in a warm room.</li>
+<li><strong>Receivers, chargers and spirit vats:</strong> the vapor space inside, and the vents, which breathe out vapor every time a vessel fills.</li>
+<li><strong>Pumps, hoses, flexible connections, sight glasses</strong> and transfer between vessels, including intermediate bulk containers.</li>
+<li><strong>Cask filling and emptying:</strong> each cask filled displaces vapor-laden air through the bung hole; disgorging (emptying) spills and splashes.</li>
+<li><strong>Tanker loading and unloading</strong> of new-make and neutral spirit.</li>
+<li><strong>Blending, reduction and bottling:</strong> high-strength spirit received and reduced, open tanks, filler bowls, spills.</li>
+<li><strong>Maturation warehouses:</strong> slow evaporation from casks (the "angels' share") and leaks or damaged casks.</li>
+<li><strong>Malt and grain intake and milling:</strong> combustible dust, covered below.</li>
+</ul>
+<h2 id="typical-zones">Typical zone arrangement</h2>
+<p>There is no single published zone table for distilleries. Classifications are built from the release sources with IEC 60079-10-1:2020 (or the national equivalent, such as AS/NZS 60079.10.1, which SafeWork SA points distillers to). The pattern most assessments reach:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Location</th><th>Usual outcome</th><th>What decides it</th></tr></thead>
+<tbody>
+<tr><td>Vapor space inside receivers, spirit vats and tanks</td><td>Zone 0 where the headspace can be within the flammable range</td><td>Spirit strength and the worst credible liquid temperature</td></tr>
+<tr><td>Around vessel vents, manways, spirit safe, sample points</td><td>Zone 1 close to the opening, Zone 2 around it</td><td>Release rate, vent routing (to outside or to a collection system), room ventilation</td></tr>
+<tr><td>General stillhouse and tun room floor with flanges, pumps and valves</td><td>Zone 2 or unclassified</td><td>Degree and availability of ventilation, pit and trench layout, heavier-than-air vapor</td></tr>
+<tr><td>Cask filling station</td><td>Zone 1 at the filling head and bung, Zone 2 around</td><td>Local exhaust ventilation at the filling point</td></tr>
+<tr><td>Tanker bay</td><td>Zone 1 at the manlid or vapor connection, Zone 2 around</td><td>Closed-loop vapor return, bottom loading</td></tr>
+<tr><td>Bottling hall</td><td>Local Zone 2 at fillers and reduction tanks, often unclassified elsewhere</td><td>Product strength, liquid temperature, enclosure and extraction at fillers</td></tr>
+<tr><td>Maturation warehouse</td><td>No default; depends on the assessment</td><td>Adequacy of natural ventilation (a recurring point of debate for warehouses), leak and damaged-cask scenarios, regauging and tanker operations, drainage</td></tr>
+<tr><td>Malt mill, grist case, dust filter interior</td><td>Zone 20 inside, Zone 21/22 around openings</td><td>Containment, aspiration and housekeeping</td></tr>
+</tbody></table></div>
+<p>Remember that vapor is heavier than air: pits, drains, trenches and cellars below a zone often become part of it.</p>
+<h2 id="dust">Malt and grain milling</h2>
+<p>Malt and cereal dust is a non-conductive combustible dust (group IIIB). Mills, grist bins, elevators and dust filters are classified under IEC 60079-10-2 (edition 3.0, 2026; the 2015 edition is still widely referenced in existing classifications), typically Zone 20 inside and Zone 21 or 22 around intake points and openings, with housekeeping deciding how far Zone 22 spreads. Tramp metal and stones reaching a mill are a known ignition source, which is why destoners and magnets sit upstream. The <a href="/pages/atex-grain-silos-flour-mills.html">grain silos and mills</a> page covers dust zoning, venting and isolation in more detail.</p>
+<h2 id="equipment">Equipment selection</h2>
+<ul>
+<li>Zone 1: EPL Gb / ATEX category 2G; Zone 2: EPL Gc / category 3G or better; Zone 0 (inside vessels, for level instruments and similar): EPL Ga / category 1G. See <a href="/pages/epl.html">EPL</a>.</li>
+<li>Gas group IIB covers ethanol regardless of humidity; T2 or better.</li>
+<li>Dust zones: EPL Da/Db/Dc for group IIIB, with surface temperature checked against the malt dust's cloud and layer ignition temperatures.</li>
+<li>Heat sources: direct gas-fired or electrically heated stills put a potential ignition source next to a release source; the classification and layout must account for it.</li>
+<li>Mobile equipment in zoned areas and warehouses (forklifts, cleaning machines, handheld tools and phones) is a frequent gap.</li>
+<li>Static: bond and earth pipework, hoses, filling lances and containers; plastic IBCs and non-conductive hoses need specific control.</li>
+</ul>
+<h2 id="regional">Regional rules</h2>
+<ul>
+<li><strong>Great Britain:</strong> DSEAR 2002 and ACOP L138 apply to all distilleries. Larger sites with maturation warehouses can also fall under COMAH and need Hazardous Substances Consent; HSE publishes a safety report assessment guide specifically for whisky maturation warehouses, and in 2024 the Scotch Whisky Association released a guide to applying for Hazardous Substances Consent developed with HSE. See <a href="/pages/dsear-regulations-uk.html">DSEAR</a>.</li>
+<li><strong>EU:</strong> Directive 1999/92/EC and national implementing rules; equipment and protective systems under Directive 2014/34/EU.</li>
+<li><strong>US:</strong> the NFPA Journal has noted that NFPA 30's processing-facility requirements apply to the distilling process, although the code has no still-specific provisions; the 2021 International Fire Code has a dedicated Chapter 40, Storage of Distilled Spirits and Wines. Electrical classification follows NEC Articles 500/501 or 505, with ethanol listed in Group D in NFPA 497. See <a href="/pages/nec-500-vs-atex-iec.html">NEC 500 vs ATEX/IEC</a>.</li>
+<li><strong>Australia:</strong> SafeWork SA expects electrical equipment in spirit production, storage and handling areas to suit hazardous areas classified to AS/NZS 60079.10.1, and hot work on tanks that held ethanol only after cleaning and certification below 5 % of the LEL. It cites a 2021 explosion at a Tasmanian distillery that seriously injured a worker mixing flammable liquids in the gin section.</li>
+</ul>
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+<li>Assuming bottling-strength or reduced spirit is not flammable.</li>
+<li>Classifying the stillhouse but not the tank farm, tanker bay, cask filling or reduction area.</li>
+<li>Vessel vents discharging inside the building or next to doors and air intakes.</li>
+<li>Ignoring pits, drains and floor trenches where heavier-than-air vapor collects.</li>
+<li>Choosing IIA equipment without recording the humidity argument, or equipment with no gas group at all (standard lights, sockets, phone chargers) in a stillhouse.</li>
+<li>Leaving the malt mill and dust filter out of the assessment because "the process is liquid".</li>
+<li>Hot work on or near spirit tanks without cleaning, gas-freeing and a permit.</li>
+</ul>
+<h2 id="what-else-applies">What else applies</h2>
+<p>HSE's assessment guide for maturation warehouses names fires and explosions as the principal hazards of spirit storage, with pool fires, cask stack fires and warehouse fires among the scenarios to consider. The NFPA Journal recounts the 1996 Heaven Hill warehouse fire in Bardstown, Kentucky, which spread from warehouse to warehouse. Bunding and drainage, sprinkler or foam protection, fire separation, and emergency shut-off of transfers matter as much as the zone drawing. Fermentation also releases carbon dioxide, an asphyxiation hazard in tun rooms and confined spaces. This page is general guidance; the classification for a specific site has to come from its own assessment by a competent person.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>What is the flash point of whisky or gin?</h3>
+<p>It depends on strength. GESTIS lists 12 °C for pure ethanol (closed cup), 22.5 °C at 60 % ethanol by mass and 25.5 °C at 40 % by mass. A 40 % ABV spirit is about 33 % ethanol by mass, so its flash point is in the mid-to-high 20s °C.</p>
+<h3>Is ethanol gas group IIA or IIB?</h3>
+<p>Dry ethanol is IIB (MESG 0.89 mm). ISO/IEC 80079-20-1:2017 adds an IIA entry for ethanol in air containing at least 4 % water vapor. Specifying IIB equipment covers both.</p>
+<h3>Does a whisky maturation warehouse need ATEX zones?</h3>
+<p>It needs an assessment, and the outcome varies. Slow evaporation from casks is diffuse, while leaks and damaged casks are the main release sources; building ventilation, drainage and ignition controls decide whether any zone is assigned.</p>
+<h3>What temperature class is needed for ethanol?</h3>
+<p>T2 or better. Ethanol&#x27;s ignition temperature is 400 °C (GESTIS), so equipment marked T2 through T6 is acceptable for ethanol alone.</p>
+<h3>Do craft distilleries need DSEAR assessments?</h3>
+<p>Yes. DSEAR applies to any workplace in Great Britain where flammable substances such as ethanol are present, regardless of size, and requires the risk assessment and, where needed, hazardous zones and suitable equipment.</p>
+
+<h2 id="sources">Sources</h2>
+<ol class="sources">
+<li><a href="https://gestis-database.dguv.de/data?name=010420&amp;lang=en" target="_blank" rel="noopener">IFA GESTIS Substance Database: Ethanol</a></li>
+<li><a href="https://webstore.iec.ch/en/publication/26577" target="_blank" rel="noopener">IEC: ISO/IEC 80079-20-1:2017 Material characteristics for gas and vapour classification</a></li>
+<li><a href="https://www.hse.gov.uk/comah/sragwmh/index.htm" target="_blank" rel="noopener">HSE: Safety report assessment guide, whisky maturation warehouses</a></li>
+<li><a href="https://www.scotch-whisky.org.uk/newsroom/hsc-guidance-released/" target="_blank" rel="noopener">Scotch Whisky Association: New HSC guidance released with HSE (2024)</a></li>
+<li><a href="https://www.safework.sa.gov.au/workplaces/work-sites-and-facilities/distilleries" target="_blank" rel="noopener">SafeWork SA: Distilleries</a></li>
+<li><a href="https://www.nfpa.org/news-blogs-and-articles/nfpa-journal/2018/03/01/safe-distilling" target="_blank" rel="noopener">NFPA Journal: Safe Distilling (2018)</a></li>
+<li><a href="https://codes.iccsafe.org/content/IFC2021P1/chapter-40-storage-of-distilled-spirits-and-wines" target="_blank" rel="noopener">ICC: International Fire Code 2021, Chapter 40 Storage of Distilled Spirits and Wines</a></li>
+<li><a href="https://www.hse.gov.uk/fireandexplosion/dsear.htm" target="_blank" rel="noopener">HSE: The Dangerous Substances and Explosive Atmospheres Regulations 2002</a></li>
+</ol>
+
+<section class="related-topics" style="margin-top:40px;padding:24px;background:var(--bg-alt, #f8f7f4);border-radius:8px;">
+  <h2 style="margin:0 0 12px 0;">Related Topics</h2>
+  <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(min(200px, 100%), 1fr));gap:8px;">
+        <li><a href="/pages/zone-classification.html">Zone Classification</a></li>
+        <li><a href="/pages/gas-groups.html">Gas Groups</a></li>
+        <li><a href="/pages/temperature-classes.html">Temperature Classes</a></li>
+        <li><a href="/pages/dsear-regulations-uk.html">DSEAR Regulations (UK)</a></li>
+        <li><a href="/pages/atex-grain-silos-flour-mills.html">Grain Silos and Mills</a></li>
+        <li><a href="/pages/ex-equipment-selection-guide.html">Ex Equipment Selection Guide</a></li>
+        <li><a href="/pages/atex-applications.html">ATEX by Application</a></li>
+  </ul>
+</section>
+
+              <aside class="pdf-cta inverse" aria-labelledby="pdfCtaTitle">
+          <div>
+            <p class="pdf-cta-eyebrow">Free PDF</p>
+            <h2 class="pdf-cta-title" id="pdfCtaTitle">The ATEX &amp; IECEx Pocket Guide</h2>
+            <p>Zones, gas groups, temperature classes, protection methods and marking examples on 12 printable pages.</p>
+          </div>
+          <a class="btn btn--primary" href="/ebook.html">Get the free PDF</a>
+        </aside>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4>All Topics</h4>
+            <a href="/pages/fundamentals.html" class="">Fundamentals</a>
+  <a href="/pages/zone-classification.html" class="">Zones</a>
+  <a href="/pages/gas-groups.html" class="">Gas Groups</a>
+  <a href="/pages/temperature-classes.html" class="">Temp Classes</a>
+  <a href="/pages/protection-methods.html" class="">Protection</a>
+  <a href="/pages/epl.html" class="">EPL</a>
+  <a href="/pages/ex-markings.html" class="">Markings</a>
+  <a href="/pages/standards.html" class="">Standards</a>
+  <a href="/pages/certification.html" class="">Certification</a>
+  <a href="/pages/installation-inspection.html" class="">Installation</a>
+  <a href="/pages/cheat-sheet.html" class="">Cheat Sheet</a>
+  <a href="/pages/nr10-inmetro-brazil.html" class="">NR-10 / INMETRO</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta-section" id="ask-section">
+  <div class="container">
+    <div class="ask-card">
+      <h3>Have a question about this topic?</h3>
+      <p>Submit your question and get a response from the ExKnowledge knowledge base.</p>
+      <form id="askForm" onsubmit="submitQuestion(event)">
+        <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+        <input type="text" class="cta-input" name="company" placeholder="Company (optional)" style="margin-bottom:0.5rem">
+        <textarea class="cta-textarea" name="question" placeholder="Your question…" required></textarea>
+        <button type="submit" class="cta-btn" id="askBtn">Submit Question →</button>
+      </form>
+      <p class="cta-ok" id="askOk">✓ Question received. A response will be sent to your email.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Knowledge</h4>
+        <a href="/pages/fundamentals.html">Fundamentals</a>
+        <a href="/pages/zone-classification.html">Zone Classification</a>
+        <a href="/pages/protection-methods.html">Protection Methods</a>
+        <a href="/pages/standards.html">Standards</a>
+        <a href="/pages/temperature-classes.html">Temperature Classes</a>
+        <a href="/pages/gas-groups.html">Gas Groups</a>
+        <a href="/pages/cheat-sheet.html">Quick Reference</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a>
+        <a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i> All Episodes</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i> Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i> Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i> RSS Feed</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/about.html"><i class="ph ph-info"></i> About</a>
+        <a href="/ebook.html"><i class="ph ph-file-pdf"></i> Free PDF guide</a>
+        <a href="/privacy.html"><i class="ph ph-shield-check"></i> Privacy</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a>
+        <a href="/links.html"><i class="ph ph-link"></i> Industry Links</a>
+        <a href="https://hazardousareaguide.com"><i class="ph ph-compass"></i> Hazardous Area Guide</a>
+        <a href="https://intrinsicallysafephones.com"><i class="ph ph-device-mobile"></i> Intrinsically Safe Phones</a>
+        <a href="https://intrinsicallysafeheadsets.com"><i class="ph ph-headset"></i> Intrinsically Safe Headsets</a>
+        <a href="https://explosionproofradios.com"><i class="ph ph-radio"></i> Explosion Proof Radios</a>
+        <a href="https://explosionprooftablets.com"><i class="ph ph-device-tablet"></i> Explosion Proof Tablets</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--link)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+      <p>Not a substitute for official standards documents or professional engineering advice.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" class="footer-report"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<div class="scroll-popup" id="scrollPopup">
+  <button class="scroll-popup-close" onclick="dismissPopup()" aria-label="Close">×</button>
+  <h4>ATEX/IECEx Quick Reference</h4>
+  <p>Get the cheat sheet as a printable PDF — zones, gas groups, T-classes, and protection methods on one page.</p>
+  <form class="cta-row" id="popupForm" onsubmit="submitPopup(event)">
+    <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+    <button type="submit" class="cta-btn">Get PDF →</button>
+  </form>
+  <p class="cta-ok" id="popupOk">✓ Your download is starting. We have also emailed you the link.</p>
+</div>
+
+
+
+<script src="/js/nav.js?v=6015dda8"></script>
+<script src="/js/search.js?v=fd234037"></script>
+<script src="/js/forms.js?v=da25789d"></script>
+</body>
+</html>

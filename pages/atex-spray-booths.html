@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spray Booth ATEX Zones: EN 16985, DSEAR and NFPA 33</title>
+  <meta name="description" content="Do paint spray booths need ATEX zoning? Yes. How zones are set inside booths, ducts and around openings under EN 16985, DSEAR and NFPA 33, plus powder booths.">
+  <link rel="canonical" href="https://exknowledge.com/pages/atex-spray-booths.html">
+  <meta property="og:title" content="Spray Booth ATEX Zones: EN 16985, DSEAR and NFPA 33">
+  <meta property="og:description" content="Do paint spray booths need ATEX zoning? Yes. How zones are set inside booths, ducts and around openings under EN 16985, DSEAR and NFPA 33, plus powder booths.">
+  <meta property="og:url" content="https://exknowledge.com/pages/atex-spray-booths.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1567789884554-0b844b597180?w=1000&amp;q=80">
+  <meta property="og:site_name" content="ExKnowledge">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spray Booth ATEX Zones: EN 16985, DSEAR and NFPA 33">
+  <meta name="twitter:description" content="Do paint spray booths need ATEX zoning? Yes. How zones are set inside booths, ducts and around openings under EN 16985, DSEAR and NFPA 33, plus powder booths.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <style>
+/* ─── CTA Shared Styles ─── */
+.cta-section{background:var(--c-cream,#faf8f5);border-top:1px solid var(--c-sand,#e8e4de);padding:3rem 0}
+.ask-card{max-width:540px;margin:0 auto;text-align:center}
+.ask-card h3{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.4rem;color:var(--c-black,#1a1917);margin-bottom:0.5rem}
+.ask-card p{font-size:0.95rem;color:var(--c-slate,#64605a);margin-bottom:1.5rem;line-height:1.6}
+.cta-input{width:100%;font-size:1rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-textarea{width:100%;font-size:0.95rem;padding:0.8rem 1rem;border:2px solid var(--c-sand,#e8e4de);background:var(--c-white,#fff);font-family:inherit;min-height:100px;resize:vertical;margin-bottom:0.5rem;box-sizing:border-box}
+.cta-textarea:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.cta-btn{width:100%;font-family:var(--font-display,Georgia,serif);font-weight:600;font-size:1rem;padding:0.9rem;background:var(--c-black,#1a1917);color:var(--c-yellow,#d4a843);border:none;cursor:pointer;letter-spacing:0.02em;transition:background 0.2s}
+.cta-btn:hover{background:var(--c-charcoal,#2d2a26)}
+.cta-btn:disabled{opacity:0.5;cursor:default}
+.cta-ok{color:var(--c-green,#2d7d46);font-weight:600;margin-top:1rem;display:none}
+.cta-row{display:flex;gap:0.5rem}
+.cta-row .cta-input{flex:1}
+.cta-row .cta-btn{width:auto;padding:0.8rem 1.5rem;white-space:nowrap}
+
+/* ─── Newsletter Footer ─── */
+.footer-newsletter{background:var(--c-black,#1a1917);color:var(--c-cream,#faf8f5);padding:2.5rem 0 1.5rem}
+.footer-newsletter .container{max-width:700px;margin:0 auto;padding:0 1.5rem}
+.footer-nl-title{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.1rem;margin-bottom:0.3rem;color:var(--c-yellow,#d4a843)}
+.footer-nl-desc{font-size:0.85rem;opacity:0.7;margin-bottom:1rem}
+.footer-nl-form{display:flex;gap:0.5rem;max-width:420px}
+.footer-nl-input{flex:1;padding:0.7rem 0.9rem;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:0.9rem;font-family:inherit}
+.footer-nl-input::placeholder{color:rgba(255,255,255,0.4)}
+.footer-nl-input:focus{outline:none;border-color:var(--c-yellow,#d4a843)}
+.footer-nl-btn{padding:0.7rem 1.2rem;background:var(--c-yellow,#d4a843);color:var(--c-black,#1a1917);border:none;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:var(--font-display,Georgia,serif)}
+.footer-nl-btn:hover{background:#e0b650}
+.footer-nl-ok{color:var(--c-yellow,#d4a843);font-size:0.9rem;margin-top:0.5rem;display:none}
+.footer-copy{text-align:center;font-size:0.75rem;opacity:0.35;margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08)}
+
+/* ─── Scroll Popup ─── */
+.scroll-popup{position:fixed;bottom:-300px;left:50%;transform:translateX(-50%);width:min(92vw,440px);background:var(--c-white,#fff);border:1px solid var(--c-sand,#e8e4de);box-shadow:0 -4px 24px rgba(0,0,0,0.12);padding:1.8rem;z-index:1000;transition:bottom 0.4s ease}
+.scroll-popup.visible{bottom:1.5rem}
+.scroll-popup-close{position:absolute;top:0.6rem;right:0.8rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--c-mid,#999);line-height:1}
+.scroll-popup h4{font-family:var(--font-display,Georgia,serif);font-weight:700;font-size:1.15rem;margin-bottom:0.3rem;color:var(--c-black,#1a1917)}
+.scroll-popup p{font-size:0.88rem;color:var(--c-slate,#64605a);margin-bottom:1rem;line-height:1.5}
+.scroll-popup .cta-row{margin-bottom:0}
+@media(max-width:480px){.cta-row{flex-direction:column}.cta-row .cta-btn{width:100%}.footer-nl-form{flex-direction:column}
+</style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Do Paint Spray Booths Need ATEX Zoning? Zones, Interlocks and Equipment",
+  "description": "Do paint spray booths need ATEX zoning? Yes. How zones are set inside booths, ducts and around openings under EN 16985, DSEAR and NFPA 33, plus powder booths.",
+  "url": "https://exknowledge.com/pages/atex-spray-booths.html",
+  "image": "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=1000&q=80",
+  "datePublished": "2026-09-29",
+  "dateModified": "2026-09-29",
+  "author": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  },
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "ExKnowledge",
+    "url": "https://exknowledge.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://exknowledge.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Spray Booths",
+      "item": "https://exknowledge.com/pages/atex-spray-booths.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the inside of a paint spray booth Zone 1 or Zone 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the calculated solvent concentration and the ventilation. Under EN 16985 a booth kept at or below 25 % of the LEL needs category 3G (Zone 2) equipment inside, and one running between 25 % and 50 % LEL needs category 2G (Zone 1). NFPA 33 classifies the booth interior as Class I, Division 1 or Zone 1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far does the hazardous area extend around a spray booth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NFPA 33 classifies the area within 915 mm (3 ft) of any opening of an enclosed booth or spray room as Division 2 or Zone 2. EN 16985 uses a 1 m band around permanent openings for booths running above 25 % LEL. The final extent comes from the employer's own assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do spray booths need an interlock between the extract fan and the spray gun?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes in practice. EN 16985 requires monitored airflow and an interface to interlock ventilation with spraying and electrostatic high voltage, and OSHA 1910.107 requires electrostatic and powder equipment to be interlocked so it cannot run unless the ventilation fans are operating."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a waterborne paint booth need ATEX zones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if flammable materials can be present. EN 16985 drops the ignition-protection requirement only where the booth is limited to non-ignitable coatings and non-ignitable cleaning agents; flammable gun-cleaning solvents usually keep a zone in place."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are powder coating booths hazardous areas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, as dust hazards. Powder booths are classified with IEC 60079-10-2 into Zones 20, 21 and 22; NFPA 33 treats the powder spray area as Class II, Division 1 or Zone 21, and enclosed powder recovery systems need explosion protection."
+      }
+    }
+  ]
+}
+  </script>
+<!-- GA4 Hazardous Area Guide Network -->
+<script src="https://hazardousareaguide.com/consent-banner.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SXVW6MS2C5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SXVW6MS2C5');</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-logo"><svg class="ex-hex" viewBox="0 0 40 44" width="28" height="30"><polygon points="20,0 40,11 40,33 20,44 0,33 0,11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">Ex</text></svg><span>Knowledge</span></a>
+    <ul class="nav-links" id="site-nav">
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-book-open-text" aria-hidden="true"></i> Knowledge <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/pages/fundamentals.html"><i class="ph ph-fire" aria-hidden="true"></i> Fundamentals</a></li>
+          <li><a href="/pages/zone-classification.html"><i class="ph ph-map-trifold" aria-hidden="true"></i> Zone Classification</a></li>
+          <li><a href="/pages/protection-methods.html"><i class="ph ph-shield-check" aria-hidden="true"></i> Protection Methods</a></li>
+          <li><a href="/pages/standards.html"><i class="ph ph-scales" aria-hidden="true"></i> Standards &amp; Regulations</a></li>
+          <li><a href="/pages/temperature-classes.html"><i class="ph ph-thermometer-hot" aria-hidden="true"></i> Temperature Classes</a></li>
+          <li><a href="/pages/gas-groups.html"><i class="ph ph-flame" aria-hidden="true"></i> Gas Groups</a></li>
+          <li><a href="/pages/atex-equipment-categories.html"><i class="ph ph-gear-six" aria-hidden="true"></i> Equipment Categories</a></li>
+          <li><a href="/pages/cheat-sheet.html"><i class="ph ph-lightning" aria-hidden="true"></i> Quick Reference</a></li>
+          <li><a href="/pages/faq.html"><i class="ph ph-question" aria-hidden="true"></i> FAQ</a></li>
+          <li><a href="/pages/atex-applications.html"><i class="ph ph-factory" aria-hidden="true"></i> ATEX by Application</a></li>
+          <li><a href="/pages/ex-certification-schemes.html"><i class="ph ph-globe" aria-hidden="true"></i> Certification by Country</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-folder-open" aria-hidden="true"></i> Resources <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/quiz.html"><i class="ph ph-exam" aria-hidden="true"></i> Quiz</a></li>
+          <li><a href="/survey.html"><i class="ph ph-chart-bar" aria-hidden="true"></i> Survey</a></li>
+          <li><a href="/blog/"><i class="ph ph-newspaper" aria-hidden="true"></i> Blog</a></li>
+          <li><a href="/podcast/"><i class="ph ph-microphone" aria-hidden="true"></i> Podcast</a></li>
+          <li><a href="/glossary/"><i class="ph ph-translate" aria-hidden="true"></i> Glossary</a></li>
+          <li><a href="/training.html"><i class="ph ph-chalkboard-teacher" aria-hidden="true"></i> Training</a></li>
+          <li><a href="/visualisations.html"><i class="ph ph-eye" aria-hidden="true"></i> Visualisations</a></li>
+          <li><a href="/certification-map.html"><i class="ph ph-globe-hemisphere-west" aria-hidden="true"></i> Certification Map</a></li>
+          <li><a href="/pages/intrinsic-safety-calculator.html"><i class="ph ph-calculator" aria-hidden="true"></i> IS Loop Calculator</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button type="button" class="dd-toggle" aria-expanded="false"><i class="ph ph-users-three" aria-hidden="true"></i> Community <i class="ph ph-caret-down dd-arrow" aria-hidden="true"></i></button>
+        <ul class="dropdown">
+          <li><a href="/partners.html"><i class="ph ph-handshake" aria-hidden="true"></i> Partners</a></li>
+          <li><a href="/links.html"><i class="ph ph-link" aria-hidden="true"></i> Industry Links</a></li>
+        </ul>
+      </li>
+      <li><a href="/about.html"><i class="ph ph-info" aria-hidden="true"></i> About</a></li>
+    </ul>
+    <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+      <option value="/" selected>🇬🇧 English</option>
+      <option value="/de/">🇩🇪 Deutsch</option>
+      <option value="/no/">🇳🇴 Norsk</option>
+      <option value="/da/">🇩🇰 Dansk</option>
+      <option value="/sv/">🇸🇪 Svenska</option>
+      <option value="/fi/">🇫🇮 Suomi</option>
+      <option value="/es/">🇪🇸 Español</option>
+      <option value="/nl/">🇳🇱 Nederlands</option>
+      <option value="/pt/">🇵🇹 Português</option>
+      <option value="/it/">🇮🇹 Italiano</option>
+      <option value="/ar/">🇸🇦 العربية</option>
+    </select>
+    <button type="button" class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="ph-bold ph-list" aria-hidden="true"></i></button>
+  </div>
+</nav>
+
+<section class="content-page">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../">Home</a> <span aria-hidden="true">/</span> <span>Spray Booths</span>
+    </nav>
+    <div class="content-layout">
+      <div class="content-body">
+        <img class="content-hero" src="https://images.unsplash.com/photo-1567789884554-0b844b597180?w=1000&amp;q=80" alt="Car bodies on an automotive production line with industrial robots" loading="lazy" width="820" height="240">
+        <h1>Do Paint Spray Booths Need ATEX Zoning? Zones, Interlocks and Equipment</h1>
+<p>Yes, in practically every case where flammable coatings or solvents are sprayed. Atomizing solvent-borne paint creates a flammable vapor and mist cloud at the gun, so the booth or spray room interior, its extract path and a band around its openings are hazardous areas. What varies is the zone type and extent, which depend on the solvent, the spray rate, the extract airflow and whether spraying is interlocked with the ventilation. In the EU and UK the employer sets this out in the explosion protection document (the DSEAR risk assessment in Great Britain); in the US, NFPA 33 assigns the electrical classification directly.</p>
+<h2 id="the-hazard">The hazard: solvent vapor, mist and overspray residue</h2>
+<p>Three things make spraying different from most flammable-liquid handling:</p>
+<ul>
+<li><strong>Mist as well as vapor.</strong> Atomized liquid can form an ignitable mist at liquid temperatures below the flash point, so a high flash point on the data sheet does not by itself remove the hazard at the gun.</li>
+<li><strong>A continuous, intended release.</strong> The spray gun is a release source by design. The only reason the booth interior is not a large Zone 0 is the forced ventilation that dilutes the cloud; that is why ventilation monitoring and interlocks carry so much weight in the standards.</li>
+<li><strong>Combustible residue.</strong> Overspray builds up on filters, walls, plenums and ducts. NFPA 33 has specific provisions for materials that are susceptible to spontaneous heating (for example nitrocellulose finishes) and does not allow filters to be used alternately for coating types that can react or self-heat in combination.</li>
+</ul>
+<p>Waterborne and high-solids coatings reduce the vapor load but rarely eliminate it: thinners, gun-cleaning solvents and the occasional solvent-borne job are often the deciding releases. EN 16985 only drops the ignition-protection requirement for the booth interior where its intended use is limited to non-ignitable coating materials <em>and</em> non-ignitable cleaning agents, so that restriction has to be real and enforced.</p>
+<h2 id="standards">Which rules apply, and who decides</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Region</th><th>User / employer duty</th><th>Booth and equipment rules</th></tr></thead>
+<tbody>
+<tr><td>EU</td><td>Directive 1999/92/EC: assess, classify into zones, record in the explosion protection document</td><td>EN 16985:2018 (spray booths for organic coating material, a machinery safety standard for manufacturers; it replaced EN 12215, EN 12981 and EN 13355, withdrawn in 2019). Area classification method: IEC/EN 60079-10-1 (gas/vapor) and IEC/EN 60079-10-2 (powder)</td></tr>
+<tr><td>Great Britain</td><td>DSEAR 2002 and ACOP L138; HSE lists vehicle paint spraying as a typical activity that creates flammable vapors</td><td>Same EN standards; UKEX/ATEX-marked equipment in zones</td></tr>
+<tr><td>US</td><td>OSHA 29 CFR 1910.107 (spray finishing); fire codes adopt NFPA 33</td><td>NFPA 33 (current edition 2024) Chapter 6 sets the electrical area classification; NEC Article 516 covers wiring in spray areas</td></tr>
+</tbody></table></div>
+<p>Note the split in the EU: EN 16985 tells the booth manufacturer how to design ventilation, interlocks and ignition protection, but the employer who installs and uses the booth still owns the zone drawing, including the room around the booth, the mixing room, the extract discharge and anything the manufacturer did not supply. See <a href="/pages/dsear-regulations-uk.html">DSEAR in the UK</a> and <a href="/pages/hazardous-area-classification.html">hazardous area classification</a> for the general process.</p>
+<h2 id="zone-arrangement">Typical zone arrangement</h2>
+<p>The two main references take different routes. EN 16985 links the required equipment category to the <em>calculated</em> solvent concentration, which the booth's forced ventilation must keep below a set fraction of the lower explosive limit (LEL). NFPA 33 assigns fixed classifications to defined spaces. In the text of EN 16985 that went to formal vote (FprEN 16985:2017), the limit is 25 % LEL for manual booths and 50 % LEL for automatic booths, with a note that national rules may be stricter for manual booths; check the published edition for your project.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Location</th><th>EN 16985 approach (liquid coatings)</th><th>NFPA 33 (2024)</th></tr></thead>
+<tbody>
+<tr><td>Booth interior while spraying</td><td>Category 3G equipment where the calculated concentration is at or below 25 % LEL; category 2G between 25 % and 50 % LEL</td><td>Part of the "spray area": Class I, Division 1 or Zone 1</td></tr>
+<tr><td>Exhaust plenum, filters, scrubber</td><td>Requirement falls with concentration (the vapor is better mixed downstream); none below 10 % LEL in the exhaust air cleaning system</td><td>Part of the spray area in the 2024 edition</td></tr>
+<tr><td>Exhaust ducts and stack</td><td>Category 3G only where the calculated concentration exceeds 25 % LEL</td><td>Part of the spray area in the 2024 edition; the 2026 revision cycle proposes Division 2 / Zone 2 for duct interiors</td></tr>
+<tr><td>Outside the booth, near openings</td><td>A 1 m band around permanent openings (doors do not count) needs category 3G where the booth runs above 25 % LEL</td><td>Within 915 mm (3 ft) of any opening of an enclosed booth or spray room: Division 2 / Zone 2. Outside access doors of automated booths can be unclassified if a door interlock stops spraying when the door opens</td></tr>
+<tr><td>Fresh air supply ducts and plenums</td><td>Not classified</td><td>Unclassified where exhaust air is not recirculated</td></tr>
+</tbody></table></div>
+<p>Open-face booths, spray areas without a booth, recirculating booths and flash-off areas each have their own figures or clauses in NFPA 33 and need their own assessment under IEC 60079-10-1 in Europe. OSHA 1910.107 still contains older text: explosion-proof Class I, Division 1 equipment in the spraying area, and non-sparking equipment within 20 ft (6.1 m) of a spraying area not separated by partitions. Where a state or local fire code adopts NFPA 33, expect the authority having jurisdiction to enforce the NFPA 33 figures.</p>
+<h2 id="ventilation-interlocks">Ventilation and interlocks</h2>
+<p>Every approach depends on the extract running whenever spraying is possible:</p>
+<ul>
+<li><strong>EN 16985</strong> requires forced ventilation sized by calculation (its Annex C), monitoring of the required airflow, and an interface to interlock the ventilation with the spray application and with the high-voltage supply of electrostatic equipment. Electrical equipment and heaters that do not meet the required category must be interlocked so spraying cannot run while they are live or hot. Its informative Annex G shows the airflow-to-spray interlock for an automatic booth designed to performance level PL c under EN ISO 13849-1, typically a Pitot tube with a differential pressure switch.</li>
+<li><strong>OSHA 1910.107</strong> requires mechanical ventilation to run during spraying and long enough afterwards to clear drying vapors, and for electrostatic hand spraying and powder coating it requires the electrical equipment to be interlocked so it cannot operate unless the ventilation fans are running.</li>
+<li><strong>NFPA 33</strong> ties several of its classifications to interlocks: the unclassified area outside automated booth doors, and recirculation, which is only allowed with concentration monitoring and interlocked shutdown.</li>
+</ul>
+<div class="callout"><strong>Treat the airflow interlock as a safety function.</strong> A booth whose extract has failed, whose filters are loaded or whose airflow switch has been bridged is no longer the booth that was zoned. Proof-test the interlock, log filter changes, and do not allow manual override during spraying.</div>
+<h2 id="equipment">Equipment selection</h2>
+<ul>
+<li><strong>Zone 1 (booth interior at higher calculated concentration):</strong> EPL Gb / <a href="/pages/atex-equipment-categories.html">category 2G</a>. <strong>Zone 2:</strong> EPL Gc / category 3G or better. In the US: Class I, Division 1 or 2 equipment, or the Zone equivalents under NEC Article 505.</li>
+<li><strong>Gas group and temperature class:</strong> most paint solvents are <a href="/pages/gas-groups.html">IIA or IIB</a>; check the actual solvent list, including cleaning agents, and select the <a href="/pages/temperature-classes.html">T-class</a> against the lowest auto-ignition temperature present. The manufacturer's EN 16985 documentation should state the assumptions.</li>
+<li><strong>Lighting:</strong> EN 16985 accepts luminaires mounted outside the booth behind sealed, impact-resistant transparent panels as an alternative to Ex-rated fittings inside.</li>
+<li><strong>Fans and motors:</strong> OSHA 1910.107 does not allow exhaust fan motors inside booths or ducts; EN 16985 requires motors in an exhaust duct to have overheating protection and the explosion protection category that applies to that duct. Fans in the extract path are themselves ignition sources (EN 14986 covers fans for explosive atmospheres).</li>
+<li><strong>Static:</strong> earth workpieces, hangers, conveyors, containers and conductive booth parts; keep hanger contact points clean. Electrostatic guns follow the EN 50050 series (hand-held) and EN 50176/50177 (automatic).</li>
+</ul>
+<h2 id="powder-coating">Powder coating booths</h2>
+<p>Powder coating is a dust hazard, classified with IEC 60079-10-2 (edition 3.0, 2026; the 2015 edition is still widely referenced in existing classifications) and the dust zones 20, 21 and 22. In the FprEN 16985 text, powder concentration in the booth must stay at or below 50 % of the LEL (20 g/m³ is used where the LEL is unknown); the booth interior needs category 3D; enclosed powder recovery systems need higher categories and must be protected by explosion suppression, venting with isolation, or pressure-resistant design with isolation. Hand-held electrostatic powder guns fall under EN 50050-2:2013. NFPA 33 classifies a powder spray area as Class II, Division 1 or Zone 21, and its 2026 revision cycle adds explicit classifications for powder collectors upstream and downstream of their filters. See <a href="/pages/dust-explosion-protection.html">dust explosion protection</a> for dust group and surface temperature selection.</p>
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+<li>Declaring a waterborne line non-hazardous while guns are cleaned with flammable solvent in the same booth.</li>
+<li>Stopping the zone drawing at the booth wall: forgetting exhaust ducts, filter housings, the extract fan and the discharge point.</li>
+<li>Using the booth outside the design basis (higher spray rate, a different solvent, a second operator) without rechecking the concentration calculation.</li>
+<li>Portable equipment inside the booth: work lights, polishers, phones, battery tools that are not rated for the zone.</li>
+<li>Letting overspray build up on filters and ducts, which adds fire load and, for some finishes, self-heating risk.</li>
+<li>Treating mixing rooms, paint stores and flash-off or drying areas as outside the scope; they need their own assessment.</li>
+</ul>
+<h2 id="what-else-applies">What else applies</h2>
+<p>EN 16985 requires fire detection in automatic liquid booths and in powder booths with closed recovery systems, interlocked to stop ventilation, close fire dampers and cut spraying and electrostatic high voltage. NFPA 33 requires an approved automatic fire protection system for spray areas used for liquid spraying and for the exhaust ducts leading from them. Health hazards (isocyanates, solvents) are controlled separately, for example under HSE's HSG276 in Great Britain. For a checklist of the wider process, see the <a href="/pages/ex-equipment-selection-guide.html">Ex equipment selection guide</a> and <a href="/pages/installation-inspection.html">installation and inspection</a>.</p>
+<p>This page gives general guidance. The zone drawing for a specific booth has to come from the employer's own assessment, using the booth manufacturer's data and a competent person.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Is the inside of a paint spray booth Zone 1 or Zone 2?</h3>
+<p>It depends on the calculated solvent concentration and the ventilation. Under EN 16985 a booth kept at or below 25 % of the LEL needs category 3G (Zone 2) equipment inside, and one running between 25 % and 50 % LEL needs category 2G (Zone 1). NFPA 33 classifies the booth interior as Class I, Division 1 or Zone 1.</p>
+<h3>How far does the hazardous area extend around a spray booth?</h3>
+<p>NFPA 33 classifies the area within 915 mm (3 ft) of any opening of an enclosed booth or spray room as Division 2 or Zone 2. EN 16985 uses a 1 m band around permanent openings for booths running above 25 % LEL. The final extent comes from the employer&#x27;s own assessment.</p>
+<h3>Do spray booths need an interlock between the extract fan and the spray gun?</h3>
+<p>Yes in practice. EN 16985 requires monitored airflow and an interface to interlock ventilation with spraying and electrostatic high voltage, and OSHA 1910.107 requires electrostatic and powder equipment to be interlocked so it cannot run unless the ventilation fans are operating.</p>
+<h3>Does a waterborne paint booth need ATEX zones?</h3>
+<p>Only if flammable materials can be present. EN 16985 drops the ignition-protection requirement only where the booth is limited to non-ignitable coatings and non-ignitable cleaning agents; flammable gun-cleaning solvents usually keep a zone in place.</p>
+<h3>Are powder coating booths hazardous areas?</h3>
+<p>Yes, as dust hazards. Powder booths are classified with IEC 60079-10-2 into Zones 20, 21 and 22; NFPA 33 treats the powder spray area as Class II, Division 1 or Zone 21, and enclosed powder recovery systems need explosion protection.</p>
+
+<h2 id="sources">Sources</h2>
+<ol class="sources">
+<li><a href="https://standards.iteh.ai/catalog/standards/cen/2c46acf7-4707-4d3d-833a-11b869d3c27f/en-16985-2018" target="_blank" rel="noopener">CEN (via iTeh Standards): EN 16985:2018 Spray booths for organic coating material - Safety requirements</a></li>
+<li><a href="https://www.nfpa.org/codes-and-standards/nfpa-33-standard-development/33" target="_blank" rel="noopener">NFPA: NFPA 33 Standard for Spray Application Using Flammable or Combustible Materials</a></li>
+<li><a href="https://docinfofiles.nfpa.org/files/AboutTheCodes/33/33_F2026_FAA_AAA_FD_FRReport.pdf" target="_blank" rel="noopener">NFPA: NFPA 33 First Draft Report, Fall 2026 revision cycle</a></li>
+<li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.107" target="_blank" rel="noopener">OSHA: 29 CFR 1910.107 Spray finishing using flammable and combustible materials</a></li>
+<li><a href="https://www.hse.gov.uk/fireandexplosion/atex.htm" target="_blank" rel="noopener">HSE: ATEX equipment and explosive atmospheres</a></li>
+<li><a href="https://eur-lex.europa.eu/eli/dir/1999/92/oj" target="_blank" rel="noopener">EUR-Lex: Directive 1999/92/EC (ATEX workplace directive)</a></li>
+<li><a href="https://webstore.iec.ch/en/publication/63327" target="_blank" rel="noopener">IEC: IEC 60079-10-1:2020 Classification of areas - Explosive gas atmospheres</a></li>
+</ol>
+
+<section class="related-topics" style="margin-top:40px;padding:24px;background:var(--bg-alt, #f8f7f4);border-radius:8px;">
+  <h2 style="margin:0 0 12px 0;">Related Topics</h2>
+  <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(min(200px, 100%), 1fr));gap:8px;">
+        <li><a href="/pages/zone-classification.html">Zone Classification</a></li>
+        <li><a href="/pages/hazardous-area-classification.html">Hazardous Area Classification</a></li>
+        <li><a href="/pages/dust-explosion-protection.html">Dust Explosion Protection</a></li>
+        <li><a href="/pages/atex-equipment-categories.html">ATEX Equipment Categories</a></li>
+        <li><a href="/pages/dsear-regulations-uk.html">DSEAR Regulations (UK)</a></li>
+        <li><a href="/pages/nec-500-vs-atex-iec.html">NEC 500 vs ATEX/IEC</a></li>
+        <li><a href="/pages/atex-applications.html">ATEX by Application</a></li>
+  </ul>
+</section>
+
+              <aside class="pdf-cta inverse" aria-labelledby="pdfCtaTitle">
+          <div>
+            <p class="pdf-cta-eyebrow">Free PDF</p>
+            <h2 class="pdf-cta-title" id="pdfCtaTitle">The ATEX &amp; IECEx Pocket Guide</h2>
+            <p>Zones, gas groups, temperature classes, protection methods and marking examples on 12 printable pages.</p>
+          </div>
+          <a class="btn btn--primary" href="/ebook.html">Get the free PDF</a>
+        </aside>
+      </div>
+      <aside class="content-sidebar" aria-label="Navigation">
+        <div class="sidebar-card">
+          <h4>All Topics</h4>
+            <a href="/pages/fundamentals.html" class="">Fundamentals</a>
+  <a href="/pages/zone-classification.html" class="">Zones</a>
+  <a href="/pages/gas-groups.html" class="">Gas Groups</a>
+  <a href="/pages/temperature-classes.html" class="">Temp Classes</a>
+  <a href="/pages/protection-methods.html" class="">Protection</a>
+  <a href="/pages/epl.html" class="">EPL</a>
+  <a href="/pages/ex-markings.html" class="">Markings</a>
+  <a href="/pages/standards.html" class="">Standards</a>
+  <a href="/pages/certification.html" class="">Certification</a>
+  <a href="/pages/installation-inspection.html" class="">Installation</a>
+  <a href="/pages/cheat-sheet.html" class="">Cheat Sheet</a>
+  <a href="/pages/nr10-inmetro-brazil.html" class="">NR-10 / INMETRO</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta-section" id="ask-section">
+  <div class="container">
+    <div class="ask-card">
+      <h3>Have a question about this topic?</h3>
+      <p>Submit your question and get a response from the ExKnowledge knowledge base.</p>
+      <form id="askForm" onsubmit="submitQuestion(event)">
+        <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+        <input type="text" class="cta-input" name="company" placeholder="Company (optional)" style="margin-bottom:0.5rem">
+        <textarea class="cta-textarea" name="question" placeholder="Your question…" required></textarea>
+        <button type="submit" class="cta-btn" id="askBtn">Submit Question →</button>
+      </form>
+      <p class="cta-ok" id="askOk">✓ Question received. A response will be sent to your email.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Knowledge</h4>
+        <a href="/pages/fundamentals.html">Fundamentals</a>
+        <a href="/pages/zone-classification.html">Zone Classification</a>
+        <a href="/pages/protection-methods.html">Protection Methods</a>
+        <a href="/pages/standards.html">Standards</a>
+        <a href="/pages/temperature-classes.html">Temperature Classes</a>
+        <a href="/pages/gas-groups.html">Gas Groups</a>
+        <a href="/pages/cheat-sheet.html">Quick Reference</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="/quiz.html"><i class="ph ph-exam"></i> Quiz</a>
+        <a href="/survey.html"><i class="ph ph-chart-bar"></i> Survey</a>
+        <a href="/blog/"><i class="ph ph-newspaper"></i> Blog</a>
+        <a href="/glossary/"><i class="ph ph-translate"></i> Glossary</a>
+      </div>
+      <div class="footer-col">
+        <h4>Podcast</h4>
+        <a href="/podcast/"><i class="ph ph-microphone"></i> All Episodes</a>
+        <a href="https://open.spotify.com/show/6GSkCFYiIv3wrolNYCPzGu"><i class="ph ph-spotify-logo"></i> Spotify</a>
+        <a href="https://podcasts.apple.com/podcast/id1887095054"><i class="ph ph-apple-podcasts-logo"></i> Apple Podcasts</a>
+        <a href="https://media.rss.com/exknowledge/feed.xml"><i class="ph ph-rss-simple"></i> RSS Feed</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/about.html"><i class="ph ph-info"></i> About</a>
+        <a href="/ebook.html"><i class="ph ph-file-pdf"></i> Free PDF guide</a>
+        <a href="/privacy.html"><i class="ph ph-shield-check"></i> Privacy</a>
+        <a href="/partners.html"><i class="ph ph-handshake"></i> Partners</a>
+        <a href="/links.html"><i class="ph ph-link"></i> Industry Links</a>
+        <a href="https://hazardousareaguide.com"><i class="ph ph-compass"></i> Hazardous Area Guide</a>
+        <a href="https://intrinsicallysafephones.com"><i class="ph ph-device-mobile"></i> Intrinsically Safe Phones</a>
+        <a href="https://intrinsicallysafeheadsets.com"><i class="ph ph-headset"></i> Intrinsically Safe Headsets</a>
+        <a href="https://explosionproofradios.com"><i class="ph ph-radio"></i> Explosion Proof Radios</a>
+        <a href="https://explosionprooftablets.com"><i class="ph ph-device-tablet"></i> Explosion Proof Tablets</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><i class="ph ph-lightning" style="color:var(--link)"></i> Built for engineers working in hazardous areas. Content based on IEC 60079, ATEX 2014/34/EU, and IECEx standards.</p>
+      <p>Not a substitute for official standards documents or professional engineering advice.</p>
+      <p style="margin-top:8px"><a href="/about.html#feedback" class="footer-report"><i class="ph ph-flag"></i> Report an error or suggest an improvement</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<div class="scroll-popup" id="scrollPopup">
+  <button class="scroll-popup-close" onclick="dismissPopup()" aria-label="Close">×</button>
+  <h4>ATEX/IECEx Quick Reference</h4>
+  <p>Get the cheat sheet as a printable PDF — zones, gas groups, T-classes, and protection methods on one page.</p>
+  <form class="cta-row" id="popupForm" onsubmit="submitPopup(event)">
+    <input type="email" class="cta-input" name="email" placeholder="your.email@company.com" required>
+    <button type="submit" class="cta-btn">Get PDF →</button>
+  </form>
+  <p class="cta-ok" id="popupOk">✓ Your download is starting. We have also emailed you the link.</p>
+</div>
+
+
+
+<script src="/js/nav.js?v=6015dda8"></script>
+<script src="/js/search.js?v=fd234037"></script>
+<script src="/js/forms.js?v=da25789d"></script>
+</body>
+</html>
