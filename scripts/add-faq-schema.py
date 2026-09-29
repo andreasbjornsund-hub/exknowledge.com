@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+raise SystemExit("DISABLED 2026-09-29: this added FAQ schema for questions not shown on the page, which Google treats as a guideline violation. FAQ markup must mirror a visible FAQ; see ~/.claude/skills/static-site-audit/scripts/sd_fix.py.")
 """Add FAQ schema (JSON-LD) to ExKnowledge guide pages in all languages."""
 
 import json
