@@ -1,15 +1,15 @@
 /* ExKnowledge forms: one sender, field-level validation, sending/success/failure states.
-   Every form posts to formsubmit.co (AJAX) and is delivered to the site inbox.
+   Every form posts to Web3Forms (JSON API) and is delivered to the site inbox (FormSubmit until its 2026-09-30 outage).
    Form actions in HTML are "#": the address never appears in the markup.
    Usage:
      <form data-exk-form data-subject="…" data-success="…"> … </form>   (generic)
      onsubmit="submitPopup(event)" / submitQuestion / submitNewsletter  (topic-page CTAs)
    See DESIGN.md → Forms. */
 (function () {
-  // The inbox address is not written anywhere in the page source (spam harvesters read HTML and
-  // plain JS). It is stored reversed and base64-encoded and only assembled when a form is sent.
-  var INBOX = 'bW9jLmxpYW1nQHdhbGNuZXBvYnBh';
-  function endpoint() { return 'https://formsubmit.co/ajax/' + atob(INBOX).split('').reverse().join(''); }
+  // The inbox address is not in the page: the Web3Forms access key (public by design) maps to it.
+  var W3F_KEY = '930572e9-b94e-4d18-9c2b-25999a09ef0f';
+  var ENDPOINT = 'https://api.web3forms.com/submit';
+  var TIMEOUT_MS = 15000;
   var PDF = '/downloads/atex-iecex-pocket-guide.pdf';
   var LANG = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2);
   if (LANG === 'nb' || LANG === 'nn') LANG = 'no';
@@ -111,15 +111,15 @@
   function collect(form, extra) {
     var data = {};
     [].forEach.call(form.elements, function (f) {
-      if (!f.name || f.disabled || f.type === 'submit' || f.name === '_next' || f.name === '_captcha') return;
+      if (!f.name || f.disabled || f.type === 'submit' || f.name.charAt(0) === '_') return;   // no service-specific hidden fields
       if ((f.type === 'checkbox' || f.type === 'radio') && !f.checked) return;
       data[f.name] = f.value;
     });
-    data._template = 'table';
-    data._captcha = 'false';
-    if (data.email) data._replyto = data.email;
+    data.access_key = W3F_KEY;
+    data.from_name = 'exknowledge.com';
     data.page = location.href;
     for (var k in extra) data[k] = extra[k];
+    if (data._subject) { data.subject = data._subject; delete data._subject; }
     return data;
   }
   function send(form, opts) {
@@ -133,19 +133,23 @@
     form.setAttribute('aria-busy', 'true');
     status.hidden = true;
     var subject = opts.subject || form.getAttribute('data-subject') || (form.querySelector('[name=_subject]') || {}).value || 'ExKnowledge form';
-    return fetch(endpoint(), {
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, TIMEOUT_MS) : null;   // never hang on 'Sending…'
+    return fetch(ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(collect(form, Object.assign({ _subject: subject }, opts.extra || {})))
-    }).then(function (r) { return r.json(); }).then(function (j) {
-      if (!j || String(j.success) !== 'true') throw new Error((j && j.message) || 'send failed');
+      body: JSON.stringify(collect(form, Object.assign({ _subject: subject }, opts.extra || {}))),
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function (r) { clearTimeout(timer); return r.json(); }).then(function (j) {
+      if (!j || String(j.success) !== 'true') throw new Error((j && (j.message || (j.body && j.body.message))) || 'send failed');
       if (btn) { btn.innerHTML = label; btn.disabled = false; btn.removeAttribute('aria-busy'); }
       form.removeAttribute('aria-busy');
       setStatus(status, 'ok', status.dataset.ok);
       if (opts.hideOnSuccess !== false) form.hidden = true;
       if (opts.onSuccess) opts.onSuccess();
       return true;
-    }).catch(function () {
+    }).catch(function (err) {
+      clearTimeout(timer); if (window.console) console.warn('Form not sent:', err && err.message);
       if (btn) { btn.innerHTML = label; btn.disabled = false; btn.removeAttribute('aria-busy'); }
       form.removeAttribute('aria-busy');
       setStatus(status, 'error', T.fail);
@@ -176,7 +180,6 @@
     e.preventDefault();
     send(e.target, {
       subject: 'ExKnowledge cheat sheet PDF request', statusId: 'popupOk',
-      extra: { _autoresponse: 'Thanks for your interest in the ExKnowledge quick reference. Download the ATEX/IECEx Pocket Guide (PDF) here: https://exknowledge.com' + PDF },
       onSuccess: function () {
         try { localStorage.setItem('exk_popup', '1'); } catch (x) { }
         download();
