@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -229,7 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>CompEx biedt meerdere certificeringsmodules voor verschillende functies en omgevingen:</p>
 
 <h3>Basismodules (gas/damp)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Module</th>
@@ -240,28 +240,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Ex01</strong></td>
-      <td>Voorbereiding en installatie van Ex-apparatuur (gas)</td>
-      <td>Elektriciens, kabelverbinders, instrumentmonteurs</td>
-      <td>~5 dagen (in combinatie met Ex02)</td>
+      <td data-label="Module"><strong>Ex01</strong></td>
+      <td data-label="Titel">Voorbereiding en installatie van Ex-apparatuur (gas)</td>
+      <td data-label="Voor wie">Elektriciens, kabelverbinders, instrumentmonteurs</td>
+      <td data-label="Duur">~5 dagen (in combinatie met Ex02)</td>
     </tr>
     <tr>
-      <td><strong>Ex02</strong></td>
-      <td>Inspectie van Ex-installaties (gas)</td>
-      <td>Inspectietechnici, elektriciens, onderhoudstechnici</td>
-      <td>(inbegrepen bij Ex01)</td>
+      <td data-label="Module"><strong>Ex02</strong></td>
+      <td data-label="Titel">Inspectie van Ex-installaties (gas)</td>
+      <td data-label="Voor wie">Inspectietechnici, elektriciens, onderhoudstechnici</td>
+      <td data-label="Duur">(inbegrepen bij Ex01)</td>
     </tr>
     <tr>
-      <td><strong>Ex03</strong></td>
-      <td>Voorbereiding en installatie van Ex-apparatuur, instrumentatie (gas)</td>
-      <td>Instrumenttechnici, installateurs van besturingssystemen</td>
-      <td>~5 dagen (in combinatie met Ex04)</td>
+      <td data-label="Module"><strong>Ex03</strong></td>
+      <td data-label="Titel">Voorbereiding en installatie van Ex-apparatuur, instrumentatie (gas)</td>
+      <td data-label="Voor wie">Instrumenttechnici, installateurs van besturingssystemen</td>
+      <td data-label="Duur">~5 dagen (in combinatie met Ex04)</td>
     </tr>
     <tr>
-      <td><strong>Ex04</strong></td>
-      <td>Inspectie van Ex-installaties, instrumentatie (gas)</td>
-      <td>Instrumentinspecteurs</td>
-      <td>(inbegrepen bij Ex03)</td>
+      <td data-label="Module"><strong>Ex04</strong></td>
+      <td data-label="Titel">Inspectie van Ex-installaties, instrumentatie (gas)</td>
+      <td data-label="Voor wie">Instrumentinspecteurs</td>
+      <td data-label="Duur">(inbegrepen bij Ex03)</td>
     </tr>
   </tbody>
 </table>
@@ -514,7 +514,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section>
 <h2>CompEx versus andere kwalificaties</h2>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Kwalificatie</th>
@@ -525,28 +525,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>CompEx</strong></td>
-      <td>Praktische installatie- en inspectievaardigheden</td>
-      <td>Wereldwijd (60+ landen)</td>
-      <td>Ja, kernvereiste</td>
+      <td data-label="Kwalificatie"><strong>CompEx</strong></td>
+      <td data-label="Focus">Praktische installatie- en inspectievaardigheden</td>
+      <td data-label="Erkenning">Wereldwijd (60+ landen)</td>
+      <td data-label="Inclusief praktijk?">Ja, kernvereiste</td>
     </tr>
     <tr>
-      <td><strong>IECEx CoPC</strong></td>
-      <td>Personeelskompetentie onder het <a href="/nl/pages/atex-vs-iecex.html">IECEx</a>-systeem</td>
-      <td>IECEx-lidstaten</td>
-      <td>Ja (sommige eenheden)</td>
+      <td data-label="Kwalificatie"><strong>IECEx CoPC</strong></td>
+      <td data-label="Focus">Personeelskompetentie onder het <a href="/nl/pages/atex-vs-iecex.html">IECEx</a>-systeem</td>
+      <td data-label="Erkenning">IECEx-lidstaten</td>
+      <td data-label="Inclusief praktijk?">Ja (sommige eenheden)</td>
     </tr>
     <tr>
-      <td><strong>ExVeritas</strong></td>
-      <td>Online kennisbeoordelingen</td>
-      <td>Aanvullend, niet op zichzelf staand</td>
-      <td>Nee (alleen online)</td>
+      <td data-label="Kwalificatie"><strong>ExVeritas</strong></td>
+      <td data-label="Focus">Online kennisbeoordelingen</td>
+      <td data-label="Erkenning">Aanvullend, niet op zichzelf staand</td>
+      <td data-label="Inclusief praktijk?">Nee (alleen online)</td>
     </tr>
     <tr>
-      <td><strong>EEHA (Australië)</strong></td>
-      <td>Elektrische apparatuur in gevaarlijke omgevingen</td>
-      <td>Australië/Nieuw-Zeeland</td>
-      <td>Ja</td>
+      <td data-label="Kwalificatie"><strong>EEHA (Australië)</strong></td>
+      <td data-label="Focus">Elektrische apparatuur in gevaarlijke omgevingen</td>
+      <td data-label="Erkenning">Australië/Nieuw-Zeeland</td>
+      <td data-label="Inclusief praktijk?">Ja</td>
     </tr>
   </tbody>
 </table>

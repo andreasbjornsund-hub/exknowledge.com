@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -196,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>طابق المنطقة مع فئة المعدات المطلوبة أو <a href="/ar/pages/epl.html">EPL</a>:</p>
 
 <h3>مناطق الغاز/البخار</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>المنطقة</th>
@@ -207,28 +207,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>المنطقة 0</strong></td>
-      <td>الفئة 1 G</td>
-      <td>Ga</td>
-      <td>فقط Ga. لا يُسمح بأي شيء آخر</td>
+      <td data-label="المنطقة"><strong>المنطقة 0</strong></td>
+      <td data-label="الحد الأدنى للفئة">الفئة 1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="يمكن أيضًا استخدام">فقط Ga. لا يُسمح بأي شيء آخر</td>
     </tr>
     <tr>
-      <td><strong>المنطقة 1</strong></td>
-      <td>الفئة 2 G</td>
-      <td>Gb</td>
-      <td>الفئة 1 G (Ga) مقبولة أيضًا</td>
+      <td data-label="المنطقة"><strong>المنطقة 1</strong></td>
+      <td data-label="الحد الأدنى للفئة">الفئة 2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="يمكن أيضًا استخدام">الفئة 1 G (Ga) مقبولة أيضًا</td>
     </tr>
     <tr>
-      <td><strong>المنطقة 2</strong></td>
-      <td>الفئة 3 G</td>
-      <td>Gc</td>
-      <td>الفئة 1 G (Ga) أو الفئة 2 G (Gb) مقبولة أيضًا</td>
+      <td data-label="المنطقة"><strong>المنطقة 2</strong></td>
+      <td data-label="الحد الأدنى للفئة">الفئة 3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="يمكن أيضًا استخدام">الفئة 1 G (Ga) أو الفئة 2 G (Gb) مقبولة أيضًا</td>
     </tr>
   </tbody>
 </table>
 
 <h3>مناطق الغبار</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>المنطقة</th>
@@ -239,22 +239,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>المنطقة 20</strong></td>
-      <td>الفئة 1 D</td>
-      <td>Da</td>
-      <td>فقط Da. لا يُسمح بأي شيء آخر</td>
+      <td data-label="المنطقة"><strong>المنطقة 20</strong></td>
+      <td data-label="الحد الأدنى للفئة">الفئة 1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="يمكن أيضًا استخدام">فقط Da. لا يُسمح بأي شيء آخر</td>
     </tr>
     <tr>
-      <td><strong>المنطقة 21</strong></td>
-      <td>الفئة 2 D</td>
-      <td>Db</td>
-      <td>الفئة 1 D (Da) مقبولة أيضًا</td>
+      <td data-label="المنطقة"><strong>المنطقة 21</strong></td>
+      <td data-label="الحد الأدنى للفئة">الفئة 2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="يمكن أيضًا استخدام">الفئة 1 D (Da) مقبولة أيضًا</td>
     </tr>
     <tr>
-      <td><strong>المنطقة 22</strong></td>
-      <td>الفئة 3 D</td>
-      <td>Dc</td>
-      <td>الفئة 1 D (Da) أو الفئة 2 D (Db) مقبولة أيضًا</td>
+      <td data-label="المنطقة"><strong>المنطقة 22</strong></td>
+      <td data-label="الحد الأدنى للفئة">الفئة 3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="يمكن أيضًا استخدام">الفئة 1 D (Da) أو الفئة 2 D (Db) مقبولة أيضًا</td>
     </tr>
   </tbody>
 </table>
@@ -374,7 +374,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>الخطوة 4: التطبيق → طريقة الحماية</h2>
 <p>اختر طريقة الحماية بناءً على وظيفة المعدات ومستوى الطاقة:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>التطبيق</th>
@@ -385,52 +385,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>محرك كهربائي</strong></td>
-      <td>&gt; 1 كيلوواط</td>
-      <td><a href="/ar/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (مضاد للهب)</a></td>
-      <td>Ex e (المنطقة 2 فقط)، Ex nA (المنطقة 2)</td>
+      <td data-label="التطبيق"><strong>محرك كهربائي</strong></td>
+      <td data-label="مستوى الطاقة">&gt; 1 كيلوواط</td>
+      <td data-label="الطريقة الموصى بها"><a href="/ar/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (مضاد للهب)</a></td>
+      <td data-label="بديل">Ex e (المنطقة 2 فقط)، Ex nA (المنطقة 2)</td>
     </tr>
     <tr>
-      <td><strong>محرك صغير</strong></td>
-      <td>&lt; 1 كيلوواط</td>
-      <td>Ex e (سلامة معززة)</td>
-      <td>Ex d، Ex nA</td>
+      <td data-label="التطبيق"><strong>محرك صغير</strong></td>
+      <td data-label="مستوى الطاقة">&lt; 1 كيلوواط</td>
+      <td data-label="الطريقة الموصى بها">Ex e (سلامة معززة)</td>
+      <td data-label="بديل">Ex d، Ex nA</td>
     </tr>
     <tr>
-      <td><strong>مصباح إضاءة</strong></td>
-      <td>متغير</td>
-      <td>Ex d (LED/فلوريسنت/هالوجين)</td>
-      <td>Ex e (LED فقط، المنطقة 1/2)</td>
+      <td data-label="التطبيق"><strong>مصباح إضاءة</strong></td>
+      <td data-label="مستوى الطاقة">متغير</td>
+      <td data-label="الطريقة الموصى بها">Ex d (LED/فلوريسنت/هالوجين)</td>
+      <td data-label="بديل">Ex e (LED فقط، المنطقة 1/2)</td>
     </tr>
     <tr>
-      <td><strong>صندوق التوصيل</strong></td>
-      <td>غير متاح (سلبي)</td>
-      <td>Ex e (للكابلات العامة)</td>
-      <td>Ex d (إذا كان يحتوي على أجهزة توليد شرر)</td>
+      <td data-label="التطبيق"><strong>صندوق التوصيل</strong></td>
+      <td data-label="مستوى الطاقة">غير متاح (سلبي)</td>
+      <td data-label="الطريقة الموصى بها">Ex e (للكابلات العامة)</td>
+      <td data-label="بديل">Ex d (إذا كان يحتوي على أجهزة توليد شرر)</td>
     </tr>
     <tr>
-      <td><strong>مستشعر/مرسل</strong></td>
-      <td>&lt; 5 واط</td>
-      <td><a href="/ar/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (السلامة الجوهرية)</a></td>
-      <td>Ex d (الغلاف)، Ex e</td>
+      <td data-label="التطبيق"><strong>مستشعر/مرسل</strong></td>
+      <td data-label="مستوى الطاقة">&lt; 5 واط</td>
+      <td data-label="الطريقة الموصى بها"><a href="/ar/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (السلامة الجوهرية)</a></td>
+      <td data-label="بديل">Ex d (الغلاف)، Ex e</td>
     </tr>
     <tr>
-      <td><strong>لوحة تحكم</strong></td>
-      <td>&gt; 10 كيلوواط</td>
-      <td>Ex p (الضغط)</td>
-      <td>Ex d (لوحات صغيرة)، Ex e (أقسام التوصيل)</td>
+      <td data-label="التطبيق"><strong>لوحة تحكم</strong></td>
+      <td data-label="مستوى الطاقة">&gt; 10 كيلوواط</td>
+      <td data-label="الطريقة الموصى بها">Ex p (الضغط)</td>
+      <td data-label="بديل">Ex d (لوحات صغيرة)، Ex e (أقسام التوصيل)</td>
     </tr>
     <tr>
-      <td><strong>صمام كهرومغناطيسي</strong></td>
-      <td>5–50 واط</td>
-      <td>Ex m (التغليف)</td>
-      <td>Ex d، Ex ia</td>
+      <td data-label="التطبيق"><strong>صمام كهرومغناطيسي</strong></td>
+      <td data-label="مستوى الطاقة">5–50 واط</td>
+      <td data-label="الطريقة الموصى بها">Ex m (التغليف)</td>
+      <td data-label="بديل">Ex d، Ex ia</td>
     </tr>
     <tr>
-      <td><strong>معدات محمولة</strong></td>
-      <td>بطارية</td>
-      <td>Ex ia، Ex ib</td>
-      <td>Ex d (أثقل)</td>
+      <td data-label="التطبيق"><strong>معدات محمولة</strong></td>
+      <td data-label="مستوى الطاقة">بطارية</td>
+      <td data-label="الطريقة الموصى بها">Ex ia، Ex ib</td>
+      <td data-label="بديل">Ex d (أثقل)</td>
     </tr>
   </tbody>
 </table>

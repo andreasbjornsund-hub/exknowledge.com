@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -185,12 +185,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><strong>MESG</strong> (Maximale experimentelle Spaltweite), die maximale Spaltbreite, durch die eine interne Explosion nicht auf eine externe explosionsfähige Atmosphäre übergreift. Geprüft in einer standardisierten 25-ml-Kugelkammer mit einem 25 mm langen Spalt. Kleinerer MESG = gefährlicheres Gas.</li>
 <li><strong>MIC-Verhältnis</strong> (Mindestzündstromverhältnis), das Verhältnis des Mindestzündstroms des Gases zu dem von Methan, gemessen in einer standardisierten Eigensicherheits-Prüfeinrichtung. Kleineres MIC-Verhältnis = gefährlicheres Gas.</li>
 </ul>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Gasgruppe</th><th>MESG (mm)</th><th>MIC-Verhältnis</th><th>Typische Gase</th><th>Gefährdungsstufe</th>
 </tr></thead><tbody>
-<tr><td><strong>IIA</strong></td><td>>0,90</td><td>>0,80</td><td>Methan, Propan, Butan, Aceton, Ethanol, Benzol, Diesel, Ammoniak</td><td>Am wenigsten gefährlich</td></tr>
-<tr><td><strong>IIB</strong></td><td>0,50–0,90</td><td>0,45–0,80</td><td>Ethylen, Schwefelwasserstoff, Diethylether, Ethylenoxid, Stadtgas</td><td>Mittel</td></tr>
-<tr><td><strong>IIC</strong></td><td><0,50</td><td><0,45</td><td>Wasserstoff, Acetylen, Schwefelkohlenstoff</td><td>Am gefährlichsten</td></tr>
+<tr><td data-label="Gasgruppe"><strong>IIA</strong></td><td data-label="MESG (mm)">>0,90</td><td data-label="MIC-Verhältnis">>0,80</td><td data-label="Typische Gase">Methan, Propan, Butan, Aceton, Ethanol, Benzol, Diesel, Ammoniak</td><td data-label="Gefährdungsstufe">Am wenigsten gefährlich</td></tr>
+<tr><td data-label="Gasgruppe"><strong>IIB</strong></td><td data-label="MESG (mm)">0,50–0,90</td><td data-label="MIC-Verhältnis">0,45–0,80</td><td data-label="Typische Gase">Ethylen, Schwefelwasserstoff, Diethylether, Ethylenoxid, Stadtgas</td><td data-label="Gefährdungsstufe">Mittel</td></tr>
+<tr><td data-label="Gasgruppe"><strong>IIC</strong></td><td data-label="MESG (mm)"><0,50</td><td data-label="MIC-Verhältnis"><0,45</td><td data-label="Typische Gase">Wasserstoff, Acetylen, Schwefelkohlenstoff</td><td data-label="Gefährdungsstufe">Am gefährlichsten</td></tr>
 </tbody></table></div>
 <h3 id="important-notes">Wichtige Hinweise</h3>
 <ul>
@@ -232,12 +232,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Wasserstoff gehört zur gefährlichsten Gasgruppe (IIC) aufgrund seiner extrem kleinen MESG (0,29 mm) und sehr niedrigen Mindestzündenergie (0,017 mJ, etwa 10× weniger als Methan). Seine Selbstentzündungstemperatur ist jedoch relativ hoch (560 °C), was ihn nur in <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i> Temperaturklasse</a> T1 einordnet.</p>
 <p>Das bedeutet, Wasserstoff erfordert den strengsten Schutz gegen Funken/Lichtbögen (IIC), ist aber bezüglich der Oberflächentemperatur relativ unkritisch (T1). Dies ist das Gegenteil einiger IIA-Gase.</p>
 <h2 id="dust-groups-group-iii">Staubgruppen (Gruppe III)</h2>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Staubgruppe</th><th>Typ</th><th>Beispiele</th><th>Gefährdungsstufe</th>
 </tr></thead><tbody>
-<tr><td><strong>IIIA</strong></td><td>Brennbare Flusen</td><td>Textilfasern, Baumwollflusen, Rayon, Jute</td><td>Am wenigsten gefährlich</td></tr>
-<tr><td><strong>IIIB</strong></td><td>Nicht leitfähiger Staub</td><td>Getreidemehl, Zucker, Holzstaub, Kohle, Kunststoffpulver, Pharmapulver</td><td>Mittel</td></tr>
-<tr><td><strong>IIIC</strong></td><td>Leitfähiger Staub</td><td>Aluminiumpulver, Magnesium, Titan, Eisen, Ruß</td><td>Am gefährlichsten</td></tr>
+<tr><td data-label="Staubgruppe"><strong>IIIA</strong></td><td data-label="Typ">Brennbare Flusen</td><td data-label="Beispiele">Textilfasern, Baumwollflusen, Rayon, Jute</td><td data-label="Gefährdungsstufe">Am wenigsten gefährlich</td></tr>
+<tr><td data-label="Staubgruppe"><strong>IIIB</strong></td><td data-label="Typ">Nicht leitfähiger Staub</td><td data-label="Beispiele">Getreidemehl, Zucker, Holzstaub, Kohle, Kunststoffpulver, Pharmapulver</td><td data-label="Gefährdungsstufe">Mittel</td></tr>
+<tr><td data-label="Staubgruppe"><strong>IIIC</strong></td><td data-label="Typ">Leitfähiger Staub</td><td data-label="Beispiele">Aluminiumpulver, Magnesium, Titan, Eisen, Ruß</td><td data-label="Gefährdungsstufe">Am gefährlichsten</td></tr>
 </tbody></table></div>
 <h3 id="conductive-vs-non-conductive-dust">Leitfähiger vs. nicht leitfähiger Staub</h3>
 <p>Die Unterscheidung ist wichtig, da leitfähige Staubpartikel Isolationsstrecken überbrücken und Kurzschlüsse verursachen können, was selbst bei Ex e (Erhöhte Sicherheit) Schutz eine Zündquelle darstellt. Leitfähige Stäube erfordern einen strengeren Schutz.</p>

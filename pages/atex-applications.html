@@ -18,7 +18,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <style>
@@ -255,24 +255,24 @@
 
 <h2 id="who-decides">Who decides, and under which rules</h2>
 <p>Hazardous area classification is the job of whoever controls the workplace. It is not something an equipment supplier or an insurer can do on your behalf, although both can supply input.</p>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="stack">
 <thead><tr><th>Region</th><th>Legal duty</th><th>Classification method</th><th>Record</th></tr></thead>
 <tbody>
-<tr><td>EU</td><td>Directive 1999/92/EC (ATEX 137 / "ATEX Workplace"), as national law</td><td>EN IEC 60079-10-1, EN IEC 60079-10-2, plus industry codes</td><td>Explosion protection document</td></tr>
-<tr><td>Great Britain</td><td>DSEAR 2002, regulation 7 and Schedule 2</td><td>BS EN IEC 60079-10-1/-2, Energy Institute codes, HSE guidance</td><td>DSEAR risk assessment and area classification drawings</td></tr>
-<tr><td>US</td><td>OSHA 29 CFR 1910.307; NEC (NFPA 70) Articles 500 to 506 as adopted locally</td><td>NFPA 497 (gases and vapors), NFPA 499 (dusts), API RP 500/505 for petroleum facilities</td><td>Documented classified locations (1910.307(b))</td></tr>
-<tr><td>IECEx countries</td><td>National workplace law</td><td>IEC 60079-10-1:2020, IEC 60079-10-2</td><td>Area classification dossier</td></tr>
+<tr><td data-label="Region">EU</td><td data-label="Legal duty">Directive 1999/92/EC (ATEX 137 / "ATEX Workplace"), as national law</td><td data-label="Classification method">EN IEC 60079-10-1, EN IEC 60079-10-2, plus industry codes</td><td data-label="Record">Explosion protection document</td></tr>
+<tr><td data-label="Region">Great Britain</td><td data-label="Legal duty">DSEAR 2002, regulation 7 and Schedule 2</td><td data-label="Classification method">BS EN IEC 60079-10-1/-2, Energy Institute codes, HSE guidance</td><td data-label="Record">DSEAR risk assessment and area classification drawings</td></tr>
+<tr><td data-label="Region">US</td><td data-label="Legal duty">OSHA 29 CFR 1910.307; NEC (NFPA 70) Articles 500 to 506 as adopted locally</td><td data-label="Classification method">NFPA 497 (gases and vapors), NFPA 499 (dusts), API RP 500/505 for petroleum facilities</td><td data-label="Record">Documented classified locations (1910.307(b))</td></tr>
+<tr><td data-label="Region">IECEx countries</td><td data-label="Legal duty">National workplace law</td><td data-label="Classification method">IEC 60079-10-1:2020, IEC 60079-10-2</td><td data-label="Record">Area classification dossier</td></tr>
 </tbody></table></div>
 <p>Under DSEAR regulation 7 the employer must classify places into hazardous or non-hazardous, classify hazardous places into zones, mark entry points with the "EX" sign where necessary, and have overall explosion safety verified by a competent person before a workplace containing hazardous places is used for the first time. The equipment itself is then selected to suit the zone: see <a href="/pages/atex-equipment-categories.html">ATEX equipment categories</a> and <a href="/pages/epl.html">Equipment Protection Levels</a>.</p>
 <p>IEC 60079-10-2 was revised in June 2026 (edition 3.0, replacing the 2015 edition). Existing classifications made to the 2015 edition do not become invalid overnight, but new studies and reviews should work to the current edition where your national adoption allows it.</p>
 
 <h2 id="zone-to-equipment">From zone to equipment</h2>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="stack">
 <thead><tr><th>Zone</th><th>Explosive atmosphere is…</th><th>ATEX category</th><th>EPL</th></tr></thead>
 <tbody>
-<tr><td>Zone 0 / Zone 20</td><td>present continuously or for long periods</td><td>1G / 1D</td><td>Ga / Da</td></tr>
-<tr><td>Zone 1 / Zone 21</td><td>likely in normal operation</td><td>2G / 2D (or 1)</td><td>Gb / Db (or Ga/Da)</td></tr>
-<tr><td>Zone 2 / Zone 22</td><td>not likely, and short-lived if it occurs</td><td>3G / 3D (or 1, 2)</td><td>Gc / Dc (or higher)</td></tr>
+<tr><td data-label="Zone">Zone 0 / Zone 20</td><td data-label="Explosive atmosphere is…">present continuously or for long periods</td><td data-label="ATEX category">1G / 1D</td><td data-label="EPL">Ga / Da</td></tr>
+<tr><td data-label="Zone">Zone 1 / Zone 21</td><td data-label="Explosive atmosphere is…">likely in normal operation</td><td data-label="ATEX category">2G / 2D (or 1)</td><td data-label="EPL">Gb / Db (or Ga/Da)</td></tr>
+<tr><td data-label="Zone">Zone 2 / Zone 22</td><td data-label="Explosive atmosphere is…">not likely, and short-lived if it occurs</td><td data-label="ATEX category">3G / 3D (or 1, 2)</td><td data-label="EPL">Gc / Dc (or higher)</td></tr>
 </tbody></table></div>
 <p>Gas group and temperature class come from the substance: hydrogen needs IIC (or IIB+H2), most hydrocarbons are IIA, and the temperature class must stay below the auto-ignition temperature. See <a href="/pages/gas-groups.html">Gas Groups</a> and <a href="/pages/temperature-classes.html">Temperature Classes</a>.</p>
 

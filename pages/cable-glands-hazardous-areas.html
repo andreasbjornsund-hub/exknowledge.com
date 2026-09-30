@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -258,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Thread Standards</h2>
 <p>Ex cable glands come with various thread types. Matching the gland thread to the enclosure entry is critical.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Thread Type</th>
@@ -269,28 +269,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Metric (ISO)</strong></td>
-      <td>M20, M25, M32, M40, M50, M63</td>
-      <td>Europe, global</td>
-      <td>Most common for <a href="/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Pitch: 1.5 mm</td>
+      <td data-label="Thread Type"><strong>Metric (ISO)</strong></td>
+      <td data-label="Designation">M20, M25, M32, M40, M50, M63</td>
+      <td data-label="Region">Europe, global</td>
+      <td data-label="Notes">Most common for <a href="/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Pitch: 1.5 mm</td>
     </tr>
     <tr>
-      <td><strong>NPT (Tapered)</strong></td>
-      <td>½", ¾", 1", 1¼", 1½", 2"</td>
-      <td>North America</td>
-      <td>Self-sealing taper. Requires thread sealant (PTFE tape or paste). Common in NEC installations.</td>
+      <td data-label="Thread Type"><strong>NPT (Tapered)</strong></td>
+      <td data-label="Designation">½", ¾", 1", 1¼", 1½", 2"</td>
+      <td data-label="Region">North America</td>
+      <td data-label="Notes">Self-sealing taper. Requires thread sealant (PTFE tape or paste). Common in NEC installations.</td>
     </tr>
     <tr>
-      <td><strong>PG (Panzergewinde)</strong></td>
-      <td>PG9, PG11, PG13.5, PG16, PG21, PG29</td>
-      <td>Germany (legacy)</td>
-      <td>Older German standard. Still found on legacy equipment. Being phased out in favor of metric.</td>
+      <td data-label="Thread Type"><strong>PG (Panzergewinde)</strong></td>
+      <td data-label="Designation">PG9, PG11, PG13.5, PG16, PG21, PG29</td>
+      <td data-label="Region">Germany (legacy)</td>
+      <td data-label="Notes">Older German standard. Still found on legacy equipment. Being phased out in favor of metric.</td>
     </tr>
     <tr>
-      <td><strong>G (BSP Parallel)</strong></td>
-      <td>G½", G¾", G1"</td>
-      <td>UK, Commonwealth</td>
-      <td>Parallel thread (not tapered). Requires sealing washer or O-ring.</td>
+      <td data-label="Thread Type"><strong>G (BSP Parallel)</strong></td>
+      <td data-label="Designation">G½", G¾", G1"</td>
+      <td data-label="Region">UK, Commonwealth</td>
+      <td data-label="Notes">Parallel thread (not tapered). Requires sealing washer or O-ring.</td>
     </tr>
   </tbody>
 </table>
@@ -384,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>IP Ratings for Cable Glands</h2>
 <p>The Ingress Protection rating indicates resistance to dust and water. Higher IP ratings are required for harsher environments.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>IP Rating</th>
@@ -395,34 +395,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IP54</strong></td>
-      <td>Dust-protected</td>
-      <td>Splash-proof</td>
-      <td>Indoor, dry environments</td>
+      <td data-label="IP Rating"><strong>IP54</strong></td>
+      <td data-label="Dust Protection">Dust-protected</td>
+      <td data-label="Water Protection">Splash-proof</td>
+      <td data-label="Typical Application">Indoor, dry environments</td>
     </tr>
     <tr>
-      <td><strong>IP66</strong></td>
-      <td>Dust-tight</td>
-      <td>Powerful water jets</td>
-      <td>Outdoor, industrial (most common)</td>
+      <td data-label="IP Rating"><strong>IP66</strong></td>
+      <td data-label="Dust Protection">Dust-tight</td>
+      <td data-label="Water Protection">Powerful water jets</td>
+      <td data-label="Typical Application">Outdoor, industrial (most common)</td>
     </tr>
     <tr>
-      <td><strong>IP67</strong></td>
-      <td>Dust-tight</td>
-      <td>Temporary immersion (1 m, 30 min)</td>
-      <td>Areas prone to flooding, washdown</td>
+      <td data-label="IP Rating"><strong>IP67</strong></td>
+      <td data-label="Dust Protection">Dust-tight</td>
+      <td data-label="Water Protection">Temporary immersion (1 m, 30 min)</td>
+      <td data-label="Typical Application">Areas prone to flooding, washdown</td>
     </tr>
     <tr>
-      <td><strong>IP68</strong></td>
-      <td>Dust-tight</td>
-      <td>Continuous immersion (depth/time per manufacturer)</td>
-      <td>Subsea, permanent underwater</td>
+      <td data-label="IP Rating"><strong>IP68</strong></td>
+      <td data-label="Dust Protection">Dust-tight</td>
+      <td data-label="Water Protection">Continuous immersion (depth/time per manufacturer)</td>
+      <td data-label="Typical Application">Subsea, permanent underwater</td>
     </tr>
     <tr>
-      <td><strong>IP6X</strong></td>
-      <td>Dust-tight</td>
-      <td>No water protection specified</td>
-      <td>Dust zones (Zone 20/21) where water ingress isn't a concern</td>
+      <td data-label="IP Rating"><strong>IP6X</strong></td>
+      <td data-label="Dust Protection">Dust-tight</td>
+      <td data-label="Water Protection">No water protection specified</td>
+      <td data-label="Typical Application">Dust zones (Zone 20/21) where water ingress isn't a concern</td>
     </tr>
   </tbody>
 </table>

@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -252,7 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Match the zone to the required equipment category or <a href="/pages/epl.html">EPL</a>:</p>
 
 <h3>Gas/Vapor Zones</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zone</th>
@@ -263,28 +263,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zone 0</strong></td>
-      <td>Category 1 G</td>
-      <td>Ga</td>
-      <td>Only Ga, nothing else allowed</td>
+      <td data-label="Zone"><strong>Zone 0</strong></td>
+      <td data-label="Minimum Category">Category 1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Can Also Use">Only Ga, nothing else allowed</td>
     </tr>
     <tr>
-      <td><strong>Zone 1</strong></td>
-      <td>Category 2 G</td>
-      <td>Gb</td>
-      <td>Category 1 G (Ga) also acceptable</td>
+      <td data-label="Zone"><strong>Zone 1</strong></td>
+      <td data-label="Minimum Category">Category 2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Can Also Use">Category 1 G (Ga) also acceptable</td>
     </tr>
     <tr>
-      <td><strong>Zone 2</strong></td>
-      <td>Category 3 G</td>
-      <td>Gc</td>
-      <td>Category 1 G (Ga) or Category 2 G (Gb) also acceptable</td>
+      <td data-label="Zone"><strong>Zone 2</strong></td>
+      <td data-label="Minimum Category">Category 3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Can Also Use">Category 1 G (Ga) or Category 2 G (Gb) also acceptable</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Dust Zones</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zone</th>
@@ -295,22 +295,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zone 20</strong></td>
-      <td>Category 1 D</td>
-      <td>Da</td>
-      <td>Only Da, nothing else allowed</td>
+      <td data-label="Zone"><strong>Zone 20</strong></td>
+      <td data-label="Minimum Category">Category 1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Can Also Use">Only Da, nothing else allowed</td>
     </tr>
     <tr>
-      <td><strong>Zone 21</strong></td>
-      <td>Category 2 D</td>
-      <td>Db</td>
-      <td>Category 1 D (Da) also acceptable</td>
+      <td data-label="Zone"><strong>Zone 21</strong></td>
+      <td data-label="Minimum Category">Category 2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Can Also Use">Category 1 D (Da) also acceptable</td>
     </tr>
     <tr>
-      <td><strong>Zone 22</strong></td>
-      <td>Category 3 D</td>
-      <td>Dc</td>
-      <td>Category 1 D (Da) or Category 2 D (Db) also acceptable</td>
+      <td data-label="Zone"><strong>Zone 22</strong></td>
+      <td data-label="Minimum Category">Category 3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Can Also Use">Category 1 D (Da) or Category 2 D (Db) also acceptable</td>
     </tr>
   </tbody>
 </table>
@@ -430,7 +430,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Step 4: Application → Protection Method</h2>
 <p>Choose the protection method based on what the equipment does and the power level:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Application</th>
@@ -441,52 +441,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Electric motor</strong></td>
-      <td>&gt; 1 kW</td>
-      <td><a href="/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (flameproof)</a></td>
-      <td>Ex e (Zone 2 only), Ex nA (Zone 2)</td>
+      <td data-label="Application"><strong>Electric motor</strong></td>
+      <td data-label="Power Level">&gt; 1 kW</td>
+      <td data-label="Recommended Method"><a href="/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (flameproof)</a></td>
+      <td data-label="Alternative">Ex e (Zone 2 only), Ex nA (Zone 2)</td>
     </tr>
     <tr>
-      <td><strong>Small motor</strong></td>
-      <td>&lt; 1 kW</td>
-      <td>Ex e (increased safety)</td>
-      <td>Ex d, Ex nA</td>
+      <td data-label="Application"><strong>Small motor</strong></td>
+      <td data-label="Power Level">&lt; 1 kW</td>
+      <td data-label="Recommended Method">Ex e (increased safety)</td>
+      <td data-label="Alternative">Ex d, Ex nA</td>
     </tr>
     <tr>
-      <td><strong>Light fixture</strong></td>
-      <td>Varies</td>
-      <td>Ex d (LED/fluorescent/halogen)</td>
-      <td>Ex e (LED only, Zone 1/2)</td>
+      <td data-label="Application"><strong>Light fixture</strong></td>
+      <td data-label="Power Level">Varies</td>
+      <td data-label="Recommended Method">Ex d (LED/fluorescent/halogen)</td>
+      <td data-label="Alternative">Ex e (LED only, Zone 1/2)</td>
     </tr>
     <tr>
-      <td><strong>Junction box</strong></td>
-      <td>N/A (passive)</td>
-      <td>Ex e (for general wiring)</td>
-      <td>Ex d (if contains sparking devices)</td>
+      <td data-label="Application"><strong>Junction box</strong></td>
+      <td data-label="Power Level">N/A (passive)</td>
+      <td data-label="Recommended Method">Ex e (for general wiring)</td>
+      <td data-label="Alternative">Ex d (if contains sparking devices)</td>
     </tr>
     <tr>
-      <td><strong>Sensor/transmitter</strong></td>
-      <td>&lt; 5 W</td>
-      <td><a href="/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (intrinsic safety)</a></td>
-      <td>Ex d (housing), Ex e</td>
+      <td data-label="Application"><strong>Sensor/transmitter</strong></td>
+      <td data-label="Power Level">&lt; 5 W</td>
+      <td data-label="Recommended Method"><a href="/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (intrinsic safety)</a></td>
+      <td data-label="Alternative">Ex d (housing), Ex e</td>
     </tr>
     <tr>
-      <td><strong>Control panel</strong></td>
-      <td>&gt; 10 kW</td>
-      <td>Ex p (pressurization)</td>
-      <td>Ex d (small panels), Ex e (terminal sections)</td>
+      <td data-label="Application"><strong>Control panel</strong></td>
+      <td data-label="Power Level">&gt; 10 kW</td>
+      <td data-label="Recommended Method">Ex p (pressurization)</td>
+      <td data-label="Alternative">Ex d (small panels), Ex e (terminal sections)</td>
     </tr>
     <tr>
-      <td><strong>Solenoid valve</strong></td>
-      <td>5–50 W</td>
-      <td>Ex m (encapsulation)</td>
-      <td>Ex d, Ex ia</td>
+      <td data-label="Application"><strong>Solenoid valve</strong></td>
+      <td data-label="Power Level">5–50 W</td>
+      <td data-label="Recommended Method">Ex m (encapsulation)</td>
+      <td data-label="Alternative">Ex d, Ex ia</td>
     </tr>
     <tr>
-      <td><strong>Portable equipment</strong></td>
-      <td>Battery</td>
-      <td>Ex ia, Ex ib</td>
-      <td>Ex d (heavier)</td>
+      <td data-label="Application"><strong>Portable equipment</strong></td>
+      <td data-label="Power Level">Battery</td>
+      <td data-label="Recommended Method">Ex ia, Ex ib</td>
+      <td data-label="Alternative">Ex d (heavier)</td>
     </tr>
   </tbody>
 </table>

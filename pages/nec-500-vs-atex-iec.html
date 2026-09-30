@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
 
@@ -186,17 +186,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>The NEC approach, codified in Articles 500 and 505 of NFPA 70, evolved independently from the IEC system used by ATEX and IECEx. Article 500 uses the traditional <strong>Class/Division</strong> method. Article 505, introduced later, adopts the <strong>Zone</strong> concept from IEC 60079-10 to improve international alignment.</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>Aspect</th><th>NEC 500 (Class/Division)</th><th>NEC 505 (Zone)</th><th>ATEX / IECEx (Zone)</th></tr></thead>
       <tbody>
-        <tr><td><strong>Geographic use</strong></td><td>USA, Canada</td><td>USA, Canada</td><td>EU, UK, most of the world</td></tr>
-        <tr><td><strong>Hazard basis</strong></td><td>Class I (gas), II (dust), III (fibers)</td><td>Zone 0, 1, 2 (gas only)</td><td>Zone 0, 1, 2 (gas); Zone 20, 21, 22 (dust)</td></tr>
-        <tr><td><strong>Risk gradation</strong></td><td>2 levels (Div 1, Div 2)</td><td>3 levels (Zone 0, 1, 2)</td><td>3 levels (Zone 0, 1, 2)</td></tr>
-        <tr><td><strong>Gas classification</strong></td><td>Groups A, B, C, D</td><td>Groups IIC, IIB, IIA</td><td>Groups IIC, IIB, IIA</td></tr>
-        <tr><td><strong>Dust classification</strong></td><td>Class II Groups E, F, G</td><td>Not covered</td><td>Zone 20, 21, 22 (IIIA, IIIB, IIIC)</td></tr>
-        <tr><td><strong>Legal framework</strong></td><td>NFPA 70 (adopted by AHJs)</td><td>NFPA 70 (adopted by AHJs)</td><td>EU Directive 2014/34/EU / IECEx scheme</td></tr>
-        <tr><td><strong>Certification body</strong></td><td>NRTLs (UL, FM, CSA)</td><td>NRTLs</td><td>Notified Bodies (ATEX) / ExCBs (IECEx)</td></tr>
-        <tr><td><strong>Protection concept</strong></td><td>Explosion-proof (XP), intrinsically safe (IS)</td><td>IEC-aligned types (Ex d, Ex i, etc.)</td><td>IEC-aligned types (Ex d, Ex i, Ex e, etc.)</td></tr>
+        <tr><td data-label="Aspect"><strong>Geographic use</strong></td><td data-label="NEC 500 (Class/Division)">USA, Canada</td><td data-label="NEC 505 (Zone)">USA, Canada</td><td data-label="ATEX / IECEx (Zone)">EU, UK, most of the world</td></tr>
+        <tr><td data-label="Aspect"><strong>Hazard basis</strong></td><td data-label="NEC 500 (Class/Division)">Class I (gas), II (dust), III (fibers)</td><td data-label="NEC 505 (Zone)">Zone 0, 1, 2 (gas only)</td><td data-label="ATEX / IECEx (Zone)">Zone 0, 1, 2 (gas); Zone 20, 21, 22 (dust)</td></tr>
+        <tr><td data-label="Aspect"><strong>Risk gradation</strong></td><td data-label="NEC 500 (Class/Division)">2 levels (Div 1, Div 2)</td><td data-label="NEC 505 (Zone)">3 levels (Zone 0, 1, 2)</td><td data-label="ATEX / IECEx (Zone)">3 levels (Zone 0, 1, 2)</td></tr>
+        <tr><td data-label="Aspect"><strong>Gas classification</strong></td><td data-label="NEC 500 (Class/Division)">Groups A, B, C, D</td><td data-label="NEC 505 (Zone)">Groups IIC, IIB, IIA</td><td data-label="ATEX / IECEx (Zone)">Groups IIC, IIB, IIA</td></tr>
+        <tr><td data-label="Aspect"><strong>Dust classification</strong></td><td data-label="NEC 500 (Class/Division)">Class II Groups E, F, G</td><td data-label="NEC 505 (Zone)">Not covered</td><td data-label="ATEX / IECEx (Zone)">Zone 20, 21, 22 (IIIA, IIIB, IIIC)</td></tr>
+        <tr><td data-label="Aspect"><strong>Legal framework</strong></td><td data-label="NEC 500 (Class/Division)">NFPA 70 (adopted by AHJs)</td><td data-label="NEC 505 (Zone)">NFPA 70 (adopted by AHJs)</td><td data-label="ATEX / IECEx (Zone)">EU Directive 2014/34/EU / IECEx scheme</td></tr>
+        <tr><td data-label="Aspect"><strong>Certification body</strong></td><td data-label="NEC 500 (Class/Division)">NRTLs (UL, FM, CSA)</td><td data-label="NEC 505 (Zone)">NRTLs</td><td data-label="ATEX / IECEx (Zone)">Notified Bodies (ATEX) / ExCBs (IECEx)</td></tr>
+        <tr><td data-label="Aspect"><strong>Protection concept</strong></td><td data-label="NEC 500 (Class/Division)">Explosion-proof (XP), intrinsically safe (IS)</td><td data-label="NEC 505 (Zone)">IEC-aligned types (Ex d, Ex i, etc.)</td><td data-label="ATEX / IECEx (Zone)">IEC-aligned types (Ex d, Ex i, Ex e, etc.)</td></tr>
       </tbody>
     </table></div>
 
@@ -219,13 +219,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>Both systems classify gases by their ignition characteristics, but use different naming conventions:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>NEC Group</th><th>IEC Gas Group</th><th>Representative Gases</th><th>MESG Range</th></tr></thead>
       <tbody>
-        <tr><td>A</td><td>IIC</td><td>Acetylene</td><td>&lt;0.50 mm</td></tr>
-        <tr><td>B</td><td>IIC (partially IIB+H₂)</td><td>Hydrogen, butadiene</td><td>&lt;0.50 mm</td></tr>
-        <tr><td>C</td><td>IIB</td><td>Ethylene, ethyl ether</td><td>0.50–0.90 mm</td></tr>
-        <tr><td>D</td><td>IIA</td><td>Methane, propane, gasoline</td><td>&gt;0.90 mm</td></tr>
+        <tr><td data-label="NEC Group">A</td><td data-label="IEC Gas Group">IIC</td><td data-label="Representative Gases">Acetylene</td><td data-label="MESG Range">&lt;0.50 mm</td></tr>
+        <tr><td data-label="NEC Group">B</td><td data-label="IEC Gas Group">IIC (partially IIB+H₂)</td><td data-label="Representative Gases">Hydrogen, butadiene</td><td data-label="MESG Range">&lt;0.50 mm</td></tr>
+        <tr><td data-label="NEC Group">C</td><td data-label="IEC Gas Group">IIB</td><td data-label="Representative Gases">Ethylene, ethyl ether</td><td data-label="MESG Range">0.50–0.90 mm</td></tr>
+        <tr><td data-label="NEC Group">D</td><td data-label="IEC Gas Group">IIA</td><td data-label="Representative Gases">Methane, propane, gasoline</td><td data-label="MESG Range">&gt;0.90 mm</td></tr>
       </tbody>
     </table></div>
 
@@ -235,15 +235,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>The NEC and IEC systems use different terminology for equivalent protection concepts:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>NEC Term</th><th>IEC/ATEX Designation</th><th>IEC Standard</th><th>Principle</th></tr></thead>
       <tbody>
-        <tr><td>Explosion-proof (XP)</td><td>Ex d (Flameproof)</td><td>IEC 60079-1</td><td>Contain the explosion inside the enclosure</td></tr>
-        <tr><td>Intrinsically Safe (IS)</td><td>Ex i (Ex ia, Ex ib)</td><td>IEC 60079-11</td><td>Limit energy below ignition threshold</td></tr>
-        <tr><td>Purged/Pressurized</td><td>Ex p (Ex px, Ex py, Ex pz)</td><td>IEC 60079-2</td><td>Maintain positive pressure with inert gas</td></tr>
-        <tr><td>Dust-ignition-proof</td><td>Ex t (Dust protection by enclosure)</td><td>IEC 60079-31</td><td>Prevent dust ingress and limit surface temperature</td></tr>
-        <tr><td>Non-incendive</td><td>Ex nA / Ex ec</td><td>IEC 60079-15 / -7</td><td>Normal operation cannot cause ignition</td></tr>
-        <tr><td>Hermetically sealed</td><td>Ex nC / Ex m</td><td>IEC 60079-15 / -18</td><td>Seal ignition source from atmosphere</td></tr>
+        <tr><td data-label="NEC Term">Explosion-proof (XP)</td><td data-label="IEC/ATEX Designation">Ex d (Flameproof)</td><td data-label="IEC Standard">IEC 60079-1</td><td data-label="Principle">Contain the explosion inside the enclosure</td></tr>
+        <tr><td data-label="NEC Term">Intrinsically Safe (IS)</td><td data-label="IEC/ATEX Designation">Ex i (Ex ia, Ex ib)</td><td data-label="IEC Standard">IEC 60079-11</td><td data-label="Principle">Limit energy below ignition threshold</td></tr>
+        <tr><td data-label="NEC Term">Purged/Pressurized</td><td data-label="IEC/ATEX Designation">Ex p (Ex px, Ex py, Ex pz)</td><td data-label="IEC Standard">IEC 60079-2</td><td data-label="Principle">Maintain positive pressure with inert gas</td></tr>
+        <tr><td data-label="NEC Term">Dust-ignition-proof</td><td data-label="IEC/ATEX Designation">Ex t (Dust protection by enclosure)</td><td data-label="IEC Standard">IEC 60079-31</td><td data-label="Principle">Prevent dust ingress and limit surface temperature</td></tr>
+        <tr><td data-label="NEC Term">Non-incendive</td><td data-label="IEC/ATEX Designation">Ex nA / Ex ec</td><td data-label="IEC Standard">IEC 60079-15 / -7</td><td data-label="Principle">Normal operation cannot cause ignition</td></tr>
+        <tr><td data-label="NEC Term">Hermetically sealed</td><td data-label="IEC/ATEX Designation">Ex nC / Ex m</td><td data-label="IEC Standard">IEC 60079-15 / -18</td><td data-label="Principle">Seal ignition source from atmosphere</td></tr>
       </tbody>
     </table></div>
 

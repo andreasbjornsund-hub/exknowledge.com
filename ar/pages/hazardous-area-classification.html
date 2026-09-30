@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -195,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>تصنف المناطق الخطرة إلى مناطق بناءً على <strong>تكرار ومدة</strong> وجود جو قابل للانفجار:</p>
 
 <h3>مناطق الغاز/البخار</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>المنطقة</th>
@@ -206,22 +206,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>المنطقة 0</strong></td>
-      <td>وجود جو قابل للانفجار <strong>بشكل مستمر</strong> أو لفترات طويلة</td>
-      <td>&gt; 1,000 ساعة/سنة</td>
-      <td>داخل خزانات التخزين، فراغات البخار فوق السوائل المتطايرة، داخل أوعية العمليات</td>
+      <td data-label="المنطقة"><strong>المنطقة 0</strong></td>
+      <td data-label="التعريف">وجود جو قابل للانفجار <strong>بشكل مستمر</strong> أو لفترات طويلة</td>
+      <td data-label="المدة">&gt; 1,000 ساعة/سنة</td>
+      <td data-label="أمثلة نموذجية">داخل خزانات التخزين، فراغات البخار فوق السوائل المتطايرة، داخل أوعية العمليات</td>
     </tr>
     <tr>
-      <td><strong>المنطقة 1</strong></td>
-      <td>من المحتمل حدوث جو قابل للانفجار <strong>في التشغيل العادي</strong></td>
-      <td>10–1,000 ساعة/سنة</td>
-      <td>حول أختام المضخات، حشوات الصمامات، نقاط العينات، صمامات الإغاثة، مناطق التحميل</td>
+      <td data-label="المنطقة"><strong>المنطقة 1</strong></td>
+      <td data-label="التعريف">من المحتمل حدوث جو قابل للانفجار <strong>في التشغيل العادي</strong></td>
+      <td data-label="المدة">10–1,000 ساعة/سنة</td>
+      <td data-label="أمثلة نموذجية">حول أختام المضخات، حشوات الصمامات، نقاط العينات، صمامات الإغاثة، مناطق التحميل</td>
     </tr>
     <tr>
-      <td><strong>المنطقة 2</strong></td>
-      <td>من غير المحتمل حدوث جو قابل للانفجار <strong>في التشغيل العادي</strong>؛ وإذا حدث، فقط لفترات <strong>قصيرة</strong></td>
-      <td>&lt; 10 ساعات/سنة</td>
-      <td>حول الحواف ذات الحشوات الجيدة، وصلات الأنابيب، المناطق القريبة من حدود المنطقة 1</td>
+      <td data-label="المنطقة"><strong>المنطقة 2</strong></td>
+      <td data-label="التعريف">من غير المحتمل حدوث جو قابل للانفجار <strong>في التشغيل العادي</strong>؛ وإذا حدث، فقط لفترات <strong>قصيرة</strong></td>
+      <td data-label="المدة">&lt; 10 ساعات/سنة</td>
+      <td data-label="أمثلة نموذجية">حول الحواف ذات الحشوات الجيدة، وصلات الأنابيب، المناطق القريبة من حدود المنطقة 1</td>
     </tr>
   </tbody>
 </table>
@@ -264,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>الخطوة 1: تحديد مصادر الانبعاث</h3>
 <p><strong>مصدر الانبعاث</strong> هو أي نقطة يمكن أن يهرب منها غاز أو بخار أو سائل قابل للاشتعال إلى الجو. يتم تصنيف المصادر حسب التكرار:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>التصنيف</th>
@@ -275,22 +275,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>مستمر</strong></td>
-      <td>الانبعاث مستمر أو متوقع لفترات طويلة</td>
-      <td>فتحات الخزانات، أسطح السوائل المفتوحة، تسريبات مستمرة من الأختام التالفة</td>
-      <td>المنطقة 0</td>
+      <td data-label="التصنيف"><strong>مستمر</strong></td>
+      <td data-label="التعريف">الانبعاث مستمر أو متوقع لفترات طويلة</td>
+      <td data-label="أمثلة">فتحات الخزانات، أسطح السوائل المفتوحة، تسريبات مستمرة من الأختام التالفة</td>
+      <td data-label="ينشئ المنطقة">المنطقة 0</td>
     </tr>
     <tr>
-      <td><strong>أساسي</strong></td>
-      <td>الانبعاث متوقع بشكل دوري أو أحيانًا أثناء التشغيل العادي</td>
-      <td>أختام المضخات، أختام الضواغط، نقاط العينات، صمامات الإغاثة، وصلات التحميل/التفريغ</td>
-      <td>المنطقة 1</td>
+      <td data-label="التصنيف"><strong>أساسي</strong></td>
+      <td data-label="التعريف">الانبعاث متوقع بشكل دوري أو أحيانًا أثناء التشغيل العادي</td>
+      <td data-label="أمثلة">أختام المضخات، أختام الضواغط، نقاط العينات، صمامات الإغاثة، وصلات التحميل/التفريغ</td>
+      <td data-label="ينشئ المنطقة">المنطقة 1</td>
     </tr>
     <tr>
-      <td><strong>ثانوي</strong></td>
-      <td>الانبعاث غير متوقع أثناء التشغيل العادي؛ وإذا حدث، فقط نادرًا وللفترات القصيرة</td>
-      <td>وصلات الحواف، أعمدة الصمامات (غير الحشوات)، وصلات الأدوات، وصلات الأنابيب في حالة جيدة</td>
-      <td>المنطقة 2</td>
+      <td data-label="التصنيف"><strong>ثانوي</strong></td>
+      <td data-label="التعريف">الانبعاث غير متوقع أثناء التشغيل العادي؛ وإذا حدث، فقط نادرًا وللفترات القصيرة</td>
+      <td data-label="أمثلة">وصلات الحواف، أعمدة الصمامات (غير الحشوات)، وصلات الأدوات، وصلات الأنابيب في حالة جيدة</td>
+      <td data-label="ينشئ المنطقة">المنطقة 2</td>
     </tr>
   </tbody>
 </table>
@@ -326,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>الخطوة 3: تحديد نوع المنطقة</h3>
 <p>يوفر الملحق ب من IEC 60079-10-1 مصفوفة:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>تصنيف الانبعاث</th>
@@ -337,22 +337,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>مستمر</strong></td>
-      <td>المنطقة 0 NE (امتداد ضئيل) → غير خطرة</td>
-      <td>المنطقة 0 + المنطقة 2</td>
-      <td>المنطقة 0 + المنطقة 1</td>
+      <td data-label="تصنيف الانبعاث"><strong>مستمر</strong></td>
+      <td data-label="تهوية عالية + توفر جيد">المنطقة 0 NE (امتداد ضئيل) → غير خطرة</td>
+      <td data-label="تهوية متوسطة + توفر جيد">المنطقة 0 + المنطقة 2</td>
+      <td data-label="تهوية منخفضة + توفر ضعيف">المنطقة 0 + المنطقة 1</td>
     </tr>
     <tr>
-      <td><strong>أساسي</strong></td>
-      <td>المنطقة 1 NE → غير خطرة</td>
-      <td>المنطقة 1 + المنطقة 2</td>
-      <td>المنطقة 1 + المنطقة 0</td>
+      <td data-label="تصنيف الانبعاث"><strong>أساسي</strong></td>
+      <td data-label="تهوية عالية + توفر جيد">المنطقة 1 NE → غير خطرة</td>
+      <td data-label="تهوية متوسطة + توفر جيد">المنطقة 1 + المنطقة 2</td>
+      <td data-label="تهوية منخفضة + توفر ضعيف">المنطقة 1 + المنطقة 0</td>
     </tr>
     <tr>
-      <td><strong>ثانوي</strong></td>
-      <td>المنطقة 2 NE → غير خطرة</td>
-      <td>المنطقة 2</td>
-      <td>المنطقة 1 أو حتى المنطقة 0</td>
+      <td data-label="تصنيف الانبعاث"><strong>ثانوي</strong></td>
+      <td data-label="تهوية عالية + توفر جيد">المنطقة 2 NE → غير خطرة</td>
+      <td data-label="تهوية متوسطة + توفر جيد">المنطقة 2</td>
+      <td data-label="تهوية منخفضة + توفر ضعيف">المنطقة 1 أو حتى المنطقة 0</td>
     </tr>
   </tbody>
 </table>

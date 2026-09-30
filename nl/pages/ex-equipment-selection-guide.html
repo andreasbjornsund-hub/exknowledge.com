@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -198,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Koppel de zone aan de vereiste apparatuurcategorie of <a href="/nl/pages/epl.html">EPL</a>:</p>
 
 <h3>Gas-/dampzones</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zone</th>
@@ -209,28 +209,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zone 0</strong></td>
-      <td>Categorie 1 G</td>
-      <td>Ga</td>
-      <td>Alleen Ga, niets anders toegestaan</td>
+      <td data-label="Zone"><strong>Zone 0</strong></td>
+      <td data-label="Minimale categorie">Categorie 1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Kan ook worden gebruikt">Alleen Ga, niets anders toegestaan</td>
     </tr>
     <tr>
-      <td><strong>Zone 1</strong></td>
-      <td>Categorie 2 G</td>
-      <td>Gb</td>
-      <td>Categorie 1 G (Ga) ook toegestaan</td>
+      <td data-label="Zone"><strong>Zone 1</strong></td>
+      <td data-label="Minimale categorie">Categorie 2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Kan ook worden gebruikt">Categorie 1 G (Ga) ook toegestaan</td>
     </tr>
     <tr>
-      <td><strong>Zone 2</strong></td>
-      <td>Categorie 3 G</td>
-      <td>Gc</td>
-      <td>Categorie 1 G (Ga) of categorie 2 G (Gb) ook aanvaardbaar</td>
+      <td data-label="Zone"><strong>Zone 2</strong></td>
+      <td data-label="Minimale categorie">Categorie 3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Kan ook worden gebruikt">Categorie 1 G (Ga) of categorie 2 G (Gb) ook aanvaardbaar</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Stofzones</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zone</th>
@@ -241,22 +241,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zone 20</strong></td>
-      <td>Categorie 1 D</td>
-      <td>Da</td>
-      <td>Alleen Da, niets anders toegestaan</td>
+      <td data-label="Zone"><strong>Zone 20</strong></td>
+      <td data-label="Minimale categorie">Categorie 1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Kan ook worden gebruikt">Alleen Da, niets anders toegestaan</td>
     </tr>
     <tr>
-      <td><strong>Zone 21</strong></td>
-      <td>Categorie 2 D</td>
-      <td>Db</td>
-      <td>Categorie 1 D (Da) ook toegestaan</td>
+      <td data-label="Zone"><strong>Zone 21</strong></td>
+      <td data-label="Minimale categorie">Categorie 2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Kan ook worden gebruikt">Categorie 1 D (Da) ook toegestaan</td>
     </tr>
     <tr>
-      <td><strong>Zone 22</strong></td>
-      <td>Categorie 3 D</td>
-      <td>Dc</td>
-      <td>Categorie 1 D (Da) of categorie 2 D (Db) ook aanvaardbaar</td>
+      <td data-label="Zone"><strong>Zone 22</strong></td>
+      <td data-label="Minimale categorie">Categorie 3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Kan ook worden gebruikt">Categorie 1 D (Da) of categorie 2 D (Db) ook aanvaardbaar</td>
     </tr>
   </tbody>
 </table>
@@ -376,7 +376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Stap 4: Toepassing → Beschermingsmethode</h2>
 <p>Kies de beschermingsmethode op basis van wat de apparatuur doet en het vermogensniveau:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Toepassing</th>
@@ -387,52 +387,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Elektromotor</strong></td>
-      <td>&gt; 1 kW</td>
-      <td><a href="/nl/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (vlamdicht)</a></td>
-      <td>Ex e (alleen zone 2), Ex nA (zone 2)</td>
+      <td data-label="Toepassing"><strong>Elektromotor</strong></td>
+      <td data-label="Vermogensniveau">&gt; 1 kW</td>
+      <td data-label="Aanbevolen methode"><a href="/nl/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (vlamdicht)</a></td>
+      <td data-label="Alternatief">Ex e (alleen zone 2), Ex nA (zone 2)</td>
     </tr>
     <tr>
-      <td><strong>Kleine motor</strong></td>
-      <td>&lt; 1 kW</td>
-      <td>Ex e (verhoogde veiligheid)</td>
-      <td>Ex d, Ex nA</td>
+      <td data-label="Toepassing"><strong>Kleine motor</strong></td>
+      <td data-label="Vermogensniveau">&lt; 1 kW</td>
+      <td data-label="Aanbevolen methode">Ex e (verhoogde veiligheid)</td>
+      <td data-label="Alternatief">Ex d, Ex nA</td>
     </tr>
     <tr>
-      <td><strong>Verlichtingsarmatuur</strong></td>
-      <td>Verschilt</td>
-      <td>Ex d (LED/fluorescent/halogeen)</td>
-      <td>Ex e (alleen LED, zone 1/2)</td>
+      <td data-label="Toepassing"><strong>Verlichtingsarmatuur</strong></td>
+      <td data-label="Vermogensniveau">Verschilt</td>
+      <td data-label="Aanbevolen methode">Ex d (LED/fluorescent/halogeen)</td>
+      <td data-label="Alternatief">Ex e (alleen LED, zone 1/2)</td>
     </tr>
     <tr>
-      <td><strong>Aansluitdoos</strong></td>
-      <td>N.v.t. (passief)</td>
-      <td>Ex e (voor algemene bedrading)</td>
-      <td>Ex d (indien vonkvormende apparaten bevat)</td>
+      <td data-label="Toepassing"><strong>Aansluitdoos</strong></td>
+      <td data-label="Vermogensniveau">N.v.t. (passief)</td>
+      <td data-label="Aanbevolen methode">Ex e (voor algemene bedrading)</td>
+      <td data-label="Alternatief">Ex d (indien vonkvormende apparaten bevat)</td>
     </tr>
     <tr>
-      <td><strong>Sensor/zender</strong></td>
-      <td>&lt; 5 W</td>
-      <td><a href="/nl/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (intrinsieke veiligheid)</a></td>
-      <td>Ex d (behuizing), Ex e</td>
+      <td data-label="Toepassing"><strong>Sensor/zender</strong></td>
+      <td data-label="Vermogensniveau">&lt; 5 W</td>
+      <td data-label="Aanbevolen methode"><a href="/nl/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (intrinsieke veiligheid)</a></td>
+      <td data-label="Alternatief">Ex d (behuizing), Ex e</td>
     </tr>
     <tr>
-      <td><strong>Bedieningspaneel</strong></td>
-      <td>&gt; 10 kW</td>
-      <td>Ex p (drukregeling)</td>
-      <td>Ex d (kleine panelen), Ex e (aansluitingssecties)</td>
+      <td data-label="Toepassing"><strong>Bedieningspaneel</strong></td>
+      <td data-label="Vermogensniveau">&gt; 10 kW</td>
+      <td data-label="Aanbevolen methode">Ex p (drukregeling)</td>
+      <td data-label="Alternatief">Ex d (kleine panelen), Ex e (aansluitingssecties)</td>
     </tr>
     <tr>
-      <td><strong>Magneetventiel</strong></td>
-      <td>5–50 W</td>
-      <td>Ex m (inkapseling)</td>
-      <td>Ex d, Ex ia</td>
+      <td data-label="Toepassing"><strong>Magneetventiel</strong></td>
+      <td data-label="Vermogensniveau">5–50 W</td>
+      <td data-label="Aanbevolen methode">Ex m (inkapseling)</td>
+      <td data-label="Alternatief">Ex d, Ex ia</td>
     </tr>
     <tr>
-      <td><strong>Draagbare apparatuur</strong></td>
-      <td>Batterij</td>
-      <td>Ex ia, Ex ib</td>
-      <td>Ex d (zwaarder)</td>
+      <td data-label="Toepassing"><strong>Draagbare apparatuur</strong></td>
+      <td data-label="Vermogensniveau">Batterij</td>
+      <td data-label="Aanbevolen methode">Ex ia, Ex ib</td>
+      <td data-label="Alternatief">Ex d (zwaarder)</td>
     </tr>
   </tbody>
 </table>

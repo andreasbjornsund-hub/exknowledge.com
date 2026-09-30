@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -229,7 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>CompEx tilbyr flere sertifiseringsmoduler som dekker ulike roller og miljøer:</p>
 
 <h3>Grunnleggende moduler (gass/damp)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Modul</th>
@@ -240,28 +240,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Ex01</strong></td>
-      <td>Forberedelse og installasjon av Ex-utstyr (gass)</td>
-      <td>Elektrikere, kabelmontører, instrumentmontører</td>
-      <td>~5 dager (kombinert med Ex02)</td>
+      <td data-label="Modul"><strong>Ex01</strong></td>
+      <td data-label="Tittel">Forberedelse og installasjon av Ex-utstyr (gass)</td>
+      <td data-label="For hvem">Elektrikere, kabelmontører, instrumentmontører</td>
+      <td data-label="Varighet">~5 dager (kombinert med Ex02)</td>
     </tr>
     <tr>
-      <td><strong>Ex02</strong></td>
-      <td>Inspeksjon av Ex-installasjoner (gass)</td>
-      <td>Inspeksjonsingeniører, elektrikere, vedlikeholdsteknikere</td>
-      <td>(inkludert i Ex01)</td>
+      <td data-label="Modul"><strong>Ex02</strong></td>
+      <td data-label="Tittel">Inspeksjon av Ex-installasjoner (gass)</td>
+      <td data-label="For hvem">Inspeksjonsingeniører, elektrikere, vedlikeholdsteknikere</td>
+      <td data-label="Varighet">(inkludert i Ex01)</td>
     </tr>
     <tr>
-      <td><strong>Ex03</strong></td>
-      <td>Forberedelse og installasjon av Ex-utstyr – instrumentering (gass)</td>
-      <td>Instrumentteknikere, installatører av kontrollsystemer</td>
-      <td>~5 dager (kombinert med Ex04)</td>
+      <td data-label="Modul"><strong>Ex03</strong></td>
+      <td data-label="Tittel">Forberedelse og installasjon av Ex-utstyr – instrumentering (gass)</td>
+      <td data-label="For hvem">Instrumentteknikere, installatører av kontrollsystemer</td>
+      <td data-label="Varighet">~5 dager (kombinert med Ex04)</td>
     </tr>
     <tr>
-      <td><strong>Ex04</strong></td>
-      <td>Inspeksjon av Ex-installasjoner, instrumentering (gass)</td>
-      <td>Instrumentinspeksjonsingeniører</td>
-      <td>(inkludert i Ex03)</td>
+      <td data-label="Modul"><strong>Ex04</strong></td>
+      <td data-label="Tittel">Inspeksjon av Ex-installasjoner, instrumentering (gass)</td>
+      <td data-label="For hvem">Instrumentinspeksjonsingeniører</td>
+      <td data-label="Varighet">(inkludert i Ex03)</td>
     </tr>
   </tbody>
 </table>
@@ -514,7 +514,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section>
 <h2>CompEx vs andre kvalifikasjoner</h2>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Kvalifikasjon</th>
@@ -525,28 +525,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>CompEx</strong></td>
-      <td>Praktisk kompetanse innen installasjon og inspeksjon</td>
-      <td>Globalt (60+ land)</td>
-      <td>Ja – grunnleggende krav</td>
+      <td data-label="Kvalifikasjon"><strong>CompEx</strong></td>
+      <td data-label="Fokus">Praktisk kompetanse innen installasjon og inspeksjon</td>
+      <td data-label="Anerkjennelse">Globalt (60+ land)</td>
+      <td data-label="Inkluderer praktisk?">Ja – grunnleggende krav</td>
     </tr>
     <tr>
-      <td><strong>IECEx CoPC</strong></td>
-      <td>Personalkompetanse under <a href="/no/pages/atex-vs-iecex.html">IECEx</a>-systemet</td>
-      <td>IECEx-medlemsland</td>
-      <td>Ja (noen enheter)</td>
+      <td data-label="Kvalifikasjon"><strong>IECEx CoPC</strong></td>
+      <td data-label="Fokus">Personalkompetanse under <a href="/no/pages/atex-vs-iecex.html">IECEx</a>-systemet</td>
+      <td data-label="Anerkjennelse">IECEx-medlemsland</td>
+      <td data-label="Inkluderer praktisk?">Ja (noen enheter)</td>
     </tr>
     <tr>
-      <td><strong>ExVeritas</strong></td>
-      <td>Online kunnskapsvurderinger</td>
-      <td>Supplerende, ikke frittstående</td>
-      <td>Nei (kun online)</td>
+      <td data-label="Kvalifikasjon"><strong>ExVeritas</strong></td>
+      <td data-label="Fokus">Online kunnskapsvurderinger</td>
+      <td data-label="Anerkjennelse">Supplerende, ikke frittstående</td>
+      <td data-label="Inkluderer praktisk?">Nei (kun online)</td>
     </tr>
     <tr>
-      <td><strong>EEHA (Australia)</strong></td>
-      <td>Elektrisk utstyr i farlige områder</td>
-      <td>Australia/New Zealand</td>
-      <td>Ja</td>
+      <td data-label="Kvalifikasjon"><strong>EEHA (Australia)</strong></td>
+      <td data-label="Fokus">Elektrisk utstyr i farlige områder</td>
+      <td data-label="Anerkjennelse">Australia/New Zealand</td>
+      <td data-label="Inkluderer praktisk?">Ja</td>
     </tr>
   </tbody>
 </table>

@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -268,7 +268,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Grupo II: Indústrias de superfície</h3>
 <p>Equipamentos para todas as outras indústrias (petróleo e gás, química, farmacêutica, alimentícia, etc.). Subdividido por categoria e tipo de atmosfera:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Categoria</th>
@@ -279,40 +279,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>1 G</td>
-      <td>Ga</td>
-      <td>Zona 0</td>
-      <td>Muito alto (2 falhas independentes)</td>
+      <td data-label="Categoria">1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Adequação à zona">Zona 0</td>
+      <td data-label="Nível de proteção">Muito alto (2 falhas independentes)</td>
     </tr>
     <tr>
-      <td>2 G</td>
-      <td>Gb</td>
-      <td>Zona 1</td>
-      <td>Alta (1 falha)</td>
+      <td data-label="Categoria">2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Adequação à zona">Zona 1</td>
+      <td data-label="Nível de proteção">Alta (1 falha)</td>
     </tr>
     <tr>
-      <td>3 G</td>
-      <td>Gc</td>
-      <td>Zona 2</td>
-      <td>Operação normal</td>
+      <td data-label="Categoria">3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Adequação à zona">Zona 2</td>
+      <td data-label="Nível de proteção">Operação normal</td>
     </tr>
     <tr>
-      <td>1 D</td>
-      <td>Da</td>
-      <td>Zona 20</td>
-      <td>Muito alta (2 falhas independentes)</td>
+      <td data-label="Categoria">1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Adequação à zona">Zona 20</td>
+      <td data-label="Nível de proteção">Muito alta (2 falhas independentes)</td>
     </tr>
     <tr>
-      <td>2 D</td>
-      <td>Db</td>
-      <td>Zona 21</td>
-      <td>Alta (1 falha)</td>
+      <td data-label="Categoria">2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Adequação à zona">Zona 21</td>
+      <td data-label="Nível de proteção">Alta (1 falha)</td>
     </tr>
     <tr>
-      <td>3 D</td>
-      <td>Dc</td>
-      <td>Zona 22</td>
-      <td>Operação normal</td>
+      <td data-label="Categoria">3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Adequação à zona">Zona 22</td>
+      <td data-label="Nível de proteção">Operação normal</td>
     </tr>
   </tbody>
 </table>
@@ -362,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Módulos de avaliação da conformidade</h2>
 <p>Os fabricantes devem seguir procedimentos específicos para demonstrar a conformidade. O módulo necessário depende da categoria do equipamento:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Módulo</th>
@@ -373,40 +373,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>Controlo interno da produção</td>
-      <td>Não</td>
-      <td>Categoria 2 e 3 (não elétrica), Categoria 3 (elétrica)</td>
+      <td data-label="Módulo">A</td>
+      <td data-label="Nome">Controlo interno da produção</td>
+      <td data-label="Organismo notificado envolvido?">Não</td>
+      <td data-label="Aplicável a">Categoria 2 e 3 (não elétrica), Categoria 3 (elétrica)</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>Exame de tipo UE</td>
-      <td>Sim</td>
-      <td>Todas as categorias 1 e M1, a maioria das categorias 2</td>
+      <td data-label="Módulo">B</td>
+      <td data-label="Nome">Exame de tipo UE</td>
+      <td data-label="Organismo notificado envolvido?">Sim</td>
+      <td data-label="Aplicável a">Todas as categorias 1 e M1, a maioria das categorias 2</td>
     </tr>
     <tr>
-      <td>C1</td>
-      <td>Conformidade com o tipo (controlo interno da produção + ensaios do produto)</td>
-      <td>Não (após o Módulo B)</td>
-      <td>Combinado com o Módulo B</td>
+      <td data-label="Módulo">C1</td>
+      <td data-label="Nome">Conformidade com o tipo (controlo interno da produção + ensaios do produto)</td>
+      <td data-label="Organismo notificado envolvido?">Não (após o Módulo B)</td>
+      <td data-label="Aplicável a">Combinado com o Módulo B</td>
     </tr>
     <tr>
-      <td>D</td>
-      <td>Garantia da qualidade (produção)</td>
-      <td>Sim (vigilância)</td>
-      <td>Combinado com o Módulo B para a Categoria 1/M1</td>
+      <td data-label="Módulo">D</td>
+      <td data-label="Nome">Garantia da qualidade (produção)</td>
+      <td data-label="Organismo notificado envolvido?">Sim (vigilância)</td>
+      <td data-label="Aplicável a">Combinado com o Módulo B para a Categoria 1/M1</td>
     </tr>
     <tr>
-      <td>E</td>
-      <td>Garantia da qualidade (produto)</td>
-      <td>Sim (vigilância)</td>
-      <td>Combinado com o Módulo B para a Categoria 1/M1</td>
+      <td data-label="Módulo">E</td>
+      <td data-label="Nome">Garantia da qualidade (produto)</td>
+      <td data-label="Organismo notificado envolvido?">Sim (vigilância)</td>
+      <td data-label="Aplicável a">Combinado com o Módulo B para a Categoria 1/M1</td>
     </tr>
     <tr>
-      <td>F</td>
-      <td>Verificação do produto</td>
-      <td>Sim (teste produto a produto ou por lote)</td>
-      <td>Combinado com o Módulo B para a Categoria 1/M1</td>
+      <td data-label="Módulo">F</td>
+      <td data-label="Nome">Verificação do produto</td>
+      <td data-label="Organismo notificado envolvido?">Sim (teste produto a produto ou por lote)</td>
+      <td data-label="Aplicável a">Combinado com o Módulo B para a Categoria 1/M1</td>
     </tr>
   </tbody>
 </table>

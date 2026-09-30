@@ -1440,3 +1440,39 @@ h4 { font-size: var(--fs-lead); }
 /* 44px targets on touch screens; slimmer 40px controls with a mouse, closer to the original design. */
 @media (min-width: 901px) and (pointer: fine) { :root { --tap: 40px; } }
 @media (max-width: 359px) { .lang-select { max-width: 92px; } }  /* flag + short code only on the narrowest phones */
+
+/* ── Phones: reading width, compact tables, stacked wide tables (2026-09-30) ──
+   Three layers of side padding (container, layout, card) left ~245px for text on a 375px phone.
+   Tables with 4+ columns are marked .stack (scripts/mobile_tables.py adds data-label per cell)
+   and render as one card per row. Desktop is unchanged. */
+@media (max-width: 600px) {
+  .content-page .container { padding-left: 10px; padding-right: 10px; }
+  .content-layout { padding-left: 0; padding-right: 0; }
+  .content-body { padding: 18px 14px; }
+  .content-body th { padding: 8px 8px; letter-spacing: 0.04em; }
+  .content-body td { padding: 8px 8px; overflow-wrap: break-word; hyphens: auto; }
+  .content-body pre { padding: 12px; white-space: pre-wrap; }
+  .content-body pre code { white-space: pre-wrap; word-break: break-word; }
+  .table-wrap { margin: 12px 0 18px; }
+  .table-wrap:has(> table.stack) { overflow: visible; border: 0; }
+  .content-body table.stack, .content-body table.stack tbody { display: block; width: 100%; background: none; }
+  .content-body table.stack thead { display: none; }
+  .content-body table.stack tr { display: block; margin: 0 0 10px; border: 1px solid var(--border-surface); background: white; }
+  .content-body table.stack tr:hover td { background: none; }
+  .content-body table.stack td, .content-body table.stack tbody th {
+    display: grid; grid-template-columns: minmax(0, 40%) minmax(0, 1fr); gap: 10px;
+    padding: 6px 10px; border: 0; border-bottom: 1px solid var(--bg-surface-alt);
+    text-align: left; font-family: inherit; font-size: 0.8125rem; text-transform: none; letter-spacing: 0; background: none;
+  }
+  .content-body table.stack td::before, .content-body table.stack tbody th::before {
+    content: attr(data-label); font-family: var(--font-mono); font-size: 0.625rem; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--text-dark); padding-top: 2px;
+  }
+  .content-body table.stack tr > :first-child { grid-template-columns: 1fr; font-weight: 600; color: var(--text-dark); background: var(--bg-surface); }
+  .content-body table.stack tr > :first-child::before { display: none; }
+  .content-body table.stack tr > :last-child { border-bottom: 0; }
+}
+@media (max-width: 360px) {
+  .content-body th, .content-body td { padding: 6px 6px; }
+  .content-body th, .content-body td { overflow-wrap: anywhere; }   /* long compounds (e.g. German) may break so 3-column tables fit */
+}

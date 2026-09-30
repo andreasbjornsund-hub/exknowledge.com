@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -361,7 +361,7 @@ Ta: -20°C to +60°C
 
 <h3>3. Gasgroep (IIA, IIB, IIC)</h3>
 <p>Geeft aan voor welke gassen de apparatuur is gecertificeerd, op basis van ontstekingsgevoeligheid (zie <a href="/nl/pages/gas-groups.html">gasgroepen</a> voor details):</p>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Groep</th>
@@ -372,22 +372,22 @@ Ta: -20°C to +60°C
   </thead>
   <tbody>
     <tr>
-      <td>IIA</td>
-      <td>Propaan, methaan, butaan, ammoniak, aceton</td>
-      <td>&gt; 0,9 mm</td>
-      <td>&gt; 0,8</td>
+      <td data-label="Groep">IIA</td>
+      <td data-label="Gassen">Propaan, methaan, butaan, ammoniak, aceton</td>
+      <td data-label="MESG-bereik">&gt; 0,9 mm</td>
+      <td data-label="MIC-verhouding">&gt; 0,8</td>
     </tr>
     <tr>
-      <td>IIB</td>
-      <td>Ethyleen, ethyl ether</td>
-      <td>0,5–0,9 mm</td>
-      <td>0,45–0,8</td>
+      <td data-label="Groep">IIB</td>
+      <td data-label="Gassen">Ethyleen, ethyl ether</td>
+      <td data-label="MESG-bereik">0,5–0,9 mm</td>
+      <td data-label="MIC-verhouding">0,45–0,8</td>
     </tr>
     <tr>
-      <td>IIC</td>
-      <td>Waterstof, acetyleen, koolstofdisulfide</td>
-      <td>&lt; 0,5 mm</td>
-      <td>&lt; 0,45</td>
+      <td data-label="Groep">IIC</td>
+      <td data-label="Gassen">Waterstof, acetyleen, koolstofdisulfide</td>
+      <td data-label="MESG-bereik">&lt; 0,5 mm</td>
+      <td data-label="MIC-verhouding">&lt; 0,45</td>
     </tr>
   </tbody>
 </table>

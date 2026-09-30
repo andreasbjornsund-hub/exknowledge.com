@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -258,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Normas de rosca</h2>
 <p>Os prensa-cabos Ex vêm com vários tipos de rosca. É fundamental que a rosca do prensa-cabo corresponda à entrada do invólucro.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Tipo de rosca</th>
@@ -269,28 +269,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Métrico (ISO)</strong></td>
-      <td>M20, M25, M32, M40, M50, M63</td>
-      <td>Europa, global</td>
-      <td>Mais comum para <a href="/pt/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Passo: 1,5 mm</td>
+      <td data-label="Tipo de rosca"><strong>Métrico (ISO)</strong></td>
+      <td data-label="Designação">M20, M25, M32, M40, M50, M63</td>
+      <td data-label="Região">Europa, global</td>
+      <td data-label="Observações">Mais comum para <a href="/pt/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Passo: 1,5 mm</td>
     </tr>
     <tr>
-      <td><strong>NPT (cônico)</strong></td>
-      <td>½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
-      <td>América do Norte</td>
-      <td>Cônico autovedante. Requer vedante de rosca (fita ou pasta de PTFE). Comum em instalações NEC.</td>
+      <td data-label="Tipo de rosca"><strong>NPT (cônico)</strong></td>
+      <td data-label="Designação">½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
+      <td data-label="Região">América do Norte</td>
+      <td data-label="Observações">Cônico autovedante. Requer vedante de rosca (fita ou pasta de PTFE). Comum em instalações NEC.</td>
     </tr>
     <tr>
-      <td><strong>PG (Panzergewinde)</strong></td>
-      <td>PG9, PG11, PG13,5, PG16, PG21, PG29</td>
-      <td>Alemanha (legado)</td>
-      <td>Padrão alemão mais antigo. Ainda encontrado em equipamentos antigos. A ser gradualmente substituído pelo sistema métrico.</td>
+      <td data-label="Tipo de rosca"><strong>PG (Panzergewinde)</strong></td>
+      <td data-label="Designação">PG9, PG11, PG13,5, PG16, PG21, PG29</td>
+      <td data-label="Região">Alemanha (legado)</td>
+      <td data-label="Observações">Padrão alemão mais antigo. Ainda encontrado em equipamentos antigos. A ser gradualmente substituído pelo sistema métrico.</td>
     </tr>
     <tr>
-      <td><strong>G (BSP Paralelo)</strong></td>
-      <td>G½&quot;, G¾&quot;, G1&quot;</td>
-      <td>Reino Unido, Commonwealth</td>
-      <td>Rosca paralela (não cónica). Requer anilha de vedação ou O-ring.</td>
+      <td data-label="Tipo de rosca"><strong>G (BSP Paralelo)</strong></td>
+      <td data-label="Designação">G½&quot;, G¾&quot;, G1&quot;</td>
+      <td data-label="Região">Reino Unido, Commonwealth</td>
+      <td data-label="Observações">Rosca paralela (não cónica). Requer anilha de vedação ou O-ring.</td>
     </tr>
   </tbody>
 </table>
@@ -384,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Classificações IP para prensa-cabos</h2>
 <p>A classificação de proteção contra ingresso indica a resistência ao pó e à água. Classificações IP mais elevadas são necessárias para ambientes mais adversos.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Classificação IP</th>
@@ -395,34 +395,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IP54</strong></td>
-      <td>Proteção contra poeira</td>
-      <td>À prova de salpicos</td>
-      <td>Ambientes internos e secos</td>
+      <td data-label="Classificação IP"><strong>IP54</strong></td>
+      <td data-label="Proteção contra poeira">Proteção contra poeira</td>
+      <td data-label="Proteção contra água">À prova de salpicos</td>
+      <td data-label="Aplicação típica">Ambientes internos e secos</td>
     </tr>
     <tr>
-      <td><strong>IP66</strong></td>
-      <td>Estanque ao pó</td>
-      <td>Jatos de água potentes</td>
-      <td>Exterior, industrial (mais comum)</td>
+      <td data-label="Classificação IP"><strong>IP66</strong></td>
+      <td data-label="Proteção contra poeira">Estanque ao pó</td>
+      <td data-label="Proteção contra água">Jatos de água potentes</td>
+      <td data-label="Aplicação típica">Exterior, industrial (mais comum)</td>
     </tr>
     <tr>
-      <td><strong>IP67</strong></td>
-      <td>À prova de poeira</td>
-      <td>Imersão temporária (1 m, 30 min)</td>
-      <td>Áreas propensas a inundações, lavagem</td>
+      <td data-label="Classificação IP"><strong>IP67</strong></td>
+      <td data-label="Proteção contra poeira">À prova de poeira</td>
+      <td data-label="Proteção contra água">Imersão temporária (1 m, 30 min)</td>
+      <td data-label="Aplicação típica">Áreas propensas a inundações, lavagem</td>
     </tr>
     <tr>
-      <td><strong>IP68</strong></td>
-      <td>À prova de poeira</td>
-      <td>Imersão contínua (profundidade/tempo por fabricante)</td>
-      <td>Submarino, permanente debaixo de água</td>
+      <td data-label="Classificação IP"><strong>IP68</strong></td>
+      <td data-label="Proteção contra poeira">À prova de poeira</td>
+      <td data-label="Proteção contra água">Imersão contínua (profundidade/tempo por fabricante)</td>
+      <td data-label="Aplicação típica">Submarino, permanente debaixo de água</td>
     </tr>
     <tr>
-      <td><strong>IP6X</strong></td>
-      <td>À prova de poeira</td>
-      <td>Sem proteção contra água especificada</td>
-      <td>Zonas com poeira (Zona 20/21) onde a entrada de água não é uma preocupação</td>
+      <td data-label="Classificação IP"><strong>IP6X</strong></td>
+      <td data-label="Proteção contra poeira">À prova de poeira</td>
+      <td data-label="Proteção contra água">Sem proteção contra água especificada</td>
+      <td data-label="Aplicação típica">Zonas com poeira (Zona 20/21) onde a entrada de água não é uma preocupação</td>
     </tr>
   </tbody>
 </table>

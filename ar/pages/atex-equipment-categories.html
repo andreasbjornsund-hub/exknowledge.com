@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
 
@@ -198,12 +198,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>تنقسم معدات المجموعة II إلى ثلاث فئات، كل منها يوفر مستوى حماية مختلف:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>الفئة</th><th>مستوى الحماية</th><th>مناسبة للمنطقة</th><th>EPL (غاز)</th><th>EPL (غبار)</th><th>تحمّل الأعطال</th></tr></thead>
       <tbody>
-        <tr><td><strong>الفئة 1</strong></td><td>عالٍ جداً</td><td>Zone 0, 1, 2 (غاز)<br>Zone 20, 21, 22 (غبار)</td><td>Ga</td><td>Da</td><td>آمنة مع عطلين مستقلين</td></tr>
-        <tr><td><strong>الفئة 2</strong></td><td>عالٍ</td><td>Zone 1, 2 (غاز)<br>Zone 21, 22 (غبار)</td><td>Gb</td><td>Db</td><td>آمنة مع عطل واحد</td></tr>
-        <tr><td><strong>الفئة 3</strong></td><td>عادي</td><td>Zone 2 (غاز)<br>Zone 22 (غبار)</td><td>Gc</td><td>Dc</td><td>آمنة في التشغيل العادي فقط</td></tr>
+        <tr><td data-label="الفئة"><strong>الفئة 1</strong></td><td data-label="مستوى الحماية">عالٍ جداً</td><td data-label="مناسبة للمنطقة">Zone 0, 1, 2 (غاز)<br>Zone 20, 21, 22 (غبار)</td><td data-label="EPL (غاز)">Ga</td><td data-label="EPL (غبار)">Da</td><td data-label="تحمّل الأعطال">آمنة مع عطلين مستقلين</td></tr>
+        <tr><td data-label="الفئة"><strong>الفئة 2</strong></td><td data-label="مستوى الحماية">عالٍ</td><td data-label="مناسبة للمنطقة">Zone 1, 2 (غاز)<br>Zone 21, 22 (غبار)</td><td data-label="EPL (غاز)">Gb</td><td data-label="EPL (غبار)">Db</td><td data-label="تحمّل الأعطال">آمنة مع عطل واحد</td></tr>
+        <tr><td data-label="الفئة"><strong>الفئة 3</strong></td><td data-label="مستوى الحماية">عادي</td><td data-label="مناسبة للمنطقة">Zone 2 (غاز)<br>Zone 22 (غبار)</td><td data-label="EPL (غاز)">Gc</td><td data-label="EPL (غبار)">Dc</td><td data-label="تحمّل الأعطال">آمنة في التشغيل العادي فقط</td></tr>
       </tbody>
     </table></div>
 
@@ -231,15 +231,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>هذا هو الجدول الذي يحتاجه كل مهندس Ex. لكل منطقة، الحد الأدنى المطلوب لفئة المعدات:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>المنطقة</th><th>مستوى الخطر</th><th>الحد الأدنى للفئة</th><th>مثال على علامة ATEX</th></tr></thead>
       <tbody>
-        <tr><td>Zone 0</td><td>أجواء غاز قابلة للانفجار مستمرة</td><td>الفئة 1G</td><td><code>II 1G</code></td></tr>
-        <tr><td>Zone 1</td><td>محتملة أثناء التشغيل العادي</td><td>الفئة 2G (أو 1G)</td><td><code>II 2G</code></td></tr>
-        <tr><td>Zone 2</td><td>غير محتملة، لفترة قصيرة فقط</td><td>الفئة 3G (أو 2G، 1G)</td><td><code>II 3G</code></td></tr>
-        <tr><td>Zone 20</td><td>سحابة غبار قابلة للانفجار مستمرة</td><td>الفئة 1D</td><td><code>II 1D</code></td></tr>
-        <tr><td>Zone 21</td><td>محتملة أثناء التشغيل العادي</td><td>الفئة 2D (أو 1D)</td><td><code>II 2D</code></td></tr>
-        <tr><td>Zone 22</td><td>غير محتملة، لفترة قصيرة فقط</td><td>الفئة 3D (أو 2D، 1D)</td><td><code>II 3D</code></td></tr>
+        <tr><td data-label="المنطقة">Zone 0</td><td data-label="مستوى الخطر">أجواء غاز قابلة للانفجار مستمرة</td><td data-label="الحد الأدنى للفئة">الفئة 1G</td><td data-label="مثال على علامة ATEX"><code>II 1G</code></td></tr>
+        <tr><td data-label="المنطقة">Zone 1</td><td data-label="مستوى الخطر">محتملة أثناء التشغيل العادي</td><td data-label="الحد الأدنى للفئة">الفئة 2G (أو 1G)</td><td data-label="مثال على علامة ATEX"><code>II 2G</code></td></tr>
+        <tr><td data-label="المنطقة">Zone 2</td><td data-label="مستوى الخطر">غير محتملة، لفترة قصيرة فقط</td><td data-label="الحد الأدنى للفئة">الفئة 3G (أو 2G، 1G)</td><td data-label="مثال على علامة ATEX"><code>II 3G</code></td></tr>
+        <tr><td data-label="المنطقة">Zone 20</td><td data-label="مستوى الخطر">سحابة غبار قابلة للانفجار مستمرة</td><td data-label="الحد الأدنى للفئة">الفئة 1D</td><td data-label="مثال على علامة ATEX"><code>II 1D</code></td></tr>
+        <tr><td data-label="المنطقة">Zone 21</td><td data-label="مستوى الخطر">محتملة أثناء التشغيل العادي</td><td data-label="الحد الأدنى للفئة">الفئة 2D (أو 1D)</td><td data-label="مثال على علامة ATEX"><code>II 2D</code></td></tr>
+        <tr><td data-label="المنطقة">Zone 22</td><td data-label="مستوى الخطر">غير محتملة، لفترة قصيرة فقط</td><td data-label="الحد الأدنى للفئة">الفئة 3D (أو 2D، 1D)</td><td data-label="مثال على علامة ATEX"><code>II 3D</code></td></tr>
       </tbody>
     </table></div>
 
@@ -249,12 +249,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>نظام <a href="epl.html"><i class="ph ph-gauge"></i> مستوى حماية المعدات</a> (المُقدم في IEC 60079-0) يوفر تصنيفاً أكثر تفصيلاً من فئات ATEX. المطابقة:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>فئة ATEX</th><th>EPL (غاز)</th><th>EPL (غبار)</th><th>أنواع حماية IEC</th></tr></thead>
       <tbody>
-        <tr><td>الفئة 1</td><td>Ga</td><td>Da</td><td>Ex ia, Ex ma</td></tr>
-        <tr><td>الفئة 2</td><td>Gb</td><td>Db</td><td>Ex d, Ex e, Ex ib, Ex px, Ex py, Ex mb, Ex o, Ex q</td></tr>
-        <tr><td>الفئة 3</td><td>Gc</td><td>Dc</td><td>Ex nA, Ex nC, Ex nR, Ex ec, Ex ic, Ex pz, Ex mc</td></tr>
+        <tr><td data-label="فئة ATEX">الفئة 1</td><td data-label="EPL (غاز)">Ga</td><td data-label="EPL (غبار)">Da</td><td data-label="أنواع حماية IEC">Ex ia, Ex ma</td></tr>
+        <tr><td data-label="فئة ATEX">الفئة 2</td><td data-label="EPL (غاز)">Gb</td><td data-label="EPL (غبار)">Db</td><td data-label="أنواع حماية IEC">Ex d, Ex e, Ex ib, Ex px, Ex py, Ex mb, Ex o, Ex q</td></tr>
+        <tr><td data-label="فئة ATEX">الفئة 3</td><td data-label="EPL (غاز)">Gc</td><td data-label="EPL (غبار)">Dc</td><td data-label="أنواع حماية IEC">Ex nA, Ex nC, Ex nR, Ex ec, Ex ic, Ex pz, Ex mc</td></tr>
       </tbody>
     </table></div>
 

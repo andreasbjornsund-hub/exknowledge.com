@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
 
@@ -195,12 +195,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>Gruppe II-udstyr er inddelt i tre kategorier, der hver yder et forskelligt beskyttelsesniveau:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>Kategori</th><th>Beskyttelsesniveau</th><th>Egnet til zone</th><th>EPL (gas)</th><th>EPL (støv)</th><th>Fejltolerance</th></tr></thead>
       <tbody>
-        <tr><td><strong>Kategori 1</strong></td><td>Meget højt</td><td>Zone 0, 1, 2 (gas)<br>Zone 20, 21, 22 (støv)</td><td>Ga</td><td>Da</td><td>Sikker ved to uafhængige fejl</td></tr>
-        <tr><td><strong>Kategori 2</strong></td><td>Højt</td><td>Zone 1, 2 (gas)<br>Zone 21, 22 (støv)</td><td>Gb</td><td>Db</td><td>Sikker ved én fejl</td></tr>
-        <tr><td><strong>Kategori 3</strong></td><td>Normalt</td><td>Zone 2 (gas)<br>Zone 22 (støv)</td><td>Gc</td><td>Dc</td><td>Sikker kun under normal drift</td></tr>
+        <tr><td data-label="Kategori"><strong>Kategori 1</strong></td><td data-label="Beskyttelsesniveau">Meget højt</td><td data-label="Egnet til zone">Zone 0, 1, 2 (gas)<br>Zone 20, 21, 22 (støv)</td><td data-label="EPL (gas)">Ga</td><td data-label="EPL (støv)">Da</td><td data-label="Fejltolerance">Sikker ved to uafhængige fejl</td></tr>
+        <tr><td data-label="Kategori"><strong>Kategori 2</strong></td><td data-label="Beskyttelsesniveau">Højt</td><td data-label="Egnet til zone">Zone 1, 2 (gas)<br>Zone 21, 22 (støv)</td><td data-label="EPL (gas)">Gb</td><td data-label="EPL (støv)">Db</td><td data-label="Fejltolerance">Sikker ved én fejl</td></tr>
+        <tr><td data-label="Kategori"><strong>Kategori 3</strong></td><td data-label="Beskyttelsesniveau">Normalt</td><td data-label="Egnet til zone">Zone 2 (gas)<br>Zone 22 (støv)</td><td data-label="EPL (gas)">Gc</td><td data-label="EPL (støv)">Dc</td><td data-label="Fejltolerance">Sikker kun under normal drift</td></tr>
       </tbody>
     </table></div>
 
@@ -228,15 +228,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>Dette er tabellen, enhver Ex-ingeniør har brug for. For hver zone den mindste krævede udstyrskategori:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>Zone</th><th>Fareniveau</th><th>Minimumskategori</th><th>ATEX-mærkningseksempel</th></tr></thead>
       <tbody>
-        <tr><td>Zone 0</td><td>Vedvarende eksplosiv gasatmosfære</td><td>Kategori 1G</td><td><code>II 1G</code></td></tr>
-        <tr><td>Zone 1</td><td>Sandsynlig under normal drift</td><td>Kategori 2G (eller 1G)</td><td><code>II 2G</code></td></tr>
-        <tr><td>Zone 2</td><td>Usandsynlig, kun kortvarigt</td><td>Kategori 3G (eller 2G, 1G)</td><td><code>II 3G</code></td></tr>
-        <tr><td>Zone 20</td><td>Vedvarende eksplosiv støvsky</td><td>Kategori 1D</td><td><code>II 1D</code></td></tr>
-        <tr><td>Zone 21</td><td>Sandsynlig under normal drift</td><td>Kategori 2D (eller 1D)</td><td><code>II 2D</code></td></tr>
-        <tr><td>Zone 22</td><td>Usandsynlig, kun kortvarigt</td><td>Kategori 3D (eller 2D, 1D)</td><td><code>II 3D</code></td></tr>
+        <tr><td data-label="Zone">Zone 0</td><td data-label="Fareniveau">Vedvarende eksplosiv gasatmosfære</td><td data-label="Minimumskategori">Kategori 1G</td><td data-label="ATEX-mærkningseksempel"><code>II 1G</code></td></tr>
+        <tr><td data-label="Zone">Zone 1</td><td data-label="Fareniveau">Sandsynlig under normal drift</td><td data-label="Minimumskategori">Kategori 2G (eller 1G)</td><td data-label="ATEX-mærkningseksempel"><code>II 2G</code></td></tr>
+        <tr><td data-label="Zone">Zone 2</td><td data-label="Fareniveau">Usandsynlig, kun kortvarigt</td><td data-label="Minimumskategori">Kategori 3G (eller 2G, 1G)</td><td data-label="ATEX-mærkningseksempel"><code>II 3G</code></td></tr>
+        <tr><td data-label="Zone">Zone 20</td><td data-label="Fareniveau">Vedvarende eksplosiv støvsky</td><td data-label="Minimumskategori">Kategori 1D</td><td data-label="ATEX-mærkningseksempel"><code>II 1D</code></td></tr>
+        <tr><td data-label="Zone">Zone 21</td><td data-label="Fareniveau">Sandsynlig under normal drift</td><td data-label="Minimumskategori">Kategori 2D (eller 1D)</td><td data-label="ATEX-mærkningseksempel"><code>II 2D</code></td></tr>
+        <tr><td data-label="Zone">Zone 22</td><td data-label="Fareniveau">Usandsynlig, kun kortvarigt</td><td data-label="Minimumskategori">Kategori 3D (eller 2D, 1D)</td><td data-label="ATEX-mærkningseksempel"><code>II 3D</code></td></tr>
       </tbody>
     </table></div>
 
@@ -246,12 +246,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p><a href="epl.html"><i class="ph ph-gauge"></i> Udstyrets beskyttelsesniveau</a> (EPL, indført i IEC 60079-0) giver en mere detaljeret klassificering end ATEX-kategorier. Kortlægningen:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>ATEX-kategori</th><th>EPL (gas)</th><th>EPL (støv)</th><th>IEC-beskyttelsestyper</th></tr></thead>
       <tbody>
-        <tr><td>Kategori 1</td><td>Ga</td><td>Da</td><td>Ex ia, Ex ma</td></tr>
-        <tr><td>Kategori 2</td><td>Gb</td><td>Db</td><td>Ex d, Ex e, Ex ib, Ex px, Ex py, Ex mb, Ex o, Ex q</td></tr>
-        <tr><td>Kategori 3</td><td>Gc</td><td>Dc</td><td>Ex nA, Ex nC, Ex nR, Ex ec, Ex ic, Ex pz, Ex mc</td></tr>
+        <tr><td data-label="ATEX-kategori">Kategori 1</td><td data-label="EPL (gas)">Ga</td><td data-label="EPL (støv)">Da</td><td data-label="IEC-beskyttelsestyper">Ex ia, Ex ma</td></tr>
+        <tr><td data-label="ATEX-kategori">Kategori 2</td><td data-label="EPL (gas)">Gb</td><td data-label="EPL (støv)">Db</td><td data-label="IEC-beskyttelsestyper">Ex d, Ex e, Ex ib, Ex px, Ex py, Ex mb, Ex o, Ex q</td></tr>
+        <tr><td data-label="ATEX-kategori">Kategori 3</td><td data-label="EPL (gas)">Gc</td><td data-label="EPL (støv)">Dc</td><td data-label="IEC-beskyttelsestyper">Ex nA, Ex nC, Ex nR, Ex ec, Ex ic, Ex pz, Ex mc</td></tr>
       </tbody>
     </table></div>
 

@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
 
@@ -187,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><strong>MESG</strong> (Maximum Experimental Safe Gap), raon suurin leveys, jonka läpi sisäinen räjähdys ei leviä ulkoiseen räjähdysvaaralliseen ilmakehään. Testattu standardoidussa 25 ml:n pallomaisessa kammiossa, jossa on 25 mm pitkä rako. Pienempi MESG = vaarallisempi kaasu.</li>
 <li><strong>MIC-suhde</strong> (Minimum Igniting Current Ratio) – kaasun pienimmän sytytysvirran ja metaanin sytytysvirran suhde mitattuna tavanomaisella sisäisen turvallisuuden testauslaitteella. Pienempi MIC-suhde = vaarallisempi kaasu.</li>
 </ul>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Kaasuryhmä</th>
 <th>MESG (mm)</th>
 <th>MIC-suhde</th>
@@ -195,25 +195,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <th>Vaarataso</th>
 </tr></thead><tbody>
 <tr>
-<td><strong>IIA</strong></td>
-<td>>0.90</td>
-<td>>0.80</td>
-<td>Metaani, propaani, butaani, asetoni, etanoli, bentseeni, diesel, ammoniakki</td>
-<td>Vähiten vaarallinen</td>
+<td data-label="Kaasuryhmä"><strong>IIA</strong></td>
+<td data-label="MESG (mm)">>0.90</td>
+<td data-label="MIC-suhde">>0.80</td>
+<td data-label="Tyypilliset kaasut">Metaani, propaani, butaani, asetoni, etanoli, bentseeni, diesel, ammoniakki</td>
+<td data-label="Vaarataso">Vähiten vaarallinen</td>
 </tr>
 <tr>
-<td><strong>IIB</strong></td>
-<td>0.50–0.90</td>
-<td>0.45–0.80</td>
-<td>Eteeni, rikkivety, dietyylieetteri, etyleenioksidi, kaupunkikaasu</td>
-<td>Keskitaso</td>
+<td data-label="Kaasuryhmä"><strong>IIB</strong></td>
+<td data-label="MESG (mm)">0.50–0.90</td>
+<td data-label="MIC-suhde">0.45–0.80</td>
+<td data-label="Tyypilliset kaasut">Eteeni, rikkivety, dietyylieetteri, etyleenioksidi, kaupunkikaasu</td>
+<td data-label="Vaarataso">Keskitaso</td>
 </tr>
 <tr>
-<td><strong>IIC</strong></td>
-<td><0.50</td>
-<td><0.45</td>
-<td>Vety, asetyleeni, hiilidisulfidi</td>
-<td>Kaikkein vaarallisin</td>
+<td data-label="Kaasuryhmä"><strong>IIC</strong></td>
+<td data-label="MESG (mm)"><0.50</td>
+<td data-label="MIC-suhde"><0.45</td>
+<td data-label="Tyypilliset kaasut">Vety, asetyleeni, hiilidisulfidi</td>
+<td data-label="Vaarataso">Kaikkein vaarallisin</td>
 </tr>
 </tbody></table></div>
 <h3 id="important-notes">Tärkeitä huomautuksia</h3>
@@ -256,29 +256,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Vety kuuluu vaarallisimpiin kaasuryhmiin (IIC) äärimmäisen pienen MESG:n (0,29 mm) ja erittäin alhaisen minimisytytysenergian (0,017 mJ – noin 10 × metaaniin verrattuna) vuoksi. Sen itsesyttymislämpötila on kuitenkin suhteellisen korkea (560 °C), joten se sijoitetaan vain <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i> lämpötilaluokka</a> T1.</p>
 <p>Tämä tarkoittaa, että vety vaatii tiukimman suojan kipinöiltä/kaareilta (IIC), mutta on suhteellisen anteeksiantavainen pintalämpötilassa (T1). Tämä on joidenkin IIA-kaasujen vastakohta.</p>
 <h2 id="dust-groups-group-iii">Pölyryhmät (ryhmä III)</h2>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Pölyryhmä</th>
 <th>Tyyppi</th>
 <th>Esimerkkejä</th>
 <th>Vaarataso</th>
 </tr></thead><tbody>
 <tr>
-<td><strong>IIIA</strong></td>
-<td>Palavat lennot</td>
-<td>Tekstiilikuidut, puuvillanukka, viskoosi, juutti</td>
-<td>Vähiten vaarallinen</td>
+<td data-label="Pölyryhmä"><strong>IIIA</strong></td>
+<td data-label="Tyyppi">Palavat lennot</td>
+<td data-label="Esimerkkejä">Tekstiilikuidut, puuvillanukka, viskoosi, juutti</td>
+<td data-label="Vaarataso">Vähiten vaarallinen</td>
 </tr>
 <tr>
-<td><strong>IIIB</strong></td>
-<td>Sähköä johtamaton pöly</td>
-<td>Viljajauhot, sokeri, puupöly, kivihiili, muovijauhe, lääkejauheet</td>
-<td>Keskitaso</td>
+<td data-label="Pölyryhmä"><strong>IIIB</strong></td>
+<td data-label="Tyyppi">Sähköä johtamaton pöly</td>
+<td data-label="Esimerkkejä">Viljajauhot, sokeri, puupöly, kivihiili, muovijauhe, lääkejauheet</td>
+<td data-label="Vaarataso">Keskitaso</td>
 </tr>
 <tr>
-<td><strong>IIIC</strong></td>
-<td>Johtava pöly</td>
-<td>Alumiinijauhe, magnesium, titaani, rauta, hiilimusta</td>
-<td>Vaarallisin</td>
+<td data-label="Pölyryhmä"><strong>IIIC</strong></td>
+<td data-label="Tyyppi">Johtava pöly</td>
+<td data-label="Esimerkkejä">Alumiinijauhe, magnesium, titaani, rauta, hiilimusta</td>
+<td data-label="Vaarataso">Vaarallisin</td>
 </tr>
 </tbody></table></div>
 <h3 id="conductive-vs-non-conductive-dust">Johtava vs johtamaton pöly</h3>

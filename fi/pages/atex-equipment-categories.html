@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
 
@@ -195,12 +195,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>Ryhmän II laitteet jaetaan kolmeen laiteluokkaan, joista kukin tarjoaa erilaisen suojaustason:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>Laiteluokka</th><th>Suojaustaso</th><th>Sopii tilaan</th><th>EPL (kaasu)</th><th>EPL (pöly)</th><th>Viansietokyky</th></tr></thead>
       <tbody>
-        <tr><td><strong>Laiteluokka 1</strong></td><td>Erittäin korkea</td><td>Tila 0, 1, 2 (kaasu)<br>Tila 20, 21, 22 (pöly)</td><td>Ga</td><td>Da</td><td>Turvallinen kahdella riippumattomalla vialla</td></tr>
-        <tr><td><strong>Laiteluokka 2</strong></td><td>Korkea</td><td>Tila 1, 2 (kaasu)<br>Tila 21, 22 (pöly)</td><td>Gb</td><td>Db</td><td>Turvallinen yhdellä vialla</td></tr>
-        <tr><td><strong>Laiteluokka 3</strong></td><td>Normaali</td><td>Tila 2 (kaasu)<br>Tila 22 (pöly)</td><td>Gc</td><td>Dc</td><td>Turvallinen vain normaalissa käytössä</td></tr>
+        <tr><td data-label="Laiteluokka"><strong>Laiteluokka 1</strong></td><td data-label="Suojaustaso">Erittäin korkea</td><td data-label="Sopii tilaan">Tila 0, 1, 2 (kaasu)<br>Tila 20, 21, 22 (pöly)</td><td data-label="EPL (kaasu)">Ga</td><td data-label="EPL (pöly)">Da</td><td data-label="Viansietokyky">Turvallinen kahdella riippumattomalla vialla</td></tr>
+        <tr><td data-label="Laiteluokka"><strong>Laiteluokka 2</strong></td><td data-label="Suojaustaso">Korkea</td><td data-label="Sopii tilaan">Tila 1, 2 (kaasu)<br>Tila 21, 22 (pöly)</td><td data-label="EPL (kaasu)">Gb</td><td data-label="EPL (pöly)">Db</td><td data-label="Viansietokyky">Turvallinen yhdellä vialla</td></tr>
+        <tr><td data-label="Laiteluokka"><strong>Laiteluokka 3</strong></td><td data-label="Suojaustaso">Normaali</td><td data-label="Sopii tilaan">Tila 2 (kaasu)<br>Tila 22 (pöly)</td><td data-label="EPL (kaasu)">Gc</td><td data-label="EPL (pöly)">Dc</td><td data-label="Viansietokyky">Turvallinen vain normaalissa käytössä</td></tr>
       </tbody>
     </table></div>
 
@@ -228,15 +228,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>Tämä on taulukko, jota jokainen Ex-insinööri tarvitsee. Vähimmäislaiteluokka kullekin tilalle:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>Tila</th><th>Vaarataso</th><th>Vähimmäislaiteluokka</th><th>ATEX-merkintäesimerkki</th></tr></thead>
       <tbody>
-        <tr><td>Tila 0</td><td>Jatkuva räjähdyskelpoinen kaasuatmosfääri</td><td>Laiteluokka 1G</td><td><code>II 1G</code></td></tr>
-        <tr><td>Tila 1</td><td>Todennäköinen normaalikäytössä</td><td>Laiteluokka 2G (tai 1G)</td><td><code>II 2G</code></td></tr>
-        <tr><td>Tila 2</td><td>Ei todennäköinen, vain lyhyesti</td><td>Laiteluokka 3G (tai 2G, 1G)</td><td><code>II 3G</code></td></tr>
-        <tr><td>Tila 20</td><td>Jatkuva räjähdyskelpoinen pölypilvi</td><td>Laiteluokka 1D</td><td><code>II 1D</code></td></tr>
-        <tr><td>Tila 21</td><td>Todennäköinen normaalikäytössä</td><td>Laiteluokka 2D (tai 1D)</td><td><code>II 2D</code></td></tr>
-        <tr><td>Tila 22</td><td>Ei todennäköinen, vain lyhyesti</td><td>Laiteluokka 3D (tai 2D, 1D)</td><td><code>II 3D</code></td></tr>
+        <tr><td data-label="Tila">Tila 0</td><td data-label="Vaarataso">Jatkuva räjähdyskelpoinen kaasuatmosfääri</td><td data-label="Vähimmäislaiteluokka">Laiteluokka 1G</td><td data-label="ATEX-merkintäesimerkki"><code>II 1G</code></td></tr>
+        <tr><td data-label="Tila">Tila 1</td><td data-label="Vaarataso">Todennäköinen normaalikäytössä</td><td data-label="Vähimmäislaiteluokka">Laiteluokka 2G (tai 1G)</td><td data-label="ATEX-merkintäesimerkki"><code>II 2G</code></td></tr>
+        <tr><td data-label="Tila">Tila 2</td><td data-label="Vaarataso">Ei todennäköinen, vain lyhyesti</td><td data-label="Vähimmäislaiteluokka">Laiteluokka 3G (tai 2G, 1G)</td><td data-label="ATEX-merkintäesimerkki"><code>II 3G</code></td></tr>
+        <tr><td data-label="Tila">Tila 20</td><td data-label="Vaarataso">Jatkuva räjähdyskelpoinen pölypilvi</td><td data-label="Vähimmäislaiteluokka">Laiteluokka 1D</td><td data-label="ATEX-merkintäesimerkki"><code>II 1D</code></td></tr>
+        <tr><td data-label="Tila">Tila 21</td><td data-label="Vaarataso">Todennäköinen normaalikäytössä</td><td data-label="Vähimmäislaiteluokka">Laiteluokka 2D (tai 1D)</td><td data-label="ATEX-merkintäesimerkki"><code>II 2D</code></td></tr>
+        <tr><td data-label="Tila">Tila 22</td><td data-label="Vaarataso">Ei todennäköinen, vain lyhyesti</td><td data-label="Vähimmäislaiteluokka">Laiteluokka 3D (tai 2D, 1D)</td><td data-label="ATEX-merkintäesimerkki"><code>II 3D</code></td></tr>
       </tbody>
     </table></div>
 
@@ -246,12 +246,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p><a href="epl.html"><i class="ph ph-gauge"></i> Laitteen suojaustasojärjestelmä</a> (otettu käyttöön IEC 60079-0:ssa) tarjoaa yksityiskohtaisemman luokittelun kuin ATEX-laiteluokat. Vastaavuus:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>ATEX-laiteluokka</th><th>EPL (kaasu)</th><th>EPL (pöly)</th><th>IEC-suojaustyypit</th></tr></thead>
       <tbody>
-        <tr><td>Laiteluokka 1</td><td>Ga</td><td>Da</td><td>Ex ia, Ex ma</td></tr>
-        <tr><td>Laiteluokka 2</td><td>Gb</td><td>Db</td><td>Ex d, Ex e, Ex ib, Ex px, Ex py, Ex mb, Ex o, Ex q</td></tr>
-        <tr><td>Laiteluokka 3</td><td>Gc</td><td>Dc</td><td>Ex nA, Ex nC, Ex nR, Ex ec, Ex ic, Ex pz, Ex mc</td></tr>
+        <tr><td data-label="ATEX-laiteluokka">Laiteluokka 1</td><td data-label="EPL (kaasu)">Ga</td><td data-label="EPL (pöly)">Da</td><td data-label="IEC-suojaustyypit">Ex ia, Ex ma</td></tr>
+        <tr><td data-label="ATEX-laiteluokka">Laiteluokka 2</td><td data-label="EPL (kaasu)">Gb</td><td data-label="EPL (pöly)">Db</td><td data-label="IEC-suojaustyypit">Ex d, Ex e, Ex ib, Ex px, Ex py, Ex mb, Ex o, Ex q</td></tr>
+        <tr><td data-label="ATEX-laiteluokka">Laiteluokka 3</td><td data-label="EPL (kaasu)">Gc</td><td data-label="EPL (pöly)">Dc</td><td data-label="IEC-suojaustyypit">Ex nA, Ex nC, Ex nR, Ex ec, Ex ic, Ex pz, Ex mc</td></tr>
       </tbody>
     </table></div>
 

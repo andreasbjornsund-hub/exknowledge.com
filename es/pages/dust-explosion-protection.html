@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -216,7 +216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Tipos de polvo combustible</h2>
 
 <h3><a href="/es/pages/gas-groups.html">Grupos de polvo</a> (IEC 60079-0)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Grupo</th>
@@ -227,22 +227,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IIIA</strong></td>
-      <td>Partículas combustibles</td>
-      <td>Fibras de algodón, pelusas textiles, virutas de madera, fibras de papel</td>
-      <td>Fácilmente inflamables, propagación rápida de las llamas</td>
+      <td data-label="Grupo"><strong>IIIA</strong></td>
+      <td data-label="Tipo">Partículas combustibles</td>
+      <td data-label="Ejemplos">Fibras de algodón, pelusas textiles, virutas de madera, fibras de papel</td>
+      <td data-label="Peligro principal">Fácilmente inflamables, propagación rápida de las llamas</td>
     </tr>
     <tr>
-      <td><strong>IIIB</strong></td>
-      <td>Polvo no conductor</td>
-      <td>Harina, azúcar, almidón, grano, polvo de madera, polvo plástico, polvos farmacéuticos</td>
-      <td>Carga electrostática, acumulación de capas</td>
+      <td data-label="Grupo"><strong>IIIB</strong></td>
+      <td data-label="Tipo">Polvo no conductor</td>
+      <td data-label="Ejemplos">Harina, azúcar, almidón, grano, polvo de madera, polvo plástico, polvos farmacéuticos</td>
+      <td data-label="Peligro principal">Carga electrostática, acumulación de capas</td>
     </tr>
     <tr>
-      <td><strong>IIIC</strong></td>
-      <td>Polvo conductor</td>
-      <td>Polvo de aluminio, polvo de magnesio, limaduras de hierro, negro de humo, grafito</td>
-      <td>Puede provocar cortocircuitos en equipos eléctricos, metales muy reactivos</td>
+      <td data-label="Grupo"><strong>IIIC</strong></td>
+      <td data-label="Tipo">Polvo conductor</td>
+      <td data-label="Ejemplos">Polvo de aluminio, polvo de magnesio, limaduras de hierro, negro de humo, grafito</td>
+      <td data-label="Peligro principal">Puede provocar cortocircuitos en equipos eléctricos, metales muy reactivos</td>
     </tr>
   </tbody>
 </table>
@@ -264,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Parámetros de explosión de polvo</h2>
 <p>La explosividad del polvo se caracteriza mediante ensayos de laboratorio según la serie EN 14034 (véase <a href="/es/pages/standards.html">la descripción general de las normas</a>):</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Parámetro</th>
@@ -275,46 +275,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Presión máxima de explosión</strong></td>
-      <td>P<sub>max</sub></td>
-      <td>Presión máxima durante la explosión (bar)</td>
-      <td>Determina los requisitos de resistencia estructural para la contención o ventilación</td>
+      <td data-label="Parámetro"><strong>Presión máxima de explosión</strong></td>
+      <td data-label="Símbolo">P<sub>max</sub></td>
+      <td data-label="Qué mide">Presión máxima durante la explosión (bar)</td>
+      <td data-label="Por qué es importante">Determina los requisitos de resistencia estructural para la contención o ventilación</td>
     </tr>
     <tr>
-      <td><strong>Gravedad de la explosión de polvo</strong></td>
-      <td>K<sub>St</sub></td>
-      <td>Tasa de aumento de presión (bar·m/s)</td>
-      <td>Determina el tamaño del área de ventilación y el tiempo de respuesta de la supresión</td>
+      <td data-label="Parámetro"><strong>Gravedad de la explosión de polvo</strong></td>
+      <td data-label="Símbolo">K<sub>St</sub></td>
+      <td data-label="Qué mide">Tasa de aumento de presión (bar·m/s)</td>
+      <td data-label="Por qué es importante">Determina el tamaño del área de ventilación y el tiempo de respuesta de la supresión</td>
     </tr>
     <tr>
-      <td><strong>Concentración mínima explosiva</strong></td>
-      <td>MEC</td>
-      <td>Concentración mínima de polvo que puede explotar (g/m³)</td>
-      <td>Equivalente al LEL para gases; normalmente entre 20 y 60 g/m³</td>
+      <td data-label="Parámetro"><strong>Concentración mínima explosiva</strong></td>
+      <td data-label="Símbolo">MEC</td>
+      <td data-label="Qué mide">Concentración mínima de polvo que puede explotar (g/m³)</td>
+      <td data-label="Por qué es importante">Equivalente al LEL para gases; normalmente entre 20 y 60 g/m³</td>
     </tr>
     <tr>
-      <td><strong>Energía mínima de ignición</strong></td>
-      <td>MIE</td>
-      <td>Chispa más pequeña que puede encender una nube de polvo (mJ)</td>
-      <td>Determina el nivel de peligro de descarga electrostática</td>
+      <td data-label="Parámetro"><strong>Energía mínima de ignición</strong></td>
+      <td data-label="Símbolo">MIE</td>
+      <td data-label="Qué mide">Chispa más pequeña que puede encender una nube de polvo (mJ)</td>
+      <td data-label="Por qué es importante">Determina el nivel de peligro de descarga electrostática</td>
     </tr>
     <tr>
-      <td><strong>Temperatura mínima de ignición (nube)</strong></td>
-      <td>MIT</td>
-      <td>Temperatura mínima de la superficie que enciende una nube de polvo (°C), véanse <a href="/es/pages/temperature-classes.html">las clases de temperatura</a></td>
-      <td>Establece los límites de temperatura de la superficie del equipo</td>
+      <td data-label="Parámetro"><strong>Temperatura mínima de ignición (nube)</strong></td>
+      <td data-label="Símbolo">MIT</td>
+      <td data-label="Qué mide">Temperatura mínima de la superficie que enciende una nube de polvo (°C), véanse <a href="/es/pages/temperature-classes.html">las clases de temperatura</a></td>
+      <td data-label="Por qué es importante">Establece los límites de temperatura de la superficie del equipo</td>
     </tr>
     <tr>
-      <td><strong>Temperatura de ignición de la capa</strong></td>
-      <td>LIT</td>
-      <td>Temperatura a la que se inflama una capa de polvo de 5 mm (°C)</td>
-      <td>A menudo inferior a la MIT; crítica para las normas de limpieza</td>
+      <td data-label="Parámetro"><strong>Temperatura de ignición de la capa</strong></td>
+      <td data-label="Símbolo">LIT</td>
+      <td data-label="Qué mide">Temperatura a la que se inflama una capa de polvo de 5 mm (°C)</td>
+      <td data-label="Por qué es importante">A menudo inferior a la MIT; crítica para las normas de limpieza</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Clases de explosión de polvo (K<sub>St</sub>)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Clase</th>
@@ -325,28 +325,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>St 0</td>
-      <td>0</td>
-      <td>No explosivo</td>
-      <td>Algunos polvos minerales, cemento</td>
+      <td data-label="Clase">St 0</td>
+      <td data-label="Rango K St (bar·m/s)">0</td>
+      <td data-label="Gravedad">No explosivo</td>
+      <td data-label="Ejemplos">Algunos polvos minerales, cemento</td>
     </tr>
     <tr>
-      <td><strong>St 1</strong></td>
-      <td>1–200</td>
-      <td>Débil a moderado</td>
-      <td>Harina de trigo, azúcar, polvo de madera, carbón</td>
+      <td data-label="Clase"><strong>St 1</strong></td>
+      <td data-label="Rango K St (bar·m/s)">1–200</td>
+      <td data-label="Gravedad">Débil a moderado</td>
+      <td data-label="Ejemplos">Harina de trigo, azúcar, polvo de madera, carbón</td>
     </tr>
     <tr>
-      <td><strong>Est. 2</strong></td>
-      <td>201-300</td>
-      <td>Fuerte</td>
-      <td>Pigmentos orgánicos, algunos plásticos, celulosa</td>
+      <td data-label="Clase"><strong>Est. 2</strong></td>
+      <td data-label="Rango K St (bar·m/s)">201-300</td>
+      <td data-label="Gravedad">Fuerte</td>
+      <td data-label="Ejemplos">Pigmentos orgánicos, algunos plásticos, celulosa</td>
     </tr>
     <tr>
-      <td><strong>Est. 3</strong></td>
-      <td>&gt; 300</td>
-      <td>Muy fuerte</td>
-      <td>Polvo de aluminio, polvo de magnesio</td>
+      <td data-label="Clase"><strong>Est. 3</strong></td>
+      <td data-label="Rango K St (bar·m/s)">&gt; 300</td>
+      <td data-label="Gravedad">Muy fuerte</td>
+      <td data-label="Ejemplos">Polvo de aluminio, polvo de magnesio</td>
     </tr>
   </tbody>
 </table>
@@ -356,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2><a href="/es/pages/zone-classification.html">Zonas</a> de polvo: 20, 21, 22</h2>
 
 <h3>Definiciones de zonas</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zona</th>
@@ -367,22 +367,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zona 20</strong></td>
-      <td>De forma continua o frecuente</td>
-      <td>Categoría 1 D (EPL Da)</td>
-      <td>Dentro de silos, tolvas, ciclones, molinos, mezcladoras, transportadores neumáticos</td>
+      <td data-label="Zona"><strong>Zona 20</strong></td>
+      <td data-label="Nube de polvo presente">De forma continua o frecuente</td>
+      <td data-label="Categoría de equipo requerida">Categoría 1 D (EPL Da)</td>
+      <td data-label="Ubicaciones típicas">Dentro de silos, tolvas, ciclones, molinos, mezcladoras, transportadores neumáticos</td>
     </tr>
     <tr>
-      <td><strong>Zona 21</strong></td>
-      <td>Probable en funcionamiento normal</td>
-      <td>Categoría 2 D (EPL Db)</td>
-      <td>Alrededor de puntos de volcado de bolsas, puntos de llenado, transferencias de transportadores abiertos, puertas de acceso a filtros</td>
+      <td data-label="Zona"><strong>Zona 21</strong></td>
+      <td data-label="Nube de polvo presente">Probable en funcionamiento normal</td>
+      <td data-label="Categoría de equipo requerida">Categoría 2 D (EPL Db)</td>
+      <td data-label="Ubicaciones típicas">Alrededor de puntos de volcado de bolsas, puntos de llenado, transferencias de transportadores abiertos, puertas de acceso a filtros</td>
     </tr>
     <tr>
-      <td><strong>Zona 22</strong></td>
-      <td>Poco probable; solo durante períodos cortos</td>
-      <td>Categoría 3 D (EPL Dc)</td>
-      <td>Áreas cercanas a los límites de la Zona 21, alrededor de equipos sellados, donde pueden acumularse capas</td>
+      <td data-label="Zona"><strong>Zona 22</strong></td>
+      <td data-label="Nube de polvo presente">Poco probable; solo durante períodos cortos</td>
+      <td data-label="Categoría de equipo requerida">Categoría 3 D (EPL Dc)</td>
+      <td data-label="Ubicaciones típicas">Áreas cercanas a los límites de la Zona 21, alrededor de equipos sellados, donde pueden acumularse capas</td>
     </tr>
   </tbody>
 </table>
@@ -460,7 +460,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Selección de equipos para zonas con polvo</h2>
 
 <h3>Métodos de protección contra el polvo</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Método</th>
@@ -472,32 +472,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>Protección mediante envolvente</td>
-      <td>Ex ta / tb / tc</td>
-      <td>IEC 60079-31</td>
-      <td>Caja estanca al polvo con control de temperatura</td>
-      <td>ta: Zona 20, tb: Zona 21, tc: Zona 22</td>
+      <td data-label="Método">Protección mediante envolvente</td>
+      <td data-label="Código">Ex ta / tb / tc</td>
+      <td data-label="Norma">IEC 60079-31</td>
+      <td data-label="Principio">Caja estanca al polvo con control de temperatura</td>
+      <td data-label="Idoneidad de la zona">ta: Zona 20, tb: Zona 21, tc: Zona 22</td>
     </tr>
     <tr>
-      <td><a href="/es/pages/explosion-proof-vs-intrinsically-safe.html">Seguridad intrínseca</a></td>
-      <td>Ex ia / ib</td>
-      <td>IEC 60079-11</td>
-      <td>Energía limitada por debajo del MIE del polvo</td>
-      <td>ia: Zona 20, ib: Zona 21</td>
+      <td data-label="Método"><a href="/es/pages/explosion-proof-vs-intrinsically-safe.html">Seguridad intrínseca</a></td>
+      <td data-label="Código">Ex ia / ib</td>
+      <td data-label="Norma">IEC 60079-11</td>
+      <td data-label="Principio">Energía limitada por debajo del MIE del polvo</td>
+      <td data-label="Idoneidad de la zona">ia: Zona 20, ib: Zona 21</td>
     </tr>
     <tr>
-      <td>Encapsulación</td>
-      <td>Ex ma / mb</td>
-      <td>IEC 60079-18</td>
-      <td>Fuentes de ignición selladas en compuesto</td>
-      <td>ma: Zona 20, mb: Zona 21</td>
+      <td data-label="Método">Encapsulación</td>
+      <td data-label="Código">Ex ma / mb</td>
+      <td data-label="Norma">IEC 60079-18</td>
+      <td data-label="Principio">Fuentes de ignición selladas en compuesto</td>
+      <td data-label="Idoneidad de la zona">ma: Zona 20, mb: Zona 21</td>
     </tr>
     <tr>
-      <td>Presurización</td>
-      <td>Ex pxb / pyb / pzc</td>
-      <td>IEC 60079-2</td>
-      <td>La presión positiva excluye el polvo</td>
-      <td>pxb: Zona 21, pzc: Zona 22</td>
+      <td data-label="Método">Presurización</td>
+      <td data-label="Código">Ex pxb / pyb / pzc</td>
+      <td data-label="Norma">IEC 60079-2</td>
+      <td data-label="Principio">La presión positiva excluye el polvo</td>
+      <td data-label="Idoneidad de la zona">pxb: Zona 21, pzc: Zona 22</td>
     </tr>
   </tbody>
 </table>
@@ -542,7 +542,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section>
 <h2>Explosiones de polvo notables</h2>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Año</th>
@@ -554,39 +554,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>2008</td>
-      <td>Imperial Sugar, Georgia, EE. UU.</td>
-      <td>Azúcar</td>
-      <td>14</td>
-      <td>Acumulación de capas de polvo en los cojinetes de la cinta transportadora; ausencia de programa de limpieza.</td>
+      <td data-label="Año">2008</td>
+      <td data-label="Incidente">Imperial Sugar, Georgia, EE. UU.</td>
+      <td data-label="Tipo de polvo">Azúcar</td>
+      <td data-label="Víctimas mortales">14</td>
+      <td data-label="Lección clave">Acumulación de capas de polvo en los cojinetes de la cinta transportadora; ausencia de programa de limpieza.</td>
     </tr>
     <tr>
-      <td>2010</td>
-      <td>AL Solutions, Virginia Occidental, EE. UU.</td>
-      <td>Titanio/circonio</td>
-      <td>3</td>
-      <td>El polvo metálico se incendió durante la mezcla; no había sistema de ventilación para explosiones.</td>
+      <td data-label="Año">2010</td>
+      <td data-label="Incidente">AL Solutions, Virginia Occidental, EE. UU.</td>
+      <td data-label="Tipo de polvo">Titanio/circonio</td>
+      <td data-label="Víctimas mortales">3</td>
+      <td data-label="Lección clave">El polvo metálico se incendió durante la mezcla; no había sistema de ventilación para explosiones.</td>
     </tr>
     <tr>
-      <td>2014</td>
-      <td>Zhongrong Metal, Kunshan, China</td>
-      <td>Aluminio</td>
-      <td>146</td>
-      <td>Polvo de pulido de aluminio en un taller mal ventilado; la explosión de polvo industrial más mortífera de la historia moderna.</td>
+      <td data-label="Año">2014</td>
+      <td data-label="Incidente">Zhongrong Metal, Kunshan, China</td>
+      <td data-label="Tipo de polvo">Aluminio</td>
+      <td data-label="Víctimas mortales">146</td>
+      <td data-label="Lección clave">Polvo de pulido de aluminio en un taller mal ventilado; la explosión de polvo industrial más mortífera de la historia moderna.</td>
     </tr>
     <tr>
-      <td>2017</td>
-      <td>Didion Milling, Wisconsin, EE. UU.</td>
-      <td>Polvo de maíz</td>
-      <td>5</td>
-      <td>Polvo de maíz ardiendo en seco en un secador; detección inadecuada de chispas.</td>
+      <td data-label="Año">2017</td>
+      <td data-label="Incidente">Didion Milling, Wisconsin, EE. UU.</td>
+      <td data-label="Tipo de polvo">Polvo de maíz</td>
+      <td data-label="Víctimas mortales">5</td>
+      <td data-label="Lección clave">Polvo de maíz ardiendo en seco en un secador; detección inadecuada de chispas.</td>
     </tr>
     <tr>
-      <td>1878</td>
-      <td>Washburn A Mill, Minneapolis, EE. UU.</td>
-      <td>Harina</td>
-      <td>18</td>
-      <td>Primera explosión de polvo de grano reconocida en EE. UU.; dio lugar a reformas de seguridad en la industria molinera.</td>
+      <td data-label="Año">1878</td>
+      <td data-label="Incidente">Washburn A Mill, Minneapolis, EE. UU.</td>
+      <td data-label="Tipo de polvo">Harina</td>
+      <td data-label="Víctimas mortales">18</td>
+      <td data-label="Lección clave">Primera explosión de polvo de grano reconocida en EE. UU.; dio lugar a reformas de seguridad en la industria molinera.</td>
     </tr>
   </tbody>
 </table>

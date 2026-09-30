@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -215,7 +215,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Palavat pölytyypit</h2>
 
 <h3><a href="/fi/pages/gas-groups.html">Pölyryhmät</a> (IEC 60079-0)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Ryhmä</th>
@@ -226,22 +226,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IIIA</strong></td>
-      <td>Palavat hiukkaset</td>
-      <td>Puuvillakuidut, tekstiililankat, puuhake, paperikuidut</td>
-      <td>Syttyvät helposti, leviävät nopeasti</td>
+      <td data-label="Ryhmä"><strong>IIIA</strong></td>
+      <td data-label="Tyyppi">Palavat hiukkaset</td>
+      <td data-label="Esimerkkejä">Puuvillakuidut, tekstiililankat, puuhake, paperikuidut</td>
+      <td data-label="Tärkein vaara">Syttyvät helposti, leviävät nopeasti</td>
     </tr>
     <tr>
-      <td><strong>IIIB</strong></td>
-      <td>Ei-johtava pöly</td>
-      <td>Jauhot, sokeri, tärkkelys, vilja, puupöly, muovijauhe, lääkejauheet</td>
-      <td>Sähköstaattinen varautuminen, kerrostuminen</td>
+      <td data-label="Ryhmä"><strong>IIIB</strong></td>
+      <td data-label="Tyyppi">Ei-johtava pöly</td>
+      <td data-label="Esimerkkejä">Jauhot, sokeri, tärkkelys, vilja, puupöly, muovijauhe, lääkejauheet</td>
+      <td data-label="Tärkein vaara">Sähköstaattinen varautuminen, kerrostuminen</td>
     </tr>
     <tr>
-      <td><strong>IIIC</strong></td>
-      <td>Johtava pöly</td>
-      <td>Alumiinijauhe, magnesiumpöly, rautahileet, hiilimusta, grafiitti</td>
-      <td>Voi aiheuttaa sähkölaitteiden oikosulun, erittäin reaktiiviset metallit</td>
+      <td data-label="Ryhmä"><strong>IIIC</strong></td>
+      <td data-label="Tyyppi">Johtava pöly</td>
+      <td data-label="Esimerkkejä">Alumiinijauhe, magnesiumpöly, rautahileet, hiilimusta, grafiitti</td>
+      <td data-label="Tärkein vaara">Voi aiheuttaa sähkölaitteiden oikosulun, erittäin reaktiiviset metallit</td>
     </tr>
   </tbody>
 </table>
@@ -263,7 +263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Pölyräjähdysparametrit</h2>
 <p>Pölyn räjähdysherkkyys määritetään laboratoriotesteillä standardisarjan EN 14034 mukaisesti (katso <a href="/fi/pages/standards.html">standardien yleiskatsaus</a>):</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Parametri</th>
@@ -274,46 +274,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Suurin räjähdyspaine</strong></td>
-      <td>P<sub>max</sub></td>
-      <td>Räjähdyksen aikana saavutettu huippupaine (bar)</td>
-      <td>Määrittää suojarakenteen tai paineentasoitusjärjestelmän rakenteelliset lujuusvaatimukset</td>
+      <td data-label="Parametri"><strong>Suurin räjähdyspaine</strong></td>
+      <td data-label="Symboli">P<sub>max</sub></td>
+      <td data-label="Mitä se mittaa">Räjähdyksen aikana saavutettu huippupaine (bar)</td>
+      <td data-label="Miksi se on tärkeää">Määrittää suojarakenteen tai paineentasoitusjärjestelmän rakenteelliset lujuusvaatimukset</td>
     </tr>
     <tr>
-      <td><strong>Pölyräjähdyksen vakavuus</strong></td>
-      <td>K<sub>St</sub></td>
-      <td>Paineen nousunopeus (bar·m/s)</td>
-      <td>Määrittää tuuletusalan koon ja sammutusjärjestelmän vasteajan</td>
+      <td data-label="Parametri"><strong>Pölyräjähdyksen vakavuus</strong></td>
+      <td data-label="Symboli">K<sub>St</sub></td>
+      <td data-label="Mitä se mittaa">Paineen nousunopeus (bar·m/s)</td>
+      <td data-label="Miksi se on tärkeää">Määrittää tuuletusalan koon ja sammutusjärjestelmän vasteajan</td>
     </tr>
     <tr>
-      <td><strong>Pienin räjähdysherkkä pitoisuus</strong></td>
-      <td>MEC</td>
-      <td>Pienin pölypitoisuus, joka voi räjähtää (g/m³)</td>
-      <td>Vastaa kaasujen LEL-arvoa; tyypillisesti 20–60 g/m³</td>
+      <td data-label="Parametri"><strong>Pienin räjähdysherkkä pitoisuus</strong></td>
+      <td data-label="Symboli">MEC</td>
+      <td data-label="Mitä se mittaa">Pienin pölypitoisuus, joka voi räjähtää (g/m³)</td>
+      <td data-label="Miksi se on tärkeää">Vastaa kaasujen LEL-arvoa; tyypillisesti 20–60 g/m³</td>
     </tr>
     <tr>
-      <td><strong>Vähimmäissyttymisenergia</strong></td>
-      <td>MIE</td>
-      <td>Pienin kipinä, joka voi sytyttää pölypilven (mJ)</td>
-      <td>Määrittää sähköstaattisen purkauksen vaaratasoa</td>
+      <td data-label="Parametri"><strong>Vähimmäissyttymisenergia</strong></td>
+      <td data-label="Symboli">MIE</td>
+      <td data-label="Mitä se mittaa">Pienin kipinä, joka voi sytyttää pölypilven (mJ)</td>
+      <td data-label="Miksi se on tärkeää">Määrittää sähköstaattisen purkauksen vaaratasoa</td>
     </tr>
     <tr>
-      <td><strong>Pienin syttymislämpötila (pilvi)</strong></td>
-      <td>MIT</td>
-      <td>Pienin lämpötila, jossa pölypilvi syttyy (°C). Katso <a href="/fi/pages/temperature-classes.html">lämpötilaluokat</a></td>
-      <td>Määrittää laitteen pintalämpötilan rajat</td>
+      <td data-label="Parametri"><strong>Pienin syttymislämpötila (pilvi)</strong></td>
+      <td data-label="Symboli">MIT</td>
+      <td data-label="Mitä se mittaa">Pienin lämpötila, jossa pölypilvi syttyy (°C). Katso <a href="/fi/pages/temperature-classes.html">lämpötilaluokat</a></td>
+      <td data-label="Miksi se on tärkeää">Määrittää laitteen pintalämpötilan rajat</td>
     </tr>
     <tr>
-      <td><strong>Kerroksen syttymislämpötila</strong></td>
-      <td>LIT</td>
-      <td>Lämpötila, jossa 5 mm:n paksuinen pölykerros syttyy (°C)</td>
-      <td>Usein alhaisempi kuin MIT; kriittinen siivousstandardien kannalta</td>
+      <td data-label="Parametri"><strong>Kerroksen syttymislämpötila</strong></td>
+      <td data-label="Symboli">LIT</td>
+      <td data-label="Mitä se mittaa">Lämpötila, jossa 5 mm:n paksuinen pölykerros syttyy (°C)</td>
+      <td data-label="Miksi se on tärkeää">Usein alhaisempi kuin MIT; kriittinen siivousstandardien kannalta</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Pölyräjähdysluokat (K<sub>St</sub>)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Luokka</th>
@@ -324,28 +324,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>St 0</td>
-      <td>0</td>
-      <td>Ei räjähtävä</td>
-      <td>Jotkut mineraalipölyt, sementti</td>
+      <td data-label="Luokka">St 0</td>
+      <td data-label="K St -alue (bar·m/s)">0</td>
+      <td data-label="Vakavuus">Ei räjähtävä</td>
+      <td data-label="Esimerkkejä">Jotkut mineraalipölyt, sementti</td>
     </tr>
     <tr>
-      <td><strong>St 1</strong></td>
-      <td>1–200</td>
-      <td>Heikko tai kohtalainen</td>
-      <td>Vehnäjauho, sokeri, puupöly, hiili</td>
+      <td data-label="Luokka"><strong>St 1</strong></td>
+      <td data-label="K St -alue (bar·m/s)">1–200</td>
+      <td data-label="Vakavuus">Heikko tai kohtalainen</td>
+      <td data-label="Esimerkkejä">Vehnäjauho, sokeri, puupöly, hiili</td>
     </tr>
     <tr>
-      <td><strong>St 2</strong></td>
-      <td>201–300</td>
-      <td>Vahva</td>
-      <td>Orgaaniset pigmentit, jotkut muovit, selluloosa</td>
+      <td data-label="Luokka"><strong>St 2</strong></td>
+      <td data-label="K St -alue (bar·m/s)">201–300</td>
+      <td data-label="Vakavuus">Vahva</td>
+      <td data-label="Esimerkkejä">Orgaaniset pigmentit, jotkut muovit, selluloosa</td>
     </tr>
     <tr>
-      <td><strong>St 3</strong></td>
-      <td>&gt; 300</td>
-      <td>Erittäin vahva</td>
-      <td>Alumiinijauhe, magnesiumpöly</td>
+      <td data-label="Luokka"><strong>St 3</strong></td>
+      <td data-label="K St -alue (bar·m/s)">&gt; 300</td>
+      <td data-label="Vakavuus">Erittäin vahva</td>
+      <td data-label="Esimerkkejä">Alumiinijauhe, magnesiumpöly</td>
     </tr>
   </tbody>
 </table>
@@ -355,7 +355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Pöly<a href="/fi/pages/zone-classification.html">vyöhykkeet</a>: 20, 21, 22</h2>
 
 <h3>Alueiden määritelmät</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Alue</th>
@@ -366,22 +366,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Vyöhyke 20</strong></td>
-      <td>Jatkuvasti tai usein</td>
-      <td>Luokka 1 D (EPL Da)</td>
-      <td>Siilojen, suppiloiden, syklonien, myllyjen, sekoittimien ja paineilmakuljettimien sisällä</td>
+      <td data-label="Alue"><strong>Vyöhyke 20</strong></td>
+      <td data-label="Pölypilvi läsnä">Jatkuvasti tai usein</td>
+      <td data-label="Vaadittu laiteluokka">Luokka 1 D (EPL Da)</td>
+      <td data-label="Tyypilliset sijainnit">Siilojen, suppiloiden, syklonien, myllyjen, sekoittimien ja paineilmakuljettimien sisällä</td>
     </tr>
     <tr>
-      <td><strong>Vyöhyke 21</strong></td>
-      <td>Todennäköisesti normaalikäytössä</td>
-      <td>Luokka 2 D (EPL Db)</td>
-      <td>Säkkien kallistuspaikkojen, täyttöpisteiden, avoimien kuljetinliitosten ja suodattimien huoltoluukkujen ympäristössä</td>
+      <td data-label="Alue"><strong>Vyöhyke 21</strong></td>
+      <td data-label="Pölypilvi läsnä">Todennäköisesti normaalikäytössä</td>
+      <td data-label="Vaadittu laiteluokka">Luokka 2 D (EPL Db)</td>
+      <td data-label="Tyypilliset sijainnit">Säkkien kallistuspaikkojen, täyttöpisteiden, avoimien kuljetinliitosten ja suodattimien huoltoluukkujen ympäristössä</td>
     </tr>
     <tr>
-      <td><strong>Vyöhyke 22</strong></td>
-      <td>Ei todennäköistä; vain lyhyitä jaksoja</td>
-      <td>Luokka 3 D (EPL Dc)</td>
-      <td>Alueet lähellä vyöhykkeen 21 rajoja, suljettujen laitteiden ympärillä, joihin kerrostumia voi kertyä</td>
+      <td data-label="Alue"><strong>Vyöhyke 22</strong></td>
+      <td data-label="Pölypilvi läsnä">Ei todennäköistä; vain lyhyitä jaksoja</td>
+      <td data-label="Vaadittu laiteluokka">Luokka 3 D (EPL Dc)</td>
+      <td data-label="Tyypilliset sijainnit">Alueet lähellä vyöhykkeen 21 rajoja, suljettujen laitteiden ympärillä, joihin kerrostumia voi kertyä</td>
     </tr>
   </tbody>
 </table>
@@ -459,7 +459,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Laitteiden valinta pölyvyöhykkeille</h2>
 
 <h3>Suojausmenetelmät pölylle</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Menetelmä</th>
@@ -471,32 +471,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>Suojaus kotelolla</td>
-      <td>Ex ta / tb / tc</td>
-      <td>IEC 60079-31</td>
-      <td>Pölytiivis kotelo lämpötilan säätelyllä</td>
-      <td>ta: vyöhyke 20, tb: vyöhyke 21, tc: vyöhyke 22</td>
+      <td data-label="Menetelmä">Suojaus kotelolla</td>
+      <td data-label="Koodi">Ex ta / tb / tc</td>
+      <td data-label="Standardi">IEC 60079-31</td>
+      <td data-label="Periaate">Pölytiivis kotelo lämpötilan säätelyllä</td>
+      <td data-label="Soveltuvuus vyöhykkeisiin">ta: vyöhyke 20, tb: vyöhyke 21, tc: vyöhyke 22</td>
     </tr>
     <tr>
-      <td><a href="/fi/pages/explosion-proof-vs-intrinsically-safe.html">Itsestään turvallinen</a></td>
-      <td>Ex ia / ib</td>
-      <td>IEC 60079-11</td>
-      <td>Energia rajoitettu alle pölyn MIE-arvon</td>
-      <td>ia: vyöhyke 20, ib: vyöhyke 21</td>
+      <td data-label="Menetelmä"><a href="/fi/pages/explosion-proof-vs-intrinsically-safe.html">Itsestään turvallinen</a></td>
+      <td data-label="Koodi">Ex ia / ib</td>
+      <td data-label="Standardi">IEC 60079-11</td>
+      <td data-label="Periaate">Energia rajoitettu alle pölyn MIE-arvon</td>
+      <td data-label="Soveltuvuus vyöhykkeisiin">ia: vyöhyke 20, ib: vyöhyke 21</td>
     </tr>
     <tr>
-      <td>Kotelo</td>
-      <td>Ex ma / mb</td>
-      <td>IEC 60079-18</td>
-      <td>Sytytyslähteet suljettuina yhdisteeseen</td>
-      <td>ma: vyöhyke 20, mb: vyöhyke 21</td>
+      <td data-label="Menetelmä">Kotelo</td>
+      <td data-label="Koodi">Ex ma / mb</td>
+      <td data-label="Standardi">IEC 60079-18</td>
+      <td data-label="Periaate">Sytytyslähteet suljettuina yhdisteeseen</td>
+      <td data-label="Soveltuvuus vyöhykkeisiin">ma: vyöhyke 20, mb: vyöhyke 21</td>
     </tr>
     <tr>
-      <td>Paineistus</td>
-      <td>Ex pxb / pyb / pzc</td>
-      <td>IEC 60079-2</td>
-      <td>Ylipaine estää pölyn pääsyn</td>
-      <td>pxb: vyöhyke 21, pzc: vyöhyke 22</td>
+      <td data-label="Menetelmä">Paineistus</td>
+      <td data-label="Koodi">Ex pxb / pyb / pzc</td>
+      <td data-label="Standardi">IEC 60079-2</td>
+      <td data-label="Periaate">Ylipaine estää pölyn pääsyn</td>
+      <td data-label="Soveltuvuus vyöhykkeisiin">pxb: vyöhyke 21, pzc: vyöhyke 22</td>
     </tr>
   </tbody>
 </table>
@@ -541,7 +541,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section>
 <h2>Merkittäviä pölyräjähdyksiä</h2>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Vuosi</th>
@@ -553,39 +553,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>2008</td>
-      <td>Imperial Sugar, Georgia, Yhdysvallat</td>
-      <td>Sokeri</td>
-      <td>14</td>
-      <td>Kuljettimen laakereihin kertyneet pölykerrokset; puutteellinen siivousohjelma</td>
+      <td data-label="Vuosi">2008</td>
+      <td data-label="Tapaus">Imperial Sugar, Georgia, Yhdysvallat</td>
+      <td data-label="Pölytyyppi">Sokeri</td>
+      <td data-label="Kuolemantapaukset">14</td>
+      <td data-label="Tärkein opetus">Kuljettimen laakereihin kertyneet pölykerrokset; puutteellinen siivousohjelma</td>
     </tr>
     <tr>
-      <td>2010</td>
-      <td>AL Solutions, Länsi-Virginia, USA</td>
-      <td>Titaani/zirkonium</td>
-      <td>3</td>
-      <td>Metallipöly syttyi sekoituksen aikana; ei räjähdysventtiiliä</td>
+      <td data-label="Vuosi">2010</td>
+      <td data-label="Tapaus">AL Solutions, Länsi-Virginia, USA</td>
+      <td data-label="Pölytyyppi">Titaani/zirkonium</td>
+      <td data-label="Kuolemantapaukset">3</td>
+      <td data-label="Tärkein opetus">Metallipöly syttyi sekoituksen aikana; ei räjähdysventtiiliä</td>
     </tr>
     <tr>
-      <td>2014</td>
-      <td>Zhongrong Metal, Kunshan, Kiina</td>
-      <td>Alumiini</td>
-      <td>146</td>
-      <td>Alumiinin kiillotuspöly huonosti tuuletetussa työpajassa; nykyaikaisen historian tappavin teollinen pölyräjähdys</td>
+      <td data-label="Vuosi">2014</td>
+      <td data-label="Tapaus">Zhongrong Metal, Kunshan, Kiina</td>
+      <td data-label="Pölytyyppi">Alumiini</td>
+      <td data-label="Kuolemantapaukset">146</td>
+      <td data-label="Tärkein opetus">Alumiinin kiillotuspöly huonosti tuuletetussa työpajassa; nykyaikaisen historian tappavin teollinen pölyräjähdys</td>
     </tr>
     <tr>
-      <td>2017</td>
-      <td>Didion Milling, Wisconsin, Yhdysvallat</td>
-      <td>Maissipöly</td>
-      <td>5</td>
-      <td>Kuivurissa kytevä maissipöly; puutteellinen kipinänilmaisujärjestelmä</td>
+      <td data-label="Vuosi">2017</td>
+      <td data-label="Tapaus">Didion Milling, Wisconsin, Yhdysvallat</td>
+      <td data-label="Pölytyyppi">Maissipöly</td>
+      <td data-label="Kuolemantapaukset">5</td>
+      <td data-label="Tärkein opetus">Kuivurissa kytevä maissipöly; puutteellinen kipinänilmaisujärjestelmä</td>
     </tr>
     <tr>
-      <td>1878</td>
-      <td>Washburn A Mill, Minneapolis, Yhdysvallat</td>
-      <td>Jauho</td>
-      <td>18</td>
-      <td>Ensimmäinen tunnustettu viljapölyräjähdys Yhdysvalloissa; johti jauhamisteollisuuden turvallisuusmuutoksiin</td>
+      <td data-label="Vuosi">1878</td>
+      <td data-label="Tapaus">Washburn A Mill, Minneapolis, Yhdysvallat</td>
+      <td data-label="Pölytyyppi">Jauho</td>
+      <td data-label="Kuolemantapaukset">18</td>
+      <td data-label="Tärkein opetus">Ensimmäinen tunnustettu viljapölyräjähdys Yhdysvalloissa; johti jauhamisteollisuuden turvallisuusmuutoksiin</td>
     </tr>
   </tbody>
 </table>

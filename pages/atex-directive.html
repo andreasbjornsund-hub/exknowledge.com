@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -268,7 +268,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Group II: Surface Industries</h3>
 <p>Equipment for all other industries (oil & gas, chemical, pharmaceutical, food, etc.). Subdivided by category and atmosphere type:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Category</th>
@@ -279,40 +279,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>1 G</td>
-      <td>Ga</td>
-      <td>Zone 0</td>
-      <td>Very high (2 independent faults)</td>
+      <td data-label="Category">1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Zone Suitability">Zone 0</td>
+      <td data-label="Protection Level">Very high (2 independent faults)</td>
     </tr>
     <tr>
-      <td>2 G</td>
-      <td>Gb</td>
-      <td>Zone 1</td>
-      <td>High (1 fault)</td>
+      <td data-label="Category">2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Zone Suitability">Zone 1</td>
+      <td data-label="Protection Level">High (1 fault)</td>
     </tr>
     <tr>
-      <td>3 G</td>
-      <td>Gc</td>
-      <td>Zone 2</td>
-      <td>Normal operation</td>
+      <td data-label="Category">3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Zone Suitability">Zone 2</td>
+      <td data-label="Protection Level">Normal operation</td>
     </tr>
     <tr>
-      <td>1 D</td>
-      <td>Da</td>
-      <td>Zone 20</td>
-      <td>Very high (2 independent faults)</td>
+      <td data-label="Category">1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Zone Suitability">Zone 20</td>
+      <td data-label="Protection Level">Very high (2 independent faults)</td>
     </tr>
     <tr>
-      <td>2 D</td>
-      <td>Db</td>
-      <td>Zone 21</td>
-      <td>High (1 fault)</td>
+      <td data-label="Category">2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Zone Suitability">Zone 21</td>
+      <td data-label="Protection Level">High (1 fault)</td>
     </tr>
     <tr>
-      <td>3 D</td>
-      <td>Dc</td>
-      <td>Zone 22</td>
-      <td>Normal operation</td>
+      <td data-label="Category">3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Zone Suitability">Zone 22</td>
+      <td data-label="Protection Level">Normal operation</td>
     </tr>
   </tbody>
 </table>
@@ -362,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Conformity Assessment Modules</h2>
 <p>Manufacturers must follow specific procedures to demonstrate compliance. The required module depends on the equipment category:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Module</th>
@@ -373,40 +373,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>Internal production control</td>
-      <td>No</td>
-      <td>Category 2 and 3 (non-electrical), Category 3 (electrical)</td>
+      <td data-label="Module">A</td>
+      <td data-label="Name">Internal production control</td>
+      <td data-label="Notified Body Involved?">No</td>
+      <td data-label="Applicable To">Category 2 and 3 (non-electrical), Category 3 (electrical)</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>EU type examination</td>
-      <td>Yes</td>
-      <td>All Category 1 and M1, most Category 2</td>
+      <td data-label="Module">B</td>
+      <td data-label="Name">EU type examination</td>
+      <td data-label="Notified Body Involved?">Yes</td>
+      <td data-label="Applicable To">All Category 1 and M1, most Category 2</td>
     </tr>
     <tr>
-      <td>C1</td>
-      <td>Conformity to type (internal production control + product tests)</td>
-      <td>No (after Module B)</td>
-      <td>Combined with Module B</td>
+      <td data-label="Module">C1</td>
+      <td data-label="Name">Conformity to type (internal production control + product tests)</td>
+      <td data-label="Notified Body Involved?">No (after Module B)</td>
+      <td data-label="Applicable To">Combined with Module B</td>
     </tr>
     <tr>
-      <td>D</td>
-      <td>Quality assurance (production)</td>
-      <td>Yes (surveillance)</td>
-      <td>Combined with Module B for Category 1/M1</td>
+      <td data-label="Module">D</td>
+      <td data-label="Name">Quality assurance (production)</td>
+      <td data-label="Notified Body Involved?">Yes (surveillance)</td>
+      <td data-label="Applicable To">Combined with Module B for Category 1/M1</td>
     </tr>
     <tr>
-      <td>E</td>
-      <td>Quality assurance (product)</td>
-      <td>Yes (surveillance)</td>
-      <td>Combined with Module B for Category 1/M1</td>
+      <td data-label="Module">E</td>
+      <td data-label="Name">Quality assurance (product)</td>
+      <td data-label="Notified Body Involved?">Yes (surveillance)</td>
+      <td data-label="Applicable To">Combined with Module B for Category 1/M1</td>
     </tr>
     <tr>
-      <td>F</td>
-      <td>Product verification</td>
-      <td>Yes (product-by-product or batch testing)</td>
-      <td>Combined with Module B for Category 1/M1</td>
+      <td data-label="Module">F</td>
+      <td data-label="Name">Product verification</td>
+      <td data-label="Notified Body Involved?">Yes (product-by-product or batch testing)</td>
+      <td data-label="Applicable To">Combined with Module B for Category 1/M1</td>
     </tr>
   </tbody>
 </table>

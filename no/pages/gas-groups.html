@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
 
@@ -187,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><strong>MESG</strong> (Maximum Experimental Safe Gap), maksimal bredde på et gap som en indre eksplosjon ikke vil spre seg gjennom til en ytre eksplosiv atmosfære. Testet i et standardisert 25 ml kuleformet kammer med 25 mm langt gap. Mindre MESG = farligere gass.</li>
 <li><strong>MIC-forhold</strong> (Minimum Igniting Current Ratio), forholdet mellom minimum tennstrøm for gassen i forhold til metan, målt i et standard egenssikkerhetsapparat. Mindre MIC-forhold = farligere gass.</li>
 </ul>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Gassgruppe</th>
 <th>MESG (mm)</th>
 <th>MIC-forhold</th>
@@ -195,25 +195,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <th>Farenivå</th>
 </tr></thead><tbody>
 <tr>
-<td><strong>IIA</strong></td>
-<td>>0,90</td>
-<td>>0,80</td>
-<td>Metan, propan, butan, aceton, etanol, benzen, diesel, ammoniakk</td>
-<td>Minst farlig</td>
+<td data-label="Gassgruppe"><strong>IIA</strong></td>
+<td data-label="MESG (mm)">>0,90</td>
+<td data-label="MIC-forhold">>0,80</td>
+<td data-label="Typiske gasser">Metan, propan, butan, aceton, etanol, benzen, diesel, ammoniakk</td>
+<td data-label="Farenivå">Minst farlig</td>
 </tr>
 <tr>
-<td><strong>IIB</strong></td>
-<td>0,50–0,90</td>
-<td>0,45–0,80</td>
-<td>Etylen, hydrogensulfid, dietyleter, etylenoksid, bygass</td>
-<td>Middels</td>
+<td data-label="Gassgruppe"><strong>IIB</strong></td>
+<td data-label="MESG (mm)">0,50–0,90</td>
+<td data-label="MIC-forhold">0,45–0,80</td>
+<td data-label="Typiske gasser">Etylen, hydrogensulfid, dietyleter, etylenoksid, bygass</td>
+<td data-label="Farenivå">Middels</td>
 </tr>
 <tr>
-<td><strong>IIC</strong></td>
-<td><0,50</td>
-<td><0,45</td>
-<td>Hydrogen, acetylen, karbondisulfid</td>
-<td>Mest farlig</td>
+<td data-label="Gassgruppe"><strong>IIC</strong></td>
+<td data-label="MESG (mm)"><0,50</td>
+<td data-label="MIC-forhold"><0,45</td>
+<td data-label="Typiske gasser">Hydrogen, acetylen, karbondisulfid</td>
+<td data-label="Farenivå">Mest farlig</td>
 </tr>
 </tbody></table></div>
 <h3 id="important-notes">Viktige merknader</h3>
@@ -256,29 +256,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Hydrogen er i den mest farlige gassgruppa (IIC) på grunn av ekstremt liten MESG (0,29 mm) og svært lav minimum antennelsesenergi (0,017 mJ, omtrent 10× mindre enn metan). Men selvantennelsestemperaturen er relativt høy (560 °C), noe som plasserer den bare i <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i> temperaturklasse</a> T1.</p>
 <p>Dette betyr at hydrogen krever den mest strenge beskyttelsen mot gnister/lysbuer (IIC), men er relativt tilgivelig når det gjelder overflatetemperatur (T1). Dette er det motsatte av noen IIA-gasser.</p>
 <h2 id="dust-groups-group-iii">Støvgrupper (Gruppe III)</h2>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Støvgruppe</th>
 <th>Type</th>
 <th>Eksempler</th>
 <th>Farenivå</th>
 </tr></thead><tbody>
 <tr>
-<td><strong>IIIA</strong></td>
-<td>Brennbare flygende partikler</td>
-<td>Tekstilfibre, bomullsflo, rayon, jute</td>
-<td>Minst farlig</td>
+<td data-label="Støvgruppe"><strong>IIIA</strong></td>
+<td data-label="Type">Brennbare flygende partikler</td>
+<td data-label="Eksempler">Tekstilfibre, bomullsflo, rayon, jute</td>
+<td data-label="Farenivå">Minst farlig</td>
 </tr>
 <tr>
-<td><strong>IIIB</strong></td>
-<td>Ikke-ledende støv</td>
-<td>Kornmel, sukker, trestøv, kull, plastpulver, farmasøytiske pulver</td>
-<td>Middels</td>
+<td data-label="Støvgruppe"><strong>IIIB</strong></td>
+<td data-label="Type">Ikke-ledende støv</td>
+<td data-label="Eksempler">Kornmel, sukker, trestøv, kull, plastpulver, farmasøytiske pulver</td>
+<td data-label="Farenivå">Middels</td>
 </tr>
 <tr>
-<td><strong>IIIC</strong></td>
-<td>Ledende støv</td>
-<td>Aluminiumpulver, magnesium, titan, jern, karbonsort</td>
-<td>Mest farlig</td>
+<td data-label="Støvgruppe"><strong>IIIC</strong></td>
+<td data-label="Type">Ledende støv</td>
+<td data-label="Eksempler">Aluminiumpulver, magnesium, titan, jern, karbonsort</td>
+<td data-label="Farenivå">Mest farlig</td>
 </tr>
 </tbody></table></div>
 <h3 id="conductive-vs-non-conductive-dust">Ledende vs. ikke-ledende støv</h3>

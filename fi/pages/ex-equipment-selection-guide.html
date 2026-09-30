@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -197,7 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Vastaa vyöhyke vaadittuun laiteluokkaan tai <a href="/fi/pages/epl.html">EPL</a>:ään:</p>
 
 <h3>Kaasu-/höyryvyöhykkeet</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Alue</th>
@@ -208,28 +208,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Alue 0</strong></td>
-      <td>Luokka 1 G</td>
-      <td>Ga</td>
-      <td>Vain Ga. Muuta ei sallita</td>
+      <td data-label="Alue"><strong>Alue 0</strong></td>
+      <td data-label="Vähimmäisluokka">Luokka 1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Voidaan käyttää myös">Vain Ga. Muuta ei sallita</td>
     </tr>
     <tr>
-      <td><strong>Alue 1</strong></td>
-      <td>Luokka 2 G</td>
-      <td>Gb</td>
-      <td>Luokka 1 G (Ga) myös hyväksyttävä</td>
+      <td data-label="Alue"><strong>Alue 1</strong></td>
+      <td data-label="Vähimmäisluokka">Luokka 2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Voidaan käyttää myös">Luokka 1 G (Ga) myös hyväksyttävä</td>
     </tr>
     <tr>
-      <td><strong>Vyöhyke 2</strong></td>
-      <td>Luokka 3 G</td>
-      <td>Gc</td>
-      <td>Luokka 1 G (Ga) tai luokka 2 G (Gb) myös hyväksyttävä</td>
+      <td data-label="Alue"><strong>Vyöhyke 2</strong></td>
+      <td data-label="Vähimmäisluokka">Luokka 3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Voidaan käyttää myös">Luokka 1 G (Ga) tai luokka 2 G (Gb) myös hyväksyttävä</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Pölyvyöhykkeet</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Vyöhyke</th>
@@ -240,22 +240,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Vyöhyke 20</strong></td>
-      <td>Luokka 1 D</td>
-      <td>Da</td>
-      <td>Vain Da. Muuta ei sallita</td>
+      <td data-label="Vyöhyke"><strong>Vyöhyke 20</strong></td>
+      <td data-label="Vähimmäisluokka">Luokka 1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Voidaan käyttää myös">Vain Da. Muuta ei sallita</td>
     </tr>
     <tr>
-      <td><strong>Alue 21</strong></td>
-      <td>Luokka 2 D</td>
-      <td>Db</td>
-      <td>Luokka 1 D (Da) myös hyväksyttävä</td>
+      <td data-label="Vyöhyke"><strong>Alue 21</strong></td>
+      <td data-label="Vähimmäisluokka">Luokka 2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Voidaan käyttää myös">Luokka 1 D (Da) myös hyväksyttävä</td>
     </tr>
     <tr>
-      <td><strong>Alue 22</strong></td>
-      <td>Luokka 3 D</td>
-      <td>Dc</td>
-      <td>Luokka 1 D (Da) tai luokka 2 D (Db) myös hyväksyttävä</td>
+      <td data-label="Vyöhyke"><strong>Alue 22</strong></td>
+      <td data-label="Vähimmäisluokka">Luokka 3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Voidaan käyttää myös">Luokka 1 D (Da) tai luokka 2 D (Db) myös hyväksyttävä</td>
     </tr>
   </tbody>
 </table>
@@ -375,7 +375,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Vaihe 4: Sovellus → Suojausmenetelmä</h2>
 <p>Valitse suojausmenetelmä laitteen toiminnan ja tehotason perusteella:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Sovellus</th>
@@ -386,52 +386,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Sähkömoottori</strong></td>
-      <td>&gt; 1 kW</td>
-      <td><a href="/fi/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (palonkestävä)</a></td>
-      <td>Ex e (vain vyöhyke 2), Ex nA (vyöhyke 2)</td>
+      <td data-label="Sovellus"><strong>Sähkömoottori</strong></td>
+      <td data-label="Tehotaso">&gt; 1 kW</td>
+      <td data-label="Suositeltu menetelmä"><a href="/fi/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (palonkestävä)</a></td>
+      <td data-label="Vaihtoehto">Ex e (vain vyöhyke 2), Ex nA (vyöhyke 2)</td>
     </tr>
     <tr>
-      <td><strong>Pieni moottori</strong></td>
-      <td>&lt; 1 kW</td>
-      <td>Ex e (korotettu turvallisuus)</td>
-      <td>Ex d, Ex nA</td>
+      <td data-label="Sovellus"><strong>Pieni moottori</strong></td>
+      <td data-label="Tehotaso">&lt; 1 kW</td>
+      <td data-label="Suositeltu menetelmä">Ex e (korotettu turvallisuus)</td>
+      <td data-label="Vaihtoehto">Ex d, Ex nA</td>
     </tr>
     <tr>
-      <td><strong>Valaisin</strong></td>
-      <td>Vaihtelee</td>
-      <td>Ex d (LED/loisteputki/halogeeni)</td>
-      <td>Ex e (vain LED, vyöhyke 1/2)</td>
+      <td data-label="Sovellus"><strong>Valaisin</strong></td>
+      <td data-label="Tehotaso">Vaihtelee</td>
+      <td data-label="Suositeltu menetelmä">Ex d (LED/loisteputki/halogeeni)</td>
+      <td data-label="Vaihtoehto">Ex e (vain LED, vyöhyke 1/2)</td>
     </tr>
     <tr>
-      <td><strong>Liitäntärasia</strong></td>
-      <td>Ei sovelleta (passiivinen)</td>
-      <td>Ex e (yleiseen johdotukseen)</td>
-      <td>Ex d (jos sisältää kipinöiviä laitteita)</td>
+      <td data-label="Sovellus"><strong>Liitäntärasia</strong></td>
+      <td data-label="Tehotaso">Ei sovelleta (passiivinen)</td>
+      <td data-label="Suositeltu menetelmä">Ex e (yleiseen johdotukseen)</td>
+      <td data-label="Vaihtoehto">Ex d (jos sisältää kipinöiviä laitteita)</td>
     </tr>
     <tr>
-      <td><strong>Anturi/lähetin</strong></td>
-      <td>&lt; 5 W</td>
-      <td><a href="/fi/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (luontainen turvallisuus)</a></td>
-      <td>Ex d (kotelo), Ex e</td>
+      <td data-label="Sovellus"><strong>Anturi/lähetin</strong></td>
+      <td data-label="Tehotaso">&lt; 5 W</td>
+      <td data-label="Suositeltu menetelmä"><a href="/fi/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (luontainen turvallisuus)</a></td>
+      <td data-label="Vaihtoehto">Ex d (kotelo), Ex e</td>
     </tr>
     <tr>
-      <td><strong>Ohjauspaneeli</strong></td>
-      <td>&gt; 10 kW</td>
-      <td>Ex p (paineistus)</td>
-      <td>Ex d (pienet paneelit), Ex e (liitäntäosat)</td>
+      <td data-label="Sovellus"><strong>Ohjauspaneeli</strong></td>
+      <td data-label="Tehotaso">&gt; 10 kW</td>
+      <td data-label="Suositeltu menetelmä">Ex p (paineistus)</td>
+      <td data-label="Vaihtoehto">Ex d (pienet paneelit), Ex e (liitäntäosat)</td>
     </tr>
     <tr>
-      <td><strong>Magneettiventtiili</strong></td>
-      <td>5–50 W</td>
-      <td>Ex m (kapselointi)</td>
-      <td>Ex d, Ex ia</td>
+      <td data-label="Sovellus"><strong>Magneettiventtiili</strong></td>
+      <td data-label="Tehotaso">5–50 W</td>
+      <td data-label="Suositeltu menetelmä">Ex m (kapselointi)</td>
+      <td data-label="Vaihtoehto">Ex d, Ex ia</td>
     </tr>
     <tr>
-      <td><strong>Kannettavat laitteet</strong></td>
-      <td>Akku</td>
-      <td>Ex ia, Ex ib</td>
-      <td>Ex d (raskaampi)</td>
+      <td data-label="Sovellus"><strong>Kannettavat laitteet</strong></td>
+      <td data-label="Tehotaso">Akku</td>
+      <td data-label="Suositeltu menetelmä">Ex ia, Ex ib</td>
+      <td data-label="Vaihtoehto">Ex d (raskaampi)</td>
     </tr>
   </tbody>
 </table>

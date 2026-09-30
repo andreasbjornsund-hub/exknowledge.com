@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -196,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Farliga områden klassificeras i zoner baserat på <strong>frekvensen och varaktigheten</strong> av en explosiv atmosfär:</p>
 
 <h3>Gas-/ångzoner</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zon</th>
@@ -207,22 +207,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zon 0</strong></td>
-      <td>Explosiv atmosfär förekommer <strong>kontinuerligt</strong> eller under långa perioder</td>
-      <td>&gt; 1 000 timmar/år</td>
-      <td>Inuti lagringstankar, ångutrymmen ovanför flyktiga vätskor, inuti processkärl</td>
+      <td data-label="Zon"><strong>Zon 0</strong></td>
+      <td data-label="Definition">Explosiv atmosfär förekommer <strong>kontinuerligt</strong> eller under långa perioder</td>
+      <td data-label="Varaktighet">&gt; 1 000 timmar/år</td>
+      <td data-label="Typiska exempel">Inuti lagringstankar, ångutrymmen ovanför flyktiga vätskor, inuti processkärl</td>
     </tr>
     <tr>
-      <td><strong>Zon 1</strong></td>
-      <td>Explosiv atmosfär <strong>som sannolikt uppstår</strong> vid normal drift</td>
-      <td>10–1 000 timmar/år</td>
-      <td>Runt pump packningar, ventil packningar, provtagningspunkter, avlastningsventiler, lastningsområden</td>
+      <td data-label="Zon"><strong>Zon 1</strong></td>
+      <td data-label="Definition">Explosiv atmosfär <strong>som sannolikt uppstår</strong> vid normal drift</td>
+      <td data-label="Varaktighet">10–1 000 timmar/år</td>
+      <td data-label="Typiska exempel">Runt pump packningar, ventil packningar, provtagningspunkter, avlastningsventiler, lastningsområden</td>
     </tr>
     <tr>
-      <td><strong>Zon 2</strong></td>
-      <td>Explosiv atmosfär <strong>sannolikt inte förekommer</strong> vid normal drift; om den förekommer, endast under <strong>korta perioder</strong></td>
-      <td>&lt; 10 timmar/år</td>
-      <td>Runt flänsar med bra packningar, rörkopplingar, områden nära zon 1-gränserna</td>
+      <td data-label="Zon"><strong>Zon 2</strong></td>
+      <td data-label="Definition">Explosiv atmosfär <strong>sannolikt inte förekommer</strong> vid normal drift; om den förekommer, endast under <strong>korta perioder</strong></td>
+      <td data-label="Varaktighet">&lt; 10 timmar/år</td>
+      <td data-label="Typiska exempel">Runt flänsar med bra packningar, rörkopplingar, områden nära zon 1-gränserna</td>
     </tr>
   </tbody>
 </table>
@@ -265,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Steg 1: Identifiera utsläppskällor</h3>
 <p>En <strong>utsläppskälla</strong> är varje punkt där brandfarlig gas, ånga eller vätska kan läcka ut i atmosfären. Källorna graderas efter frekvens:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Grad</th>
@@ -276,22 +276,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Kontinuerlig</strong></td>
-      <td>Utsläppet är kontinuerligt eller förväntas pågå under långa perioder</td>
-      <td>Tankventiler, öppna vätskeytor, konstanta läckor från defekta tätningar</td>
-      <td>Zon 0</td>
+      <td data-label="Grad"><strong>Kontinuerlig</strong></td>
+      <td data-label="Definition">Utsläppet är kontinuerligt eller förväntas pågå under långa perioder</td>
+      <td data-label="Exempel">Tankventiler, öppna vätskeytor, konstanta läckor från defekta tätningar</td>
+      <td data-label="Skapar zon">Zon 0</td>
     </tr>
     <tr>
-      <td><strong>Primär</strong></td>
-      <td>Utsläpp förväntas periodvis eller ibland under normal drift</td>
-      <td>Pump- och kompressortätningar, provtagningspunkter, avlastningsventiler, anslutningar för lastning/lossning</td>
-      <td>Zon 1</td>
+      <td data-label="Grad"><strong>Primär</strong></td>
+      <td data-label="Definition">Utsläpp förväntas periodvis eller ibland under normal drift</td>
+      <td data-label="Exempel">Pump- och kompressortätningar, provtagningspunkter, avlastningsventiler, anslutningar för lastning/lossning</td>
+      <td data-label="Skapar zon">Zon 1</td>
     </tr>
     <tr>
-      <td><strong>Sekundär</strong></td>
-      <td>Utsläpp förväntas inte under normal drift; om det inträffar, endast sällan och under korta perioder</td>
-      <td>Flänsförband, ventilstammar (inte packningar), instrumentanslutningar, rörkopplingar i gott skick</td>
-      <td>Zon 2</td>
+      <td data-label="Grad"><strong>Sekundär</strong></td>
+      <td data-label="Definition">Utsläpp förväntas inte under normal drift; om det inträffar, endast sällan och under korta perioder</td>
+      <td data-label="Exempel">Flänsförband, ventilstammar (inte packningar), instrumentanslutningar, rörkopplingar i gott skick</td>
+      <td data-label="Skapar zon">Zon 2</td>
     </tr>
   </tbody>
 </table>
@@ -327,7 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Steg 3: Bestäm zonens typ</h3>
 <p>IEC 60079-10-1 bilaga B innehåller en matris:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Utsläppsklass</th>
@@ -338,22 +338,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Kontinuerlig</strong></td>
-      <td>Zon 0 NE (försumbar omfattning) → icke-farlig</td>
-      <td>Zon 0 + Zon 2</td>
-      <td>Zon 0 + Zon 1</td>
+      <td data-label="Utsläppsklass"><strong>Kontinuerlig</strong></td>
+      <td data-label="Hög ventilation + god tillgänglighet">Zon 0 NE (försumbar omfattning) → icke-farlig</td>
+      <td data-label="Medelhög ventilation + god tillgänglighet">Zon 0 + Zon 2</td>
+      <td data-label="Låg ventilation + dålig tillgänglighet">Zon 0 + Zon 1</td>
     </tr>
     <tr>
-      <td><strong>Primär</strong></td>
-      <td>Zon 1 NE → icke-farlig</td>
-      <td>Zon 1 + Zon 2</td>
-      <td>Zon 1 + Zon 0</td>
+      <td data-label="Utsläppsklass"><strong>Primär</strong></td>
+      <td data-label="Hög ventilation + god tillgänglighet">Zon 1 NE → icke-farlig</td>
+      <td data-label="Medelhög ventilation + god tillgänglighet">Zon 1 + Zon 2</td>
+      <td data-label="Låg ventilation + dålig tillgänglighet">Zon 1 + Zon 0</td>
     </tr>
     <tr>
-      <td><strong>Sekundär</strong></td>
-      <td>Zon 2 NE → icke-farlig</td>
-      <td>Zon 2</td>
-      <td>Zon 1 eller till och med zon 0</td>
+      <td data-label="Utsläppsklass"><strong>Sekundär</strong></td>
+      <td data-label="Hög ventilation + god tillgänglighet">Zon 2 NE → icke-farlig</td>
+      <td data-label="Medelhög ventilation + god tillgänglighet">Zon 2</td>
+      <td data-label="Låg ventilation + dålig tillgänglighet">Zon 1 eller till och med zon 0</td>
     </tr>
   </tbody>
 </table>

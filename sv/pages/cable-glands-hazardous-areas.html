@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -258,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Gängstandarder</h2>
 <p>Ex-kabelgenomföringar finns med olika gängtyper. Det är viktigt att gängan på genomföringen passar till ingången i kapslingen.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Gängtyp</th>
@@ -269,28 +269,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Metrisk (ISO)</strong></td>
-      <td>M20, M25, M32, M40, M50, M63</td>
-      <td>Europa, globalt</td>
-      <td>Vanligast för <a href="/sv/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Steg: 1,5 mm</td>
+      <td data-label="Gängtyp"><strong>Metrisk (ISO)</strong></td>
+      <td data-label="Beteckning">M20, M25, M32, M40, M50, M63</td>
+      <td data-label="Region">Europa, globalt</td>
+      <td data-label="Anmärkningar">Vanligast för <a href="/sv/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Steg: 1,5 mm</td>
     </tr>
     <tr>
-      <td><strong>NPT (konisk)</strong></td>
-      <td>½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
-      <td>Nordamerika</td>
-      <td>Självtätande konisk. Kräver gängätningsmedel (PTFE-tejp eller -pasta). Vanligt i NEC-installationer.</td>
+      <td data-label="Gängtyp"><strong>NPT (konisk)</strong></td>
+      <td data-label="Beteckning">½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
+      <td data-label="Region">Nordamerika</td>
+      <td data-label="Anmärkningar">Självtätande konisk. Kräver gängätningsmedel (PTFE-tejp eller -pasta). Vanligt i NEC-installationer.</td>
     </tr>
     <tr>
-      <td><strong>PG (Panzergewinde)</strong></td>
-      <td>PG9, PG11, PG13,5, PG16, PG21, PG29</td>
-      <td>Tyskland (äldre standard)</td>
-      <td>Äldre tysk standard. Finns fortfarande på äldre utrustning. Fasas ut till förmån för metriska mått.</td>
+      <td data-label="Gängtyp"><strong>PG (Panzergewinde)</strong></td>
+      <td data-label="Beteckning">PG9, PG11, PG13,5, PG16, PG21, PG29</td>
+      <td data-label="Region">Tyskland (äldre standard)</td>
+      <td data-label="Anmärkningar">Äldre tysk standard. Finns fortfarande på äldre utrustning. Fasas ut till förmån för metriska mått.</td>
     </tr>
     <tr>
-      <td><strong>G (BSP parallell)</strong></td>
-      <td>G½&quot;, G¾&quot;, G1&quot;</td>
-      <td>Storbritannien, Commonwealth</td>
-      <td>Parallell gänga (inte konisk). Kräver tätningsbricka eller O-ring.</td>
+      <td data-label="Gängtyp"><strong>G (BSP parallell)</strong></td>
+      <td data-label="Beteckning">G½&quot;, G¾&quot;, G1&quot;</td>
+      <td data-label="Region">Storbritannien, Commonwealth</td>
+      <td data-label="Anmärkningar">Parallell gänga (inte konisk). Kräver tätningsbricka eller O-ring.</td>
     </tr>
   </tbody>
 </table>
@@ -384,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>IP-klassificeringar för kabelgenomföringar</h2>
 <p>Ingress Protection-klassificeringen anger motståndskraft mot damm och vatten. Högre IP-klassificeringar krävs för tuffare miljöer.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>IP-klass</th>
@@ -395,34 +395,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IP54</strong></td>
-      <td>Dammskyddad</td>
-      <td>Stänkskyddad</td>
-      <td>Inomhus, torra miljöer</td>
+      <td data-label="IP-klass"><strong>IP54</strong></td>
+      <td data-label="Dammskydd">Dammskyddad</td>
+      <td data-label="Vattenskydd">Stänkskyddad</td>
+      <td data-label="Typisk tillämpning">Inomhus, torra miljöer</td>
     </tr>
     <tr>
-      <td><strong>IP66</strong></td>
-      <td>Dammtät</td>
-      <td>Kraftfulla vattenstrålar</td>
-      <td>Utomhus, industriellt (vanligast)</td>
+      <td data-label="IP-klass"><strong>IP66</strong></td>
+      <td data-label="Dammskydd">Dammtät</td>
+      <td data-label="Vattenskydd">Kraftfulla vattenstrålar</td>
+      <td data-label="Typisk tillämpning">Utomhus, industriellt (vanligast)</td>
     </tr>
     <tr>
-      <td><strong>IP67</strong></td>
-      <td>Dammtät</td>
-      <td>Tillfällig nedsänkning (1 m, 30 min)</td>
-      <td>Områden utsatta för översvämning, tvättning</td>
+      <td data-label="IP-klass"><strong>IP67</strong></td>
+      <td data-label="Dammskydd">Dammtät</td>
+      <td data-label="Vattenskydd">Tillfällig nedsänkning (1 m, 30 min)</td>
+      <td data-label="Typisk tillämpning">Områden utsatta för översvämning, tvättning</td>
     </tr>
     <tr>
-      <td><strong>IP68</strong></td>
-      <td>Dammtät</td>
-      <td>Kontinuerlig nedsänkning (djup/tid enligt tillverkaren)</td>
-      <td>Undervattensmiljö, permanent under vatten</td>
+      <td data-label="IP-klass"><strong>IP68</strong></td>
+      <td data-label="Dammskydd">Dammtät</td>
+      <td data-label="Vattenskydd">Kontinuerlig nedsänkning (djup/tid enligt tillverkaren)</td>
+      <td data-label="Typisk tillämpning">Undervattensmiljö, permanent under vatten</td>
     </tr>
     <tr>
-      <td><strong>IP6X</strong></td>
-      <td>Dammtät</td>
-      <td>Inget vattenskydd specificerat</td>
-      <td>Dammzoner (zon 20/21) där vatteninträngning inte är ett problem</td>
+      <td data-label="IP-klass"><strong>IP6X</strong></td>
+      <td data-label="Dammskydd">Dammtät</td>
+      <td data-label="Vattenskydd">Inget vattenskydd specificerat</td>
+      <td data-label="Typisk tillämpning">Dammzoner (zon 20/21) där vatteninträngning inte är ett problem</td>
     </tr>
   </tbody>
 </table>

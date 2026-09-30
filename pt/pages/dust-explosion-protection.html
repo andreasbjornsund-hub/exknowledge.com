@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -216,7 +216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Tipos de poeira combustível</h2>
 
 <h3><a href="/pt/pages/gas-groups.html">Grupos de poeiras</a> (IEC 60079-0)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Grupo</th>
@@ -227,22 +227,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IIIA</strong></td>
-      <td>Partículas combustíveis</td>
-      <td>Fibras de algodão, fiapos têxteis, aparas de madeira, fibras de papel</td>
-      <td>Facilmente inflamáveis, propagação rápida das chamas</td>
+      <td data-label="Grupo"><strong>IIIA</strong></td>
+      <td data-label="Tipo">Partículas combustíveis</td>
+      <td data-label="Exemplos">Fibras de algodão, fiapos têxteis, aparas de madeira, fibras de papel</td>
+      <td data-label="Risco principal">Facilmente inflamáveis, propagação rápida das chamas</td>
     </tr>
     <tr>
-      <td><strong>IIIB</strong></td>
-      <td>Pó não condutor</td>
-      <td>Farinha, açúcar, amido, grãos, pó de madeira, pó plástico, pós farmacêuticos</td>
-      <td>Carga eletrostática, acumulação em camadas</td>
+      <td data-label="Grupo"><strong>IIIB</strong></td>
+      <td data-label="Tipo">Pó não condutor</td>
+      <td data-label="Exemplos">Farinha, açúcar, amido, grãos, pó de madeira, pó plástico, pós farmacêuticos</td>
+      <td data-label="Risco principal">Carga eletrostática, acumulação em camadas</td>
     </tr>
     <tr>
-      <td><strong>IIIC</strong></td>
-      <td>Pó condutor</td>
-      <td>Pó de alumínio, pó de magnésio, limalhas de ferro, negro de fumo, grafite</td>
-      <td>Pode causar curto-circuito em equipamentos elétricos, metais muito reativos</td>
+      <td data-label="Grupo"><strong>IIIC</strong></td>
+      <td data-label="Tipo">Pó condutor</td>
+      <td data-label="Exemplos">Pó de alumínio, pó de magnésio, limalhas de ferro, negro de fumo, grafite</td>
+      <td data-label="Risco principal">Pode causar curto-circuito em equipamentos elétricos, metais muito reativos</td>
     </tr>
   </tbody>
 </table>
@@ -264,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Parâmetros de explosão de pó</h2>
 <p>A explosibilidade do pó é caracterizada por testes laboratoriais de acordo com a série EN 14034 (ver <a href="/pt/pages/standards.html">visão geral das normas</a>):</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Parâmetro</th>
@@ -275,46 +275,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Pressão máxima de explosão</strong></td>
-      <td>P<sub>max</sub></td>
-      <td>Pressão máxima durante a explosão (bar)</td>
-      <td>Determina os requisitos de resistência estrutural para contenção ou ventilação</td>
+      <td data-label="Parâmetro"><strong>Pressão máxima de explosão</strong></td>
+      <td data-label="Símbolo">P<sub>max</sub></td>
+      <td data-label="O que mede">Pressão máxima durante a explosão (bar)</td>
+      <td data-label="Por que é importante">Determina os requisitos de resistência estrutural para contenção ou ventilação</td>
     </tr>
     <tr>
-      <td><strong>Gravidade da explosão de poeira</strong></td>
-      <td>K<sub>St</sub></td>
-      <td>Taxa de aumento da pressão (bar·m/s)</td>
-      <td>Determina o dimensionamento da área de ventilação e o tempo de resposta da supressão</td>
+      <td data-label="Parâmetro"><strong>Gravidade da explosão de poeira</strong></td>
+      <td data-label="Símbolo">K<sub>St</sub></td>
+      <td data-label="O que mede">Taxa de aumento da pressão (bar·m/s)</td>
+      <td data-label="Por que é importante">Determina o dimensionamento da área de ventilação e o tempo de resposta da supressão</td>
     </tr>
     <tr>
-      <td><strong>Concentração mínima explosiva</strong></td>
-      <td>MEC</td>
-      <td>Concentração mínima de poeira que pode explodir (g/m³)</td>
-      <td>Equivalente ao LEL para gases; normalmente 20–60 g/m³</td>
+      <td data-label="Parâmetro"><strong>Concentração mínima explosiva</strong></td>
+      <td data-label="Símbolo">MEC</td>
+      <td data-label="O que mede">Concentração mínima de poeira que pode explodir (g/m³)</td>
+      <td data-label="Por que é importante">Equivalente ao LEL para gases; normalmente 20–60 g/m³</td>
     </tr>
     <tr>
-      <td><strong>Energia mínima de ignição</strong></td>
-      <td>MIE</td>
-      <td>Pequena faísca que pode inflamar uma nuvem de poeira (mJ)</td>
-      <td>Determina o nível de risco de descarga eletrostática</td>
+      <td data-label="Parâmetro"><strong>Energia mínima de ignição</strong></td>
+      <td data-label="Símbolo">MIE</td>
+      <td data-label="O que mede">Pequena faísca que pode inflamar uma nuvem de poeira (mJ)</td>
+      <td data-label="Por que é importante">Determina o nível de risco de descarga eletrostática</td>
     </tr>
     <tr>
-      <td><strong>Temperatura mínima de ignição (nuvem)</strong></td>
-      <td>MIT</td>
-      <td>Temperatura mais baixa da superfície que inflama uma nuvem de poeira (°C), consulte <a href="/pt/pages/temperature-classes.html">as classes de temperatura</a></td>
-      <td>Define os limites de temperatura da superfície do equipamento</td>
+      <td data-label="Parâmetro"><strong>Temperatura mínima de ignição (nuvem)</strong></td>
+      <td data-label="Símbolo">MIT</td>
+      <td data-label="O que mede">Temperatura mais baixa da superfície que inflama uma nuvem de poeira (°C), consulte <a href="/pt/pages/temperature-classes.html">as classes de temperatura</a></td>
+      <td data-label="Por que é importante">Define os limites de temperatura da superfície do equipamento</td>
     </tr>
     <tr>
-      <td><strong>Temperatura de ignição da camada</strong></td>
-      <td>LIT</td>
-      <td>Temperatura na qual uma camada de poeira de 5 mm entra em ignição (°C)</td>
-      <td>Frequentemente inferior à MIT; crítica para as normas de limpeza</td>
+      <td data-label="Parâmetro"><strong>Temperatura de ignição da camada</strong></td>
+      <td data-label="Símbolo">LIT</td>
+      <td data-label="O que mede">Temperatura na qual uma camada de poeira de 5 mm entra em ignição (°C)</td>
+      <td data-label="Por que é importante">Frequentemente inferior à MIT; crítica para as normas de limpeza</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Classes de explosão de poeira (K<sub>St</sub>)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Classe</th>
@@ -325,28 +325,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>St 0</td>
-      <td>0</td>
-      <td>Não explosivo</td>
-      <td>Alguns pós minerais, cimento</td>
+      <td data-label="Classe">St 0</td>
+      <td data-label="Intervalo K St (bar·m/s)">0</td>
+      <td data-label="Gravidade">Não explosivo</td>
+      <td data-label="Exemplos">Alguns pós minerais, cimento</td>
     </tr>
     <tr>
-      <td><strong>St 1</strong></td>
-      <td>1–200</td>
-      <td>Fraco a moderado</td>
-      <td>Farinha de trigo, açúcar, pó de madeira, carvão</td>
+      <td data-label="Classe"><strong>St 1</strong></td>
+      <td data-label="Intervalo K St (bar·m/s)">1–200</td>
+      <td data-label="Gravidade">Fraco a moderado</td>
+      <td data-label="Exemplos">Farinha de trigo, açúcar, pó de madeira, carvão</td>
     </tr>
     <tr>
-      <td><strong>Nível 2</strong></td>
-      <td>201–300</td>
-      <td>Forte</td>
-      <td>Pigmentos orgânicos, alguns plásticos, celulose</td>
+      <td data-label="Classe"><strong>Nível 2</strong></td>
+      <td data-label="Intervalo K St (bar·m/s)">201–300</td>
+      <td data-label="Gravidade">Forte</td>
+      <td data-label="Exemplos">Pigmentos orgânicos, alguns plásticos, celulose</td>
     </tr>
     <tr>
-      <td><strong>St 3</strong></td>
-      <td>&gt; 300</td>
-      <td>Muito forte</td>
-      <td>Pó de alumínio, pó de magnésio</td>
+      <td data-label="Classe"><strong>St 3</strong></td>
+      <td data-label="Intervalo K St (bar·m/s)">&gt; 300</td>
+      <td data-label="Gravidade">Muito forte</td>
+      <td data-label="Exemplos">Pó de alumínio, pó de magnésio</td>
     </tr>
   </tbody>
 </table>
@@ -356,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2><a href="/pt/pages/zone-classification.html">Zonas</a> de pó: 20, 21, 22</h2>
 
 <h3>Definições das zonas</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zona</th>
@@ -367,22 +367,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zona 20</strong></td>
-      <td>Continuamente ou frequentemente</td>
-      <td>Categoria 1 D (EPL Da)</td>
-      <td>Dentro de silos, funis, ciclones, moinhos, misturadores, transportadores pneumáticos</td>
+      <td data-label="Zona"><strong>Zona 20</strong></td>
+      <td data-label="Nuvem de pó presente">Continuamente ou frequentemente</td>
+      <td data-label="Categoria de equipamento necessária">Categoria 1 D (EPL Da)</td>
+      <td data-label="Locais típicos">Dentro de silos, funis, ciclones, moinhos, misturadores, transportadores pneumáticos</td>
     </tr>
     <tr>
-      <td><strong>Zona 21</strong></td>
-      <td>Provável em funcionamento normal</td>
-      <td>Categoria 2 D (EPL Db)</td>
-      <td>Em torno de pontos de despejo de sacos, pontos de enchimento, transferências de transportadores abertos, portas de acesso a filtros</td>
+      <td data-label="Zona"><strong>Zona 21</strong></td>
+      <td data-label="Nuvem de pó presente">Provável em funcionamento normal</td>
+      <td data-label="Categoria de equipamento necessária">Categoria 2 D (EPL Db)</td>
+      <td data-label="Locais típicos">Em torno de pontos de despejo de sacos, pontos de enchimento, transferências de transportadores abertos, portas de acesso a filtros</td>
     </tr>
     <tr>
-      <td><strong>Zona 22</strong></td>
-      <td>Improvável; apenas por curtos períodos</td>
-      <td>Categoria 3 D (EPL Dc)</td>
-      <td>Áreas próximas aos limites da Zona 21, em torno de equipamentos selados, onde podem acumular-se camadas</td>
+      <td data-label="Zona"><strong>Zona 22</strong></td>
+      <td data-label="Nuvem de pó presente">Improvável; apenas por curtos períodos</td>
+      <td data-label="Categoria de equipamento necessária">Categoria 3 D (EPL Dc)</td>
+      <td data-label="Locais típicos">Áreas próximas aos limites da Zona 21, em torno de equipamentos selados, onde podem acumular-se camadas</td>
     </tr>
   </tbody>
 </table>
@@ -460,7 +460,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Seleção de equipamentos para zonas com poeira</h2>
 
 <h3>Métodos de proteção contra poeira</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Método</th>
@@ -472,32 +472,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>Proteção por invólucro</td>
-      <td>Ex ta / tb / tc</td>
-      <td>IEC 60079-31</td>
-      <td>Invólucro estanque ao pó com controlo de temperatura</td>
-      <td>ta: Zona 20, tb: Zona 21, tc: Zona 22</td>
+      <td data-label="Método">Proteção por invólucro</td>
+      <td data-label="Código">Ex ta / tb / tc</td>
+      <td data-label="Norma">IEC 60079-31</td>
+      <td data-label="Princípio">Invólucro estanque ao pó com controlo de temperatura</td>
+      <td data-label="Adequação da zona">ta: Zona 20, tb: Zona 21, tc: Zona 22</td>
     </tr>
     <tr>
-      <td><a href="/pt/pages/explosion-proof-vs-intrinsically-safe.html">Segurança intrínseca</a></td>
-      <td>Ex ia / ib</td>
-      <td>IEC 60079-11</td>
-      <td>Energia limitada abaixo do MIE do pó</td>
-      <td>ia: Zona 20, ib: Zona 21</td>
+      <td data-label="Método"><a href="/pt/pages/explosion-proof-vs-intrinsically-safe.html">Segurança intrínseca</a></td>
+      <td data-label="Código">Ex ia / ib</td>
+      <td data-label="Norma">IEC 60079-11</td>
+      <td data-label="Princípio">Energia limitada abaixo do MIE do pó</td>
+      <td data-label="Adequação da zona">ia: Zona 20, ib: Zona 21</td>
     </tr>
     <tr>
-      <td>Encapsulamento</td>
-      <td>Ex ma / mb</td>
-      <td>IEC 60079-18</td>
-      <td>Fontes de ignição seladas em composto</td>
-      <td>ma: Zona 20, mb: Zona 21</td>
+      <td data-label="Método">Encapsulamento</td>
+      <td data-label="Código">Ex ma / mb</td>
+      <td data-label="Norma">IEC 60079-18</td>
+      <td data-label="Princípio">Fontes de ignição seladas em composto</td>
+      <td data-label="Adequação da zona">ma: Zona 20, mb: Zona 21</td>
     </tr>
     <tr>
-      <td>Pressurização</td>
-      <td>Ex pxb / pyb / pzc</td>
-      <td>IEC 60079-2</td>
-      <td>A pressão positiva exclui o pó</td>
-      <td>pxb: Zona 21, pzc: Zona 22</td>
+      <td data-label="Método">Pressurização</td>
+      <td data-label="Código">Ex pxb / pyb / pzc</td>
+      <td data-label="Norma">IEC 60079-2</td>
+      <td data-label="Princípio">A pressão positiva exclui o pó</td>
+      <td data-label="Adequação da zona">pxb: Zona 21, pzc: Zona 22</td>
     </tr>
   </tbody>
 </table>
@@ -542,7 +542,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section>
 <h2>Explosões de pó notáveis</h2>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Ano</th>
@@ -554,39 +554,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>2008</td>
-      <td>Imperial Sugar, Geórgia, EUA</td>
-      <td>Açúcar</td>
-      <td>14</td>
-      <td>Acúmulo de camadas de poeira nos rolamentos da esteira transportadora; ausência de programa de limpeza</td>
+      <td data-label="Ano">2008</td>
+      <td data-label="Incidente">Imperial Sugar, Geórgia, EUA</td>
+      <td data-label="Tipo de poeira">Açúcar</td>
+      <td data-label="Vítimas mortais">14</td>
+      <td data-label="Lição principal">Acúmulo de camadas de poeira nos rolamentos da esteira transportadora; ausência de programa de limpeza</td>
     </tr>
     <tr>
-      <td>2010</td>
-      <td>AL Solutions, Virgínia Ocidental, EUA</td>
-      <td>Titânio/zircónio</td>
-      <td>3</td>
-      <td>Pó metálico inflamou durante a mistura; sem ventilação para explosões</td>
+      <td data-label="Ano">2010</td>
+      <td data-label="Incidente">AL Solutions, Virgínia Ocidental, EUA</td>
+      <td data-label="Tipo de poeira">Titânio/zircónio</td>
+      <td data-label="Vítimas mortais">3</td>
+      <td data-label="Lição principal">Pó metálico inflamou durante a mistura; sem ventilação para explosões</td>
     </tr>
     <tr>
-      <td>2014</td>
-      <td>Zhongrong Metal, Kunshan, China</td>
-      <td>Alumínio</td>
-      <td>146</td>
-      <td>Pó de polimento de alumínio em oficina mal ventilada; a explosão de pó industrial mais mortal da história moderna</td>
+      <td data-label="Ano">2014</td>
+      <td data-label="Incidente">Zhongrong Metal, Kunshan, China</td>
+      <td data-label="Tipo de poeira">Alumínio</td>
+      <td data-label="Vítimas mortais">146</td>
+      <td data-label="Lição principal">Pó de polimento de alumínio em oficina mal ventilada; a explosão de pó industrial mais mortal da história moderna</td>
     </tr>
     <tr>
-      <td>2017</td>
-      <td>Didion Milling, Wisconsin, EUA</td>
-      <td>Pó de milho</td>
-      <td>5</td>
-      <td>Pó de milho a arder lentamente no secador; deteção inadequada de faíscas</td>
+      <td data-label="Ano">2017</td>
+      <td data-label="Incidente">Didion Milling, Wisconsin, EUA</td>
+      <td data-label="Tipo de poeira">Pó de milho</td>
+      <td data-label="Vítimas mortais">5</td>
+      <td data-label="Lição principal">Pó de milho a arder lentamente no secador; deteção inadequada de faíscas</td>
     </tr>
     <tr>
-      <td>1878</td>
-      <td>Washburn A Mill, Minneapolis, EUA</td>
-      <td>Farinha</td>
-      <td>18</td>
-      <td>Primeira explosão de pó de grãos reconhecida nos EUA; levou a reformas de segurança na indústria de moagem</td>
+      <td data-label="Ano">1878</td>
+      <td data-label="Incidente">Washburn A Mill, Minneapolis, EUA</td>
+      <td data-label="Tipo de poeira">Farinha</td>
+      <td data-label="Vítimas mortais">18</td>
+      <td data-label="Lição principal">Primeira explosão de pó de grãos reconhecida nos EUA; levou a reformas de segurança na indústria de moagem</td>
     </tr>
   </tbody>
 </table>

@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -268,7 +268,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Grupp II: Ytindustri</h3>
 <p>Utrustning för alla andra industrier (olja och gas, kemisk industri, läkemedelsindustri, livsmedelsindustri etc.). Indelad efter kategori och atmosfärstyp:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Kategori</th>
@@ -279,40 +279,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>1 G</td>
-      <td>Ga</td>
-      <td>Zon 0</td>
-      <td>Mycket hög (2 oberoende fel)</td>
+      <td data-label="Kategori">1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Zon Lämplighet">Zon 0</td>
+      <td data-label="Skyddsnivå">Mycket hög (2 oberoende fel)</td>
     </tr>
     <tr>
-      <td>2 G</td>
-      <td>Gb</td>
-      <td>Zon 1</td>
-      <td>Hög (1 fel)</td>
+      <td data-label="Kategori">2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Zon Lämplighet">Zon 1</td>
+      <td data-label="Skyddsnivå">Hög (1 fel)</td>
     </tr>
     <tr>
-      <td>3 G</td>
-      <td>Gc</td>
-      <td>Zon 2</td>
-      <td>Normal drift</td>
+      <td data-label="Kategori">3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Zon Lämplighet">Zon 2</td>
+      <td data-label="Skyddsnivå">Normal drift</td>
     </tr>
     <tr>
-      <td>1</td>
-      <td>Da</td>
-      <td>Zon 20</td>
-      <td>Mycket hög (2 oberoende fel)</td>
+      <td data-label="Kategori">1</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Zon Lämplighet">Zon 20</td>
+      <td data-label="Skyddsnivå">Mycket hög (2 oberoende fel)</td>
     </tr>
     <tr>
-      <td>2 D</td>
-      <td>Db</td>
-      <td>Zon 21</td>
-      <td>Hög (1 fel)</td>
+      <td data-label="Kategori">2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Zon Lämplighet">Zon 21</td>
+      <td data-label="Skyddsnivå">Hög (1 fel)</td>
     </tr>
     <tr>
-      <td>3 D</td>
-      <td>Dc</td>
-      <td>Zon 22</td>
-      <td>Normal drift</td>
+      <td data-label="Kategori">3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Zon Lämplighet">Zon 22</td>
+      <td data-label="Skyddsnivå">Normal drift</td>
     </tr>
   </tbody>
 </table>
@@ -362,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Moduler för bedömning av överensstämmelse</h2>
 <p>Tillverkare måste följa specifika procedurer för att visa överensstämmelse. Vilken modul som krävs beror på utrustningens kategori:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Modul</th>
@@ -373,40 +373,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>Intern tillverkningskontroll</td>
-      <td>Nej</td>
-      <td>Kategori 2 och 3 (icke-elektriska), kategori 3 (elektriska)</td>
+      <td data-label="Modul">A</td>
+      <td data-label="Namn">Intern tillverkningskontroll</td>
+      <td data-label="Anmäldt organ inblandat?">Nej</td>
+      <td data-label="Gäller">Kategori 2 och 3 (icke-elektriska), kategori 3 (elektriska)</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>EU-typkontroll</td>
-      <td>Ja</td>
-      <td>Alla kategori 1 och M1, de flesta kategori 2</td>
+      <td data-label="Modul">B</td>
+      <td data-label="Namn">EU-typkontroll</td>
+      <td data-label="Anmäldt organ inblandat?">Ja</td>
+      <td data-label="Gäller">Alla kategori 1 och M1, de flesta kategori 2</td>
     </tr>
     <tr>
-      <td>C</td>
-      <td>Överensstämmelse med typ (intern tillverkningskontroll + produkttester)</td>
-      <td>Nej (efter modul B)</td>
-      <td>Kombinerat med modul B</td>
+      <td data-label="Modul">C</td>
+      <td data-label="Namn">Överensstämmelse med typ (intern tillverkningskontroll + produkttester)</td>
+      <td data-label="Anmäldt organ inblandat?">Nej (efter modul B)</td>
+      <td data-label="Gäller">Kombinerat med modul B</td>
     </tr>
     <tr>
-      <td>D</td>
-      <td>Kvalitetssäkring (produktion)</td>
-      <td>Ja (övervakning)</td>
-      <td>Kombinerat med modul B för kategori 1/M1</td>
+      <td data-label="Modul">D</td>
+      <td data-label="Namn">Kvalitetssäkring (produktion)</td>
+      <td data-label="Anmäldt organ inblandat?">Ja (övervakning)</td>
+      <td data-label="Gäller">Kombinerat med modul B för kategori 1/M1</td>
     </tr>
     <tr>
-      <td>E</td>
-      <td>Kvalitetssäkring (produkt)</td>
-      <td>Ja (övervakning)</td>
-      <td>I kombination med modul B för kategori 1/M1</td>
+      <td data-label="Modul">E</td>
+      <td data-label="Namn">Kvalitetssäkring (produkt)</td>
+      <td data-label="Anmäldt organ inblandat?">Ja (övervakning)</td>
+      <td data-label="Gäller">I kombination med modul B för kategori 1/M1</td>
     </tr>
     <tr>
-      <td>F</td>
-      <td>Produktverifiering</td>
-      <td>Ja (produkt-för-produkt- eller batchtestning)</td>
-      <td>I kombination med modul B för kategori 1/M1</td>
+      <td data-label="Modul">F</td>
+      <td data-label="Namn">Produktverifiering</td>
+      <td data-label="Anmäldt organ inblandat?">Ja (produkt-för-produkt- eller batchtestning)</td>
+      <td data-label="Gäller">I kombination med modul B för kategori 1/M1</td>
     </tr>
   </tbody>
 </table>

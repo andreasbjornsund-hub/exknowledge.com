@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -268,7 +268,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Groep II: Oppervlakte-industrieën</h3>
 <p>Apparatuur voor alle andere industrieën (olie &amp; gas, chemie, farmacie, voedingsmiddelen, enz.). Onderverdeeld naar categorie en type atmosfeer:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Categorie</th>
@@ -279,40 +279,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>1 G</td>
-      <td>Ga</td>
-      <td>Zone 0</td>
-      <td>Zeer hoog (2 onafhankelijke storingen)</td>
+      <td data-label="Categorie">1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Geschiktheid voor zone">Zone 0</td>
+      <td data-label="Beschermingsniveau">Zeer hoog (2 onafhankelijke storingen)</td>
     </tr>
     <tr>
-      <td>2 G</td>
-      <td>Gb</td>
-      <td>Zone 1</td>
-      <td>Hoog (1 storing)</td>
+      <td data-label="Categorie">2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Geschiktheid voor zone">Zone 1</td>
+      <td data-label="Beschermingsniveau">Hoog (1 storing)</td>
     </tr>
     <tr>
-      <td>3 G</td>
-      <td>Gc</td>
-      <td>Zone 2</td>
-      <td>Normaal bedrijf</td>
+      <td data-label="Categorie">3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Geschiktheid voor zone">Zone 2</td>
+      <td data-label="Beschermingsniveau">Normaal bedrijf</td>
     </tr>
     <tr>
-      <td>1 D</td>
-      <td>Da</td>
-      <td>Zone 20</td>
-      <td>Zeer hoog (2 onafhankelijke storingen)</td>
+      <td data-label="Categorie">1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Geschiktheid voor zone">Zone 20</td>
+      <td data-label="Beschermingsniveau">Zeer hoog (2 onafhankelijke storingen)</td>
     </tr>
     <tr>
-      <td>2 D</td>
-      <td>Db</td>
-      <td>Zone 21</td>
-      <td>Hoog (1 fout)</td>
+      <td data-label="Categorie">2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Geschiktheid voor zone">Zone 21</td>
+      <td data-label="Beschermingsniveau">Hoog (1 fout)</td>
     </tr>
     <tr>
-      <td>3 D</td>
-      <td>Dc</td>
-      <td>Zone 22</td>
-      <td>Normaal bedrijf</td>
+      <td data-label="Categorie">3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Geschiktheid voor zone">Zone 22</td>
+      <td data-label="Beschermingsniveau">Normaal bedrijf</td>
     </tr>
   </tbody>
 </table>
@@ -362,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Modules voor conformiteitsbeoordeling</h2>
 <p>Fabrikanten moeten specifieke procedures volgen om aan te tonen dat ze aan de eisen voldoen. De vereiste module is afhankelijk van de categorie van de apparatuur:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Module</th>
@@ -373,40 +373,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>Interne productiecontrole</td>
-      <td>Nee</td>
-      <td>Categorie 2 en 3 (niet-elektrisch), categorie 3 (elektrisch)</td>
+      <td data-label="Module">A</td>
+      <td data-label="Naam">Interne productiecontrole</td>
+      <td data-label="Betrokken aangemelde instantie?">Nee</td>
+      <td data-label="Van toepassing op">Categorie 2 en 3 (niet-elektrisch), categorie 3 (elektrisch)</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>EU-typeonderzoek</td>
-      <td>Ja</td>
-      <td>Alle categorie 1 en M1, de meeste categorie 2</td>
+      <td data-label="Module">B</td>
+      <td data-label="Naam">EU-typeonderzoek</td>
+      <td data-label="Betrokken aangemelde instantie?">Ja</td>
+      <td data-label="Van toepassing op">Alle categorie 1 en M1, de meeste categorie 2</td>
     </tr>
     <tr>
-      <td>C1</td>
-      <td>Overeenstemming met het type (interne productiecontrole + producttests)</td>
-      <td>Nee (na module B)</td>
-      <td>Gecombineerd met module B</td>
+      <td data-label="Module">C1</td>
+      <td data-label="Naam">Overeenstemming met het type (interne productiecontrole + producttests)</td>
+      <td data-label="Betrokken aangemelde instantie?">Nee (na module B)</td>
+      <td data-label="Van toepassing op">Gecombineerd met module B</td>
     </tr>
     <tr>
-      <td>D</td>
-      <td>Kwaliteitsborging (productie)</td>
-      <td>Ja (toezicht)</td>
-      <td>Gecombineerd met module B voor categorie 1/M1</td>
+      <td data-label="Module">D</td>
+      <td data-label="Naam">Kwaliteitsborging (productie)</td>
+      <td data-label="Betrokken aangemelde instantie?">Ja (toezicht)</td>
+      <td data-label="Van toepassing op">Gecombineerd met module B voor categorie 1/M1</td>
     </tr>
     <tr>
-      <td>E</td>
-      <td>Kwaliteitsborging (product)</td>
-      <td>Ja (toezicht)</td>
-      <td>Gecombineerd met module B voor categorie 1/M1</td>
+      <td data-label="Module">E</td>
+      <td data-label="Naam">Kwaliteitsborging (product)</td>
+      <td data-label="Betrokken aangemelde instantie?">Ja (toezicht)</td>
+      <td data-label="Van toepassing op">Gecombineerd met module B voor categorie 1/M1</td>
     </tr>
     <tr>
-      <td>F</td>
-      <td>Productverificatie</td>
-      <td>Ja (product-voor-product of batchtesten)</td>
-      <td>Gecombineerd met module B voor categorie 1/M1</td>
+      <td data-label="Module">F</td>
+      <td data-label="Naam">Productverificatie</td>
+      <td data-label="Betrokken aangemelde instantie?">Ja (product-voor-product of batchtesten)</td>
+      <td data-label="Van toepassing op">Gecombineerd met module B voor categorie 1/M1</td>
     </tr>
   </tbody>
 </table>

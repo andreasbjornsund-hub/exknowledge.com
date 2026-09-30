@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -196,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Las áreas peligrosas se clasifican en zonas en función de la <strong>frecuencia y la duración</strong> de la presencia de una atmósfera explosiva:</p>
 
 <h3>Zonas de gas/vapor</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zona</th>
@@ -207,22 +207,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zona 0</strong></td>
-      <td>Atmósfera explosiva presente <strong>de forma continua</strong> o durante largos periodos</td>
-      <td>&gt; 1000 horas/año</td>
-      <td>Dentro de tanques de almacenamiento, espacios de vapor sobre líquidos volátiles, dentro de recipientes de proceso</td>
+      <td data-label="Zona"><strong>Zona 0</strong></td>
+      <td data-label="Definición">Atmósfera explosiva presente <strong>de forma continua</strong> o durante largos periodos</td>
+      <td data-label="Duración">&gt; 1000 horas/año</td>
+      <td data-label="Ejemplos típicos">Dentro de tanques de almacenamiento, espacios de vapor sobre líquidos volátiles, dentro de recipientes de proceso</td>
     </tr>
     <tr>
-      <td><strong>Zona 1</strong></td>
-      <td>Atmósfera explosiva <strong>que puede producirse</strong> durante el funcionamiento normal</td>
-      <td>10-1000 horas/año</td>
-      <td>Alrededor de juntas de bombas, empaquetaduras de válvulas, puntos de muestreo, válvulas de alivio, áreas de carga</td>
+      <td data-label="Zona"><strong>Zona 1</strong></td>
+      <td data-label="Definición">Atmósfera explosiva <strong>que puede producirse</strong> durante el funcionamiento normal</td>
+      <td data-label="Duración">10-1000 horas/año</td>
+      <td data-label="Ejemplos típicos">Alrededor de juntas de bombas, empaquetaduras de válvulas, puntos de muestreo, válvulas de alivio, áreas de carga</td>
     </tr>
     <tr>
-      <td><strong>Zona 2</strong></td>
-      <td>Atmósfera explosiva <strong>poco probable</strong> en condiciones normales de funcionamiento; si se produce, solo durante <strong>períodos cortos</strong></td>
-      <td>&lt; 10 horas/año</td>
-      <td>Alrededor de bridas con juntas en buen estado, accesorios de tuberías, áreas cercanas a los límites de la Zona 1</td>
+      <td data-label="Zona"><strong>Zona 2</strong></td>
+      <td data-label="Definición">Atmósfera explosiva <strong>poco probable</strong> en condiciones normales de funcionamiento; si se produce, solo durante <strong>períodos cortos</strong></td>
+      <td data-label="Duración">&lt; 10 horas/año</td>
+      <td data-label="Ejemplos típicos">Alrededor de bridas con juntas en buen estado, accesorios de tuberías, áreas cercanas a los límites de la Zona 1</td>
     </tr>
   </tbody>
 </table>
@@ -265,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Paso 1: Identificar las fuentes de liberación</h3>
 <p>Una <strong>fuente de liberación</strong> es cualquier punto por el que pueden escapar a la atmósfera gases, vapores o líquidos inflamables. Las fuentes se clasifican según su frecuencia:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Grado</th>
@@ -276,22 +276,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Continuo</strong></td>
-      <td>La liberación es continua o se espera que se produzca durante largos periodos</td>
-      <td>Ventilaciones de tanques, superficies líquidas abiertas, fugas constantes de juntas defectuosas</td>
-      <td>Zona 0</td>
+      <td data-label="Grado"><strong>Continuo</strong></td>
+      <td data-label="Definición">La liberación es continua o se espera que se produzca durante largos periodos</td>
+      <td data-label="Ejemplos">Ventilaciones de tanques, superficies líquidas abiertas, fugas constantes de juntas defectuosas</td>
+      <td data-label="Crea zona">Zona 0</td>
     </tr>
     <tr>
-      <td><strong>Primaria</strong></td>
-      <td>La liberación se espera de forma periódica u ocasional durante el funcionamiento normal</td>
-      <td>Sellos de bombas, sellos de compresores, puntos de muestreo, válvulas de alivio, conexiones de carga/descarga</td>
-      <td>Zona 1</td>
+      <td data-label="Grado"><strong>Primaria</strong></td>
+      <td data-label="Definición">La liberación se espera de forma periódica u ocasional durante el funcionamiento normal</td>
+      <td data-label="Ejemplos">Sellos de bombas, sellos de compresores, puntos de muestreo, válvulas de alivio, conexiones de carga/descarga</td>
+      <td data-label="Crea zona">Zona 1</td>
     </tr>
     <tr>
-      <td><strong>Secundaria</strong></td>
-      <td>No se espera que se produzca una liberación durante el funcionamiento normal; si se produce, solo será de forma esporádica y durante períodos cortos</td>
-      <td>Juntas con bridas, vástagos de válvulas (no empaquetaduras), conexiones de instrumentos, accesorios de tuberías en buen estado</td>
-      <td>Zona 2</td>
+      <td data-label="Grado"><strong>Secundaria</strong></td>
+      <td data-label="Definición">No se espera que se produzca una liberación durante el funcionamiento normal; si se produce, solo será de forma esporádica y durante períodos cortos</td>
+      <td data-label="Ejemplos">Juntas con bridas, vástagos de válvulas (no empaquetaduras), conexiones de instrumentos, accesorios de tuberías en buen estado</td>
+      <td data-label="Crea zona">Zona 2</td>
     </tr>
   </tbody>
 </table>
@@ -327,7 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Paso 3: Determinar el tipo de zona</h3>
 <p>El anexo B de la norma IEC 60079-10-1 proporciona una matriz:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Grado de liberación</th>
@@ -338,22 +338,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Continuo</strong></td>
-      <td>Zona 0 NE (alcance insignificante) → no peligroso</td>
-      <td>Zona 0 + Zona 2</td>
-      <td>Zona 0 + Zona 1</td>
+      <td data-label="Grado de liberación"><strong>Continuo</strong></td>
+      <td data-label="Ventilación alta + Buena disponibilidad">Zona 0 NE (alcance insignificante) → no peligroso</td>
+      <td data-label="Ventilación media + buena disponibilidad">Zona 0 + Zona 2</td>
+      <td data-label="Ventilación baja + disponibilidad deficiente">Zona 0 + Zona 1</td>
     </tr>
     <tr>
-      <td><strong>Primaria</strong></td>
-      <td>Zona 1 NE → no peligrosa</td>
-      <td>Zona 1 + Zona 2</td>
-      <td>Zona 1 + Zona 0</td>
+      <td data-label="Grado de liberación"><strong>Primaria</strong></td>
+      <td data-label="Ventilación alta + Buena disponibilidad">Zona 1 NE → no peligrosa</td>
+      <td data-label="Ventilación media + buena disponibilidad">Zona 1 + Zona 2</td>
+      <td data-label="Ventilación baja + disponibilidad deficiente">Zona 1 + Zona 0</td>
     </tr>
     <tr>
-      <td><strong>Secundaria</strong></td>
-      <td>Zona 2 NE → no peligrosa</td>
-      <td>Zona 2</td>
-      <td>Zona 1 o incluso Zona 0</td>
+      <td data-label="Grado de liberación"><strong>Secundaria</strong></td>
+      <td data-label="Ventilación alta + Buena disponibilidad">Zona 2 NE → no peligrosa</td>
+      <td data-label="Ventilación media + buena disponibilidad">Zona 2</td>
+      <td data-label="Ventilación baja + disponibilidad deficiente">Zona 1 o incluso Zona 0</td>
     </tr>
   </tbody>
 </table>

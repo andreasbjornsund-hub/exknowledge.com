@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -214,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>أنواع الغبار القابل للاشتعال</h2>
 
 <h3><a href="/ar/pages/gas-groups.html">مجموعات الغبار</a> (IEC 60079-0)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>المجموعة</th>
@@ -225,22 +225,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IIIA</strong></td>
-      <td>جزيئات طائرة قابلة للاشتعال</td>
-      <td>ألياف القطن، وبر النسيج، نشارة الخشب، ألياف الورق</td>
-      <td>تشتعل بسهولة، انتشار لهب سريع</td>
+      <td data-label="المجموعة"><strong>IIIA</strong></td>
+      <td data-label="النوع">جزيئات طائرة قابلة للاشتعال</td>
+      <td data-label="أمثلة">ألياف القطن، وبر النسيج، نشارة الخشب، ألياف الورق</td>
+      <td data-label="الخطر الرئيسي">تشتعل بسهولة، انتشار لهب سريع</td>
     </tr>
     <tr>
-      <td><strong>IIIB</strong></td>
-      <td>غبار غير موصل</td>
-      <td>دقيق، سكر، نشا، حبوب، غبار خشب، مسحوق بلاستيك، مساحيق دوائية</td>
-      <td>شحن كهربائي ساكن، تراكم طبقات</td>
+      <td data-label="المجموعة"><strong>IIIB</strong></td>
+      <td data-label="النوع">غبار غير موصل</td>
+      <td data-label="أمثلة">دقيق، سكر، نشا، حبوب، غبار خشب، مسحوق بلاستيك، مساحيق دوائية</td>
+      <td data-label="الخطر الرئيسي">شحن كهربائي ساكن، تراكم طبقات</td>
     </tr>
     <tr>
-      <td><strong>IIIC</strong></td>
-      <td>غبار موصل</td>
-      <td>مسحوق الألمنيوم، غبار المغنيسيوم، نشارة الحديد، الكربون الأسود، الجرافيت</td>
-      <td>يمكن أن يسبب دوائر كهربائية قصيرة في المعدات، معادن نشطة جداً</td>
+      <td data-label="المجموعة"><strong>IIIC</strong></td>
+      <td data-label="النوع">غبار موصل</td>
+      <td data-label="أمثلة">مسحوق الألمنيوم، غبار المغنيسيوم، نشارة الحديد، الكربون الأسود، الجرافيت</td>
+      <td data-label="الخطر الرئيسي">يمكن أن يسبب دوائر كهربائية قصيرة في المعدات، معادن نشطة جداً</td>
     </tr>
   </tbody>
 </table>
@@ -262,7 +262,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>معايير انفجار الغبار</h2>
 <p>يتم تحديد قابلية انفجار الغبار من خلال اختبارات مخبرية وفقاً لسلسلة EN 14034 (انظر <a href="/ar/pages/standards.html">نظرة عامة على المعايير</a>):</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>المعامل</th>
@@ -273,46 +273,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>أقصى ضغط انفجار</strong></td>
-      <td>P<sub>max</sub></td>
-      <td>أعلى ضغط أثناء الانفجار (بار)</td>
-      <td>يحدد متطلبات قوة الهيكل للحصر أو التهوية</td>
+      <td data-label="المعامل"><strong>أقصى ضغط انفجار</strong></td>
+      <td data-label="الرمز">P<sub>max</sub></td>
+      <td data-label="ما يقيسه">أعلى ضغط أثناء الانفجار (بار)</td>
+      <td data-label="لماذا هو مهم">يحدد متطلبات قوة الهيكل للحصر أو التهوية</td>
     </tr>
     <tr>
-      <td><strong>شدة انفجار الغبار</strong></td>
-      <td>K<sub>St</sub></td>
-      <td>معدل ارتفاع الضغط (بار·م/ث)</td>
-      <td>يحدد حجم فتحة التهوية ووقت استجابة الإخماد</td>
+      <td data-label="المعامل"><strong>شدة انفجار الغبار</strong></td>
+      <td data-label="الرمز">K<sub>St</sub></td>
+      <td data-label="ما يقيسه">معدل ارتفاع الضغط (بار·م/ث)</td>
+      <td data-label="لماذا هو مهم">يحدد حجم فتحة التهوية ووقت استجابة الإخماد</td>
     </tr>
     <tr>
-      <td><strong>أدنى تركيز قابل للانفجار</strong></td>
-      <td>MEC</td>
-      <td>أدنى تركيز غبار يمكن أن ينفجر (جم/م³)</td>
-      <td>ما يعادل الحد الأدنى للانفجار للغازات؛ عادة 20–60 جم/م³</td>
+      <td data-label="المعامل"><strong>أدنى تركيز قابل للانفجار</strong></td>
+      <td data-label="الرمز">MEC</td>
+      <td data-label="ما يقيسه">أدنى تركيز غبار يمكن أن ينفجر (جم/م³)</td>
+      <td data-label="لماذا هو مهم">ما يعادل الحد الأدنى للانفجار للغازات؛ عادة 20–60 جم/م³</td>
     </tr>
     <tr>
-      <td><strong>أدنى طاقة اشتعال</strong></td>
-      <td>MIE</td>
-      <td>أصغر شرارة يمكنها إشعال سحابة الغبار (ميلي جول)</td>
-      <td>يحدد مستوى خطر التفريغ الكهربائي الساكن</td>
+      <td data-label="المعامل"><strong>أدنى طاقة اشتعال</strong></td>
+      <td data-label="الرمز">MIE</td>
+      <td data-label="ما يقيسه">أصغر شرارة يمكنها إشعال سحابة الغبار (ميلي جول)</td>
+      <td data-label="لماذا هو مهم">يحدد مستوى خطر التفريغ الكهربائي الساكن</td>
     </tr>
     <tr>
-      <td><strong>أدنى درجة حرارة اشتعال (السحابة)</strong></td>
-      <td>MIT</td>
-      <td>أدنى درجة حرارة لسطح يشعل سحابة الغبار (°م). انظر <a href="/ar/pages/temperature-classes.html">فئات درجات الحرارة</a></td>
-      <td>يحدد حدود درجة حرارة سطح المعدات</td>
+      <td data-label="المعامل"><strong>أدنى درجة حرارة اشتعال (السحابة)</strong></td>
+      <td data-label="الرمز">MIT</td>
+      <td data-label="ما يقيسه">أدنى درجة حرارة لسطح يشعل سحابة الغبار (°م). انظر <a href="/ar/pages/temperature-classes.html">فئات درجات الحرارة</a></td>
+      <td data-label="لماذا هو مهم">يحدد حدود درجة حرارة سطح المعدات</td>
     </tr>
     <tr>
-      <td><strong>درجة حرارة اشتعال الطبقة</strong></td>
-      <td>LIT</td>
-      <td>درجة الحرارة التي تشتعل عندها طبقة غبار بسمك 5 مم (°م)</td>
-      <td>غالباً ما تكون أقل من MIT؛ حاسمة لمعايير النظافة</td>
+      <td data-label="المعامل"><strong>درجة حرارة اشتعال الطبقة</strong></td>
+      <td data-label="الرمز">LIT</td>
+      <td data-label="ما يقيسه">درجة الحرارة التي تشتعل عندها طبقة غبار بسمك 5 مم (°م)</td>
+      <td data-label="لماذا هو مهم">غالباً ما تكون أقل من MIT؛ حاسمة لمعايير النظافة</td>
     </tr>
   </tbody>
 </table>
 
 <h3>فئات انفجار الغبار (K<sub>St</sub>)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>الفئة</th>
@@ -323,28 +323,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>St 0</td>
-      <td>0</td>
-      <td>غير قابل للانفجار</td>
-      <td>بعض غبار المعادن، الأسمنت</td>
+      <td data-label="الفئة">St 0</td>
+      <td data-label="نطاق K St (بار·م/ث)">0</td>
+      <td data-label="الشدة">غير قابل للانفجار</td>
+      <td data-label="أمثلة">بعض غبار المعادن، الأسمنت</td>
     </tr>
     <tr>
-      <td><strong>St 1</strong></td>
-      <td>1–200</td>
-      <td>ضعيف إلى متوسط</td>
-      <td>دقيق القمح، السكر، غبار الخشب، الفحم</td>
+      <td data-label="الفئة"><strong>St 1</strong></td>
+      <td data-label="نطاق K St (بار·م/ث)">1–200</td>
+      <td data-label="الشدة">ضعيف إلى متوسط</td>
+      <td data-label="أمثلة">دقيق القمح، السكر، غبار الخشب، الفحم</td>
     </tr>
     <tr>
-      <td><strong>St 2</strong></td>
-      <td>201–300</td>
-      <td>قوي</td>
-      <td>الأصباغ العضوية، بعض أنواع البلاستيك، السليلوز</td>
+      <td data-label="الفئة"><strong>St 2</strong></td>
+      <td data-label="نطاق K St (بار·م/ث)">201–300</td>
+      <td data-label="الشدة">قوي</td>
+      <td data-label="أمثلة">الأصباغ العضوية، بعض أنواع البلاستيك، السليلوز</td>
     </tr>
     <tr>
-      <td><strong>St 3</strong></td>
-      <td>&gt; 300</td>
-      <td>قوي جداً</td>
-      <td>مسحوق الألمنيوم، غبار المغنيسيوم</td>
+      <td data-label="الفئة"><strong>St 3</strong></td>
+      <td data-label="نطاق K St (بار·م/ث)">&gt; 300</td>
+      <td data-label="الشدة">قوي جداً</td>
+      <td data-label="أمثلة">مسحوق الألمنيوم، غبار المغنيسيوم</td>
     </tr>
   </tbody>
 </table>
@@ -354,7 +354,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>مناطق الغبار <a href="/ar/pages/zone-classification.html">التصنيف</a>: 20، 21، 22</h2>
 
 <h3>تعريفات المناطق</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>المنطقة</th>
@@ -365,22 +365,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>المنطقة 20</strong></td>
-      <td>بشكل مستمر أو متكرر</td>
-      <td>الفئة 1 D (EPL Da)</td>
-      <td>داخل الصوامع، القادوس، الأعاصير، المطاحن، الخلاطات، الناقلات الهوائية</td>
+      <td data-label="المنطقة"><strong>المنطقة 20</strong></td>
+      <td data-label="وجود سحابة الغبار">بشكل مستمر أو متكرر</td>
+      <td data-label="فئة المعدات المطلوبة">الفئة 1 D (EPL Da)</td>
+      <td data-label="المواقع النموذجية">داخل الصوامع، القادوس، الأعاصير، المطاحن، الخلاطات، الناقلات الهوائية</td>
     </tr>
     <tr>
-      <td><strong>المنطقة 21</strong></td>
-      <td>محتمل أثناء التشغيل العادي</td>
-      <td>الفئة 2 D (EPL Db)</td>
-      <td>حول نقاط تفريغ الأكياس، نقاط التعبئة، نقل الناقلات المفتوحة، أبواب الوصول إلى الفلاتر</td>
+      <td data-label="المنطقة"><strong>المنطقة 21</strong></td>
+      <td data-label="وجود سحابة الغبار">محتمل أثناء التشغيل العادي</td>
+      <td data-label="فئة المعدات المطلوبة">الفئة 2 D (EPL Db)</td>
+      <td data-label="المواقع النموذجية">حول نقاط تفريغ الأكياس، نقاط التعبئة، نقل الناقلات المفتوحة، أبواب الوصول إلى الفلاتر</td>
     </tr>
     <tr>
-      <td><strong>المنطقة 22</strong></td>
-      <td>غير محتمل؛ لفترات قصيرة فقط</td>
-      <td>الفئة 3 D (EPL Dc)</td>
-      <td>المناطق القريبة من حدود المنطقة 21، حول المعدات المختومة، حيث قد تتراكم الطبقات</td>
+      <td data-label="المنطقة"><strong>المنطقة 22</strong></td>
+      <td data-label="وجود سحابة الغبار">غير محتمل؛ لفترات قصيرة فقط</td>
+      <td data-label="فئة المعدات المطلوبة">الفئة 3 D (EPL Dc)</td>
+      <td data-label="المواقع النموذجية">المناطق القريبة من حدود المنطقة 21، حول المعدات المختومة، حيث قد تتراكم الطبقات</td>
     </tr>
   </tbody>
 </table>
@@ -458,7 +458,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>اختيار المعدات لمناطق الغبار</h2>
 
 <h3>طرق الحماية للغبار</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>الطريقة</th>
@@ -470,32 +470,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>الحماية بالتغليف</td>
-      <td>Ex ta / tb / tc</td>
-      <td>IEC 60079-31</td>
-      <td>غلاف محكم الغبار مع التحكم في درجة الحرارة</td>
-      <td>ta: المنطقة 20، tb: المنطقة 21، tc: المنطقة 22</td>
+      <td data-label="الطريقة">الحماية بالتغليف</td>
+      <td data-label="الرمز">Ex ta / tb / tc</td>
+      <td data-label="المعيار">IEC 60079-31</td>
+      <td data-label="المبدأ">غلاف محكم الغبار مع التحكم في درجة الحرارة</td>
+      <td data-label="ملاءمة المنطقة">ta: المنطقة 20، tb: المنطقة 21، tc: المنطقة 22</td>
     </tr>
     <tr>
-      <td><a href="/ar/pages/explosion-proof-vs-intrinsically-safe.html">السلامة الجوهرية</a></td>
-      <td>Ex ia / ib</td>
-      <td>IEC 60079-11</td>
-      <td>طاقة محدودة أقل من الحد الأدنى لطاقة الاشتعال للغبار</td>
-      <td>ia: المنطقة 20، ib: المنطقة 21</td>
+      <td data-label="الطريقة"><a href="/ar/pages/explosion-proof-vs-intrinsically-safe.html">السلامة الجوهرية</a></td>
+      <td data-label="الرمز">Ex ia / ib</td>
+      <td data-label="المعيار">IEC 60079-11</td>
+      <td data-label="المبدأ">طاقة محدودة أقل من الحد الأدنى لطاقة الاشتعال للغبار</td>
+      <td data-label="ملاءمة المنطقة">ia: المنطقة 20، ib: المنطقة 21</td>
     </tr>
     <tr>
-      <td>التغليف</td>
-      <td>Ex ma / mb</td>
-      <td>IEC 60079-18</td>
-      <td>مصادر الاشتعال مختومة في مركب</td>
-      <td>ma: المنطقة 20، mb: المنطقة 21</td>
+      <td data-label="الطريقة">التغليف</td>
+      <td data-label="الرمز">Ex ma / mb</td>
+      <td data-label="المعيار">IEC 60079-18</td>
+      <td data-label="المبدأ">مصادر الاشتعال مختومة في مركب</td>
+      <td data-label="ملاءمة المنطقة">ma: المنطقة 20، mb: المنطقة 21</td>
     </tr>
     <tr>
-      <td>الضغط</td>
-      <td>Ex pxb / pyb / pzc</td>
-      <td>IEC 60079-2</td>
-      <td>الضغط الإيجابي يمنع دخول الغبار</td>
-      <td>pxb: المنطقة 21، pzc: المنطقة 22</td>
+      <td data-label="الطريقة">الضغط</td>
+      <td data-label="الرمز">Ex pxb / pyb / pzc</td>
+      <td data-label="المعيار">IEC 60079-2</td>
+      <td data-label="المبدأ">الضغط الإيجابي يمنع دخول الغبار</td>
+      <td data-label="ملاءمة المنطقة">pxb: المنطقة 21، pzc: المنطقة 22</td>
     </tr>
   </tbody>
 </table>
@@ -540,7 +540,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section>
 <h2>انفجارات الغبار البارزة</h2>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>السنة</th>
@@ -552,39 +552,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>2008</td>
-      <td>إمبيريال شوغر، جورجيا، الولايات المتحدة الأمريكية</td>
-      <td>سكر</td>
-      <td>14</td>
-      <td>تراكم طبقات الغبار على محامل الناقل؛ عدم وجود برنامج تنظيف</td>
+      <td data-label="السنة">2008</td>
+      <td data-label="الحادث">إمبيريال شوغر، جورجيا، الولايات المتحدة الأمريكية</td>
+      <td data-label="نوع الغبار">سكر</td>
+      <td data-label="الوفيات">14</td>
+      <td data-label="الدرس الرئيسي">تراكم طبقات الغبار على محامل الناقل؛ عدم وجود برنامج تنظيف</td>
     </tr>
     <tr>
-      <td>2010</td>
-      <td>AL Solutions، فرجينيا الغربية، الولايات المتحدة الأمريكية</td>
-      <td>تيتانيوم/زركونيوم</td>
-      <td>3</td>
-      <td>اشتعال غبار المعدن أثناء الخلط؛ عدم وجود تهوية للانفجار</td>
+      <td data-label="السنة">2010</td>
+      <td data-label="الحادث">AL Solutions، فرجينيا الغربية، الولايات المتحدة الأمريكية</td>
+      <td data-label="نوع الغبار">تيتانيوم/زركونيوم</td>
+      <td data-label="الوفيات">3</td>
+      <td data-label="الدرس الرئيسي">اشتعال غبار المعدن أثناء الخلط؛ عدم وجود تهوية للانفجار</td>
     </tr>
     <tr>
-      <td>2014</td>
-      <td>تشونغرونغ ميتال، كونشان، الصين</td>
-      <td>ألمنيوم</td>
-      <td>146</td>
-      <td>غبار تلميع الألمنيوم في ورشة سيئة التهوية؛ أخطر انفجار غبار صناعي في التاريخ الحديث</td>
+      <td data-label="السنة">2014</td>
+      <td data-label="الحادث">تشونغرونغ ميتال، كونشان، الصين</td>
+      <td data-label="نوع الغبار">ألمنيوم</td>
+      <td data-label="الوفيات">146</td>
+      <td data-label="الدرس الرئيسي">غبار تلميع الألمنيوم في ورشة سيئة التهوية؛ أخطر انفجار غبار صناعي في التاريخ الحديث</td>
     </tr>
     <tr>
-      <td>2017</td>
-      <td>ديديون ميلينغ، ويسكونسن، الولايات المتحدة الأمريكية</td>
-      <td>غبار الذرة</td>
-      <td>5</td>
-      <td>غبار الذرة المتقد في المجفف؛ كشف شرارة غير كافٍ</td>
+      <td data-label="السنة">2017</td>
+      <td data-label="الحادث">ديديون ميلينغ، ويسكونسن، الولايات المتحدة الأمريكية</td>
+      <td data-label="نوع الغبار">غبار الذرة</td>
+      <td data-label="الوفيات">5</td>
+      <td data-label="الدرس الرئيسي">غبار الذرة المتقد في المجفف؛ كشف شرارة غير كافٍ</td>
     </tr>
     <tr>
-      <td>1878</td>
-      <td>واشبورن إيه ميل، مينيابوليس، الولايات المتحدة الأمريكية</td>
-      <td>دقيق</td>
-      <td>18</td>
-      <td>أول انفجار غبار حبوب معترف به في الولايات المتحدة؛ أدى إلى إصلاحات في سلامة صناعة الطحن</td>
+      <td data-label="السنة">1878</td>
+      <td data-label="الحادث">واشبورن إيه ميل، مينيابوليس، الولايات المتحدة الأمريكية</td>
+      <td data-label="نوع الغبار">دقيق</td>
+      <td data-label="الوفيات">18</td>
+      <td data-label="الدرس الرئيسي">أول انفجار غبار حبوب معترف به في الولايات المتحدة؛ أدى إلى إصلاحات في سلامة صناعة الطحن</td>
     </tr>
   </tbody>
 </table>

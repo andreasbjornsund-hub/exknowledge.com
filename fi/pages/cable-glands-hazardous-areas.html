@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -257,7 +257,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Kierrestandardit</h2>
 <p>Ex-kaapeliläpivienteissä on erilaisia kierteitä. Läpiviennin kierteen sovittaminen kotelon aukkoon on erittäin tärkeää.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Kierteen tyyppi</th>
@@ -268,28 +268,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Metrinen (ISO)</strong></td>
-      <td>M20, M25, M32, M40, M50, M63</td>
-      <td>Eurooppa, maailmanlaajuinen</td>
-      <td>Yleisin <a href="/fi/pages/atex-vs-iecex.html">ATEX/IECEx</a>-sovelluksissa. Kierreväli: 1,5 mm</td>
+      <td data-label="Kierteen tyyppi"><strong>Metrinen (ISO)</strong></td>
+      <td data-label="Merkintä">M20, M25, M32, M40, M50, M63</td>
+      <td data-label="Alue">Eurooppa, maailmanlaajuinen</td>
+      <td data-label="Huomautukset">Yleisin <a href="/fi/pages/atex-vs-iecex.html">ATEX/IECEx</a>-sovelluksissa. Kierreväli: 1,5 mm</td>
     </tr>
     <tr>
-      <td><strong>NPT (kartioitu)</strong></td>
-      <td>½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
-      <td>Pohjois-Amerikka</td>
-      <td>Itsetiivistyvä kartio. Vaatii kierteiden tiivistysainetta (PTFE-nauhaa tai -tahnaa). Yleinen NEC-asennuksissa.</td>
+      <td data-label="Kierteen tyyppi"><strong>NPT (kartioitu)</strong></td>
+      <td data-label="Merkintä">½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
+      <td data-label="Alue">Pohjois-Amerikka</td>
+      <td data-label="Huomautukset">Itsetiivistyvä kartio. Vaatii kierteiden tiivistysainetta (PTFE-nauhaa tai -tahnaa). Yleinen NEC-asennuksissa.</td>
     </tr>
     <tr>
-      <td><strong>PG (Panzergewinde)</strong></td>
-      <td>PG9, PG11, PG13,5, PG16, PG21, PG29</td>
-      <td>Saksa (vanha)</td>
-      <td>Vanhempi saksalainen standardi. Löytyy edelleen vanhoista laitteista. Poistumassa käytöstä metrijärjestelmän tieltä.</td>
+      <td data-label="Kierteen tyyppi"><strong>PG (Panzergewinde)</strong></td>
+      <td data-label="Merkintä">PG9, PG11, PG13,5, PG16, PG21, PG29</td>
+      <td data-label="Alue">Saksa (vanha)</td>
+      <td data-label="Huomautukset">Vanhempi saksalainen standardi. Löytyy edelleen vanhoista laitteista. Poistumassa käytöstä metrijärjestelmän tieltä.</td>
     </tr>
     <tr>
-      <td><strong>G (BSP Parallel)</strong></td>
-      <td>G½&quot;, G¾&quot;, G1&quot;</td>
-      <td>Iso-Britannia, Kansainyhteisö</td>
-      <td>Rinnakkaisliitos (ei kartiomainen). Vaatii tiivistelevyn tai O-renkaan.</td>
+      <td data-label="Kierteen tyyppi"><strong>G (BSP Parallel)</strong></td>
+      <td data-label="Merkintä">G½&quot;, G¾&quot;, G1&quot;</td>
+      <td data-label="Alue">Iso-Britannia, Kansainyhteisö</td>
+      <td data-label="Huomautukset">Rinnakkaisliitos (ei kartiomainen). Vaatii tiivistelevyn tai O-renkaan.</td>
     </tr>
   </tbody>
 </table>
@@ -383,7 +383,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Kaapeliläpivientien IP-luokitukset</h2>
 <p>IP-luokitus ilmaisee pöly- ja vesitiiviyden. Ankarammissa olosuhteissa vaaditaan korkeampia IP-luokituksia.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>IP-luokitus</th>
@@ -394,34 +394,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IP54</strong></td>
-      <td>Pölysuojattu</td>
-      <td>Roiskesuojattu</td>
-      <td>Sisäkäyttö, kuivat ympäristöt</td>
+      <td data-label="IP-luokitus"><strong>IP54</strong></td>
+      <td data-label="Pölysuojaus">Pölysuojattu</td>
+      <td data-label="Vesisuojaus">Roiskesuojattu</td>
+      <td data-label="Tyypillinen käyttökohde">Sisäkäyttö, kuivat ympäristöt</td>
     </tr>
     <tr>
-      <td><strong>IP66</strong></td>
-      <td>Pölytiivis</td>
-      <td>Voimakkaat vesisuihkut</td>
-      <td>Ulkokäyttö, teollisuus (yleisin)</td>
+      <td data-label="IP-luokitus"><strong>IP66</strong></td>
+      <td data-label="Pölysuojaus">Pölytiivis</td>
+      <td data-label="Vesisuojaus">Voimakkaat vesisuihkut</td>
+      <td data-label="Tyypillinen käyttökohde">Ulkokäyttö, teollisuus (yleisin)</td>
     </tr>
     <tr>
-      <td><strong>IP67</strong></td>
-      <td>Pölytiivis</td>
-      <td>Tilapäinen upotus (1 m, 30 min)</td>
-      <td>Tulvaille alttiit alueet, pesu</td>
+      <td data-label="IP-luokitus"><strong>IP67</strong></td>
+      <td data-label="Pölysuojaus">Pölytiivis</td>
+      <td data-label="Vesisuojaus">Tilapäinen upotus (1 m, 30 min)</td>
+      <td data-label="Tyypillinen käyttökohde">Tulvaille alttiit alueet, pesu</td>
     </tr>
     <tr>
-      <td><strong>IP68</strong></td>
-      <td>Pölytiivis</td>
-      <td>Jatkuva upotus (syvyys/aika valmistajan mukaan)</td>
-      <td>Merenalainen, pysyvä vedenalainen käyttö</td>
+      <td data-label="IP-luokitus"><strong>IP68</strong></td>
+      <td data-label="Pölysuojaus">Pölytiivis</td>
+      <td data-label="Vesisuojaus">Jatkuva upotus (syvyys/aika valmistajan mukaan)</td>
+      <td data-label="Tyypillinen käyttökohde">Merenalainen, pysyvä vedenalainen käyttö</td>
     </tr>
     <tr>
-      <td><strong>IP6X</strong></td>
-      <td>Pölytiivis</td>
-      <td>Vesisuojaus ei määritelty</td>
-      <td>Pölyalueet (vyöhyke 20/21), joissa veden tunkeutuminen ei ole ongelma</td>
+      <td data-label="IP-luokitus"><strong>IP6X</strong></td>
+      <td data-label="Pölysuojaus">Pölytiivis</td>
+      <td data-label="Vesisuojaus">Vesisuojaus ei määritelty</td>
+      <td data-label="Tyypillinen käyttökohde">Pölyalueet (vyöhyke 20/21), joissa veden tunkeutuminen ei ole ongelma</td>
     </tr>
   </tbody>
 </table>

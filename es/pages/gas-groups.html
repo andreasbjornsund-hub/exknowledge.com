@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
 
@@ -187,16 +187,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><strong>MESG</strong> (Intersticio Experimental Máximo de Seguridad), el ancho máximo de un intersticio a través del cual una explosión interna no se propagará a una atmósfera explosiva externa. Se ensaya en una cámara esférica normalizada de 25 ml con un intersticio de 25 mm de longitud. Menor MESG = gas más peligroso.</li>
 <li><strong>Relación MIC</strong> (Relación de Corriente Mínima de Ignición), la relación entre la corriente mínima de ignición del gas y la del metano, medida en un aparato de ensayo estándar de seguridad intrínseca. Menor relación MIC = gas más peligroso.</li>
 </ul>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Grupo de gas</th>
 <th>MESG (mm)</th>
 <th>Relación MIC</th>
 <th>Gases típicos</th>
 <th>Nivel de peligro</th>
 </tr></thead><tbody>
-<tr><td><strong>IIA</strong></td><td>>0,90</td><td>>0,80</td><td>Metano, propano, butano, acetona, etanol, benceno, diésel, amoníaco</td><td>Menos peligroso</td></tr>
-<tr><td><strong>IIB</strong></td><td>0,50–0,90</td><td>0,45–0,80</td><td>Etileno, sulfuro de hidrógeno, éter dietílico, óxido de etileno, gas ciudad</td><td>Intermedio</td></tr>
-<tr><td><strong>IIC</strong></td><td><0,50</td><td><0,45</td><td>Hidrógeno, acetileno, disulfuro de carbono</td><td>Más peligroso</td></tr>
+<tr><td data-label="Grupo de gas"><strong>IIA</strong></td><td data-label="MESG (mm)">>0,90</td><td data-label="Relación MIC">>0,80</td><td data-label="Gases típicos">Metano, propano, butano, acetona, etanol, benceno, diésel, amoníaco</td><td data-label="Nivel de peligro">Menos peligroso</td></tr>
+<tr><td data-label="Grupo de gas"><strong>IIB</strong></td><td data-label="MESG (mm)">0,50–0,90</td><td data-label="Relación MIC">0,45–0,80</td><td data-label="Gases típicos">Etileno, sulfuro de hidrógeno, éter dietílico, óxido de etileno, gas ciudad</td><td data-label="Nivel de peligro">Intermedio</td></tr>
+<tr><td data-label="Grupo de gas"><strong>IIC</strong></td><td data-label="MESG (mm)"><0,50</td><td data-label="Relación MIC"><0,45</td><td data-label="Gases típicos">Hidrógeno, acetileno, disulfuro de carbono</td><td data-label="Nivel de peligro">Más peligroso</td></tr>
 </tbody></table></div>
 <h3 id="important-notes">Notas importantes</h3>
 <ul>
@@ -238,15 +238,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>El hidrógeno está en el grupo de gas más peligroso (IIC) debido a su MESG extremadamente pequeño (0,29 mm) y su energía mínima de ignición muy baja (0,017 mJ, unas 10× menos que el metano). Sin embargo, su temperatura de autoignición es relativamente alta (560 °C), lo que lo sitúa solo en la <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i> clase de temperatura</a> T1.</p>
 <p>Esto significa que el hidrógeno requiere la protección más estricta contra chispas/arcos (IIC) pero es relativamente indulgente en cuanto a temperatura de superficie (T1). Esto es lo contrario de algunos gases IIA.</p>
 <h2 id="dust-groups-group-iii">Grupos de polvo (Grupo III)</h2>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Grupo de polvo</th>
 <th>Tipo</th>
 <th>Ejemplos</th>
 <th>Nivel de peligro</th>
 </tr></thead><tbody>
-<tr><td><strong>IIIA</strong></td><td>Partículas combustibles volantes</td><td>Fibras textiles, pelusa de algodón, rayón, yute</td><td>Menos peligroso</td></tr>
-<tr><td><strong>IIIB</strong></td><td>Polvo no conductor</td><td>Harina de cereal, azúcar, polvo de madera, carbón, polvo de plástico, polvos farmacéuticos</td><td>Intermedio</td></tr>
-<tr><td><strong>IIIC</strong></td><td>Polvo conductor</td><td>Polvo de aluminio, magnesio, titanio, hierro, negro de humo</td><td>Más peligroso</td></tr>
+<tr><td data-label="Grupo de polvo"><strong>IIIA</strong></td><td data-label="Tipo">Partículas combustibles volantes</td><td data-label="Ejemplos">Fibras textiles, pelusa de algodón, rayón, yute</td><td data-label="Nivel de peligro">Menos peligroso</td></tr>
+<tr><td data-label="Grupo de polvo"><strong>IIIB</strong></td><td data-label="Tipo">Polvo no conductor</td><td data-label="Ejemplos">Harina de cereal, azúcar, polvo de madera, carbón, polvo de plástico, polvos farmacéuticos</td><td data-label="Nivel de peligro">Intermedio</td></tr>
+<tr><td data-label="Grupo de polvo"><strong>IIIC</strong></td><td data-label="Tipo">Polvo conductor</td><td data-label="Ejemplos">Polvo de aluminio, magnesio, titanio, hierro, negro de humo</td><td data-label="Nivel de peligro">Más peligroso</td></tr>
 </tbody></table></div>
 <h3 id="conductive-vs-non-conductive-dust">Polvo conductor vs no conductor</h3>
 <p>La distinción es importante porque las partículas de polvo conductor pueden puentear los espacios de aislamiento y crear cortocircuitos, proporcionando una fuente de ignición incluso a través de la protección Ex e (seguridad aumentada). Los polvos conductores requieren una protección más estricta.</p>

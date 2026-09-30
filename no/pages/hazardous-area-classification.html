@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -196,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Farlige områder klassifiseres i soner basert på <strong>hyppigheten og varigheten</strong> av en eksplosiv atmosfære:</p>
 
 <h3>Gass-/dampsoner</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Sone</th>
@@ -207,22 +207,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Sone 0</strong></td>
-      <td>Eksplosiv atmosfære til stede <strong>kontinuerlig</strong> eller i lange perioder</td>
-      <td>&gt; 1000 timer/år</td>
-      <td>Inne i lagertanker, damprom over flyktige væsker, inne i prosessbeholdere</td>
+      <td data-label="Sone"><strong>Sone 0</strong></td>
+      <td data-label="Definisjon">Eksplosiv atmosfære til stede <strong>kontinuerlig</strong> eller i lange perioder</td>
+      <td data-label="Varighet">&gt; 1000 timer/år</td>
+      <td data-label="Typiske eksempler">Inne i lagertanker, damprom over flyktige væsker, inne i prosessbeholdere</td>
     </tr>
     <tr>
-      <td><strong>Sone 1</strong></td>
-      <td>Eksplosiv atmosfære <strong>som sannsynligvis vil oppstå</strong> under normal drift</td>
-      <td>10–1000 timer/år</td>
-      <td>Rundt pumpepakninger, ventilpakninger, prøvetakingspunkter, avlastningsventiler, lasteområder</td>
+      <td data-label="Sone"><strong>Sone 1</strong></td>
+      <td data-label="Definisjon">Eksplosiv atmosfære <strong>som sannsynligvis vil oppstå</strong> under normal drift</td>
+      <td data-label="Varighet">10–1000 timer/år</td>
+      <td data-label="Typiske eksempler">Rundt pumpepakninger, ventilpakninger, prøvetakingspunkter, avlastningsventiler, lasteområder</td>
     </tr>
     <tr>
-      <td><strong>Sone 2</strong></td>
-      <td>Eksplosiv atmosfære <strong>er ikke sannsynlig</strong> under normal drift; hvis den oppstår, er det kun i <strong>korte perioder</strong></td>
-      <td>&lt; 10 timer/år</td>
-      <td>Rundt flenser med gode pakninger, rørdeler, områder nær sone 1-grenser</td>
+      <td data-label="Sone"><strong>Sone 2</strong></td>
+      <td data-label="Definisjon">Eksplosiv atmosfære <strong>er ikke sannsynlig</strong> under normal drift; hvis den oppstår, er det kun i <strong>korte perioder</strong></td>
+      <td data-label="Varighet">&lt; 10 timer/år</td>
+      <td data-label="Typiske eksempler">Rundt flenser med gode pakninger, rørdeler, områder nær sone 1-grenser</td>
     </tr>
   </tbody>
 </table>
@@ -265,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Trinn 1: Identifiser utslippskilder</h3>
 <p>En <strong>utslippskilde</strong> er ethvert punkt hvor brennbar gass, damp eller væske kan slippe ut i atmosfæren. Kildene graderes etter hyppighet:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Grad</th>
@@ -276,22 +276,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Kontinuerlig</strong></td>
-      <td>Utslippet er kontinuerlig eller forventes å vare i lange perioder</td>
-      <td>Tankventiler, åpne væskeoverflater, konstante lekkasjer fra defekte tetninger</td>
-      <td>Sone 0</td>
+      <td data-label="Grad"><strong>Kontinuerlig</strong></td>
+      <td data-label="Definisjon">Utslippet er kontinuerlig eller forventes å vare i lange perioder</td>
+      <td data-label="Eksempler">Tankventiler, åpne væskeoverflater, konstante lekkasjer fra defekte tetninger</td>
+      <td data-label="Skaper sone">Sone 0</td>
     </tr>
     <tr>
-      <td><strong>Primær</strong></td>
-      <td>Utslipp forventes periodisk eller sporadisk under normal drift</td>
-      <td>Pumpetetninger, kompressortetninger, prøvetakingspunkter, avlastningsventiler, tilkoblinger for lasting/lossing</td>
-      <td>Sone 1</td>
+      <td data-label="Grad"><strong>Primær</strong></td>
+      <td data-label="Definisjon">Utslipp forventes periodisk eller sporadisk under normal drift</td>
+      <td data-label="Eksempler">Pumpetetninger, kompressortetninger, prøvetakingspunkter, avlastningsventiler, tilkoblinger for lasting/lossing</td>
+      <td data-label="Skaper sone">Sone 1</td>
     </tr>
     <tr>
-      <td><strong>Sekundær</strong></td>
-      <td>Utslipp forventes ikke under normal drift; hvis det forekommer, er det kun sjelden og i korte perioder</td>
-      <td>Flensforbindelser, ventilstammer (ikke pakninger), instrumenttilkoblinger, rørdeler i god stand</td>
-      <td>Sone 2</td>
+      <td data-label="Grad"><strong>Sekundær</strong></td>
+      <td data-label="Definisjon">Utslipp forventes ikke under normal drift; hvis det forekommer, er det kun sjelden og i korte perioder</td>
+      <td data-label="Eksempler">Flensforbindelser, ventilstammer (ikke pakninger), instrumenttilkoblinger, rørdeler i god stand</td>
+      <td data-label="Skaper sone">Sone 2</td>
     </tr>
   </tbody>
 </table>
@@ -327,7 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Trinn 3: Bestem sonetype</h3>
 <p>IEC 60079-10-1 vedlegg B gir en matrise:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Utslippsklasse</th>
@@ -338,22 +338,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Kontinuerlig</strong></td>
-      <td>Sone 0 NE (ubetydelig omfang) → ikke farlig</td>
-      <td>Sone 0 + Sone 2</td>
-      <td>Sone 0 + Sone 1</td>
+      <td data-label="Utslippsklasse"><strong>Kontinuerlig</strong></td>
+      <td data-label="Høy ventilasjon + god tilgjengelighet">Sone 0 NE (ubetydelig omfang) → ikke farlig</td>
+      <td data-label="Middels ventilasjon + god tilgjengelighet">Sone 0 + Sone 2</td>
+      <td data-label="Lav ventilasjon + dårlig tilgjengelighet">Sone 0 + Sone 1</td>
     </tr>
     <tr>
-      <td><strong>Primær</strong></td>
-      <td>Sone 1 NE → ikke-farlig</td>
-      <td>Sone 1 + Sone 2</td>
-      <td>Sone 1 + Sone 0</td>
+      <td data-label="Utslippsklasse"><strong>Primær</strong></td>
+      <td data-label="Høy ventilasjon + god tilgjengelighet">Sone 1 NE → ikke-farlig</td>
+      <td data-label="Middels ventilasjon + god tilgjengelighet">Sone 1 + Sone 2</td>
+      <td data-label="Lav ventilasjon + dårlig tilgjengelighet">Sone 1 + Sone 0</td>
     </tr>
     <tr>
-      <td><strong>Sekundær</strong></td>
-      <td>Sone 2 NE → ikke-farlig</td>
-      <td>Sone 2</td>
-      <td>Sone 1 eller til og med sone 0</td>
+      <td data-label="Utslippsklasse"><strong>Sekundær</strong></td>
+      <td data-label="Høy ventilasjon + god tilgjengelighet">Sone 2 NE → ikke-farlig</td>
+      <td data-label="Middels ventilasjon + god tilgjengelighet">Sone 2</td>
+      <td data-label="Lav ventilasjon + dårlig tilgjengelighet">Sone 1 eller til og med sone 0</td>
     </tr>
   </tbody>
 </table>
