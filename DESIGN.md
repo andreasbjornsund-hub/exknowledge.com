@@ -156,7 +156,7 @@ given those states. New work uses the classes above.
     button.
   - The search opens as a modal dialog (Ctrl/⌘ K).
 - **`js/forms.js`**
-  - Every form posts through formsubmit.co (AJAX) to the site inbox.
+  - Every form posts through Web3Forms (api.web3forms.com, public access key in js/forms.js) to the site inbox.
   - Fields are validated inline, with the error text under the field.
   - While sending, the button is disabled and reads "Sending…".
   - Then a success or failure message is announced to screen readers.
