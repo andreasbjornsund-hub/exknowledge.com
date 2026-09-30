@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -198,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Corresponda a zona à categoria de equipamento ou <a href="/pt/pages/epl.html">EPL</a> necessária:</p>
 
 <h3>Zonas de gás/vapor</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zona</th>
@@ -209,28 +209,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zona 0</strong></td>
-      <td>Categoria 1 G</td>
-      <td>Ga</td>
-      <td>Apenas Ga, nada mais é permitido</td>
+      <td data-label="Zona"><strong>Zona 0</strong></td>
+      <td data-label="Categoria mínima">Categoria 1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Também pode usar">Apenas Ga, nada mais é permitido</td>
     </tr>
     <tr>
-      <td><strong>Zona 1</strong></td>
-      <td>Categoria 2 G</td>
-      <td>Gb</td>
-      <td>Categoria 1 G (Ga) também aceitável</td>
+      <td data-label="Zona"><strong>Zona 1</strong></td>
+      <td data-label="Categoria mínima">Categoria 2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Também pode usar">Categoria 1 G (Ga) também aceitável</td>
     </tr>
     <tr>
-      <td><strong>Zona 2</strong></td>
-      <td>Categoria 3 G</td>
-      <td>Gc</td>
-      <td>Categoria 1 G (Ga) ou Categoria 2 G (Gb) também aceitável</td>
+      <td data-label="Zona"><strong>Zona 2</strong></td>
+      <td data-label="Categoria mínima">Categoria 3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Também pode usar">Categoria 1 G (Ga) ou Categoria 2 G (Gb) também aceitável</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Zonas de poeira</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zona</th>
@@ -241,22 +241,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zona 20</strong></td>
-      <td>Categoria 1 D</td>
-      <td>Da</td>
-      <td>Apenas Da, nada mais é permitido</td>
+      <td data-label="Zona"><strong>Zona 20</strong></td>
+      <td data-label="Categoria mínima">Categoria 1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Também pode usar">Apenas Da, nada mais é permitido</td>
     </tr>
     <tr>
-      <td><strong>Zona 21</strong></td>
-      <td>Categoria 2 D</td>
-      <td>Db</td>
-      <td>Categoria 1 D (Da) também aceitável</td>
+      <td data-label="Zona"><strong>Zona 21</strong></td>
+      <td data-label="Categoria mínima">Categoria 2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Também pode usar">Categoria 1 D (Da) também aceitável</td>
     </tr>
     <tr>
-      <td><strong>Zona 22</strong></td>
-      <td>Categoria 3 D</td>
-      <td>Dc</td>
-      <td>Categoria 1 D (Da) ou Categoria 2 D (Db) também aceitável</td>
+      <td data-label="Zona"><strong>Zona 22</strong></td>
+      <td data-label="Categoria mínima">Categoria 3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Também pode usar">Categoria 1 D (Da) ou Categoria 2 D (Db) também aceitável</td>
     </tr>
   </tbody>
 </table>
@@ -376,7 +376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Etapa 4: Aplicação → Método de proteção</h2>
 <p>Escolha o método de proteção com base na função do equipamento e no nível de potência:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Aplicação</th>
@@ -387,52 +387,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Motor elétrico</strong></td>
-      <td>&gt; 1 kW</td>
-      <td><a href="/pt/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (à prova de explosão)</a></td>
-      <td>Ex e (apenas Zona 2), Ex nA (Zona 2)</td>
+      <td data-label="Aplicação"><strong>Motor elétrico</strong></td>
+      <td data-label="Nível de potência">&gt; 1 kW</td>
+      <td data-label="Método recomendado"><a href="/pt/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (à prova de explosão)</a></td>
+      <td data-label="Alternativa">Ex e (apenas Zona 2), Ex nA (Zona 2)</td>
     </tr>
     <tr>
-      <td><strong>Motor pequeno</strong></td>
-      <td>&lt; 1 kW</td>
-      <td>Ex e (segurança aumentada)</td>
-      <td>Ex d, Ex nA</td>
+      <td data-label="Aplicação"><strong>Motor pequeno</strong></td>
+      <td data-label="Nível de potência">&lt; 1 kW</td>
+      <td data-label="Método recomendado">Ex e (segurança aumentada)</td>
+      <td data-label="Alternativa">Ex d, Ex nA</td>
     </tr>
     <tr>
-      <td><strong>Luminária</strong></td>
-      <td>Varia</td>
-      <td>Ex d (LED/fluorescente/halogéneo)</td>
-      <td>Ex e (apenas LED, Zona 1/2)</td>
+      <td data-label="Aplicação"><strong>Luminária</strong></td>
+      <td data-label="Nível de potência">Varia</td>
+      <td data-label="Método recomendado">Ex d (LED/fluorescente/halogéneo)</td>
+      <td data-label="Alternativa">Ex e (apenas LED, Zona 1/2)</td>
     </tr>
     <tr>
-      <td><strong>Caixa de junção</strong></td>
-      <td>N/A (passiva)</td>
-      <td>Ex e (para cablagem geral)</td>
-      <td>Ex d (se contiver dispositivos que produzam faíscas)</td>
+      <td data-label="Aplicação"><strong>Caixa de junção</strong></td>
+      <td data-label="Nível de potência">N/A (passiva)</td>
+      <td data-label="Método recomendado">Ex e (para cablagem geral)</td>
+      <td data-label="Alternativa">Ex d (se contiver dispositivos que produzam faíscas)</td>
     </tr>
     <tr>
-      <td><strong>Sensor/transmissor</strong></td>
-      <td>&lt; 5 W</td>
-      <td><a href="/pt/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (segurança intrínseca)</a></td>
-      <td>Ex d (caixa), Ex e</td>
+      <td data-label="Aplicação"><strong>Sensor/transmissor</strong></td>
+      <td data-label="Nível de potência">&lt; 5 W</td>
+      <td data-label="Método recomendado"><a href="/pt/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (segurança intrínseca)</a></td>
+      <td data-label="Alternativa">Ex d (caixa), Ex e</td>
     </tr>
     <tr>
-      <td><strong>Painel de controlo</strong></td>
-      <td>&gt; 10 kW</td>
-      <td>Ex p (pressurização)</td>
-      <td>Ex d (painéis pequenos), Ex e (secções terminais)</td>
+      <td data-label="Aplicação"><strong>Painel de controlo</strong></td>
+      <td data-label="Nível de potência">&gt; 10 kW</td>
+      <td data-label="Método recomendado">Ex p (pressurização)</td>
+      <td data-label="Alternativa">Ex d (painéis pequenos), Ex e (secções terminais)</td>
     </tr>
     <tr>
-      <td><strong>Válvula solenóide</strong></td>
-      <td>5–50 W</td>
-      <td>Ex m (encapsulamento)</td>
-      <td>Ex d, Ex ia</td>
+      <td data-label="Aplicação"><strong>Válvula solenóide</strong></td>
+      <td data-label="Nível de potência">5–50 W</td>
+      <td data-label="Método recomendado">Ex m (encapsulamento)</td>
+      <td data-label="Alternativa">Ex d, Ex ia</td>
     </tr>
     <tr>
-      <td><strong>Equipamento portátil</strong></td>
-      <td>Bateria</td>
-      <td>Ex ia, Ex ib</td>
-      <td>Ex d (mais pesado)</td>
+      <td data-label="Aplicação"><strong>Equipamento portátil</strong></td>
+      <td data-label="Nível de potência">Bateria</td>
+      <td data-label="Método recomendado">Ex ia, Ex ib</td>
+      <td data-label="Alternativa">Ex d (mais pesado)</td>
     </tr>
   </tbody>
 </table>

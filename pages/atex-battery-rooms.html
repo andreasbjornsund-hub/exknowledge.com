@@ -18,7 +18,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <style>
@@ -230,13 +230,13 @@
 <p>Battery charging rooms with vented lead-acid or nickel-cadmium batteries must be assessed, because these batteries release hydrogen while charging. In most cases ventilation designed to IEC 62485-2 (stationary batteries) or IEC 62485-3 (traction batteries) keeps the hydrogen well below its 4 % lower explosive limit, so the room itself is non-hazardous and only a small area close to the cell vents needs control of ignition sources. Lithium-ion battery energy storage (BESS) does not release gas in normal operation and is not normally zoned; its explosion hazard comes from thermal runaway and is handled by NFPA 855 explosion control, gas detection and ventilation.</p>
 
 <h2 id="quick-answer">Quick answer by battery type</h2>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="stack">
 <thead><tr><th>Battery type</th><th>Gas in normal charging?</th><th>Typical outcome</th><th>Main reference</th></tr></thead>
 <tbody>
-<tr><td>Vented (flooded) lead-acid, e.g. forklift traction, older UPS</td><td>Yes, hydrogen and oxygen, most at end of charge</td><td>Ventilated room non-hazardous; safety distance or small zone around cell vents</td><td>IEC 62485-2 / -3, HSE INDG139</td></tr>
-<tr><td>Valve-regulated lead-acid (VRLA)</td><td>Much less, but valves open on overcharge</td><td>Ventilation still required; usually non-hazardous with adequate airflow</td><td>IEC 62485-2</td></tr>
-<tr><td>Vented NiCd / NiMH</td><td>Yes, hydrogen</td><td>As for vented lead-acid</td><td>IEC 62485-2</td></tr>
-<tr><td>Lithium-ion (BESS, UPS, racks)</td><td>No</td><td>Not zoned for normal operation; explosion control for thermal runaway</td><td>IEC 62485-5, NFPA 855, NFPA 68/69</td></tr>
+<tr><td data-label="Battery type">Vented (flooded) lead-acid, e.g. forklift traction, older UPS</td><td data-label="Gas in normal charging?">Yes, hydrogen and oxygen, most at end of charge</td><td data-label="Typical outcome">Ventilated room non-hazardous; safety distance or small zone around cell vents</td><td data-label="Main reference">IEC 62485-2 / -3, HSE INDG139</td></tr>
+<tr><td data-label="Battery type">Valve-regulated lead-acid (VRLA)</td><td data-label="Gas in normal charging?">Much less, but valves open on overcharge</td><td data-label="Typical outcome">Ventilation still required; usually non-hazardous with adequate airflow</td><td data-label="Main reference">IEC 62485-2</td></tr>
+<tr><td data-label="Battery type">Vented NiCd / NiMH</td><td data-label="Gas in normal charging?">Yes, hydrogen</td><td data-label="Typical outcome">As for vented lead-acid</td><td data-label="Main reference">IEC 62485-2</td></tr>
+<tr><td data-label="Battery type">Lithium-ion (BESS, UPS, racks)</td><td data-label="Gas in normal charging?">No</td><td data-label="Typical outcome">Not zoned for normal operation; explosion control for thermal runaway</td><td data-label="Main reference">IEC 62485-5, NFPA 855, NFPA 68/69</td></tr>
 </tbody></table></div>
 
 <h2 id="the-hazard">The hazard: hydrogen from charging</h2>

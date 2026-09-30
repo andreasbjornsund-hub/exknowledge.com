@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -215,7 +215,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Typer af brændbart støv</h2>
 
 <h3><a href="/da/pages/gas-groups.html">Støvgrupper</a> (IEC 60079-0)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Gruppe</th>
@@ -226,22 +226,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IIIA</strong></td>
-      <td>Brændbare partikler</td>
-      <td>Bomuldsfibre, tekstilfibre, træspåner, papirfibre</td>
-      <td>Antændes let, hurtig flammespredning</td>
+      <td data-label="Gruppe"><strong>IIIA</strong></td>
+      <td data-label="Type">Brændbare partikler</td>
+      <td data-label="Eksempler">Bomuldsfibre, tekstilfibre, træspåner, papirfibre</td>
+      <td data-label="Vigtigste fare">Antændes let, hurtig flammespredning</td>
     </tr>
     <tr>
-      <td><strong>IIIB</strong></td>
-      <td>Ikke-ledende støv</td>
-      <td>Mel, sukker, stivelse, korn, træstøv, plastpulver, farmaceutiske pulvere</td>
-      <td>Elektrostatisk opladning, lagdannelse</td>
+      <td data-label="Gruppe"><strong>IIIB</strong></td>
+      <td data-label="Type">Ikke-ledende støv</td>
+      <td data-label="Eksempler">Mel, sukker, stivelse, korn, træstøv, plastpulver, farmaceutiske pulvere</td>
+      <td data-label="Vigtigste fare">Elektrostatisk opladning, lagdannelse</td>
     </tr>
     <tr>
-      <td><strong>IIIC</strong></td>
-      <td>Ledende støv</td>
-      <td>Aluminiumpulver, magnesiumstøv, jernspåner, kønrøg, grafit</td>
-      <td>Kan forårsage kortslutning i elektrisk udstyr, meget reaktive metaller</td>
+      <td data-label="Gruppe"><strong>IIIC</strong></td>
+      <td data-label="Type">Ledende støv</td>
+      <td data-label="Eksempler">Aluminiumpulver, magnesiumstøv, jernspåner, kønrøg, grafit</td>
+      <td data-label="Vigtigste fare">Kan forårsage kortslutning i elektrisk udstyr, meget reaktive metaller</td>
     </tr>
   </tbody>
 </table>
@@ -263,7 +263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Parametre for støveksplosion</h2>
 <p>Støvets eksplosivitet karakteriseres ved laboratorietest i henhold til EN 14034-serien (se <a href="/da/pages/standards.html">standardoversigt</a>):</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -274,46 +274,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Maksimalt eksplosionstryk</strong></td>
-      <td>P<sub>max</sub></td>
-      <td>Spidstryk under eksplosion (bar)</td>
-      <td>Bestemmer kravene til konstruktionsstyrke for indeslutning eller udluftning</td>
+      <td data-label="Parameter"><strong>Maksimalt eksplosionstryk</strong></td>
+      <td data-label="Symbol">P<sub>max</sub></td>
+      <td data-label="Hvad måles">Spidstryk under eksplosion (bar)</td>
+      <td data-label="Hvorfor det er vigtigt">Bestemmer kravene til konstruktionsstyrke for indeslutning eller udluftning</td>
     </tr>
     <tr>
-      <td><strong>Støveksplosionens alvor</strong></td>
-      <td>K<sub>St</sub></td>
-      <td>Trykstigningshastighed (bar·m/s)</td>
-      <td>Bestemmer udluftningsarealets størrelse og slukningsreaktionstiden</td>
+      <td data-label="Parameter"><strong>Støveksplosionens alvor</strong></td>
+      <td data-label="Symbol">K<sub>St</sub></td>
+      <td data-label="Hvad måles">Trykstigningshastighed (bar·m/s)</td>
+      <td data-label="Hvorfor det er vigtigt">Bestemmer udluftningsarealets størrelse og slukningsreaktionstiden</td>
     </tr>
     <tr>
-      <td><strong>Minimumsgrænse for eksplosiv koncentration</strong></td>
-      <td>MEC</td>
-      <td>Laveste støvkoncentration, der kan eksplodere (g/m³)</td>
-      <td>Svarer til LEL for gasser; typisk 20–60 g/m³</td>
+      <td data-label="Parameter"><strong>Minimumsgrænse for eksplosiv koncentration</strong></td>
+      <td data-label="Symbol">MEC</td>
+      <td data-label="Hvad måles">Laveste støvkoncentration, der kan eksplodere (g/m³)</td>
+      <td data-label="Hvorfor det er vigtigt">Svarer til LEL for gasser; typisk 20–60 g/m³</td>
     </tr>
     <tr>
-      <td><strong>Minimumsantændelsesenergi</strong></td>
-      <td>MIE</td>
-      <td>Den mindste gnist, der kan antænde en støvsky (mJ)</td>
-      <td>Bestemmer fareniveauet for elektrostatisk afladning</td>
+      <td data-label="Parameter"><strong>Minimumsantændelsesenergi</strong></td>
+      <td data-label="Symbol">MIE</td>
+      <td data-label="Hvad måles">Den mindste gnist, der kan antænde en støvsky (mJ)</td>
+      <td data-label="Hvorfor det er vigtigt">Bestemmer fareniveauet for elektrostatisk afladning</td>
     </tr>
     <tr>
-      <td><strong>Minimumsantændelsestemperatur (sky)</strong></td>
-      <td>MIT</td>
-      <td>Laveste overfladetemperatur, der antænder en støvsky (°C). Se <a href="/da/pages/temperature-classes.html">temperaturklasser</a></td>
-      <td>Fastlægger grænser for udstyrets overfladetemperatur</td>
+      <td data-label="Parameter"><strong>Minimumsantændelsestemperatur (sky)</strong></td>
+      <td data-label="Symbol">MIT</td>
+      <td data-label="Hvad måles">Laveste overfladetemperatur, der antænder en støvsky (°C). Se <a href="/da/pages/temperature-classes.html">temperaturklasser</a></td>
+      <td data-label="Hvorfor det er vigtigt">Fastlægger grænser for udstyrets overfladetemperatur</td>
     </tr>
     <tr>
-      <td><strong>Lagantændelsestemperatur</strong></td>
-      <td>LIT</td>
-      <td>Temperatur, hvor et 5 mm tykt støvlag antændes (°C)</td>
-      <td>Ofte lavere end MIT; afgørende for rengøringsstandarder</td>
+      <td data-label="Parameter"><strong>Lagantændelsestemperatur</strong></td>
+      <td data-label="Symbol">LIT</td>
+      <td data-label="Hvad måles">Temperatur, hvor et 5 mm tykt støvlag antændes (°C)</td>
+      <td data-label="Hvorfor det er vigtigt">Ofte lavere end MIT; afgørende for rengøringsstandarder</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Støveksplosionsklasser (K<sub>St</sub>)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Klasse</th>
@@ -324,28 +324,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>St 0</td>
-      <td>0</td>
-      <td>Ikke eksplosivt</td>
-      <td>Nogle former for mineralstøv, cement</td>
+      <td data-label="Klasse">St 0</td>
+      <td data-label="K St -interval (bar·m/s)">0</td>
+      <td data-label="Alvorlighed">Ikke eksplosivt</td>
+      <td data-label="Eksempler">Nogle former for mineralstøv, cement</td>
     </tr>
     <tr>
-      <td><strong>St 1</strong></td>
-      <td>1–200</td>
-      <td>Svag til moderat</td>
-      <td>Hvedemel, sukker, træstøv, kul</td>
+      <td data-label="Klasse"><strong>St 1</strong></td>
+      <td data-label="K St -interval (bar·m/s)">1–200</td>
+      <td data-label="Alvorlighed">Svag til moderat</td>
+      <td data-label="Eksempler">Hvedemel, sukker, træstøv, kul</td>
     </tr>
     <tr>
-      <td><strong>St 2</strong></td>
-      <td>201–300</td>
-      <td>Stærk</td>
-      <td>Organiske pigmenter, visse plasttyper, cellulose</td>
+      <td data-label="Klasse"><strong>St 2</strong></td>
+      <td data-label="K St -interval (bar·m/s)">201–300</td>
+      <td data-label="Alvorlighed">Stærk</td>
+      <td data-label="Eksempler">Organiske pigmenter, visse plasttyper, cellulose</td>
     </tr>
     <tr>
-      <td><strong>St 3</strong></td>
-      <td>&gt; 300</td>
-      <td>Meget stærk</td>
-      <td>Aluminiumpulver, magnesiumstøv</td>
+      <td data-label="Klasse"><strong>St 3</strong></td>
+      <td data-label="K St -interval (bar·m/s)">&gt; 300</td>
+      <td data-label="Alvorlighed">Meget stærk</td>
+      <td data-label="Eksempler">Aluminiumpulver, magnesiumstøv</td>
     </tr>
   </tbody>
 </table>
@@ -355,7 +355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Støv<a href="/da/pages/zone-classification.html">zoner</a>: 20, 21, 22</h2>
 
 <h3>Zonedefinitioner</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zone</th>
@@ -366,22 +366,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zone 20</strong></td>
-      <td>Kontinuerligt eller hyppigt</td>
-      <td>Kategori 1 D (EPL Da)</td>
-      <td>Inde i siloer, tragte, cykloner, møller, blandere, pneumatiske transportører</td>
+      <td data-label="Zone"><strong>Zone 20</strong></td>
+      <td data-label="Støvsky til stede">Kontinuerligt eller hyppigt</td>
+      <td data-label="Påkrævet udstyrskategori">Kategori 1 D (EPL Da)</td>
+      <td data-label="Typiske placeringer">Inde i siloer, tragte, cykloner, møller, blandere, pneumatiske transportører</td>
     </tr>
     <tr>
-      <td><strong>Zone 21</strong></td>
-      <td>Sandsynligvis ved normal drift</td>
-      <td>Kategori 2 D (EPL Db)</td>
-      <td>Omkring sækkeudtømning, påfyldningssteder, åbne transportbåndsoverførsler, adgangsdøre til filtre</td>
+      <td data-label="Zone"><strong>Zone 21</strong></td>
+      <td data-label="Støvsky til stede">Sandsynligvis ved normal drift</td>
+      <td data-label="Påkrævet udstyrskategori">Kategori 2 D (EPL Db)</td>
+      <td data-label="Typiske placeringer">Omkring sækkeudtømning, påfyldningssteder, åbne transportbåndsoverførsler, adgangsdøre til filtre</td>
     </tr>
     <tr>
-      <td><strong>Zone 22</strong></td>
-      <td>Usandsynligt; kun i korte perioder</td>
-      <td>Kategori 3 D (EPL Dc)</td>
-      <td>Områder nær Zone 21-grænser, omkring forseglet udstyr, hvor der kan samle sig lag</td>
+      <td data-label="Zone"><strong>Zone 22</strong></td>
+      <td data-label="Støvsky til stede">Usandsynligt; kun i korte perioder</td>
+      <td data-label="Påkrævet udstyrskategori">Kategori 3 D (EPL Dc)</td>
+      <td data-label="Typiske placeringer">Områder nær Zone 21-grænser, omkring forseglet udstyr, hvor der kan samle sig lag</td>
     </tr>
   </tbody>
 </table>
@@ -459,7 +459,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Valg af udstyr til støvzoner</h2>
 
 <h3>Beskyttelsesmetoder mod støv</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Metode</th>
@@ -471,32 +471,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>Beskyttelse ved indkapsling</td>
-      <td>Ex ta / tb / tc</td>
-      <td>IEC 60079-31</td>
-      <td>Støvtæt indkapsling med temperaturregulering</td>
-      <td>ta: Zone 20, tb: Zone 21, tc: Zone 22</td>
+      <td data-label="Metode">Beskyttelse ved indkapsling</td>
+      <td data-label="Kode">Ex ta / tb / tc</td>
+      <td data-label="Standard">IEC 60079-31</td>
+      <td data-label="Princip">Støvtæt indkapsling med temperaturregulering</td>
+      <td data-label="Egnethed til zone">ta: Zone 20, tb: Zone 21, tc: Zone 22</td>
     </tr>
     <tr>
-      <td><a href="/da/pages/explosion-proof-vs-intrinsically-safe.html">Egensikkerhed</a></td>
-      <td>Ex ia / ib</td>
-      <td>IEC 60079-11</td>
-      <td>Energibegrænset under støv-MIE</td>
-      <td>ia: Zone 20, ib: Zone 21</td>
+      <td data-label="Metode"><a href="/da/pages/explosion-proof-vs-intrinsically-safe.html">Egensikkerhed</a></td>
+      <td data-label="Kode">Ex ia / ib</td>
+      <td data-label="Standard">IEC 60079-11</td>
+      <td data-label="Princip">Energibegrænset under støv-MIE</td>
+      <td data-label="Egnethed til zone">ia: Zone 20, ib: Zone 21</td>
     </tr>
     <tr>
-      <td>Indkapsling</td>
-      <td>Ex ma / mb</td>
-      <td>IEC 60079-18</td>
-      <td>Antændelseskilder forseglet i forbindelse</td>
-      <td>ma: Zone 20, mb: Zone 21</td>
+      <td data-label="Metode">Indkapsling</td>
+      <td data-label="Kode">Ex ma / mb</td>
+      <td data-label="Standard">IEC 60079-18</td>
+      <td data-label="Princip">Antændelseskilder forseglet i forbindelse</td>
+      <td data-label="Egnethed til zone">ma: Zone 20, mb: Zone 21</td>
     </tr>
     <tr>
-      <td>Tryk</td>
-      <td>Ex pxb / pyb / pzc</td>
-      <td>IEC 60079-2</td>
-      <td>Overtryk udelukker støv</td>
-      <td>pxb: Zone 21, pzc: Zone 22</td>
+      <td data-label="Metode">Tryk</td>
+      <td data-label="Kode">Ex pxb / pyb / pzc</td>
+      <td data-label="Standard">IEC 60079-2</td>
+      <td data-label="Princip">Overtryk udelukker støv</td>
+      <td data-label="Egnethed til zone">pxb: Zone 21, pzc: Zone 22</td>
     </tr>
   </tbody>
 </table>
@@ -541,7 +541,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section>
 <h2>Bemærkelsesværdige støveksplosioner</h2>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>År</th>
@@ -553,39 +553,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>2008</td>
-      <td>Imperial Sugar, Georgia, USA</td>
-      <td>Sukker</td>
-      <td>14</td>
-      <td>Akkumulerede støvlag på transportbåndets lejer; intet rengøringsprogram</td>
+      <td data-label="År">2008</td>
+      <td data-label="Hændelse">Imperial Sugar, Georgia, USA</td>
+      <td data-label="Støvtype">Sukker</td>
+      <td data-label="Dødsfald">14</td>
+      <td data-label="Vigtigste erfaring">Akkumulerede støvlag på transportbåndets lejer; intet rengøringsprogram</td>
     </tr>
     <tr>
-      <td>2010</td>
-      <td>AL Solutions, West Virginia, USA</td>
-      <td>Titanium/zirkonium</td>
-      <td>3</td>
-      <td>Metalstøv antændt under blanding; ingen eksplosionsaflastning</td>
+      <td data-label="År">2010</td>
+      <td data-label="Hændelse">AL Solutions, West Virginia, USA</td>
+      <td data-label="Støvtype">Titanium/zirkonium</td>
+      <td data-label="Dødsfald">3</td>
+      <td data-label="Vigtigste erfaring">Metalstøv antændt under blanding; ingen eksplosionsaflastning</td>
     </tr>
     <tr>
-      <td>2014</td>
-      <td>Zhongrong Metal, Kunshan, Kina</td>
-      <td>Aluminium</td>
-      <td>146</td>
-      <td>Aluminiumpoleringstøv i dårligt ventileret værksted; den dødeligste industrielle støveksplosion i moderne historie</td>
+      <td data-label="År">2014</td>
+      <td data-label="Hændelse">Zhongrong Metal, Kunshan, Kina</td>
+      <td data-label="Støvtype">Aluminium</td>
+      <td data-label="Dødsfald">146</td>
+      <td data-label="Vigtigste erfaring">Aluminiumpoleringstøv i dårligt ventileret værksted; den dødeligste industrielle støveksplosion i moderne historie</td>
     </tr>
     <tr>
-      <td>2017</td>
-      <td>Didion Milling, Wisconsin, USA</td>
-      <td>Majsstøv</td>
-      <td>5</td>
-      <td>Ulmende majsstøv i tørrer; utilstrækkelig gnistdetektering</td>
+      <td data-label="År">2017</td>
+      <td data-label="Hændelse">Didion Milling, Wisconsin, USA</td>
+      <td data-label="Støvtype">Majsstøv</td>
+      <td data-label="Dødsfald">5</td>
+      <td data-label="Vigtigste erfaring">Ulmende majsstøv i tørrer; utilstrækkelig gnistdetektering</td>
     </tr>
     <tr>
-      <td>1878</td>
-      <td>Washburn A Mill, Minneapolis, USA</td>
-      <td>Mel</td>
-      <td>18</td>
-      <td>Første anerkendte eksplosion af kornstøv i USA; førte til sikkerhedsreformer i mølleindustrien</td>
+      <td data-label="År">1878</td>
+      <td data-label="Hændelse">Washburn A Mill, Minneapolis, USA</td>
+      <td data-label="Støvtype">Mel</td>
+      <td data-label="Dødsfald">18</td>
+      <td data-label="Vigtigste erfaring">Første anerkendte eksplosion af kornstøv i USA; førte til sikkerhedsreformer i mølleindustrien</td>
     </tr>
   </tbody>
 </table>

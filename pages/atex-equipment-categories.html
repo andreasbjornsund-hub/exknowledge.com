@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
 
@@ -198,12 +198,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>Group II equipment is divided into three categories, each providing a different level of protection:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>Category</th><th>Protection Level</th><th>Suitable for Zone</th><th>EPL (Gas)</th><th>EPL (Dust)</th><th>Fault Tolerance</th></tr></thead>
       <tbody>
-        <tr><td><strong>Category 1</strong></td><td>Very high</td><td>Zone 0, 1, 2 (gas)<br>Zone 20, 21, 22 (dust)</td><td>Ga</td><td>Da</td><td>Safe with two independent faults</td></tr>
-        <tr><td><strong>Category 2</strong></td><td>High</td><td>Zone 1, 2 (gas)<br>Zone 21, 22 (dust)</td><td>Gb</td><td>Db</td><td>Safe with one fault</td></tr>
-        <tr><td><strong>Category 3</strong></td><td>Normal</td><td>Zone 2 (gas)<br>Zone 22 (dust)</td><td>Gc</td><td>Dc</td><td>Safe in normal operation only</td></tr>
+        <tr><td data-label="Category"><strong>Category 1</strong></td><td data-label="Protection Level">Very high</td><td data-label="Suitable for Zone">Zone 0, 1, 2 (gas)<br>Zone 20, 21, 22 (dust)</td><td data-label="EPL (Gas)">Ga</td><td data-label="EPL (Dust)">Da</td><td data-label="Fault Tolerance">Safe with two independent faults</td></tr>
+        <tr><td data-label="Category"><strong>Category 2</strong></td><td data-label="Protection Level">High</td><td data-label="Suitable for Zone">Zone 1, 2 (gas)<br>Zone 21, 22 (dust)</td><td data-label="EPL (Gas)">Gb</td><td data-label="EPL (Dust)">Db</td><td data-label="Fault Tolerance">Safe with one fault</td></tr>
+        <tr><td data-label="Category"><strong>Category 3</strong></td><td data-label="Protection Level">Normal</td><td data-label="Suitable for Zone">Zone 2 (gas)<br>Zone 22 (dust)</td><td data-label="EPL (Gas)">Gc</td><td data-label="EPL (Dust)">Dc</td><td data-label="Fault Tolerance">Safe in normal operation only</td></tr>
       </tbody>
     </table></div>
 
@@ -231,15 +231,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>This is the table every Ex engineer needs. For each zone, the minimum required equipment category:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>Zone</th><th>Hazard Level</th><th>Minimum Category</th><th>ATEX Marking Example</th></tr></thead>
       <tbody>
-        <tr><td>Zone 0</td><td>Continuous explosive gas atmosphere</td><td>Category 1G</td><td><code>II 1G</code></td></tr>
-        <tr><td>Zone 1</td><td>Likely during normal operation</td><td>Category 2G (or 1G)</td><td><code>II 2G</code></td></tr>
-        <tr><td>Zone 2</td><td>Not likely, only briefly</td><td>Category 3G (or 2G, 1G)</td><td><code>II 3G</code></td></tr>
-        <tr><td>Zone 20</td><td>Continuous explosive dust cloud</td><td>Category 1D</td><td><code>II 1D</code></td></tr>
-        <tr><td>Zone 21</td><td>Likely during normal operation</td><td>Category 2D (or 1D)</td><td><code>II 2D</code></td></tr>
-        <tr><td>Zone 22</td><td>Not likely, only briefly</td><td>Category 3D (or 2D, 1D)</td><td><code>II 3D</code></td></tr>
+        <tr><td data-label="Zone">Zone 0</td><td data-label="Hazard Level">Continuous explosive gas atmosphere</td><td data-label="Minimum Category">Category 1G</td><td data-label="ATEX Marking Example"><code>II 1G</code></td></tr>
+        <tr><td data-label="Zone">Zone 1</td><td data-label="Hazard Level">Likely during normal operation</td><td data-label="Minimum Category">Category 2G (or 1G)</td><td data-label="ATEX Marking Example"><code>II 2G</code></td></tr>
+        <tr><td data-label="Zone">Zone 2</td><td data-label="Hazard Level">Not likely, only briefly</td><td data-label="Minimum Category">Category 3G (or 2G, 1G)</td><td data-label="ATEX Marking Example"><code>II 3G</code></td></tr>
+        <tr><td data-label="Zone">Zone 20</td><td data-label="Hazard Level">Continuous explosive dust cloud</td><td data-label="Minimum Category">Category 1D</td><td data-label="ATEX Marking Example"><code>II 1D</code></td></tr>
+        <tr><td data-label="Zone">Zone 21</td><td data-label="Hazard Level">Likely during normal operation</td><td data-label="Minimum Category">Category 2D (or 1D)</td><td data-label="ATEX Marking Example"><code>II 2D</code></td></tr>
+        <tr><td data-label="Zone">Zone 22</td><td data-label="Hazard Level">Not likely, only briefly</td><td data-label="Minimum Category">Category 3D (or 2D, 1D)</td><td data-label="ATEX Marking Example"><code>II 3D</code></td></tr>
       </tbody>
     </table></div>
 
@@ -249,12 +249,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p>The <a href="epl.html"><i class="ph ph-gauge"></i> Equipment Protection Level</a> system (introduced in IEC 60079-0) provides a more granular classification than ATEX categories. The mapping:</p>
 
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="stack">
       <thead><tr><th>ATEX Category</th><th>EPL (Gas)</th><th>EPL (Dust)</th><th>IEC Protection Types</th></tr></thead>
       <tbody>
-        <tr><td>Category 1</td><td>Ga</td><td>Da</td><td>Ex ia, Ex ma</td></tr>
-        <tr><td>Category 2</td><td>Gb</td><td>Db</td><td>Ex d, Ex e, Ex ib, Ex px, Ex py, Ex mb, Ex o, Ex q</td></tr>
-        <tr><td>Category 3</td><td>Gc</td><td>Dc</td><td>Ex nA, Ex nC, Ex nR, Ex ec, Ex ic, Ex pz, Ex mc</td></tr>
+        <tr><td data-label="ATEX Category">Category 1</td><td data-label="EPL (Gas)">Ga</td><td data-label="EPL (Dust)">Da</td><td data-label="IEC Protection Types">Ex ia, Ex ma</td></tr>
+        <tr><td data-label="ATEX Category">Category 2</td><td data-label="EPL (Gas)">Gb</td><td data-label="EPL (Dust)">Db</td><td data-label="IEC Protection Types">Ex d, Ex e, Ex ib, Ex px, Ex py, Ex mb, Ex o, Ex q</td></tr>
+        <tr><td data-label="ATEX Category">Category 3</td><td data-label="EPL (Gas)">Gc</td><td data-label="EPL (Dust)">Dc</td><td data-label="IEC Protection Types">Ex nA, Ex nC, Ex nR, Ex ec, Ex ic, Ex pz, Ex mc</td></tr>
       </tbody>
     </table></div>
 

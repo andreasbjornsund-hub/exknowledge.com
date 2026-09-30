@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -198,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Matcha zonen med den erforderliga utrustningskategorin eller <a href="/sv/pages/epl.html">EPL</a>:</p>
 
 <h3>Gas-/ångzoner</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zon</th>
@@ -209,28 +209,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zon 0</strong></td>
-      <td>Kategori 1 G</td>
-      <td>Ga</td>
-      <td>Endast Ga – inget annat tillåtet</td>
+      <td data-label="Zon"><strong>Zon 0</strong></td>
+      <td data-label="Minsta kategori">Kategori 1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Kan även användas">Endast Ga – inget annat tillåtet</td>
     </tr>
     <tr>
-      <td><strong>Zon 1</strong></td>
-      <td>Kategori 2 G</td>
-      <td>Gb</td>
-      <td>Kategori 1 G (Ga) är också tillåtet</td>
+      <td data-label="Zon"><strong>Zon 1</strong></td>
+      <td data-label="Minsta kategori">Kategori 2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Kan även användas">Kategori 1 G (Ga) är också tillåtet</td>
     </tr>
     <tr>
-      <td><strong>Zon 2</strong></td>
-      <td>Kategori 3 G</td>
-      <td>Gc</td>
-      <td>Kategori 1 G (Ga) eller kategori 2 G (Gb) är också acceptabelt.</td>
+      <td data-label="Zon"><strong>Zon 2</strong></td>
+      <td data-label="Minsta kategori">Kategori 3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Kan även användas">Kategori 1 G (Ga) eller kategori 2 G (Gb) är också acceptabelt.</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Dammszoner</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zon</th>
@@ -241,22 +241,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zon 20</strong></td>
-      <td>Kategori 1 D</td>
-      <td>Da</td>
-      <td>Endast Da – inget annat tillåtet</td>
+      <td data-label="Zon"><strong>Zon 20</strong></td>
+      <td data-label="Minsta kategori">Kategori 1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Kan även användas">Endast Da – inget annat tillåtet</td>
     </tr>
     <tr>
-      <td><strong>Zon 21</strong></td>
-      <td>Kategori 2 D</td>
-      <td>Db</td>
-      <td>Kategori 1 D (Da) också acceptabelt</td>
+      <td data-label="Zon"><strong>Zon 21</strong></td>
+      <td data-label="Minsta kategori">Kategori 2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Kan även användas">Kategori 1 D (Da) också acceptabelt</td>
     </tr>
     <tr>
-      <td><strong>Zon 22</strong></td>
-      <td>Kategori 3 D</td>
-      <td>Dc</td>
-      <td>Kategori 1 D (Da) eller kategori 2 D (Db) är också acceptabla</td>
+      <td data-label="Zon"><strong>Zon 22</strong></td>
+      <td data-label="Minsta kategori">Kategori 3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Kan även användas">Kategori 1 D (Da) eller kategori 2 D (Db) är också acceptabla</td>
     </tr>
   </tbody>
 </table>
@@ -376,7 +376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Steg 4: Tillämpning → Skyddsmetod</h2>
 <p>Välj skyddsmetod utifrån utrustningens funktion och effektnivå:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Applikation</th>
@@ -387,52 +387,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Elmotor</strong></td>
-      <td>&gt; 1 kW</td>
-      <td><a href="/sv/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (explosionssäker)</a></td>
-      <td>Ex e (endast zon 2), Ex nA (zon 2)</td>
+      <td data-label="Applikation"><strong>Elmotor</strong></td>
+      <td data-label="Effektnivå">&gt; 1 kW</td>
+      <td data-label="Rekommenderad metod"><a href="/sv/pages/explosion-proof-vs-intrinsically-safe.html">Ex d (explosionssäker)</a></td>
+      <td data-label="Alternativ">Ex e (endast zon 2), Ex nA (zon 2)</td>
     </tr>
     <tr>
-      <td><strong>Liten motor</strong></td>
-      <td>&lt; 1 kW</td>
-      <td>Ex e (ökad säkerhet)</td>
-      <td>Ex d, Ex nA</td>
+      <td data-label="Applikation"><strong>Liten motor</strong></td>
+      <td data-label="Effektnivå">&lt; 1 kW</td>
+      <td data-label="Rekommenderad metod">Ex e (ökad säkerhet)</td>
+      <td data-label="Alternativ">Ex d, Ex nA</td>
     </tr>
     <tr>
-      <td><strong>Belysningsarmatur</strong></td>
-      <td>Varierar</td>
-      <td>Ex d (LED/lysrör/halogen)</td>
-      <td>Ex e (endast LED, zon 1/2)</td>
+      <td data-label="Applikation"><strong>Belysningsarmatur</strong></td>
+      <td data-label="Effektnivå">Varierar</td>
+      <td data-label="Rekommenderad metod">Ex d (LED/lysrör/halogen)</td>
+      <td data-label="Alternativ">Ex e (endast LED, zon 1/2)</td>
     </tr>
     <tr>
-      <td><strong>Anslutningsbox</strong></td>
-      <td>Ej tillämpligt (passiv)</td>
-      <td>Ex e (för allmän kabeldragning)</td>
-      <td>Ex d (om den innehåller gnistbildande enheter)</td>
+      <td data-label="Applikation"><strong>Anslutningsbox</strong></td>
+      <td data-label="Effektnivå">Ej tillämpligt (passiv)</td>
+      <td data-label="Rekommenderad metod">Ex e (för allmän kabeldragning)</td>
+      <td data-label="Alternativ">Ex d (om den innehåller gnistbildande enheter)</td>
     </tr>
     <tr>
-      <td><strong>Sensor/sändare</strong></td>
-      <td>&lt; 5 W</td>
-      <td><a href="/sv/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (egensäkerhet)</a></td>
-      <td>Ex d (hölje), Ex e</td>
+      <td data-label="Applikation"><strong>Sensor/sändare</strong></td>
+      <td data-label="Effektnivå">&lt; 5 W</td>
+      <td data-label="Rekommenderad metod"><a href="/sv/pages/explosion-proof-vs-intrinsically-safe.html">Ex ia (egensäkerhet)</a></td>
+      <td data-label="Alternativ">Ex d (hölje), Ex e</td>
     </tr>
     <tr>
-      <td><strong>Kontrollpanel</strong></td>
-      <td>&gt; 10 kW</td>
-      <td>Ex p (trycksättning)</td>
-      <td>Ex d (små paneler), Ex e (terminalsektioner)</td>
+      <td data-label="Applikation"><strong>Kontrollpanel</strong></td>
+      <td data-label="Effektnivå">&gt; 10 kW</td>
+      <td data-label="Rekommenderad metod">Ex p (trycksättning)</td>
+      <td data-label="Alternativ">Ex d (små paneler), Ex e (terminalsektioner)</td>
     </tr>
     <tr>
-      <td><strong>Magnetventil</strong></td>
-      <td>5–50 W</td>
-      <td>Ex m (inkapsling)</td>
-      <td>Ex d, Ex ia</td>
+      <td data-label="Applikation"><strong>Magnetventil</strong></td>
+      <td data-label="Effektnivå">5–50 W</td>
+      <td data-label="Rekommenderad metod">Ex m (inkapsling)</td>
+      <td data-label="Alternativ">Ex d, Ex ia</td>
     </tr>
     <tr>
-      <td><strong>Bärbar utrustning</strong></td>
-      <td>Batteri</td>
-      <td>Ex ia, Ex ib</td>
-      <td>Ex d (tyngre)</td>
+      <td data-label="Applikation"><strong>Bärbar utrustning</strong></td>
+      <td data-label="Effektnivå">Batteri</td>
+      <td data-label="Rekommenderad metod">Ex ia, Ex ib</td>
+      <td data-label="Alternativ">Ex d (tyngre)</td>
     </tr>
   </tbody>
 </table>

@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -354,7 +354,7 @@ Ta: -20°C to +60°C
 
 <h3>3. Gruppo di gas (IIA, IIB, IIC)</h3>
 <p>Indica per quali gas l&#x27;apparecchiatura è certificata, in base alla sensibilità all&#x27;accensione (vedere <a href="/it/pages/gas-groups.html">i gruppi di gas</a> per i dettagli):</p>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Gruppo</th>
@@ -365,22 +365,22 @@ Ta: -20°C to +60°C
   </thead>
   <tbody>
     <tr>
-      <td>IIA</td>
-      <td>Propano, metano, butano, ammoniaca, acetone</td>
-      <td>&gt; 0,9 mm</td>
-      <td>&gt; 0,8</td>
+      <td data-label="Gruppo">IIA</td>
+      <td data-label="Gas">Propano, metano, butano, ammoniaca, acetone</td>
+      <td data-label="Intervallo MESG">&gt; 0,9 mm</td>
+      <td data-label="Rapporto MIC">&gt; 0,8</td>
     </tr>
     <tr>
-      <td>IIB</td>
-      <td>Etilene, etere etilico</td>
-      <td>0,5–0,9 mm</td>
-      <td>0,45–0,8</td>
+      <td data-label="Gruppo">IIB</td>
+      <td data-label="Gas">Etilene, etere etilico</td>
+      <td data-label="Intervallo MESG">0,5–0,9 mm</td>
+      <td data-label="Rapporto MIC">0,45–0,8</td>
     </tr>
     <tr>
-      <td>IIC</td>
-      <td>Idrogeno, acetilene, disolfuro di carbonio</td>
-      <td>&lt; 0,5 mm</td>
-      <td>&lt; 0,45</td>
+      <td data-label="Gruppo">IIC</td>
+      <td data-label="Gas">Idrogeno, acetilene, disolfuro di carbonio</td>
+      <td data-label="Intervallo MESG">&lt; 0,5 mm</td>
+      <td data-label="Rapporto MIC">&lt; 0,45</td>
     </tr>
   </tbody>
 </table>

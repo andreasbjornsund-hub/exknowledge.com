@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -256,7 +256,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>معايير الخيوط</h2>
 <p>تأتي مداخل الكابلات Ex بأنواع مختلفة من الخيوط. مطابقة خيط المدخل مع مدخل الحاوية أمر حاسم.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>نوع الخيط</th>
@@ -267,28 +267,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>متري (ISO)</strong></td>
-      <td>M20, M25, M32, M40, M50, M63</td>
-      <td>أوروبا، عالمي</td>
-      <td>الأكثر شيوعًا لـ <a href="/ar/pages/atex-vs-iecex.html">ATEX/IECEx</a>. خطوة الخيط: 1.5 مم</td>
+      <td data-label="نوع الخيط"><strong>متري (ISO)</strong></td>
+      <td data-label="التسمية">M20, M25, M32, M40, M50, M63</td>
+      <td data-label="المنطقة">أوروبا، عالمي</td>
+      <td data-label="ملاحظات">الأكثر شيوعًا لـ <a href="/ar/pages/atex-vs-iecex.html">ATEX/IECEx</a>. خطوة الخيط: 1.5 مم</td>
     </tr>
     <tr>
-      <td><strong>NPT (مخروطي)</strong></td>
-      <td>½", ¾", 1", 1¼", 1½", 2"</td>
-      <td>أمريكا الشمالية</td>
-      <td>مخروطي ذات ختم ذاتي. يتطلب مادة ختم الخيط (شريط PTFE أو معجون). شائع في التركيبات NEC.</td>
+      <td data-label="نوع الخيط"><strong>NPT (مخروطي)</strong></td>
+      <td data-label="التسمية">½", ¾", 1", 1¼", 1½", 2"</td>
+      <td data-label="المنطقة">أمريكا الشمالية</td>
+      <td data-label="ملاحظات">مخروطي ذات ختم ذاتي. يتطلب مادة ختم الخيط (شريط PTFE أو معجون). شائع في التركيبات NEC.</td>
     </tr>
     <tr>
-      <td><strong>PG (بانزرغويندي)</strong></td>
-      <td>PG9, PG11, PG13.5, PG16, PG21, PG29</td>
-      <td>ألمانيا (قديم)</td>
-      <td>معيار ألماني قديم. لا يزال موجودًا في المعدات القديمة. يتم استبداله تدريجيًا بالمتري.</td>
+      <td data-label="نوع الخيط"><strong>PG (بانزرغويندي)</strong></td>
+      <td data-label="التسمية">PG9, PG11, PG13.5, PG16, PG21, PG29</td>
+      <td data-label="المنطقة">ألمانيا (قديم)</td>
+      <td data-label="ملاحظات">معيار ألماني قديم. لا يزال موجودًا في المعدات القديمة. يتم استبداله تدريجيًا بالمتري.</td>
     </tr>
     <tr>
-      <td><strong>G (BSP متوازي)</strong></td>
-      <td>G½", G¾", G1"</td>
-      <td>المملكة المتحدة، الكومنولث</td>
-      <td>خيط متوازي (غير مخروطي). يتطلب غسالة ختم أو حلقة O.</td>
+      <td data-label="نوع الخيط"><strong>G (BSP متوازي)</strong></td>
+      <td data-label="التسمية">G½", G¾", G1"</td>
+      <td data-label="المنطقة">المملكة المتحدة، الكومنولث</td>
+      <td data-label="ملاحظات">خيط متوازي (غير مخروطي). يتطلب غسالة ختم أو حلقة O.</td>
     </tr>
   </tbody>
 </table>
@@ -382,7 +382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>تصنيفات IP لغدد الكابلات</h2>
 <p>يشير تصنيف الحماية من الدخول إلى مقاومة الغبار والماء. تتطلب البيئات القاسية تصنيفات IP أعلى.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>تصنيف IP</th>
@@ -393,34 +393,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IP54</strong></td>
-      <td>محمي من الغبار</td>
-      <td>مقاوم للرذاذ</td>
-      <td>البيئات الداخلية الجافة</td>
+      <td data-label="تصنيف IP"><strong>IP54</strong></td>
+      <td data-label="حماية من الغبار">محمي من الغبار</td>
+      <td data-label="حماية من الماء">مقاوم للرذاذ</td>
+      <td data-label="التطبيق النموذجي">البيئات الداخلية الجافة</td>
     </tr>
     <tr>
-      <td><strong>IP66</strong></td>
-      <td>محكم ضد الغبار</td>
-      <td>نفاثات مياه قوية</td>
-      <td>الخارجية، الصناعية (الأكثر شيوعًا)</td>
+      <td data-label="تصنيف IP"><strong>IP66</strong></td>
+      <td data-label="حماية من الغبار">محكم ضد الغبار</td>
+      <td data-label="حماية من الماء">نفاثات مياه قوية</td>
+      <td data-label="التطبيق النموذجي">الخارجية، الصناعية (الأكثر شيوعًا)</td>
     </tr>
     <tr>
-      <td><strong>IP67</strong></td>
-      <td>محكم ضد الغبار</td>
-      <td>غمر مؤقت (1 م، 30 دقيقة)</td>
-      <td>المناطق المعرضة للفيضانات، التنظيف بالماء</td>
+      <td data-label="تصنيف IP"><strong>IP67</strong></td>
+      <td data-label="حماية من الغبار">محكم ضد الغبار</td>
+      <td data-label="حماية من الماء">غمر مؤقت (1 م، 30 دقيقة)</td>
+      <td data-label="التطبيق النموذجي">المناطق المعرضة للفيضانات، التنظيف بالماء</td>
     </tr>
     <tr>
-      <td><strong>IP68</strong></td>
-      <td>محكم ضد الغبار</td>
-      <td>غمر مستمر (العمق/الزمن حسب الشركة المصنعة)</td>
-      <td>تحت البحر، تحت الماء بشكل دائم</td>
+      <td data-label="تصنيف IP"><strong>IP68</strong></td>
+      <td data-label="حماية من الغبار">محكم ضد الغبار</td>
+      <td data-label="حماية من الماء">غمر مستمر (العمق/الزمن حسب الشركة المصنعة)</td>
+      <td data-label="التطبيق النموذجي">تحت البحر، تحت الماء بشكل دائم</td>
     </tr>
     <tr>
-      <td><strong>IP6X</strong></td>
-      <td>محكم ضد الغبار</td>
-      <td>لا توجد حماية من الماء محددة</td>
-      <td>مناطق الغبار (المنطقة 20/21) حيث لا يشكل دخول الماء قلقًا</td>
+      <td data-label="تصنيف IP"><strong>IP6X</strong></td>
+      <td data-label="حماية من الغبار">محكم ضد الغبار</td>
+      <td data-label="حماية من الماء">لا توجد حماية من الماء محددة</td>
+      <td data-label="التطبيق النموذجي">مناطق الغبار (المنطقة 20/21) حيث لا يشكل دخول الماء قلقًا</td>
     </tr>
   </tbody>
 </table>

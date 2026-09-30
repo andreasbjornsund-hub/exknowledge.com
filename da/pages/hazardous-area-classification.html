@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -195,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Farlige områder klassificeres i zoner baseret på <strong>hyppigheden og varigheden</strong> af en eksplosiv atmosfære:</p>
 
 <h3>Gas-/dampzoner</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zone</th>
@@ -206,22 +206,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zone 0</strong></td>
-      <td>Eksplosiv atmosfære til stede <strong>kontinuerligt</strong> eller i lange perioder</td>
-      <td>&gt; 1.000 timer/år</td>
-      <td>Inde i lagertanke, i damprum over flygtige væsker, inde i procesbeholdere</td>
+      <td data-label="Zone"><strong>Zone 0</strong></td>
+      <td data-label="Definition">Eksplosiv atmosfære til stede <strong>kontinuerligt</strong> eller i lange perioder</td>
+      <td data-label="Varighed">&gt; 1.000 timer/år</td>
+      <td data-label="Typiske eksempler">Inde i lagertanke, i damprum over flygtige væsker, inde i procesbeholdere</td>
     </tr>
     <tr>
-      <td><strong>Zone 1</strong></td>
-      <td>Eksplosiv atmosfære <strong>kan forekomme</strong> under normal drift</td>
-      <td>10–1.000 timer/år</td>
-      <td>Omkring pumpepakninger, ventilpakninger, prøveudtagningssteder, aflastningsventiler, påfyldningsområder</td>
+      <td data-label="Zone"><strong>Zone 1</strong></td>
+      <td data-label="Definition">Eksplosiv atmosfære <strong>kan forekomme</strong> under normal drift</td>
+      <td data-label="Varighed">10–1.000 timer/år</td>
+      <td data-label="Typiske eksempler">Omkring pumpepakninger, ventilpakninger, prøveudtagningssteder, aflastningsventiler, påfyldningsområder</td>
     </tr>
     <tr>
-      <td><strong>Zone 2</strong></td>
-      <td>Eksplosiv atmosfære <strong>forekommer sandsynligvis ikke</strong> under normal drift; hvis den forekommer, er det kun i <strong>korte perioder</strong></td>
-      <td>&lt; 10 timer/år</td>
-      <td>Omkring flanger med gode pakninger, rørfittings, områder nær Zone 1-grænser</td>
+      <td data-label="Zone"><strong>Zone 2</strong></td>
+      <td data-label="Definition">Eksplosiv atmosfære <strong>forekommer sandsynligvis ikke</strong> under normal drift; hvis den forekommer, er det kun i <strong>korte perioder</strong></td>
+      <td data-label="Varighed">&lt; 10 timer/år</td>
+      <td data-label="Typiske eksempler">Omkring flanger med gode pakninger, rørfittings, områder nær Zone 1-grænser</td>
     </tr>
   </tbody>
 </table>
@@ -264,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Trin 1: Identificer udslipskilder</h3>
 <p>En <strong>udslipskilde</strong> er ethvert punkt, hvor brandfarlig gas, damp eller væske kan slippe ud i atmosfæren. Kilderne klassificeres efter hyppighed:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Grad</th>
@@ -275,22 +275,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Kontinuerlig</strong></td>
-      <td>Udslip er kontinuerligt eller forventes i lange perioder</td>
-      <td>Tankudluftninger, åbne væskeoverflader, konstante lækager fra defekte tætninger</td>
-      <td>Zone 0</td>
+      <td data-label="Grad"><strong>Kontinuerlig</strong></td>
+      <td data-label="Definition">Udslip er kontinuerligt eller forventes i lange perioder</td>
+      <td data-label="Eksempler">Tankudluftninger, åbne væskeoverflader, konstante lækager fra defekte tætninger</td>
+      <td data-label="Opretter zone">Zone 0</td>
     </tr>
     <tr>
-      <td><strong>Primær</strong></td>
-      <td>Udslip forventes periodisk eller lejlighedsvis under normal drift</td>
-      <td>Pumpepakninger, kompressorpakninger, prøveudtagningssteder, aflastningsventiler, på- og aflæsningsforbindelser</td>
-      <td>Zone 1</td>
+      <td data-label="Grad"><strong>Primær</strong></td>
+      <td data-label="Definition">Udslip forventes periodisk eller lejlighedsvis under normal drift</td>
+      <td data-label="Eksempler">Pumpepakninger, kompressorpakninger, prøveudtagningssteder, aflastningsventiler, på- og aflæsningsforbindelser</td>
+      <td data-label="Opretter zone">Zone 1</td>
     </tr>
     <tr>
-      <td><strong>Sekundær</strong></td>
-      <td>Der forventes ikke udslip under normal drift; hvis det forekommer, er det kun sjældent og i korte perioder</td>
-      <td>Flangeforbindelser, ventilstænger (ikke pakninger), instrumenttilslutninger, rørfittings i god stand</td>
-      <td>Zone 2</td>
+      <td data-label="Grad"><strong>Sekundær</strong></td>
+      <td data-label="Definition">Der forventes ikke udslip under normal drift; hvis det forekommer, er det kun sjældent og i korte perioder</td>
+      <td data-label="Eksempler">Flangeforbindelser, ventilstænger (ikke pakninger), instrumenttilslutninger, rørfittings i god stand</td>
+      <td data-label="Opretter zone">Zone 2</td>
     </tr>
   </tbody>
 </table>
@@ -326,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Trin 3: Bestem zonetype</h3>
 <p>IEC 60079-10-1, bilag B, indeholder en matrix:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Frigørelsesgrad</th>
@@ -337,22 +337,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Kontinuerlig</strong></td>
-      <td>Zone 0 NE (ubetydeligt omfang) → ikke-farlig</td>
-      <td>Zone 0 + Zone 2</td>
-      <td>Zone 0 + Zone 1</td>
+      <td data-label="Frigørelsesgrad"><strong>Kontinuerlig</strong></td>
+      <td data-label="Høj ventilation + god tilgængelighed">Zone 0 NE (ubetydeligt omfang) → ikke-farlig</td>
+      <td data-label="Middel ventilation + god tilgængelighed">Zone 0 + Zone 2</td>
+      <td data-label="Lav ventilation + dårlig tilgængelighed">Zone 0 + Zone 1</td>
     </tr>
     <tr>
-      <td><strong>Primær</strong></td>
-      <td>Zone 1 NE → ikke-farlig</td>
-      <td>Zone 1 + Zone 2</td>
-      <td>Zone 1 + Zone 0</td>
+      <td data-label="Frigørelsesgrad"><strong>Primær</strong></td>
+      <td data-label="Høj ventilation + god tilgængelighed">Zone 1 NE → ikke-farlig</td>
+      <td data-label="Middel ventilation + god tilgængelighed">Zone 1 + Zone 2</td>
+      <td data-label="Lav ventilation + dårlig tilgængelighed">Zone 1 + Zone 0</td>
     </tr>
     <tr>
-      <td><strong>Sekundær</strong></td>
-      <td>Zone 2 NE → ikke-farlig</td>
-      <td>Zone 2</td>
-      <td>Zone 1 eller endda Zone 0</td>
+      <td data-label="Frigørelsesgrad"><strong>Sekundær</strong></td>
+      <td data-label="Høj ventilation + god tilgængelighed">Zone 2 NE → ikke-farlig</td>
+      <td data-label="Middel ventilation + god tilgængelighed">Zone 2</td>
+      <td data-label="Lav ventilation + dårlig tilgængelighed">Zone 1 eller endda Zone 0</td>
     </tr>
   </tbody>
 </table>

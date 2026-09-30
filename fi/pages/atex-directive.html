@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -267,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Ryhmä II: Maanpäälliset teollisuudenalat</h3>
 <p>Laitteet kaikille muille teollisuudenaloille (öljy ja kaasu, kemianteollisuus, lääketeollisuus, elintarviketeollisuus jne.). Jaoteltu luokkien ja ilmakehän tyyppien mukaan:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Luokka</th>
@@ -278,40 +278,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>1 G</td>
-      <td>Ga</td>
-      <td>Vyöhyke 0</td>
-      <td>Erittäin korkea (2 erillistä vikakohtaa)</td>
+      <td data-label="Luokka">1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Vyöhykkeen sopivuus">Vyöhyke 0</td>
+      <td data-label="Suojausluokka">Erittäin korkea (2 erillistä vikakohtaa)</td>
     </tr>
     <tr>
-      <td>2 G</td>
-      <td>Gb</td>
-      <td>Vyöhyke 1</td>
-      <td>Korkea (1 vika)</td>
+      <td data-label="Luokka">2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Vyöhykkeen sopivuus">Vyöhyke 1</td>
+      <td data-label="Suojausluokka">Korkea (1 vika)</td>
     </tr>
     <tr>
-      <td>3 G</td>
-      <td>Gc</td>
-      <td>Vyöhyke 2</td>
-      <td>Normaali toiminta</td>
+      <td data-label="Luokka">3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Vyöhykkeen sopivuus">Vyöhyke 2</td>
+      <td data-label="Suojausluokka">Normaali toiminta</td>
     </tr>
     <tr>
-      <td>1 D</td>
-      <td>Da</td>
-      <td>Vyöhyke 20</td>
-      <td>Erittäin korkea (2 erillistä vikaa)</td>
+      <td data-label="Luokka">1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Vyöhykkeen sopivuus">Vyöhyke 20</td>
+      <td data-label="Suojausluokka">Erittäin korkea (2 erillistä vikaa)</td>
     </tr>
     <tr>
-      <td>2 D</td>
-      <td>Db</td>
-      <td>Alue 21</td>
-      <td>Korkea (1 siirros)</td>
+      <td data-label="Luokka">2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Vyöhykkeen sopivuus">Alue 21</td>
+      <td data-label="Suojausluokka">Korkea (1 siirros)</td>
     </tr>
     <tr>
-      <td>3 D</td>
-      <td>Dc</td>
-      <td>Alue 22</td>
-      <td>Normaali käyttö</td>
+      <td data-label="Luokka">3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Vyöhykkeen sopivuus">Alue 22</td>
+      <td data-label="Suojausluokka">Normaali käyttö</td>
     </tr>
   </tbody>
 </table>
@@ -361,7 +361,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Vaatimustenmukaisuuden arviointimoduulit</h2>
 <p>Valmistajien on noudatettava tiettyjä menettelyjä vaatimustenmukaisuuden osoittamiseksi. Vaadittu moduuli riippuu laiteluokasta:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Moduuli</th>
@@ -372,40 +372,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>Sisäinen tuotantovalvonta</td>
-      <td>Ei</td>
-      <td>Luokka 2 ja 3 (ei-sähköiset), luokka 3 (sähköiset)</td>
+      <td data-label="Moduuli">A</td>
+      <td data-label="Nimi">Sisäinen tuotantovalvonta</td>
+      <td data-label="Onko ilmoitettu laitos mukana?">Ei</td>
+      <td data-label="Sovelletaan">Luokka 2 ja 3 (ei-sähköiset), luokka 3 (sähköiset)</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>EU-tyyppitarkastus</td>
-      <td>Kyllä</td>
-      <td>Kaikki luokan 1 ja M1 laitteet, suurin osa luokan 2 laitteista</td>
+      <td data-label="Moduuli">B</td>
+      <td data-label="Nimi">EU-tyyppitarkastus</td>
+      <td data-label="Onko ilmoitettu laitos mukana?">Kyllä</td>
+      <td data-label="Sovelletaan">Kaikki luokan 1 ja M1 laitteet, suurin osa luokan 2 laitteista</td>
     </tr>
     <tr>
-      <td>C1</td>
-      <td>Valmistuksen vaatimustenmukaisuus (sisäinen tuotantovalvonta + tuotetestit)</td>
-      <td>Ei (moduulin B jälkeen)</td>
-      <td>Yhdistettynä moduuliin B</td>
+      <td data-label="Moduuli">C1</td>
+      <td data-label="Nimi">Valmistuksen vaatimustenmukaisuus (sisäinen tuotantovalvonta + tuotetestit)</td>
+      <td data-label="Onko ilmoitettu laitos mukana?">Ei (moduulin B jälkeen)</td>
+      <td data-label="Sovelletaan">Yhdistettynä moduuliin B</td>
     </tr>
     <tr>
-      <td>D</td>
-      <td>Laadunvarmistus (tuotanto)</td>
-      <td>Kyllä (valvonta)</td>
-      <td>Yhdistettynä moduuliin B luokalle 1/M1</td>
+      <td data-label="Moduuli">D</td>
+      <td data-label="Nimi">Laadunvarmistus (tuotanto)</td>
+      <td data-label="Onko ilmoitettu laitos mukana?">Kyllä (valvonta)</td>
+      <td data-label="Sovelletaan">Yhdistettynä moduuliin B luokalle 1/M1</td>
     </tr>
     <tr>
-      <td>E</td>
-      <td>Laadunvarmistus (tuote)</td>
-      <td>Kyllä (valvonta)</td>
-      <td>Yhdistettynä moduuliin B luokalle 1/M1</td>
+      <td data-label="Moduuli">E</td>
+      <td data-label="Nimi">Laadunvarmistus (tuote)</td>
+      <td data-label="Onko ilmoitettu laitos mukana?">Kyllä (valvonta)</td>
+      <td data-label="Sovelletaan">Yhdistettynä moduuliin B luokalle 1/M1</td>
     </tr>
     <tr>
-      <td>F</td>
-      <td>Tuotteen todentaminen</td>
-      <td>Kyllä (tuotekohtainen tai eräkohtainen testaus)</td>
-      <td>Yhdistettynä moduuliin B luokalle 1/M1</td>
+      <td data-label="Moduuli">F</td>
+      <td data-label="Nimi">Tuotteen todentaminen</td>
+      <td data-label="Onko ilmoitettu laitos mukana?">Kyllä (tuotekohtainen tai eräkohtainen testaus)</td>
+      <td data-label="Sovelletaan">Yhdistettynä moduuliin B luokalle 1/M1</td>
     </tr>
   </tbody>
 </table>

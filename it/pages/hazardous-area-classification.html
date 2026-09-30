@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -195,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Le aree pericolose sono classificate in zone in base alla <strong>frequenza e </strong>alla <strong>durata</strong> della presenza di un&#x27;atmosfera esplosiva:</p>
 
 <h3>Zone gas/vapori</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zona</th>
@@ -206,22 +206,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zona 0</strong></td>
-      <td>Atmosfera esplosiva presente <strong>in modo continuo</strong> o per lunghi periodi</td>
-      <td>&gt; 1.000 ore/anno</td>
-      <td>All&#x27;interno di serbatoi di stoccaggio, spazi di vapore sopra liquidi volatili, all&#x27;interno di recipienti di processo</td>
+      <td data-label="Zona"><strong>Zona 0</strong></td>
+      <td data-label="Definizione">Atmosfera esplosiva presente <strong>in modo continuo</strong> o per lunghi periodi</td>
+      <td data-label="Durata">&gt; 1.000 ore/anno</td>
+      <td data-label="Esempi tipici">All&#x27;interno di serbatoi di stoccaggio, spazi di vapore sopra liquidi volatili, all&#x27;interno di recipienti di processo</td>
     </tr>
     <tr>
-      <td><strong>Zona 1</strong></td>
-      <td>Atmosfera esplosiva <strong>che può verificarsi</strong> durante il normale funzionamento</td>
-      <td>10–1.000 ore/anno</td>
-      <td>Intorno alle guarnizioni delle pompe, alle guarnizioni delle valvole, ai punti di campionamento, alle valvole di sicurezza, alle aree di carico</td>
+      <td data-label="Zona"><strong>Zona 1</strong></td>
+      <td data-label="Definizione">Atmosfera esplosiva <strong>che può verificarsi</strong> durante il normale funzionamento</td>
+      <td data-label="Durata">10–1.000 ore/anno</td>
+      <td data-label="Esempi tipici">Intorno alle guarnizioni delle pompe, alle guarnizioni delle valvole, ai punti di campionamento, alle valvole di sicurezza, alle aree di carico</td>
     </tr>
     <tr>
-      <td><strong>Zona 2</strong></td>
-      <td>Atmosfera esplosiva <strong>improbabile</strong> durante il normale funzionamento; se si verifica, solo per <strong>brevi periodi</strong></td>
-      <td>&lt; 10 ore/anno</td>
-      <td>Intorno a flange con guarnizioni in buono stato, raccordi per tubi, aree vicine ai confini della Zona 1</td>
+      <td data-label="Zona"><strong>Zona 2</strong></td>
+      <td data-label="Definizione">Atmosfera esplosiva <strong>improbabile</strong> durante il normale funzionamento; se si verifica, solo per <strong>brevi periodi</strong></td>
+      <td data-label="Durata">&lt; 10 ore/anno</td>
+      <td data-label="Esempi tipici">Intorno a flange con guarnizioni in buono stato, raccordi per tubi, aree vicine ai confini della Zona 1</td>
     </tr>
   </tbody>
 </table>
@@ -264,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Fase 1: Identificare le fonti di rilascio</h3>
 <p>Una <strong>fonte di rilascio</strong> è qualsiasi punto in cui gas, vapori o liquidi infiammabili possono fuoriuscire nell&#x27;atmosfera. Le fonti sono classificate in base alla frequenza:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Grado</th>
@@ -275,22 +275,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Continuo</strong></td>
-      <td>Il rilascio è continuo o previsto per lunghi periodi</td>
-      <td>Sfiati dei serbatoi, superfici liquide aperte, perdite costanti da guarnizioni difettose</td>
-      <td>Zona 0</td>
+      <td data-label="Grado"><strong>Continuo</strong></td>
+      <td data-label="Definizione">Il rilascio è continuo o previsto per lunghi periodi</td>
+      <td data-label="Esempi">Sfiati dei serbatoi, superfici liquide aperte, perdite costanti da guarnizioni difettose</td>
+      <td data-label="Crea zona">Zona 0</td>
     </tr>
     <tr>
-      <td><strong>Primaria</strong></td>
-      <td>Il rilascio è previsto periodicamente o occasionalmente durante il normale funzionamento</td>
-      <td>Guarnizioni delle pompe, guarnizioni dei compressori, punti di campionamento, valvole di sicurezza, connessioni di carico/scarico</td>
-      <td>Zona 1</td>
+      <td data-label="Grado"><strong>Primaria</strong></td>
+      <td data-label="Definizione">Il rilascio è previsto periodicamente o occasionalmente durante il normale funzionamento</td>
+      <td data-label="Esempi">Guarnizioni delle pompe, guarnizioni dei compressori, punti di campionamento, valvole di sicurezza, connessioni di carico/scarico</td>
+      <td data-label="Crea zona">Zona 1</td>
     </tr>
     <tr>
-      <td><strong>Secondaria</strong></td>
-      <td>Non è prevista alcuna fuoriuscita durante il normale funzionamento; se si verifica, è solo sporadica e per brevi periodi</td>
-      <td>Giunti flangiati, steli delle valvole (non guarnizioni), connessioni degli strumenti, raccordi delle tubazioni in buone condizioni</td>
-      <td>Zona 2</td>
+      <td data-label="Grado"><strong>Secondaria</strong></td>
+      <td data-label="Definizione">Non è prevista alcuna fuoriuscita durante il normale funzionamento; se si verifica, è solo sporadica e per brevi periodi</td>
+      <td data-label="Esempi">Giunti flangiati, steli delle valvole (non guarnizioni), connessioni degli strumenti, raccordi delle tubazioni in buone condizioni</td>
+      <td data-label="Crea zona">Zona 2</td>
     </tr>
   </tbody>
 </table>
@@ -326,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Fase 3: Determinazione del tipo di zona</h3>
 <p>L&#x27;allegato B della norma IEC 60079-10-1 fornisce una matrice:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Grado di dispersione</th>
@@ -337,22 +337,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Continuo</strong></td>
-      <td>Zona 0 NE (entità trascurabile) → non pericoloso</td>
-      <td>Zona 0 + Zona 2</td>
-      <td>Zona 0 + Zona 1</td>
+      <td data-label="Grado di dispersione"><strong>Continuo</strong></td>
+      <td data-label="Ventilazione elevata + Buona disponibilità">Zona 0 NE (entità trascurabile) → non pericoloso</td>
+      <td data-label="Ventilazione media + Buona accessibilità">Zona 0 + Zona 2</td>
+      <td data-label="Bassa ventilazione + scarsa disponibilità">Zona 0 + Zona 1</td>
     </tr>
     <tr>
-      <td><strong>Primaria</strong></td>
-      <td>Zona 1 NE → non pericolosa</td>
-      <td>Zona 1 + Zona 2</td>
-      <td>Zona 1 + Zona 0</td>
+      <td data-label="Grado di dispersione"><strong>Primaria</strong></td>
+      <td data-label="Ventilazione elevata + Buona disponibilità">Zona 1 NE → non pericolosa</td>
+      <td data-label="Ventilazione media + Buona accessibilità">Zona 1 + Zona 2</td>
+      <td data-label="Bassa ventilazione + scarsa disponibilità">Zona 1 + Zona 0</td>
     </tr>
     <tr>
-      <td><strong>Secondaria</strong></td>
-      <td>Zona 2 NE → non pericolosa</td>
-      <td>Zona 2</td>
-      <td>Zona 1 o anche Zona 0</td>
+      <td data-label="Grado di dispersione"><strong>Secondaria</strong></td>
+      <td data-label="Ventilazione elevata + Buona disponibilità">Zona 2 NE → non pericolosa</td>
+      <td data-label="Ventilazione media + Buona accessibilità">Zona 2</td>
+      <td data-label="Bassa ventilazione + scarsa disponibilità">Zona 1 o anche Zona 0</td>
     </tr>
   </tbody>
 </table>

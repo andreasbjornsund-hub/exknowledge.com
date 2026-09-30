@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -258,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Normas de roscado</h2>
 <p>Los prensaestopas Ex vienen con varios tipos de roscas. Es fundamental que la rosca del prensaestopas coincida con la entrada de la carcasa.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Tipo de rosca</th>
@@ -269,28 +269,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Métrico (ISO)</strong></td>
-      <td>M20, M25, M32, M40, M50, M63</td>
-      <td>Europa, mundial</td>
-      <td>Más común para <a href="/es/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Paso: 1,5 mm</td>
+      <td data-label="Tipo de rosca"><strong>Métrico (ISO)</strong></td>
+      <td data-label="Designación">M20, M25, M32, M40, M50, M63</td>
+      <td data-label="Región">Europa, mundial</td>
+      <td data-label="Notas">Más común para <a href="/es/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Paso: 1,5 mm</td>
     </tr>
     <tr>
-      <td><strong>NPT (cónico)</strong></td>
-      <td>½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
-      <td>Norteamérica</td>
-      <td>Cónica autosellante. Requiere sellador de roscas (cinta o pasta de PTFE). Habitual en instalaciones NEC.</td>
+      <td data-label="Tipo de rosca"><strong>NPT (cónico)</strong></td>
+      <td data-label="Designación">½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
+      <td data-label="Región">Norteamérica</td>
+      <td data-label="Notas">Cónica autosellante. Requiere sellador de roscas (cinta o pasta de PTFE). Habitual en instalaciones NEC.</td>
     </tr>
     <tr>
-      <td><strong>PG (Panzergewinde)</strong></td>
-      <td>PG9, PG11, PG13,5, PG16, PG21, PG29</td>
-      <td>Alemania (antiguo)</td>
-      <td>Antigua norma alemana. Todavía se encuentra en equipos antiguos. Se está sustituyendo por el sistema métrico.</td>
+      <td data-label="Tipo de rosca"><strong>PG (Panzergewinde)</strong></td>
+      <td data-label="Designación">PG9, PG11, PG13,5, PG16, PG21, PG29</td>
+      <td data-label="Región">Alemania (antiguo)</td>
+      <td data-label="Notas">Antigua norma alemana. Todavía se encuentra en equipos antiguos. Se está sustituyendo por el sistema métrico.</td>
     </tr>
     <tr>
-      <td><strong>G (BSP paralelo)</strong></td>
-      <td>G½&quot;, G¾&quot;, G1&quot;</td>
-      <td>Reino Unido, Commonwealth</td>
-      <td>Rosca paralela (no cónica). Requiere arandela de sellado o junta tórica.</td>
+      <td data-label="Tipo de rosca"><strong>G (BSP paralelo)</strong></td>
+      <td data-label="Designación">G½&quot;, G¾&quot;, G1&quot;</td>
+      <td data-label="Región">Reino Unido, Commonwealth</td>
+      <td data-label="Notas">Rosca paralela (no cónica). Requiere arandela de sellado o junta tórica.</td>
     </tr>
   </tbody>
 </table>
@@ -384,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Clasificaciones IP para prensaestopas</h2>
 <p>La clasificación de protección contra la entrada de elementos externos indica la resistencia al polvo y al agua. Se requieren clasificaciones IP más altas para entornos más hostiles.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Clasificación IP</th>
@@ -395,34 +395,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IP54</strong></td>
-      <td>Protección contra el polvo</td>
-      <td>A prueba de salpicaduras</td>
-      <td>Ambientes interiores secos</td>
+      <td data-label="Clasificación IP"><strong>IP54</strong></td>
+      <td data-label="Protección contra el polvo">Protección contra el polvo</td>
+      <td data-label="Protección contra el agua">A prueba de salpicaduras</td>
+      <td data-label="Aplicación típica">Ambientes interiores secos</td>
     </tr>
     <tr>
-      <td><strong>IP66</strong></td>
-      <td>Estanco al polvo</td>
-      <td>Chorros de agua potentes</td>
-      <td>Exterior, industrial (más común)</td>
+      <td data-label="Clasificación IP"><strong>IP66</strong></td>
+      <td data-label="Protección contra el polvo">Estanco al polvo</td>
+      <td data-label="Protección contra el agua">Chorros de agua potentes</td>
+      <td data-label="Aplicación típica">Exterior, industrial (más común)</td>
     </tr>
     <tr>
-      <td><strong>IP67</strong></td>
-      <td>Estanco al polvo</td>
-      <td>Inmersión temporal (1 m, 30 min)</td>
-      <td>Áreas propensas a inundaciones, lavado a presión</td>
+      <td data-label="Clasificación IP"><strong>IP67</strong></td>
+      <td data-label="Protección contra el polvo">Estanco al polvo</td>
+      <td data-label="Protección contra el agua">Inmersión temporal (1 m, 30 min)</td>
+      <td data-label="Aplicación típica">Áreas propensas a inundaciones, lavado a presión</td>
     </tr>
     <tr>
-      <td><strong>IP68</strong></td>
-      <td>Estanco al polvo</td>
-      <td>Inmersión continua (profundidad/tiempo según el fabricante)</td>
-      <td>Submarino, permanente bajo el agua</td>
+      <td data-label="Clasificación IP"><strong>IP68</strong></td>
+      <td data-label="Protección contra el polvo">Estanco al polvo</td>
+      <td data-label="Protección contra el agua">Inmersión continua (profundidad/tiempo según el fabricante)</td>
+      <td data-label="Aplicación típica">Submarino, permanente bajo el agua</td>
     </tr>
     <tr>
-      <td><strong>IP6X</strong></td>
-      <td>Estanco al polvo</td>
-      <td>Sin protección contra el agua especificada</td>
-      <td>Zonas con polvo (Zona 20/21) donde no hay riesgo de entrada de agua</td>
+      <td data-label="Clasificación IP"><strong>IP6X</strong></td>
+      <td data-label="Protección contra el polvo">Estanco al polvo</td>
+      <td data-label="Protección contra el agua">Sin protección contra el agua especificada</td>
+      <td data-label="Aplicación típica">Zonas con polvo (Zona 20/21) donde no hay riesgo de entrada de agua</td>
     </tr>
   </tbody>
 </table>

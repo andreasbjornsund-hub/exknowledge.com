@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -216,7 +216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Typer av brännbart damm</h2>
 
 <h3><a href="/sv/pages/gas-groups.html">Dammgrupper</a> (IEC 60079-0)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Grupp</th>
@@ -227,22 +227,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IIIA</strong></td>
-      <td>Brännbara flygande partiklar</td>
-      <td>Bomullsfibrer, textilfibrer, träspån, pappersfibrer</td>
-      <td>Lättantändliga, snabb flamutbredning</td>
+      <td data-label="Grupp"><strong>IIIA</strong></td>
+      <td data-label="Typ">Brännbara flygande partiklar</td>
+      <td data-label="Exempel">Bomullsfibrer, textilfibrer, träspån, pappersfibrer</td>
+      <td data-label="Viktigaste faran">Lättantändliga, snabb flamutbredning</td>
     </tr>
     <tr>
-      <td><strong>IIIB</strong></td>
-      <td>Icke-ledande damm</td>
-      <td>Mjöl, socker, stärkelse, spannmål, träspån, plastpulver, farmaceutiska pulver</td>
-      <td>Elektrostatisk laddning, skiktbildning</td>
+      <td data-label="Grupp"><strong>IIIB</strong></td>
+      <td data-label="Typ">Icke-ledande damm</td>
+      <td data-label="Exempel">Mjöl, socker, stärkelse, spannmål, träspån, plastpulver, farmaceutiska pulver</td>
+      <td data-label="Viktigaste faran">Elektrostatisk laddning, skiktbildning</td>
     </tr>
     <tr>
-      <td><strong>IIIC</strong></td>
-      <td>Ledande damm</td>
-      <td>Aluminiumpulver, magnesiumdamm, järnfilspån, kimrök, grafit</td>
-      <td>Kan kortsluta elektrisk utrustning, mycket reaktiva metaller</td>
+      <td data-label="Grupp"><strong>IIIC</strong></td>
+      <td data-label="Typ">Ledande damm</td>
+      <td data-label="Exempel">Aluminiumpulver, magnesiumdamm, järnfilspån, kimrök, grafit</td>
+      <td data-label="Viktigaste faran">Kan kortsluta elektrisk utrustning, mycket reaktiva metaller</td>
     </tr>
   </tbody>
 </table>
@@ -264,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Parametrar för dammexplosion</h2>
 <p>Dammexplosionsförmåga karakteriseras genom laboratorietester enligt EN 14034-serien (se <a href="/sv/pages/standards.html">standardöversikt</a>):</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -275,46 +275,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Maximal explosionstryck</strong></td>
-      <td>P<sub>max</sub></td>
-      <td>Topp tryck under explosion (bar)</td>
-      <td>Bestämmer kraven på strukturell hållfasthet för inneslutning eller ventilation</td>
+      <td data-label="Parameter"><strong>Maximal explosionstryck</strong></td>
+      <td data-label="Symbol">P<sub>max</sub></td>
+      <td data-label="Vad den mäter">Topp tryck under explosion (bar)</td>
+      <td data-label="Varför det är viktigt">Bestämmer kraven på strukturell hållfasthet för inneslutning eller ventilation</td>
     </tr>
     <tr>
-      <td><strong>Damm explosionens svårighetsgrad</strong></td>
-      <td>K<sub>St</sub></td>
-      <td>Tryckökningstakt (bar·m/s)</td>
-      <td>Bestämmer ventilationsområdets storlek och släckningsresponsens tid</td>
+      <td data-label="Parameter"><strong>Damm explosionens svårighetsgrad</strong></td>
+      <td data-label="Symbol">K<sub>St</sub></td>
+      <td data-label="Vad den mäter">Tryckökningstakt (bar·m/s)</td>
+      <td data-label="Varför det är viktigt">Bestämmer ventilationsområdets storlek och släckningsresponsens tid</td>
     </tr>
     <tr>
-      <td><strong>Minsta explosiva koncentration</strong></td>
-      <td>MEC</td>
-      <td>Lägsta dammkoncentration som kan explodera (g/m³)</td>
-      <td>Motsvarar LEL för gaser; vanligtvis 20–60 g/m³</td>
+      <td data-label="Parameter"><strong>Minsta explosiva koncentration</strong></td>
+      <td data-label="Symbol">MEC</td>
+      <td data-label="Vad den mäter">Lägsta dammkoncentration som kan explodera (g/m³)</td>
+      <td data-label="Varför det är viktigt">Motsvarar LEL för gaser; vanligtvis 20–60 g/m³</td>
     </tr>
     <tr>
-      <td><strong>Minsta antändningsenergi</strong></td>
-      <td>MIE</td>
-      <td>Minsta gnista som kan antända ett dammoln (mJ)</td>
-      <td>Bestämmer risken för elektrostatisk urladdning</td>
+      <td data-label="Parameter"><strong>Minsta antändningsenergi</strong></td>
+      <td data-label="Symbol">MIE</td>
+      <td data-label="Vad den mäter">Minsta gnista som kan antända ett dammoln (mJ)</td>
+      <td data-label="Varför det är viktigt">Bestämmer risken för elektrostatisk urladdning</td>
     </tr>
     <tr>
-      <td><strong>Minsta antändningstemperatur (moln)</strong></td>
-      <td>MIT</td>
-      <td>Lägsta yttemperatur som antänder ett dammoln (°C) – se <a href="/sv/pages/temperature-classes.html">temperaturklasser</a></td>
-      <td>Fastställer gränser för utrustningens yttemperatur</td>
+      <td data-label="Parameter"><strong>Minsta antändningstemperatur (moln)</strong></td>
+      <td data-label="Symbol">MIT</td>
+      <td data-label="Vad den mäter">Lägsta yttemperatur som antänder ett dammoln (°C) – se <a href="/sv/pages/temperature-classes.html">temperaturklasser</a></td>
+      <td data-label="Varför det är viktigt">Fastställer gränser för utrustningens yttemperatur</td>
     </tr>
     <tr>
-      <td><strong>Skiktets antändningstemperatur</strong></td>
-      <td>LIT</td>
-      <td>Temperatur vid vilken ett 5 mm tjockt dammlager antänds (°C)</td>
-      <td>Ofta lägre än MIT; avgörande för städstandarder</td>
+      <td data-label="Parameter"><strong>Skiktets antändningstemperatur</strong></td>
+      <td data-label="Symbol">LIT</td>
+      <td data-label="Vad den mäter">Temperatur vid vilken ett 5 mm tjockt dammlager antänds (°C)</td>
+      <td data-label="Varför det är viktigt">Ofta lägre än MIT; avgörande för städstandarder</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Dammexplosionsklasser (K<sub>St</sub>)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Klass</th>
@@ -325,28 +325,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>St 0</td>
-      <td>0</td>
-      <td>Inte explosiv</td>
-      <td>Vissa mineraldammar, cement</td>
+      <td data-label="Klass">St 0</td>
+      <td data-label="K St -intervall (bar·m/s)">0</td>
+      <td data-label="Allvarlighetsgrad">Inte explosiv</td>
+      <td data-label="Exempel">Vissa mineraldammar, cement</td>
     </tr>
     <tr>
-      <td><strong>St 1</strong></td>
-      <td>1–200</td>
-      <td>Svag till måttlig</td>
-      <td>Vetemjöl, socker, trästoft, kol</td>
+      <td data-label="Klass"><strong>St 1</strong></td>
+      <td data-label="K St -intervall (bar·m/s)">1–200</td>
+      <td data-label="Allvarlighetsgrad">Svag till måttlig</td>
+      <td data-label="Exempel">Vetemjöl, socker, trästoft, kol</td>
     </tr>
     <tr>
-      <td><strong>St 2</strong></td>
-      <td>201</td>
-      <td>Stark</td>
-      <td>Organiska pigment, vissa plaster, cellulosa</td>
+      <td data-label="Klass"><strong>St 2</strong></td>
+      <td data-label="K St -intervall (bar·m/s)">201</td>
+      <td data-label="Allvarlighetsgrad">Stark</td>
+      <td data-label="Exempel">Organiska pigment, vissa plaster, cellulosa</td>
     </tr>
     <tr>
-      <td><strong>St 3</strong></td>
-      <td>&gt; 300</td>
-      <td>Mycket stark</td>
-      <td>Aluminiumpulver, magnesiumdamm</td>
+      <td data-label="Klass"><strong>St 3</strong></td>
+      <td data-label="K St -intervall (bar·m/s)">&gt; 300</td>
+      <td data-label="Allvarlighetsgrad">Mycket stark</td>
+      <td data-label="Exempel">Aluminiumpulver, magnesiumdamm</td>
     </tr>
   </tbody>
 </table>
@@ -356,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2><a href="/sv/pages/zone-classification.html">Dammszoner</a>: 20, 21, 22</h2>
 
 <h3>Zondefinitioner</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zon</th>
@@ -367,22 +367,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zon 20</strong></td>
-      <td>Kontinuerligt eller ofta</td>
-      <td>Kategori 1 D (EPL Da)</td>
-      <td>Inuti silor, behållare, cykloner, kvarnar, blandare, pneumatiska transportörer</td>
+      <td data-label="Zon"><strong>Zon 20</strong></td>
+      <td data-label="Dammmoln förekommer">Kontinuerligt eller ofta</td>
+      <td data-label="Krävd utrustningskategori">Kategori 1 D (EPL Da)</td>
+      <td data-label="Typiska platser">Inuti silor, behållare, cykloner, kvarnar, blandare, pneumatiska transportörer</td>
     </tr>
     <tr>
-      <td><strong>Zon 21</strong></td>
-      <td>Sannolikt vid normal drift</td>
-      <td>Kategori 2 D (EPL Db)</td>
-      <td>Runt påsfällning, påfyllningspunkter, öppna transportöröverföringar, filterluckor</td>
+      <td data-label="Zon"><strong>Zon 21</strong></td>
+      <td data-label="Dammmoln förekommer">Sannolikt vid normal drift</td>
+      <td data-label="Krävd utrustningskategori">Kategori 2 D (EPL Db)</td>
+      <td data-label="Typiska platser">Runt påsfällning, påfyllningspunkter, öppna transportöröverföringar, filterluckor</td>
     </tr>
     <tr>
-      <td><strong>Zon 22</strong></td>
-      <td>Osannolikt; endast under korta perioder</td>
-      <td>Kategori 3 D (EPL Dc)</td>
-      <td>Områden nära zon 21-gränser, runt förseglad utrustning, där lager kan ackumuleras.</td>
+      <td data-label="Zon"><strong>Zon 22</strong></td>
+      <td data-label="Dammmoln förekommer">Osannolikt; endast under korta perioder</td>
+      <td data-label="Krävd utrustningskategori">Kategori 3 D (EPL Dc)</td>
+      <td data-label="Typiska platser">Områden nära zon 21-gränser, runt förseglad utrustning, där lager kan ackumuleras.</td>
     </tr>
   </tbody>
 </table>
@@ -460,7 +460,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Val av utrustning för dammzoner</h2>
 
 <h3>Skyddsmetoder för damm</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Metod</th>
@@ -472,32 +472,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>Skydd genom inneslutning</td>
-      <td>Ex ta / tb / tc</td>
-      <td>IEC 60079-31</td>
-      <td>Dammtätt hölje med temperaturkontroll</td>
-      <td>ta: Zon 20, tb: Zon 21, tc: Zon 22</td>
+      <td data-label="Metod">Skydd genom inneslutning</td>
+      <td data-label="Kod">Ex ta / tb / tc</td>
+      <td data-label="Standard">IEC 60079-31</td>
+      <td data-label="Princip">Dammtätt hölje med temperaturkontroll</td>
+      <td data-label="Zonens lämplighet">ta: Zon 20, tb: Zon 21, tc: Zon 22</td>
     </tr>
     <tr>
-      <td><a href="/sv/pages/explosion-proof-vs-intrinsically-safe.html">Egensäkerhet</a></td>
-      <td>Ex ia / ib</td>
-      <td>IEC 60079-11</td>
-      <td>Energibegränsad under damm-MIE</td>
-      <td>ia: Zon 20, ib: Zon 21</td>
+      <td data-label="Metod"><a href="/sv/pages/explosion-proof-vs-intrinsically-safe.html">Egensäkerhet</a></td>
+      <td data-label="Kod">Ex ia / ib</td>
+      <td data-label="Standard">IEC 60079-11</td>
+      <td data-label="Princip">Energibegränsad under damm-MIE</td>
+      <td data-label="Zonens lämplighet">ia: Zon 20, ib: Zon 21</td>
     </tr>
     <tr>
-      <td>Kapsling</td>
-      <td>Ex ma / mb</td>
-      <td>IEC 60079-18</td>
-      <td>Antändningskällor förseglade i förening</td>
-      <td>ma: Zon 20, mb: Zon 21</td>
+      <td data-label="Metod">Kapsling</td>
+      <td data-label="Kod">Ex ma / mb</td>
+      <td data-label="Standard">IEC 60079-18</td>
+      <td data-label="Princip">Antändningskällor förseglade i förening</td>
+      <td data-label="Zonens lämplighet">ma: Zon 20, mb: Zon 21</td>
     </tr>
     <tr>
-      <td>Trycksättning</td>
-      <td>Ex pxb / pyb / pzc</td>
-      <td>IEC 60079-2</td>
-      <td>Övertryck utesluter damm</td>
-      <td>pxb: Zon 21, pzc: Zon 22</td>
+      <td data-label="Metod">Trycksättning</td>
+      <td data-label="Kod">Ex pxb / pyb / pzc</td>
+      <td data-label="Standard">IEC 60079-2</td>
+      <td data-label="Princip">Övertryck utesluter damm</td>
+      <td data-label="Zonens lämplighet">pxb: Zon 21, pzc: Zon 22</td>
     </tr>
   </tbody>
 </table>
@@ -542,7 +542,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section>
 <h2>Noterbara dammexplosioner</h2>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>År</th>
@@ -554,39 +554,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>2008</td>
-      <td>Imperial Sugar, Georgia, USA</td>
-      <td>Socker</td>
-      <td>14</td>
-      <td>Ackumulerade dammlager på transportörens lager; inget städprogram</td>
+      <td data-label="År">2008</td>
+      <td data-label="Händelse">Imperial Sugar, Georgia, USA</td>
+      <td data-label="Dammsort">Socker</td>
+      <td data-label="Dödsfall">14</td>
+      <td data-label="Viktig lärdom">Ackumulerade dammlager på transportörens lager; inget städprogram</td>
     </tr>
     <tr>
-      <td>2010</td>
-      <td>AL Solutions, West Virginia, USA</td>
-      <td>Titan/zirkonium</td>
-      <td>3</td>
-      <td>Metallstoft antändes under blandning; ingen explosionsventilation.</td>
+      <td data-label="År">2010</td>
+      <td data-label="Händelse">AL Solutions, West Virginia, USA</td>
+      <td data-label="Dammsort">Titan/zirkonium</td>
+      <td data-label="Dödsfall">3</td>
+      <td data-label="Viktig lärdom">Metallstoft antändes under blandning; ingen explosionsventilation.</td>
     </tr>
     <tr>
-      <td>2014</td>
-      <td>Zhongrong Metal, Kunshan, Kina</td>
-      <td>Aluminium</td>
-      <td>146</td>
-      <td>Aluminiumpoleringsdamm i dåligt ventilerad verkstad; den dödligaste industriella dammexplosionen i modern historia.</td>
+      <td data-label="År">2014</td>
+      <td data-label="Händelse">Zhongrong Metal, Kunshan, Kina</td>
+      <td data-label="Dammsort">Aluminium</td>
+      <td data-label="Dödsfall">146</td>
+      <td data-label="Viktig lärdom">Aluminiumpoleringsdamm i dåligt ventilerad verkstad; den dödligaste industriella dammexplosionen i modern historia.</td>
     </tr>
     <tr>
-      <td>2017</td>
-      <td>Didion Milling, Wisconsin, USA</td>
-      <td>Majsdamm</td>
-      <td>5</td>
-      <td>Smidande majsdamm i tork; otillräcklig gnistdetektering</td>
+      <td data-label="År">2017</td>
+      <td data-label="Händelse">Didion Milling, Wisconsin, USA</td>
+      <td data-label="Dammsort">Majsdamm</td>
+      <td data-label="Dödsfall">5</td>
+      <td data-label="Viktig lärdom">Smidande majsdamm i tork; otillräcklig gnistdetektering</td>
     </tr>
     <tr>
-      <td>1878</td>
-      <td>Washburn A Mill, Minneapolis, USA</td>
-      <td>Mjöl</td>
-      <td>18</td>
-      <td>Första erkända spannmålsdammexplosionen i USA; ledde till säkerhetsreformer inom mjölindustrin</td>
+      <td data-label="År">1878</td>
+      <td data-label="Händelse">Washburn A Mill, Minneapolis, USA</td>
+      <td data-label="Dammsort">Mjöl</td>
+      <td data-label="Dödsfall">18</td>
+      <td data-label="Viktig lärdom">Första erkända spannmålsdammexplosionen i USA; ledde till säkerhetsreformer inom mjölindustrin</td>
     </tr>
   </tbody>
 </table>

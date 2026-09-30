@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -258,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Gewindenormen</h2>
 <p>Ex-Kabelverschraubungen sind mit verschiedenen Gewindetypen erhältlich. Es ist wichtig, dass das Gewinde der Verschraubung zum Gehäuseeingang passt.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Gewindetyp</th>
@@ -269,28 +269,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Metrisch (ISO)</strong></td>
-      <td>M20, M25, M32, M40, M50, M63</td>
-      <td>Europa, weltweit</td>
-      <td>Am häufigsten für <a href="/de/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Steigung: 1,5 mm</td>
+      <td data-label="Gewindetyp"><strong>Metrisch (ISO)</strong></td>
+      <td data-label="Bezeichnung">M20, M25, M32, M40, M50, M63</td>
+      <td data-label="Region">Europa, weltweit</td>
+      <td data-label="Anmerkungen">Am häufigsten für <a href="/de/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Steigung: 1,5 mm</td>
     </tr>
     <tr>
-      <td><strong>NPT (konisch)</strong></td>
-      <td>½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
-      <td>Nordamerika</td>
-      <td>Selbstdichtende Konizität. Erfordert Gewindedichtmittel (PTFE-Band oder -Paste). Häufig bei NEC-Installationen.</td>
+      <td data-label="Gewindetyp"><strong>NPT (konisch)</strong></td>
+      <td data-label="Bezeichnung">½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
+      <td data-label="Region">Nordamerika</td>
+      <td data-label="Anmerkungen">Selbstdichtende Konizität. Erfordert Gewindedichtmittel (PTFE-Band oder -Paste). Häufig bei NEC-Installationen.</td>
     </tr>
     <tr>
-      <td><strong>PG (Panzergewinde)</strong></td>
-      <td>PG9, PG11, PG13,5, PG16, PG21, PG29</td>
-      <td>Deutschland (veraltet)</td>
-      <td>Ältere deutsche Norm. Noch immer bei älteren Geräten zu finden. Wird zugunsten des metrischen Systems ausgemustert.</td>
+      <td data-label="Gewindetyp"><strong>PG (Panzergewinde)</strong></td>
+      <td data-label="Bezeichnung">PG9, PG11, PG13,5, PG16, PG21, PG29</td>
+      <td data-label="Region">Deutschland (veraltet)</td>
+      <td data-label="Anmerkungen">Ältere deutsche Norm. Noch immer bei älteren Geräten zu finden. Wird zugunsten des metrischen Systems ausgemustert.</td>
     </tr>
     <tr>
-      <td><strong>G (BSP Parallel)</strong></td>
-      <td>G½&quot;, G¾&quot;, G1&quot;</td>
-      <td>Großbritannien, Commonwealth</td>
-      <td>Parallelgewinde (nicht konisch). Erfordert Dichtungsscheibe oder O-Ring.</td>
+      <td data-label="Gewindetyp"><strong>G (BSP Parallel)</strong></td>
+      <td data-label="Bezeichnung">G½&quot;, G¾&quot;, G1&quot;</td>
+      <td data-label="Region">Großbritannien, Commonwealth</td>
+      <td data-label="Anmerkungen">Parallelgewinde (nicht konisch). Erfordert Dichtungsscheibe oder O-Ring.</td>
     </tr>
   </tbody>
 </table>
@@ -384,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>IP-Schutzklassen für Kabelverschraubungen</h2>
 <p>Die Schutzart gibt die Widerstandsfähigkeit gegen Staub und Wasser an. Für raue Umgebungen sind höhere IP-Schutzklassen erforderlich.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>IP-Schutzart</th>
@@ -395,34 +395,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IP54</strong></td>
-      <td>Staubgeschützt</td>
-      <td>Spritzwassergeschützt</td>
-      <td>Innenbereich, trockene Umgebungen</td>
+      <td data-label="IP-Schutzart"><strong>IP54</strong></td>
+      <td data-label="Staubschutz">Staubgeschützt</td>
+      <td data-label="Wasserschutz">Spritzwassergeschützt</td>
+      <td data-label="Typische Anwendung">Innenbereich, trockene Umgebungen</td>
     </tr>
     <tr>
-      <td><strong>IP66</strong></td>
-      <td>Staubdicht</td>
-      <td>Starke Wasserstrahlen</td>
-      <td>Außenbereich, Industrie (am häufigsten)</td>
+      <td data-label="IP-Schutzart"><strong>IP66</strong></td>
+      <td data-label="Staubschutz">Staubdicht</td>
+      <td data-label="Wasserschutz">Starke Wasserstrahlen</td>
+      <td data-label="Typische Anwendung">Außenbereich, Industrie (am häufigsten)</td>
     </tr>
     <tr>
-      <td><strong>IP67</strong></td>
-      <td>Staubdicht</td>
-      <td>Vorübergehendes Eintauchen (1 m, 30 min)</td>
-      <td>Überschwemmungsgefährdete Bereiche, Abwaschung</td>
+      <td data-label="IP-Schutzart"><strong>IP67</strong></td>
+      <td data-label="Staubschutz">Staubdicht</td>
+      <td data-label="Wasserschutz">Vorübergehendes Eintauchen (1 m, 30 min)</td>
+      <td data-label="Typische Anwendung">Überschwemmungsgefährdete Bereiche, Abwaschung</td>
     </tr>
     <tr>
-      <td><strong>IP68</strong></td>
-      <td>Staubdicht</td>
-      <td>Dauerhaftes Eintauchen (Tiefe/Zeit gemäß Herstellerangaben)</td>
-      <td>Unterwasser, dauerhaft unter Wasser</td>
+      <td data-label="IP-Schutzart"><strong>IP68</strong></td>
+      <td data-label="Staubschutz">Staubdicht</td>
+      <td data-label="Wasserschutz">Dauerhaftes Eintauchen (Tiefe/Zeit gemäß Herstellerangaben)</td>
+      <td data-label="Typische Anwendung">Unterwasser, dauerhaft unter Wasser</td>
     </tr>
     <tr>
-      <td><strong>IP6X</strong></td>
-      <td>Staubdicht</td>
-      <td>Kein Wasserschutz angegeben</td>
-      <td>Staubzonen (Zone 20/21), in denen kein Eindringen von Wasser zu befürchten ist</td>
+      <td data-label="IP-Schutzart"><strong>IP6X</strong></td>
+      <td data-label="Staubschutz">Staubdicht</td>
+      <td data-label="Wasserschutz">Kein Wasserschutz angegeben</td>
+      <td data-label="Typische Anwendung">Staubzonen (Zone 20/21), in denen kein Eindringen von Wasser zu befürchten ist</td>
     </tr>
   </tbody>
 </table>

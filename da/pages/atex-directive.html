@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -267,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Gruppe II: Overjordiske industrier</h3>
 <p>Udstyr til alle andre industrier (olie og gas, kemisk, farmaceutisk, fødevarer osv.). Opdelt efter kategori og atmosfæretype:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Kategori</th>
@@ -278,40 +278,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>1 G</td>
-      <td>Ga</td>
-      <td>Zone 0</td>
-      <td>Meget høj (2 uafhængige fejl)</td>
+      <td data-label="Kategori">1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Zoneegnethed">Zone 0</td>
+      <td data-label="Beskyttelsesniveau">Meget høj (2 uafhængige fejl)</td>
     </tr>
     <tr>
-      <td>2 G</td>
-      <td>Gb</td>
-      <td>Zone 1</td>
-      <td>Høj (1 fejl)</td>
+      <td data-label="Kategori">2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Zoneegnethed">Zone 1</td>
+      <td data-label="Beskyttelsesniveau">Høj (1 fejl)</td>
     </tr>
     <tr>
-      <td>3 G</td>
-      <td>Gc</td>
-      <td>Zone 2</td>
-      <td>Normal drift</td>
+      <td data-label="Kategori">3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Zoneegnethed">Zone 2</td>
+      <td data-label="Beskyttelsesniveau">Normal drift</td>
     </tr>
     <tr>
-      <td>1 D</td>
-      <td>Da</td>
-      <td>Zone 20</td>
-      <td>Meget høj (2 uafhængige fejl)</td>
+      <td data-label="Kategori">1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Zoneegnethed">Zone 20</td>
+      <td data-label="Beskyttelsesniveau">Meget høj (2 uafhængige fejl)</td>
     </tr>
     <tr>
-      <td>2 D</td>
-      <td>Db</td>
-      <td>Zone 21</td>
-      <td>Høj (1 fejl)</td>
+      <td data-label="Kategori">2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Zoneegnethed">Zone 21</td>
+      <td data-label="Beskyttelsesniveau">Høj (1 fejl)</td>
     </tr>
     <tr>
-      <td>3 D</td>
-      <td>Dc</td>
-      <td>Zone 22</td>
-      <td>Normal drift</td>
+      <td data-label="Kategori">3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Zoneegnethed">Zone 22</td>
+      <td data-label="Beskyttelsesniveau">Normal drift</td>
     </tr>
   </tbody>
 </table>
@@ -361,7 +361,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Overensstemmelsesvurderingsmoduler</h2>
 <p>Producenter skal følge specifikke procedurer for at påvise overensstemmelse. Det krævede modul afhænger af udstyrskategorien:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Modul</th>
@@ -372,40 +372,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>Intern produktionskontrol</td>
-      <td>Nej</td>
-      <td>Kategori 2 og 3 (ikke-elektrisk), kategori 3 (elektrisk)</td>
+      <td data-label="Modul">A</td>
+      <td data-label="Navn">Intern produktionskontrol</td>
+      <td data-label="Er der et bemyndiget organ involveret?">Nej</td>
+      <td data-label="Gælder for">Kategori 2 og 3 (ikke-elektrisk), kategori 3 (elektrisk)</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>EU-typeafprøvning</td>
-      <td>Ja</td>
-      <td>Alle kategori 1 og M1, de fleste kategori 2</td>
+      <td data-label="Modul">B</td>
+      <td data-label="Navn">EU-typeafprøvning</td>
+      <td data-label="Er der et bemyndiget organ involveret?">Ja</td>
+      <td data-label="Gælder for">Alle kategori 1 og M1, de fleste kategori 2</td>
     </tr>
     <tr>
-      <td>C1</td>
-      <td>Overensstemmelse med typen (intern produktionskontrol + produktprøvninger)</td>
-      <td>Nej (efter modul B)</td>
-      <td>Kombineret med modul B</td>
+      <td data-label="Modul">C1</td>
+      <td data-label="Navn">Overensstemmelse med typen (intern produktionskontrol + produktprøvninger)</td>
+      <td data-label="Er der et bemyndiget organ involveret?">Nej (efter modul B)</td>
+      <td data-label="Gælder for">Kombineret med modul B</td>
     </tr>
     <tr>
-      <td>D</td>
-      <td>Kvalitetssikring (produktion)</td>
-      <td>Ja (overvågning)</td>
-      <td>Kombineret med modul B for kategori 1/M1</td>
+      <td data-label="Modul">D</td>
+      <td data-label="Navn">Kvalitetssikring (produktion)</td>
+      <td data-label="Er der et bemyndiget organ involveret?">Ja (overvågning)</td>
+      <td data-label="Gælder for">Kombineret med modul B for kategori 1/M1</td>
     </tr>
     <tr>
-      <td>E</td>
-      <td>Kvalitetssikring (produkt)</td>
-      <td>Ja (overvågning)</td>
-      <td>Kombineret med modul B for kategori 1/M1</td>
+      <td data-label="Modul">E</td>
+      <td data-label="Navn">Kvalitetssikring (produkt)</td>
+      <td data-label="Er der et bemyndiget organ involveret?">Ja (overvågning)</td>
+      <td data-label="Gælder for">Kombineret med modul B for kategori 1/M1</td>
     </tr>
     <tr>
-      <td>F</td>
-      <td>Produktverifikation</td>
-      <td>Ja (produkt-for-produkt- eller batchprøvning)</td>
-      <td>Kombineret med modul B for kategori 1/M1</td>
+      <td data-label="Modul">F</td>
+      <td data-label="Navn">Produktverifikation</td>
+      <td data-label="Er der et bemyndiget organ involveret?">Ja (produkt-for-produkt- eller batchprøvning)</td>
+      <td data-label="Gælder for">Kombineret med modul B for kategori 1/M1</td>
     </tr>
   </tbody>
 </table>

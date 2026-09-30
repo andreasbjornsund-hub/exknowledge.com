@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -197,7 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Hazardous areas are classified into zones based on the <strong>frequency and duration</strong> of an explosive atmosphere being present:</p>
 
 <h3>Gas/Vapor Zones</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zone</th>
@@ -208,22 +208,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zone 0</strong></td>
-      <td>Explosive atmosphere present <strong>continuously</strong> or for long periods</td>
-      <td>&gt; 1,000 hours/year</td>
-      <td>Inside storage tanks, vapor spaces above volatile liquids, inside process vessels</td>
+      <td data-label="Zone"><strong>Zone 0</strong></td>
+      <td data-label="Definition">Explosive atmosphere present <strong>continuously</strong> or for long periods</td>
+      <td data-label="Duration">&gt; 1,000 hours/year</td>
+      <td data-label="Typical Examples">Inside storage tanks, vapor spaces above volatile liquids, inside process vessels</td>
     </tr>
     <tr>
-      <td><strong>Zone 1</strong></td>
-      <td>Explosive atmosphere <strong>likely to occur</strong> in normal operation</td>
-      <td>10–1,000 hours/year</td>
-      <td>Around pump seals, valve packings, sample points, relief valves, loading areas</td>
+      <td data-label="Zone"><strong>Zone 1</strong></td>
+      <td data-label="Definition">Explosive atmosphere <strong>likely to occur</strong> in normal operation</td>
+      <td data-label="Duration">10–1,000 hours/year</td>
+      <td data-label="Typical Examples">Around pump seals, valve packings, sample points, relief valves, loading areas</td>
     </tr>
     <tr>
-      <td><strong>Zone 2</strong></td>
-      <td>Explosive atmosphere <strong>not likely</strong> in normal operation; if it occurs, only for <strong>short periods</strong></td>
-      <td>&lt; 10 hours/year</td>
-      <td>Around flanges with good gaskets, pipe fittings, areas near Zone 1 boundaries</td>
+      <td data-label="Zone"><strong>Zone 2</strong></td>
+      <td data-label="Definition">Explosive atmosphere <strong>not likely</strong> in normal operation; if it occurs, only for <strong>short periods</strong></td>
+      <td data-label="Duration">&lt; 10 hours/year</td>
+      <td data-label="Typical Examples">Around flanges with good gaskets, pipe fittings, areas near Zone 1 boundaries</td>
     </tr>
   </tbody>
 </table>
@@ -266,7 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Step 1: Identify Sources of Release</h3>
 <p>A <strong>source of release</strong> is any point where flammable gas, vapor, or liquid can escape to the atmosphere. Sources are graded by frequency:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Grade</th>
@@ -277,22 +277,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Continuous</strong></td>
-      <td>Release is continuous or expected for long periods</td>
-      <td>Tank vents, open liquid surfaces, constant leaks from failed seals</td>
-      <td>Zone 0</td>
+      <td data-label="Grade"><strong>Continuous</strong></td>
+      <td data-label="Definition">Release is continuous or expected for long periods</td>
+      <td data-label="Examples">Tank vents, open liquid surfaces, constant leaks from failed seals</td>
+      <td data-label="Creates Zone">Zone 0</td>
     </tr>
     <tr>
-      <td><strong>Primary</strong></td>
-      <td>Release is expected periodically or occasionally during normal operation</td>
-      <td>Pump seals, compressor seals, sample points, relief valves, loading/unloading connections</td>
-      <td>Zone 1</td>
+      <td data-label="Grade"><strong>Primary</strong></td>
+      <td data-label="Definition">Release is expected periodically or occasionally during normal operation</td>
+      <td data-label="Examples">Pump seals, compressor seals, sample points, relief valves, loading/unloading connections</td>
+      <td data-label="Creates Zone">Zone 1</td>
     </tr>
     <tr>
-      <td><strong>Secondary</strong></td>
-      <td>Release is not expected during normal operation; if it occurs, only infrequently and for short periods</td>
-      <td>Flanged joints, valve stems (not packings), instrument connections, pipe fittings in good condition</td>
-      <td>Zone 2</td>
+      <td data-label="Grade"><strong>Secondary</strong></td>
+      <td data-label="Definition">Release is not expected during normal operation; if it occurs, only infrequently and for short periods</td>
+      <td data-label="Examples">Flanged joints, valve stems (not packings), instrument connections, pipe fittings in good condition</td>
+      <td data-label="Creates Zone">Zone 2</td>
     </tr>
   </tbody>
 </table>
@@ -328,7 +328,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Step 3: Determine Zone Type</h3>
 <p>IEC 60079-10-1 Annex B provides a matrix:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Release Grade</th>
@@ -339,22 +339,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Continuous</strong></td>
-      <td>Zone 0 NE (negligible extent) → non-hazardous</td>
-      <td>Zone 0 + Zone 2</td>
-      <td>Zone 0 + Zone 1</td>
+      <td data-label="Release Grade"><strong>Continuous</strong></td>
+      <td data-label="High Ventilation + Good Availability">Zone 0 NE (negligible extent) → non-hazardous</td>
+      <td data-label="Medium Ventilation + Good Availability">Zone 0 + Zone 2</td>
+      <td data-label="Low Ventilation + Poor Availability">Zone 0 + Zone 1</td>
     </tr>
     <tr>
-      <td><strong>Primary</strong></td>
-      <td>Zone 1 NE → non-hazardous</td>
-      <td>Zone 1 + Zone 2</td>
-      <td>Zone 1 + Zone 0</td>
+      <td data-label="Release Grade"><strong>Primary</strong></td>
+      <td data-label="High Ventilation + Good Availability">Zone 1 NE → non-hazardous</td>
+      <td data-label="Medium Ventilation + Good Availability">Zone 1 + Zone 2</td>
+      <td data-label="Low Ventilation + Poor Availability">Zone 1 + Zone 0</td>
     </tr>
     <tr>
-      <td><strong>Secondary</strong></td>
-      <td>Zone 2 NE → non-hazardous</td>
-      <td>Zone 2</td>
-      <td>Zone 1 or even Zone 0</td>
+      <td data-label="Release Grade"><strong>Secondary</strong></td>
+      <td data-label="High Ventilation + Good Availability">Zone 2 NE → non-hazardous</td>
+      <td data-label="Medium Ventilation + Good Availability">Zone 2</td>
+      <td data-label="Low Ventilation + Poor Availability">Zone 1 or even Zone 0</td>
     </tr>
   </tbody>
 </table>

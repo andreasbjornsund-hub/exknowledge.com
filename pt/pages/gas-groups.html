@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
 
@@ -187,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><strong>MENSAGEM</strong> (Intervalo Experimental Máximo de Segurança), a largura máxima de um intervalo através do qual uma explosão interna não se propagará para uma atmosfera explosiva externa. Testado em uma câmara esférica padronizada de 25ml com um intervalo de 25mm de comprimento. MESG menor = gás mais perigoso.</li>
 <li><strong>Razão MIC</strong> (Relação mínima da corrente de ignição), a relação entre a corrente mínima de ignição do gás e a do metano, medida em um aparelho de teste de segurança intrínseca padrão. Razão MIC menor = gás mais perigoso.</li>
 </ul>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Grupo Gás</th>
 <th>MENSAGEM (mm)</th>
 <th>Razão MIC</th>
@@ -195,25 +195,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <th>Nível de perigo</th>
 </tr></thead><tbody>
 <tr>
-<td><strong>AII</strong></td>
-<td>>0.90</td>
-<td>>0.80</td>
-<td>Metano, propano, butano, acetona, etanol, benzeno, diesel, amoníaco</td>
-<td>Menos perigoso</td>
+<td data-label="Grupo Gás"><strong>AII</strong></td>
+<td data-label="MENSAGEM (mm)">>0.90</td>
+<td data-label="Razão MIC">>0.80</td>
+<td data-label="Gases Típicos">Metano, propano, butano, acetona, etanol, benzeno, diesel, amoníaco</td>
+<td data-label="Nível de perigo">Menos perigoso</td>
 </tr>
 <tr>
-<td><strong>IIB</strong></td>
-<td>0.50–0.90</td>
-<td>0.45–0.80</td>
-<td>Etileno, sulfureto de hidrogénio, éter dietílico, óxido de etileno, gás de cidade</td>
-<td>Intermediário</td>
+<td data-label="Grupo Gás"><strong>IIB</strong></td>
+<td data-label="MENSAGEM (mm)">0.50–0.90</td>
+<td data-label="Razão MIC">0.45–0.80</td>
+<td data-label="Gases Típicos">Etileno, sulfureto de hidrogénio, éter dietílico, óxido de etileno, gás de cidade</td>
+<td data-label="Nível de perigo">Intermediário</td>
 </tr>
 <tr>
-<td><strong>CII</strong></td>
-<td><0.50</td>
-<td><0.45</td>
-<td>Hidrogénio, acetileno, dissulfureto de carbono</td>
-<td>Mais perigoso</td>
+<td data-label="Grupo Gás"><strong>CII</strong></td>
+<td data-label="MENSAGEM (mm)"><0.50</td>
+<td data-label="Razão MIC"><0.45</td>
+<td data-label="Gases Típicos">Hidrogénio, acetileno, dissulfureto de carbono</td>
+<td data-label="Nível de perigo">Mais perigoso</td>
 </tr>
 </tbody></table></div>
 <h3 id="important-notes">Notas importantes</h3>
@@ -256,29 +256,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>O hidrogênio está no grupo de gases mais perigosos (IIC) devido ao seu MESG extremamente pequeno (0,29 mm) e energia mínima de ignição muito baixa (0,017 mJ – cerca de 10× menos que o metano). Contudo, a sua temperatura de autoignição é relativamente elevada (560°C), situando-a apenas em <a href="temperature-classes.html"><i class="ph ph-thermometer-hot"></i> classe de temperatura</a> T1.</p>
 <p>Isso significa que o hidrogênio requer a proteção mais rigorosa contra faíscas/arcos (IIC), mas é relativamente indulgente com a temperatura da superfície (T1). Isto é o oposto de alguns gases IIA.</p>
 <h2 id="dust-groups-group-iii">Grupos de poeiras (Grupo III)</h2>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Grupo de poeira</th>
 <th>Digite</th>
 <th>Exemplos</th>
 <th>Nível de perigo</th>
 </tr></thead><tbody>
 <tr>
-<td><strong>IIIA</strong></td>
-<td>Voos combustíveis</td>
-<td>Fibras têxteis, algodão em pluma, rayon, juta</td>
-<td>Menos perigoso</td>
+<td data-label="Grupo de poeira"><strong>IIIA</strong></td>
+<td data-label="Digite">Voos combustíveis</td>
+<td data-label="Exemplos">Fibras têxteis, algodão em pluma, rayon, juta</td>
+<td data-label="Nível de perigo">Menos perigoso</td>
 </tr>
 <tr>
-<td><strong>IIIB</strong></td>
-<td>Pó não condutor</td>
-<td>Farinha de grãos, açúcar, pó de madeira, carvão, pó plástico, pós farmacêuticos</td>
-<td>Intermediário</td>
+<td data-label="Grupo de poeira"><strong>IIIB</strong></td>
+<td data-label="Digite">Pó não condutor</td>
+<td data-label="Exemplos">Farinha de grãos, açúcar, pó de madeira, carvão, pó plástico, pós farmacêuticos</td>
+<td data-label="Nível de perigo">Intermediário</td>
 </tr>
 <tr>
-<td><strong>IIIC</strong></td>
-<td>Poeira condutora</td>
-<td>Pó de alumínio, magnésio, titânio, ferro, negro de fumo</td>
-<td>Mais perigoso</td>
+<td data-label="Grupo de poeira"><strong>IIIC</strong></td>
+<td data-label="Digite">Poeira condutora</td>
+<td data-label="Exemplos">Pó de alumínio, magnésio, titânio, ferro, negro de fumo</td>
+<td data-label="Nível de perigo">Mais perigoso</td>
 </tr>
 </tbody></table></div>
 <h3 id="conductive-vs-non-conductive-dust">Poeira Condutiva vs Não Condutiva</h3>

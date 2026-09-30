@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -195,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Vaaralliset alueet luokitellaan vyöhykkeisiin räjähtävän ilmakehän <strong>esiintymistiheyden ja keston</strong> perusteella:</p>
 
 <h3>Kaasu-/höyryvyöhykkeet</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Vyöhyke</th>
@@ -206,22 +206,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Alue 0</strong></td>
-      <td>Räjähdysvaarallinen ilmaseos läsnä <strong>jatkuvasti</strong> tai pitkiä aikoja</td>
-      <td>&gt; 1 000 tuntia/vuosi</td>
-      <td>Säiliöiden sisällä, haihtuvien nesteiden yläpuolella olevissa höyrytiloissa, prosessisäiliöiden sisällä</td>
+      <td data-label="Vyöhyke"><strong>Alue 0</strong></td>
+      <td data-label="Määritelmä">Räjähdysvaarallinen ilmaseos läsnä <strong>jatkuvasti</strong> tai pitkiä aikoja</td>
+      <td data-label="Kesto">&gt; 1 000 tuntia/vuosi</td>
+      <td data-label="Tyypillisiä esimerkkejä">Säiliöiden sisällä, haihtuvien nesteiden yläpuolella olevissa höyrytiloissa, prosessisäiliöiden sisällä</td>
     </tr>
     <tr>
-      <td><strong>Vyöhyke 1</strong></td>
-      <td>Räjähdysvaarallinen ilmaseos <strong>todennäköisesti esiintyy</strong> normaalikäytössä</td>
-      <td>10–1 000 tuntia/vuosi</td>
-      <td>Pumpputiivisteiden, venttiilitiivisteiden, näytteenottopisteiden, varoventtiilien ja lastausalueiden ympärillä</td>
+      <td data-label="Vyöhyke"><strong>Vyöhyke 1</strong></td>
+      <td data-label="Määritelmä">Räjähdysvaarallinen ilmaseos <strong>todennäköisesti esiintyy</strong> normaalikäytössä</td>
+      <td data-label="Kesto">10–1 000 tuntia/vuosi</td>
+      <td data-label="Tyypillisiä esimerkkejä">Pumpputiivisteiden, venttiilitiivisteiden, näytteenottopisteiden, varoventtiilien ja lastausalueiden ympärillä</td>
     </tr>
     <tr>
-      <td><strong>Vyöhyke 2</strong></td>
-      <td>Räjähdysvaarallinen ilmaseos <strong>ei todennäköisesti esiinny</strong> normaalikäytössä; jos esiintyy, vain <strong>lyhyitä aikoja</strong></td>
-      <td>&lt; 10 tuntia/vuosi</td>
-      <td>Laattojen ympärillä, joissa on hyvät tiivisteet, putkiliittimien ympärillä, vyöhykkeen 1 rajojen läheisyydessä</td>
+      <td data-label="Vyöhyke"><strong>Vyöhyke 2</strong></td>
+      <td data-label="Määritelmä">Räjähdysvaarallinen ilmaseos <strong>ei todennäköisesti esiinny</strong> normaalikäytössä; jos esiintyy, vain <strong>lyhyitä aikoja</strong></td>
+      <td data-label="Kesto">&lt; 10 tuntia/vuosi</td>
+      <td data-label="Tyypillisiä esimerkkejä">Laattojen ympärillä, joissa on hyvät tiivisteet, putkiliittimien ympärillä, vyöhykkeen 1 rajojen läheisyydessä</td>
     </tr>
   </tbody>
 </table>
@@ -264,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Vaihe 1: Tunnista päästölähteet</h3>
 <p>Päästölähde on mikä tahansa kohta, josta syttyvää kaasua, höyryä tai nestettä voi päästä ilmakehään. Lähteet luokitellaan esiintymistiheyden mukaan:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Luokka</th>
@@ -275,22 +275,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Jatkuva</strong></td>
-      <td>Vuoto on jatkuvaa tai sen odotetaan jatkuvan pitkään</td>
-      <td>Säiliöiden tuuletusaukot, avoimet nestepinnat, jatkuvat vuodot viallisista tiivisteistä</td>
-      <td>Vyöhyke 0</td>
+      <td data-label="Luokka"><strong>Jatkuva</strong></td>
+      <td data-label="Määritelmä">Vuoto on jatkuvaa tai sen odotetaan jatkuvan pitkään</td>
+      <td data-label="Esimerkkejä">Säiliöiden tuuletusaukot, avoimet nestepinnat, jatkuvat vuodot viallisista tiivisteistä</td>
+      <td data-label="Luo vyöhykkeen">Vyöhyke 0</td>
     </tr>
     <tr>
-      <td><strong>Ensisijainen</strong></td>
-      <td>Päästöjä odotetaan säännöllisesti tai satunnaisesti normaalin käytön aikana</td>
-      <td>Pumpputiivisteet, kompressoritiivisteet, näytteenottopisteet, varoventtiilit, lastaus-/purkuliitännät</td>
-      <td>Vyöhyke 1</td>
+      <td data-label="Luokka"><strong>Ensisijainen</strong></td>
+      <td data-label="Määritelmä">Päästöjä odotetaan säännöllisesti tai satunnaisesti normaalin käytön aikana</td>
+      <td data-label="Esimerkkejä">Pumpputiivisteet, kompressoritiivisteet, näytteenottopisteet, varoventtiilit, lastaus-/purkuliitännät</td>
+      <td data-label="Luo vyöhykkeen">Vyöhyke 1</td>
     </tr>
     <tr>
-      <td><strong>Toissijainen</strong></td>
-      <td>Vuotoja ei odoteta normaalin käytön aikana; jos niitä esiintyy, ne ovat harvinaisia ja lyhytaikaisia</td>
-      <td>Laippaliitokset, venttiilivarset (ei tiivisteet), mittariliitännät, hyväkuntoiset putkiliittimet</td>
-      <td>Vyöhyke 2</td>
+      <td data-label="Luokka"><strong>Toissijainen</strong></td>
+      <td data-label="Määritelmä">Vuotoja ei odoteta normaalin käytön aikana; jos niitä esiintyy, ne ovat harvinaisia ja lyhytaikaisia</td>
+      <td data-label="Esimerkkejä">Laippaliitokset, venttiilivarset (ei tiivisteet), mittariliitännät, hyväkuntoiset putkiliittimet</td>
+      <td data-label="Luo vyöhykkeen">Vyöhyke 2</td>
     </tr>
   </tbody>
 </table>
@@ -326,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Vaihe 3: Määritä vyöhyketyyppi</h3>
 <p>IEC 60079-10-1 -standardin liitteessä B on esitetty matriisi:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Vapautusluokka</th>
@@ -337,22 +337,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Jatkuva</strong></td>
-      <td>Vyöhyke 0 NE (merkityksetön laajuus) → vaaraton</td>
-      <td>Vyöhyke 0 + vyöhyke 2</td>
-      <td>Vyöhyke 0 + vyöhyke 1</td>
+      <td data-label="Vapautusluokka"><strong>Jatkuva</strong></td>
+      <td data-label="Hyvä ilmanvaihto + hyvä saatavuus">Vyöhyke 0 NE (merkityksetön laajuus) → vaaraton</td>
+      <td data-label="Keskimääräinen ilmanvaihto + hyvä saatavuus">Vyöhyke 0 + vyöhyke 2</td>
+      <td data-label="Heikko ilmanvaihto + huono saatavuus">Vyöhyke 0 + vyöhyke 1</td>
     </tr>
     <tr>
-      <td><strong>Ensisijainen</strong></td>
-      <td>Vyöhyke 1 NE → vaaraton</td>
-      <td>Vyöhyke 1 + vyöhyke 2</td>
-      <td>Alue 1 + alue 0</td>
+      <td data-label="Vapautusluokka"><strong>Ensisijainen</strong></td>
+      <td data-label="Hyvä ilmanvaihto + hyvä saatavuus">Vyöhyke 1 NE → vaaraton</td>
+      <td data-label="Keskimääräinen ilmanvaihto + hyvä saatavuus">Vyöhyke 1 + vyöhyke 2</td>
+      <td data-label="Heikko ilmanvaihto + huono saatavuus">Alue 1 + alue 0</td>
     </tr>
     <tr>
-      <td><strong>Toissijainen</strong></td>
-      <td>Vyöhyke 2 NE → vaaraton</td>
-      <td>Vyöhyke 2</td>
-      <td>Vyöhyke 1 tai jopa vyöhyke 0</td>
+      <td data-label="Vapautusluokka"><strong>Toissijainen</strong></td>
+      <td data-label="Hyvä ilmanvaihto + hyvä saatavuus">Vyöhyke 2 NE → vaaraton</td>
+      <td data-label="Keskimääräinen ilmanvaihto + hyvä saatavuus">Vyöhyke 2</td>
+      <td data-label="Heikko ilmanvaihto + huono saatavuus">Vyöhyke 1 tai jopa vyöhyke 0</td>
     </tr>
   </tbody>
 </table>

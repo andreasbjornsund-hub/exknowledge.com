@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -216,7 +216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Arten von brennbarem Staub</h2>
 
 <h3><a href="/de/pages/gas-groups.html">Staubgruppen</a> (IEC 60079-0)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Gruppe</th>
@@ -227,22 +227,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IIIA</strong></td>
-      <td>Brennbare Flugstaubpartikel</td>
-      <td>Baumwollfasern, Textilflusen, Holzspäne, Papierfasern</td>
-      <td>Leicht entzündbar, schnelle Flammenausbreitung</td>
+      <td data-label="Gruppe"><strong>IIIA</strong></td>
+      <td data-label="Typ">Brennbare Flugstaubpartikel</td>
+      <td data-label="Beispiele">Baumwollfasern, Textilflusen, Holzspäne, Papierfasern</td>
+      <td data-label="Hauptgefahr">Leicht entzündbar, schnelle Flammenausbreitung</td>
     </tr>
     <tr>
-      <td><strong>IIIB</strong></td>
-      <td>Nicht leitfähiger Staub</td>
-      <td>Mehl, Zucker, Stärke, Getreide, Holzstaub, Kunststoffpulver, pharmazeutische Pulver</td>
-      <td>Elektrostatische Aufladung, Schichtbildung</td>
+      <td data-label="Gruppe"><strong>IIIB</strong></td>
+      <td data-label="Typ">Nicht leitfähiger Staub</td>
+      <td data-label="Beispiele">Mehl, Zucker, Stärke, Getreide, Holzstaub, Kunststoffpulver, pharmazeutische Pulver</td>
+      <td data-label="Hauptgefahr">Elektrostatische Aufladung, Schichtbildung</td>
     </tr>
     <tr>
-      <td><strong>IIIC</strong></td>
-      <td>Leitfähiger Staub</td>
-      <td>Aluminiumpulver, Magnesiumstaub, Eisenspäne, Ruß, Graphit</td>
-      <td>Kann elektrische Geräte kurzschließen, sehr reaktive Metalle</td>
+      <td data-label="Gruppe"><strong>IIIC</strong></td>
+      <td data-label="Typ">Leitfähiger Staub</td>
+      <td data-label="Beispiele">Aluminiumpulver, Magnesiumstaub, Eisenspäne, Ruß, Graphit</td>
+      <td data-label="Hauptgefahr">Kann elektrische Geräte kurzschließen, sehr reaktive Metalle</td>
     </tr>
   </tbody>
 </table>
@@ -264,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Parameter für Staubexplosionen</h2>
 <p>Die Staubexplosionsfähigkeit wird durch Labortests gemäß der Normenreihe EN 14034 (siehe <a href="/de/pages/standards.html">Normenübersicht</a>) charakterisiert:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -275,46 +275,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Maximaler Explosionsdruck</strong></td>
-      <td>P<sub>max</sub></td>
-      <td>Spitzendruck während der Explosion (bar)</td>
-      <td>Bestimmt die Anforderungen an die strukturelle Festigkeit für die Eindämmung oder Entlüftung</td>
+      <td data-label="Parameter"><strong>Maximaler Explosionsdruck</strong></td>
+      <td data-label="Symbol">P<sub>max</sub></td>
+      <td data-label="Was wird gemessen?">Spitzendruck während der Explosion (bar)</td>
+      <td data-label="Warum ist das wichtig">Bestimmt die Anforderungen an die strukturelle Festigkeit für die Eindämmung oder Entlüftung</td>
     </tr>
     <tr>
-      <td><strong>Schweregrad der Staubexplosion</strong></td>
-      <td>K<sub>St</sub></td>
-      <td>Druckanstiegsrate (bar·m/s)</td>
-      <td>Bestimmt die Größe der Entlüftungsfläche und die Reaktionszeit der Unterdrückungsmaßnahmen</td>
+      <td data-label="Parameter"><strong>Schweregrad der Staubexplosion</strong></td>
+      <td data-label="Symbol">K<sub>St</sub></td>
+      <td data-label="Was wird gemessen?">Druckanstiegsrate (bar·m/s)</td>
+      <td data-label="Warum ist das wichtig">Bestimmt die Größe der Entlüftungsfläche und die Reaktionszeit der Unterdrückungsmaßnahmen</td>
     </tr>
     <tr>
-      <td><strong>Minimale explosionsfähige Konzentration</strong></td>
-      <td>MEC</td>
-      <td>Niedrigste Staubkonzentration, die explodieren kann (g/m³)</td>
-      <td>Entspricht der UEG für Gase; typischerweise 20–60 g/m³</td>
+      <td data-label="Parameter"><strong>Minimale explosionsfähige Konzentration</strong></td>
+      <td data-label="Symbol">MEC</td>
+      <td data-label="Was wird gemessen?">Niedrigste Staubkonzentration, die explodieren kann (g/m³)</td>
+      <td data-label="Warum ist das wichtig">Entspricht der UEG für Gase; typischerweise 20–60 g/m³</td>
     </tr>
     <tr>
-      <td><strong>Minimale Zündenergie</strong></td>
-      <td>MIE</td>
-      <td>Kleinster Funke, der eine Staubwolke entzünden kann (mJ)</td>
-      <td>Bestimmt die Gefährdungsstufe durch elektrostatische Entladungen</td>
+      <td data-label="Parameter"><strong>Minimale Zündenergie</strong></td>
+      <td data-label="Symbol">MIE</td>
+      <td data-label="Was wird gemessen?">Kleinster Funke, der eine Staubwolke entzünden kann (mJ)</td>
+      <td data-label="Warum ist das wichtig">Bestimmt die Gefährdungsstufe durch elektrostatische Entladungen</td>
     </tr>
     <tr>
-      <td><strong>Minimale Zündtemperatur (Wolke)</strong></td>
-      <td>MIT</td>
-      <td>Niedrigste Oberflächentemperatur, bei der eine Staubwolke entzündet wird (°C) – siehe <a href="/de/pages/temperature-classes.html">Temperaturklassen</a></td>
-      <td>Legt Grenzwerte für die Oberflächentemperatur von Geräten fest</td>
+      <td data-label="Parameter"><strong>Minimale Zündtemperatur (Wolke)</strong></td>
+      <td data-label="Symbol">MIT</td>
+      <td data-label="Was wird gemessen?">Niedrigste Oberflächentemperatur, bei der eine Staubwolke entzündet wird (°C) – siehe <a href="/de/pages/temperature-classes.html">Temperaturklassen</a></td>
+      <td data-label="Warum ist das wichtig">Legt Grenzwerte für die Oberflächentemperatur von Geräten fest</td>
     </tr>
     <tr>
-      <td><strong>Schichtzündtemperatur</strong></td>
-      <td>LIT</td>
-      <td>Temperatur, bei der sich eine 5 mm dicke Staubschicht entzündet (°C)</td>
-      <td>Oft niedriger als MIT; entscheidend für Reinigungsstandards</td>
+      <td data-label="Parameter"><strong>Schichtzündtemperatur</strong></td>
+      <td data-label="Symbol">LIT</td>
+      <td data-label="Was wird gemessen?">Temperatur, bei der sich eine 5 mm dicke Staubschicht entzündet (°C)</td>
+      <td data-label="Warum ist das wichtig">Oft niedriger als MIT; entscheidend für Reinigungsstandards</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Staubexplosionsklassen (K<sub>St</sub>)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Klasse</th>
@@ -325,28 +325,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>St 0</td>
-      <td>0</td>
-      <td>Nicht explosiv</td>
-      <td>Einige Mineralstäube, Zement</td>
+      <td data-label="Klasse">St 0</td>
+      <td data-label="K St -Bereich (bar·m/s)">0</td>
+      <td data-label="Schwere">Nicht explosiv</td>
+      <td data-label="Beispiele">Einige Mineralstäube, Zement</td>
     </tr>
     <tr>
-      <td><strong>St 1</strong></td>
-      <td>1–200</td>
-      <td>Schwach bis mäßig</td>
-      <td>Weizenmehl, Zucker, Holzstaub, Kohle</td>
+      <td data-label="Klasse"><strong>St 1</strong></td>
+      <td data-label="K St -Bereich (bar·m/s)">1–200</td>
+      <td data-label="Schwere">Schwach bis mäßig</td>
+      <td data-label="Beispiele">Weizenmehl, Zucker, Holzstaub, Kohle</td>
     </tr>
     <tr>
-      <td><strong>St 2</strong></td>
-      <td>201–300</td>
-      <td>Stark</td>
-      <td>Organische Pigmente, einige Kunststoffe, Zellulose</td>
+      <td data-label="Klasse"><strong>St 2</strong></td>
+      <td data-label="K St -Bereich (bar·m/s)">201–300</td>
+      <td data-label="Schwere">Stark</td>
+      <td data-label="Beispiele">Organische Pigmente, einige Kunststoffe, Zellulose</td>
     </tr>
     <tr>
-      <td><strong>St 3</strong></td>
-      <td>&gt; 300</td>
-      <td>Sehr stark</td>
-      <td>Aluminiumpulver, Magnesiumstaub</td>
+      <td data-label="Klasse"><strong>St 3</strong></td>
+      <td data-label="K St -Bereich (bar·m/s)">&gt; 300</td>
+      <td data-label="Schwere">Sehr stark</td>
+      <td data-label="Beispiele">Aluminiumpulver, Magnesiumstaub</td>
     </tr>
   </tbody>
 </table>
@@ -356,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Staubzonen: 20, 21, 22</h2>
 
 <h3>Zonen-Definitionen</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zone</th>
@@ -367,22 +367,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zone 20</strong></td>
-      <td>Kontinuierlich oder häufig</td>
-      <td>Kategorie 1 D (EPL Da)</td>
-      <td>In Silos, Trichtern, Zyklonen, Mühlen, Mischern, pneumatischen Förderern</td>
+      <td data-label="Zone"><strong>Zone 20</strong></td>
+      <td data-label="Staubwolke vorhanden">Kontinuierlich oder häufig</td>
+      <td data-label="Erforderliche Gerätekategorie">Kategorie 1 D (EPL Da)</td>
+      <td data-label="Typische Standorte">In Silos, Trichtern, Zyklonen, Mühlen, Mischern, pneumatischen Förderern</td>
     </tr>
     <tr>
-      <td><strong>Zone 21</strong></td>
-      <td>Wahrscheinlich im Normalbetrieb</td>
-      <td>Kategorie 2 D (EPL Db)</td>
-      <td>Umgebung von Sackkippvorrichtungen, Befüllstellen, offenen Förderanlagen, Filterzugangstüren</td>
+      <td data-label="Zone"><strong>Zone 21</strong></td>
+      <td data-label="Staubwolke vorhanden">Wahrscheinlich im Normalbetrieb</td>
+      <td data-label="Erforderliche Gerätekategorie">Kategorie 2 D (EPL Db)</td>
+      <td data-label="Typische Standorte">Umgebung von Sackkippvorrichtungen, Befüllstellen, offenen Förderanlagen, Filterzugangstüren</td>
     </tr>
     <tr>
-      <td><strong>Zone 22</strong></td>
-      <td>Unwahrscheinlich; nur für kurze Zeiträume</td>
-      <td>Kategorie 3 D (EPL Dc)</td>
-      <td>Bereiche in der Nähe der Grenzen von Zone 21, um versiegelte Geräte herum, wo sich Schichten ansammeln können</td>
+      <td data-label="Zone"><strong>Zone 22</strong></td>
+      <td data-label="Staubwolke vorhanden">Unwahrscheinlich; nur für kurze Zeiträume</td>
+      <td data-label="Erforderliche Gerätekategorie">Kategorie 3 D (EPL Dc)</td>
+      <td data-label="Typische Standorte">Bereiche in der Nähe der Grenzen von Zone 21, um versiegelte Geräte herum, wo sich Schichten ansammeln können</td>
     </tr>
   </tbody>
 </table>
@@ -460,7 +460,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Auswahl von Geräten für Staubzonen</h2>
 
 <h3>Schutzmethoden für Staub</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Methode</th>
@@ -472,32 +472,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>Schutz durch Gehäuse</td>
-      <td>Ex ta / tb / tc</td>
-      <td>IEC 60079-31</td>
-      <td>Staubdichtes Gehäuse mit Temperaturregelung</td>
-      <td>ta: Zone 20, tb: Zone 21, tc: Zone 22</td>
+      <td data-label="Methode">Schutz durch Gehäuse</td>
+      <td data-label="Code">Ex ta / tb / tc</td>
+      <td data-label="Norm">IEC 60079-31</td>
+      <td data-label="Prinzip">Staubdichtes Gehäuse mit Temperaturregelung</td>
+      <td data-label="Eignung für Zone">ta: Zone 20, tb: Zone 21, tc: Zone 22</td>
     </tr>
     <tr>
-      <td><a href="/de/pages/explosion-proof-vs-intrinsically-safe.html">Eigensicherheit</a></td>
-      <td>Ex ia / ib</td>
-      <td>IEC 60079-11</td>
-      <td>Energiebegrenzt unterhalb der Staub-MIE</td>
-      <td>ia: Zone 20, ib: Zone 21</td>
+      <td data-label="Methode"><a href="/de/pages/explosion-proof-vs-intrinsically-safe.html">Eigensicherheit</a></td>
+      <td data-label="Code">Ex ia / ib</td>
+      <td data-label="Norm">IEC 60079-11</td>
+      <td data-label="Prinzip">Energiebegrenzt unterhalb der Staub-MIE</td>
+      <td data-label="Eignung für Zone">ia: Zone 20, ib: Zone 21</td>
     </tr>
     <tr>
-      <td>Kapselung</td>
-      <td>Ex ma / mb</td>
-      <td>IEC 60079-18</td>
-      <td>Zündquellen in Verbundstoff gekapselt</td>
-      <td>ma: Zone 20, mb: Zone 21</td>
+      <td data-label="Methode">Kapselung</td>
+      <td data-label="Code">Ex ma / mb</td>
+      <td data-label="Norm">IEC 60079-18</td>
+      <td data-label="Prinzip">Zündquellen in Verbundstoff gekapselt</td>
+      <td data-label="Eignung für Zone">ma: Zone 20, mb: Zone 21</td>
     </tr>
     <tr>
-      <td>Druckbeaufschlagung</td>
-      <td>Ex pxb / pyb / pzc</td>
-      <td>IEC 60079-2</td>
-      <td>Überdruck schließt Staub aus</td>
-      <td>pxb: Zone 21, pzc: Zone 22</td>
+      <td data-label="Methode">Druckbeaufschlagung</td>
+      <td data-label="Code">Ex pxb / pyb / pzc</td>
+      <td data-label="Norm">IEC 60079-2</td>
+      <td data-label="Prinzip">Überdruck schließt Staub aus</td>
+      <td data-label="Eignung für Zone">pxb: Zone 21, pzc: Zone 22</td>
     </tr>
   </tbody>
 </table>
@@ -542,7 +542,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section>
 <h2>Bemerkenswerte Staubexplosionen</h2>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Jahr</th>
@@ -554,39 +554,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>2008</td>
-      <td>Imperial Sugar, Georgia, USA</td>
-      <td>Zucker</td>
-      <td>14</td>
-      <td>Staubablagerungen auf Förderbandlagern; kein Reinigungsprogramm</td>
+      <td data-label="Jahr">2008</td>
+      <td data-label="Vorfall">Imperial Sugar, Georgia, USA</td>
+      <td data-label="Staubtyp">Zucker</td>
+      <td data-label="Todesfälle">14</td>
+      <td data-label="Wichtigste Erkenntnis">Staubablagerungen auf Förderbandlagern; kein Reinigungsprogramm</td>
     </tr>
     <tr>
-      <td>2010</td>
-      <td>AL Solutions, West Virginia, USA</td>
-      <td>Titan/Zirkonium</td>
-      <td>3</td>
-      <td>Metallstaub entzündete sich während des Mischvorgangs; keine Explosionsentlüftung</td>
+      <td data-label="Jahr">2010</td>
+      <td data-label="Vorfall">AL Solutions, West Virginia, USA</td>
+      <td data-label="Staubtyp">Titan/Zirkonium</td>
+      <td data-label="Todesfälle">3</td>
+      <td data-label="Wichtigste Erkenntnis">Metallstaub entzündete sich während des Mischvorgangs; keine Explosionsentlüftung</td>
     </tr>
     <tr>
-      <td>2014</td>
-      <td>Zhongrong Metal, Kunshan, China</td>
-      <td>Aluminium</td>
-      <td>146</td>
-      <td>Aluminiumpolierstaub in schlecht belüfteter Werkstatt; tödlichste industrielle Staubexplosion der modernen Geschichte</td>
+      <td data-label="Jahr">2014</td>
+      <td data-label="Vorfall">Zhongrong Metal, Kunshan, China</td>
+      <td data-label="Staubtyp">Aluminium</td>
+      <td data-label="Todesfälle">146</td>
+      <td data-label="Wichtigste Erkenntnis">Aluminiumpolierstaub in schlecht belüfteter Werkstatt; tödlichste industrielle Staubexplosion der modernen Geschichte</td>
     </tr>
     <tr>
-      <td>2017</td>
-      <td>Didion Milling, Wisconsin, USA</td>
-      <td>Maisstaub</td>
-      <td>5</td>
-      <td>Schwelender Maisstaub im Trockner; unzureichende Funkenerkennung</td>
+      <td data-label="Jahr">2017</td>
+      <td data-label="Vorfall">Didion Milling, Wisconsin, USA</td>
+      <td data-label="Staubtyp">Maisstaub</td>
+      <td data-label="Todesfälle">5</td>
+      <td data-label="Wichtigste Erkenntnis">Schwelender Maisstaub im Trockner; unzureichende Funkenerkennung</td>
     </tr>
     <tr>
-      <td>1878</td>
-      <td>Washburn A Mill, Minneapolis, USA</td>
-      <td>Mehl</td>
-      <td>18</td>
-      <td>Erste bekannte Getreidestaubexplosion in den USA; führte zu Sicherheitsreformen in der Mühlenindustrie</td>
+      <td data-label="Jahr">1878</td>
+      <td data-label="Vorfall">Washburn A Mill, Minneapolis, USA</td>
+      <td data-label="Staubtyp">Mehl</td>
+      <td data-label="Todesfälle">18</td>
+      <td data-label="Wichtigste Erkenntnis">Erste bekannte Getreidestaubexplosion in den USA; führte zu Sicherheitsreformen in der Mühlenindustrie</td>
     </tr>
   </tbody>
 </table>

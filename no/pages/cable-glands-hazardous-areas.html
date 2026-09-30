@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -258,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Gjengestandarder</h2>
 <p>Ex-kabelgjennomføringer leveres med forskjellige gjengetyper. Det er viktig at gjengene på gjennomføringen passer til inngangen på kabinettet.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Gjengetype</th>
@@ -269,28 +269,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Metrisk (ISO)</strong></td>
-      <td>M20, M25, M32, M40, M50, M63</td>
-      <td>Europa, globalt</td>
-      <td>Vanligst for <a href="/no/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Stigning: 1,5 mm</td>
+      <td data-label="Gjengetype"><strong>Metrisk (ISO)</strong></td>
+      <td data-label="Betegnelse">M20, M25, M32, M40, M50, M63</td>
+      <td data-label="Region">Europa, globalt</td>
+      <td data-label="Merk">Vanligst for <a href="/no/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Stigning: 1,5 mm</td>
     </tr>
     <tr>
-      <td><strong>NPT (konisk)</strong></td>
-      <td>½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
-      <td>Nord-Amerika</td>
-      <td>Selvforseglende konisk gjeng. Krever gjengetetting (PTFE-tape eller -pasta). Vanlig i NEC-installasjoner.</td>
+      <td data-label="Gjengetype"><strong>NPT (konisk)</strong></td>
+      <td data-label="Betegnelse">½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
+      <td data-label="Region">Nord-Amerika</td>
+      <td data-label="Merk">Selvforseglende konisk gjeng. Krever gjengetetting (PTFE-tape eller -pasta). Vanlig i NEC-installasjoner.</td>
     </tr>
     <tr>
-      <td><strong>PG (Panzergewinde)</strong></td>
-      <td>PG9, PG11, PG13,5, PG16, PG21, PG29</td>
-      <td>Tyskland (eldre)</td>
-      <td>Eldre tysk standard. Finnes fortsatt på eldre utstyr. Fases ut til fordel for metrisk standard.</td>
+      <td data-label="Gjengetype"><strong>PG (Panzergewinde)</strong></td>
+      <td data-label="Betegnelse">PG9, PG11, PG13,5, PG16, PG21, PG29</td>
+      <td data-label="Region">Tyskland (eldre)</td>
+      <td data-label="Merk">Eldre tysk standard. Finnes fortsatt på eldre utstyr. Fases ut til fordel for metrisk standard.</td>
     </tr>
     <tr>
-      <td><strong>G (BSP parallell)</strong></td>
-      <td>G½&quot;, G¾&quot;, G1&quot;</td>
-      <td>Storbritannia, Commonwealth</td>
-      <td>Parallell gjenger (ikke konisk). Krever tetningsskive eller O-ring.</td>
+      <td data-label="Gjengetype"><strong>G (BSP parallell)</strong></td>
+      <td data-label="Betegnelse">G½&quot;, G¾&quot;, G1&quot;</td>
+      <td data-label="Region">Storbritannia, Commonwealth</td>
+      <td data-label="Merk">Parallell gjenger (ikke konisk). Krever tetningsskive eller O-ring.</td>
     </tr>
   </tbody>
 </table>
@@ -384,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>IP-klassifisering for kabelgjennomføringer</h2>
 <p>Ingress Protection-klassifiseringen angir motstandsdyktighet mot støv og vann. Høyere IP-klassifiseringer er påkrevd for tøffere miljøer.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>IP-klassifisering</th>
@@ -395,34 +395,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IP54</strong></td>
-      <td>Støvbeskyttet</td>
-      <td>Sprutbeskyttet</td>
-      <td>Innendørs, tørre omgivelser</td>
+      <td data-label="IP-klassifisering"><strong>IP54</strong></td>
+      <td data-label="Støvbeskyttelse">Støvbeskyttet</td>
+      <td data-label="Vannbeskyttelse">Sprutbeskyttet</td>
+      <td data-label="Typisk anvendelse">Innendørs, tørre omgivelser</td>
     </tr>
     <tr>
-      <td><strong>IP66</strong></td>
-      <td>Støvtett</td>
-      <td>Kraftige vannstråler</td>
-      <td>Utendørs, industrielt (vanligst)</td>
+      <td data-label="IP-klassifisering"><strong>IP66</strong></td>
+      <td data-label="Støvbeskyttelse">Støvtett</td>
+      <td data-label="Vannbeskyttelse">Kraftige vannstråler</td>
+      <td data-label="Typisk anvendelse">Utendørs, industrielt (vanligst)</td>
     </tr>
     <tr>
-      <td><strong>IP67</strong></td>
-      <td>Støvtett</td>
-      <td>Midlertidig nedsenking (1 m, 30 min)</td>
-      <td>Områder utsatt for oversvømmelse, vask</td>
+      <td data-label="IP-klassifisering"><strong>IP67</strong></td>
+      <td data-label="Støvbeskyttelse">Støvtett</td>
+      <td data-label="Vannbeskyttelse">Midlertidig nedsenking (1 m, 30 min)</td>
+      <td data-label="Typisk anvendelse">Områder utsatt for oversvømmelse, vask</td>
     </tr>
     <tr>
-      <td><strong>IP68</strong></td>
-      <td>Støvtett</td>
-      <td>Kontinuerlig nedsenking (dybde/tid i henhold til produsent)</td>
-      <td>Undervanns, permanent under vann</td>
+      <td data-label="IP-klassifisering"><strong>IP68</strong></td>
+      <td data-label="Støvbeskyttelse">Støvtett</td>
+      <td data-label="Vannbeskyttelse">Kontinuerlig nedsenking (dybde/tid i henhold til produsent)</td>
+      <td data-label="Typisk anvendelse">Undervanns, permanent under vann</td>
     </tr>
     <tr>
-      <td><strong>IP6X</strong></td>
-      <td>Støvtett</td>
-      <td>Ingen spesifisert vannbeskyttelse</td>
-      <td>Støvsoner (sone 20/21) hvor vanninntrengning ikke er et problem</td>
+      <td data-label="IP-klassifisering"><strong>IP6X</strong></td>
+      <td data-label="Støvbeskyttelse">Støvtett</td>
+      <td data-label="Vannbeskyttelse">Ingen spesifisert vannbeskyttelse</td>
+      <td data-label="Typisk anvendelse">Støvsoner (sone 20/21) hvor vanninntrengning ikke er et problem</td>
     </tr>
   </tbody>
 </table>

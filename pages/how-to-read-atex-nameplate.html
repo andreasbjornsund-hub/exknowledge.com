@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -363,7 +363,7 @@ Ta: -20°C to +60°C
 
 <h3>3. Gas Group (IIA, IIB, IIC)</h3>
 <p>Indicates which gases the equipment is certified for, based on ignition sensitivity (see <a href="/pages/gas-groups.html">gas groups</a> for details):</p>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Group</th>
@@ -374,22 +374,22 @@ Ta: -20°C to +60°C
   </thead>
   <tbody>
     <tr>
-      <td>IIA</td>
-      <td>Propane, methane, butane, ammonia, acetone</td>
-      <td>&gt; 0.9 mm</td>
-      <td>&gt; 0.8</td>
+      <td data-label="Group">IIA</td>
+      <td data-label="Gases">Propane, methane, butane, ammonia, acetone</td>
+      <td data-label="MESG Range">&gt; 0.9 mm</td>
+      <td data-label="MIC Ratio">&gt; 0.8</td>
     </tr>
     <tr>
-      <td>IIB</td>
-      <td>Ethylene, ethyl ether</td>
-      <td>0.5–0.9 mm</td>
-      <td>0.45–0.8</td>
+      <td data-label="Group">IIB</td>
+      <td data-label="Gases">Ethylene, ethyl ether</td>
+      <td data-label="MESG Range">0.5–0.9 mm</td>
+      <td data-label="MIC Ratio">0.45–0.8</td>
     </tr>
     <tr>
-      <td>IIC</td>
-      <td>Hydrogen, acetylene, carbon disulfide</td>
-      <td>&lt; 0.5 mm</td>
-      <td>&lt; 0.45</td>
+      <td data-label="Group">IIC</td>
+      <td data-label="Gases">Hydrogen, acetylene, carbon disulfide</td>
+      <td data-label="MESG Range">&lt; 0.5 mm</td>
+      <td data-label="MIC Ratio">&lt; 0.45</td>
     </tr>
   </tbody>
 </table>

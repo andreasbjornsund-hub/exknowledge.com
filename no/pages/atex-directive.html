@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -268,7 +268,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Gruppe II: Overflateindustri</h3>
 <p>Utstyr for alle andre industrier (olje og gass, kjemisk, farmasøytisk, næringsmiddelindustri osv.). Underinndelt etter kategori og atmosfæretype:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Kategori</th>
@@ -279,40 +279,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>1</td>
-      <td>Ga</td>
-      <td>Sone 0</td>
-      <td>Svært høy (2 uavhengige feil)</td>
+      <td data-label="Kategori">1</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Soneegnethet">Sone 0</td>
+      <td data-label="Beskyttelsesnivå">Svært høy (2 uavhengige feil)</td>
     </tr>
     <tr>
-      <td>2 G</td>
-      <td>Gb</td>
-      <td>Sone 1</td>
-      <td>Høy (1 feil)</td>
+      <td data-label="Kategori">2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Soneegnethet">Sone 1</td>
+      <td data-label="Beskyttelsesnivå">Høy (1 feil)</td>
     </tr>
     <tr>
-      <td>3 G</td>
-      <td>Gc</td>
-      <td>Sone 2</td>
-      <td>Normal drift</td>
+      <td data-label="Kategori">3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Soneegnethet">Sone 2</td>
+      <td data-label="Beskyttelsesnivå">Normal drift</td>
     </tr>
     <tr>
-      <td>1 D</td>
-      <td>Da</td>
-      <td>Sone 20</td>
-      <td>Svært høy (2 uavhengige feil)</td>
+      <td data-label="Kategori">1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Soneegnethet">Sone 20</td>
+      <td data-label="Beskyttelsesnivå">Svært høy (2 uavhengige feil)</td>
     </tr>
     <tr>
-      <td>2 D</td>
-      <td>Db</td>
-      <td>Sone 21</td>
-      <td>Høy (1 feil)</td>
+      <td data-label="Kategori">2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Soneegnethet">Sone 21</td>
+      <td data-label="Beskyttelsesnivå">Høy (1 feil)</td>
     </tr>
     <tr>
-      <td>3 D</td>
-      <td>Dc</td>
-      <td>Sone 22</td>
-      <td>Normal drift</td>
+      <td data-label="Kategori">3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Soneegnethet">Sone 22</td>
+      <td data-label="Beskyttelsesnivå">Normal drift</td>
     </tr>
   </tbody>
 </table>
@@ -362,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Moduler for samsvarsvurdering</h2>
 <p>Produsenter må følge spesifikke prosedyrer for å påvise samsvar. Den nødvendige modulen avhenger av utstyrskategorien:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Modul</th>
@@ -373,40 +373,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>Intern produksjonskontroll</td>
-      <td>Ne</td>
-      <td>Kategori 2 og 3 (ikke-elektrisk), kategori 3 (elektrisk)</td>
+      <td data-label="Modul">A</td>
+      <td data-label="Navn">Intern produksjonskontroll</td>
+      <td data-label="Notifisert organ involvert?">Ne</td>
+      <td data-label="Gjelder for">Kategori 2 og 3 (ikke-elektrisk), kategori 3 (elektrisk)</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>EU-typeundersøkelse</td>
-      <td>Ja</td>
-      <td>Alle kategori 1 og M1, de fleste kategori 2</td>
+      <td data-label="Modul">B</td>
+      <td data-label="Navn">EU-typeundersøkelse</td>
+      <td data-label="Notifisert organ involvert?">Ja</td>
+      <td data-label="Gjelder for">Alle kategori 1 og M1, de fleste kategori 2</td>
     </tr>
     <tr>
-      <td>C1</td>
-      <td>Overensstemmelse med type (intern produksjonskontroll + produkttester)</td>
-      <td>Nei (etter modul B)</td>
-      <td>Kombinert med modul B</td>
+      <td data-label="Modul">C1</td>
+      <td data-label="Navn">Overensstemmelse med type (intern produksjonskontroll + produkttester)</td>
+      <td data-label="Notifisert organ involvert?">Nei (etter modul B)</td>
+      <td data-label="Gjelder for">Kombinert med modul B</td>
     </tr>
     <tr>
-      <td>D</td>
-      <td>Kvalitetssikring (produksjon)</td>
-      <td>Ja (overvåking)</td>
-      <td>Kombinert med modul B for kategori 1/M1</td>
+      <td data-label="Modul">D</td>
+      <td data-label="Navn">Kvalitetssikring (produksjon)</td>
+      <td data-label="Notifisert organ involvert?">Ja (overvåking)</td>
+      <td data-label="Gjelder for">Kombinert med modul B for kategori 1/M1</td>
     </tr>
     <tr>
-      <td>E</td>
-      <td>Kvalitetssikring (produkt)</td>
-      <td>Ja (overvåking)</td>
-      <td>Kombinert med modul B for kategori 1/M1</td>
+      <td data-label="Modul">E</td>
+      <td data-label="Navn">Kvalitetssikring (produkt)</td>
+      <td data-label="Notifisert organ involvert?">Ja (overvåking)</td>
+      <td data-label="Gjelder for">Kombinert med modul B for kategori 1/M1</td>
     </tr>
     <tr>
-      <td>F</td>
-      <td>Produktverifisering</td>
-      <td>Ja (produkt-for-produkt eller batchtesting)</td>
-      <td>Kombinert med modul B for kategori 1/M1</td>
+      <td data-label="Modul">F</td>
+      <td data-label="Navn">Produktverifisering</td>
+      <td data-label="Notifisert organ involvert?">Ja (produkt-for-produkt eller batchtesting)</td>
+      <td data-label="Gjelder for">Kombinert med modul B for kategori 1/M1</td>
     </tr>
   </tbody>
 </table>

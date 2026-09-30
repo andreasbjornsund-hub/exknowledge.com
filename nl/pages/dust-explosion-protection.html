@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -216,7 +216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Soorten brandbaar stof</h2>
 
 <h3><a href="/nl/pages/gas-groups.html">Stofgroepen</a> (IEC 60079-0)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Groep</th>
@@ -227,22 +227,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IIIA</strong></td>
-      <td>Brandbare vliegers</td>
-      <td>Katoenvezels, textielpluis, houtkrullen, papiervezels</td>
-      <td>Gemakkelijk ontvlambaar, snelle vlamverspreiding</td>
+      <td data-label="Groep"><strong>IIIA</strong></td>
+      <td data-label="Type">Brandbare vliegers</td>
+      <td data-label="Voorbeelden">Katoenvezels, textielpluis, houtkrullen, papiervezels</td>
+      <td data-label="Belangrijkste gevaar">Gemakkelijk ontvlambaar, snelle vlamverspreiding</td>
     </tr>
     <tr>
-      <td><strong>IIIB</strong></td>
-      <td>Niet-geleidend stof</td>
-      <td>Meel, suiker, zetmeel, graan, houtstof, plastic poeder, farmaceutische poeders</td>
-      <td>Elektrostatische oplading, laagvorming</td>
+      <td data-label="Groep"><strong>IIIB</strong></td>
+      <td data-label="Type">Niet-geleidend stof</td>
+      <td data-label="Voorbeelden">Meel, suiker, zetmeel, graan, houtstof, plastic poeder, farmaceutische poeders</td>
+      <td data-label="Belangrijkste gevaar">Elektrostatische oplading, laagvorming</td>
     </tr>
     <tr>
-      <td><strong>IIIC</strong></td>
-      <td>Geleidend stof</td>
-      <td>Aluminiumpoeder, magnesiumstof, ijzervijlsel, roet, grafiet</td>
-      <td>Kan kortsluiting veroorzaken in elektrische apparatuur, zeer reactieve metalen</td>
+      <td data-label="Groep"><strong>IIIC</strong></td>
+      <td data-label="Type">Geleidend stof</td>
+      <td data-label="Voorbeelden">Aluminiumpoeder, magnesiumstof, ijzervijlsel, roet, grafiet</td>
+      <td data-label="Belangrijkste gevaar">Kan kortsluiting veroorzaken in elektrische apparatuur, zeer reactieve metalen</td>
     </tr>
   </tbody>
 </table>
@@ -264,7 +264,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Parameters voor stofexplosies</h2>
 <p>De explosiviteit van stof wordt bepaald door laboratoriumtests volgens de EN 14034-serie (zie <a href="/nl/pages/standards.html">overzicht van normen</a>):</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -275,46 +275,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Maximale explosiedruk</strong></td>
-      <td>P<sub>max</sub></td>
-      <td>Piekdruk tijdens explosie (bar)</td>
-      <td>Bepaalt de vereisten voor de structurele sterkte voor insluiting of ontluchting</td>
+      <td data-label="Parameter"><strong>Maximale explosiedruk</strong></td>
+      <td data-label="Symbool">P<sub>max</sub></td>
+      <td data-label="Wat het meet">Piekdruk tijdens explosie (bar)</td>
+      <td data-label="Waarom het belangrijk is">Bepaalt de vereisten voor de structurele sterkte voor insluiting of ontluchting</td>
     </tr>
     <tr>
-      <td><strong>Ernst van stofexplosie</strong></td>
-      <td>K<sub>St</sub></td>
-      <td>Snelheid van drukstijging (bar·m/s)</td>
-      <td>Bepaalt de afmetingen van het ontluchtingsoppervlak en de reactietijd van de onderdrukking</td>
+      <td data-label="Parameter"><strong>Ernst van stofexplosie</strong></td>
+      <td data-label="Symbool">K<sub>St</sub></td>
+      <td data-label="Wat het meet">Snelheid van drukstijging (bar·m/s)</td>
+      <td data-label="Waarom het belangrijk is">Bepaalt de afmetingen van het ontluchtingsoppervlak en de reactietijd van de onderdrukking</td>
     </tr>
     <tr>
-      <td><strong>Minimale explosieve concentratie</strong></td>
-      <td>MEC</td>
-      <td>Laagste stofconcentratie die kan exploderen (g/m³)</td>
-      <td>Gelijk aan LEL voor gassen; doorgaans 20–60 g/m³</td>
+      <td data-label="Parameter"><strong>Minimale explosieve concentratie</strong></td>
+      <td data-label="Symbool">MEC</td>
+      <td data-label="Wat het meet">Laagste stofconcentratie die kan exploderen (g/m³)</td>
+      <td data-label="Waarom het belangrijk is">Gelijk aan LEL voor gassen; doorgaans 20–60 g/m³</td>
     </tr>
     <tr>
-      <td><strong>Minimale ontstekingsenergie</strong></td>
-      <td>MIE</td>
-      <td>Kleinste vonk die een stofwolk kan ontsteken (mJ)</td>
-      <td>Bepaalt het gevaar van elektrostatische ontlading</td>
+      <td data-label="Parameter"><strong>Minimale ontstekingsenergie</strong></td>
+      <td data-label="Symbool">MIE</td>
+      <td data-label="Wat het meet">Kleinste vonk die een stofwolk kan ontsteken (mJ)</td>
+      <td data-label="Waarom het belangrijk is">Bepaalt het gevaar van elektrostatische ontlading</td>
     </tr>
     <tr>
-      <td><strong>Minimale ontbrandingstemperatuur (wolk)</strong></td>
-      <td>MIT</td>
-      <td>Laagste temperatuur van het oppervlak dat een stofwolk ontsteekt (°C), zie <a href="/nl/pages/temperature-classes.html">temperatuurklassen</a></td>
-      <td>Bepaalt de temperatuurlimieten voor apparatuur</td>
+      <td data-label="Parameter"><strong>Minimale ontbrandingstemperatuur (wolk)</strong></td>
+      <td data-label="Symbool">MIT</td>
+      <td data-label="Wat het meet">Laagste temperatuur van het oppervlak dat een stofwolk ontsteekt (°C), zie <a href="/nl/pages/temperature-classes.html">temperatuurklassen</a></td>
+      <td data-label="Waarom het belangrijk is">Bepaalt de temperatuurlimieten voor apparatuur</td>
     </tr>
     <tr>
-      <td><strong>Ontbrandingstemperatuur van de laag</strong></td>
-      <td>LIT</td>
-      <td>Temperatuur waarbij een stoflaag van 5 mm ontbrandt (°C)</td>
-      <td>Vaak lager dan MIT; cruciaal voor huishoudelijke normen</td>
+      <td data-label="Parameter"><strong>Ontbrandingstemperatuur van de laag</strong></td>
+      <td data-label="Symbool">LIT</td>
+      <td data-label="Wat het meet">Temperatuur waarbij een stoflaag van 5 mm ontbrandt (°C)</td>
+      <td data-label="Waarom het belangrijk is">Vaak lager dan MIT; cruciaal voor huishoudelijke normen</td>
     </tr>
   </tbody>
 </table>
 
 <h3>Stofexplosieklassen (K<sub>St</sub>)</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Klasse</th>
@@ -325,28 +325,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>St 0</td>
-      <td>0</td>
-      <td>Niet explosief</td>
-      <td>Sommige minerale stoffen, cement</td>
+      <td data-label="Klasse">St 0</td>
+      <td data-label="K St -bereik (bar·m/s)">0</td>
+      <td data-label="Ernst">Niet explosief</td>
+      <td data-label="Voorbeelden">Sommige minerale stoffen, cement</td>
     </tr>
     <tr>
-      <td><strong>St 1</strong></td>
-      <td>1–200</td>
-      <td>Zwak tot matig</td>
-      <td>Tarwemeel, suiker, houtstof, steenkool</td>
+      <td data-label="Klasse"><strong>St 1</strong></td>
+      <td data-label="K St -bereik (bar·m/s)">1–200</td>
+      <td data-label="Ernst">Zwak tot matig</td>
+      <td data-label="Voorbeelden">Tarwemeel, suiker, houtstof, steenkool</td>
     </tr>
     <tr>
-      <td><strong>St 2</strong></td>
-      <td>201–300</td>
-      <td>Sterk</td>
-      <td>Organische pigmenten, sommige kunststoffen, cellulose</td>
+      <td data-label="Klasse"><strong>St 2</strong></td>
+      <td data-label="K St -bereik (bar·m/s)">201–300</td>
+      <td data-label="Ernst">Sterk</td>
+      <td data-label="Voorbeelden">Organische pigmenten, sommige kunststoffen, cellulose</td>
     </tr>
     <tr>
-      <td><strong>St 3</strong></td>
-      <td>&gt; 300</td>
-      <td>Zeer sterk</td>
-      <td>Aluminiumpoeder, magnesiumstof</td>
+      <td data-label="Klasse"><strong>St 3</strong></td>
+      <td data-label="K St -bereik (bar·m/s)">&gt; 300</td>
+      <td data-label="Ernst">Zeer sterk</td>
+      <td data-label="Voorbeelden">Aluminiumpoeder, magnesiumstof</td>
     </tr>
   </tbody>
 </table>
@@ -356,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Stof <a href="/nl/pages/zone-classification.html">Zones</a>: 20, 21, 22</h2>
 
 <h3>Zone-definities</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zone</th>
@@ -367,22 +367,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zone 20</strong></td>
-      <td>Continu of frequent</td>
-      <td>Categorie 1 D (EPL Da)</td>
-      <td>Binnen silo&#x27;s, trechters, cyclonen, molens, mengers, pneumatische transportbanden</td>
+      <td data-label="Zone"><strong>Zone 20</strong></td>
+      <td data-label="Stofwolk aanwezig">Continu of frequent</td>
+      <td data-label="Vereiste apparatuurcategorie">Categorie 1 D (EPL Da)</td>
+      <td data-label="Typische locaties">Binnen silo&#x27;s, trechters, cyclonen, molens, mengers, pneumatische transportbanden</td>
     </tr>
     <tr>
-      <td><strong>Zone 21</strong></td>
-      <td>Waarschijnlijk bij normaal bedrijf</td>
-      <td>Categorie 2 D (EPL Db)</td>
-      <td>Rond zakkenstortplaatsen, vulpunten, open transportbanden, filtertoegangsdeuren</td>
+      <td data-label="Zone"><strong>Zone 21</strong></td>
+      <td data-label="Stofwolk aanwezig">Waarschijnlijk bij normaal bedrijf</td>
+      <td data-label="Vereiste apparatuurcategorie">Categorie 2 D (EPL Db)</td>
+      <td data-label="Typische locaties">Rond zakkenstortplaatsen, vulpunten, open transportbanden, filtertoegangsdeuren</td>
     </tr>
     <tr>
-      <td><strong>Zone 22</strong></td>
-      <td>Niet waarschijnlijk; alleen gedurende korte periodes</td>
-      <td>Categorie 3 D (EPL Dc)</td>
-      <td>Gebieden nabij de grenzen van zone 21, rond afgedichte apparatuur, waar lagen zich kunnen ophopen</td>
+      <td data-label="Zone"><strong>Zone 22</strong></td>
+      <td data-label="Stofwolk aanwezig">Niet waarschijnlijk; alleen gedurende korte periodes</td>
+      <td data-label="Vereiste apparatuurcategorie">Categorie 3 D (EPL Dc)</td>
+      <td data-label="Typische locaties">Gebieden nabij de grenzen van zone 21, rond afgedichte apparatuur, waar lagen zich kunnen ophopen</td>
     </tr>
   </tbody>
 </table>
@@ -460,7 +460,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Apparatuurselectie voor stofzones</h2>
 
 <h3>Beschermingsmethoden voor stof</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Methode</th>
@@ -472,32 +472,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>Bescherming door behuizing</td>
-      <td>Ex ta / tb / tc</td>
-      <td>IEC 60079-31</td>
-      <td>Stofvrije behuizing met temperatuurregeling</td>
-      <td>ta: Zone 20, tb: Zone 21, tc: Zone 22</td>
+      <td data-label="Methode">Bescherming door behuizing</td>
+      <td data-label="Code">Ex ta / tb / tc</td>
+      <td data-label="Norm">IEC 60079-31</td>
+      <td data-label="Principe">Stofvrije behuizing met temperatuurregeling</td>
+      <td data-label="Geschiktheid van de zone">ta: Zone 20, tb: Zone 21, tc: Zone 22</td>
     </tr>
     <tr>
-      <td><a href="/nl/pages/explosion-proof-vs-intrinsically-safe.html">Intrinsieke veiligheid</a></td>
-      <td>Ex ia / ib</td>
-      <td>IEC 60079-11</td>
-      <td>Energie beperkt onder stof-MIE</td>
-      <td>ia: Zone 20, ib: Zone 21</td>
+      <td data-label="Methode"><a href="/nl/pages/explosion-proof-vs-intrinsically-safe.html">Intrinsieke veiligheid</a></td>
+      <td data-label="Code">Ex ia / ib</td>
+      <td data-label="Norm">IEC 60079-11</td>
+      <td data-label="Principe">Energie beperkt onder stof-MIE</td>
+      <td data-label="Geschiktheid van de zone">ia: Zone 20, ib: Zone 21</td>
     </tr>
     <tr>
-      <td>Ingekapseld</td>
-      <td>Ex ma / mb</td>
-      <td>IEC 60079-18</td>
-      <td>Ontstekingsbronnen afgedicht in compound</td>
-      <td>ma: Zone 20, mb: Zone 21</td>
+      <td data-label="Methode">Ingekapseld</td>
+      <td data-label="Code">Ex ma / mb</td>
+      <td data-label="Norm">IEC 60079-18</td>
+      <td data-label="Principe">Ontstekingsbronnen afgedicht in compound</td>
+      <td data-label="Geschiktheid van de zone">ma: Zone 20, mb: Zone 21</td>
     </tr>
     <tr>
-      <td>Drukregeling</td>
-      <td>Ex pxb / pyb / pzc</td>
-      <td>IEC 60079-2</td>
-      <td>Overdruk sluit stof uit</td>
-      <td>pxb: Zone 21, pzc: Zone 22</td>
+      <td data-label="Methode">Drukregeling</td>
+      <td data-label="Code">Ex pxb / pyb / pzc</td>
+      <td data-label="Norm">IEC 60079-2</td>
+      <td data-label="Principe">Overdruk sluit stof uit</td>
+      <td data-label="Geschiktheid van de zone">pxb: Zone 21, pzc: Zone 22</td>
     </tr>
   </tbody>
 </table>
@@ -542,7 +542,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section>
 <h2>Opmerkelijke stofexplosies</h2>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Jaar</th>
@@ -554,39 +554,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>2008</td>
-      <td>Imperial Sugar, Georgia, VS</td>
-      <td>Suiker</td>
-      <td>14</td>
-      <td>Opgestapelde stoflagen op transportbandlagers; geen schoonmaakprogramma</td>
+      <td data-label="Jaar">2008</td>
+      <td data-label="Incident">Imperial Sugar, Georgia, VS</td>
+      <td data-label="Type stof">Suiker</td>
+      <td data-label="Dodelijke slachtoffers">14</td>
+      <td data-label="Belangrijkste les">Opgestapelde stoflagen op transportbandlagers; geen schoonmaakprogramma</td>
     </tr>
     <tr>
-      <td>2010</td>
-      <td>AL Solutions, West Virginia, VS</td>
-      <td>Titanium/zirkonium</td>
-      <td>3</td>
-      <td>Metaalstof ontbrandde tijdens het mengen; geen explosieventilatie</td>
+      <td data-label="Jaar">2010</td>
+      <td data-label="Incident">AL Solutions, West Virginia, VS</td>
+      <td data-label="Type stof">Titanium/zirkonium</td>
+      <td data-label="Dodelijke slachtoffers">3</td>
+      <td data-label="Belangrijkste les">Metaalstof ontbrandde tijdens het mengen; geen explosieventilatie</td>
     </tr>
     <tr>
-      <td>2014</td>
-      <td>Zhongrong Metal, Kunshan, China</td>
-      <td>Aluminium</td>
-      <td>146</td>
-      <td>Aluminium polijststof in slecht geventileerde werkplaats; dodelijkste industriële stofexplosie in de moderne geschiedenis</td>
+      <td data-label="Jaar">2014</td>
+      <td data-label="Incident">Zhongrong Metal, Kunshan, China</td>
+      <td data-label="Type stof">Aluminium</td>
+      <td data-label="Dodelijke slachtoffers">146</td>
+      <td data-label="Belangrijkste les">Aluminium polijststof in slecht geventileerde werkplaats; dodelijkste industriële stofexplosie in de moderne geschiedenis</td>
     </tr>
     <tr>
-      <td>2017</td>
-      <td>Didion Milling, Wisconsin, VS</td>
-      <td>Maïsmeel</td>
-      <td>5</td>
-      <td>Smeulend maïsstof in droger; ontoereikende vonkdetectie</td>
+      <td data-label="Jaar">2017</td>
+      <td data-label="Incident">Didion Milling, Wisconsin, VS</td>
+      <td data-label="Type stof">Maïsmeel</td>
+      <td data-label="Dodelijke slachtoffers">5</td>
+      <td data-label="Belangrijkste les">Smeulend maïsstof in droger; ontoereikende vonkdetectie</td>
     </tr>
     <tr>
-      <td>1878</td>
-      <td>Washburn A Mill, Minneapolis, VS</td>
-      <td>Meel</td>
-      <td>18</td>
-      <td>Eerste erkende graanstofexplosie in de VS; leidde tot veiligheidshervormingen in de maalindustrie</td>
+      <td data-label="Jaar">1878</td>
+      <td data-label="Incident">Washburn A Mill, Minneapolis, VS</td>
+      <td data-label="Type stof">Meel</td>
+      <td data-label="Dodelijke slachtoffers">18</td>
+      <td data-label="Belangrijkste les">Eerste erkende graanstofexplosie in de VS; leidde tot veiligheidshervormingen in de maalindustrie</td>
     </tr>
   </tbody>
 </table>

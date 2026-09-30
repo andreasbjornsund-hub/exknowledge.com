@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -196,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Gefährliche Bereiche werden anhand der <strong>Häufigkeit und Dauer</strong> des Auftretens einer explosionsfähigen Atmosphäre in Zonen eingeteilt:</p>
 
 <h3>Gas-/Dampfzonen</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zone</th>
@@ -207,22 +207,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zone 0</strong></td>
-      <td>Explosionsfähige Atmosphäre<strong>, die ständig</strong> oder über lange Zeiträume vorhanden ist</td>
-      <td>&gt; 1.000 Stunden/Jahr</td>
-      <td>Innerhalb von Lagertanks, Dampfräume über flüchtigen Flüssigkeiten, innerhalb von Prozessbehältern</td>
+      <td data-label="Zone"><strong>Zone 0</strong></td>
+      <td data-label="Definition">Explosionsfähige Atmosphäre<strong>, die ständig</strong> oder über lange Zeiträume vorhanden ist</td>
+      <td data-label="Dauer">&gt; 1.000 Stunden/Jahr</td>
+      <td data-label="Typische Beispiele">Innerhalb von Lagertanks, Dampfräume über flüchtigen Flüssigkeiten, innerhalb von Prozessbehältern</td>
     </tr>
     <tr>
-      <td><strong>Zone 1</strong></td>
-      <td>Explosionsfähige Atmosphäre, die bei normalem Betrieb <strong>auftreten kann</strong></td>
-      <td>10–1.000 Stunden/Jahr</td>
-      <td>Um Pumpendichtungen, Ventilpackungen, Probenahmestellen, Überdruckventile, Ladezonen</td>
+      <td data-label="Zone"><strong>Zone 1</strong></td>
+      <td data-label="Definition">Explosionsfähige Atmosphäre, die bei normalem Betrieb <strong>auftreten kann</strong></td>
+      <td data-label="Dauer">10–1.000 Stunden/Jahr</td>
+      <td data-label="Typische Beispiele">Um Pumpendichtungen, Ventilpackungen, Probenahmestellen, Überdruckventile, Ladezonen</td>
     </tr>
     <tr>
-      <td><strong>Zone 2</strong></td>
-      <td>Explosionsfähige Atmosphäre im Normalbetrieb <strong>nicht wahrscheinlich</strong>; wenn doch, dann nur für <strong>kurze Zeiträume</strong></td>
-      <td>&lt; 10 Stunden/Jahr</td>
-      <td>Um Flansche mit guten Dichtungen, Rohrverbindungen, Bereiche in der Nähe der Grenzen der Zone 1</td>
+      <td data-label="Zone"><strong>Zone 2</strong></td>
+      <td data-label="Definition">Explosionsfähige Atmosphäre im Normalbetrieb <strong>nicht wahrscheinlich</strong>; wenn doch, dann nur für <strong>kurze Zeiträume</strong></td>
+      <td data-label="Dauer">&lt; 10 Stunden/Jahr</td>
+      <td data-label="Typische Beispiele">Um Flansche mit guten Dichtungen, Rohrverbindungen, Bereiche in der Nähe der Grenzen der Zone 1</td>
     </tr>
   </tbody>
 </table>
@@ -265,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Schritt 1: Identifizieren Sie Freisetzungsquellen</h3>
 <p>Eine <strong>Freisetzungsquelle</strong> ist jeder Punkt, an dem brennbares Gas, Dampf oder Flüssigkeit in die Atmosphäre entweichen kann. Die Quellen werden nach ihrer Häufigkeit eingestuft:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Klasse</th>
@@ -276,22 +276,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Kontinuierlich</strong></td>
-      <td>Die Freisetzung erfolgt kontinuierlich oder wird über einen längeren Zeitraum erwartet</td>
-      <td>Tankentlüftungen, offene Flüssigkeitsoberflächen, ständige Leckagen aufgrund defekter Dichtungen</td>
-      <td>Zone 0</td>
+      <td data-label="Klasse"><strong>Kontinuierlich</strong></td>
+      <td data-label="Definition">Die Freisetzung erfolgt kontinuierlich oder wird über einen längeren Zeitraum erwartet</td>
+      <td data-label="Beispiele">Tankentlüftungen, offene Flüssigkeitsoberflächen, ständige Leckagen aufgrund defekter Dichtungen</td>
+      <td data-label="Erzeugt Zone">Zone 0</td>
     </tr>
     <tr>
-      <td><strong>Primär</strong></td>
-      <td>Freisetzung wird regelmäßig oder gelegentlich während des normalen Betriebs erwartet</td>
-      <td>Pumpendichtungen, Kompressordichtungen, Probenahmepunkte, Überdruckventile, Be- und Entladungsanschlüsse</td>
-      <td>Zone 1</td>
+      <td data-label="Klasse"><strong>Primär</strong></td>
+      <td data-label="Definition">Freisetzung wird regelmäßig oder gelegentlich während des normalen Betriebs erwartet</td>
+      <td data-label="Beispiele">Pumpendichtungen, Kompressordichtungen, Probenahmepunkte, Überdruckventile, Be- und Entladungsanschlüsse</td>
+      <td data-label="Erzeugt Zone">Zone 1</td>
     </tr>
     <tr>
-      <td><strong>Sekundär</strong></td>
-      <td>Freisetzung wird während des normalen Betriebs nicht erwartet; falls doch, dann nur selten und für kurze Zeit</td>
-      <td>Flanschverbindungen, Ventilspindeln (keine Dichtungen), Instrumentenanschlüsse, Rohrverbindungen in gutem Zustand</td>
-      <td>Zone 2</td>
+      <td data-label="Klasse"><strong>Sekundär</strong></td>
+      <td data-label="Definition">Freisetzung wird während des normalen Betriebs nicht erwartet; falls doch, dann nur selten und für kurze Zeit</td>
+      <td data-label="Beispiele">Flanschverbindungen, Ventilspindeln (keine Dichtungen), Instrumentenanschlüsse, Rohrverbindungen in gutem Zustand</td>
+      <td data-label="Erzeugt Zone">Zone 2</td>
     </tr>
   </tbody>
 </table>
@@ -327,7 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Schritt 3: Zonentyp bestimmen</h3>
 <p>IEC 60079-10-1 Anhang B enthält eine Matrix:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Freisetzungsgrad</th>
@@ -338,22 +338,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Kontinuierlich</strong></td>
-      <td>Zone 0 NE (vernachlässigbares Ausmaß) → ungefährlich</td>
-      <td>Zone 0 + Zone 2</td>
-      <td>Zone 0 + Zone 1</td>
+      <td data-label="Freisetzungsgrad"><strong>Kontinuierlich</strong></td>
+      <td data-label="Hohe Belüftung + gute Verfügbarkeit">Zone 0 NE (vernachlässigbares Ausmaß) → ungefährlich</td>
+      <td data-label="Mittlere Belüftung + gute Verfügbarkeit">Zone 0 + Zone 2</td>
+      <td data-label="Geringe Belüftung + schlechte Verfügbarkeit">Zone 0 + Zone 1</td>
     </tr>
     <tr>
-      <td><strong>Primär</strong></td>
-      <td>Zone 1 NE → ungefährlich</td>
-      <td>Zone 1 + Zone 2</td>
-      <td>Zone 1 + Zone 0</td>
+      <td data-label="Freisetzungsgrad"><strong>Primär</strong></td>
+      <td data-label="Hohe Belüftung + gute Verfügbarkeit">Zone 1 NE → ungefährlich</td>
+      <td data-label="Mittlere Belüftung + gute Verfügbarkeit">Zone 1 + Zone 2</td>
+      <td data-label="Geringe Belüftung + schlechte Verfügbarkeit">Zone 1 + Zone 0</td>
     </tr>
     <tr>
-      <td><strong>Sekundär</strong></td>
-      <td>Zone 2 NE → ungefährlich</td>
-      <td>Zone 2</td>
-      <td>Zone 1 oder sogar Zone 0</td>
+      <td data-label="Freisetzungsgrad"><strong>Sekundär</strong></td>
+      <td data-label="Hohe Belüftung + gute Verfügbarkeit">Zone 2 NE → ungefährlich</td>
+      <td data-label="Mittlere Belüftung + gute Verfügbarkeit">Zone 2</td>
+      <td data-label="Geringe Belüftung + schlechte Verfügbarkeit">Zone 1 oder sogar Zone 0</td>
     </tr>
   </tbody>
 </table>

@@ -30,7 +30,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <style>
@@ -201,7 +201,7 @@
   <li><strong>MIC ratio (Minimum Igniting Current ratio)</strong> — the ratio of the minimum current needed to ignite the gas compared to methane, tested in a standard intrinsic safety apparatus. A lower MIC ratio means the gas ignites with less electrical energy. This measurement is critical for intrinsically safe (Ex i) equipment design.</li>
 </ol>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Gas Group</th>
@@ -212,22 +212,22 @@
   </thead>
   <tbody>
     <tr>
-      <td><strong>IIA</strong></td>
-      <td>&gt; 0.90 mm</td>
-      <td>&gt; 0.80</td>
-      <td>Methane, propane, butane, acetone, ammonia, ethanol</td>
+      <td data-label="Gas Group"><strong>IIA</strong></td>
+      <td data-label="MESG range">&gt; 0.90 mm</td>
+      <td data-label="MIC ratio range">&gt; 0.80</td>
+      <td data-label="Example gases">Methane, propane, butane, acetone, ammonia, ethanol</td>
     </tr>
     <tr>
-      <td><strong>IIB</strong></td>
-      <td>0.50 – 0.90 mm</td>
-      <td>0.45 – 0.80</td>
-      <td>Ethylene, hydrogen sulphide, diethyl ether, ethylene oxide</td>
+      <td data-label="Gas Group"><strong>IIB</strong></td>
+      <td data-label="MESG range">0.50 – 0.90 mm</td>
+      <td data-label="MIC ratio range">0.45 – 0.80</td>
+      <td data-label="Example gases">Ethylene, hydrogen sulphide, diethyl ether, ethylene oxide</td>
     </tr>
     <tr>
-      <td><strong>IIC</strong></td>
-      <td>&lt; 0.50 mm</td>
-      <td>&lt; 0.45</td>
-      <td>Hydrogen, acetylene, carbon disulphide</td>
+      <td data-label="Gas Group"><strong>IIC</strong></td>
+      <td data-label="MESG range">&lt; 0.50 mm</td>
+      <td data-label="MIC ratio range">&lt; 0.45</td>
+      <td data-label="Example gases">Hydrogen, acetylene, carbon disulphide</td>
     </tr>
   </tbody>
 </table>
@@ -260,7 +260,7 @@
 <li><strong>MESG</strong> (Maximum Experimental Safe Gap) — the maximum width of a gap through which an internal explosion will not propagate to an external explosive atmosphere. Tested in a standardized 25ml spherical chamber with a 25mm long gap. Smaller MESG = more dangerous gas.</li>
 <li><strong>MIC Ratio</strong> (Minimum Igniting Current Ratio) — the ratio of the minimum igniting current of the gas to that of methane, measured in a standard intrinsic safety test apparatus. Smaller MIC ratio = more dangerous gas.</li>
 </ul>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Gas Group</th>
 <th>MESG (mm)</th>
 <th>MIC Ratio</th>
@@ -268,25 +268,25 @@
 <th>Hazard Level</th>
 </tr></thead><tbody>
 <tr>
-<td><strong>IIA</strong></td>
-<td>>0.90</td>
-<td>>0.80</td>
-<td>Methane, propane, butane, acetone, ethanol, benzene, diesel, ammonia</td>
-<td>Least hazardous</td>
+<td data-label="Gas Group"><strong>IIA</strong></td>
+<td data-label="MESG (mm)">>0.90</td>
+<td data-label="MIC Ratio">>0.80</td>
+<td data-label="Typical Gases">Methane, propane, butane, acetone, ethanol, benzene, diesel, ammonia</td>
+<td data-label="Hazard Level">Least hazardous</td>
 </tr>
 <tr>
-<td><strong>IIB</strong></td>
-<td>0.50–0.90</td>
-<td>0.45–0.80</td>
-<td>Ethylene, hydrogen sulphide, diethyl ether, ethylene oxide, town gas</td>
-<td>Intermediate</td>
+<td data-label="Gas Group"><strong>IIB</strong></td>
+<td data-label="MESG (mm)">0.50–0.90</td>
+<td data-label="MIC Ratio">0.45–0.80</td>
+<td data-label="Typical Gases">Ethylene, hydrogen sulphide, diethyl ether, ethylene oxide, town gas</td>
+<td data-label="Hazard Level">Intermediate</td>
 </tr>
 <tr>
-<td><strong>IIC</strong></td>
-<td><0.50</td>
-<td><0.45</td>
-<td>Hydrogen, acetylene, carbon disulphide</td>
-<td>Most hazardous</td>
+<td data-label="Gas Group"><strong>IIC</strong></td>
+<td data-label="MESG (mm)"><0.50</td>
+<td data-label="MIC Ratio"><0.45</td>
+<td data-label="Typical Gases">Hydrogen, acetylene, carbon disulphide</td>
+<td data-label="Hazard Level">Most hazardous</td>
 </tr>
 </tbody></table>
 <h3 id="important-notes">Important Notes</h3>
@@ -329,29 +329,29 @@
 <p>Hydrogen is in the most hazardous gas group (IIC) due to its extremely small MESG (0.29mm) and very low minimum ignition energy (0.017 mJ — about 10× less than methane). However, its auto-ignition temperature is relatively high (560°C), placing it only in <a href="temperature-classes.html">temperature class</a> T1.</p>
 <p>This means hydrogen requires the most stringent protection against sparks/arcs (IIC) but is relatively forgiving on surface temperature (T1). This is the opposite of some IIA gases.</p>
 <h2 id="dust-groups-group-iii">Dust Groups (Group III)</h2>
-<div class="table-wrap"><table><thead><tr>
+<div class="table-wrap"><table class="stack"><thead><tr>
 <th>Dust Group</th>
 <th>Type</th>
 <th>Examples</th>
 <th>Hazard Level</th>
 </tr></thead><tbody>
 <tr>
-<td><strong>IIIA</strong></td>
-<td>Combustible flyings</td>
-<td>Textile fibres, cotton lint, rayon, jute</td>
-<td>Least hazardous</td>
+<td data-label="Dust Group"><strong>IIIA</strong></td>
+<td data-label="Type">Combustible flyings</td>
+<td data-label="Examples">Textile fibres, cotton lint, rayon, jute</td>
+<td data-label="Hazard Level">Least hazardous</td>
 </tr>
 <tr>
-<td><strong>IIIB</strong></td>
-<td>Non-conductive dust</td>
-<td>Grain flour, sugar, wood dust, coal, plastic powder, pharmaceutical powders</td>
-<td>Intermediate</td>
+<td data-label="Dust Group"><strong>IIIB</strong></td>
+<td data-label="Type">Non-conductive dust</td>
+<td data-label="Examples">Grain flour, sugar, wood dust, coal, plastic powder, pharmaceutical powders</td>
+<td data-label="Hazard Level">Intermediate</td>
 </tr>
 <tr>
-<td><strong>IIIC</strong></td>
-<td>Conductive dust</td>
-<td>Aluminium powder, magnesium, titanium, iron, carbon black</td>
-<td>Most hazardous</td>
+<td data-label="Dust Group"><strong>IIIC</strong></td>
+<td data-label="Type">Conductive dust</td>
+<td data-label="Examples">Aluminium powder, magnesium, titanium, iron, carbon black</td>
+<td data-label="Hazard Level">Most hazardous</td>
 </tr>
 </tbody></table>
 <h3 id="conductive-vs-non-conductive-dust">Conductive vs Non-Conductive Dust</h3>

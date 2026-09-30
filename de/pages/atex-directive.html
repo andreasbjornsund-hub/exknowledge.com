@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -268,7 +268,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Gruppe II: Oberflächenindustrie</h3>
 <p>Geräte für alle anderen Industrien (Öl und Gas, Chemie, Pharmazie, Lebensmittel usw.). Unterteilt nach Kategorie und Atmosphärentyp:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Kategorie</th>
@@ -279,40 +279,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>1 G</td>
-      <td>Ga</td>
-      <td>Zone 0</td>
-      <td>Sehr hoch (2 unabhängige Fehler)</td>
+      <td data-label="Kategorie">1 G</td>
+      <td data-label="EPL">Ga</td>
+      <td data-label="Zonen-Eignung">Zone 0</td>
+      <td data-label="Schutzstufe">Sehr hoch (2 unabhängige Fehler)</td>
     </tr>
     <tr>
-      <td>2 G</td>
-      <td>Gb</td>
-      <td>Zone 1</td>
-      <td>Hoch (1 Fehler)</td>
+      <td data-label="Kategorie">2 G</td>
+      <td data-label="EPL">Gb</td>
+      <td data-label="Zonen-Eignung">Zone 1</td>
+      <td data-label="Schutzstufe">Hoch (1 Fehler)</td>
     </tr>
     <tr>
-      <td>3 G</td>
-      <td>Gc</td>
-      <td>Zone 2</td>
-      <td>Normalbetrieb</td>
+      <td data-label="Kategorie">3 G</td>
+      <td data-label="EPL">Gc</td>
+      <td data-label="Zonen-Eignung">Zone 2</td>
+      <td data-label="Schutzstufe">Normalbetrieb</td>
     </tr>
     <tr>
-      <td>1 D</td>
-      <td>Da</td>
-      <td>Zone 20</td>
-      <td>Sehr hoch (2 unabhängige Fehler)</td>
+      <td data-label="Kategorie">1 D</td>
+      <td data-label="EPL">Da</td>
+      <td data-label="Zonen-Eignung">Zone 20</td>
+      <td data-label="Schutzstufe">Sehr hoch (2 unabhängige Fehler)</td>
     </tr>
     <tr>
-      <td>2 D</td>
-      <td>Db</td>
-      <td>Zone 21</td>
-      <td>Hoch (1 Fehler)</td>
+      <td data-label="Kategorie">2 D</td>
+      <td data-label="EPL">Db</td>
+      <td data-label="Zonen-Eignung">Zone 21</td>
+      <td data-label="Schutzstufe">Hoch (1 Fehler)</td>
     </tr>
     <tr>
-      <td>3 D</td>
-      <td>Dc</td>
-      <td>Zone 22</td>
-      <td>Normalbetrieb</td>
+      <td data-label="Kategorie">3 D</td>
+      <td data-label="EPL">Dc</td>
+      <td data-label="Zonen-Eignung">Zone 22</td>
+      <td data-label="Schutzstufe">Normalbetrieb</td>
     </tr>
   </tbody>
 </table>
@@ -362,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Module zur Konformitätsbewertung</h2>
 <p>Hersteller müssen bestimmte Verfahren befolgen, um die Konformität nachzuweisen. Das erforderliche Modul hängt von der Gerätekategorie ab:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Modul</th>
@@ -373,40 +373,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td>A</td>
-      <td>Interne Fertigungskontrolle</td>
-      <td>Nein</td>
-      <td>Kategorie 2 und 3 (nicht elektrisch), Kategorie 3 (elektrisch)</td>
+      <td data-label="Modul">A</td>
+      <td data-label="Name">Interne Fertigungskontrolle</td>
+      <td data-label="Benannte Stelle beteiligt?">Nein</td>
+      <td data-label="Anwendbar auf">Kategorie 2 und 3 (nicht elektrisch), Kategorie 3 (elektrisch)</td>
     </tr>
     <tr>
-      <td>B</td>
-      <td>EU-Baumusterprüfung</td>
-      <td>Ja</td>
-      <td>Alle Kategorie 1 und M1, die meisten Kategorie 2</td>
+      <td data-label="Modul">B</td>
+      <td data-label="Name">EU-Baumusterprüfung</td>
+      <td data-label="Benannte Stelle beteiligt?">Ja</td>
+      <td data-label="Anwendbar auf">Alle Kategorie 1 und M1, die meisten Kategorie 2</td>
     </tr>
     <tr>
-      <td>C1</td>
-      <td>Konformität mit dem Baumuster (interne Fertigungskontrolle + Produktprüfungen)</td>
-      <td>Nein (nach Modul B)</td>
-      <td>In Kombination mit Modul B</td>
+      <td data-label="Modul">C1</td>
+      <td data-label="Name">Konformität mit dem Baumuster (interne Fertigungskontrolle + Produktprüfungen)</td>
+      <td data-label="Benannte Stelle beteiligt?">Nein (nach Modul B)</td>
+      <td data-label="Anwendbar auf">In Kombination mit Modul B</td>
     </tr>
     <tr>
-      <td>D</td>
-      <td>Qualitätssicherung (Produktion)</td>
-      <td>Ja (Überwachung)</td>
-      <td>Kombiniert mit Modul B für Kategorie 1/M1</td>
+      <td data-label="Modul">D</td>
+      <td data-label="Name">Qualitätssicherung (Produktion)</td>
+      <td data-label="Benannte Stelle beteiligt?">Ja (Überwachung)</td>
+      <td data-label="Anwendbar auf">Kombiniert mit Modul B für Kategorie 1/M1</td>
     </tr>
     <tr>
-      <td>E</td>
-      <td>Qualitätssicherung (Produkt)</td>
-      <td>Ja (Überwachung)</td>
-      <td>In Kombination mit Modul B für Kategorie 1/M1</td>
+      <td data-label="Modul">E</td>
+      <td data-label="Name">Qualitätssicherung (Produkt)</td>
+      <td data-label="Benannte Stelle beteiligt?">Ja (Überwachung)</td>
+      <td data-label="Anwendbar auf">In Kombination mit Modul B für Kategorie 1/M1</td>
     </tr>
     <tr>
-      <td>F</td>
-      <td>Produktprüfung</td>
-      <td>Ja (Produkt-für-Produkt- oder Chargenprüfung)</td>
-      <td>In Kombination mit Modul B für Kategorie 1/M1</td>
+      <td data-label="Modul">F</td>
+      <td data-label="Name">Produktprüfung</td>
+      <td data-label="Benannte Stelle beteiligt?">Ja (Produkt-für-Produkt- oder Chargenprüfung)</td>
+      <td data-label="Anwendbar auf">In Kombination mit Modul B für Kategorie 1/M1</td>
     </tr>
   </tbody>
 </table>

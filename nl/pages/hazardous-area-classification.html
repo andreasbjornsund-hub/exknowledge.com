@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -196,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Gevaarlijke gebieden worden ingedeeld in zones op basis van de <strong>frequentie en duur</strong> van de aanwezigheid van een explosieve atmosfeer:</p>
 
 <h3>Gas-/dampzones</h3>
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Zone</th>
@@ -207,22 +207,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Zone 0</strong></td>
-      <td>Explosieve atmosfeer <strong>die continu</strong> of gedurende lange perioden aanwezig is</td>
-      <td>&gt; 1.000 uur/jaar</td>
-      <td>Binnenin opslagtanks, dampruimtes boven vluchtige vloeistoffen, binnenin procesvaten</td>
+      <td data-label="Zone"><strong>Zone 0</strong></td>
+      <td data-label="Definitie">Explosieve atmosfeer <strong>die continu</strong> of gedurende lange perioden aanwezig is</td>
+      <td data-label="Duur">&gt; 1.000 uur/jaar</td>
+      <td data-label="Typische voorbeelden">Binnenin opslagtanks, dampruimtes boven vluchtige vloeistoffen, binnenin procesvaten</td>
     </tr>
     <tr>
-      <td><strong>Zone 1</strong></td>
-      <td>Explosieve atmosfeer <strong>die waarschijnlijk optreedt</strong> bij normaal bedrijf</td>
-      <td>10–1.000 uur/jaar</td>
-      <td>Rond pompafdichtingen, klepafdichtingen, bemonsteringspunten, ontlastkleppen, laadruimtes</td>
+      <td data-label="Zone"><strong>Zone 1</strong></td>
+      <td data-label="Definitie">Explosieve atmosfeer <strong>die waarschijnlijk optreedt</strong> bij normaal bedrijf</td>
+      <td data-label="Duur">10–1.000 uur/jaar</td>
+      <td data-label="Typische voorbeelden">Rond pompafdichtingen, klepafdichtingen, bemonsteringspunten, ontlastkleppen, laadruimtes</td>
     </tr>
     <tr>
-      <td><strong>Zone 2</strong></td>
-      <td>Explosieve atmosfeer <strong>niet waarschijnlijk</strong> bij normaal gebruik; indien deze optreedt, slechts voor <strong>korte periodes</strong></td>
-      <td>&lt; 10 uur/jaar</td>
-      <td>Rond flenzen met goede pakkingen, pijpfittingen, gebieden in de buurt van de grenzen van zone 1</td>
+      <td data-label="Zone"><strong>Zone 2</strong></td>
+      <td data-label="Definitie">Explosieve atmosfeer <strong>niet waarschijnlijk</strong> bij normaal gebruik; indien deze optreedt, slechts voor <strong>korte periodes</strong></td>
+      <td data-label="Duur">&lt; 10 uur/jaar</td>
+      <td data-label="Typische voorbeelden">Rond flenzen met goede pakkingen, pijpfittingen, gebieden in de buurt van de grenzen van zone 1</td>
     </tr>
   </tbody>
 </table>
@@ -265,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Stap 1: Identificeer bronnen van vrijkoming</h3>
 <p>Een <strong>bron van vrijkoming</strong> is elk punt waar brandbaar gas, damp of vloeistof kan ontsnappen naar de atmosfeer. Bronnen worden ingedeeld naar frequentie:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Graad</th>
@@ -276,22 +276,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Continu</strong></td>
-      <td>De afgifte is continu of wordt voor langere tijd verwacht</td>
-      <td>Tankontluchtingen, open vloeistofoppervlakken, constante lekken door defecte afdichtingen</td>
-      <td>Zone 0</td>
+      <td data-label="Graad"><strong>Continu</strong></td>
+      <td data-label="Definitie">De afgifte is continu of wordt voor langere tijd verwacht</td>
+      <td data-label="Voorbeelden">Tankontluchtingen, open vloeistofoppervlakken, constante lekken door defecte afdichtingen</td>
+      <td data-label="Creëert zone">Zone 0</td>
     </tr>
     <tr>
-      <td><strong>Primair</strong></td>
-      <td>Vrijgave wordt periodiek of incidenteel verwacht tijdens normaal bedrijf</td>
-      <td>Pompafdichtingen, compressorafdichtingen, bemonsteringspunten, ontlastkleppen, laad-/losverbindingen</td>
-      <td>Zone 1</td>
+      <td data-label="Graad"><strong>Primair</strong></td>
+      <td data-label="Definitie">Vrijgave wordt periodiek of incidenteel verwacht tijdens normaal bedrijf</td>
+      <td data-label="Voorbeelden">Pompafdichtingen, compressorafdichtingen, bemonsteringspunten, ontlastkleppen, laad-/losverbindingen</td>
+      <td data-label="Creëert zone">Zone 1</td>
     </tr>
     <tr>
-      <td><strong>Secundair</strong></td>
-      <td>Vrijgave wordt niet verwacht tijdens normaal bedrijf; indien dit toch gebeurt, dan slechts sporadisch en voor korte periodes</td>
-      <td>Flenzen, klepstelen (geen pakkingen), instrumentaansluitingen, pijpfittingen in goede staat</td>
-      <td>Zone 2</td>
+      <td data-label="Graad"><strong>Secundair</strong></td>
+      <td data-label="Definitie">Vrijgave wordt niet verwacht tijdens normaal bedrijf; indien dit toch gebeurt, dan slechts sporadisch en voor korte periodes</td>
+      <td data-label="Voorbeelden">Flenzen, klepstelen (geen pakkingen), instrumentaansluitingen, pijpfittingen in goede staat</td>
+      <td data-label="Creëert zone">Zone 2</td>
     </tr>
   </tbody>
 </table>
@@ -327,7 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3>Stap 3: Bepaal het zonetype</h3>
 <p>IEC 60079-10-1 Bijlage B biedt een matrix:</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Vrijgavegraad</th>
@@ -338,22 +338,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Continu</strong></td>
-      <td>Zone 0 NE (verwaarloosbare omvang) → niet gevaarlijk</td>
-      <td>Zone 0 + Zone 2</td>
-      <td>Zone 0 + Zone 1</td>
+      <td data-label="Vrijgavegraad"><strong>Continu</strong></td>
+      <td data-label="Hoge ventilatie + goede beschikbaarheid">Zone 0 NE (verwaarloosbare omvang) → niet gevaarlijk</td>
+      <td data-label="Gemiddelde ventilatie + goede beschikbaarheid">Zone 0 + Zone 2</td>
+      <td data-label="Lage ventilatie + slechte beschikbaarheid">Zone 0 + Zone 1</td>
     </tr>
     <tr>
-      <td><strong>Primair</strong></td>
-      <td>Zone 1 NE → niet gevaarlijk</td>
-      <td>Zone 1 + Zone 2</td>
-      <td>Zone 1 + Zone 0</td>
+      <td data-label="Vrijgavegraad"><strong>Primair</strong></td>
+      <td data-label="Hoge ventilatie + goede beschikbaarheid">Zone 1 NE → niet gevaarlijk</td>
+      <td data-label="Gemiddelde ventilatie + goede beschikbaarheid">Zone 1 + Zone 2</td>
+      <td data-label="Lage ventilatie + slechte beschikbaarheid">Zone 1 + Zone 0</td>
     </tr>
     <tr>
-      <td><strong>Secundair</strong></td>
-      <td>Zone 2 NE → niet gevaarlijk</td>
-      <td>Zone 2</td>
-      <td>Zone 1 of zelfs Zone 0</td>
+      <td data-label="Vrijgavegraad"><strong>Secundair</strong></td>
+      <td data-label="Hoge ventilatie + goede beschikbaarheid">Zone 2 NE → niet gevaarlijk</td>
+      <td data-label="Gemiddelde ventilatie + goede beschikbaarheid">Zone 2</td>
+      <td data-label="Lage ventilatie + slechte beschikbaarheid">Zone 1 of zelfs Zone 0</td>
     </tr>
   </tbody>
 </table>

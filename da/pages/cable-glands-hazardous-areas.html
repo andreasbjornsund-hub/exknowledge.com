@@ -34,7 +34,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/css/style.css?v=542e649c">
+  <link rel="stylesheet" href="/css/style.css?v=016d16b0">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <script type="application/ld+json">
@@ -257,7 +257,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>Gevindstandarder</h2>
 <p>Ex-kabelgennemføringer fås med forskellige gevindtyper. Det er afgørende, at gevindet på gennemføringen passer til indgangen i kabinettet.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>Gevindtype</th>
@@ -268,28 +268,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Metrisk (ISO)</strong></td>
-      <td>M20, M25, M32, M40, M50, M63</td>
-      <td>Europa, globalt</td>
-      <td>Mest almindelig til <a href="/da/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Steg: 1,5 mm</td>
+      <td data-label="Gevindtype"><strong>Metrisk (ISO)</strong></td>
+      <td data-label="Betegnelse">M20, M25, M32, M40, M50, M63</td>
+      <td data-label="Region">Europa, globalt</td>
+      <td data-label="Bemærkninger">Mest almindelig til <a href="/da/pages/atex-vs-iecex.html">ATEX/IECEx</a>. Steg: 1,5 mm</td>
     </tr>
     <tr>
-      <td><strong>NPT (konisk)</strong></td>
-      <td>½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
-      <td>Nordamerika</td>
-      <td>Selvforseglende konisk gevind. Kræver gevindforsegling (PTFE-tape eller -pasta). Almindeligt i NEC-installationer.</td>
+      <td data-label="Gevindtype"><strong>NPT (konisk)</strong></td>
+      <td data-label="Betegnelse">½&quot;, ¾&quot;, 1&quot;, 1¼&quot;, 1½&quot;, 2&quot;</td>
+      <td data-label="Region">Nordamerika</td>
+      <td data-label="Bemærkninger">Selvforseglende konisk gevind. Kræver gevindforsegling (PTFE-tape eller -pasta). Almindeligt i NEC-installationer.</td>
     </tr>
     <tr>
-      <td><strong>PG (Panzergewinde)</strong></td>
-      <td>PG9, PG11, PG13,5, PG16, PG21, PG29</td>
-      <td>Tyskland (ældre standard)</td>
-      <td>Ældre tysk standard. Findes stadig på ældre udstyr. Er ved at blive udfaset til fordel for metriske standarder.</td>
+      <td data-label="Gevindtype"><strong>PG (Panzergewinde)</strong></td>
+      <td data-label="Betegnelse">PG9, PG11, PG13,5, PG16, PG21, PG29</td>
+      <td data-label="Region">Tyskland (ældre standard)</td>
+      <td data-label="Bemærkninger">Ældre tysk standard. Findes stadig på ældre udstyr. Er ved at blive udfaset til fordel for metriske standarder.</td>
     </tr>
     <tr>
-      <td><strong>G (BSP Parallel)</strong></td>
-      <td>G½&quot;, G¾&quot;, G1&quot;</td>
-      <td>Storbritannien, Commonwealth</td>
-      <td>Parallel gevind (ikke konisk). Kræver tætningsskive eller O-ring.</td>
+      <td data-label="Gevindtype"><strong>G (BSP Parallel)</strong></td>
+      <td data-label="Betegnelse">G½&quot;, G¾&quot;, G1&quot;</td>
+      <td data-label="Region">Storbritannien, Commonwealth</td>
+      <td data-label="Bemærkninger">Parallel gevind (ikke konisk). Kræver tætningsskive eller O-ring.</td>
     </tr>
   </tbody>
 </table>
@@ -383,7 +383,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>IP-klassificeringer for kabelforskruninger</h2>
 <p>Ingress Protection-klassificeringen angiver modstandsdygtighed over for støv og vand. Højere IP-klassificeringer er påkrævet i mere barske miljøer.</p>
 
-<table>
+<table class="stack">
   <thead>
     <tr>
       <th>IP-klassificering</th>
@@ -394,34 +394,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </thead>
   <tbody>
     <tr>
-      <td><strong>IP54</strong></td>
-      <td>Støvbeskyttet</td>
-      <td>Stænksikker</td>
-      <td>Indendørs, tørre omgivelser</td>
+      <td data-label="IP-klassificering"><strong>IP54</strong></td>
+      <td data-label="Støvbeskyttelse">Støvbeskyttet</td>
+      <td data-label="Vandbeskyttelse">Stænksikker</td>
+      <td data-label="Typisk anvendelse">Indendørs, tørre omgivelser</td>
     </tr>
     <tr>
-      <td><strong>IP66</strong></td>
-      <td>Støvtæt</td>
-      <td>Kraftige vandstråler</td>
-      <td>Udendørs, industrielt (mest almindeligt)</td>
+      <td data-label="IP-klassificering"><strong>IP66</strong></td>
+      <td data-label="Støvbeskyttelse">Støvtæt</td>
+      <td data-label="Vandbeskyttelse">Kraftige vandstråler</td>
+      <td data-label="Typisk anvendelse">Udendørs, industrielt (mest almindeligt)</td>
     </tr>
     <tr>
-      <td><strong>IP67</strong></td>
-      <td>Støvtæt</td>
-      <td>Midlertidig nedsænkning (1 m, 30 min)</td>
-      <td>Områder udsat for oversvømmelse, afspuling</td>
+      <td data-label="IP-klassificering"><strong>IP67</strong></td>
+      <td data-label="Støvbeskyttelse">Støvtæt</td>
+      <td data-label="Vandbeskyttelse">Midlertidig nedsænkning (1 m, 30 min)</td>
+      <td data-label="Typisk anvendelse">Områder udsat for oversvømmelse, afspuling</td>
     </tr>
     <tr>
-      <td><strong>IP68</strong></td>
-      <td>Støvtæt</td>
-      <td>Kontinuerlig nedsænkning (dybde/tid ifølge producent)</td>
-      <td>Under vand, permanent under vand</td>
+      <td data-label="IP-klassificering"><strong>IP68</strong></td>
+      <td data-label="Støvbeskyttelse">Støvtæt</td>
+      <td data-label="Vandbeskyttelse">Kontinuerlig nedsænkning (dybde/tid ifølge producent)</td>
+      <td data-label="Typisk anvendelse">Under vand, permanent under vand</td>
     </tr>
     <tr>
-      <td><strong>IP6X</strong></td>
-      <td>Støvtæt</td>
-      <td>Ingen angivet vandbeskyttelse</td>
-      <td>Støvzoner (zone 20/21), hvor indtrængning af vand ikke er et problem</td>
+      <td data-label="IP-klassificering"><strong>IP6X</strong></td>
+      <td data-label="Støvbeskyttelse">Støvtæt</td>
+      <td data-label="Vandbeskyttelse">Ingen angivet vandbeskyttelse</td>
+      <td data-label="Typisk anvendelse">Støvzoner (zone 20/21), hvor indtrængning af vand ikke er et problem</td>
     </tr>
   </tbody>
 </table>
