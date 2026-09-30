@@ -25,7 +25,7 @@ CHECKS = {
         "pattern": "Content-Security-Policy",
         "required": True,
         "fix_after": "X-Content-Type-Options",
-        "fix_line": '  <meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\' \'unsafe-inline\' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src \'self\' \'unsafe-inline\' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src \'self\' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src \'self\' https://www.google-analytics.com https://formsubmit.co https://region1.google-analytics.com; font-src \'self\' https://cdnjs.cloudflare.com; frame-src https://www.youtube.com https://www.googletagmanager.com">'
+        "fix_line": '  <meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\' \'unsafe-inline\' https://www.googletagmanager.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src \'self\' \'unsafe-inline\' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src \'self\' https://images.unsplash.com https://img.youtube.com https://*.googletagmanager.com data:; connect-src \'self\' https://www.google-analytics.com https://api.web3forms.com https://region1.google-analytics.com; font-src \'self\' https://cdnjs.cloudflare.com; frame-src https://www.youtube.com https://www.googletagmanager.com">'
     },
     "Referrer-Policy": {
         "pattern": 'name="referrer"',
