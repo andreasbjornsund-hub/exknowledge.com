@@ -96,13 +96,14 @@
     el.setAttribute('role', 'status');
     el.setAttribute('aria-live', 'polite');
     if (!el.dataset.ok) el.dataset.ok = el.textContent.trim() || form.getAttribute('data-success') || T.ok;
+    if (el.dataset.okHtml === undefined && el.querySelector('a')) el.dataset.okHtml = el.innerHTML.trim();   // keep a fallback link (PDF) in the ok message
     return el;
   }
   function setStatus(el, kind, text) {
     el.classList.remove('form-status--ok', 'form-status--error');
     el.classList.add(kind === 'ok' ? 'form-status--ok' : 'form-status--error');
     el.setAttribute('role', kind === 'ok' ? 'status' : 'alert');
-    el.textContent = text;
+    if (kind === 'ok' && el.dataset.okHtml) el.innerHTML = el.dataset.okHtml; else el.textContent = text;
     el.hidden = false;
     el.style.display = 'block';
   }
