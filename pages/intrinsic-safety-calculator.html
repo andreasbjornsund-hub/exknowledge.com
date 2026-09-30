@@ -71,8 +71,8 @@
   "description": "Free intrinsic safety loop calculator: check Uo, Io, Po, Co and Lo against Ui, Ii, Pi, Ci, Li and cable per IEC 60079-14, with the 1 % mixed-circuit rule.",
   "url": "https://exknowledge.com/pages/intrinsic-safety-calculator.html",
   "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1000&q=80",
-  "datePublished": "2026-09-29",
-  "dateModified": "2026-09-29",
+  "datePublished": "2026-09-30",
+  "dateModified": "2026-09-30",
   "author": {
     "@type": "Organization",
     "name": "ExKnowledge",
@@ -179,7 +179,8 @@
 .is-calc fieldset{border:1px solid var(--c-sand,#e8e4de);border-radius:8px;padding:12px 16px 16px;margin:0 0 14px}
 .is-calc legend{font-weight:600;padding:0 6px}
 .is-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:10px 14px}
-.is-calc label{display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:.9rem}
+.is-calc label{display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:6px;row-gap:4px;align-items:baseline;font-weight:600;font-size:.9rem}
+.is-calc label input,.is-calc label select{grid-column:1/-1}
 .is-calc label span{font-weight:400;font-size:.8rem;color:var(--c-slate,#64605a)}
 .is-calc input,.is-calc select{font:inherit;font-size:16px;padding:8px 10px;border:1px solid var(--c-sand,#d8d3cb);border-radius:6px;background:#fff;min-height:40px;width:100%;box-sizing:border-box}
 .is-calc input:focus,.is-calc select:focus{outline:2px solid var(--c-yellow,#d4a843);outline-offset:1px}
@@ -192,6 +193,26 @@
 .is-badge--ok{background:#e8f5ec;color:#1d5e33}.is-badge--fail{background:#fbeaea;color:#8a1f1f}.is-badge--na{background:#eee;color:#555}
 .is-hint,.is-small{color:var(--c-slate,#64605a);font-size:.9rem}
 @media print{.nav,.footer,.content-sidebar,.pdf-cta,.cta-section,.related-topics,.scroll-popup,.is-actions,.breadcrumb,.content-hero{display:none!important}}
+@media (max-width:600px){
+ .content-page .container{padding-left:10px;padding-right:10px}
+ .content-layout{padding-left:0;padding-right:0}
+ .content-body{padding:14px 12px}
+ .content-hero{display:none}
+ .is-calc fieldset{padding:8px 10px 12px;margin-bottom:10px}
+ .is-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px}
+ .is-calc input,.is-calc select{padding:7px 8px}
+ .is-result .table-wrap{margin:8px 0 12px;overflow:visible}
+ .is-table,.is-table tbody{display:block;width:100%}
+ .is-table thead{display:none}
+ .is-table tr{display:grid;grid-template-columns:max-content max-content minmax(0,1fr);grid-template-areas:"chk chk res" "app op dev";gap:4px 8px;padding:10px 0;border-bottom:1px solid var(--c-sand,#e8e4de)}
+ .is-table th,.is-table td{display:block;padding:0;border:0;min-width:0;font-size:.9rem;overflow-wrap:anywhere}
+ .is-table th{grid-area:chk}
+ .is-table td:nth-child(2){grid-area:app}
+ .is-table td:nth-child(3){grid-area:op}
+ .is-table td:nth-child(4){grid-area:dev}
+ .is-table td:nth-child(5){grid-area:res;justify-self:end;text-align:right}
+ .is-verdict{padding:10px 12px}
+}
 </style>
 </head>
 <body>
