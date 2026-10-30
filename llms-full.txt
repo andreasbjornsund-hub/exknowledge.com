@@ -39,7 +39,7 @@ ExKnowledge covers the technical fundamentals of explosion protection (Ex) for h
 ## Tools
 
 - [Ex Certificate Scanner](https://exknowledge.com/exscanner/): Upload ATEX/IECEx certificate PDFs — extracts equipment marking, gas group, temperature class, protection type. 100% client-side, privacy-first.
-- [Multilingual Ex Glossary](https://exknowledge.com/glossary/): 77 official Ex/ATEX/IECEx terms translated across 19 languages. Sourced from IEC 60079, national standards bodies, and IECEx member institutes. Search, compare, and download.
+- [Multilingual Ex Glossary](https://exknowledge.com/glossary/): 78 official Ex/ATEX/IECEx terms translated across 19 languages. Sourced from IEC 60079, national standards bodies, and IECEx member institutes. Search, compare, and download.
 
 ## Blog
 
@@ -54,11 +54,11 @@ ExKnowledge covers the technical fundamentals of explosion protection (Ex) for h
 
 Available in: [English](https://exknowledge.com/), [Deutsch](https://exknowledge.com/de/), [Norsk](https://exknowledge.com/no/), [Dansk](https://exknowledge.com/da/), [Svenska](https://exknowledge.com/sv/), [Suomi](https://exknowledge.com/fi/), [Español](https://exknowledge.com/es/), [Nederlands](https://exknowledge.com/nl/), [Português](https://exknowledge.com/pt/), [Italiano](https://exknowledge.com/it/), [العربية](https://exknowledge.com/ar/)
 
-## Glossary Terms (77 terms, 19 languages)
+## Glossary Terms (78 terms, 19 languages)
 
 The full multilingual glossary covers official Ex terminology in: English, Norwegian, German, French, Spanish, Italian, Portuguese, Dutch, Danish, Finnish, Swedish, Polish, Czech, Russian, Japanese, Chinese, Korean, Turkish, Arabic.
 
-Key terms include: ambient temperature, area classification, ATEX certification, auto-ignition temperature, cable gland, category (ATEX), CE marking, certification body, clearances and creepage distances, competent person, conformity assessment, dust explosion, dust ignition-proof, encapsulation (Ex m), EPL (Equipment Protection Level), equipment group, Ex marking, explosion group, explosion proof (Ex d), explosive atmosphere, flame arrester, flameproof enclosure, gas detector, gas group, Group I, Group II, Group III, hazardous area, IEC 60079, IECEx, ignition source, increased safety (Ex e), inspection, installation, instrinsic safety (Ex i), IP rating, maximum surface temperature, MESG, minimum ignition current, minimum ignition energy, non-incendive (Ex n), notified body, oil immersion (Ex o), operating temperature, permit to work, powder filling (Ex q), pressurization (Ex p), protection concept, protection level, quality system, safe area, special protection (Ex s), T-rating, temperature class, type of protection, zone 0, zone 1, zone 2, zone 20, zone 21, zone 22.
+Key terms include: ambient temperature, area classification, ATEX certification, auto-ignition temperature, cable gland, category (ATEX), CE marking, certification body, clearances and creepage distances, competent person, conformity assessment, continuous supervision, dust explosion, dust ignition-proof, encapsulation (Ex m), EPL (Equipment Protection Level), equipment group, Ex marking, explosion group, explosion proof (Ex d), explosive atmosphere, flame arrester, flameproof enclosure, gas detector, gas group, Group I, Group II, Group III, hazardous area, IEC 60079, IECEx, ignition source, increased safety (Ex e), inspection, installation, instrinsic safety (Ex i), IP rating, maximum surface temperature, MESG, minimum ignition current, minimum ignition energy, non-incendive (Ex n), notified body, oil immersion (Ex o), operating temperature, permit to work, powder filling (Ex q), pressurization (Ex p), protection concept, protection level, quality system, safe area, special protection (Ex s), T-rating, temperature class, type of protection, zone 0, zone 1, zone 2, zone 20, zone 21, zone 22.
 
 ## Site Technical Details
 
